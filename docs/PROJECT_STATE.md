@@ -30,5 +30,14 @@ Do not interpret generated scripts or public upstream metadata as local tool qua
 ## Specification changes
 None. No frozen AXI architecture decision was changed by bootstrap work.
 
+## Phase-0 execution status
+
+- Repository/bootstrap structure is authored.
+- Current ChatGPT execution host is Linux/x86_64, not the intended macOS/Apple-Silicon qualification host.
+- Static syntax/completeness checks pass for authored bootstrap scripts and Python tests.
+- A real cocotbext-axi BFM qualification smoke is authored (aligned read/write, 4-beat INCR burst, explicit IDs/QoS, deterministic backpressure).
+- Simulation/formal/synthesis/P&R evidence remains OPEN because Verilator/Yosys/SBY/nextpnr/Trellis and cocotb packages are unavailable on this host and network package installation is blocked.
+- Gate 0 therefore remains OPEN. No KNOWN_GOOD tag is permitted yet.
+
 ## Next smallest task
 Run the Gate-0 smoke suite on the intended Apple-Silicon host with the pinned candidate OSS CAD Suite and Python environment; repair only environment/coding-style issues discovered. Do not start fabric RTL while Gate 0 is open.
