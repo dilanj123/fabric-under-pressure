@@ -25,3 +25,7 @@ Run on the intended Apple-Silicon host after installing the pinned OSS CAD Suite
 Evidence is written under `results/raw/gate0/`; concise conclusions belong under `results/processed/gate0/`.
 
 See `docs/GATE0_MAC_RUNBOOK.md` for the exact intended-host qualification procedure.
+
+## Publish and launch Gate 0
+
+For the dedicated GitHub repository creation/push and Apple-Silicon qualification flow, see `docs/GITHUB_BOOTSTRAP.md` or run `./scripts/publish_github_and_start_gate0.sh` from an authenticated machine with GitHub CLI.
