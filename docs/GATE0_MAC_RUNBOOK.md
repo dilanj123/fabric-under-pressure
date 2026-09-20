@@ -81,3 +81,12 @@ After successful runs, update:
 - `docs/PROJECT_STATE.md` to Gate 0 PASS only when every acceptance item is satisfied.
 
 Then create the first `KNOWN_GOOD` Gate-0 commit/tag (`kg-g0-env`).
+
+## 7. CI alternative — GitHub-hosted Apple Silicon
+
+If direct execution on the developer Mac is inconvenient, the repository contains `.github/workflows/gate0-macos-arm64.yml`.
+It uses GitHub's standard `macos-14` arm64 runner, verifies the same pinned OSS CAD Suite archive and SHA-256, runs the exact Gate-0 scripts, and uploads all raw/processed evidence as an artifact.
+
+This is acceptable **intended-platform evidence** because the workflow asserts `Darwin` and `arm64` before qualification. It is not evidence for a specific developer laptop installation. Keep that distinction in the evidence index.
+
+Run it with **Actions → Gate 0 macOS arm64 qualification → Run workflow** after pushing this repository to GitHub. Review the uploaded artifact before changing Gate 0 to PASS or creating `kg-g0-env`.

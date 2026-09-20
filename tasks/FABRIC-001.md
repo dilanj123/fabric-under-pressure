@@ -14,6 +14,8 @@ Run the prepared Gate-0 smoke suite on the intended macOS/Apple-Silicon host and
 
 Follow `docs/GATE0_MAC_RUNBOOK.md`.
 
+A GitHub-hosted Apple-Silicon execution path is also provided at `.github/workflows/gate0-macos-arm64.yml`. It targets `macos-14`, asserts `Darwin/arm64`, uses the same pinned OSS CAD Suite asset/digest, and uploads Gate-0 evidence for review.
+
 ## Required commands
 ```bash
 ./scripts/check_env.sh

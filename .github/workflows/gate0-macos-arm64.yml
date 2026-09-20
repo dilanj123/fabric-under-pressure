@@ -1,0 +1,97 @@
+name: Gate 0 macOS arm64 qualification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate0:
+    name: Gate 0 / macOS arm64
+    runs-on: macos-14
+    timeout-minutes: 60
+    env:
+      OSS_CAD_TAG: "2026-09-20"
+      OSS_CAD_STAMP: "20260920"
+      OSS_CAD_SHA256: "3af61f750c8040bcdfe317ba6134f93e391d65dc27e6bf39ef56455e48c723ae"
+      FABRIC_SEED: "0xFABC0001"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prove host identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          uname -a
+          sw_vers
+          test "$(uname -s)" = "Darwin"
+          test "$(uname -m)" = "arm64"
+
+      - name: Install pinned OSS CAD Suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/eda"
+          cd "$HOME/eda"
+          asset="oss-cad-suite-darwin-arm64-${OSS_CAD_STAMP}.tgz"
+          url="https://github.com/YosysHQ/oss-cad-suite-build/releases/download/${OSS_CAD_TAG}/${asset}"
+          curl --fail --location --retry 4 --retry-all-errors \
+            --output "$asset" "$url"
+          printf '%s  %s\n' "$OSS_CAD_SHA256" "$asset" | shasum -a 256 -c -
+          tar -xzf "$asset"
+          test -x "$HOME/eda/oss-cad-suite/bin/yosys"
+          echo "$HOME/eda/oss-cad-suite/bin" >> "$GITHUB_PATH"
+
+      - name: Capture environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          source "$HOME/eda/oss-cad-suite/environment"
+          ./scripts/check_env.sh
+          grep -q 'machine=arm64' results/raw/gate0/env/check_env.log
+          grep -q 'uname=Darwin' results/raw/gate0/env/check_env.log
+
+      - name: Bootstrap Python environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          source "$HOME/eda/oss-cad-suite/environment"
+          ./scripts/bootstrap_python.sh
+          source .venv/bin/activate
+          python --version
+          pip freeze
+
+      - name: Run Gate-0 smoke suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          source "$HOME/eda/oss-cad-suite/environment"
+          source .venv/bin/activate
+          ./scripts/run_gate0.sh 2>&1 | tee results/raw/gate0/mac_gate0_driver.log
+
+      - name: Build candidate Gate-0 evidence summary
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          source "$HOME/eda/oss-cad-suite/environment"
+          source .venv/bin/activate
+          ./scripts/render_gate0_candidate_evidence.sh
+
+      - name: Upload Gate-0 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate0-macos-arm64-${{ github.run_id }}
+          if-no-files-found: error
+          retention-days: 30
+          path: |
+            results/raw/gate0/**
+            results/processed/gate0/**
+            docs/PROJECT_STATE.md
+            docs/EVIDENCE_INDEX.md
+            docs/DECISIONS.md
+            requirements/phase0.txt

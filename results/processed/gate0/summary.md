@@ -19,3 +19,6 @@
 Do **not** implement fabric RTL yet. Run the smoke suite on the intended Mac and close every OPEN row first.
 
 Static validation performed here: all generated shell scripts pass `bash -n`; both cocotb Python test modules pass `python -m py_compile`. This is syntax evidence only.
+
+## Automated intended-host route
+A GitHub Actions workflow now exists at `.github/workflows/gate0-macos-arm64.yml`. It targets the standard `macos-14` Apple-Silicon runner, asserts Darwin/arm64, verifies the pinned OSS CAD Suite checksum, executes the existing Gate-0 suite, and uploads evidence. The workflow itself is static harness evidence only; Gate 0 remains OPEN until a real run succeeds and its artifact is reviewed.

@@ -40,4 +40,4 @@ None. No frozen AXI architecture decision was changed by bootstrap work.
 - Gate 0 therefore remains OPEN. No KNOWN_GOOD tag is permitted yet.
 
 ## Next smallest task
-Run the Gate-0 smoke suite on the intended Apple-Silicon host with the pinned candidate OSS CAD Suite and Python environment; repair only environment/coding-style issues discovered. Do not start fabric RTL while Gate 0 is open.
+Push the repository to a GitHub remote and run `.github/workflows/gate0-macos-arm64.yml` (or run the same suite directly on the developer Mac). Review the resulting Darwin/arm64 evidence; only then close Gate 0 and create `kg-g0-env`. Do not start fabric RTL while Gate 0 is open.

@@ -16,4 +16,6 @@
 
 | G0-E012 | REPRO | generated shell/Python smoke harnesses pass static syntax checks | local `bash -n` and `python -m py_compile` run, 2026-09-20 | COMPLETE for syntax only |
 
+| G0-E013 | REPRO | Apple-Silicon CI qualification workflow authored and statically checked | `.github/workflows/gate0-macos-arm64.yml`, `scripts/render_gate0_candidate_evidence.sh` | COMPLETE as harness; execution OPEN |
+
 No AXI functional correctness or performance evidence exists yet.
