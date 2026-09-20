@@ -1,0 +1,21 @@
+# Frozen before Architecture B performance data.
+seeds: [0xFABC0001, 0xFABC0002, 0xFABC0003, 0xFABC0004, 0xFABC0005]
+classes:
+  control: {manager: M0, burst_beats: 1, qos: 8}
+  dma: {manager: M1, burst_beats: 16, qos: 0}
+  critical: {manager: M2, burst_beats: [1, 2], qos: 15}
+scenarios:
+  W00: idle
+  W01: m0_control_only
+  W02: m1_dma_only
+  W03: m2_critical_only
+  W04: balanced_mixed
+  W05: saturated_dma_plus_control
+  W06: saturated_dma_plus_bursty_critical
+  W07: all_saturated_heterogeneous
+  W08: adversarial_starvation
+  W09: read_heavy_80_20
+  W10: write_heavy_20_80
+  W11: mixed_50_50
+  W12: equal_demand_fairness
+  W13: parallel_target

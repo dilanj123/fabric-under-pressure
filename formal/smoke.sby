@@ -1,0 +1,24 @@
+[tasks]
+prove
+cover
+fail
+
+[options]
+prove: mode prove
+prove: depth 8
+cover: mode cover
+cover: depth 8
+fail: mode prove
+fail: depth 8
+
+[engines]
+smtbmc
+
+[script]
+prove: read -formal ../smoke/formal_counter.sv
+cover: read -formal ../smoke/formal_counter.sv
+fail: read -formal -D EXPECT_FAIL ../smoke/formal_counter.sv
+prep -top formal_counter
+
+[files]
+../smoke/formal_counter.sv

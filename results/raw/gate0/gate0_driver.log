@@ -1,0 +1,40 @@
+===== check_env.sh =====
+timestamp=2026-09-20T17:16:12Z
+uname=Linux localhost 6.18.44 #1 SMP Sat Sep 12 15:35:21 UTC 2026 x86_64 GNU/Linux
+machine=x86_64
+shell=/bin/bash
+--- python3 ---
+/opt/pyvenv/bin/python3
+Python 3.13.5
+--- pip3 ---
+/opt/pyvenv/bin/pip3
+pip 25.1.1 from /opt/pyvenv/lib/python3.13/site-packages/pip (python 3.13)
+--- git ---
+/usr/bin/git
+git version 2.47.3
+--- verilator ---
+MISSING
+--- yosys ---
+MISSING
+--- sby ---
+MISSING
+--- nextpnr-ecp5 ---
+MISSING
+--- ecppack ---
+MISSING
+--- slang ---
+MISSING
+===== run_smoke_sv.sh =====
+ERROR: verilator missing
+===== run_smoke_sim.sh =====
+ERROR: verilator missing
+===== run_smoke_bfm.sh =====
+ERROR: verilator missing
+===== run_smoke_formal.sh =====
+ERROR: sby missing
+===== run_smoke_synth.sh =====
+ERROR: yosys missing
+===== run_smoke_pnr.sh =====
+ERROR: yosys missing
+===== run_smoke_wrapper.sh =====
+ERROR: yosys missing
