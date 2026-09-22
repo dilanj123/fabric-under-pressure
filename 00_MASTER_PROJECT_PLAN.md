@@ -1081,7 +1081,7 @@ The project is intentionally not classified “unconditionally ready” because 
 6. **P&R anti-optimization wrapper.** Demonstrate that common wrapper retains fabric logic and yields stable repeatable stats without impossible package I/O.
 7. **Performance-run size.** The proposed 500 warm-up/5,000 samples per manager per seed is frozen unless Phase 0 changes it *before* Architecture B RTL exists.
 8. **Third-party exact commits.** Record v/tag/SHA/licence before any code is imported.
-9. **Process-reference gap.** The separate “From RTL to Pixels” files were not available in the accessible file set during this planning pass. The engineering method/evidence/gate requirements explicitly reproduced in the Fabric brief have been followed; if those reference files are later added, compare workflow-only differences and log any imported process refinement. Their image/CPU architecture must not become technical authority here.
+9. **Process reference resolved.** The public `dilanj123/from-rtl-to-pixels` repository was reviewed at commit `f32eb297fbe95530753673debd4739617529a84d` on 22 Sep 2026, including `00_MASTER_PROJECT_PLAN.md`, `01_CHATGPT_PROJECT_OPERATING_INSTRUCTIONS.md`, and `AGENTS.md`. Fabric imports its workflow discipline only: authority ordering, contradiction handling, evidence classifications, known-good gating, narrow Codex task structure, milestone reporting, third-party provenance, and reproducibility. Its Sobel/image architecture is explicitly non-authoritative for Fabric.
 
 Failure of items 1–6 to produce a workable open-source path blocks Gate 0 and triggers a tool/method decision, not an RTL workaround.
 

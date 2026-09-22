@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="${FABRIC_GITHUB_REPO:-kiran-jayasena/fabric-under-pressure}"
+REPO="${FABRIC_GITHUB_REPO:-dilanj123/fabric-under-pressure}"
 VISIBILITY="${FABRIC_GITHUB_VISIBILITY:-public}"
 DESC="Fabric Under Pressure — Deterministic QoS-Aware AXI4 SoC Interconnect"
 WORKFLOW="gate0-macos-arm64.yml"

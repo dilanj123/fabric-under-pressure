@@ -10,7 +10,7 @@ Create the dedicated public GitHub repository, push the clean `main` branch, dis
 - authenticate first with `gh auth login` if required;
 - current branch must be `main`;
 - working tree must be clean;
-- the default target repository is `kiran-jayasena/fabric-under-pressure`.
+- the default target repository is `dilanj123/fabric-under-pressure`.
 
 ## One command
 
@@ -18,7 +18,7 @@ Create the dedicated public GitHub repository, push the clean `main` branch, dis
 ./scripts/publish_github_and_start_gate0.sh
 ```
 
-The script will create `kiran-jayasena/fabric-under-pressure` if it does not exist, add the `origin` remote, push `main`, dispatch `.github/workflows/gate0-macos-arm64.yml`, watch the run, and download evidence under `results/raw/gate0/github-actions/`.
+The script will create `dilanj123/fabric-under-pressure` if it does not exist, add the `origin` remote, push `main`, dispatch `.github/workflows/gate0-macos-arm64.yml`, watch the run, and download evidence under `results/raw/gate0/github-actions/`.
 
 To override the target repository or visibility:
 

@@ -1,11 +1,11 @@
 # Project State
 
-**Date:** 2026-09-20
+**Date:** 2026-09-22
 **Gate:** Gate 0 OPEN
 **Architecture:** planning frozen; project AXI RTL not started.
 
 ## What changed
-Repository/bootstrap skeleton, Gate-0 smoke sources/scripts, protocol source register, upstream snapshot, third-party manifest and Gate-1 document skeletons created.
+Repository/bootstrap skeleton, Gate-0 smoke sources/scripts, protocol source register, upstream snapshot, third-party manifest and Gate-1 document skeletons created. Public process-reference review is now complete against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`. GitHub publication target corrected to `dilanj123/fabric-under-pressure`.
 
 ## Evidence now exists
 - authoritative planning documents are present;
@@ -28,7 +28,7 @@ Repository/bootstrap skeleton, Gate-0 smoke sources/scripts, protocol source reg
 Do not interpret generated scripts or public upstream metadata as local tool qualification. Gate 0 remains OPEN until the intended Mac executes the smoke suite successfully.
 
 ## Specification changes
-None. No frozen AXI architecture decision was changed by bootstrap work.
+No AXI behaviour changed. Process authority was strengthened by resolving the RTL-to-Pixels reference, and repository ownership metadata was corrected to `dilanj123`; see D016-D017.
 
 ## Phase-0 execution status
 
