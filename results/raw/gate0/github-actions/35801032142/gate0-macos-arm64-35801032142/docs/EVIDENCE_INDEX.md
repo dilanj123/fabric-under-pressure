@@ -16,6 +16,6 @@
 
 | G0-E012 | REPRO | generated shell/Python smoke harnesses pass static syntax checks | local `bash -n` and `python -m py_compile` run, 2026-09-20 | COMPLETE for syntax only |
 
-| G0-E013 | REPRO | Apple-Silicon CI qualification workflow | `.github/workflows/gate0-macos-arm64.yml`; run 35801032142 artifact under `results/raw/gate0/github-actions/35801032142/` | OPEN; first run failed in Verilator C++ compilation, repair pending rerun |
+| G0-E013 | REPRO | Apple-Silicon CI qualification workflow | `.github/workflows/gate0-macos-arm64.yml`, pending workflow artifact | OPEN until CI run reviewed |
 
 No AXI functional correctness or performance evidence exists yet.

@@ -1,12 +1,12 @@
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 0.001 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.188 MB
+- Verilator: Walltime 0.001 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.141 MB
 make: Nothing to be done for `default'.
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/libpython3.11.dylib'
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:234  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotb/simulator.cpython-311-darwin.so'
      -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:115  in initialize                      Using Python 3.11.9 interpreter at /Users/Dilan/Projects/fabric-under-pressure/.venv/bin/python3
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
-     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1790122118
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1790122641
      0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotb
      0.00ns INFO     cocotb.initialize                  Running on Verilator version 5.053 devel
      0.00ns INFO     cocotb.regression                  Running tests
@@ -242,8 +242,8 @@ make: Nothing to be done for `default'.
    440.00ns INFO     cocotb.regression                  **************************************************************************************************
                                                         ** TEST                                      STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         **************************************************************************************************
-                                                        ** test_axi_bfm_smoke.axi_bfm_qualification   PASS         440.00           0.01      36444.71  **
+                                                        ** test_axi_bfm_smoke.axi_bfm_qualification   PASS         440.00           0.02      29261.48  **
                                                         **************************************************************************************************
-                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                            440.00           0.01      35057.67  **
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                            440.00           0.02      28387.86  **
                                                         **************************************************************************************************
 - :0: Verilog $finish

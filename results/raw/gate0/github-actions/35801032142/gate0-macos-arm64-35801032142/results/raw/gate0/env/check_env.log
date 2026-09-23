@@ -1,0 +1,33 @@
+timestamp=2026-09-23T00:13:20Z
+uname=Darwin sat12-bq154-d9532ec1-22e7-4d78-8b53-8b6ea765e420-6E28D9CC5F20.local 23.6.0 Darwin Kernel Version 23.6.0: Tue Jul 21 21:56:54 PDT 2026; root:xnu-10063.141.1.713.39~1/RELEASE_ARM64_VMAPPLE arm64
+machine=arm64
+ProductName:		macOS
+ProductVersion:		14.8.9
+BuildVersion:		23J631
+shell=/bin/bash
+--- python3 ---
+/Users/runner/work/fabric-under-pressure/fabric-under-pressure/.venv/bin/python3
+Python 3.11.6
+--- pip3 ---
+/Users/runner/work/fabric-under-pressure/fabric-under-pressure/.venv/bin/pip3
+pip 26.2.1 from /Users/runner/work/fabric-under-pressure/fabric-under-pressure/.venv/lib/python3.11/site-packages/pip (python 3.11)
+--- git ---
+/opt/homebrew/bin/git
+git version 2.55.0
+--- verilator ---
+/Users/runner/eda/oss-cad-suite/bin/verilator
+Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+--- yosys ---
+/Users/runner/eda/oss-cad-suite/bin/yosys
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+--- sby ---
+/Users/runner/eda/oss-cad-suite/bin/sby
+SBY v0.69
+--- nextpnr-ecp5 ---
+/Users/runner/eda/oss-cad-suite/bin/nextpnr-ecp5
+--- ecppack ---
+/Users/runner/eda/oss-cad-suite/bin/ecppack
+Version 1.4-82-g3afe7b5
+--- slang ---
+/Users/runner/eda/oss-cad-suite/bin/slang
+slang version 11.0.448+e222e7dc0

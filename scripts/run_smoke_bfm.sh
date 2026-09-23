@@ -18,6 +18,9 @@ print("cocotbext.axi import PASS")
 PY
 export FABRIC_SEED="${FABRIC_SEED:-0xFABC0001}"
 export ROOT
+# The macOS runner's compiler default is not guaranteed to be modern enough
+# for Verilator's generated C++ headers.
+export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
 python3 - <<'PY' 2>&1 | tee "$OUT/run.log"
 import os
 from pathlib import Path

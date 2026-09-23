@@ -1,0 +1,124 @@
+SBY  0:13:24 [smoke_prove] Removing directory '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/smoke_prove'.
+SBY  0:13:24 [smoke_prove] Copy '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/../smoke/formal_counter.sv' to '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/smoke_prove/src/formal_counter.sv'.
+SBY  0:13:24 [smoke_prove] engine_0: smtbmc
+SBY  0:13:24 [smoke_prove] base: starting process "cd smoke_prove/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:13:25 [smoke_prove] base: finished (returncode=0)
+SBY  0:13:25 [smoke_prove] prep: starting process "cd smoke_prove/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:13:25 [smoke_prove] prep: finished (returncode=0)
+SBY  0:13:25 [smoke_prove] smt2: starting process "cd smoke_prove/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:13:25 [smoke_prove] smt2: finished (returncode=0)
+SBY  0:13:25 [smoke_prove] engine_0.basecase: starting process "cd smoke_prove; yosys-smtbmc --presat --unroll --noprogress -t 8  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:13:25 [smoke_prove] engine_0.induction: starting process "cd smoke_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 8  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  0:13:25 [smoke_prove] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:13:25 [smoke_prove] engine_0.induction: ##   0:00:00  Trying induction in step 8..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  0:13:25 [smoke_prove] engine_0.induction: ##   0:00:00  Trying induction in step 7..
+SBY  0:13:25 [smoke_prove] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY  0:13:25 [smoke_prove] engine_0.induction: ##   0:00:00  Status: passed
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY  0:13:25 [smoke_prove] engine_0.basecase: ##   0:00:00  Status: passed
+SBY  0:13:25 [smoke_prove] engine_0.induction: finished (returncode=0)
+SBY  0:13:25 [smoke_prove] engine_0.induction: Status returned by engine for induction: pass
+SBY  0:13:25 [smoke_prove] engine_0.basecase: finished (returncode=0)
+SBY  0:13:25 [smoke_prove] engine_0.basecase: Status returned by engine for basecase: pass
+SBY  0:13:25 [smoke_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:13:25 [smoke_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:13:25 [smoke_prove] summary: engine_0 (smtbmc) returned pass for basecase
+SBY  0:13:25 [smoke_prove] summary: engine_0 (smtbmc) returned pass for induction
+SBY  0:13:25 [smoke_prove] summary: engine_0 did not produce any traces
+SBY  0:13:25 [smoke_prove] summary: successful proof by k-induction.
+SBY  0:13:25 [smoke_prove] DONE (PASS, rc=0)
+SBY  0:13:25 [smoke_cover] Removing directory '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/smoke_cover'.
+SBY  0:13:25 [smoke_cover] Copy '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/../smoke/formal_counter.sv' to '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/smoke_cover/src/formal_counter.sv'.
+SBY  0:13:25 [smoke_cover] engine_0: smtbmc
+SBY  0:13:25 [smoke_cover] base: starting process "cd smoke_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:13:25 [smoke_cover] base: finished (returncode=0)
+SBY  0:13:25 [smoke_cover] prep: starting process "cd smoke_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:13:25 [smoke_cover] prep: finished (returncode=0)
+SBY  0:13:25 [smoke_cover] smt2: starting process "cd smoke_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:13:25 [smoke_cover] smt2: finished (returncode=0)
+SBY  0:13:25 [smoke_cover] engine_0: starting process "cd smoke_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 8  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Solver: yices
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Reached cover statement in step 4 at formal_counter: formal_counter.sv:9.5-9.25 (_witness_.check_cover_formal_counter_sv_9_5)
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  0:13:25 [smoke_cover] engine_0: ##   0:00:00  Status: passed
+SBY  0:13:25 [smoke_cover] engine_0: finished (returncode=0)
+SBY  0:13:25 [smoke_cover] engine_0: Status returned by engine: pass
+SBY  0:13:25 [smoke_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:13:25 [smoke_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:13:25 [smoke_cover] summary: engine_0 (smtbmc) returned pass
+SBY  0:13:25 [smoke_cover] summary: cover trace: smoke_cover/engine_0/trace0.vcd
+SBY  0:13:25 [smoke_cover] summary:   reached cover statement formal_counter._witness_.check_cover_formal_counter_sv_9_5 at formal_counter.sv:9.5-9.25 step 4
+SBY  0:13:25 [smoke_cover] DONE (PASS, rc=0)
+SBY  0:13:25 [smoke_fail] Removing directory '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/smoke_fail'.
+SBY  0:13:25 [smoke_fail] Copy '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/../smoke/formal_counter.sv' to '/Users/runner/work/fabric-under-pressure/fabric-under-pressure/formal/smoke_fail/src/formal_counter.sv'.
+SBY  0:13:25 [smoke_fail] engine_0: smtbmc
+SBY  0:13:25 [smoke_fail] base: starting process "cd smoke_fail/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:13:25 [smoke_fail] base: finished (returncode=0)
+SBY  0:13:25 [smoke_fail] prep: starting process "cd smoke_fail/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:13:25 [smoke_fail] prep: finished (returncode=0)
+SBY  0:13:25 [smoke_fail] smt2: starting process "cd smoke_fail/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:13:25 [smoke_fail] smt2: finished (returncode=0)
+SBY  0:13:25 [smoke_fail] engine_0.basecase: starting process "cd smoke_fail; yosys-smtbmc --presat --unroll --noprogress -t 8  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:13:25 [smoke_fail] engine_0.induction: starting process "cd smoke_fail; yosys-smtbmc --presat --unroll -i --noprogress -t 8  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Trying induction in step 8..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Trying induction in step 7..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Trying induction in step 6..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Trying induction in step 5..
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Trying induction in step 4..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Trying induction in step 3..
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY  0:13:25 [smoke_fail] engine_0.induction: ##   0:00:00  Status: passed
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  BMC failed!
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Assert failed in formal_counter: formal_counter.sv:7.5-7.26 (_witness_.check_assert_formal_counter_sv_7_5)
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY  0:13:25 [smoke_fail] engine_0.basecase: ##   0:00:00  Status: failed
+SBY  0:13:25 [smoke_fail] engine_0.induction: finished (returncode=0)
+SBY  0:13:25 [smoke_fail] engine_0.induction: Status returned by engine for induction: pass
+SBY  0:13:25 [smoke_fail] engine_0.basecase: finished (returncode=1)
+SBY  0:13:25 [smoke_fail] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY  0:13:25 [smoke_fail] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:13:25 [smoke_fail] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:13:25 [smoke_fail] summary: engine_0 (smtbmc) returned FAIL for basecase
+SBY  0:13:25 [smoke_fail] summary: engine_0 (smtbmc) returned pass for induction
+SBY  0:13:25 [smoke_fail] summary: counterexample trace [basecase]: smoke_fail/engine_0/trace.vcd
+SBY  0:13:25 [smoke_fail] summary:   failed assertion formal_counter._witness_.check_assert_formal_counter_sv_7_5 at formal_counter.sv:7.5-7.26 step 3
+SBY  0:13:25 [smoke_fail] DONE (FAIL, rc=2)
+SBY  0:13:25 The following tasks failed: ['fail']
+Expected-failure harness detected failure (rc=2)

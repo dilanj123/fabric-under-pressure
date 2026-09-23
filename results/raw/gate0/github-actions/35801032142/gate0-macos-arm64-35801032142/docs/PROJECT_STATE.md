@@ -1,7 +1,7 @@
 # Project State
 
 **Date:** 2026-09-23
-**Gate:** Gate 0 PASS locally; GitHub macOS arm64 qualification OPEN after run 35801032142 failure
+**Gate:** Gate 0 PASS locally; GitHub macOS arm64 qualification OPEN
 **Architecture:** planning frozen; project AXI RTL not started.
 
 ## What changed
@@ -34,4 +34,4 @@ No AXI behaviour changed. Process authority was strengthened by resolving the RT
 - No project AXI RTL or reference model exists.
 
 ## Next smallest task
-Dispatch and review `.github/workflows/gate0-macos-arm64.yml` after the runner C++ standard repair. If its artifact independently passes every Gate-0 criterion, commit the reviewed evidence and create `kg-g0-env`; otherwise diagnose the CI discrepancy. Do not start fabric RTL until Gate 0 is closed across the required evidence paths.
+Dispatch and review `.github/workflows/gate0-macos-arm64.yml`. If its artifact independently passes every Gate-0 criterion, commit the reviewed evidence and create `kg-g0-env`; otherwise diagnose the CI discrepancy. Do not start fabric RTL until Gate 0 is closed across the required evidence paths.
