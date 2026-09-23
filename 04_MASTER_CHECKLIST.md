@@ -418,7 +418,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] exact tool versions/settings frozen for later A/B comparison.
 - [x] hostile Gate-1 protocol review has no open BLOCKER/MAJOR issue.
 - [x] requirement-to-test traceability has no gaps.
-- [ ] known-good Gate-1 commit recorded.
+- [x] known-good Gate-1 commit recorded as `0d856ff` before tagging `kg-g1-spec`.
 
 ---
 

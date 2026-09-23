@@ -1,7 +1,7 @@
 # Project State
 
 **Date:** 2026-09-23
-**Gate:** Gate 1 PASS; Gate 0 environment qualification reviewed and tagged
+**Gate:** Gate 1 PASS; specification freeze commit `0d856ff` reviewed and ready for `kg-g1-spec`
 **Architecture:** planning frozen; project AXI RTL not started.
 
 ## What changed
