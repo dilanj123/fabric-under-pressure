@@ -1,7 +1,7 @@
 # Project State
 
 **Date:** 2026-09-23
-**Gate:** Gate 1 PASS; specification freeze commit `0d856ff` reviewed and ready for `kg-g1-spec`
+**Gate:** Gate 1 PASS; `kg-g1-spec` exists remotely at `aecfb8c`
 **Architecture:** planning frozen; project AXI RTL not started.
 
 ## What changed
