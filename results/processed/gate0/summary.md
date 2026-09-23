@@ -1,6 +1,6 @@
 # Gate-0 Evidence Summary
 
-**Gate result: PASS.** The complete smoke suite returned exit code 0 on this Darwin/arm64 host, and the reviewed GitHub macOS arm64 qualification passed at run `35801448593`.
+**Gate result: PASS.** The complete smoke suite returned exit code 0 on this Darwin/arm64 host with the repair recorded in `fed87e1`, and the reviewed GitHub macOS arm64 qualification passed at run `35801448593`.
 
 | Check | Command | Result | Evidence | Classification |
 |---|---|---|---|---|
