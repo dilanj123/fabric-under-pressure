@@ -62,7 +62,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] one outstanding per manager ID per direction.
 - [x] address map is non-overlapping and 4-KiB aligned.
 - [ ] exact signal list is frozen in `docs/REQUIREMENTS.md`.
-- [ ] attribute pass-through/fixed semantics are frozen in `docs/REQUIREMENTS.md`.
+- [x] attribute pass-through/fixed semantics are frozen in `docs/REQUIREMENTS.md`.
 
 ---
 
@@ -312,7 +312,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 # N. Functional verification
 
-- [ ] address decoder tests pass.
+- [x] address decoder tests pass (`results/raw/decoder/simulation.log`).
 - [ ] RR arbiter unit tests pass.
 - [ ] QOS/age arbiter unit tests pass when B begins.
 - [ ] ID mapping tests pass.
@@ -346,7 +346,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 - [ ] SBY environment smoke passes.
 - [ ] proof harness detects intentional failing smoke.
-- [ ] decoder exclusivity/default proof passes.
+- [x] decoder exclusivity/default proof passes (`results/raw/decoder/formal_prove/logfile.txt`).
 - [ ] RR one-hot proof passes.
 - [ ] RR no-grant-without-request proof passes.
 - [ ] RR hold stability proof passes.

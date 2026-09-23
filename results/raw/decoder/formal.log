@@ -1,84 +1,84 @@
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove'.
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/fabric_addr_map_pkg.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/fabric_addr_map_pkg.sv'.
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_address_decoder.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/axi_address_decoder.sv'.
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/address_decoder_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/address_decoder_formal.sv'.
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0: smtbmc
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys"
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] base: finished (returncode=0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/model; yosys -ql design_prep.log design_prep.ys"
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] prep: finished (returncode=0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys"
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] smt2: finished (returncode=0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 1  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 1  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Solver: yices
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Solver: yices
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 1..
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Temporal induction successful.
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Status: passed
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Status: passed
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: finished (returncode=0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: Status returned by engine for induction: pass
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: finished (returncode=0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: Status returned by engine for basecase: pass
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 (smtbmc) returned pass for basecase
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 (smtbmc) returned pass for induction
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 did not produce any traces
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: successful proof by k-induction.
-SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] DONE (PASS, rc=0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover'.
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/fabric_addr_map_pkg.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/fabric_addr_map_pkg.sv'.
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_address_decoder.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/axi_address_decoder.sv'.
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/address_decoder_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/address_decoder_formal.sv'.
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: smtbmc
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys"
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] base: finished (returncode=0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/model; yosys -ql design_prep.log design_prep.ys"
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] prep: finished (returncode=0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys"
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] smt2: finished (returncode=0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 1  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Solver: yices
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:28.5-28.71 (_witness_.check_cover_address_decoder_formal_sv_28_34)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:27.5-27.71 (_witness_.check_cover_address_decoder_formal_sv_27_32)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:26.5-26.71 (_witness_.check_cover_address_decoder_formal_sv_26_30)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:25.5-25.71 (_witness_.check_cover_address_decoder_formal_sv_25_28)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Status: passed
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: finished (returncode=0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: Status returned by engine: pass
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: engine_0 (smtbmc) returned pass
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace0.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_28_34 at address_decoder_formal.sv:28.5-28.71
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace1.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_27_32 at address_decoder_formal.sv:27.5-27.71
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace2.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_26_30 at address_decoder_formal.sv:26.5-26.71
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace3.vcd
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_25_28 at address_decoder_formal.sv:25.5-25.71
-SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] DONE (PASS, rc=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/fabric_addr_map_pkg.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/fabric_addr_map_pkg.sv'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_address_decoder.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/axi_address_decoder.sv'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/address_decoder_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/address_decoder_formal.sv'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0: smtbmc
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] base: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/model; yosys -ql design_prep.log design_prep.ys"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] prep: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] smt2: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 1  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 1  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 1..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Status: passed
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Status: passed
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: Status returned by engine for induction: pass
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: Status returned by engine for basecase: pass
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 (smtbmc) returned pass for basecase
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 (smtbmc) returned pass for induction
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 did not produce any traces
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: successful proof by k-induction.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] DONE (PASS, rc=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/fabric_addr_map_pkg.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/fabric_addr_map_pkg.sv'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_address_decoder.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/axi_address_decoder.sv'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/address_decoder_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/address_decoder_formal.sv'.
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: smtbmc
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] base: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] prep: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] smt2: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 1  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Solver: yices
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:28.5-28.71 (_witness_.check_cover_address_decoder_formal_sv_28_34)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:27.5-27.71 (_witness_.check_cover_address_decoder_formal_sv_27_32)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:26.5-26.71 (_witness_.check_cover_address_decoder_formal_sv_26_30)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:25.5-25.71 (_witness_.check_cover_address_decoder_formal_sv_25_28)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Status: passed
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: finished (returncode=0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: Status returned by engine: pass
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: engine_0 (smtbmc) returned pass
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace0.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_28_34 at address_decoder_formal.sv:28.5-28.71
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace1.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_27_32 at address_decoder_formal.sv:27.5-27.71
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace2.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_26_30 at address_decoder_formal.sv:26.5-26.71
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace3.vcd
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_25_28 at address_decoder_formal.sv:25.5-25.71
+SBY  1:44:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] DONE (PASS, rc=0)

@@ -17,7 +17,7 @@ verilator --binary --timing --top-module address_decoder_tb --Mdir "$BUILD" \
   2>&1 | tee "$OUT/verilator_build.log"
 "$BUILD/address_decoder_tb" 2>&1 | tee "$OUT/simulation.log"
 
-yosys -Q -p "read_verilog -sv $ROOT/rtl/fabric_addr_map_pkg.sv $ROOT/rtl/axi_address_decoder.sv; hierarchy -top axi_address_decoder; proc; check; stat" \
+yosys -Q -p "read_verilog -sv $ROOT/rtl/fabric_addr_map_pkg.sv $ROOT/rtl/axi_address_decoder.sv; synth_ecp5 -top axi_address_decoder -json $OUT/axi_address_decoder_ecp5.json; stat" \
   2>&1 | tee "$OUT/yosys_synth.log"
 
 (

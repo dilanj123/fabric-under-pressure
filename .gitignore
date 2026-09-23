@@ -19,6 +19,7 @@ results/raw/decoder/sim_work/
 results/raw/decoder/**/model/
 results/raw/decoder/**/src/
 results/raw/decoder/**/status.sqlite
+results/raw/decoder/**/*.json
 !results/raw/gate0/**/*.keep
 build/
 dist/
