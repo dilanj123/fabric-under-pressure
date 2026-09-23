@@ -24,7 +24,7 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.
 
 ## Specification changes
-No AXI behavior or RTL changed. Gate-1 documentation freezes the interface bundle, buffering, endpoint model, workload generator, metrics, traceability and formal assumptions; see D023-D024.
+No frozen AXI behavior changed. This task added the standalone decoder and request-legality primitive evidence; Gate-1 documentation continues to freeze the interface bundle, buffering, endpoint model, workload generator, metrics, traceability and formal assumptions; see D023-D024.
 
 ## Phase-0 execution status
 
