@@ -1,0 +1,70 @@
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove'.
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_outstanding_tracker.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove/src/axi_outstanding_tracker.sv'.
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/outstanding_tracker_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove/src/outstanding_tracker_formal.sv'.
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: smtbmc
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: Warning: Replacing memory \ref_len with list of registers. See outstanding_tracker_formal.sv:55
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: Warning: Replacing memory \ref_target with list of registers. See outstanding_tracker_formal.sv:54
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: Warning: Replacing memory \len_table with list of registers. See axi_outstanding_tracker.sv:66
+SBY  2:20:45 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: Warning: Replacing memory \target_table with list of registers. See axi_outstanding_tracker.sv:65
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: Warning: Drivers conflicting with a constant 1'0 driver:
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[0] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[1] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[2] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[3] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[5] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[6] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[7] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[8] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[9] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[10] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[11] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[12] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[13] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[14] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[15] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[16] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[17] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[18] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[19] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[20] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[21] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[22] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[23] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[24] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[25] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[26] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[27] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[28] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[29] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[30] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[31] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: Warning: Drivers conflicting with a constant 1'1 driver:
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: port Q[4] of cell $procdff$2352 ($dff)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] base: finished (returncode=0)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove/model; yosys -ql design_prep.log design_prep.ys"
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] prep: finished (returncode=0)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] smt2: finished (returncode=0)
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 6  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  2:20:46 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  2:20:47 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:01  Checking assumptions in step 5..
+SBY  2:20:47 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:01  Checking assertions in step 5..
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: ##   0:00:07  Status: passed
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: finished (returncode=0)
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] engine_0: Status returned by engine: pass
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:07 (7)
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:07 (7)
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] summary: engine_0 (smtbmc) returned pass
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] summary: engine_0 did not produce any traces
+SBY  2:20:53 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/outstanding_tracker/formal_prove] DONE (PASS, rc=0)

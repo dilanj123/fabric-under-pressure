@@ -60,3 +60,13 @@ No AXI functional correctness or performance evidence exists yet.
 | I-E003 | FORMAL | forward exactness, lower-ID preservation and manager-prefix uniqueness prove | `results/raw/id_mapping/formal_prove/logfile.txt` | PASS; no environmental assumptions |
 | I-E004 | FORMAL | mapping covers reach valid managers, endpoint IDs, reserved code and shared IDs | `results/raw/id_mapping/formal_cover/logfile.txt` | PASS; all listed cover classes reached |
 | I-E005 | SYNTH | ID mapping primitive completes target-aware Yosys ECP5 synthesis | `results/raw/id_mapping/yosys_synth.log`, `axi_id_mapper_ecp5.json` | PASS; no P&R or Fabric PPA claim |
+
+## Outstanding tracker evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| O-E001 | SIM | outstanding tracker directed state-transition suite passes | `results/raw/outstanding_tracker/simulation.log` | PASS; 19 checks including reset, metadata, violations, capacity and read/write independence |
+| O-E002 | FORMAL | bounded count/bitmap, busy-ID, invalid-event and metadata properties pass | `results/raw/outstanding_tracker/formal_prove/logfile.txt` | PASS; Yices via SBY, BMC depth 6, initial reset assumption |
+| O-E003 | FORMAL | bounded same-cycle pre-state allocation policy properties pass | `results/raw/outstanding_tracker/formal_prove/logfile.txt` | PASS; same-ID and full-count recycling blocked |
+| O-E004 | FORMAL | sequential tracker covers reach meaningful states and reset-after-full | `results/raw/outstanding_tracker/formal_cover/logfile.txt` | PASS; cover depth 8 |
+| O-E005 | SYNTH | outstanding tracker completes target-aware Yosys ECP5 synthesis | `results/raw/outstanding_tracker/yosys_synth.log`, `axi_outstanding_tracker_ecp5.json` | PASS; no P&R or Fabric PPA claim |

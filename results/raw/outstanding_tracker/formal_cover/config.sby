@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 8
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv axi_outstanding_tracker.sv outstanding_tracker_formal.sv
+prep -top outstanding_tracker_formal
+
+[files]
+../rtl/axi_outstanding_tracker.sv
+outstanding_tracker_formal.sv

@@ -1,0 +1,53 @@
+initial
+assume (= [_witness_.anyinit_procdff_2357] #b0000000000000000)
+assume (= [_witness_.anyinit_procdff_2362] #b000)
+assume (= [dut._witness_.anyinit_procdff_2120] #b0000000000000000)
+assume (= [dut._witness_.anyinit_procdff_2125] #b000)
+assume (= [dut._witness_.anyinit_procdff_2140] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2145] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2150] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2155] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2160] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2165] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2170] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2175] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2180] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2185] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2190] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2195] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2200] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2205] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2210] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2215] #b0000)
+assume (= [dut._witness_.anyinit_procdff_2220] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2225] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2230] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2235] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2240] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2245] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2250] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2255] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2260] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2265] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2270] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2275] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2280] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2285] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2290] #b00000000)
+assume (= [dut._witness_.anyinit_procdff_2295] #b00000000)
+assume (= [saw_full] false)
+
+state 0
+assume (= [ACLK] false)
+
+state 1
+assume (= [ACLK] false)
+
+state 2
+assume (= [ACLK] false)
+
+state 3
+assume (= [ACLK] false)
+
+state 4
+assume (= [ACLK] false)

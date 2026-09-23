@@ -1,0 +1,74 @@
+##   0:00:00  Solver: yices
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement in step 0 at outstanding_tracker_formal: outstanding_tracker_formal.sv:105.5-105.38 (_witness_.check_cover_outstanding_tracker_formal_sv_105_150)
+##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Reached cover statement in step 1 at outstanding_tracker_formal: outstanding_tracker_formal.sv:111.5-111.31 (_witness_.check_cover_outstanding_tracker_formal_sv_111_161)
+##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at outstanding_tracker_formal: outstanding_tracker_formal.sv:106.5-106.38 (_witness_.check_cover_outstanding_tracker_formal_sv_106_152)
+##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at outstanding_tracker_formal: outstanding_tracker_formal.sv:112.5-112.66 (_witness_.check_cover_outstanding_tracker_formal_sv_112_162)
+##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at outstanding_tracker_formal: outstanding_tracker_formal.sv:110.5-110.31 (_witness_.check_cover_outstanding_tracker_formal_sv_110_160)
+##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at outstanding_tracker_formal: outstanding_tracker_formal.sv:113.5-113.98 (_witness_.check_cover_outstanding_tracker_formal_sv_113_166)
+##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Checking cover reachability in step 3..
+##   0:00:00  Reached cover statement in step 3 at outstanding_tracker_formal: outstanding_tracker_formal.sv:107.5-107.38 (_witness_.check_cover_outstanding_tracker_formal_sv_107_154)
+##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+##   0:00:00  Checking cover reachability in step 3..
+##   0:00:00  Checking cover reachability in step 4..
+##   0:00:00  Reached cover statement in step 4 at outstanding_tracker_formal: outstanding_tracker_formal.sv:108.5-108.38 (_witness_.check_cover_outstanding_tracker_formal_sv_108_156)
+##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+##   0:00:00  Checking cover reachability in step 4..
+##   0:00:00  Checking cover reachability in step 5..
+##   0:00:00  Reached cover statement in step 5 at outstanding_tracker_formal: outstanding_tracker_formal.sv:109.5-109.38 (_witness_.check_cover_outstanding_tracker_formal_sv_109_158)
+##   0:00:00  Writing trace to VCD file: engine_0/trace8.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace8.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace8.yw
+##   0:00:00  Checking cover reachability in step 5..
+##   0:00:00  Reached cover statement in step 5 at outstanding_tracker_formal: outstanding_tracker_formal.sv:114.5-114.87 (_witness_.check_cover_outstanding_tracker_formal_sv_114_172)
+##   0:00:00  Writing trace to VCD file: engine_0/trace9.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace9.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace9.yw
+##   0:00:00  Checking cover reachability in step 5..
+##   0:00:00  Checking cover reachability in step 6..
+##   0:00:00  Reached cover statement in step 6 at outstanding_tracker_formal: outstanding_tracker_formal.sv:115.5-115.33 (_witness_.check_cover_outstanding_tracker_formal_sv_115_177)
+##   0:00:00  Writing trace to VCD file: engine_0/trace10.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace10.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace10.yw
+##   0:00:00  Status: passed

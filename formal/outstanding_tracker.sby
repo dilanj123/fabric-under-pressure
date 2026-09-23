@@ -1,0 +1,20 @@
+[tasks]
+prove
+cover
+
+[options]
+prove: mode bmc
+prove: depth 6
+cover: mode cover
+cover: depth 8
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv axi_outstanding_tracker.sv outstanding_tracker_formal.sv
+prep -top outstanding_tracker_formal
+
+[files]
+../rtl/axi_outstanding_tracker.sv
+outstanding_tracker_formal.sv
