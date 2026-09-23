@@ -19,3 +19,14 @@
 | G0-E013 | REPRO | Apple-Silicon CI qualification workflow | `.github/workflows/gate0-macos-arm64.yml`; run 35801448593 artifact under `results/raw/gate0/github-actions/35801448593/`, reviewed report in `results/processed/gate0/ci-run-35801448593.md` | PASS; all workflow steps succeeded |
 
 No AXI functional correctness or performance evidence exists yet.
+
+## Gate-1 specification evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| G1-E001 | SPEC | documented AXI4 subset, exact signal bundle, attributes and exclusions | `docs/REQUIREMENTS.md` | COMPLETE |
+| G1-E002 | SPEC | topology, address map, ID widening, ownership, buffering and reset contract | `docs/MICROARCHITECTURE.md` | COMPLETE |
+| G1-E003 | SPEC | workload generator, percentages, endpoint model, seeds and sample policy frozen | `bench/workloads.yaml`, SHA-256 `31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4` | COMPLETE |
+| G1-E004 | SPEC | metric definitions and fixed P&R/wrapper method | `docs/TIMING_PERFORMANCE.md` | COMPLETE |
+| G1-E005 | SPEC | requirement-to-test and formal assumption traceability | `docs/VERIFICATION_PLAN.md`, `docs/FORMAL.md` | COMPLETE |
+| G1-E006 | REVIEW | hostile Gate-1 consistency review | authority-file review recorded in Gate-1 commit | PASS; no open BLOCKER/MAJOR issue |

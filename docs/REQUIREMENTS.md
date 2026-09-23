@@ -1,6 +1,6 @@
 # Requirements
 
-**Status:** Gate-1 skeleton populated with already-frozen decisions. No implementation evidence yet.
+**Status:** Gate-1 specification frozen. No implementation evidence yet.
 
 ## R-001 Scope and protocol claim
 The project implements a **documented AXI4 subset** and remains an interconnect/microarchitecture project, not a CPU, DMA-engine, coherent-protocol or mesh-NoC project.
@@ -27,6 +27,20 @@ The project implements a **documented AXI4 subset** and remains an interconnect/
 - IDs, RESP, LAST, AWQOS/ARQOS and backpressure on every channel.
 - Supported bursts must not cross a 4-KiB boundary.
 
+## R-005a Frozen manager-facing channel signals
+
+The manager and logical-target ports use the following AXI4 signal bundle. Signals are repeated per port and direction; `x` denotes the manager index where applicable.
+
+| Channel | Signals and widths | Attribute policy |
+|---|---|---|
+| AW | `AWID[3:0]`, `AWADDR[31:0]`, `AWLEN[7:0]`, `AWSIZE[2:0]`, `AWBURST[1:0]`, `AWLOCK`, `AWCACHE[3:0]`, `AWPROT[2:0]`, `AWQOS[3:0]`, `AWREGION[3:0]`, `AWVALID`, `AWREADY` | `AWLEN=0..15`, `AWSIZE=3`, `AWBURST=INCR`, `AWLOCK=normal`; CACHE/PROT/REGION are carried but not interpreted; QoS is used by the scheduler. |
+| W | `WDATA[63:0]`, `WSTRB[7:0]`, `WLAST`, `WVALID`, `WREADY` | Full-width data with legal byte strobes; ownership comes from accepted AW and ends at accepted WLAST. |
+| B | `BID[3:0]`, `BRESP[1:0]`, `BVALID`, `BREADY` | BID is the original manager ID; OKAY/SLVERR/DECERR are propagated or produced as specified. |
+| AR | `ARID[3:0]`, `ARADDR[31:0]`, `ARLEN[7:0]`, `ARSIZE[2:0]`, `ARBURST[1:0]`, `ARLOCK`, `ARCACHE[3:0]`, `ARPROT[2:0]`, `ARQOS[3:0]`, `ARREGION[3:0]`, `ARVALID`, `ARREADY` | Same legality and attribute policy as AW. |
+| R | `RID[3:0]`, `RDATA[63:0]`, `RRESP[1:0]`, `RLAST`, `RVALID`, `RREADY` | RID is the original manager ID; RLAST terminates the accepted burst. |
+
+`AxUSER`, `WUSER`, `BUSER` and `RUSER` are omitted. The MVP has one `ACLK` and coordinated active-low `ARESETn`; no separate clock or reset ports are present.
+
 ## R-006 Explicit exclusions
 FIXED, WRAP, narrow/unaligned transfers, exclusives, locked accesses, ATOPs, ACE/CHI/coherency and W interleaving are outside MVP.
 
@@ -49,13 +63,17 @@ Per-target, per-request-direction round-robin address arbitration. A selected do
 Same topology/datapath/buffering/protocol behaviour as A; only scheduling policy/state changes. Normal mode selects maximum 4-bit AxQOS with RR tie break. An 8-bit saturating age counter increments while a legal request remains pending without handshake. `age >= 64` enters starvation escape; the starved set is served round-robin. Held requests are never pre-empted.
 
 ## R-012 Performance experiment integrity
-Canonical workloads W00–W13 and seeds `0xFABC0001`…`0xFABC0005` are frozen before Architecture B performance data is inspected. A/B use identical target, wrapper, buffering, endpoint models, constraints and measurement scripts.
+Canonical workloads W00–W13, generator algorithm, target percentages, gap distributions, endpoint queue/latency model, seeds `0xFABC0001`…`0xFABC0005`, 500 warm-up completions and 5,000 retained samples are frozen in `bench/workloads.yaml` before Architecture B performance data is inspected. A/B use identical target, wrapper, buffering, endpoint models, constraints and measurement scripts.
 
-## R-013 Implementation target
+## R-013 Interface and implementation freeze
+
+The exact signal list above, one-clock reset style, buffering contract, endpoint model, workload file, metric vocabulary and ECP5 implementation settings are the Gate-1 contract. Any change after Architecture A starts requires a new decision and invalidates affected A/B comparisons.
+
+## R-014 Implementation target
 Open-source first: LFE5U-45F, CABGA381, speed grade 6, common wrapper/constraints. Vendor flow is optional and not an MVP blocker.
 
-## R-014 CDC extension
+## R-015 CDC extension
 Single-clock MVP first. CDC is a later controlled extension using per-channel architecture; never place one FIFO around the whole AXI bus.
 
-## Traceability placeholder
-Gate 1 must assign each requirement to directed/random/formal checks and implementation modules before RTL begins.
+## Traceability rule
+The Gate-1 verification matrix in `docs/VERIFICATION_PLAN.md` assigns every requirement to directed, random or formal checks and to the planned implementation block before RTL begins.

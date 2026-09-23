@@ -246,11 +246,11 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] W11 50/50 mixed defined.
 - [x] W12 equal-demand fairness defined.
 - [x] W13 parallel-target defined.
-- [ ] exact workload target percentages/gap distributions are committed before B exists.
-- [ ] PRNG algorithm/version is pinned.
-- [ ] canonical subordinate model latency/queue depth is pinned.
-- [ ] proposed 500 warm-up / 5,000 samples policy is accepted or changed once before B RTL.
-- [ ] workload file checksum/commit is recorded before A/B comparison.
+- [x] exact workload target percentages/gap distributions are committed before B exists.
+- [x] PRNG algorithm/version is pinned.
+- [x] canonical subordinate model latency/queue depth is pinned.
+- [x] proposed 500 warm-up / 5,000 samples policy is accepted or changed once before B RTL.
+- [x] workload file checksum/commit is recorded before A/B comparison.
 - [ ] no workload is altered after B results without invalidating/re-running both architectures.
 
 ---
@@ -402,22 +402,22 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 # Q. Gate 1 — architecture/protocol freeze
 
-- [ ] REQUIREMENTS implementation-complete.
-- [ ] MICROARCHITECTURE implementation-complete.
-- [ ] VERIFICATION_PLAN maps every requirement.
-- [ ] FORMAL maps tractable invariants.
-- [ ] TIMING_PERFORMANCE freezes benchmark/PPA method.
-- [ ] DECISIONS includes D001-D013.
-- [ ] KNOWN_LIMITATIONS is accurate.
-- [ ] exact interface signal list frozen.
-- [ ] exact reset style frozen.
-- [ ] exact performance endpoint queue/latency model frozen.
-- [ ] exact workload generator algorithm/percentages frozen.
-- [ ] exact benchmark sample count frozen.
-- [ ] exact P&R wrapper frozen.
-- [ ] exact tool versions/settings frozen for later A/B comparison.
-- [ ] hostile Gate-1 protocol review has no open BLOCKER/MAJOR issue.
-- [ ] requirement-to-test traceability has no gaps.
+- [x] REQUIREMENTS implementation-complete.
+- [x] MICROARCHITECTURE implementation-complete.
+- [x] VERIFICATION_PLAN maps every requirement.
+- [x] FORMAL maps tractable invariants.
+- [x] TIMING_PERFORMANCE freezes benchmark/PPA method.
+- [x] DECISIONS includes D001-D013.
+- [x] KNOWN_LIMITATIONS is accurate.
+- [x] exact interface signal list frozen.
+- [x] exact reset style frozen.
+- [x] exact performance endpoint queue/latency model frozen.
+- [x] exact workload generator algorithm/percentages frozen.
+- [x] exact benchmark sample count frozen.
+- [x] exact P&R wrapper frozen.
+- [x] exact tool versions/settings frozen for later A/B comparison.
+- [x] hostile Gate-1 protocol review has no open BLOCKER/MAJOR issue.
+- [x] requirement-to-test traceability has no gaps.
 - [ ] known-good Gate-1 commit recorded.
 
 ---

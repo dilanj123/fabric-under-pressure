@@ -1,6 +1,6 @@
 # Verification Plan
 
-**Status:** Gate-1 skeleton; no AXI verification has run.
+**Status:** Gate-1 verification contract frozen; no AXI verification has run.
 
 ## Independent checking
 A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.
@@ -29,3 +29,19 @@ Every discovered functional bug gains a regression test before the fix is consid
 
 ## Phase-0 note
 `cocotbext-axi` may be used as verification-only stimulus after the compatibility smoke passes; it is never the sole oracle.
+
+## Gate-1 traceability matrix
+
+| Requirement | Directed checks | Random/formal checks | Planned implementation block |
+|---|---|---|---|
+| R-001/R-005 subset and attributes | legal widths, INCR 1/16 beats, aligned transfers, WSTRB, unsupported attribute assertions | randomized legal IDs/QoS/bursts; formal legality assumptions | port bundle, protocol checker |
+| R-002/R-004 topology and decode | S0/S1/S2 and S3 DECERR reads/writes | one-hot decode and unmapped cover | decoder, S3 endpoint |
+| R-003/R-007 IDs and limits | four read/four write IDs per manager; repeated-ID rejection | counter bounds, ID widen/strip, no illegal manager index | outstanding tables, ID mapper |
+| R-008 write ownership | AW before/after W presentation, interleaved manager W attempts, WLAST release | owner stability and token conservation | AW tracker, W router |
+| R-009 reset | idle reset and reset with pending AW/W/B/AR/R | stale response exclusion under reset epoch assumption | coordinated reset/flush |
+| R-010 Architecture A | held grant and pointer advancement on handshake | one-hot grant and bounded RR service under readiness assumptions | per-target RR arbiters |
+| R-011 Architecture B | QoS priority, age threshold 64 and escape rotation | age saturation, monotonicity and escape cover under service-opportunity assumptions | QoS/age arbiters |
+| R-012 workloads/metrics | replay each W00–W13 seed | deterministic generator checksum and identical A/B configuration | traffic generator, counters |
+| R-013/R-014/R-015 implementation contract | interface/reset/CDC negative checks | wrapper preservation and parameter assertions | top-level fabric/wrapper |
+
+Every regression prints the seed and exact commit. A project-owned reference model remains the oracle; external BFMs only generate legal channel activity.

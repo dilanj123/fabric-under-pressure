@@ -1,5 +1,57 @@
-# Frozen before Architecture B performance data.
+# Frozen before Architecture A/B implementation comparison.
+format_version: 1
 seeds: [0xFABC0001, 0xFABC0002, 0xFABC0003, 0xFABC0004, 0xFABC0005]
+generator:
+  algorithm: xorshift32
+  algorithm_version: 1
+  state_update: "x = x ^ ((x << 13) & 0xffffffff); x = x ^ (x >> 17); x = x ^ ((x << 5) & 0xffffffff); state = x & 0xffffffff"
+  transaction_mapping: "u = next_u32(); read when (u % 100) < read_percent; otherwise write"
+  gap_mapping: "gap_cycles = gap_min + (next_u32() % (gap_max - gap_min + 1))"
+  package_versions: "Python 3.11.6; numpy 2.3.5; pandas 2.2.3"
+  seed_replay: "initialize one 32-bit state per seed; never reseed within a scenario"
+sample_policy:
+  warmup_completions_per_active_manager: 500
+  retained_latency_samples_per_active_manager: 5000
+  measurement_window: "continue until every active manager has 5000 measured completions"
+  percentile_method: "numpy 2.3.5 method=nearest"
+endpoint_model:
+  queue_depth_per_target: 8
+  aw_ar_acceptance: "accept whenever the target model queue has capacity"
+  wready: "assert whenever a legal owned write burst is active"
+  read_start_latency_cycles: 2
+  b_response_latency_cycles: 2
+  read_data_rate: "one beat per cycle once a read burst starts"
+  response_order: "fixed per-target FIFO for each direction; identical for A and B"
+  ready_behavior: "canonical benchmark endpoint is deterministic; randomized delays belong only to functional verification"
+target_policy:
+  default_contention_target: S0
+  balanced_secondary_target_fraction: 25
+  parallel_target_split: "S0 for M0/M2 and S1 for M1"
+  address_ranges: "choose aligned addresses uniformly within the selected target range"
+traffic_policy:
+  write_strobe: "all ones unless the scenario explicitly exercises WSTRB in functional verification"
+  all_accesses: "aligned 64-bit INCR transactions that do not cross 4 KiB"
+  default_read_percent: 50
+  gap_cycles:
+    sparse: {min: 8, max: 32}
+    bursty: {min: 2, max: 8}
+    saturated: {min: 0, max: 0}
+  native_mode: "M0 uses sparse gaps, M1 uses saturated gaps, M2 uses bursty gaps; class burst lengths and default QoS apply"
+  scenario_overrides:
+    W00: {active_managers: [], mode: idle}
+    W01: {active_managers: [M0], mode: sparse, read_percent: 50, target: S0}
+    W02: {active_managers: [M1], mode: saturated, read_percent: 50, target: S0}
+    W03: {active_managers: [M2], mode: bursty, read_percent: 50, target: S0}
+    W04: {active_managers: [M0, M1, M2], mode: native, read_percent: 50, target: S0, secondary_target_percent: 25}
+    W05: {active_managers: [M0, M1], mode: mixed, read_percent: 50, target: S0, M0_mode: sparse, M1_mode: saturated}
+    W06: {active_managers: [M1, M2], mode: mixed, read_percent: 50, target: S0, M1_mode: saturated, M2_mode: bursty}
+    W07: {active_managers: [M0, M1, M2], mode: saturated, read_percent: 50, target: S0}
+    W08: {active_managers: [M0, M1, M2], mode: saturated, read_percent: 50, target: S0, qos_override: {M0: 12, M1: 0, M2: 15}}
+    W09: {active_managers: [M0, M1, M2], mode: native, read_percent: 80, target: S0}
+    W10: {active_managers: [M0, M1, M2], mode: native, read_percent: 20, target: S0}
+    W11: {active_managers: [M0, M1, M2], mode: native, read_percent: 50, target: S0}
+    W12: {active_managers: [M0, M1, M2], mode: saturated, read_percent: 50, target: S0, burst_beats: 1, qos_override: {M0: 8, M1: 8, M2: 8}}
+    W13: {active_managers: [M0, M1, M2], mode: native, read_percent: 50, target_policy: parallel_target_split}
 classes:
   control: {manager: M0, burst_beats: 1, qos: 8}
   dma: {manager: M1, burst_beats: 16, qos: 0}

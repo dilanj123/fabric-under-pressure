@@ -1,7 +1,7 @@
 # Project State
 
 **Date:** 2026-09-23
-**Gate:** Gate 0 PASS; reviewed local and GitHub macOS arm64 qualification
+**Gate:** Gate 1 PASS; Gate 0 environment qualification reviewed and tagged
 **Architecture:** planning frozen; project AXI RTL not started.
 
 ## What changed
@@ -17,14 +17,14 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 - SV frontend, cocotb, BFM, formal, synthesis, P&R and wrapper raw evidence.
 
 ## Still unproven
-- GitHub-hosted macOS arm64 workflow result and artifact review;
-- all Fabric AXI behavior, formal properties, performance, PPA and timing.
+- all Fabric AXI behavior, formal properties, performance, PPA and timing;
+- any Architecture A or B RTL result.
 
 ## Risks
-Do not interpret generated scripts or public upstream metadata as local tool qualification. Gate 0 remains OPEN until the intended Mac executes the smoke suite successfully.
+Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.
 
 ## Specification changes
-No AXI behaviour changed. Process authority was strengthened by resolving the RTL-to-Pixels reference, and repository ownership metadata was corrected to `dilanj123`; see D016-D017.
+No AXI behavior or RTL changed. Gate-1 documentation freezes the interface bundle, buffering, endpoint model, workload generator, metrics, traceability and formal assumptions; see D023-D024.
 
 ## Phase-0 execution status
 
@@ -34,4 +34,4 @@ No AXI behaviour changed. Process authority was strengthened by resolving the RT
 - No project AXI RTL or reference model exists.
 
 ## Next smallest task
-Gate 0 is closed at the reviewed local/CI evidence commit. The next task is the Gate-1 specification freeze; do not start fabric RTL until that freeze is complete.
+Create the first narrow Architecture A RTL task: implement and verify the decoder/target-select primitive against the frozen interface and traceability contract. Do not implement Architecture B, CPU integration or CDC in that task.
