@@ -30,3 +30,12 @@ No AXI functional correctness or performance evidence exists yet.
 | G1-E004 | SPEC | metric definitions and fixed P&R/wrapper method | `docs/TIMING_PERFORMANCE.md` | COMPLETE |
 | G1-E005 | SPEC | requirement-to-test and formal assumption traceability | `docs/VERIFICATION_PLAN.md`, `docs/FORMAL.md` | COMPLETE |
 | G1-E006 | REVIEW | hostile Gate-1 consistency review | authority-file review recorded in Gate-1 commit | PASS; no open BLOCKER/MAJOR issue |
+
+## Decoder primitive evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| D-E001 | SIM | address decoder directed boundary and default tests pass | `results/raw/decoder/simulation.log` | PASS; 19 self-checking cases |
+| D-E002 | FORMAL | decoder one-hot/mapped/default properties prove | `results/raw/decoder/formal_prove/logfile.txt` | PASS; Yices via SBY, depth 1 |
+| D-E003 | FORMAL | all four target covers reach | `results/raw/decoder/formal_cover/logfile.txt` | PASS; S0, S1, S2 and S3 covers reached at step 0 |
+| D-E004 | REPRO | decoder Verilator lint and Yosys elaboration/synthesis pass | `results/raw/decoder/verilator_lint.log`, `yosys_synth.log` | PASS; reviewed with no warnings/problems |

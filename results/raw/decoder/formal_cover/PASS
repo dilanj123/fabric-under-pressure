@@ -1,0 +1,15 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_28_34 at address_decoder_formal.sv:28.5-28.71
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_27_32 at address_decoder_formal.sv:27.5-27.71
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_26_30 at address_decoder_formal.sv:26.5-26.71
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_25_28 at address_decoder_formal.sv:25.5-25.71

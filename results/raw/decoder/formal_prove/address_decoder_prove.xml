@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-23T01:36:16" hostname="MacBook-Pro.local" package="address_decoder" id="0" name="prove" tests="9" errors="0" failures="0" time="0" skipped="4">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:11.5-14.72" time="0" type="ASSERT" location="address_decoder_formal.sv:11.5-14.72" id="_witness_.check_assert_address_decoder_formal_sv_11_3">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:17.7-17.74" time="0" type="ASSERT" location="address_decoder_formal.sv:17.7-17.74" id="_witness_.check_assert_address_decoder_formal_sv_17_14">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:19.7-19.74" time="0" type="ASSERT" location="address_decoder_formal.sv:19.7-19.74" id="_witness_.check_assert_address_decoder_formal_sv_19_19">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:21.7-21.74" time="0" type="ASSERT" location="address_decoder_formal.sv:21.7-21.74" id="_witness_.check_assert_address_decoder_formal_sv_21_24">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:23.7-23.74" time="0" type="ASSERT" location="address_decoder_formal.sv:23.7-23.74" id="_witness_.check_assert_address_decoder_formal_sv_23_26">
+</testcase>
+<testcase classname="prove" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:25.5-25.71" time="0" type="COVER" location="address_decoder_formal.sv:25.5-25.71" id="_witness_.check_cover_address_decoder_formal_sv_25_28">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:26.5-26.71" time="0" type="COVER" location="address_decoder_formal.sv:26.5-26.71" id="_witness_.check_cover_address_decoder_formal_sv_26_30">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:27.5-27.71" time="0" type="COVER" location="address_decoder_formal.sv:27.5-27.71" id="_witness_.check_cover_address_decoder_formal_sv_27_32">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:28.5-28.71" time="0" type="COVER" location="address_decoder_formal.sv:28.5-28.71" id="_witness_.check_cover_address_decoder_formal_sv_28_34">
+<skipped />
+</testcase>
+<system-out>SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove'.
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/fabric_addr_map_pkg.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/fabric_addr_map_pkg.sv'.
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_address_decoder.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/axi_address_decoder.sv'.
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/address_decoder_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src/address_decoder_formal.sv'.
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0: smtbmc
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] base: finished (returncode=0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] prep: finished (returncode=0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] smt2: finished (returncode=0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 1  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 1  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 1..
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: ##   0:00:00  Status: passed
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: ##   0:00:00  Status: passed
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: finished (returncode=0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.induction: Status returned by engine for induction: pass
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: finished (returncode=0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] engine_0.basecase: Status returned by engine for basecase: pass
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 (smtbmc) returned pass for basecase
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 (smtbmc) returned pass for induction
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: engine_0 did not produce any traces
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] summary: successful proof by k-induction.
+SBY  1:36:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -15,6 +15,10 @@ formal/smoke_*/
 results/raw/gate0/**/work/
 results/raw/gate0/**/*.json
 results/raw/gate0/github-actions/
+results/raw/decoder/sim_work/
+results/raw/decoder/**/model/
+results/raw/decoder/**/src/
+results/raw/decoder/**/status.sqlite
 !results/raw/gate0/**/*.keep
 build/
 dist/

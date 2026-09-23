@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-23T01:36:17" hostname="MacBook-Pro.local" package="address_decoder" id="0" name="cover" tests="9" errors="0" failures="0" time="0" skipped="5">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="cover" name="build execution" time="0">
+</testcase>
+<testcase classname="cover" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:11.5-14.72" time="0" type="ASSERT" location="address_decoder_formal.sv:11.5-14.72" id="_witness_.check_assert_address_decoder_formal_sv_11_3">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:17.7-17.74" time="0" type="ASSERT" location="address_decoder_formal.sv:17.7-17.74" id="_witness_.check_assert_address_decoder_formal_sv_17_14">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:19.7-19.74" time="0" type="ASSERT" location="address_decoder_formal.sv:19.7-19.74" id="_witness_.check_assert_address_decoder_formal_sv_19_19">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:21.7-21.74" time="0" type="ASSERT" location="address_decoder_formal.sv:21.7-21.74" id="_witness_.check_assert_address_decoder_formal_sv_21_24">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in address_decoder_formal at address_decoder_formal.sv:23.7-23.74" time="0" type="ASSERT" location="address_decoder_formal.sv:23.7-23.74" id="_witness_.check_assert_address_decoder_formal_sv_23_26">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:25.5-25.71" time="0" type="COVER" location="address_decoder_formal.sv:25.5-25.71" id="_witness_.check_cover_address_decoder_formal_sv_25_28" tracefile="engine_0/trace3.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:26.5-26.71" time="0" type="COVER" location="address_decoder_formal.sv:26.5-26.71" id="_witness_.check_cover_address_decoder_formal_sv_26_30" tracefile="engine_0/trace2.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:27.5-27.71" time="0" type="COVER" location="address_decoder_formal.sv:27.5-27.71" id="_witness_.check_cover_address_decoder_formal_sv_27_32" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in address_decoder_formal at address_decoder_formal.sv:28.5-28.71" time="0" type="COVER" location="address_decoder_formal.sv:28.5-28.71" id="_witness_.check_cover_address_decoder_formal_sv_28_34" tracefile="engine_0/trace0.vcd">
+</testcase>
+<system-out>SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover'.
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/fabric_addr_map_pkg.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/fabric_addr_map_pkg.sv'.
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_address_decoder.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/axi_address_decoder.sv'.
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/address_decoder_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src/address_decoder_formal.sv'.
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: smtbmc
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] base: finished (returncode=0)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] prep: finished (returncode=0)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] smt2: finished (returncode=0)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 1  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Solver: yices
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:28.5-28.71 (_witness_.check_cover_address_decoder_formal_sv_28_34)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:27.5-27.71 (_witness_.check_cover_address_decoder_formal_sv_27_32)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:26.5-26.71 (_witness_.check_cover_address_decoder_formal_sv_26_30)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:25.5-25.71 (_witness_.check_cover_address_decoder_formal_sv_25_28)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: ##   0:00:00  Status: passed
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: finished (returncode=0)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] engine_0: Status returned by engine: pass
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: engine_0 (smtbmc) returned pass
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace0.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_28_34 at address_decoder_formal.sv:28.5-28.71
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace1.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_27_32 at address_decoder_formal.sv:27.5-27.71
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace2.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_26_30 at address_decoder_formal.sv:26.5-26.71
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover/engine_0/trace3.vcd
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] summary:   reached cover statement address_decoder_formal._witness_.check_cover_address_decoder_formal_sv_25_28 at address_decoder_formal.sv:25.5-25.71
+SBY  1:36:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/decoder/formal_cover] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

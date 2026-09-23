@@ -1,0 +1,26 @@
+##   0:00:00  Solver: yices
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:28.5-28.71 (_witness_.check_cover_address_decoder_formal_sv_28_34)
+##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:27.5-27.71 (_witness_.check_cover_address_decoder_formal_sv_27_32)
+##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:26.5-26.71 (_witness_.check_cover_address_decoder_formal_sv_26_30)
+##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement in step 0 at address_decoder_formal: address_decoder_formal.sv:25.5-25.71 (_witness_.check_cover_address_decoder_formal_sv_25_28)
+##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+##   0:00:00  Status: passed
