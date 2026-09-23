@@ -1,6 +1,6 @@
 # Gate-0 Evidence Summary
 
-**Gate result: PASS locally; overall Gate 0 remains OPEN pending CI rerun.** The complete smoke suite returned exit code 0 on this Darwin/arm64 host at commit `6e12be73019f1f77571cd8d0226d492f7fda7fe2`.
+**Gate result: PASS.** The complete smoke suite returned exit code 0 on this Darwin/arm64 host, and the reviewed GitHub macOS arm64 qualification passed at run `35801448593`.
 
 | Check | Command | Result | Evidence | Classification |
 |---|---|---|---|---|
@@ -17,6 +17,6 @@
 
 The combined driver was run with `bash ./scripts/run_gate0.sh` and returned exit code 0. The wrapper retained 777 mapped cells with a 17-bit external interface. The P&R smoke used LFE5U-45F/CABGA381/speed 6, seed 1 and a 100 MHz target.
 
-GitHub run 35801032142 failed in the Verilator C++ compilation before the explicit `-std=c++17` portability repair; its uploaded artifact and logs are retained under `results/raw/gate0/github-actions/35801032142/`. The focused local sim and BFM reruns pass with the repair. Gate 0 is not closed until a clean GitHub run is reviewed.
+GitHub run 35801032142 failed in the Verilator C++ compilation before the explicit `-std=c++17` portability repair. The focused local reruns and full local driver passed after the repair. Reviewed run 35801448593 passed all workflow steps; its artifact is available locally under `results/raw/gate0/github-actions/35801448593/` and is indexed in `results/processed/gate0/ci-run-35801448593.md`.
 
 This evidence qualifies the toolchain and generic methodology only. No Fabric AXI RTL, reference model, AXI functional correctness, performance, PPA or project timing evidence exists.

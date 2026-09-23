@@ -1,6 +1,0 @@
-Installation source: https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2026-09-20/oss-cad-suite-darwin-arm64-20260920.tgz
-Archive: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite-darwin-arm64-20260920.tgz
-Expected SHA-256: 3af61f750c8040bcdfe317ba6134f93e391d65dc27e6bf39ef56455e48c723ae
-Observed SHA-256: 3af61f750c8040bcdfe317ba6134f93e391d65dc27e6bf39ef56455e48c723ae
-Extracted path: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite
-The first overlapping transfer was rejected by checksum and preserved as a corrupt .bad-corrupt file; it was not extracted or used.
