@@ -371,32 +371,32 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 # P. Gate 0 — environment/reference baseline
 
-- [ ] repository initialized.
-- [ ] directory structure created.
-- [ ] H.c reference file created.
-- [ ] OSS CAD Suite exact archive pinned or alternative decided.
-- [ ] macOS/Apple-Silicon environment recorded.
-- [ ] Verilator version recorded.
-- [ ] Yosys version recorded.
-- [ ] SBY version recorded.
-- [ ] solver/version recorded.
-- [ ] nextpnr/Trellis versions recorded.
-- [ ] Python version recorded.
-- [ ] cocotb 2.1.0 environment smoke passes.
-- [ ] cocotbext-axi candidate smoke passes or replacement decided.
-- [ ] SV language subset smoke passes Verilator.
-- [ ] SV language subset smoke passes Slang/yosys-slang.
-- [ ] SV language subset smoke passes Yosys.
-- [ ] generic formal smoke passes.
-- [ ] generic synthesis smoke passes.
-- [ ] ECP5 LFE5U-45F/CABGA381/speed-6 P&R smoke passes.
-- [ ] compact anti-optimization P&R wrapper methodology validated.
-- [ ] upstream repositories/tags/SHAs/licences recorded.
-- [ ] THIRD_PARTY_MANIFEST exists.
-- [ ] THIRD_PARTY_NOTICES exists.
-- [ ] Gate-0 processed summary exists.
-- [ ] Evidence index links Gate-0 artifacts.
-- [ ] known-good Gate-0 commit tagged only after evidence exists.
+- [x] repository initialized (`git log`, `git status`, and pushed `main` history).
+- [x] directory structure created (repository tree and Gate-0 evidence paths).
+- [x] H.c reference file created (`docs/references/AXI_SPEC.md`).
+- [x] OSS CAD Suite exact archive pinned or alternative decided (`results/processed/gate0/tool_versions.md`).
+- [x] macOS/Apple-Silicon environment recorded (`results/raw/gate0/env/check_env.log`).
+- [x] Verilator version recorded (`results/processed/gate0/tool_versions.md`).
+- [x] Yosys version recorded (`results/processed/gate0/tool_versions.md`).
+- [x] SBY version recorded (`results/processed/gate0/tool_versions.md`).
+- [x] solver/version recorded (`results/processed/gate0/tool_versions.md`).
+- [x] nextpnr/Trellis versions recorded (`results/processed/gate0/tool_versions.md`).
+- [x] Python version recorded (`results/processed/gate0/tool_versions.md`).
+- [x] cocotb 2.1.0 environment smoke passes (`results/raw/gate0/sim/results.xml`).
+- [x] cocotbext-axi candidate smoke passes or replacement decided (`results/raw/gate0/bfm/results.xml`).
+- [x] SV language subset smoke passes Verilator (`results/raw/gate0/env/sv_frontends.log`).
+- [x] SV language subset smoke passes Slang/yosys-slang (`results/raw/gate0/env/sv_frontends.log`).
+- [x] SV language subset smoke passes Yosys (`results/raw/gate0/env/sv_frontends.log`).
+- [x] generic formal smoke passes (`results/raw/gate0/formal/run.log`).
+- [x] generic synthesis smoke passes (`results/raw/gate0/synth/run.log`).
+- [x] ECP5 LFE5U-45F/CABGA381/speed-6 P&R smoke passes (`results/raw/gate0/pnr/run.log`).
+- [x] compact anti-optimization P&R wrapper methodology validated (`results/raw/gate0/wrapper/run.log`).
+- [x] upstream repositories/tags/SHAs/licences recorded (`docs/THIRD_PARTY_MANIFEST.md`).
+- [x] THIRD_PARTY_MANIFEST exists (`docs/THIRD_PARTY_MANIFEST.md`).
+- [x] THIRD_PARTY_NOTICES exists (`docs/THIRD_PARTY_NOTICES.md`).
+- [x] Gate-0 processed summary exists (`results/processed/gate0/summary.md`).
+- [x] Evidence index links Gate-0 artifacts (`docs/EVIDENCE_INDEX.md`).
+- [x] known-good Gate-0 commit tagged only after evidence exists (`kg-g0-env`, `docs/EVIDENCE_INDEX.md`).
 
 ---
 
