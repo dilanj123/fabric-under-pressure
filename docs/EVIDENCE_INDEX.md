@@ -40,3 +40,13 @@ No AXI functional correctness or performance evidence exists yet.
 | D-E003 | FORMAL | all four target covers reach | `results/raw/decoder/formal_cover/logfile.txt` | PASS; S0, S1, S2 and S3 covers reached at step 0 |
 | D-E004 | REPRO | decoder Verilator frontend/lint compatibility passes | `results/raw/decoder/verilator_lint.log` | PASS; reviewed with no warnings |
 | D-E005 | SYNTH | decoder completes target-aware Yosys ECP5 synthesis | `results/raw/decoder/yosys_synth.log`, `axi_address_decoder_ecp5.json` | PASS; no P&R or Fabric PPA claim |
+
+## Request-legality primitive evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| L-E001 | SIM | supported-request legality directed matrix passes | `results/raw/request_legality/simulation.log` | PASS; 36 self-checking cases |
+| L-E002 | FORMAL | legality predicate equivalence and invalid-class properties prove | `results/raw/request_legality/formal_prove/logfile.txt` | PASS; unconstrained inputs, Yices via SBY, depth 1 |
+| L-E003 | FORMAL | legal requests preserve decoder target from first byte through last byte | `results/raw/request_legality/formal_prove/logfile.txt` | PASS; composition assertion included |
+| L-E004 | FORMAL | legality and target-space covers reach | `results/raw/request_legality/formal_cover/logfile.txt` | PASS; legal lengths, exact boundary, crossing, S0/S1/S2/S3 |
+| L-E005 | SYNTH | request-legality primitive completes target-aware Yosys ECP5 synthesis | `results/raw/request_legality/yosys_synth.log`, `axi_request_legal_ecp5.json` | PASS; no P&R or Fabric PPA claim |

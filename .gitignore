@@ -20,6 +20,11 @@ results/raw/decoder/**/model/
 results/raw/decoder/**/src/
 results/raw/decoder/**/status.sqlite
 results/raw/decoder/**/*.json
+results/raw/request_legality/sim_work/
+results/raw/request_legality/**/model/
+results/raw/request_legality/**/src/
+results/raw/request_legality/**/status.sqlite
+results/raw/request_legality/**/*.json
 !results/raw/gate0/**/*.keep
 build/
 dist/

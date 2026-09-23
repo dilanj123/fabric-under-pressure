@@ -34,7 +34,7 @@ Every discovered functional bug gains a regression test before the fix is consid
 
 | Requirement | Directed checks | Random/formal checks | Planned implementation block |
 |---|---|---|---|
-| R-001/R-005 subset and attributes | legal widths, INCR 1/16 beats, aligned transfers, WSTRB, unsupported attribute assertions | randomized legal IDs/QoS/bursts; formal legality assumptions | port bundle, protocol checker |
+| R-001/R-005 subset and attributes | `tb/directed/request_legality_tb.sv` covers supported lengths, INCR, full-width size, alignment, lock and 4-KiB boundaries; attributes remain pass-through and are not interpreted | `formal/request_legality_formal.sv` proves legality equivalence, invalid-shape rejection and endpoint safety; no end-to-end unsupported-request response is claimed | `rtl/axi_request_legal.sv`; later request admission/protocol integration remains future work |
 | R-002/R-004 topology and decode | `tb/directed/address_decoder_tb.sv` covers mapped boundaries, adjacent addresses and representative unmapped values | `formal/address_decoder_formal.sv` proves one-hot target selection, mapped routing and default routing; covers S0/S1/S2/S3 | `rtl/fabric_addr_map_pkg.sv`, `rtl/axi_address_decoder.sv`; S3 endpoint remains future integration |
 | R-003/R-007 IDs and limits | four read/four write IDs per manager; repeated-ID rejection | counter bounds, ID widen/strip, no illegal manager index | outstanding tables, ID mapper |
 | R-008 write ownership | AW before/after W presentation, interleaved manager W attempts, WLAST release | owner stability and token conservation | AW tracker, W router |

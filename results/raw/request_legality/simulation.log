@@ -1,0 +1,5 @@
+PASS request_legality_tb tests=36
+- /Users/Dilan/Projects/fabric-under-pressure/tb/directed/request_legality_tb.sv:95: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 36ps; walltime 0.000 s; speed 610.169 ns/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB

@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-23
 **Gate:** Gate 1 PASS; `kg-g1-spec` exists remotely at `aecfb8c`
-**Architecture:** planning frozen; decoder/target-select primitive exists, project AXI fabric is not integrated.
+**Architecture:** planning frozen; raw-address decode and request-shape legality primitives exist, project AXI fabric is not integrated.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -32,6 +32,7 @@ No AXI behavior or RTL changed. Gate-1 documentation freezes the interface bundl
 - The BFM smoke passed aligned 64-bit read/write, a 4-beat INCR transfer, explicit IDs/QoS and deterministic backpressure.
 - Generic formal prove/cover/intentional-fail, ECP5 synthesis/P&R and wrapper preservation passed.
 - The standalone raw-address decoder primitive has directed simulation, frontend/synthesis and focused formal evidence; no integrated fabric or reference model exists.
+- The standalone request-legality primitive has directed simulation, full Yosys synthesis and focused formal evidence, including same-target composition with the raw-address decoder.
 
 ## Next smallest task
-Create the next narrow Architecture A task: implement the decoder-facing request legality/burst-boundary primitive, keeping it separate from arbitration and transaction state. Do not implement Architecture B, CPU integration or CDC in that task.
+Create the next narrow Architecture A task from the frozen sequence, keeping request admission separate from arbitration and transaction state. Do not implement Architecture B, CPU integration or CDC in that task.
