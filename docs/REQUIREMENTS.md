@@ -54,7 +54,7 @@ FIXED, WRAP, narrow/unaligned transfers, exclusives, locked accesses, ATOPs, ACE
 AW and W are independent. Accepted AW creates registered route/ownership context for that write. W routing follows that context through accepted WLAST. The fabric never infers W destination from current AW combinationally.
 
 ## R-009 Reset
-MVP uses one clock. Reset follows AXI interface rules and is a coordinated system reset: pre-reset outstanding work is abandoned, endpoints/scoreboards flush state, and stale pre-reset responses must not be accepted as post-reset traffic.
+MVP uses one clock. Reset follows AXI interface rules and is a coordinated system reset: pre-reset outstanding work is abandoned, endpoints/scoreboards flush state, and stale pre-reset responses must not be accepted as post-reset traffic. Stateful MVP RTL uses active-low asynchronous assertion with synchronous deassertion to rising `ACLK`, using `always_ff @(posedge ACLK or negedge ARESETn)`; the coordinated environment releases `ARESETn` synchronously and individual MVP blocks do not add reset synchronizers.
 
 ## R-010 Architecture A
 Per-target, per-request-direction round-robin address arbitration. A selected downstream request is held stable until handshake. Pointer advances only on handshake.

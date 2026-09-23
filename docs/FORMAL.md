@@ -18,7 +18,7 @@ Prove tractable primitives first. Do not begin with whole-fabric exhaustive proo
 ## Liveness discipline
 All bounded-service claims must list environmental readiness assumptions. Add covers/non-vacuity checks so a proof cannot pass merely because requests or service opportunities never occur.
 
-For scheduler fairness, assumptions are limited to a continuously legal pending request and recurring downstream service opportunities for the selected target and direction. A request being blocked by target backpressure does not count as a lost scheduler opportunity. The age threshold is therefore measured in eligible arbitration opportunities, and the proof must cover an escape decision with at least two competing requesters. No property assumes that a subordinate is always ready unless that assumption is stated in the property harness.
+For scheduler fairness, assumptions are limited to a continuously legal pending request and recurring downstream service opportunities for the selected target and direction. A request being blocked by target backpressure does not count as a lost scheduler opportunity. The age threshold is measured in pending clock cycles; recurring service opportunities condition the later bounded-service guarantee. The proof must cover an escape decision with at least two competing requesters. No property assumes that a subordinate is always ready unless that assumption is stated in the property harness.
 
 ## Evidence language
 A formal PASS applies only to the named property, assumptions, engine, depth/mode and exact commit. It is not a whole-fabric correctness or compliance claim.

@@ -22,7 +22,7 @@ AR routing uses target decode/arbitration. R returns based on widened RID. Per-m
 Per-target AW and AR RR, handshake-driven pointer update, held grant under backpressure.
 
 ### B — QoS + aging
-Normal: maximum AxQOS, RR tie-break. Starvation escape: age >=64, serve starved set RR. 8-bit saturating counters; reset age to zero when no legal pending request or request handshakes.
+Normal: maximum AxQOS, RR tie-break. Starvation escape: age >=64, serve starved set RR. The 8-bit age counter increments by one on every clock cycle that a legal request remains pending without handshake and saturates at 255; reset age to zero when no legal pending request or when the request handshakes. Service-opportunity assumptions apply to the later liveness guarantee, not to age measurement.
 
 ## 7. Buffers
 Each manager-facing and target-facing channel has one registered ready/valid boundary. Payload and VALID remain stable while VALID is asserted and READY is low. The AW, W, B, AR and R boundaries are independent. A and B use the same boundary count, widths and placement; a B-only pipeline is a named variant and is not part of the frozen comparison.
@@ -31,15 +31,29 @@ Each manager-facing and target-facing channel has one registered ready/valid bou
 
 - `decode_aw`/`decode_ar`: combinational target decode with one-hot legal target or S3 error selection.
 - `aw_rr[target]` and `ar_rr[target]`: 2-bit per-target round-robin pointers for A; B retains the same pointers and changes only the request selection policy.
-- `write_owner_fifo[manager]`: a depth-4 registered FIFO of accepted AW contexts, with one active head context driving W until accepted WLAST; each entry records target, original ID, widened ID and remaining-beat state. This preserves AW acceptance order without assuming AW/W coupling.
+- `write_owner[manager]`: one registered active accepted-AW context driving W until accepted WLAST; it records target, original ID, widened ID and remaining-beat state. A manager has only one unfinished W burst. Completed-W transactions waiting for B remain in `outstanding_w[manager][id]` and are not write-owner entries.
 - `outstanding_r[manager][id]` and `outstanding_w[manager][id]`: valid bits plus target and burst metadata, with four-entry per-direction admission counters per manager.
 - `read_return[target]` and `write_response[target]`: response queues with fixed depth 8 in the canonical endpoint model; the fabric preserves burst-level R ownership through RLAST.
-- `age[target][direction][manager]`: 8-bit saturating B-only scheduler state, reset when no legal request is pending and incremented per eligible service opportunity while pending.
+- `age[target][direction][manager]`: 8-bit saturating B-only scheduler state, reset when no legal request is pending or when the request handshakes, and incremented every pending clock cycle without handshake. Recurring service opportunities are assumed only for the later bounded-service claim.
 
 The one-outstanding-per-ID rule means no reorder buffer is required for a repeated ID. Different IDs may return out of issue order, subject to subordinate response behavior.
 
 ## 8. Reset/error
-Coordinated reset flushes all route/outstanding state. S3 consumes legal supported request shape and returns DECERR while preserving required beat count/LAST semantics.
+Coordinated reset flushes all route/outstanding state. Stateful MVP RTL uses active-low asynchronous assertion and synchronous deassertion to rising `ACLK`:
+
+```systemverilog
+always_ff @(posedge ACLK or negedge ARESETn) begin
+  if (!ARESETn) begin
+    // clear state
+  end else begin
+    // registered state update
+  end
+end
+```
+
+The coordinated environment is responsible for synchronous reset release; individual MVP blocks do not add reset synchronizers. S3 consumes legal supported request shape and returns DECERR while preserving required beat count/LAST semantics.
+
+Outstanding capacity is derived from registered pre-state. A completion on cycle N cannot recycle its ID or count capacity into a new allocation on cycle N. Different-ID allocation is allowed in the same cycle only when the pre-state ID is free and the pre-state count is below four.
 
 ## 9. Canonical endpoint and measurement contract
 
