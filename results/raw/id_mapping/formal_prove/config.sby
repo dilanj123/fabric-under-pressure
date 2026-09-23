@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv axi_id_mapper.sv id_mapper_formal.sv
+prep -top id_mapper_formal
+
+[files]
+../rtl/axi_id_mapper.sv
+id_mapper_formal.sv

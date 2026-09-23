@@ -50,3 +50,13 @@ No AXI functional correctness or performance evidence exists yet.
 | L-E003 | FORMAL | legal requests preserve decoder target from first byte through last byte | `results/raw/request_legality/formal_prove/logfile.txt` | PASS; composition assertion included |
 | L-E004 | FORMAL | legality and target-space covers reach | `results/raw/request_legality/formal_cover/logfile.txt` | PASS; legal lengths, exact boundary, crossing, S0/S1/S2/S3 |
 | L-E005 | SYNTH | request-legality primitive completes target-aware Yosys ECP5 synthesis | `results/raw/request_legality/yosys_synth.log`, `axi_request_legal_ecp5.json` | PASS; no P&R or Fabric PPA claim |
+
+## Manager/internal ID mapping evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| I-E001 | SIM | manager/internal ID mapping directed matrix passes | `results/raw/id_mapping/simulation.log` | PASS; 48 valid mappings, 16 reserved returns and collision checks |
+| I-E002 | FORMAL | valid manager mapping is bijective and reserved manager code is rejected | `results/raw/id_mapping/formal_prove/logfile.txt` | PASS; unconstrained inputs, Yices via SBY, depth 1 |
+| I-E003 | FORMAL | forward exactness, lower-ID preservation and manager-prefix uniqueness prove | `results/raw/id_mapping/formal_prove/logfile.txt` | PASS; no environmental assumptions |
+| I-E004 | FORMAL | mapping covers reach valid managers, endpoint IDs, reserved code and shared IDs | `results/raw/id_mapping/formal_cover/logfile.txt` | PASS; all listed cover classes reached |
+| I-E005 | SYNTH | ID mapping primitive completes target-aware Yosys ECP5 synthesis | `results/raw/id_mapping/yosys_synth.log`, `axi_id_mapper_ecp5.json` | PASS; no P&R or Fabric PPA claim |

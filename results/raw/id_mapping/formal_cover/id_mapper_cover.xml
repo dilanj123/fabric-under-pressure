@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-23T01:59:05" hostname="MacBook-Pro.local" package="id_mapper" id="0" name="cover" tests="16" errors="0" failures="0" time="0" skipped="10">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="cover" name="build execution" time="0">
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:36.5-36.56" time="0" type="ASSERT" location="id_mapper_formal.sv:36.5-36.56" id="_witness_.check_assert_id_mapper_formal_sv_36_5">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:37.5-37.61" time="0" type="ASSERT" location="id_mapper_formal.sv:37.5-37.61" id="_witness_.check_assert_id_mapper_formal_sv_37_7">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:38.5-38.58" time="0" type="ASSERT" location="id_mapper_formal.sv:38.5-38.58" id="_witness_.check_assert_id_mapper_formal_sv_38_9">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:39.5-39.72" time="0" type="ASSERT" location="id_mapper_formal.sv:39.5-39.72" id="_witness_.check_assert_id_mapper_formal_sv_39_11">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:41.7-41.39" time="0" type="ASSERT" location="id_mapper_formal.sv:41.7-41.39" id="_witness_.check_assert_id_mapper_formal_sv_41_15">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:42.7-42.56" time="0" type="ASSERT" location="id_mapper_formal.sv:42.7-42.56" id="_witness_.check_assert_id_mapper_formal_sv_42_16">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:43.7-43.50" time="0" type="ASSERT" location="id_mapper_formal.sv:43.7-43.50" id="_witness_.check_assert_id_mapper_formal_sv_43_18">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:45.5-45.28" time="0" type="ASSERT" location="id_mapper_formal.sv:45.5-45.28" id="_witness_.check_assert_id_mapper_formal_sv_45_20">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:46.5-46.28" time="0" type="ASSERT" location="id_mapper_formal.sv:46.5-46.28" id="_witness_.check_assert_id_mapper_formal_sv_46_22">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:47.5-47.28" time="0" type="ASSERT" location="id_mapper_formal.sv:47.5-47.28" id="_witness_.check_assert_id_mapper_formal_sv_47_24">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:49.5-49.57" time="0" type="COVER" location="id_mapper_formal.sv:49.5-49.57" id="_witness_.check_cover_id_mapper_formal_sv_49_26" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:50.5-50.57" time="0" type="COVER" location="id_mapper_formal.sv:50.5-50.57" id="_witness_.check_cover_id_mapper_formal_sv_50_30" tracefile="engine_0/trace3.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:51.5-51.57" time="0" type="COVER" location="id_mapper_formal.sv:51.5-51.57" id="_witness_.check_cover_id_mapper_formal_sv_51_34" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:52.5-52.57" time="0" type="COVER" location="id_mapper_formal.sv:52.5-52.57" id="_witness_.check_cover_id_mapper_formal_sv_52_38" tracefile="engine_0/trace4.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:53.5-53.45" time="0" type="COVER" location="id_mapper_formal.sv:53.5-53.45" id="_witness_.check_cover_id_mapper_formal_sv_53_42" tracefile="engine_0/trace2.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:54.5-54.75" time="0" type="COVER" location="id_mapper_formal.sv:54.5-54.75" id="_witness_.check_cover_id_mapper_formal_sv_54_44" tracefile="engine_0/trace5.vcd">
+</testcase>
+<system-out>SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover'.
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_id_mapper.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/src/axi_id_mapper.sv'.
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/id_mapper_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/src/id_mapper_formal.sv'.
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: smtbmc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] base: finished (returncode=0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] prep: finished (returncode=0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] smt2: finished (returncode=0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 1  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Solver: yices
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at id_mapper_formal: id_mapper_formal.sv:49.5-49.57 (_witness_.check_cover_id_mapper_formal_sv_49_26)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at id_mapper_formal: id_mapper_formal.sv:51.5-51.57 (_witness_.check_cover_id_mapper_formal_sv_51_34)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at id_mapper_formal: id_mapper_formal.sv:53.5-53.45 (_witness_.check_cover_id_mapper_formal_sv_53_42)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at id_mapper_formal: id_mapper_formal.sv:50.5-50.57 (_witness_.check_cover_id_mapper_formal_sv_50_30)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at id_mapper_formal: id_mapper_formal.sv:52.5-52.57 (_witness_.check_cover_id_mapper_formal_sv_52_38)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at id_mapper_formal: id_mapper_formal.sv:54.5-54.75 (_witness_.check_cover_id_mapper_formal_sv_54_44)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: ##   0:00:00  Status: passed
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: finished (returncode=0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] engine_0: Status returned by engine: pass
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: engine_0 (smtbmc) returned pass
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/engine_0/trace0.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary:   reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_49_26 at id_mapper_formal.sv:49.5-49.57
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/engine_0/trace1.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary:   reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_51_34 at id_mapper_formal.sv:51.5-51.57
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/engine_0/trace2.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary:   reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_53_42 at id_mapper_formal.sv:53.5-53.45
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/engine_0/trace3.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary:   reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_50_30 at id_mapper_formal.sv:50.5-50.57
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/engine_0/trace4.vcd
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary:   reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_52_38 at id_mapper_formal.sv:52.5-52.57
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: and 1 further trace
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] summary: see /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover/PASS for a complete summary
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_cover] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -1,0 +1,21 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_49_26 at id_mapper_formal.sv:49.5-49.57
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_51_34 at id_mapper_formal.sv:51.5-51.57
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_53_42 at id_mapper_formal.sv:53.5-53.45
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_50_30 at id_mapper_formal.sv:50.5-50.57
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_52_38 at id_mapper_formal.sv:52.5-52.57
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement id_mapper_formal._witness_.check_cover_id_mapper_formal_sv_54_44 at id_mapper_formal.sv:54.5-54.75

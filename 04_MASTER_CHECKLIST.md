@@ -315,7 +315,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] address decoder tests pass (`results/raw/decoder/simulation.log`).
 - [ ] RR arbiter unit tests pass.
 - [ ] QOS/age arbiter unit tests pass when B begins.
-- [ ] ID mapping tests pass.
+- [x] ID mapping tests pass (`results/raw/id_mapping/simulation.log`).
 - [ ] outstanding counter/bitmap tests pass.
 - [ ] AW/W decoupling tests pass.
 - [ ] B path tests pass.

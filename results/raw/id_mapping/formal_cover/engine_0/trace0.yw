@@ -1,0 +1,13 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "smtbmc",
+  "clocks": [],
+  "signals": [
+    {"path": ["\\manager_id"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\manager_index"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\return_internal_id"], "width": 6, "offset": 0, "init_only": true}
+  ],
+  "steps": [
+    {"bits": "000000000000"}
+  ]
+}

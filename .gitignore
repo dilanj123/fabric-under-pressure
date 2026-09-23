@@ -25,6 +25,11 @@ results/raw/request_legality/**/model/
 results/raw/request_legality/**/src/
 results/raw/request_legality/**/status.sqlite
 results/raw/request_legality/**/*.json
+results/raw/id_mapping/sim_work/
+results/raw/id_mapping/**/model/
+results/raw/id_mapping/**/src/
+results/raw/id_mapping/**/status.sqlite
+results/raw/id_mapping/**/*.json
 !results/raw/gate0/**/*.keep
 build/
 dist/

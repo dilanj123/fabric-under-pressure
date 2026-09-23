@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-23T01:59:05" hostname="MacBook-Pro.local" package="id_mapper" id="0" name="prove" tests="16" errors="0" failures="0" time="0" skipped="6">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:36.5-36.56" time="0" type="ASSERT" location="id_mapper_formal.sv:36.5-36.56" id="_witness_.check_assert_id_mapper_formal_sv_36_5">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:37.5-37.61" time="0" type="ASSERT" location="id_mapper_formal.sv:37.5-37.61" id="_witness_.check_assert_id_mapper_formal_sv_37_7">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:38.5-38.58" time="0" type="ASSERT" location="id_mapper_formal.sv:38.5-38.58" id="_witness_.check_assert_id_mapper_formal_sv_38_9">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:39.5-39.72" time="0" type="ASSERT" location="id_mapper_formal.sv:39.5-39.72" id="_witness_.check_assert_id_mapper_formal_sv_39_11">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:41.7-41.39" time="0" type="ASSERT" location="id_mapper_formal.sv:41.7-41.39" id="_witness_.check_assert_id_mapper_formal_sv_41_15">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:42.7-42.56" time="0" type="ASSERT" location="id_mapper_formal.sv:42.7-42.56" id="_witness_.check_assert_id_mapper_formal_sv_42_16">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:43.7-43.50" time="0" type="ASSERT" location="id_mapper_formal.sv:43.7-43.50" id="_witness_.check_assert_id_mapper_formal_sv_43_18">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:45.5-45.28" time="0" type="ASSERT" location="id_mapper_formal.sv:45.5-45.28" id="_witness_.check_assert_id_mapper_formal_sv_45_20">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:46.5-46.28" time="0" type="ASSERT" location="id_mapper_formal.sv:46.5-46.28" id="_witness_.check_assert_id_mapper_formal_sv_46_22">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in id_mapper_formal at id_mapper_formal.sv:47.5-47.28" time="0" type="ASSERT" location="id_mapper_formal.sv:47.5-47.28" id="_witness_.check_assert_id_mapper_formal_sv_47_24">
+</testcase>
+<testcase classname="prove" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:49.5-49.57" time="0" type="COVER" location="id_mapper_formal.sv:49.5-49.57" id="_witness_.check_cover_id_mapper_formal_sv_49_26">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:50.5-50.57" time="0" type="COVER" location="id_mapper_formal.sv:50.5-50.57" id="_witness_.check_cover_id_mapper_formal_sv_50_30">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:51.5-51.57" time="0" type="COVER" location="id_mapper_formal.sv:51.5-51.57" id="_witness_.check_cover_id_mapper_formal_sv_51_34">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:52.5-52.57" time="0" type="COVER" location="id_mapper_formal.sv:52.5-52.57" id="_witness_.check_cover_id_mapper_formal_sv_52_38">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:53.5-53.45" time="0" type="COVER" location="id_mapper_formal.sv:53.5-53.45" id="_witness_.check_cover_id_mapper_formal_sv_53_42">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in id_mapper_formal at id_mapper_formal.sv:54.5-54.75" time="0" type="COVER" location="id_mapper_formal.sv:54.5-54.75" id="_witness_.check_cover_id_mapper_formal_sv_54_44">
+<skipped />
+</testcase>
+<system-out>SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove'.
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_id_mapper.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove/src/axi_id_mapper.sv'.
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/id_mapper_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove/src/id_mapper_formal.sv'.
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0: smtbmc
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] base: finished (returncode=0)
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] prep: finished (returncode=0)
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] smt2: finished (returncode=0)
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 1  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  1:59:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 1  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 1..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: ##   0:00:00  Status: passed
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: ##   0:00:00  Status: passed
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: finished (returncode=0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.induction: Status returned by engine for induction: pass
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: finished (returncode=0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] engine_0.basecase: Status returned by engine for basecase: pass
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] summary: engine_0 (smtbmc) returned pass for basecase
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] summary: engine_0 (smtbmc) returned pass for induction
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] summary: engine_0 did not produce any traces
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] summary: successful proof by k-induction.
+SBY  1:59:05 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/id_mapping/formal_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
