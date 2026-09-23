@@ -19,17 +19,17 @@ module axi_bfm_bus #(
   input  logic [3:0]           axi_awqos,
   input  logic [3:0]           axi_awregion,
   input  logic                 axi_awvalid,
-  output logic                 axi_awready,
+  inout  wire                  axi_awready,
 
   input  logic [DATA_W-1:0]    axi_wdata,
   input  logic [STRB_W-1:0]    axi_wstrb,
   input  logic                 axi_wlast,
   input  logic                 axi_wvalid,
-  output logic                 axi_wready,
+  inout  wire                  axi_wready,
 
-  output logic [ID_W-1:0]      axi_bid,
-  output logic [1:0]           axi_bresp,
-  output logic                 axi_bvalid,
+  inout  wire [ID_W-1:0]       axi_bid,
+  inout  wire [1:0]            axi_bresp,
+  inout  wire                  axi_bvalid,
   input  logic                 axi_bready,
 
   input  logic [ID_W-1:0]      axi_arid,
@@ -43,13 +43,13 @@ module axi_bfm_bus #(
   input  logic [3:0]           axi_arqos,
   input  logic [3:0]           axi_arregion,
   input  logic                 axi_arvalid,
-  output logic                 axi_arready,
+  inout  wire                  axi_arready,
 
-  output logic [ID_W-1:0]      axi_rid,
-  output logic [DATA_W-1:0]    axi_rdata,
-  output logic [1:0]           axi_rresp,
-  output logic                 axi_rlast,
-  output logic                 axi_rvalid,
+  inout  wire [ID_W-1:0]       axi_rid,
+  inout  wire [DATA_W-1:0]     axi_rdata,
+  inout  wire [1:0]            axi_rresp,
+  inout  wire                  axi_rlast,
+  inout  wire                  axi_rvalid,
   input  logic                 axi_rready
 );
   // Deliberately no RTL behavior: this is a signal namespace that lets a

@@ -1,1 +1,249 @@
-ERROR: verilator missing
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.001 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.188 MB
+make: Nothing to be done for `default'.
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/libpython3.11.dylib'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:234  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotb/simulator.cpython-311-darwin.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:115  in initialize                      Using Python 3.11.9 interpreter at /Users/Dilan/Projects/fabric-under-pressure/.venv/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1790122118
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_bfm_smoke.axi_bfm_qualification (1/1)
+     0.00ns INFO     cocotb.axi_bfm_bus                 FABRIC_SEED=0xfabc0001
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_bfm_smoke.py:27: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI master (write)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             cocotbext-axi version 0.1.28
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Copyright (c) 2020-2025 Alex Forencich
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             https://github.com/alexforencich/cocotbext-axi
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/stream.py:120: DeprecationWarning: Use `handle.set(Immediate(...))` or `handle.value = Immediate(...)` instead.
+                                                          self.valid.setimmediatevalue(self._valid_init)
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/stream.py:133: DeprecationWarning: Use `handle.set(Immediate(...))` or `handle.value = Immediate(...)` instead.
+                                                          s.setimmediatevalue(v)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/stream.py:115: DeprecationWarning: Use `handle.set(Immediate(...))` or `handle.value = Immediate(...)` instead.
+                                                          self.ready.setimmediatevalue(self._ready_init)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI master configuration:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Address width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               ID width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Byte size: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Data width: 64 bits (8 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Max burst size: 3 (8 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Max burst length: 16 cycles (128 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI master signals:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awaddr width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awburst width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awcache width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awlen width: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awlock width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awprot width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awqos width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awregion width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awsize width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awuser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wdata width: 64 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wlast width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wstrb width: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wuser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bresp width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               buser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI master (read)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             cocotbext-axi version 0.1.28
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Copyright (c) 2020-2025 Alex Forencich
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             https://github.com/alexforencich/cocotbext-axi
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI master configuration:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Address width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               ID width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Byte size: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Data width: 64 bits (8 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Max burst size: 3 (8 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Max burst length: 16 cycles (128 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI master signals:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               araddr width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arburst width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arcache width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arlen width: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arlock width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arprot width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arqos width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arregion width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arsize width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               aruser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rdata width: 64 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rlast width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rresp width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               ruser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI slave model (write)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             cocotbext-axi version 0.1.28
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Copyright (c) 2021-2025 Alex Forencich
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             https://github.com/alexforencich/cocotbext-axi
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI slave model configuration:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Address width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               ID width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Byte size: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Data width: 64 bits (8 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI slave model signals:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awaddr width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awburst width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awcache width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awlen width: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awlock width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awprot width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awqos width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awregion width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awsize width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awuser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               awvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wdata width: 64 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wlast width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wstrb width: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wuser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               wvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bresp width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               buser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               bvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI slave model (read)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             cocotbext-axi version 0.1.28
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Copyright (c) 2021-2025 Alex Forencich
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             https://github.com/alexforencich/cocotbext-axi
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI slave model configuration:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Address width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               ID width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Byte size: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               Data width: 64 bits (8 bytes)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             AXI slave model signals:
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               araddr width: 32 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arburst width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arcache width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arlen width: 8 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arlock width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arprot width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arqos width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arregion width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arsize width: 3 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               aruser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               arvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rdata width: 64 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rid width: 4 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rlast width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rready width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rresp width: 2 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               ruser: not present
+     0.00ns INFO     cocotb.axi_bfm_bus.axi               rvalid width: 1 bits
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/reset.py:59: DeprecationWarning: Use `signal.value_change` instead.
+                                                          await Edge(reset_signal)
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/stream.py:156: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._run_cr.kill()
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:434: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._process_write_cr.kill()
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:437: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._process_write_resp_cr.kill()
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:845: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._process_read_cr.kill()
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:848: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._process_read_resp_cr.kill()
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_slave.py:102: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._process_write_cr.kill()
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns INFO     cocotb.axi_bfm_bus.axi             Reset asserted
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_slave.py:266: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          self._process_read_cr.kill()
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    20.00ns INFO     cocotb.axi_bfm_bus.axi             Reset de-asserted
+    40.00ns INFO     cocotb.axi_bfm_bus.axi             Write start addr: 0x00001000 awid: 0x3 prot: 2 data: 88 77 66 55 44 33 22 11
+    40.00ns INFO     cocotb.axi_bfm_bus.axi             Write burst start awid: 0x3 awaddr: 0x00001000 awlen: 0 awsize: 3 awprot: 2
+    80.00ns INFO     cocotb.axi_bfm_bus.axi             Write burst awid: 0x3 awaddr: 0x00001000 awlen: 0 awsize: 3 awprot: 2
+   120.00ns INFO     cocotb.axi_bfm_bus.axi             Write burst complete bid: 0x3 bresp: 0
+   120.00ns INFO     cocotb.axi_bfm_bus.axi             Write complete addr: 0x00001000 prot: 2 resp: 0 length: 8
+   120.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:630: DeprecationWarning: The data field will be removed in a future release.
+                                                          cmd.event.set(write_resp)
+   120.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:423: DeprecationWarning: The data field will be removed in a future release.
+                                                          return event.data
+   120.00ns INFO     cocotb.axi_bfm_bus.axi             Read start addr: 0x00001000 arid: 0x5 prot: 2
+   120.00ns INFO     cocotb.axi_bfm_bus.axi             Read burst start arid: 0x5 araddr: 0x00001000 arlen: 0 arsize: 3 arprot: 2
+   150.00ns INFO     cocotb.axi_bfm_bus.axi             Read burst arid: 0x5 araddr: 0x00001000 arlen: 0 arsize: 3 arprot: 2
+   170.00ns INFO     cocotb.axi_bfm_bus.axi             Read burst complete rid: 0x5 rresp: 0
+   170.00ns INFO     cocotb.axi_bfm_bus.axi             Read complete addr: 0x00001000 prot: 2 resp: 0 data: 88 77 66 55 44 33 22 11
+   170.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:1030: DeprecationWarning: The data field will be removed in a future release.
+                                                          cmd.event.set(read_resp)
+   170.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/.venv/lib/python3.11/site-packages/cocotbext/axi/axi_master.py:834: DeprecationWarning: The data field will be removed in a future release.
+                                                          return event.data
+   170.00ns INFO     cocotb.axi_bfm_bus.axi             Write start addr: 0x00001080 awid: 0x6 prot: 2 data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
+   170.00ns INFO     cocotb.axi_bfm_bus.axi             Write burst start awid: 0x6 awaddr: 0x00001080 awlen: 3 awsize: 3 awprot: 2
+   200.00ns INFO     cocotb.axi_bfm_bus.axi             Write burst awid: 0x6 awaddr: 0x00001080 awlen: 3 awsize: 3 awprot: 2
+   320.00ns INFO     cocotb.axi_bfm_bus.axi             Write burst complete bid: 0x6 bresp: 0
+   320.00ns INFO     cocotb.axi_bfm_bus.axi             Write complete addr: 0x00001080 prot: 2 resp: 0 length: 32
+   320.00ns INFO     cocotb.axi_bfm_bus.axi             Read start addr: 0x00001080 arid: 0x9 prot: 2
+   320.00ns INFO     cocotb.axi_bfm_bus.axi             Read burst start arid: 0x9 araddr: 0x00001080 arlen: 3 arsize: 3 arprot: 2
+   350.00ns INFO     cocotb.axi_bfm_bus.axi             Read burst arid: 0x9 araddr: 0x00001080 arlen: 3 arsize: 3 arprot: 2
+   440.00ns INFO     cocotb.axi_bfm_bus.axi             Read burst complete rid: 0x9 rresp: 0
+   440.00ns INFO     cocotb.axi_bfm_bus.axi             Read complete addr: 0x00001080 prot: 2 resp: 0 data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
+   440.00ns INFO     cocotb.regression                  test_axi_bfm_smoke.axi_bfm_qualification passed
+   440.00ns INFO     cocotb.regression                  **************************************************************************************************
+                                                        ** TEST                                      STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************************
+                                                        ** test_axi_bfm_smoke.axi_bfm_qualification   PASS         440.00           0.01      36444.71  **
+                                                        **************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                            440.00           0.01      35057.67  **
+                                                        **************************************************************************************************
+- :0: Verilog $finish

@@ -13,9 +13,12 @@
 | D009 | Architecture A is per-target AW/AR round-robin; held grant under backpressure. | FROZEN | PLAN; simplest complete baseline. |
 | D010 | Architecture B uses 4-bit AxQOS, 8-bit saturating age, threshold 64 and starved-set RR escape. | FROZEN | PLAN; deterministic policy suitable for formal/measurement. |
 | D011 | Freeze workloads W00–W13 and seeds FABC0001…FABC0005 before B results. | FROZEN | PLAN; benchmark integrity. |
-| D012 | Use common compact wrapper and LFE5U-45F/CABGA381/-6 for open PPA comparison. | CONDITIONAL | PLAN; wrapper still requires Gate-0 validation. |
+| D012 | Use common compact wrapper and LFE5U-45F/CABGA381/-6 for open PPA comparison. | FROZEN | PLAN+SYNTH; generic preservation harness validated in Gate 0. |
 | D013 | Complete a single-clock MVP before any per-channel CDC bridge extension. | FROZEN | PLAN; scope/risk control. |
 | D014 | Preferred EDA bundle candidate is OSS CAD Suite darwin-arm64 release 2026-09-20, asset `oss-cad-suite-darwin-arm64-20260920.tgz`, SHA-256 `3af61f750c8040bcdfe317ba6134f93e391d65dc27e6bf39ef56455e48c723ae`. | CANDIDATE | UPSTREAM; must be downloaded and version-smoked on intended Mac before becoming local evidence. |
 | D015 | Phase-0 SV style will prefer packages/packed structs/arrays/generate/always_ff/always_comb/functions; SV interfaces/modports are optional and accepted only if all chosen frontends agree. | OPEN TEST | Requires local sim/synth/formal smoke. |
 | D016 | Use `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d` as a workflow/process reference only. | FROZEN | PUBLIC REFERENCE; imports evidence/gate/task discipline, not Sobel/image architecture. |
 | D017 | Public GitHub target is `dilanj123/fabric-under-pressure`; repository commits use Dilan Jayasena / `dilanj123@outlook.com` as the intended project identity. | FROZEN | USER-SPECIFIED ownership; does not alter technical architecture. |
+| D018 | Qualify the pinned OSS CAD Suite `2026-09-20` darwin-arm64 archive and repository Python pins on the physical Apple-Silicon host. | FROZEN | UPSTREAM+REPRO; archive digest and exact versions recorded in Gate-0 evidence. |
+| D019 | Use the conservative SV subset demonstrated by the repaired smoke: packages, packed structs, packed arrays, generate, `always_ff`/`always_comb` and assignment-style functions; avoid wildcard unpacked-struct array connections and unsupported Yosys package-import placement. | FROZEN | REPRO; Verilator, Slang and Yosys smoke all pass. |
+| D020 | Set `LIBPYTHON_LOC` and the OSS CAD Suite library path for embedded-Python cocotb runs; require XML zero-failure checks in sim/BFM scripts. | FROZEN | REPRO; required by the qualified embedded Python/Verilator environment. |

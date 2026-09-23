@@ -21,7 +21,7 @@ mkdir -p "$(dirname "$OUT")"
         yosys) yosys -V ;;
         sby) sby --version || sby -V || true ;;
         nextpnr-ecp5) nextpnr-ecp5 --version ;;
-        ecppack) ecppack --version || true ;;
+        ecppack) ecppack --help 2>&1 | sed -n '/^Version /p' ;;
         slang) slang --version || true ;;
       esac
     else

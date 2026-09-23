@@ -11,6 +11,7 @@ obj_dir/
 *.ghw
 formal/work/
 formal/*/engine_*/
+formal/smoke_*/
 results/raw/gate0/**/work/
 results/raw/gate0/**/*.json
 !results/raw/gate0/**/*.keep

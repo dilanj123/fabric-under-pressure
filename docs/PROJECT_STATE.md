@@ -1,28 +1,24 @@
 # Project State
 
-**Date:** 2026-09-22
-**Gate:** Gate 0 OPEN
+**Date:** 2026-09-23
+**Gate:** Gate 0 PASS locally; GitHub macOS arm64 qualification OPEN
 **Architecture:** planning frozen; project AXI RTL not started.
 
 ## What changed
-Repository/bootstrap skeleton, Gate-0 smoke sources/scripts, protocol source register, upstream snapshot, third-party manifest and Gate-1 document skeletons created. Public process-reference review is now complete against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`. GitHub publication target corrected to `dilanj123/fabric-under-pressure`.
+Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
 
 ## Evidence now exists
 - authoritative planning documents are present;
 - protocol metadata/section register is present;
 - public upstream repository SHAs/licence observations are recorded;
 - exact candidate OSS CAD Suite darwin-arm64 asset/digest is recorded;
-- current execution-host probe proves this ChatGPT container is Linux/x86_64 and lacks Verilator/Yosys/SBY/nextpnr/Trellis;
-- Python package installation attempt failed because this container has no external package-index network access.
+- exact Darwin/arm64 host and tool versions;
+- exact Python freeze for cocotb 2.1.0 and cocotbext-axi 0.1.28;
+- SV frontend, cocotb, BFM, formal, synthesis, P&R and wrapper raw evidence.
 
-## Still unproven / Gate-0 blockers
-- intended macOS/Apple-Silicon tool versions;
-- SV frontend compatibility;
-- Verilator+cocotb smoke;
-- cocotbext-axi compatibility;
-- formal PASS/cover/intentional-FAIL harness;
-- ECP5 synthesis/P&R;
-- compact wrapper preservation experiment.
+## Still unproven
+- GitHub-hosted macOS arm64 workflow result and artifact review;
+- all Fabric AXI behavior, formal properties, performance, PPA and timing.
 
 ## Risks
 Do not interpret generated scripts or public upstream metadata as local tool qualification. Gate 0 remains OPEN until the intended Mac executes the smoke suite successfully.
@@ -32,12 +28,10 @@ No AXI behaviour changed. Process authority was strengthened by resolving the RT
 
 ## Phase-0 execution status
 
-- Repository/bootstrap structure is authored.
-- Current ChatGPT execution host is Linux/x86_64, not the intended macOS/Apple-Silicon qualification host.
-- Static syntax/completeness checks pass for authored bootstrap scripts and Python tests.
-- A real cocotbext-axi BFM qualification smoke is authored (aligned read/write, 4-beat INCR burst, explicit IDs/QoS, deterministic backpressure).
-- Simulation/formal/synthesis/P&R evidence remains OPEN because Verilator/Yosys/SBY/nextpnr/Trellis and cocotb packages are unavailable on this host and network package installation is blocked.
-- Gate 0 therefore remains OPEN. No KNOWN_GOOD tag is permitted yet.
+- The physical Apple-Silicon host passed the complete Gate-0 driver at exit code 0.
+- The BFM smoke passed aligned 64-bit read/write, a 4-beat INCR transfer, explicit IDs/QoS and deterministic backpressure.
+- Generic formal prove/cover/intentional-fail, ECP5 synthesis/P&R and wrapper preservation passed.
+- No project AXI RTL or reference model exists.
 
 ## Next smallest task
-Push the repository to a GitHub remote and run `.github/workflows/gate0-macos-arm64.yml` (or run the same suite directly on the developer Mac). Review the resulting Darwin/arm64 evidence; only then close Gate 0 and create `kg-g0-env`. Do not start fabric RTL while Gate 0 is open.
+Dispatch and review `.github/workflows/gate0-macos-arm64.yml`. If its artifact independently passes every Gate-0 criterion, commit the reviewed evidence and create `kg-g0-env`; otherwise diagnose the CI discrepancy. Do not start fabric RTL until Gate 0 is closed across the required evidence paths.

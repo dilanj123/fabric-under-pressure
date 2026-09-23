@@ -3,7 +3,7 @@ import os
 
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge
+from cocotb.triggers import RisingEdge, with_timeout
 from cocotbext.axi import AxiBus, AxiMaster, AxiRam
 
 
@@ -41,7 +41,7 @@ async def axi_bfm_qualification(dut):
 
     # One aligned 64-bit write and read with explicit IDs.
     word = bytes.fromhex("8877665544332211")
-    w = await master.write(0x1000, word, awid=0x3, size=3, qos=8)
+    w = await with_timeout(master.write(0x1000, word, awid=0x3, size=3, qos=8), 200, "ns")
     assert int(w.resp) == 0
     r = await master.read(0x1000, 8, arid=0x5, size=3, qos=8)
     assert int(r.resp) == 0

@@ -1,1 +1,234 @@
-ERROR: verilator missing
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- Verilator: Built from 0.037 MB sources in 5 modules, into 0.029 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.045 s (elab=0.010, cvt=0.016, bld=0.000); cpu 0.016 s on 1 threads; allocated 11.609 MB
+
+Build succeeded: 0 errors, 0 warnings
+
+-- Running command `read_verilog -sv /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv; hierarchy -top sv_features; proc; check' --
+
+1. Executing Verilog-2005 frontend: /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv
+Parsing SystemVerilog input from `/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv' to AST representation.
+Generating RTLIL representation for module `\smoke_lane'.
+Generating RTLIL representation for module `\sv_features'.
+Warning: wire '\in_p[0].data' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45.7-45.32.
+Warning: wire '\in_p[0].valid' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46.7-46.33.
+Warning: wire '\in_p[1].data' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45.7-45.32.
+Warning: wire '\in_p[1].valid' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46.7-46.33.
+Warning: wire '\in_p[2].data' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45.7-45.32.
+Warning: wire '\in_p[2].valid' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46.7-46.33.
+Warning: wire '\in_p[3].data' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45.7-45.32.
+Warning: wire '\in_p[3].valid' is assigned in a block at /Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46.7-46.33.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45: Warning: Identifier `\in_p[0].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46: Warning: Identifier `\in_p[0].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:47: Warning: Identifier `\out_p[0].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:48: Warning: Identifier `\out_p[0].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45: Warning: Identifier `\in_p[1].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46: Warning: Identifier `\in_p[1].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:47: Warning: Identifier `\out_p[1].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:48: Warning: Identifier `\out_p[1].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45: Warning: Identifier `\in_p[2].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46: Warning: Identifier `\in_p[2].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:47: Warning: Identifier `\out_p[2].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:48: Warning: Identifier `\out_p[2].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:45: Warning: Identifier `\in_p[3].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:46: Warning: Identifier `\in_p[3].valid' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:47: Warning: Identifier `\out_p[3].data' is implicitly declared.
+/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:48: Warning: Identifier `\out_p[3].valid' is implicitly declared.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \sv_features
+Used module:     \smoke_lane
+Parameter \INDEX = 3
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\smoke_lane'.
+Parameter \INDEX = 3
+Generating RTLIL representation for module `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011'.
+Parameter \INDEX = 2
+
+2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\smoke_lane'.
+Parameter \INDEX = 2
+Generating RTLIL representation for module `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010'.
+Parameter \INDEX = 1
+
+2.4. Executing AST frontend in derive mode using pre-parsed AST for module `\smoke_lane'.
+Parameter \INDEX = 1
+Generating RTLIL representation for module `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001'.
+Parameter \INDEX = 0
+
+2.5. Executing AST frontend in derive mode using pre-parsed AST for module `\smoke_lane'.
+Parameter \INDEX = 0
+Generating RTLIL representation for module `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000'.
+
+2.6. Analyzing design hierarchy..
+Top module:  \sv_features
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000
+
+2.7. Analyzing design hierarchy..
+Top module:  \sv_features
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001
+Used module:     $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000
+Removing unused module `\smoke_lane'.
+Removed 1 unused modules.
+Warning: Resizing cell port sv_features.g_lane[3].u_lane.out_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[3].u_lane.in_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[2].u_lane.out_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[2].u_lane.in_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[1].u_lane.out_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[1].u_lane.in_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[0].u_lane.out_p from 1 bits to 9 bits.
+Warning: Resizing cell port sv_features.g_lane[0].u_lane.in_p from 1 bits to 9 bits.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31 in module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23 in module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15 in module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39 in module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 4 redundant assignments.
+Promoted 24 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31'.
+     1/4: $0\out_p[8:0] [8:1]
+     2/4: $0\out_p[8:0] [0]
+     3/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$30.a[7:0]$36
+     4/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$30.$result[7:0]$35
+Creating decoders for process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23'.
+     1/4: $0\out_p[8:0] [8:1]
+     2/4: $0\out_p[8:0] [0]
+     3/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$22.a[7:0]$28
+     4/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$22.$result[7:0]$27
+Creating decoders for process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15'.
+     1/4: $0\out_p[8:0] [8:1]
+     2/4: $0\out_p[8:0] [0]
+     3/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$14.a[7:0]$20
+     4/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$14.$result[7:0]$19
+Creating decoders for process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$13'.
+Creating decoders for process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$12'.
+Creating decoders for process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$11'.
+Creating decoders for process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$10'.
+Creating decoders for process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39'.
+     1/4: $0\out_p[8:0] [8:1]
+     2/4: $0\out_p[8:0] [0]
+     3/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$38.a[7:0]$44
+     4/4: $1\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$38.$result[7:0]$43
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\sv_features.\data_o [31:24]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$13'.
+No latch inferred for signal `\sv_features.\valid_o [3]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$13'.
+No latch inferred for signal `\sv_features.\in_p[3].data' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$13'.
+No latch inferred for signal `\sv_features.\in_p[3].valid' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$13'.
+No latch inferred for signal `\sv_features.\data_o [23:16]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$12'.
+No latch inferred for signal `\sv_features.\valid_o [2]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$12'.
+No latch inferred for signal `\sv_features.\in_p[2].data' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$12'.
+No latch inferred for signal `\sv_features.\in_p[2].valid' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$12'.
+No latch inferred for signal `\sv_features.\data_o [15:8]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$11'.
+No latch inferred for signal `\sv_features.\valid_o [1]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$11'.
+No latch inferred for signal `\sv_features.\in_p[1].data' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$11'.
+No latch inferred for signal `\sv_features.\in_p[1].valid' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$11'.
+No latch inferred for signal `\sv_features.\data_o [7:0]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$10'.
+No latch inferred for signal `\sv_features.\valid_o [0]' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$10'.
+No latch inferred for signal `\sv_features.\in_p[0].data' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$10'.
+No latch inferred for signal `\sv_features.\in_p[0].valid' from process `\sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$10'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.\out_p' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31'.
+  created $dff cell `$procdff$98' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$30.$result' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31'.
+  created $dff cell `$procdff$99' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$30.a' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31'.
+  created $dff cell `$procdff$100' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.\out_p' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23'.
+  created $dff cell `$procdff$101' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$22.$result' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23'.
+  created $dff cell `$procdff$102' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$22.a' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23'.
+  created $dff cell `$procdff$103' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.\out_p' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15'.
+  created $dff cell `$procdff$104' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$14.$result' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15'.
+  created $dff cell `$procdff$105' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$14.a' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15'.
+  created $dff cell `$procdff$106' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.\out_p' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39'.
+  created $dff cell `$procdff$107' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$38.$result' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39'.
+  created $dff cell `$procdff$108' with positive edge clock.
+Creating register for signal `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.\sv_features_pkg::mix8$func$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:27$38.a' using process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39'.
+  created $dff cell `$procdff$109' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31'.
+Removing empty process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$31'.
+Found and cleaned up 1 empty switch in `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23'.
+Removing empty process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$23'.
+Found and cleaned up 1 empty switch in `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15'.
+Removing empty process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$15'.
+Removing empty process `sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$13'.
+Removing empty process `sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$12'.
+Removing empty process `sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$11'.
+Removing empty process `sv_features.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:44$10'.
+Found and cleaned up 1 empty switch in `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39'.
+Removing empty process `$paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.$proc$/Users/Dilan/Projects/fabric-under-pressure/smoke/sv_features.sv:22$39'.
+Cleaned up 4 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001.
+<suppressed ~5 debug messages>
+Optimizing module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010.
+<suppressed ~5 debug messages>
+Optimizing module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011.
+<suppressed ~5 debug messages>
+Optimizing module sv_features.
+Optimizing module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000.
+<suppressed ~5 debug messages>
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000001...
+Checking module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000010...
+Checking module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000011...
+Checking module sv_features...
+Warning: Wire sv_features.\out_p[3].data is used but has no driver.
+Warning: Wire sv_features.\out_p[2].data is used but has no driver.
+Warning: Wire sv_features.\out_p[1].data is used but has no driver.
+Warning: Wire sv_features.\out_p[0].data is used but has no driver.
+Warning: Wire sv_features.\out_p[3].valid is used but has no driver.
+Warning: Wire sv_features.\out_p[2].valid is used but has no driver.
+Warning: Wire sv_features.\out_p[1].valid is used but has no driver.
+Warning: Wire sv_features.\out_p[0].valid is used but has no driver.
+Warning: Wire sv_features.\in_p [0] is used but has no driver.
+Warning: Wire sv_features.\in_p [1] is used but has no driver.
+Warning: Wire sv_features.\in_p [2] is used but has no driver.
+Warning: Wire sv_features.\in_p [3] is used but has no driver.
+Checking module $paramod\smoke_lane\INDEX=s32'00000000000000000000000000000000...
+Found and reported 12 problems.
+
+Warnings: 44 unique messages, 44 total
+End of script. Logfile hash: e7f6256c17, time: 0.00s, user: 0.01s, system: 0.01s, MEM: 13.38 MB peak
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 40% 2x read_verilog (0 sec), 25% 1x hierarchy (0 sec), ...

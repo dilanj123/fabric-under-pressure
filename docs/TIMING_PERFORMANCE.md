@@ -1,6 +1,6 @@
 # Timing and Performance Methodology
 
-**Status:** methodology skeleton; no fabric timing/performance evidence exists.
+**Status:** Gate-0 wrapper methodology validated; no fabric timing/performance evidence exists.
 
 ## Frozen implementation target
 LFE5U-45F / CABGA381 / speed grade 6 using a pinned nextpnr-ECP5/Trellis flow.
@@ -11,7 +11,7 @@ Gate 1 will retain distinct timestamps for request presentation, request accepta
 ## A/B fairness
 Freeze topology, widths, IDs, outstanding depth, address map, endpoints, buffers, workloads, tool versions, wrapper, synthesis/P&R settings, constraints, seeds and measurement scripts.
 
-## Compact P&R wrapper method — provisional until Phase-0 smoke validates it
+## Compact P&R wrapper method — validated for generic preservation
 Use a common registered stimulus-expansion + signature-reduction wrapper:
 - a small registered external seed/command interface drives a registered PRNG/state expander;
 - expanded registered signals feed the internal DUT cone;
@@ -20,8 +20,8 @@ Use a common registered stimulus-expansion + signature-reduction wrapper:
 - wrapper is identical between A and B;
 - register boundaries prevent simple constant propagation from deleting the DUT and reduce top-level I/O pressure.
 
-### Required Phase-0 validation
-Run `scripts/run_smoke_wrapper.sh` and inspect Yosys statistics/netlist to demonstrate the generic payload cone survives optimization. Until that passes, the wrapper method is **PLAN**, not evidence.
+### Phase-0 validation
+`scripts/run_smoke_wrapper.sh` passed on the qualified host. Yosys retained a non-empty top module with 777 mapped cells, 375 TRELLIS_FF cells and 392 LUT4 cells behind a 17-bit top-level interface. This is generic wrapper methodology evidence, not Fabric PPA evidence.
 
 ### Interpretation limitation
 The wrapper contributes overhead, so absolute resource numbers must be reported separately/with caveats. Relative A/B comparison is valid only if wrapper structure and parameters are identical.

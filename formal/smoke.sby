@@ -15,9 +15,9 @@ fail: depth 8
 smtbmc
 
 [script]
-prove: read -formal ../smoke/formal_counter.sv
-cover: read -formal ../smoke/formal_counter.sv
-fail: read -formal -D EXPECT_FAIL ../smoke/formal_counter.sv
+prove: read -formal formal_counter.sv
+cover: read -formal formal_counter.sv
+fail: read -formal -D EXPECT_FAIL formal_counter.sv
 prep -top formal_counter
 
 [files]
