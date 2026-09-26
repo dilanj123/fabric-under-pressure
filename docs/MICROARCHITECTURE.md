@@ -30,7 +30,7 @@ Each manager-facing and target-facing channel has one registered ready/valid bou
 ## 7a. Exact state decomposition
 
 - `decode_aw`/`decode_ar`: combinational target decode with one-hot legal target or S3 error selection.
-- `aw_rr[target]` and `ar_rr[target]`: 2-bit per-target round-robin pointers for A; B retains the same pointers and changes only the request selection policy.
+- `aw_rr[target]` and `ar_rr[target]`: 2-bit per-target round-robin pointers for A; B retains the same pointers and changes only the request selection policy. At an AW target boundary, a successful AW handshake suppresses same-edge successor selection; scheduling resumes after registered write-owner state reports the target free.
 - `write_owner[manager]`: one registered active accepted-AW context driving W until accepted WLAST; it records target, original ID, widened ID and remaining-beat state. A manager has only one unfinished W burst. Completed-W transactions waiting for B remain in `outstanding_w[manager][id]` and are not write-owner entries.
 - `outstanding_r[manager][id]` and `outstanding_w[manager][id]`: valid bits plus target and burst metadata, with four-entry per-direction admission counters per manager.
 - `read_return[target]` and `write_response[target]`: response queues with fixed depth 8 in the canonical endpoint model; the fabric preserves burst-level R ownership through RLAST.

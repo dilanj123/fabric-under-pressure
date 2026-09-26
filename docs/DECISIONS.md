@@ -34,3 +34,4 @@
 
 
 | D030 | A manager write-owner context is registered from an accepted AW and cannot be recycled for a new AW in the same cycle as final W completion. Capacity becomes available on the following cycle. | FROZEN | Conservative pre-state admission rule; avoids a W-completion to AW-admission combinational bypass. |
+| D031 | At a target-specific Architecture-A AW boundary, a successful AW handshake suppresses same-edge next-request selection. The RR pointer still advances from the accepted winner, and AW scheduling resumes only after registered write-owner state reports the target free. | FROZEN | Conservative AW integration rule; prevents stale owner-free lookahead and avoids holding a speculative successor through the accepted write burst. |
