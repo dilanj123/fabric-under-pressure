@@ -1,4 +1,6 @@
-module rr_arbiter_fairness(input logic ACLK);
+module rr_arbiter_fairness_case #(
+  parameter int WATCHED = 0
+) (input logic ACLK);
   (* anyseq *) logic ARESETn;
   (* anyseq *) logic [2:0] request;
   (* anyseq *) logic downstream_ready;
@@ -17,11 +19,11 @@ module rr_arbiter_fairness(input logic ACLK);
 
   initial assume (!ARESETn);
 
-  // These assumptions apply only to this fairness harness. Safety is proved
-  // separately with unconstrained requests and READY.
+  // Fairness assumptions are local to this standalone bounded harness:
+  // the watched requester persists and the downstream accepts every cycle.
   always @* begin
     if (ARESETn) begin
-      assume (request[0]);
+      assume (request[WATCHED]);
       assume (downstream_ready);
     end
   end
@@ -30,7 +32,7 @@ module rr_arbiter_fairness(input logic ACLK);
     if (!ARESETn) begin
       competing_grants <= 3'b000;
     end else if (grant_valid && downstream_ready) begin
-      if (grant[0]) begin
+      if (grant[WATCHED]) begin
         competing_grants <= 3'b000;
       end else begin
         competing_grants <= competing_grants + 3'd1;
@@ -39,15 +41,26 @@ module rr_arbiter_fairness(input logic ACLK);
   end
 
   always @(posedge ACLK) begin
-    if (ARESETn && grant_valid && downstream_ready && !grant[0])
+    if (ARESETn && grant_valid && downstream_ready && !grant[WATCHED])
       assert (competing_grants < 3'd2);
   end
 
   always @* begin
-    cover (ARESETn && formal_grant_q == 3'b001 && grant_valid);
-    cover (ARESETn && formal_grant_q == 3'b010 && grant_valid);
-    cover (ARESETn && formal_grant_q == 3'b100 && grant_valid);
+    cover (ARESETn && grant_valid && grant[WATCHED]);
+    cover (ARESETn && competing_grants == 3'd0);
+    cover (ARESETn && competing_grants == 3'd1);
     cover (ARESETn && competing_grants == 3'd2);
-    cover (ARESETn && formal_grant_q == 3'b001 && competing_grants == 3'd0);
   end
+endmodule
+
+module rr_arbiter_fairness_m0(input logic ACLK);
+  rr_arbiter_fairness_case #(.WATCHED(0)) u_case (.ACLK(ACLK));
+endmodule
+
+module rr_arbiter_fairness_m1(input logic ACLK);
+  rr_arbiter_fairness_case #(.WATCHED(1)) u_case (.ACLK(ACLK));
+endmodule
+
+module rr_arbiter_fairness_m2(input logic ACLK);
+  rr_arbiter_fairness_case #(.WATCHED(2)) u_case (.ACLK(ACLK));
 endmodule

@@ -7,4 +7,4 @@ g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routin
 rm Vrr_arbiter_tb__ALL.verilator_deplist.tmp
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.068 MB sources in 4 modules, into 0.143 MB in 7 C++ files needing 0.001 MB
-- Verilator: Walltime 6.475 s (elab=0.003, cvt=0.015, bld=6.449); cpu 0.019 s on 1 threads; allocated 13.516 MB
+- Verilator: Walltime 8.162 s (elab=0.002, cvt=0.012, bld=8.139); cpu 0.020 s on 1 threads; allocated 13.422 MB

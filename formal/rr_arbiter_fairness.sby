@@ -1,16 +1,26 @@
 [tasks]
-fairness
+m0
+m1
+m2
 
 [options]
-fairness: mode bmc
-fairness: depth 12
+m0: mode bmc
+m0: depth 12
+m1: mode bmc
+m1: depth 12
+m2: mode bmc
+m2: depth 12
 
 [engines]
 smtbmc
 
 [script]
-read -formal -D FORMAL -sv axi_rr_arbiter_3.sv rr_arbiter_fairness.sv
-prep -top rr_arbiter_fairness
+m0: read -formal -D FORMAL -sv axi_rr_arbiter_3.sv rr_arbiter_fairness.sv
+m0: prep -top rr_arbiter_fairness_m0
+m1: read -formal -D FORMAL -sv axi_rr_arbiter_3.sv rr_arbiter_fairness.sv
+m1: prep -top rr_arbiter_fairness_m1
+m2: read -formal -D FORMAL -sv axi_rr_arbiter_3.sv rr_arbiter_fairness.sv
+m2: prep -top rr_arbiter_fairness_m2
 
 [files]
 ../rtl/axi_rr_arbiter_3.sv

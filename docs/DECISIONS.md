@@ -31,3 +31,6 @@
 | D027 | Architecture-B age increments once per pending clock cycle without handshake and saturates at 255; threshold is age >= 64. Recurring service opportunities remain assumptions for the bounded-service claim only. | FROZEN | PLAN+REQUIREMENTS; resolves the age-unit contradiction in microarchitecture/formal wording. |
 | D028 | Outstanding allocation eligibility is evaluated from registered pre-state. Completion on cycle N cannot recycle ID or count capacity until the following cycle; different-ID completion/allocation is allowed only when pre-state capacity and ID availability already permit allocation. | FROZEN | PLAN; avoids response-to-request combinational credit bypass and applies identically to read/write trackers. |
 | D029 | Architecture-A round-robin pointers reset to M0 (`2'b00`); valid pointer states are M0/M1/M2 and the pointer advances to the manager after a successful handshake. | FROZEN | PLAN completion; deterministic implementation detail with no A/B policy change. |
+
+
+| D030 | A manager write-owner context is registered from an accepted AW and cannot be recycled for a new AW in the same cycle as final W completion. Capacity becomes available on the following cycle. | FROZEN | Conservative pre-state admission rule; avoids a W-completion to AW-admission combinational bypass. |

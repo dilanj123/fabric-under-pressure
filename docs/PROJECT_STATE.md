@@ -18,13 +18,13 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 
 ## Still unproven
 - all Fabric AXI behavior, formal properties, performance, PPA and timing;
-- any Architecture A or B RTL result.
+- any integrated Architecture-A Fabric behavior or Architecture-B RTL result.
 
 ## Risks
 Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.
 
 ## Specification changes
-No frozen AXI behavior changed. This task added the standalone decoder and request-legality primitive evidence; Gate-1 documentation continues to freeze the interface bundle, buffering, endpoint model, workload generator, metrics, traceability and formal assumptions; see D023-D024.
+No frozen AXI behavior changed. This task added the standalone decoder, request-legality and RR fairness-case evidence; Gate-1 documentation continues to freeze the interface bundle, buffering, endpoint model, workload generator, metrics, traceability and formal assumptions; see D023-D024.
 
 ## Phase-0 execution status
 
@@ -35,7 +35,7 @@ No frozen AXI behavior changed. This task added the standalone decoder and reque
 - The standalone request-legality primitive has directed simulation, full Yosys synthesis and focused formal evidence, including same-target composition with the raw-address decoder.
 - The standalone manager/internal ID mapping primitive has exhaustive directed simulation, full Yosys synthesis and focused formal evidence; no outstanding state or response routing exists.
 - The standalone per-manager/per-direction outstanding tracker has clocked directed simulation, full Yosys synthesis and bounded stateful formal evidence; no request arbitration, write ownership or response routing exists.
-- The standalone Architecture-A 3-way RR arbiter has directed scheduling/backpressure simulation, bounded safety/hold/pointer/selection formal evidence, bounded fairness evidence under explicit continuous-request/READY assumptions, and full Yosys synthesis; no target-specific arbiter instantiation or AXI channel integration exists.
+- The standalone Architecture-A 3-way RR arbiter has directed scheduling/backpressure simulation, bounded safety/hold/pointer/selection formal evidence, bounded fairness evidence for M0, M1 and M2 under explicit continuous-request/READY assumptions, and full Yosys synthesis; no target-specific arbiter instantiation or AXI channel integration exists.
 
 ## Next smallest task
 Create the next narrow Architecture A task from the frozen dependency structure: implement the target-specific request eligibility/arbiter boundary while keeping AXI channel integration, write ownership and response routing separate. Do not implement Architecture B, CPU integration or CDC in that task.

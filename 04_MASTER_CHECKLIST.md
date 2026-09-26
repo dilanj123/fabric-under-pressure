@@ -193,7 +193,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] persistent-request fairness directed test passes (`results/raw/rr_arbiter/simulation.log`).
 - [x] RR one-hot/no-grant-without-request formal properties pass (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
 - [x] RR hold-stability formal property passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
-- [x] RR fairness property passes under explicit readiness assumption (`results/raw/rr_arbiter/formal_fairness/logfile.txt`, bounded depth 12).
+- [x] RR fairness property passes separately for M0, M1 and M2 under explicit watched-request/always-ready assumptions (`results/raw/rr_arbiter/formal_fairness_m0/logfile.txt`, `formal_fairness_m1/logfile.txt`, `formal_fairness_m2/logfile.txt`, bounded depth 12).
 
 ---
 

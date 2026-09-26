@@ -1,119 +1,119 @@
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover'.
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/src/axi_rr_arbiter_3.sv'.
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/rr_arbiter_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/src/rr_arbiter_formal.sv'.
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: smtbmc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys"
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] base: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/model; yosys -ql design_prep.log design_prep.ys"
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] prep: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys"
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] smt2: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 12  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Solver: yices
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at rr_arbiter_formal: rr_arbiter_formal.sv:116.5-116.49 (_witness_.check_cover_rr_arbiter_formal_sv_116_178)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at rr_arbiter_formal: rr_arbiter_formal.sv:94.5-94.49 (_witness_.check_cover_rr_arbiter_formal_sv_94_112)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:97.5-97.48 (_witness_.check_cover_rr_arbiter_formal_sv_97_121)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:110.5-111.57 (_witness_.check_cover_rr_arbiter_formal_sv_110_160)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:100.5-101.37 (_witness_.check_cover_rr_arbiter_formal_sv_100_130)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:106.5-107.38 (_witness_.check_cover_rr_arbiter_formal_sv_106_148)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:98.5-98.48 (_witness_.check_cover_rr_arbiter_formal_sv_98_124)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:112.5-113.57 (_witness_.check_cover_rr_arbiter_formal_sv_112_166)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:102.5-103.37 (_witness_.check_cover_rr_arbiter_formal_sv_102_136)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace8.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace8_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace8.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace8.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:104.5-105.37 (_witness_.check_cover_rr_arbiter_formal_sv_104_142)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:99.5-99.48 (_witness_.check_cover_rr_arbiter_formal_sv_99_127)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace9.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace9_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace9.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace9.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:108.5-109.29 (_witness_.check_cover_rr_arbiter_formal_sv_108_154)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace10.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace10_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace10.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace10.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:114.5-115.57 (_witness_.check_cover_rr_arbiter_formal_sv_114_172)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace11.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace11_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace11.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace11.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at rr_arbiter_formal: rr_arbiter_formal.sv:96.5-96.49 (_witness_.check_cover_rr_arbiter_formal_sv_96_118)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace12.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace12_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace12.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace12.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at rr_arbiter_formal: rr_arbiter_formal.sv:95.5-95.49 (_witness_.check_cover_rr_arbiter_formal_sv_95_115)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace13.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace13_tb.v
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace13.smtc
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace13.yw
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Status: passed
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: Status returned by engine: pass
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: engine_0 (smtbmc) returned pass
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace0.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_116_178 at rr_arbiter_formal.sv:116.5-116.49
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace1.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_94_112 at rr_arbiter_formal.sv:94.5-94.49 step 1
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace10.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_108_154 at rr_arbiter_formal.sv:108.5-109.29 step 2
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace11.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_114_172 at rr_arbiter_formal.sv:114.5-115.57 step 2
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace12.vcd
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_96_118 at rr_arbiter_formal.sv:96.5-96.49 step 3
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: and 9 further traces
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: see /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/PASS for a complete summary
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] DONE (PASS, rc=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover'.
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/src/axi_rr_arbiter_3.sv'.
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/rr_arbiter_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/src/rr_arbiter_formal.sv'.
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: smtbmc
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] base: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] prep: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] smt2: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 12  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at rr_arbiter_formal: rr_arbiter_formal.sv:116.5-116.49 (_witness_.check_cover_rr_arbiter_formal_sv_116_178)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at rr_arbiter_formal: rr_arbiter_formal.sv:94.5-94.49 (_witness_.check_cover_rr_arbiter_formal_sv_94_112)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:97.5-97.48 (_witness_.check_cover_rr_arbiter_formal_sv_97_121)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:110.5-111.57 (_witness_.check_cover_rr_arbiter_formal_sv_110_160)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:100.5-101.37 (_witness_.check_cover_rr_arbiter_formal_sv_100_130)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:106.5-107.38 (_witness_.check_cover_rr_arbiter_formal_sv_106_148)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:98.5-98.48 (_witness_.check_cover_rr_arbiter_formal_sv_98_124)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:112.5-113.57 (_witness_.check_cover_rr_arbiter_formal_sv_112_166)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:102.5-103.37 (_witness_.check_cover_rr_arbiter_formal_sv_102_136)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace8.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace8.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace8.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:104.5-105.37 (_witness_.check_cover_rr_arbiter_formal_sv_104_142)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:99.5-99.48 (_witness_.check_cover_rr_arbiter_formal_sv_99_127)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace9.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace9.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace9.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:108.5-109.29 (_witness_.check_cover_rr_arbiter_formal_sv_108_154)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace10.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace10.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace10.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:114.5-115.57 (_witness_.check_cover_rr_arbiter_formal_sv_114_172)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace11.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace11.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace11.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at rr_arbiter_formal: rr_arbiter_formal.sv:96.5-96.49 (_witness_.check_cover_rr_arbiter_formal_sv_96_118)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace12.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace12.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace12.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at rr_arbiter_formal: rr_arbiter_formal.sv:95.5-95.49 (_witness_.check_cover_rr_arbiter_formal_sv_95_115)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace13.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace13_tb.v
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace13.smtc
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace13.yw
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: ##   0:00:00  Status: passed
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: finished (returncode=0)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] engine_0: Status returned by engine: pass
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: engine_0 (smtbmc) returned pass
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace0.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_116_178 at rr_arbiter_formal.sv:116.5-116.49
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace1.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_94_112 at rr_arbiter_formal.sv:94.5-94.49 step 1
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace10.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_108_154 at rr_arbiter_formal.sv:108.5-109.29 step 2
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace11.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_114_172 at rr_arbiter_formal.sv:114.5-115.57 step 2
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/engine_0/trace12.vcd
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary:   reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_96_118 at rr_arbiter_formal.sv:96.5-96.49 step 3
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: and 9 further traces
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] summary: see /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover/PASS for a complete summary
+SBY 20:42:04 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_cover] DONE (PASS, rc=0)

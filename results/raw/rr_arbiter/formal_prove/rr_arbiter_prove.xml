@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite timestamp="2026-09-26T20:32:10" hostname="Mac.ultrahub" package="rr_arbiter" id="0" name="prove" tests="28" errors="0" failures="0" time="0" skipped="15">
+<testsuite timestamp="2026-09-26T20:42:03" hostname="Mac.ultrahub" package="rr_arbiter" id="0" name="prove" tests="28" errors="0" failures="0" time="0" skipped="15">
 <properties>
 <property name="os" value="Darwin"/>
 <property name="expect" value="PASS"/>
@@ -79,50 +79,50 @@
 <testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:99.5-99.48" time="0" type="COVER" location="rr_arbiter_formal.sv:99.5-99.48" id="_witness_.check_cover_rr_arbiter_formal_sv_99_127">
 <skipped />
 </testcase>
-<system-out>SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove'.
-SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src/axi_rr_arbiter_3.sv'.
-SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/rr_arbiter_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src/rr_arbiter_formal.sv'.
-SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: smtbmc
-SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
-SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] base: finished (returncode=0)
-SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] prep: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] smt2: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Solver: yices
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Status: passed
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: finished (returncode=0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: Status returned by engine: pass
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: engine_0 (smtbmc) returned pass
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: engine_0 did not produce any traces
-SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] DONE (PASS, rc=0)
+<system-out>SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove'.
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src/axi_rr_arbiter_3.sv'.
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/rr_arbiter_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src/rr_arbiter_formal.sv'.
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: smtbmc
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] base: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] prep: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] smt2: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Status: passed
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: finished (returncode=0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: Status returned by engine: pass
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: engine_0 (smtbmc) returned pass
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: engine_0 did not produce any traces
+SBY 20:42:03 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] DONE (PASS, rc=0)
 </system-out>
 <system-err>
 </system-err>

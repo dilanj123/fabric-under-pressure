@@ -59,3 +59,21 @@ Yosys reported zero problems. The one warning is the qualified target flow's exp
 ## Limitations
 
 The primitive has no AXI channel integration, target-specific instantiation, payload mux, request eligibility logic, write ownership, response routing, S3 endpoint or integrated Fabric fairness evidence. The formal results are finite-depth and apply only to the named properties and fairness assumptions.
+
+## Fairness case closure
+
+The fairness harness now runs three explicit bounded cases with the same standalone assumptions:
+
+- M0 watched: `request[0]` continuously asserted and `downstream_ready` continuously high.
+- M1 watched: `request[1]` continuously asserted and `downstream_ready` continuously high.
+- M2 watched: `request[2]` continuously asserted and `downstream_ready` continuously high.
+
+Each case uses `smtbmc` with Yices through SBY, mode `bmc`, depth 12, and passed:
+
+| Watched manager | Result | Evidence |
+|---|---|---|
+| M0 | PASS | `results/raw/rr_arbiter/formal_fairness_m0/logfile.txt` |
+| M1 | PASS | `results/raw/rr_arbiter/formal_fairness_m1/logfile.txt` |
+| M2 | PASS | `results/raw/rr_arbiter/formal_fairness_m2/logfile.txt` |
+
+Under the named assumptions, no more than two competing successful grants occur before service of the continuously requesting watched manager. These remain bounded BMC results, not unbounded liveness proofs. Safety formal remains unconstrained and separate.
