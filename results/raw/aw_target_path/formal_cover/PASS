@@ -1,0 +1,30 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_174_355 at axi_aw_target_path_formal.sv:174.5-174.40 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_169_339 at axi_aw_target_path_formal.sv:169.5-169.35 step 3
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_166_327 at axi_aw_target_path_formal.sv:166.5-166.66 step 3
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_168_335 at axi_aw_target_path_formal.sv:168.5-168.66 step 3
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_167_331 at axi_aw_target_path_formal.sv:167.5-167.66 step 3
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_170_341 at axi_aw_target_path_formal.sv:170.5-170.57 step 4
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_171_345 at axi_aw_target_path_formal.sv:171.5-171.56 step 4
+cover trace: engine_0/trace7.vcd
+cover trace: engine_0/trace7.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_172_348 at axi_aw_target_path_formal.sv:172.5-172.67 step 4
+cover trace: engine_0/trace8.vcd
+cover trace: engine_0/trace8.yw
+  reached cover statement axi_aw_target_path_formal._witness_.check_cover_axi_aw_target_path_formal_sv_173_352 at axi_aw_target_path_formal.sv:173.5-173.62 step 5

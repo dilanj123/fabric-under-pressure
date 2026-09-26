@@ -45,3 +45,11 @@ Every discovered functional bug gains a regression test before the fix is consid
 | R-013/R-014/R-015 implementation contract | interface/reset/CDC negative checks | wrapper preservation and parameter assertions | top-level fabric/wrapper |
 
 Every regression prints the seed and exact commit. A project-owned reference model remains the oracle; external BFMs only generate legal channel activity.
+
+### One-target Architecture-A AW channel path
+
+The first address-channel boundary is covered separately from full Fabric integration. `tb/directed/axi_aw_target_path_tb.sv` checks three-manager admission, complete AW payload muxing, ID widening, target stall stability, D032 no drain/refill, S3 admission, reset and eligibility blockers. `formal/axi_aw_target_path_formal.sv` checks one-hot manager READY/fire, admission safety, D031 suppression, one-entry slot capture, stalled payload stability and target-slot conservation using bounded depth 20 prove and depth 24 cover. `rtl/axi_aw_target_path_a.sv` is the production boundary. Outstanding/write-owner allocation, W routing and response paths remain future work.
+
+### One-target Architecture-A AW channel path
+
+The first address-channel boundary is covered separately from full Fabric integration. `tb/directed/axi_aw_target_path_tb.sv` checks three-manager admission, complete AW payload muxing, ID widening, target stall stability, D032 no drain/refill, S3 admission, reset and eligibility blockers. `formal/axi_aw_target_path_formal.sv` checks one-hot manager READY/fire, admission safety, D031 suppression, one-entry slot capture, stalled payload stability and target-slot conservation using bounded depth 20 prove and depth 24 cover. `rtl/axi_aw_target_path_a.sv` is the production boundary. Outstanding/write-owner allocation, W routing and response paths remain future work.

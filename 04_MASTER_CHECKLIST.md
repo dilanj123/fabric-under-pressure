@@ -632,3 +632,19 @@ Before any new major feature ask:
 - [ ] Is it more valuable than closing the current gate?
 
 If not, defer it.
+
+## Narrow Architecture-A AW path evidence
+
+- [x] one-target manager AW admission and one-hot manager AWREADY pass (`results/raw/aw_target_path/simulation.log`, 23 checks).
+- [x] one-entry registered target AW payload/VALID slot and all-field payload stability pass (`results/raw/aw_target_path/simulation.log`, `formal_prove/logfile.txt`).
+- [x] target AW ID widening and S3 legal admission pass (`results/raw/aw_target_path/simulation.log`, `formal_cover/logfile.txt`).
+- [x] D032 no same-cycle drain/refill property passes (`results/raw/aw_target_path/formal_prove/logfile.txt`, bounded depth 20).
+- [ ] production outstanding/write-owner allocation is connected to AW admission.
+
+## Narrow Architecture-A AW path evidence
+
+- [x] one-target manager AW admission and one-hot manager AWREADY pass (`results/raw/aw_target_path/simulation.log`, 23 checks).
+- [x] one-entry registered target AW payload/VALID slot and all-field payload stability pass (`results/raw/aw_target_path/simulation.log`, `formal_prove/logfile.txt`).
+- [x] target AW ID widening and S3 legal admission pass (`results/raw/aw_target_path/simulation.log`, `formal_cover/logfile.txt`).
+- [x] D032 no same-cycle drain/refill property passes (`results/raw/aw_target_path/formal_prove/logfile.txt`, bounded depth 20).
+- [ ] production outstanding/write-owner allocation is connected to AW admission.
