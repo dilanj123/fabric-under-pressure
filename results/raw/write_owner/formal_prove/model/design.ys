@@ -1,8 +1,0 @@
-# running in /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove/src/
-read -formal -sv axi_write_owner.sv axi_write_owner_formal.sv
-prep -top axi_write_owner_formal
-
-hierarchy -smtcheck
-rename -witness
-write_jny -no-connections ../model/design.json
-write_rtlil ../model/design.il

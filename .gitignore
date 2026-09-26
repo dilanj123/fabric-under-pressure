@@ -47,3 +47,7 @@ dist/
 *.svf
 *.config
 *.tmp
+results/raw/write_owner/sim_work/
+results/raw/write_owner/**/model/
+results/raw/write_owner/**/src/
+results/raw/write_owner/**/status.sqlite
