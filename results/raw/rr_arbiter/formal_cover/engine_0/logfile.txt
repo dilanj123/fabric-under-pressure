@@ -1,0 +1,90 @@
+##   0:00:00  Solver: yices
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement in step 0 at rr_arbiter_formal: rr_arbiter_formal.sv:116.5-116.49 (_witness_.check_cover_rr_arbiter_formal_sv_116_178)
+##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Reached cover statement in step 1 at rr_arbiter_formal: rr_arbiter_formal.sv:94.5-94.49 (_witness_.check_cover_rr_arbiter_formal_sv_94_112)
+##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:97.5-97.48 (_witness_.check_cover_rr_arbiter_formal_sv_97_121)
+##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:110.5-111.57 (_witness_.check_cover_rr_arbiter_formal_sv_110_160)
+##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:100.5-101.37 (_witness_.check_cover_rr_arbiter_formal_sv_100_130)
+##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:106.5-107.38 (_witness_.check_cover_rr_arbiter_formal_sv_106_148)
+##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:98.5-98.48 (_witness_.check_cover_rr_arbiter_formal_sv_98_124)
+##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:112.5-113.57 (_witness_.check_cover_rr_arbiter_formal_sv_112_166)
+##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:102.5-103.37 (_witness_.check_cover_rr_arbiter_formal_sv_102_136)
+##   0:00:00  Writing trace to VCD file: engine_0/trace8.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace8.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace8.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:104.5-105.37 (_witness_.check_cover_rr_arbiter_formal_sv_104_142)
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:99.5-99.48 (_witness_.check_cover_rr_arbiter_formal_sv_99_127)
+##   0:00:00  Writing trace to VCD file: engine_0/trace9.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace9.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace9.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:108.5-109.29 (_witness_.check_cover_rr_arbiter_formal_sv_108_154)
+##   0:00:00  Writing trace to VCD file: engine_0/trace10.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace10.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace10.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Reached cover statement in step 2 at rr_arbiter_formal: rr_arbiter_formal.sv:114.5-115.57 (_witness_.check_cover_rr_arbiter_formal_sv_114_172)
+##   0:00:00  Writing trace to VCD file: engine_0/trace11.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace11.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace11.yw
+##   0:00:00  Checking cover reachability in step 2..
+##   0:00:00  Checking cover reachability in step 3..
+##   0:00:00  Reached cover statement in step 3 at rr_arbiter_formal: rr_arbiter_formal.sv:96.5-96.49 (_witness_.check_cover_rr_arbiter_formal_sv_96_118)
+##   0:00:00  Writing trace to VCD file: engine_0/trace12.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace12.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace12.yw
+##   0:00:00  Checking cover reachability in step 3..
+##   0:00:00  Reached cover statement in step 3 at rr_arbiter_formal: rr_arbiter_formal.sv:95.5-95.49 (_witness_.check_cover_rr_arbiter_formal_sv_95_115)
+##   0:00:00  Writing trace to VCD file: engine_0/trace13.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace13_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace13.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace13.yw
+##   0:00:00  Status: passed

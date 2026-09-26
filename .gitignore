@@ -35,6 +35,11 @@ results/raw/outstanding_tracker/**/model/
 results/raw/outstanding_tracker/**/src/
 results/raw/outstanding_tracker/**/status.sqlite
 results/raw/outstanding_tracker/**/*.json
+results/raw/rr_arbiter/sim_work/
+results/raw/rr_arbiter/**/model/
+results/raw/rr_arbiter/**/src/
+results/raw/rr_arbiter/**/status.sqlite
+results/raw/rr_arbiter/**/*.json
 !results/raw/gate0/**/*.keep
 build/
 dist/

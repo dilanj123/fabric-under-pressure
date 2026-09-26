@@ -1,0 +1,46 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_116_178 at rr_arbiter_formal.sv:116.5-116.49
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_94_112 at rr_arbiter_formal.sv:94.5-94.49 step 1
+cover trace: engine_0/trace10.vcd
+cover trace: engine_0/trace10.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_108_154 at rr_arbiter_formal.sv:108.5-109.29 step 2
+cover trace: engine_0/trace11.vcd
+cover trace: engine_0/trace11.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_114_172 at rr_arbiter_formal.sv:114.5-115.57 step 2
+cover trace: engine_0/trace12.vcd
+cover trace: engine_0/trace12.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_96_118 at rr_arbiter_formal.sv:96.5-96.49 step 3
+cover trace: engine_0/trace13.vcd
+cover trace: engine_0/trace13.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_95_115 at rr_arbiter_formal.sv:95.5-95.49 step 3
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_97_121 at rr_arbiter_formal.sv:97.5-97.48 step 2
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_110_160 at rr_arbiter_formal.sv:110.5-111.57 step 2
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_100_130 at rr_arbiter_formal.sv:100.5-101.37 step 2
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_106_148 at rr_arbiter_formal.sv:106.5-107.38 step 2
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_98_124 at rr_arbiter_formal.sv:98.5-98.48 step 2
+cover trace: engine_0/trace7.vcd
+cover trace: engine_0/trace7.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_112_166 at rr_arbiter_formal.sv:112.5-113.57 step 2
+cover trace: engine_0/trace8.vcd
+cover trace: engine_0/trace8.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_102_136 at rr_arbiter_formal.sv:102.5-103.37 step 2
+cover trace: engine_0/trace9.vcd
+cover trace: engine_0/trace9.yw
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_104_142 at rr_arbiter_formal.sv:104.5-105.37 step 2
+  reached cover statement rr_arbiter_formal._witness_.check_cover_rr_arbiter_formal_sv_99_127 at rr_arbiter_formal.sv:99.5-99.48 step 2

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T20:32:11" hostname="Mac.ultrahub" package="rr_arbiter_fairness" id="0" name="fairness" tests="6" errors="0" failures="0" time="0" skipped="5">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="fairness" name="build execution" time="0">
+</testcase>
+<testcase classname="fairness" name="Property ASSERT in rr_arbiter_fairness at rr_arbiter_fairness.sv:43.7-43.39" time="0" type="ASSERT" location="rr_arbiter_fairness.sv:43.7-43.39" id="_witness_.check_assert_rr_arbiter_fairness_sv_43_16">
+</testcase>
+<testcase classname="fairness" name="Property COVER in rr_arbiter_fairness at rr_arbiter_fairness.sv:47.5-47.63" time="0" type="COVER" location="rr_arbiter_fairness.sv:47.5-47.63" id="_witness_.check_cover_rr_arbiter_fairness_sv_47_19">
+<skipped />
+</testcase>
+<testcase classname="fairness" name="Property COVER in rr_arbiter_fairness at rr_arbiter_fairness.sv:48.5-48.63" time="0" type="COVER" location="rr_arbiter_fairness.sv:48.5-48.63" id="_witness_.check_cover_rr_arbiter_fairness_sv_48_23">
+<skipped />
+</testcase>
+<testcase classname="fairness" name="Property COVER in rr_arbiter_fairness at rr_arbiter_fairness.sv:49.5-49.63" time="0" type="COVER" location="rr_arbiter_fairness.sv:49.5-49.63" id="_witness_.check_cover_rr_arbiter_fairness_sv_49_27">
+<skipped />
+</testcase>
+<testcase classname="fairness" name="Property COVER in rr_arbiter_fairness at rr_arbiter_fairness.sv:50.5-50.48" time="0" type="COVER" location="rr_arbiter_fairness.sv:50.5-50.48" id="_witness_.check_cover_rr_arbiter_fairness_sv_50_31">
+<skipped />
+</testcase>
+<testcase classname="fairness" name="Property COVER in rr_arbiter_fairness at rr_arbiter_fairness.sv:51.5-51.76" time="0" type="COVER" location="rr_arbiter_fairness.sv:51.5-51.76" id="_witness_.check_cover_rr_arbiter_fairness_sv_51_34">
+<skipped />
+</testcase>
+<system-out>SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness'.
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness/src/axi_rr_arbiter_3.sv'.
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/rr_arbiter_fairness.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness/src/rr_arbiter_fairness.sv'.
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: smtbmc
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] base: finished (returncode=0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] prep: finished (returncode=0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] smt2: finished (returncode=0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness; yosys-smtbmc --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Solver: yices
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: ##   0:00:00  Status: passed
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: finished (returncode=0)
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] engine_0: Status returned by engine: pass
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] summary: engine_0 (smtbmc) returned pass
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] summary: engine_0 did not produce any traces
+SBY 20:32:11 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_fairness] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

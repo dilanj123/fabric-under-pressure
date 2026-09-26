@@ -70,3 +70,13 @@ No AXI functional correctness or performance evidence exists yet.
 | O-E003 | FORMAL | bounded same-cycle pre-state allocation policy properties pass | `results/raw/outstanding_tracker/formal_prove/logfile.txt` | PASS; same-ID and full-count recycling blocked |
 | O-E004 | FORMAL | sequential tracker covers reach meaningful states and reset-after-full | `results/raw/outstanding_tracker/formal_cover/logfile.txt` | PASS; cover depth 8 |
 | O-E005 | SYNTH | outstanding tracker completes target-aware Yosys ECP5 synthesis | `results/raw/outstanding_tracker/yosys_synth.log`, `axi_outstanding_tracker_ecp5.json` | PASS; no P&R or Fabric PPA claim |
+
+## Architecture-A RR arbiter evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| A-E001 | SIM | standalone 3-way RR scheduling and backpressure suite passes | `results/raw/rr_arbiter/simulation.log` | PASS; 70 checks including 24 pointer/request combinations, ties, rotations, stalls, dynamic arrivals and reset during hold |
+| A-E002 | FORMAL | one-hot/no-phantom selection, pointer legality, cyclic selection and hold stability pass | `results/raw/rr_arbiter/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 12 |
+| A-E003 | FORMAL | RR covers reach pointer states, all winners, held grants, wrap and skip behavior | `results/raw/rr_arbiter/formal_cover/logfile.txt` | PASS; bounded cover depth 12 |
+| A-E004 | FORMAL | persistent-request fairness passes under explicit always-ready/request assumptions | `results/raw/rr_arbiter/formal_fairness/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 12; not an unconditional liveness claim |
+| A-E005 | SYNTH | standalone RR arbiter completes target-aware Yosys ECP5 synthesis | `results/raw/rr_arbiter/yosys_synth.log`, `axi_rr_arbiter_3_ecp5.json` | PASS; primitive-only resource evidence, no P&R or Fabric PPA claim |

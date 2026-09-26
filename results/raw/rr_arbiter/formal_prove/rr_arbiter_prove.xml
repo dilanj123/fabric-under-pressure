@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T20:32:10" hostname="Mac.ultrahub" package="rr_arbiter" id="0" name="prove" tests="28" errors="0" failures="0" time="0" skipped="15">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:66.7-66.31" time="0" type="ASSERT" location="rr_arbiter_formal.sv:66.7-66.31" id="_witness_.check_assert_rr_arbiter_formal_sv_66_29">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:67.7-67.48" time="0" type="ASSERT" location="rr_arbiter_formal.sv:67.7-67.48" id="_witness_.check_assert_rr_arbiter_formal_sv_67_43">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:68.7-68.41" time="0" type="ASSERT" location="rr_arbiter_formal.sv:68.7-68.41" id="_witness_.check_assert_rr_arbiter_formal_sv_68_46">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:70.9-70.55" time="0" type="ASSERT" location="rr_arbiter_formal.sv:70.9-70.55" id="_witness_.check_assert_rr_arbiter_formal_sv_70_48">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:73.9-73.38" time="0" type="ASSERT" location="rr_arbiter_formal.sv:73.9-73.38" id="_witness_.check_assert_rr_arbiter_formal_sv_73_53">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:74.9-74.50" time="0" type="ASSERT" location="rr_arbiter_formal.sv:74.9-74.50" id="_witness_.check_assert_rr_arbiter_formal_sv_74_54">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:75.9-75.72" time="0" type="ASSERT" location="rr_arbiter_formal.sv:75.9-75.72" id="_witness_.check_assert_rr_arbiter_formal_sv_75_56">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:76.9-76.54" time="0" type="ASSERT" location="rr_arbiter_formal.sv:76.9-76.54" id="_witness_.check_assert_rr_arbiter_formal_sv_76_58">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:80.9-80.77" time="0" type="ASSERT" location="rr_arbiter_formal.sv:80.9-80.77" id="_witness_.check_assert_rr_arbiter_formal_sv_80_64">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:82.9-82.54" time="0" type="ASSERT" location="rr_arbiter_formal.sv:82.9-82.54" id="_witness_.check_assert_rr_arbiter_formal_sv_82_66">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:85.9-85.78" time="0" type="ASSERT" location="rr_arbiter_formal.sv:85.9-85.78" id="_witness_.check_assert_rr_arbiter_formal_sv_85_87">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:87.9-88.63" time="0" type="ASSERT" location="rr_arbiter_formal.sv:87.9-88.63" id="_witness_.check_assert_rr_arbiter_formal_sv_87_105">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in rr_arbiter_formal at rr_arbiter_formal.sv:91.9-91.68" time="0" type="ASSERT" location="rr_arbiter_formal.sv:91.9-91.68" id="_witness_.check_assert_rr_arbiter_formal_sv_91_109">
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:100.5-101.37" time="0" type="COVER" location="rr_arbiter_formal.sv:100.5-101.37" id="_witness_.check_cover_rr_arbiter_formal_sv_100_130">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:102.5-103.37" time="0" type="COVER" location="rr_arbiter_formal.sv:102.5-103.37" id="_witness_.check_cover_rr_arbiter_formal_sv_102_136">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:104.5-105.37" time="0" type="COVER" location="rr_arbiter_formal.sv:104.5-105.37" id="_witness_.check_cover_rr_arbiter_formal_sv_104_142">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:106.5-107.38" time="0" type="COVER" location="rr_arbiter_formal.sv:106.5-107.38" id="_witness_.check_cover_rr_arbiter_formal_sv_106_148">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:108.5-109.29" time="0" type="COVER" location="rr_arbiter_formal.sv:108.5-109.29" id="_witness_.check_cover_rr_arbiter_formal_sv_108_154">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:110.5-111.57" time="0" type="COVER" location="rr_arbiter_formal.sv:110.5-111.57" id="_witness_.check_cover_rr_arbiter_formal_sv_110_160">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:112.5-113.57" time="0" type="COVER" location="rr_arbiter_formal.sv:112.5-113.57" id="_witness_.check_cover_rr_arbiter_formal_sv_112_166">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:114.5-115.57" time="0" type="COVER" location="rr_arbiter_formal.sv:114.5-115.57" id="_witness_.check_cover_rr_arbiter_formal_sv_114_172">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:116.5-116.49" time="0" type="COVER" location="rr_arbiter_formal.sv:116.5-116.49" id="_witness_.check_cover_rr_arbiter_formal_sv_116_178">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:94.5-94.49" time="0" type="COVER" location="rr_arbiter_formal.sv:94.5-94.49" id="_witness_.check_cover_rr_arbiter_formal_sv_94_112">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:95.5-95.49" time="0" type="COVER" location="rr_arbiter_formal.sv:95.5-95.49" id="_witness_.check_cover_rr_arbiter_formal_sv_95_115">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:96.5-96.49" time="0" type="COVER" location="rr_arbiter_formal.sv:96.5-96.49" id="_witness_.check_cover_rr_arbiter_formal_sv_96_118">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:97.5-97.48" time="0" type="COVER" location="rr_arbiter_formal.sv:97.5-97.48" id="_witness_.check_cover_rr_arbiter_formal_sv_97_121">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:98.5-98.48" time="0" type="COVER" location="rr_arbiter_formal.sv:98.5-98.48" id="_witness_.check_cover_rr_arbiter_formal_sv_98_124">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in rr_arbiter_formal at rr_arbiter_formal.sv:99.5-99.48" time="0" type="COVER" location="rr_arbiter_formal.sv:99.5-99.48" id="_witness_.check_cover_rr_arbiter_formal_sv_99_127">
+<skipped />
+</testcase>
+<system-out>SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove'.
+SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src/axi_rr_arbiter_3.sv'.
+SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/rr_arbiter_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src/rr_arbiter_formal.sv'.
+SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: smtbmc
+SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] base: finished (returncode=0)
+SBY 20:32:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] prep: finished (returncode=0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] smt2: finished (returncode=0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: ##   0:00:00  Status: passed
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: finished (returncode=0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] engine_0: Status returned by engine: pass
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: engine_0 (smtbmc) returned pass
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] summary: engine_0 did not produce any traces
+SBY 20:32:10 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/rr_arbiter/formal_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -186,14 +186,14 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] selected downstream request is held while stalled.
 - [x] no mid-burst write preemption.
 - [x] fairness language is service-opportunity conditional.
-- [ ] RR arbiter directed test covers every initial pointer position.
-- [ ] simultaneous 2-request ties tested.
-- [ ] simultaneous 3-request ties tested.
-- [ ] target READY stall while grant held tested.
-- [ ] persistent-request fairness directed test passes.
-- [ ] RR one-hot/no-grant-without-request formal properties pass.
-- [ ] RR hold-stability formal property passes.
-- [ ] RR fairness property passes under explicit readiness assumption.
+- [x] RR arbiter directed test covers every initial pointer position (`results/raw/rr_arbiter/simulation.log`).
+- [x] simultaneous 2-request ties tested (`results/raw/rr_arbiter/simulation.log`).
+- [x] simultaneous 3-request ties tested (`results/raw/rr_arbiter/simulation.log`).
+- [x] target READY stall while grant held tested (`results/raw/rr_arbiter/simulation.log`).
+- [x] persistent-request fairness directed test passes (`results/raw/rr_arbiter/simulation.log`).
+- [x] RR one-hot/no-grant-without-request formal properties pass (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
+- [x] RR hold-stability formal property passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
+- [x] RR fairness property passes under explicit readiness assumption (`results/raw/rr_arbiter/formal_fairness/logfile.txt`, bounded depth 12).
 
 ---
 
@@ -313,7 +313,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 # N. Functional verification
 
 - [x] address decoder tests pass (`results/raw/decoder/simulation.log`).
-- [ ] RR arbiter unit tests pass.
+- [x] RR arbiter unit tests pass (`results/raw/rr_arbiter/simulation.log`).
 - [ ] QOS/age arbiter unit tests pass when B begins.
 - [x] ID mapping tests pass (`results/raw/id_mapping/simulation.log`).
 - [x] outstanding counter/bitmap tests pass (`results/raw/outstanding_tracker/simulation.log`).
@@ -347,10 +347,10 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] SBY environment smoke passes.
 - [ ] proof harness detects intentional failing smoke.
 - [x] decoder exclusivity/default proof passes (`results/raw/decoder/formal_prove/logfile.txt`).
-- [ ] RR one-hot proof passes.
-- [ ] RR no-grant-without-request proof passes.
-- [ ] RR hold stability proof passes.
-- [ ] RR fairness proof has explicit assumptions.
+- [x] RR one-hot proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
+- [x] RR no-grant-without-request proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
+- [x] RR hold stability proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
+- [x] RR fairness proof has explicit assumptions (`results/raw/rr_arbiter/formal_fairness/logfile.txt`, bounded depth 12).
 - [ ] QOS one-hot proof passes.
 - [ ] QOS hold stability proof passes.
 - [ ] age saturation/no-wrap proof passes.
