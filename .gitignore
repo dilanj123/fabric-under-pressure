@@ -50,4 +50,8 @@ dist/
 results/raw/write_owner/sim_work/
 results/raw/write_owner/**/model/
 results/raw/write_owner/**/src/
+results/raw/aw_target_scheduler/sim_work/
+results/raw/aw_target_scheduler/**/model/
+results/raw/aw_target_scheduler/**/src/
+results/raw/aw_target_scheduler/**/status.sqlite
 results/raw/write_owner/**/status.sqlite

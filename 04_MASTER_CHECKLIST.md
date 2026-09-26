@@ -354,6 +354,9 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] RR no-grant-without-request proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
 - [x] RR hold stability proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
 - [x] RR fairness proof has explicit watched-request/always-ready assumptions for M0, M1 and M2 (`results/raw/rr_arbiter/formal_fairness_m0/logfile.txt`, `formal_fairness_m1/logfile.txt`, `formal_fairness_m2/logfile.txt`, bounded depth 12).
+- [x] one target-specific AW eligibility/RR boundary composes the required blockers and target-owner exclusion (`results/raw/aw_target_scheduler/simulation.log`).
+- [x] target-owned AW scheduling is blocked and D031 same-edge successor suppression is checked (`results/raw/aw_target_scheduler/simulation.log`, `formal_prove/logfile.txt`).
+- [x] focused AW boundary/owner composition target-uniqueness property passes under bounded assumptions (`results/raw/aw_target_scheduler/formal_composition_prove/logfile.txt`).
 - [ ] QOS one-hot proof passes.
 - [ ] QOS hold stability proof passes.
 - [ ] age saturation/no-wrap proof passes.

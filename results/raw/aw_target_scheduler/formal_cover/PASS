@@ -1,0 +1,21 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement aw_target_scheduler_formal._witness_.check_cover_aw_target_scheduler_formal_sv_60_78 at aw_target_scheduler_formal.sv:60.5-60.62 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement aw_target_scheduler_formal._witness_.check_cover_aw_target_scheduler_formal_sv_63_93 at aw_target_scheduler_formal.sv:63.5-63.63 step 1
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement aw_target_scheduler_formal._witness_.check_cover_aw_target_scheduler_formal_sv_61_83 at aw_target_scheduler_formal.sv:61.5-61.62 step 1
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement aw_target_scheduler_formal._witness_.check_cover_aw_target_scheduler_formal_sv_62_88 at aw_target_scheduler_formal.sv:62.5-62.62 step 1
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement aw_target_scheduler_formal._witness_.check_cover_aw_target_scheduler_formal_sv_65_100 at aw_target_scheduler_formal.sv:65.5-65.67 step 1
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement aw_target_scheduler_formal._witness_.check_cover_aw_target_scheduler_formal_sv_64_98 at aw_target_scheduler_formal.sv:64.5-64.38 step 2

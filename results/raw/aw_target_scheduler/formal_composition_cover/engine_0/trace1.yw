@@ -1,0 +1,44 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "smtbmc",
+  "clocks": [
+    {"path": ["\\ACLK"], "edge": "posedge", "offset": 0}
+  ],
+  "signals": [
+    {"path": ["\\ACLK"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\ARESETn"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\allocate_len"], "width": 4, "offset": 0, "init_only": false},
+    {"path": ["\\outstanding_allowed"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\request_legal"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\request_present"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\target_match"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\target_ready"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\w_fire"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\wlast"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\boundary", "\\u_rr", "\\_witness_", "\\anyinit_procdff_589"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\boundary", "\\u_rr", "\\_witness_", "\\anyinit_procdff_594"], "width": 3, "offset": 0, "init_only": true},
+    {"path": ["\\boundary", "\\u_rr", "\\_witness_", "\\anyinit_procdff_599"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\boundary", "\\u_rr", "\\_witness_", "\\anyinit_procdff_604"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\owner0", "\\_witness_", "\\anyinit_procdff_609"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\owner0", "\\_witness_", "\\anyinit_procdff_614"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\owner0", "\\_witness_", "\\anyinit_procdff_619"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\owner0", "\\_witness_", "\\anyinit_procdff_624"], "width": 6, "offset": 0, "init_only": true},
+    {"path": ["\\owner0", "\\_witness_", "\\anyinit_procdff_629"], "width": 5, "offset": 0, "init_only": true},
+    {"path": ["\\owner1", "\\_witness_", "\\anyinit_procdff_609"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\owner1", "\\_witness_", "\\anyinit_procdff_614"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\owner1", "\\_witness_", "\\anyinit_procdff_619"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\owner1", "\\_witness_", "\\anyinit_procdff_624"], "width": 6, "offset": 0, "init_only": true},
+    {"path": ["\\owner1", "\\_witness_", "\\anyinit_procdff_629"], "width": 5, "offset": 0, "init_only": true},
+    {"path": ["\\owner2", "\\_witness_", "\\anyinit_procdff_609"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\owner2", "\\_witness_", "\\anyinit_procdff_614"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\owner2", "\\_witness_", "\\anyinit_procdff_619"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\owner2", "\\_witness_", "\\anyinit_procdff_624"], "width": 6, "offset": 0, "init_only": true},
+    {"path": ["\\owner2", "\\_witness_", "\\anyinit_procdff_629"], "width": 5, "offset": 0, "init_only": true}
+  ],
+  "steps": [
+    {"bits": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},
+    {"bits": "0000000100100100100000010"},
+    {"bits": "0000001000000000000000010"},
+    {"bits": "0000000000000000000000010"}
+  ]
+}

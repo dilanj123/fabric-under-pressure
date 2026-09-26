@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T21:15:32" hostname="Mac.ultrahub" package="aw_target_scheduler_composition" id="0" name="prove" tests="9" errors="0" failures="0" time="0" skipped="3">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:76.7-76.45" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:76.7-76.45" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_76_13">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:77.7-77.60" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:77.7-77.60" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_77_27">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:78.7-78.53" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:78.7-78.53" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_78_31">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:79.7-79.37" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:79.7-79.37" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_79_35">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:89.9-89.35" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:89.9-89.35" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_89_44">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:90.9-90.33" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:90.9-90.33" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_90_45">
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:80.7-80.29" time="0" type="COVER" location="aw_target_scheduler_composition_formal.sv:80.7-80.29" id="_witness_.check_cover_aw_target_scheduler_composition_formal_sv_80_37">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:81.7-81.32" time="0" type="COVER" location="aw_target_scheduler_composition_formal.sv:81.7-81.32" id="_witness_.check_cover_aw_target_scheduler_composition_formal_sv_81_38">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:82.7-82.51" time="0" type="COVER" location="aw_target_scheduler_composition_formal.sv:82.7-82.51" id="_witness_.check_cover_aw_target_scheduler_composition_formal_sv_82_39">
+<skipped />
+</testcase>
+<system-out>SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove'.
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/src/axi_rr_arbiter_3.sv'.
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_aw_target_scheduler_a.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/src/axi_aw_target_scheduler_a.sv'.
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_write_owner.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/src/axi_write_owner.sv'.
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/aw_target_scheduler_composition_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/src/aw_target_scheduler_composition_formal.sv'.
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: smtbmc
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] base: finished (returncode=0)
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] prep: finished (returncode=0)
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] smt2: finished (returncode=0)
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove; yosys-smtbmc --presat --unroll --noprogress -t 24  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: ##   0:00:00  Status: passed
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: finished (returncode=0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] engine_0: Status returned by engine: pass
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] summary: engine_0 (smtbmc) returned pass
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] summary: engine_0 did not produce any traces
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

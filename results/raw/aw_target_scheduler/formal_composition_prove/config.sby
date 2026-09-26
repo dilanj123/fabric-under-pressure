@@ -1,0 +1,16 @@
+[options]
+mode bmc
+depth 24
+
+[engines]
+smtbmc
+
+[script]
+read -formal -D FORMAL -sv axi_rr_arbiter_3.sv axi_aw_target_scheduler_a.sv axi_write_owner.sv aw_target_scheduler_composition_formal.sv
+prep -top aw_target_scheduler_composition_formal
+
+[files]
+../rtl/axi_rr_arbiter_3.sv
+../rtl/axi_aw_target_scheduler_a.sv
+../rtl/axi_write_owner.sv
+aw_target_scheduler_composition_formal.sv

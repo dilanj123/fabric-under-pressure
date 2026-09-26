@@ -90,3 +90,14 @@ No AXI functional correctness or performance evidence exists yet.
 | W-E003 | FORMAL | owner bounds, context stability, beat accounting, correct WLAST release, no underflow and allocation protection pass | `results/raw/write_owner/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 12; legal allocation assumption `allocate_len <= 15` |
 | W-E004 | FORMAL | meaningful owner stalls, malformed W events, completion and following-cycle reallocation are reachable | `results/raw/write_owner/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 16 |
 | W-E005 | SYNTH | standalone write-owner primitive completes target-aware Yosys ECP5 synthesis | `results/raw/write_owner/yosys_synth.log`, `axi_write_owner_ecp5.json` | PASS; 54 LUT4, 20 TRELLIS_FF, 7 CCU2C, 3 PFUMX, primitive-only evidence |
+
+## Architecture-A target-specific AW scheduler evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| AW-E001 | SIM | one target-specific AW boundary eligibility, owner-gating, READY-stall, D031 suppression, owner-resume and two-target isolation checks pass | `results/raw/aw_target_scheduler/simulation.log` | PASS; 39 self-checking checks |
+| AW-E002 | FORMAL | AW eligibility equivalence, target-owner exclusion, accept safety, one-hot grant wiring and D031 request suppression pass | `results/raw/aw_target_scheduler/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 16 |
+| AW-E003 | FORMAL | target-boundary covers reach eligible requests, acceptance and owner-busy states | `results/raw/aw_target_scheduler/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 16 |
+| AW-E004 | FORMAL | focused boundary plus three write-owner composition proves target-owner uniqueness and no second AW while owned | `results/raw/aw_target_scheduler/formal_composition_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 24; owner allocations use the documented legal-length domain |
+| AW-E005 | FORMAL | focused composition covers reach accepted AW and registered owner-busy/no-accept states | `results/raw/aw_target_scheduler/formal_composition_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 32 |
+| AW-E006 | SYNTH | target-specific AW scheduler boundary completes ECP5-targeted Yosys synthesis | `results/raw/aw_target_scheduler/yosys_synth.log`, `axi_aw_target_scheduler_a_ecp5.json` | PASS; 43 LUT4, 6 TRELLIS_FF, 16 PFUMX, 7 L6MUX21; primitive/composed-boundary evidence only |

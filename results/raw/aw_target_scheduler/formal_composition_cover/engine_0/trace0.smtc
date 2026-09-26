@@ -1,0 +1,29 @@
+initial
+assume (= [boundary.u_rr._witness_.anyinit_procdff_589] #b00)
+assume (= [boundary.u_rr._witness_.anyinit_procdff_594] #b000)
+assume (= [boundary.u_rr._witness_.anyinit_procdff_599] false)
+assume (= [boundary.u_rr._witness_.anyinit_procdff_604] #b00)
+assume (= [owner0._witness_.anyinit_procdff_609] false)
+assume (= [owner0._witness_.anyinit_procdff_614] #b0000)
+assume (= [owner0._witness_.anyinit_procdff_619] #b0000)
+assume (= [owner0._witness_.anyinit_procdff_624] #b000000)
+assume (= [owner0._witness_.anyinit_procdff_629] #b00000)
+assume (= [owner1._witness_.anyinit_procdff_609] false)
+assume (= [owner1._witness_.anyinit_procdff_614] #b0000)
+assume (= [owner1._witness_.anyinit_procdff_619] #b0000)
+assume (= [owner1._witness_.anyinit_procdff_624] #b000000)
+assume (= [owner1._witness_.anyinit_procdff_629] #b00000)
+assume (= [owner2._witness_.anyinit_procdff_609] false)
+assume (= [owner2._witness_.anyinit_procdff_614] #b0000)
+assume (= [owner2._witness_.anyinit_procdff_619] #b0000)
+assume (= [owner2._witness_.anyinit_procdff_624] #b000000)
+assume (= [owner2._witness_.anyinit_procdff_629] #b00000)
+
+state 0
+assume (= [ACLK] false)
+
+state 1
+assume (= [ACLK] false)
+
+state 2
+assume (= [ACLK] false)

@@ -1,0 +1,11 @@
+initial
+assume (= [dut.u_rr._witness_.anyinit_procdff_587] #b00)
+assume (= [dut.u_rr._witness_.anyinit_procdff_592] #b000)
+assume (= [dut.u_rr._witness_.anyinit_procdff_597] false)
+assume (= [dut.u_rr._witness_.anyinit_procdff_602] #b00)
+
+state 0
+assume (= [ACLK] false)
+
+state 1
+assume (= [ACLK] false)

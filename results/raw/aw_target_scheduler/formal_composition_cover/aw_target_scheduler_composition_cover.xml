@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T21:15:32" hostname="Mac.ultrahub" package="aw_target_scheduler_composition" id="0" name="cover" tests="9" errors="0" failures="0" time="0" skipped="6">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="cover" name="build execution" time="0">
+</testcase>
+<testcase classname="cover" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:76.7-76.45" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:76.7-76.45" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_76_13">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:77.7-77.60" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:77.7-77.60" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_77_27">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:78.7-78.53" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:78.7-78.53" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_78_31">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:79.7-79.37" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:79.7-79.37" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_79_35">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:89.9-89.35" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:89.9-89.35" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_89_44">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:90.9-90.33" time="0" type="ASSERT" location="aw_target_scheduler_composition_formal.sv:90.9-90.33" id="_witness_.check_assert_aw_target_scheduler_composition_formal_sv_90_45">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property COVER in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:80.7-80.29" time="0" type="COVER" location="aw_target_scheduler_composition_formal.sv:80.7-80.29" id="_witness_.check_cover_aw_target_scheduler_composition_formal_sv_80_37" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:81.7-81.32" time="0" type="COVER" location="aw_target_scheduler_composition_formal.sv:81.7-81.32" id="_witness_.check_cover_aw_target_scheduler_composition_formal_sv_81_38" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in aw_target_scheduler_composition_formal at aw_target_scheduler_composition_formal.sv:82.7-82.51" time="0" type="COVER" location="aw_target_scheduler_composition_formal.sv:82.7-82.51" id="_witness_.check_cover_aw_target_scheduler_composition_formal_sv_82_39" tracefile="engine_0/trace1.vcd">
+</testcase>
+<system-out>SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover'.
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/src/axi_rr_arbiter_3.sv'.
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_aw_target_scheduler_a.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/src/axi_aw_target_scheduler_a.sv'.
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_write_owner.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/src/axi_write_owner.sv'.
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/aw_target_scheduler_composition_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/src/aw_target_scheduler_composition_formal.sv'.
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: smtbmc
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] base: finished (returncode=0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] prep: finished (returncode=0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] smt2: finished (returncode=0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 32  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at aw_target_scheduler_composition_formal: aw_target_scheduler_composition_formal.sv:80.7-80.29 (_witness_.check_cover_aw_target_scheduler_composition_formal_sv_80_37)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at aw_target_scheduler_composition_formal: aw_target_scheduler_composition_formal.sv:81.7-81.32 (_witness_.check_cover_aw_target_scheduler_composition_formal_sv_81_38)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at aw_target_scheduler_composition_formal: aw_target_scheduler_composition_formal.sv:82.7-82.51 (_witness_.check_cover_aw_target_scheduler_composition_formal_sv_82_39)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: ##   0:00:00  Status: passed
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: finished (returncode=0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] engine_0: Status returned by engine: pass
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary: engine_0 (smtbmc) returned pass
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/engine_0/trace0.vcd
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary:   reached cover statement aw_target_scheduler_composition_formal._witness_.check_cover_aw_target_scheduler_composition_formal_sv_80_37 at aw_target_scheduler_composition_formal.sv:80.7-80.29 step 2
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover/engine_0/trace1.vcd
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary:   reached cover statement aw_target_scheduler_composition_formal._witness_.check_cover_aw_target_scheduler_composition_formal_sv_81_38 at aw_target_scheduler_composition_formal.sv:81.7-81.32 step 3
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] summary:   reached cover statement aw_target_scheduler_composition_formal._witness_.check_cover_aw_target_scheduler_composition_formal_sv_82_39 at aw_target_scheduler_composition_formal.sv:82.7-82.51 step 3
+SBY 21:15:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_composition_cover] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

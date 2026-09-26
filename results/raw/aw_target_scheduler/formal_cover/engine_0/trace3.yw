@@ -1,0 +1,28 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "smtbmc",
+  "clocks": [
+    {"path": ["\\ACLK"], "edge": "posedge", "offset": 0}
+  ],
+  "signals": [
+    {"path": ["\\ACLK"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\ARESETn"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\outstanding_allowed"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\owner_active"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\owner_target_m0"], "width": 4, "offset": 0, "init_only": false},
+    {"path": ["\\owner_target_m1"], "width": 4, "offset": 0, "init_only": false},
+    {"path": ["\\owner_target_m2"], "width": 4, "offset": 0, "init_only": false},
+    {"path": ["\\request_legal"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\request_present"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\target_match"], "width": 3, "offset": 0, "init_only": false},
+    {"path": ["\\target_ready"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\dut", "\\u_rr", "\\_witness_", "\\anyinit_procdff_587"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\u_rr", "\\_witness_", "\\anyinit_procdff_592"], "width": 3, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\u_rr", "\\_witness_", "\\anyinit_procdff_597"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\u_rr", "\\_witness_", "\\anyinit_procdff_602"], "width": 2, "offset": 0, "init_only": true}
+  ],
+  "steps": [
+    {"bits": "00000000000000000000000000000000000000"},
+    {"bits": "011111111100000000000000010010"}
+  ]
+}

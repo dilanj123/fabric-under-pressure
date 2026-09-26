@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T21:15:31" hostname="Mac.ultrahub" package="aw_target_scheduler" id="0" name="prove" tests="16" errors="0" failures="0" time="0" skipped="6">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:40.7-40.44" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:40.7-40.44" id="_witness_.check_assert_aw_target_scheduler_formal_sv_40_25">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:41.7-44.57" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:41.7-44.57" id="_witness_.check_assert_aw_target_scheduler_formal_sv_41_27">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:46.9-46.40" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:46.9-46.40" id="_witness_.check_assert_aw_target_scheduler_formal_sv_46_34">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:47.9-47.33" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:47.9-47.33" id="_witness_.check_assert_aw_target_scheduler_formal_sv_47_36">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:49.7-49.46" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:49.7-49.46" id="_witness_.check_assert_aw_target_scheduler_formal_sv_49_38">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:50.7-50.53" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:50.7-50.53" id="_witness_.check_assert_aw_target_scheduler_formal_sv_50_41">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:51.7-51.31" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:51.7-51.31" id="_witness_.check_assert_aw_target_scheduler_formal_sv_51_45">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:52.7-52.48" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:52.7-52.48" id="_witness_.check_assert_aw_target_scheduler_formal_sv_52_59">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:53.7-55.80" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:53.7-55.80" id="_witness_.check_assert_aw_target_scheduler_formal_sv_53_62">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:57.27-57.68" time="0" type="ASSERT" location="aw_target_scheduler_formal.sv:57.27-57.68" id="_witness_.check_assert_aw_target_scheduler_formal_sv_57_76">
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:60.5-60.62" time="0" type="COVER" location="aw_target_scheduler_formal.sv:60.5-60.62" id="_witness_.check_cover_aw_target_scheduler_formal_sv_60_78">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:61.5-61.62" time="0" type="COVER" location="aw_target_scheduler_formal.sv:61.5-61.62" id="_witness_.check_cover_aw_target_scheduler_formal_sv_61_83">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:62.5-62.62" time="0" type="COVER" location="aw_target_scheduler_formal.sv:62.5-62.62" id="_witness_.check_cover_aw_target_scheduler_formal_sv_62_88">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:63.5-63.63" time="0" type="COVER" location="aw_target_scheduler_formal.sv:63.5-63.63" id="_witness_.check_cover_aw_target_scheduler_formal_sv_63_93">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:64.5-64.38" time="0" type="COVER" location="aw_target_scheduler_formal.sv:64.5-64.38" id="_witness_.check_cover_aw_target_scheduler_formal_sv_64_98">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in aw_target_scheduler_formal at aw_target_scheduler_formal.sv:65.5-65.67" time="0" type="COVER" location="aw_target_scheduler_formal.sv:65.5-65.67" id="_witness_.check_cover_aw_target_scheduler_formal_sv_65_100">
+<skipped />
+</testcase>
+<system-out>SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove'.
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove/src/axi_rr_arbiter_3.sv'.
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_aw_target_scheduler_a.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove/src/axi_aw_target_scheduler_a.sv'.
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/aw_target_scheduler_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove/src/aw_target_scheduler_formal.sv'.
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: smtbmc
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] base: finished (returncode=0)
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] prep: finished (returncode=0)
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] smt2: finished (returncode=0)
+SBY 21:15:30 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 16  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: ##   0:00:00  Status: passed
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: finished (returncode=0)
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] engine_0: Status returned by engine: pass
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] summary: engine_0 (smtbmc) returned pass
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] summary: engine_0 did not produce any traces
+SBY 21:15:31 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/formal_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

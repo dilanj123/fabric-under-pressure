@@ -1,0 +1,1843 @@
+
+-- Running command `read_verilog -sv /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv; synth_ecp5 -top axi_aw_target_scheduler_a -json /Users/Dilan/Projects/fabric-under-pressure/results/raw/aw_target_scheduler/axi_aw_target_scheduler_a_ecp5.json; stat' --
+
+1. Executing Verilog-2005 frontend: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv
+Parsing SystemVerilog input from `/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv' to AST representation.
+Generating RTLIL representation for module `\axi_rr_arbiter_3'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv
+Parsing SystemVerilog input from `/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv' to AST representation.
+Generating RTLIL representation for module `\axi_aw_target_scheduler_a'.
+Successfully finished Verilog frontend.
+
+3. Executing SYNTH_LATTICE pass.
+
+3.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_sim_ecp5.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_sim_ecp5.v' to AST representation.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\$__ABC9_LUT5'.
+Generating RTLIL representation for module `\$__ABC9_LUT6'.
+Generating RTLIL representation for module `\$__ABC9_LUT7'.
+Generating RTLIL representation for module `\L6MUX21'.
+Generating RTLIL representation for module `\TRELLIS_RAM16X2'.
+Generating RTLIL representation for module `\PFUMX'.
+Generating RTLIL representation for module `\TRELLIS_DPR16X4'.
+Generating RTLIL representation for module `\DPR16X4C'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\TRELLIS_FF'.
+Generating RTLIL representation for module `\TRELLIS_IO'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\TRELLIS_COMB'.
+Generating RTLIL representation for module `\VLO'.
+Generating RTLIL representation for module `\VHI'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `\CCU2C'.
+Generating RTLIL representation for module `\DP16KD'.
+Replacing existing blackbox module `\FD1P3AX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:2.1-2.261.
+Generating RTLIL representation for module `\FD1P3AX'.
+Replacing existing blackbox module `\FD1P3AY' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:3.1-3.261.
+Generating RTLIL representation for module `\FD1P3AY'.
+Replacing existing blackbox module `\FD1P3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:4.1-4.261.
+Generating RTLIL representation for module `\FD1P3BX'.
+Replacing existing blackbox module `\FD1P3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:5.1-5.261.
+Generating RTLIL representation for module `\FD1P3DX'.
+Replacing existing blackbox module `\FD1P3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:6.1-6.261.
+Generating RTLIL representation for module `\FD1P3IX'.
+Replacing existing blackbox module `\FD1P3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:7.1-7.261.
+Generating RTLIL representation for module `\FD1P3JX'.
+Replacing existing blackbox module `\FD1S3AX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:8.1-8.261.
+Generating RTLIL representation for module `\FD1S3AX'.
+Replacing existing blackbox module `\FD1S3AY' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:9.1-9.261.
+Generating RTLIL representation for module `\FD1S3AY'.
+Replacing existing blackbox module `\FD1S3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:10.1-10.261.
+Generating RTLIL representation for module `\FD1S3BX'.
+Replacing existing blackbox module `\FD1S3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:11.1-11.261.
+Generating RTLIL representation for module `\FD1S3DX'.
+Replacing existing blackbox module `\FD1S3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:12.1-12.261.
+Generating RTLIL representation for module `\FD1S3IX'.
+Replacing existing blackbox module `\FD1S3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:13.1-13.261.
+Generating RTLIL representation for module `\FD1S3JX'.
+Replacing existing blackbox module `\IFS1P3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:26.1-26.301.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Replacing existing blackbox module `\IFS1P3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:27.1-27.301.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Replacing existing blackbox module `\IFS1P3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:28.1-28.301.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Replacing existing blackbox module `\IFS1P3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:29.1-29.301.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Replacing existing blackbox module `\OFS1P3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:31.1-31.302.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Replacing existing blackbox module `\OFS1P3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:32.1-32.302.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Replacing existing blackbox module `\OFS1P3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:33.1-33.302.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Replacing existing blackbox module `\OFS1P3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:34.1-34.302.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Replacing existing blackbox module `\IB' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:2.1-2.157.
+Generating RTLIL representation for module `\IB'.
+Replacing existing blackbox module `\IBPU' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:3.1-3.157.
+Generating RTLIL representation for module `\IBPU'.
+Replacing existing blackbox module `\IBPD' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:4.1-4.157.
+Generating RTLIL representation for module `\IBPD'.
+Replacing existing blackbox module `\OB' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:5.1-5.157.
+Generating RTLIL representation for module `\OB'.
+Replacing existing blackbox module `\OBZ' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:6.1-6.164.
+Generating RTLIL representation for module `\OBZ'.
+Replacing existing blackbox module `\OBZPU' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:7.1-7.164.
+Generating RTLIL representation for module `\OBZPU'.
+Replacing existing blackbox module `\OBZPD' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:8.1-8.164.
+Generating RTLIL representation for module `\OBZPD'.
+Replacing existing blackbox module `\OBCO' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:9.1-9.90.
+Generating RTLIL representation for module `\OBCO'.
+Replacing existing blackbox module `\BB' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:10.1-10.179.
+Generating RTLIL representation for module `\BB'.
+Replacing existing blackbox module `\BBPU' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:11.1-11.179.
+Generating RTLIL representation for module `\BBPU'.
+Replacing existing blackbox module `\BBPD' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:12.1-12.179.
+Generating RTLIL representation for module `\BBPD'.
+Replacing existing blackbox module `\ILVDS' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:13.1-13.139.
+Generating RTLIL representation for module `\ILVDS'.
+Replacing existing blackbox module `\OLVDS' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:14.1-14.146.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+3.2. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_bb_ecp5.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_bb_ecp5.v' to AST representation.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\PUR'.
+Generating RTLIL representation for module `\SGSR'.
+Generating RTLIL representation for module `\PDPW16KD'.
+Generating RTLIL representation for module `\MULT18X18D'.
+Generating RTLIL representation for module `\ALU54B'.
+Generating RTLIL representation for module `\CLKDIVF'.
+Generating RTLIL representation for module `\PCSCLKDIV'.
+Generating RTLIL representation for module `\DCSC'.
+Generating RTLIL representation for module `\DCCA'.
+Generating RTLIL representation for module `\ECLKSYNCB'.
+Generating RTLIL representation for module `\ECLKBRIDGECS'.
+Generating RTLIL representation for module `\DELAYF'.
+Generating RTLIL representation for module `\DELAYG'.
+Generating RTLIL representation for module `\USRMCLK'.
+Generating RTLIL representation for module `\DQSBUFM'.
+Generating RTLIL representation for module `\DDRDLLA'.
+Generating RTLIL representation for module `\DLLDELD'.
+Generating RTLIL representation for module `\IDDRX1F'.
+Generating RTLIL representation for module `\IDDRX2F'.
+Generating RTLIL representation for module `\IDDR71B'.
+Generating RTLIL representation for module `\IDDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX1F'.
+Generating RTLIL representation for module `\ODDRX2F'.
+Generating RTLIL representation for module `\ODDR71B'.
+Generating RTLIL representation for module `\OSHX2A'.
+Generating RTLIL representation for module `\TSHX2DQA'.
+Generating RTLIL representation for module `\TSHX2DQSA'.
+Generating RTLIL representation for module `\ODDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX2DQSB'.
+Generating RTLIL representation for module `\EHXPLLL'.
+Generating RTLIL representation for module `\DTR'.
+Generating RTLIL representation for module `\OSCG'.
+Generating RTLIL representation for module `\EXTREFB'.
+Generating RTLIL representation for module `\JTAGG'.
+Generating RTLIL representation for module `\DCUA'.
+Successfully finished Verilog frontend.
+
+3.3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.3.1. Analyzing design hierarchy..
+Top module:  \axi_aw_target_scheduler_a
+Used module:     \axi_rr_arbiter_3
+
+3.3.2. Analyzing design hierarchy..
+Top module:  \axi_aw_target_scheduler_a
+Used module:     \axi_rr_arbiter_3
+Removed 0 unused modules.
+
+3.4. Executing PROC pass (convert processes to netlists).
+
+3.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22 in module axi_aw_target_scheduler_a.
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19 in module axi_rr_arbiter_3.
+Marked 4 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4 in module axi_rr_arbiter_3.
+Marked 10 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3 in module axi_rr_arbiter_3.
+Removed a total of 0 dead cases.
+
+3.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 4 redundant assignments.
+Promoted 22 assignments to connections.
+
+3.4.4. Executing PROC_INIT pass (extract init attributes).
+
+3.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \ARESETn in `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+
+3.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~17 debug messages>
+
+3.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+     1/3: $3\target_owner_busy[0:0]
+     2/3: $2\target_owner_busy[0:0]
+     3/3: $1\target_owner_busy[0:0]
+Creating decoders for process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:144$21'.
+Creating decoders for process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+     1/4: $0\selected_manager_q[1:0]
+     2/4: $0\grant_valid_q[0:0]
+     3/4: $0\grant_q[2:0]
+     4/4: $0\pointer_q[1:0]
+Creating decoders for process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+     1/20: $3\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:118$2.$result[1:0]$18
+     2/20: $3\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:117$1.$result[1:0]$17
+     3/20: $2\selected_manager_d[1:0]
+     4/20: $2\grant_valid_d[0:0]
+     5/20: $2\grant_d[2:0]
+     6/20: $2\selection_pointer[1:0]
+     7/20: $2\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:118$2.$result[1:0]$15
+     8/20: $2\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:118$2.winner[1:0]$16
+     9/20: $2\pointer_d[1:0]
+    10/20: $2\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:117$1.$result[1:0]$13
+    11/20: $2\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:117$1.winner[1:0]$14
+    12/20: $1\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:118$2.winner[1:0]$12
+    13/20: $1\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:118$2.$result[1:0]$11
+    14/20: $1\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:117$1.winner[1:0]$10
+    15/20: $1\next_pointer$func$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:117$1.$result[1:0]$9
+    16/20: $1\selection_pointer[1:0]
+    17/20: $1\selected_manager_d[1:0]
+    18/20: $1\grant_valid_d[0:0]
+    19/20: $1\grant_d[2:0]
+    20/20: $1\pointer_d[1:0]
+Creating decoders for process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3'.
+     1/30: $10\candidate_valid[0:0]
+     2/30: $10\candidate_manager[1:0]
+     3/30: $10\candidate_grant[2:0]
+     4/30: $9\candidate_valid[0:0]
+     5/30: $9\candidate_manager[1:0]
+     6/30: $9\candidate_grant[2:0]
+     7/30: $8\candidate_valid[0:0]
+     8/30: $8\candidate_manager[1:0]
+     9/30: $8\candidate_grant[2:0]
+    10/30: $7\candidate_valid[0:0]
+    11/30: $7\candidate_manager[1:0]
+    12/30: $7\candidate_grant[2:0]
+    13/30: $6\candidate_valid[0:0]
+    14/30: $6\candidate_manager[1:0]
+    15/30: $6\candidate_grant[2:0]
+    16/30: $5\candidate_valid[0:0]
+    17/30: $5\candidate_manager[1:0]
+    18/30: $5\candidate_grant[2:0]
+    19/30: $4\candidate_valid[0:0]
+    20/30: $4\candidate_manager[1:0]
+    21/30: $4\candidate_grant[2:0]
+    22/30: $3\candidate_valid[0:0]
+    23/30: $3\candidate_manager[1:0]
+    24/30: $3\candidate_grant[2:0]
+    25/30: $2\candidate_valid[0:0]
+    26/30: $2\candidate_manager[1:0]
+    27/30: $2\candidate_grant[2:0]
+    28/30: $1\candidate_manager[1:0]
+    29/30: $1\candidate_valid[0:0]
+    30/30: $1\candidate_grant[2:0]
+
+3.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\axi_aw_target_scheduler_a.\raw_eligible' from process `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+No latch inferred for signal `\axi_aw_target_scheduler_a.\target_owner_busy' from process `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+No latch inferred for signal `\axi_aw_target_scheduler_a.\aw_accept_fire' from process `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+No latch inferred for signal `\axi_aw_target_scheduler_a.\arbiter_request' from process `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+No latch inferred for signal `\axi_aw_target_scheduler_a.\effective_target_ready' from process `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+No latch inferred for signal `\axi_rr_arbiter_3.\grant' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:144$21'.
+No latch inferred for signal `\axi_rr_arbiter_3.\grant_valid' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:144$21'.
+No latch inferred for signal `\axi_rr_arbiter_3.\selected_manager' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:144$21'.
+No latch inferred for signal `\axi_rr_arbiter_3.\pointer_d' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+No latch inferred for signal `\axi_rr_arbiter_3.\grant_d' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+No latch inferred for signal `\axi_rr_arbiter_3.\grant_valid_d' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+No latch inferred for signal `\axi_rr_arbiter_3.\selected_manager_d' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+No latch inferred for signal `\axi_rr_arbiter_3.\selection_pointer' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+No latch inferred for signal `\axi_rr_arbiter_3.\candidate_grant' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3'.
+No latch inferred for signal `\axi_rr_arbiter_3.\candidate_valid' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3'.
+No latch inferred for signal `\axi_rr_arbiter_3.\candidate_manager' from process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3'.
+
+3.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\axi_rr_arbiter_3.\pointer_q' using process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+  created $adff cell `$procdff$671' with positive edge clock and positive level reset.
+Creating register for signal `\axi_rr_arbiter_3.\grant_q' using process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+  created $adff cell `$procdff$676' with positive edge clock and positive level reset.
+Creating register for signal `\axi_rr_arbiter_3.\grant_valid_q' using process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+  created $adff cell `$procdff$681' with positive edge clock and positive level reset.
+Creating register for signal `\axi_rr_arbiter_3.\selected_manager_q' using process `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+  created $adff cell `$procdff$686' with positive edge clock and positive level reset.
+
+3.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+Removing empty process `axi_aw_target_scheduler_a.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35$22'.
+Removing empty process `axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:144$21'.
+Removing empty process `axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:130$19'.
+Found and cleaned up 4 empty switches in `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+Removing empty process `axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:108$4'.
+Found and cleaned up 10 empty switches in `\axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3'.
+Removing empty process `axi_rr_arbiter_3.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_rr_arbiter_3.sv:49$3'.
+Cleaned up 17 empty switches.
+
+3.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+Optimizing module axi_rr_arbiter_3.
+<suppressed ~22 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+Checking module axi_aw_target_scheduler_a...
+Checking module axi_rr_arbiter_3...
+Found and reported 0 problems.
+
+3.6. Executing FLATTEN pass (flatten design).
+Deleting now unused module axi_rr_arbiter_3.
+<suppressed ~1 debug messages>
+
+3.7. Executing TRIBUF pass.
+
+3.8. Executing DEMINOUT pass (demote inout ports to input or output).
+
+3.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.10. Executing CHECK pass (checking for obvious problems).
+Checking module axi_aw_target_scheduler_a...
+Found and reported 0 problems.
+
+3.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 17 unused cells and 202 unused wires.
+<suppressed ~18 debug messages>
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 175 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 137 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~114 debug messages>
+Removed a total of 38 cells.
+
+3.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $flatten\u_rr.$procmux$310: \u_rr.grant_valid_q -> 1'1
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$426.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$433.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$312.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$435.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$442.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$444.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$306.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$450.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$456.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$342.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$462.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$470.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$473.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$475.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$482.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$485.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$487.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$495.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$498.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$300.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$500.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$508.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$298.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$510.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$518.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$520.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$528.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$530.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$537.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$289.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$544.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$287.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$551.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$560.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$563.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$565.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$574.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$577.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$579.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$588.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$591.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$593.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$602.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$604.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$613.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$615.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$624.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$626.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$634.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$388.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$642.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$391.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$650.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$393.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$400.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$403.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$405.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$412.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$415.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$324.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$318.
+    dead port 2/2 on $mux $flatten\u_rr.$procmux$417.
+    dead port 1/2 on $mux $flatten\u_rr.$procmux$424.
+Removed 63 multiplexer ports.
+<suppressed ~282 debug messages>
+
+3.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 74 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 72 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 70 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 69 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+3.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 105 unused wires.
+<suppressed ~1 debug messages>
+
+3.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~110 debug messages>
+
+3.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 69 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.12.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.13. Executing FSM pass (extract and optimize FSM).
+
+3.13.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking axi_aw_target_scheduler_a.u_rr.selected_manager_q as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+Not marking axi_aw_target_scheduler_a.u_rr.grant_q as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+Found FSM state register axi_aw_target_scheduler_a.u_rr.pointer_q.
+
+3.13.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\u_rr.pointer_q' from module `\axi_aw_target_scheduler_a'.
+  found $adff cell for state register: $flatten\u_rr.$procdff$671
+  root of input selection tree: \u_rr.pointer_d
+  found reset state: 2'00 (from async reset)
+  found ctrl input: \u_rr.grant_valid_q
+  found ctrl input: \effective_target_ready
+  found ctrl input: $flatten\u_rr.$procmux$285_CMP
+  found ctrl input: $flatten\u_rr.$procmux$286_CMP
+  found state code: 2'10
+  found state code: 2'01
+  ctrl inputs: { \u_rr.grant_valid_q $flatten\u_rr.$procmux$285_CMP $flatten\u_rr.$procmux$286_CMP \effective_target_ready }
+  ctrl outputs: \u_rr.pointer_d
+  transition:       2'00 4'0--- ->       2'00 2'00
+  transition:       2'00 4'1--0 ->       2'00 2'00
+  transition:       2'00 4'1001 ->       2'00 2'00
+  transition:       2'00 4'1-11 ->       2'01 2'01
+  transition:       2'00 4'11-1 ->       2'10 2'10
+  transition:       2'10 4'0--- ->       2'10 2'10
+  transition:       2'10 4'1--0 ->       2'10 2'10
+  transition:       2'10 4'1001 ->       2'00 2'00
+  transition:       2'10 4'1-11 ->       2'01 2'01
+  transition:       2'10 4'11-1 ->       2'10 2'10
+  transition:       2'01 4'0--- ->       2'01 2'01
+  transition:       2'01 4'1--0 ->       2'01 2'01
+  transition:       2'01 4'1001 ->       2'00 2'00
+  transition:       2'01 4'1-11 ->       2'01 2'01
+  transition:       2'01 4'11-1 ->       2'10 2'10
+
+3.13.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\u_rr.pointer_q$688' from module `\axi_aw_target_scheduler_a'.
+
+3.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 4 unused cells and 4 unused wires.
+<suppressed ~5 debug messages>
+
+3.13.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\u_rr.pointer_q$688' from module `\axi_aw_target_scheduler_a'.
+
+3.13.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\u_rr.pointer_q$688' from module `\axi_aw_target_scheduler_a' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> --1
+  10 -> -1-
+  01 -> 1--
+
+3.13.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\u_rr.pointer_q$688' from module `axi_aw_target_scheduler_a':
+-------------------------------------
+
+  Information on FSM $fsm$\u_rr.pointer_q$688 (\u_rr.pointer_q):
+
+  Number of input signals:    4
+  Number of output signals:   2
+  Number of state bits:       3
+
+  Input signals:
+    0: \effective_target_ready
+    1: $flatten\u_rr.$procmux$286_CMP
+    2: $flatten\u_rr.$procmux$285_CMP
+    3: \u_rr.grant_valid_q
+
+  Output signals:
+    0: \u_rr.pointer_d [0]
+    1: \u_rr.pointer_d [1]
+
+  State encoding:
+    0:      3'--1  <RESET STATE>
+    1:      3'-1-
+    2:      3'1--
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 4'1--0   ->     0 2'00
+      1:     0 4'1001   ->     0 2'00
+      2:     0 4'0---   ->     0 2'00
+      3:     0 4'11-1   ->     1 2'10
+      4:     0 4'1-11   ->     2 2'01
+      5:     1 4'1001   ->     0 2'00
+      6:     1 4'1--0   ->     1 2'10
+      7:     1 4'11-1   ->     1 2'10
+      8:     1 4'0---   ->     1 2'10
+      9:     1 4'1-11   ->     2 2'01
+     10:     2 4'1001   ->     0 2'00
+     11:     2 4'11-1   ->     1 2'10
+     12:     2 4'1--0   ->     2 2'01
+     13:     2 4'1-11   ->     2 2'01
+     14:     2 4'0---   ->     2 2'01
+
+-------------------------------------
+
+3.13.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\u_rr.pointer_q$688' from module `\axi_aw_target_scheduler_a'.
+
+3.14. Executing OPT pass (performing simple optimizations).
+
+3.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+<suppressed ~5 debug messages>
+
+3.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 96 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 86 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 82 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 80 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+3.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~106 debug messages>
+
+3.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 80 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\u_rr.$procdff$686 ($adff) from module axi_aw_target_scheduler_a (D = \u_rr.selected_manager_d, Q = \u_rr.selected_manager_q).
+Adding EN signal on $flatten\u_rr.$procdff$676 ($adff) from module axi_aw_target_scheduler_a (D = \u_rr.grant_d, Q = \u_rr.grant_q).
+
+3.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+3.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~106 debug messages>
+
+3.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 82 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 81 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+3.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.14.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.14.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~106 debug messages>
+
+3.14.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.14.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 81 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.14.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.14.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.14.23. Finished fast OPT passes. (There is nothing left to do.)
+
+3.15. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from mux cell axi_aw_target_scheduler_a.$flatten\u_rr.$procmux$492 ($mux).
+Removed top 1 bits (of 2) from port B of cell axi_aw_target_scheduler_a.$flatten\u_rr.$procmux$476_CMP0 ($eq).
+Removed top 1 bits (of 3) from mux cell axi_aw_target_scheduler_a.$flatten\u_rr.$procmux$409 ($mux).
+Removed top 1 bits (of 2) from mux cell axi_aw_target_scheduler_a.$flatten\u_rr.$procmux$397 ($mux).
+Removed top 1 bits (of 2) from port B of cell axi_aw_target_scheduler_a.$flatten\u_rr.$procmux$296_CMP0 ($eq).
+Removed top 2 bits (of 3) from wire axi_aw_target_scheduler_a.$flatten\u_rr.$7\candidate_grant[2:0].
+Removed top 1 bits (of 3) from wire axi_aw_target_scheduler_a.$flatten\u_rr.$10\candidate_grant[2:0].
+Removed top 1 bits (of 2) from wire axi_aw_target_scheduler_a.$flatten\u_rr.$10\candidate_manager[1:0].
+
+3.16. Executing PEEPOPT pass (run peephole optimizers).
+
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+3.18. Executing SHARE pass (SAT-based resource sharing).
+
+3.19. Executing TECHMAP pass (map to technology primitives).
+
+3.19.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+3.19.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+3.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.22. Executing TECHMAP pass (map to technology primitives).
+
+3.22.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+3.22.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+3.23. Executing TECHMAP pass (map to technology primitives).
+
+3.23.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/dsp_map_18x18.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/dsp_map_18x18.v' to AST representation.
+Generating RTLIL representation for module `$__MUL18X18'.
+Successfully finished Verilog frontend.
+
+3.23.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+3.24. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module axi_aw_target_scheduler_a:
+  created 0 $alu and 0 $macc cells.
+
+3.25. Executing OPT pass (performing simple optimizations).
+
+3.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 81 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~106 debug messages>
+
+3.25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 81 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 79 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+3.25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.25.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.25.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~110 debug messages>
+
+3.25.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.25.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 79 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.25.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.25.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.25.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.25.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.26. Executing MEMORY pass.
+
+3.26.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.26.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+3.26.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+3.26.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.26.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+3.26.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.26.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.26.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.26.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.26.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.28. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+3.29. Executing TECHMAP pass (map to technology primitives).
+
+3.29.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/lutrams_map_trellis.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/lutrams_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$__TRELLIS_DPR16X4_'.
+Successfully finished Verilog frontend.
+
+3.29.2. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/brams_map_16kd.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/brams_map_16kd.v' to AST representation.
+Generating RTLIL representation for module `$__DP16KD_'.
+Generating RTLIL representation for module `$__PDPW16KD_'.
+Successfully finished Verilog frontend.
+
+3.29.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+3.30. Executing OPT pass (performing simple optimizations).
+
+3.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+<suppressed ~8 debug messages>
+
+3.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 71 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.30.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+3.30.5. Finished fast OPT passes.
+
+3.31. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+3.32. Executing OPT pass (performing simple optimizations).
+
+3.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 71 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.32.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~50 debug messages>
+
+3.32.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$525:
+      Old ports: A={ 2'00 \arbiter_request [0] }, B=3'100, Y=$flatten\u_rr.$6\candidate_grant[2:0]
+      New ports: A={ 1'0 \arbiter_request [0] }, B=2'10, Y={ $flatten\u_rr.$6\candidate_grant[2:0] [2] $flatten\u_rr.$6\candidate_grant[2:0] [0] }
+      New connections: $flatten\u_rr.$6\candidate_grant[2:0] [1] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$439:
+      Old ports: A={ 1'0 $auto$wreduce.cc:513:run$756 [1:0] }, B=3'001, Y=$flatten\u_rr.$9\candidate_grant[2:0]
+      New ports: A=$auto$wreduce.cc:513:run$756 [1:0], B=2'01, Y=$flatten\u_rr.$9\candidate_grant[2:0] [1:0]
+      New connections: $flatten\u_rr.$9\candidate_grant[2:0] [2] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$430:
+      Old ports: A={ 1'0 \arbiter_request [1] }, B=2'00, Y=$flatten\u_rr.$9\candidate_manager[1:0]
+      New ports: A=\arbiter_request [1], B=1'0, Y=$flatten\u_rr.$9\candidate_manager[1:0] [0]
+      New connections: $flatten\u_rr.$9\candidate_manager[1:0] [1] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$409:
+      Old ports: A=2'00, B=2'10, Y=$auto$wreduce.cc:513:run$756 [1:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:513:run$756 [1]
+      New connections: $auto$wreduce.cc:513:run$756 [0] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$571:
+      Old ports: A=2'00, B=2'10, Y=$flatten\u_rr.$4\candidate_manager[1:0]
+      New ports: A=1'0, B=1'1, Y=$flatten\u_rr.$4\candidate_manager[1:0] [1]
+      New connections: $flatten\u_rr.$4\candidate_manager[1:0] [0] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$585:
+      Old ports: A=3'000, B=3'100, Y=$flatten\u_rr.$4\candidate_grant[2:0]
+      New ports: A=1'0, B=1'1, Y=$flatten\u_rr.$4\candidate_grant[2:0] [2]
+      New connections: $flatten\u_rr.$4\candidate_grant[2:0] [1:0] = 2'00
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+    Consolidated identical input bits for $mux cell $flatten\u_rr.$procmux$621:
+      Old ports: A=$flatten\u_rr.$4\candidate_grant[2:0], B=3'010, Y=$flatten\u_rr.$3\candidate_grant[2:0]
+      New ports: A={ $flatten\u_rr.$4\candidate_grant[2:0] [2] 1'0 }, B=2'01, Y=$flatten\u_rr.$3\candidate_grant[2:0] [2:1]
+      New connections: $flatten\u_rr.$3\candidate_grant[2:0] [0] = 1'0
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 7 changes.
+
+3.32.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 71 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 70 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 69 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+3.32.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.32.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.32.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+<suppressed ~2 debug messages>
+
+3.32.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.32.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~45 debug messages>
+
+3.32.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.32.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 67 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.32.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.32.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.32.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.32.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.32.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~45 debug messages>
+
+3.32.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.32.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 67 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.32.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.32.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.32.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.32.23. Finished fast OPT passes. (There is nothing left to do.)
+
+3.33. Executing TECHMAP pass (map to technology primitives).
+
+3.33.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+3.33.2. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v' to AST representation.
+Generating RTLIL representation for module `\_80_ccu2c_alu'.
+Successfully finished Verilog frontend.
+
+3.33.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pmux.
+No more expansions possible.
+<suppressed ~143 debug messages>
+
+3.34. Executing OPT pass (performing simple optimizations).
+
+3.34.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+<suppressed ~29 debug messages>
+
+3.34.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 150 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 133 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 126 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 124 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 122 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 120 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 118 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 117 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~99 debug messages>
+Removed a total of 33 cells.
+
+3.34.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 11 unused cells and 56 unused wires.
+<suppressed ~12 debug messages>
+
+3.34.5. Finished fast OPT passes.
+
+3.35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.36. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+
+3.37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 112 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Computing hashes of 107 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+3.38. Executing TECHMAP pass (map to technology primitives).
+
+3.38.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NN_'.
+Generating RTLIL representation for module `$_DFFE_PN_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_DFFE_NP0N_'.
+Generating RTLIL representation for module `$_DFFE_NP1N_'.
+Generating RTLIL representation for module `$_DFFE_PP0N_'.
+Generating RTLIL representation for module `$_DFFE_PP1N_'.
+Generating RTLIL representation for module `$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `$_ALDFF_NP_'.
+Generating RTLIL representation for module `$_ALDFF_PP_'.
+Generating RTLIL representation for module `$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+3.38.2. Continuing TECHMAP pass.
+Using template $_DFF_PP0_ for cells of type $_DFF_PP0_.
+Using template $_DFFE_PP0P_ for cells of type $_DFFE_PP0P_.
+No more expansions possible.
+<suppressed ~77 debug messages>
+
+3.39. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+<suppressed ~1 debug messages>
+
+3.40. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+3.41. Executing LATTICE_GSR pass (implement FF init values).
+Handling GSR in axi_aw_target_scheduler_a.
+
+3.42. Executing ATTRMVCP pass (move or copy attributes).
+
+3.43. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+Removed 0 unused cells and 38 unused wires.
+<suppressed ~1 debug messages>
+
+3.44. Executing CHECK pass (checking for obvious problems).
+Checking module axi_aw_target_scheduler_a...
+Found and reported 0 problems.
+
+3.45. Executing TECHMAP pass (map to technology primitives).
+
+3.45.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/latches_map.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/latches_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+3.45.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+3.46. Executing ABC9 pass.
+
+3.46.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+3.46.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+3.46.3. Executing PROC pass (convert processes to netlists).
+
+3.46.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.46.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1282 in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Removed a total of 0 dead cases.
+
+3.46.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+3.46.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$1283'.
+  Set init value: \Q = 1'0
+
+3.46.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \muxlsr in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1282'.
+
+3.46.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.46.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$1283'.
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1282'.
+     1/1: $0\Q[0:0]
+
+3.46.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.46.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.\Q' using process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1282'.
+  created $adff cell `$procdff$1288' with positive edge clock and positive level reset.
+
+3.46.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.46.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$1283'.
+Found and cleaned up 1 empty switch in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1282'.
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1282'.
+Cleaned up 1 empty switch.
+
+3.46.4. Executing PROC pass (convert processes to netlists).
+
+3.46.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.46.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1296 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Removed a total of 0 dead cases.
+
+3.46.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+3.46.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$1297'.
+  Set init value: \Q = 1'0
+
+3.46.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1296'.
+
+3.46.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.46.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$1297'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1296'.
+     1/1: $0\Q[0:0]
+
+3.46.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.46.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1296'.
+  created $adff cell `$procdff$1302' with positive edge clock and positive level reset.
+
+3.46.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.46.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$1297'.
+Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1296'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$1296'.
+Cleaned up 1 empty switch.
+
+3.46.5. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module axi_aw_target_scheduler_a.
+Found 0 SCCs.
+
+3.46.6. Executing ABC9_OPS pass (helper functions for ABC9).
+
+3.46.7. Executing TECHMAP pass (map to technology primitives).
+
+3.46.7.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+3.46.7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~169 debug messages>
+
+3.46.8. Executing OPT pass (performing simple optimizations).
+
+3.46.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Optimizing module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+
+3.46.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Computing hashes of 2 cells of `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding duplicate cells in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding identical cells in module `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Computing hashes of 2 cells of `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Finding duplicate cells in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Removed a total of 0 cells.
+
+3.46.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+3.46.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+  Optimizing cells in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Performed a total of 0 changes.
+
+3.46.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Computing hashes of 2 cells of `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding duplicate cells in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding identical cells in module `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Computing hashes of 2 cells of `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Finding duplicate cells in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Removed a total of 0 cells.
+
+3.46.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.46.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF..
+Finding unused cells or wires in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF..
+
+3.46.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Optimizing module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+
+3.46.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+3.46.9. Executing TECHMAP pass (map to technology primitives).
+
+3.46.9.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_map.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+3.46.9.2. Continuing TECHMAP pass.
+Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+No more expansions possible.
+<suppressed ~10 debug messages>
+
+3.46.10. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_model.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+3.46.11. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+3.46.12. Executing ABC9_OPS pass (helper functions for ABC9).
+
+3.46.13. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+3.46.14. Executing TECHMAP pass (map to technology primitives).
+
+3.46.14.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+3.46.14.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~173 debug messages>
+
+3.46.15. Executing OPT pass (performing simple optimizations).
+
+3.46.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.46.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 0 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.46.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_aw_target_scheduler_a..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+3.46.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_aw_target_scheduler_a.
+Performed a total of 0 changes.
+
+3.46.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_aw_target_scheduler_a'.
+Computing hashes of 0 cells of `\axi_aw_target_scheduler_a'.
+Finding duplicate cells in `\axi_aw_target_scheduler_a'.
+Removed a total of 0 cells.
+
+3.46.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.46.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_aw_target_scheduler_a..
+
+3.46.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_aw_target_scheduler_a.
+
+3.46.15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+3.46.16. Executing AIGMAP pass (map logic to AIG).
+Module axi_aw_target_scheduler_a: replaced 44 cells with 236 new cells, skipped 69 cells.
+  replaced 2 cell types:
+      20 $_MUX_
+      24 $_OR_
+  not replaced 7 cell types:
+      39 $_AND_
+      17 $_NOT_
+       1 $scopeinfo
+       3 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF
+       3 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF
+       3 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp
+       3 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp
+
+3.46.16.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+3.46.16.2. Executing ABC9_OPS pass (helper functions for ABC9).
+Warning: Feature 'write_xaiger2' is experimental.
+
+3.46.16.3. Executing XAIGER2 backend.
+<suppressed ~34 debug messages>
+Extracted 137 AND gates and 0 wires from module `axi_aw_target_scheduler_a' to a netlist network with 42 inputs and 44 outputs.
+
+3.46.16.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+3.46.16.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_lut <abc-temp-dir>/input.lut
+ABC: + read_box <abc-temp-dir>/input.box
+ABC: + &read <abc-temp-dir>/input.xaig
+ABC: + &ps
+ABC: <abc-temp-dir>/input : i/o =     36/     32  and =      91  lev =   20 (3.09)  mem = 0.00 MB  box = 6  bb = 6
+ABC: + &scorr
+ABC: Warning: The network is combinational.
+ABC: + &sweep
+ABC: + &dc2
+ABC: + &dch -f -r
+ABC: + &ps
+ABC: <abc-temp-dir>/input : i/o =     36/     32  and =      83  lev =   11 (2.11)  mem = 0.00 MB  ch =    9  box = 6  bb = 6
+ABC: cst =       0  cls =      9  lit =       9  unused =     107  proof =     0
+ABC: + &if -W 300 -v
+ABC: K = 7. Memory (bytes): Truth =    0. Cut =   76. Obj =  156. Set =  780. CutMin = no
+ABC: Node =      83.  Ch =     9.  Total mem =    0.03 MB. Peak cut mem =    0.01 MB.
+ABC: P:  Del = 2352.00.  Ar =     134.0.  Edge =      151.  Cut =      833.  T =     0.00 sec
+ABC: P:  Del = 2118.00.  Ar =     109.0.  Edge =      124.  Cut =      872.  T =     0.00 sec
+ABC: P:  Del = 2118.00.  Ar =      90.0.  Edge =      118.  Cut =     2205.  T =     0.00 sec
+ABC: F:  Del = 2118.00.  Ar =      62.0.  Edge =       95.  Cut =     1037.  T =     0.00 sec
+ABC: A:  Del = 2118.00.  Ar =      62.0.  Edge =       94.  Cut =     1029.  T =     0.00 sec
+ABC: A:  Del = 2118.00.  Ar =      62.0.  Edge =       94.  Cut =      941.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig
+ABC: + &mfs
+ABC: + &ps -l
+ABC: <abc-temp-dir>/input : i/o =     36/     32  and =      78  lev =   11 (2.00)  mem = 0.00 MB  box = 6  bb = 6
+ABC: Mapping (K=7)  :  lut =     19  edge =      84  lev =    4 (0.91)  levB =    5  mem = 0.00 MB
+ABC: LUT = 19 : 2=3 15.8 %  3=1 5.3 %  4=6 31.6 %  5=4 21.1 %  6=4 21.1 %  7=1 5.3 %  Ave = 4.42
+ABC: + &write -n <abc-temp-dir>/output.aig
+ABC: + &verify
+ABC: Networks are equivalent.  Time =     0.01 sec
+ABC: + time
+ABC: elapse: 0.03 seconds, total: 0.03 seconds
+
+3.46.16.6. Executing AIGER frontend.
+<suppressed ~10 debug messages>
+Removed 108 unused cells and 179 unused wires.
+
+3.46.16.7. Executing ABC_OPS_REINTEGRATE pass (reintegrate ABC mapped design into module).
+ABC RESULTS:              $lut cells:       20
+ABC RESULTS:   $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp cells:        3
+ABC RESULTS:   $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp cells:        3
+ABC RESULTS:           input signals:       17
+ABC RESULTS:          output signals:        6
+<suppressed ~136 debug messages>
+Removing temp directory.
+
+3.46.17. Executing TECHMAP pass (map to technology primitives).
+
+3.46.17.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+3.46.17.2. Continuing TECHMAP pass.
+Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp.
+No more expansions possible.
+<suppressed ~21 debug messages>
+Removed 3 unused cells and 164 unused wires.
+
+3.47. Executing TECHMAP pass (map to technology primitives).
+
+3.47.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NN_'.
+Generating RTLIL representation for module `$_DFFE_PN_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_DFFE_NP0N_'.
+Generating RTLIL representation for module `$_DFFE_NP1N_'.
+Generating RTLIL representation for module `$_DFFE_PP0N_'.
+Generating RTLIL representation for module `$_DFFE_PP1N_'.
+Generating RTLIL representation for module `$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `$_ALDFF_NP_'.
+Generating RTLIL representation for module `$_ALDFF_PP_'.
+Generating RTLIL representation for module `$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+3.47.2. Continuing TECHMAP pass.
+Using template $paramod$f8f63b209b7230e81958663ff24fef1613156af7$lut for cells of type $lut.
+Using template $paramod$63080be37a59a0093f8b1a2ae835acb32b7c90ff$lut for cells of type $lut.
+Using template $paramod$999f605d750567959edab1f1540f58f5f587176d$lut for cells of type $lut.
+Using template $paramod$bba54c1ef87367812b4c15f4aed5ac70773df775$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1101 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10001111 for cells of type $lut.
+Using template $paramod$3a76ae1ac16567d84de882ad5b89dd62763f5d7e$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$0a42bc4662f0a230a1cb152f46407b65a3a719f3$lut for cells of type $lut.
+Using template $paramod$4dfa26e736f9800d377c839a343d7cf750e306a6$lut for cells of type $lut.
+Using template $paramod$097592bb16245531f0716c5ddb18d7090f9c7d9d$lut for cells of type $lut.
+Using template $paramod$2069c61b3132075f86cc64477950ebda0c249179$lut for cells of type $lut.
+Using template $paramod$ab6a29e3b47bee6ad24c23ef8c8874cb6df29b3f$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$9831cd24e9b39dcdd46bbd89db4c831d3256196a$lut for cells of type $lut.
+Using template $paramod$d65c80246490ca69c486076dfb41c37746e84a87$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+No more expansions possible.
+<suppressed ~279 debug messages>
+
+3.48. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in axi_aw_target_scheduler_a.
+  Optimizing lut $abc$3919$lut$aiger$o25.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 2)
+  Optimizing lut $abc$3919$lut$aiger$o25.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 2)
+  Optimizing lut $abc$3919$lut$aiger$o32.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger$o43.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger$o28.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $abc$3919$lut$aiger$o28.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$3919$lut$aiger$o28.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
+  Optimizing lut $abc$3919$lut$aiger$o28.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 1)
+  Optimizing lut $abc$3919$lut$aiger$o28.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 1)
+  Optimizing lut $abc$3919$lut$aiger3918$63.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger$o18.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger$o28.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$3919$lut$aiger$o33.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger3918$87.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger$o43.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$3919$lut$aiger$o25.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $abc$3919$lut$aiger$o43.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+Removed 0 unused cells and 46 unused wires.
+
+3.49. Executing AUTONAME pass.
+Renamed 129 objects in module axi_aw_target_scheduler_a.
+<suppressed ~129 debug messages>
+
+3.50. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `axi_aw_target_scheduler_a'. Setting top module to axi_aw_target_scheduler_a.
+
+3.50.1. Analyzing design hierarchy..
+Top module:  \axi_aw_target_scheduler_a
+
+3.50.2. Analyzing design hierarchy..
+Top module:  \axi_aw_target_scheduler_a
+Removed 0 unused modules.
+
+3.51. Printing statistics.
+
+=== axi_aw_target_scheduler_a ===
+
+        +----------Local Count, excluding submodules.
+        |
+       76 wires
+      123 wire bits
+       76 public wires
+      123 public wire bits
+       17 ports
+       41 port bits
+       72 submodules
+        7   L6MUX21
+       43   LUT4
+       16   PFUMX
+        6   TRELLIS_FF
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |
+        - axi_aw_target_scheduler_a
+
+        +----------Count including submodules.
+        |
+       76 wires
+      123 wire bits
+       76 public wires
+      123 public wire bits
+       17 ports
+       41 port bits
+        - memories
+        - memory bits
+        - processes
+        - cells
+       72 submodules
+        7   L6MUX21
+       43   LUT4
+       16   PFUMX
+        6   TRELLIS_FF
+
+3.52. Executing CHECK pass (checking for obvious problems).
+Checking module axi_aw_target_scheduler_a...
+Found and reported 0 problems.
+
+3.53. Executing JSON backend.
+
+4. Printing statistics.
+
+=== axi_aw_target_scheduler_a ===
+
+        +----------Local Count, excluding submodules.
+        |
+       76 wires
+      123 wire bits
+       76 public wires
+      123 public wire bits
+       17 ports
+       41 port bits
+       72 cells
+        7   L6MUX21
+       43   LUT4
+       16   PFUMX
+        6   TRELLIS_FF
+
+Warnings: 1 unique messages, 1 total
+Warnings: 1 experimental features used (not excluded with -x).
+End of script. Logfile hash: ecfab2a8e0, time: 0.50s, user: 0.38s, system: 0.05s, MEM: 31.09 MB peak
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 64% 22x read_verilog (0 sec), 11% 1x abc9_exe (0 sec), ...
