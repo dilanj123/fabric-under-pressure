@@ -80,3 +80,13 @@ No AXI functional correctness or performance evidence exists yet.
 | A-E003 | FORMAL | RR covers reach pointer states, all winners, held grants, wrap and skip behavior | `results/raw/rr_arbiter/formal_cover/logfile.txt` | PASS; bounded cover depth 12 |
 | A-E004 | FORMAL | persistent-request fairness passes separately for M0, M1 and M2 under watched-request/always-ready assumptions | `results/raw/rr_arbiter/formal_fairness_m0/logfile.txt`, `formal_fairness_m1/logfile.txt`, `formal_fairness_m2/logfile.txt` | PASS for all three; Yices via SBY, bounded BMC depth 12; not an unconditional liveness claim |
 | A-E005 | SYNTH | standalone RR arbiter completes target-aware Yosys ECP5 synthesis | `results/raw/rr_arbiter/yosys_synth.log`, `axi_rr_arbiter_3_ecp5.json` | PASS; primitive-only resource evidence, no P&R or Fabric PPA claim |
+
+## Per-manager write-owner evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| W-E001 | SIM | registered owner allocation, metadata capture, beat accounting, stalls, WLAST diagnostics, pre-state recycling and reset pass | `results/raw/write_owner/simulation.log` | PASS; 22 self-checking cases |
+| W-E002 | SIM | three independent manager owner contexts can be active and complete independently | `results/raw/write_owner/composition_simulation.log` | PASS; 6 self-checking cases; no target-uniqueness claim |
+| W-E003 | FORMAL | owner bounds, context stability, beat accounting, correct WLAST release, no underflow and allocation protection pass | `results/raw/write_owner/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 12; legal allocation assumption `allocate_len <= 15` |
+| W-E004 | FORMAL | meaningful owner stalls, malformed W events, completion and following-cycle reallocation are reachable | `results/raw/write_owner/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 16 |
+| W-E005 | SYNTH | standalone write-owner primitive completes target-aware Yosys ECP5 synthesis | `results/raw/write_owner/yosys_synth.log`, `axi_write_owner_ecp5.json` | PASS; 54 LUT4, 20 TRELLIS_FF, 7 CCU2C, 3 PFUMX, primitive-only evidence |

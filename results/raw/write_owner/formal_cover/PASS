@@ -1,0 +1,27 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_103_116 at axi_write_owner_formal.sv:103.5-103.45 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_98_91 at axi_write_owner_formal.sv:98.5-98.59 step 1
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_99_95 at axi_write_owner_formal.sv:99.5-99.60 step 1
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_100_99 at axi_write_owner_formal.sv:100.5-100.45 step 2
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_102_109 at axi_write_owner_formal.sv:102.5-102.77 step 2
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_101_103 at axi_write_owner_formal.sv:101.5-101.75 step 2
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_105_123 at axi_write_owner_formal.sv:105.5-105.32 step 2
+cover trace: engine_0/trace7.vcd
+cover trace: engine_0/trace7.yw
+  reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_104_120 at axi_write_owner_formal.sv:104.5-104.51 step 2

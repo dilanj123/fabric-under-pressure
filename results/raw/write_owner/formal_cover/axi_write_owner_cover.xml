@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T20:51:35" hostname="Mac.ultrahub" package="axi_write_owner" id="0" name="cover" tests="24" errors="0" failures="0" time="0" skipped="16">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="cover" name="build execution" time="0">
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:74.7-74.36" time="0" type="ASSERT" location="axi_write_owner_formal.sv:74.7-74.36" id="_witness_.check_assert_axi_write_owner_formal_sv_74_31">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:75.7-75.47" time="0" type="ASSERT" location="axi_write_owner_formal.sv:75.7-75.47" id="_witness_.check_assert_axi_write_owner_formal_sv_75_33">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:76.7-76.64" time="0" type="ASSERT" location="axi_write_owner_formal.sv:76.7-76.64" id="_witness_.check_assert_axi_write_owner_formal_sv_76_36">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:77.7-77.56" time="0" type="ASSERT" location="axi_write_owner_formal.sv:77.7-77.56" id="_witness_.check_assert_axi_write_owner_formal_sv_77_39">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:78.7-78.74" time="0" type="ASSERT" location="axi_write_owner_formal.sv:78.7-78.74" id="_witness_.check_assert_axi_write_owner_formal_sv_78_42">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:79.7-79.66" time="0" type="ASSERT" location="axi_write_owner_formal.sv:79.7-79.66" id="_witness_.check_assert_axi_write_owner_formal_sv_79_45">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:80.7-80.69" time="0" type="ASSERT" location="axi_write_owner_formal.sv:80.7-80.69" id="_witness_.check_assert_axi_write_owner_formal_sv_80_48">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:81.7-81.67" time="0" type="ASSERT" location="axi_write_owner_formal.sv:81.7-81.67" id="_witness_.check_assert_axi_write_owner_formal_sv_81_52">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:82.7-82.68" time="0" type="ASSERT" location="axi_write_owner_formal.sv:82.7-82.68" id="_witness_.check_assert_axi_write_owner_formal_sv_82_55">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:83.7-85.48" time="0" type="ASSERT" location="axi_write_owner_formal.sv:83.7-85.48" id="_witness_.check_assert_axi_write_owner_formal_sv_83_59">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:86.7-86.80" time="0" type="ASSERT" location="axi_write_owner_formal.sv:86.7-86.80" id="_witness_.check_assert_axi_write_owner_formal_sv_86_65">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:88.7-88.23" time="0" type="ASSERT" location="axi_write_owner_formal.sv:88.7-88.23" id="_witness_.check_assert_axi_write_owner_formal_sv_88_71">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:89.7-89.39" time="0" type="ASSERT" location="axi_write_owner_formal.sv:89.7-89.39" id="_witness_.check_assert_axi_write_owner_formal_sv_89_73">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:90.7-90.94" time="0" type="ASSERT" location="axi_write_owner_formal.sv:90.7-90.94" id="_witness_.check_assert_axi_write_owner_formal_sv_90_75">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:95.5-95.78" time="0" type="ASSERT" location="axi_write_owner_formal.sv:95.5-95.78" id="_witness_.check_assert_axi_write_owner_formal_sv_95_82">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:96.5-96.47" time="0" type="ASSERT" location="axi_write_owner_formal.sv:96.5-96.47" id="_witness_.check_assert_axi_write_owner_formal_sv_96_88">
+<skipped />
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:100.5-100.45" time="0" type="COVER" location="axi_write_owner_formal.sv:100.5-100.45" id="_witness_.check_cover_axi_write_owner_formal_sv_100_99" tracefile="engine_0/trace3.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:101.5-101.75" time="0" type="COVER" location="axi_write_owner_formal.sv:101.5-101.75" id="_witness_.check_cover_axi_write_owner_formal_sv_101_103" tracefile="engine_0/trace5.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:102.5-102.77" time="0" type="COVER" location="axi_write_owner_formal.sv:102.5-102.77" id="_witness_.check_cover_axi_write_owner_formal_sv_102_109" tracefile="engine_0/trace4.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:103.5-103.45" time="0" type="COVER" location="axi_write_owner_formal.sv:103.5-103.45" id="_witness_.check_cover_axi_write_owner_formal_sv_103_116" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:104.5-104.51" time="0" type="COVER" location="axi_write_owner_formal.sv:104.5-104.51" id="_witness_.check_cover_axi_write_owner_formal_sv_104_120" tracefile="engine_0/trace7.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:105.5-105.32" time="0" type="COVER" location="axi_write_owner_formal.sv:105.5-105.32" id="_witness_.check_cover_axi_write_owner_formal_sv_105_123" tracefile="engine_0/trace6.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:98.5-98.59" time="0" type="COVER" location="axi_write_owner_formal.sv:98.5-98.59" id="_witness_.check_cover_axi_write_owner_formal_sv_98_91" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cover" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:99.5-99.60" time="0" type="COVER" location="axi_write_owner_formal.sv:99.5-99.60" id="_witness_.check_cover_axi_write_owner_formal_sv_99_95" tracefile="engine_0/trace2.vcd">
+</testcase>
+<system-out>SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover'.
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_write_owner.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/src/axi_write_owner.sv'.
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_write_owner_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/src/axi_write_owner_formal.sv'.
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: smtbmc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] base: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] prep: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] smt2: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover; yosys-smtbmc --presat --unroll -c --noprogress -t 16  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at axi_write_owner_formal: axi_write_owner_formal.sv:103.5-103.45 (_witness_.check_cover_axi_write_owner_formal_sv_103_116)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at axi_write_owner_formal: axi_write_owner_formal.sv:98.5-98.59 (_witness_.check_cover_axi_write_owner_formal_sv_98_91)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at axi_write_owner_formal: axi_write_owner_formal.sv:99.5-99.60 (_witness_.check_cover_axi_write_owner_formal_sv_99_95)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at axi_write_owner_formal: axi_write_owner_formal.sv:100.5-100.45 (_witness_.check_cover_axi_write_owner_formal_sv_100_99)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at axi_write_owner_formal: axi_write_owner_formal.sv:102.5-102.77 (_witness_.check_cover_axi_write_owner_formal_sv_102_109)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at axi_write_owner_formal: axi_write_owner_formal.sv:101.5-101.75 (_witness_.check_cover_axi_write_owner_formal_sv_101_103)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at axi_write_owner_formal: axi_write_owner_formal.sv:105.5-105.32 (_witness_.check_cover_axi_write_owner_formal_sv_105_123)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 2 at axi_write_owner_formal: axi_write_owner_formal.sv:104.5-104.51 (_witness_.check_cover_axi_write_owner_formal_sv_104_120)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: ##   0:00:00  Status: passed
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] engine_0: Status returned by engine: pass
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: engine_0 (smtbmc) returned pass
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/engine_0/trace0.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary:   reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_103_116 at axi_write_owner_formal.sv:103.5-103.45 step 1
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/engine_0/trace1.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary:   reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_98_91 at axi_write_owner_formal.sv:98.5-98.59 step 1
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/engine_0/trace2.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary:   reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_99_95 at axi_write_owner_formal.sv:99.5-99.60 step 1
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/engine_0/trace3.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary:   reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_100_99 at axi_write_owner_formal.sv:100.5-100.45 step 2
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/engine_0/trace4.vcd
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary:   reached cover statement axi_write_owner_formal._witness_.check_cover_axi_write_owner_formal_sv_102_109 at axi_write_owner_formal.sv:102.5-102.77 step 2
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: and 3 further traces
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] summary: see /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover/PASS for a complete summary
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_cover] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

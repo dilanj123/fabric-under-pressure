@@ -1,0 +1,30 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "smtbmc",
+  "clocks": [
+    {"path": ["\\ACLK"], "edge": "posedge", "offset": 0}
+  ],
+  "signals": [
+    {"path": ["\\ACLK"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\ARESETn"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\allocate_fire"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\allocate_id"], "width": 4, "offset": 0, "init_only": false},
+    {"path": ["\\allocate_internal_id"], "width": 6, "offset": 0, "init_only": false},
+    {"path": ["\\allocate_len"], "width": 8, "offset": 0, "init_only": false},
+    {"path": ["\\allocate_target"], "width": 4, "offset": 0, "init_only": false},
+    {"path": ["\\w_fire"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\wlast"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\_witness_", "\\anyinit_procdff_305"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_325"], "width": 5, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\_witness_", "\\anyinit_procdff_280"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\_witness_", "\\anyinit_procdff_285"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\_witness_", "\\anyinit_procdff_290"], "width": 4, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\_witness_", "\\anyinit_procdff_295"], "width": 6, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\_witness_", "\\anyinit_procdff_300"], "width": 5, "offset": 0, "init_only": true}
+  ],
+  "steps": [
+    {"bits": "00000000000000000000000000000000100000000000000000000"},
+    {"bits": "000000000000000000000000110"},
+    {"bits": "110000100000000000000000010"}
+  ]
+}

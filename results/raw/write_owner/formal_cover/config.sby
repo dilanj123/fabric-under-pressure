@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 16
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv axi_write_owner.sv axi_write_owner_formal.sv
+prep -top axi_write_owner_formal
+
+[files]
+../rtl/axi_write_owner.sv
+axi_write_owner_formal.sv

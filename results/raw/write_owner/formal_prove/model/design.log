@@ -1,0 +1,440 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: axi_write_owner.sv
+Parsing formal SystemVerilog input from `axi_write_owner.sv' to AST representation.
+Storing AST representation for module `$abstract\axi_write_owner'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: axi_write_owner_formal.sv
+Parsing formal SystemVerilog input from `axi_write_owner_formal.sv' to AST representation.
+Storing AST representation for module `$abstract\axi_write_owner_formal'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\axi_write_owner_formal'.
+Generating RTLIL representation for module `\axi_write_owner_formal'.
+
+3.2.1. Analyzing design hierarchy..
+Top module:  \axi_write_owner_formal
+
+3.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\axi_write_owner'.
+Generating RTLIL representation for module `\axi_write_owner'.
+
+3.2.3. Analyzing design hierarchy..
+Top module:  \axi_write_owner_formal
+Used module:     \axi_write_owner
+
+3.2.4. Analyzing design hierarchy..
+Top module:  \axi_write_owner_formal
+Used module:     \axi_write_owner
+Removing unused module `$abstract\axi_write_owner_formal'.
+Removing unused module `$abstract\axi_write_owner'.
+Removed 2 unused modules.
+Module axi_write_owner_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3.3. Executing PROC pass (convert processes to netlists).
+
+3.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$axi_write_owner.sv:49$146 in module axi_write_owner.
+Marked 1 switch rules as full_case in process $proc$axi_write_owner_formal.sv:72$30 in module axi_write_owner_formal.
+Marked 3 switch rules as full_case in process $proc$axi_write_owner_formal.sv:47$21 in module axi_write_owner_formal.
+Removed a total of 0 dead cases.
+
+3.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 11 redundant assignments.
+Promoted 23 assignments to connections.
+
+3.3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \ARESETn in `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+Found async reset \ARESETn in `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+
+3.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~9 debug messages>
+
+3.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+     1/5: $0\beats_q[4:0]
+     2/5: $0\internal_id_q[5:0]
+     3/5: $0\id_q[3:0]
+     4/5: $0\target_q[3:0]
+     5/5: $0\active_q[0:0]
+Creating decoders for process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+Creating decoders for process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:36$125'.
+Creating decoders for process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:94$81'.
+Creating decoders for process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:72$30'.
+     1/14: $assert$axi_write_owner_formal.sv:90$75_EN
+     2/14: $assert$axi_write_owner_formal.sv:89$73_EN
+     3/14: $assert$axi_write_owner_formal.sv:88$71_EN
+     4/14: $assert$axi_write_owner_formal.sv:86$65_EN
+     5/14: $assert$axi_write_owner_formal.sv:83$59_EN
+     6/14: $assert$axi_write_owner_formal.sv:82$55_EN
+     7/14: $assert$axi_write_owner_formal.sv:81$52_EN
+     8/14: $assert$axi_write_owner_formal.sv:80$48_EN
+     9/14: $assert$axi_write_owner_formal.sv:79$45_EN
+    10/14: $assert$axi_write_owner_formal.sv:78$42_EN
+    11/14: $assert$axi_write_owner_formal.sv:77$39_EN
+    12/14: $assert$axi_write_owner_formal.sv:76$36_EN
+    13/14: $assert$axi_write_owner_formal.sv:75$33_EN
+    14/14: $assert$axi_write_owner_formal.sv:74$31_EN
+Creating decoders for process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+     1/5: $0\ref_beats[4:0]
+     2/5: $0\ref_internal_id[5:0]
+     3/5: $0\ref_id[3:0]
+     4/5: $0\ref_target[3:0]
+     5/5: $0\ref_active[0:0]
+Creating decoders for process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:38$9'.
+     1/1: $assume$axi_write_owner_formal.sv:41$13_EN
+
+3.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\axi_write_owner.\allocate_allowed' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\active' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\owner_target' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\owner_id' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\owner_internal_id' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\beats_remaining' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\expected_wlast' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\allocate_violation' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\w_without_owner_violation' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner.\wlast_mismatch_violation' from process `\axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+No latch inferred for signal `\axi_write_owner_formal.\allocate_do' from process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:38$9'.
+No latch inferred for signal `\axi_write_owner_formal.\final_do' from process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:38$9'.
+
+3.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\axi_write_owner.\active_q' using process `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+  created $adff cell `$procdff$280' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\target_q' using process `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+  created $adff cell `$procdff$285' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\id_q' using process `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+  created $adff cell `$procdff$290' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\internal_id_q' using process `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+  created $adff cell `$procdff$295' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\beats_q' using process `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+  created $adff cell `$procdff$300' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner_formal.\ref_active' using process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+  created $adff cell `$procdff$305' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner_formal.\ref_target' using process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+  created $adff cell `$procdff$310' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner_formal.\ref_id' using process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+  created $adff cell `$procdff$315' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner_formal.\ref_internal_id' using process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+  created $adff cell `$procdff$320' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner_formal.\ref_beats' using process `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+  created $adff cell `$procdff$325' with positive edge clock and positive level reset.
+
+3.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+Removing empty process `axi_write_owner.$proc$axi_write_owner.sv:49$146'.
+Removing empty process `axi_write_owner.$proc$axi_write_owner.sv:34$128'.
+Removing empty process `axi_write_owner_formal.$proc$axi_write_owner_formal.sv:36$125'.
+Removing empty process `axi_write_owner_formal.$proc$axi_write_owner_formal.sv:94$81'.
+Found and cleaned up 1 empty switch in `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:72$30'.
+Removing empty process `axi_write_owner_formal.$proc$axi_write_owner_formal.sv:72$30'.
+Found and cleaned up 3 empty switches in `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+Removing empty process `axi_write_owner_formal.$proc$axi_write_owner_formal.sv:47$21'.
+Found and cleaned up 1 empty switch in `\axi_write_owner_formal.$proc$axi_write_owner_formal.sv:38$9'.
+Removing empty process `axi_write_owner_formal.$proc$axi_write_owner_formal.sv:38$9'.
+Cleaned up 9 empty switches.
+
+3.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~10 debug messages>
+Optimizing module axi_write_owner_formal.
+<suppressed ~13 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+Optimizing module axi_write_owner_formal.
+
+3.6. Executing CHECK pass (checking for obvious problems).
+Checking module axi_write_owner...
+Checking module axi_write_owner_formal...
+Found and reported 0 problems.
+
+3.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Finding unused cells or wires in module \axi_write_owner_formal..
+Removed 12 unused cells and 131 unused wires.
+<suppressed ~14 debug messages>
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+Optimizing module axi_write_owner_formal.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 48 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\axi_write_owner_formal'.
+Computing hashes of 153 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+Computing hashes of 134 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+Computing hashes of 132 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+Computing hashes of 131 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+<suppressed ~66 debug messages>
+Removed a total of 25 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \axi_write_owner_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~85 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+  Optimizing cells in module \axi_write_owner_formal.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Finding identical cells in module `\axi_write_owner_formal'.
+Computing hashes of 131 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+Computing hashes of 119 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+<suppressed ~36 debug messages>
+Removed a total of 12 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Finding unused cells or wires in module \axi_write_owner_formal..
+Removed 0 unused cells and 37 unused wires.
+<suppressed ~2 debug messages>
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+Optimizing module axi_write_owner_formal.
+
+3.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \axi_write_owner_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~61 debug messages>
+
+3.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+  Optimizing cells in module \axi_write_owner_formal.
+Performed a total of 0 changes.
+
+3.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Finding identical cells in module `\axi_write_owner_formal'.
+Computing hashes of 119 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+Removed a total of 0 cells.
+
+3.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Finding unused cells or wires in module \axi_write_owner_formal..
+
+3.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+Optimizing module axi_write_owner_formal.
+
+3.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 4 bits (of 8) from port B of cell axi_write_owner.$gt$axi_write_owner.sv:61$150 ($gt).
+Removed top 1 bits (of 5) from port A of cell axi_write_owner.$add$axi_write_owner.sv:61$151 ($add).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$add$axi_write_owner.sv:61$151 ($add).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$eq$axi_write_owner.sv:63$154 ($eq).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$gt$axi_write_owner.sv:69$156 ($gt).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$sub$axi_write_owner.sv:72$157 ($sub).
+Removed top 4 bits (of 8) from port B of cell axi_write_owner_formal.$le$axi_write_owner_formal.sv:41$14 ($le).
+Removed top 4 bits (of 8) from port B of cell axi_write_owner_formal.$gt$axi_write_owner_formal.sv:59$23 ($gt).
+Removed top 1 bits (of 5) from port A of cell axi_write_owner_formal.$add$axi_write_owner_formal.sv:59$24 ($add).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner_formal.$add$axi_write_owner_formal.sv:59$24 ($add).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner_formal.$sub$axi_write_owner_formal.sv:67$29 ($sub).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner_formal.$ge$axi_write_owner_formal.sv:95$84 ($ge).
+Removed top 4 bits (of 8) from port B of cell axi_write_owner_formal.$eq$axi_write_owner_formal.sv:99$97 ($eq).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner_formal.$gt$axi_write_owner_formal.sv:101$106 ($gt).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner_formal.$eq$axi_write_owner_formal.sv:102$112 ($eq).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Finding unused cells or wires in module \axi_write_owner_formal..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+Optimizing module axi_write_owner_formal.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Finding identical cells in module `\axi_write_owner_formal'.
+Computing hashes of 119 cells of `\axi_write_owner_formal'.
+Finding duplicate cells in `\axi_write_owner_formal'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Finding unused cells or wires in module \axi_write_owner_formal..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== axi_write_owner ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       55 wires
+      164 wire bits
+       24 public wires
+       72 public wire bits
+       19 ports
+       52 port bits
+       45 cells
+        1   $add
+        5   $adff
+        1   $eq
+        2   $gt
+       12   $logic_and
+        1   $logic_not
+       21   $mux
+        1   $ne
+        1   $sub
+
+=== axi_write_owner_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      103 wires
+      212 wire bits
+       26 public wires
+       74 public wire bits
+        1 ports
+        1 port bits
+      118 cells
+        1   $add
+        5   $adff
+        8   $anyseq
+       26   $check
+       12   $eq
+        1   $ge
+        2   $gt
+        2   $le
+       28   $logic_and
+       10   $logic_not
+        2   $logic_or
+       19   $mux
+        1   $ne
+        1   $sub
+        1 submodules
+        1   axi_write_owner
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      163 axi_write_owner_formal
+       45 axi_write_owner
+
+        +----------Count including submodules.
+        | 
+      158 wires
+      376 wire bits
+       50 public wires
+      146 public wire bits
+       20 ports
+       53 port bits
+        - memories
+        - memory bits
+        - processes
+      163 cells
+        2   $add
+       10   $adff
+        8   $anyseq
+       26   $check
+       13   $eq
+        1   $ge
+        4   $gt
+        2   $le
+       40   $logic_and
+       11   $logic_not
+        2   $logic_or
+       40   $mux
+        2   $ne
+        2   $sub
+        1 submodules
+        1   axi_write_owner
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module axi_write_owner...
+Checking module axi_write_owner_formal...
+Found and reported 0 problems.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `axi_write_owner_formal'. Setting top module to axi_write_owner_formal.
+
+4.1. Analyzing design hierarchy..
+Top module:  \axi_write_owner_formal
+Used module:     \axi_write_owner
+
+4.2. Analyzing design hierarchy..
+Top module:  \axi_write_owner_formal
+Used module:     \axi_write_owner
+Removed 0 unused modules.
+Module axi_write_owner_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing jny backend.
+
+6. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: e0b54224c9, time: 0.02s, user: 0.03s, system: 0.01s, MEM: 15.83 MB peak
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 17% 2x hierarchy (0 sec), 14% 5x opt_clean (0 sec), ...

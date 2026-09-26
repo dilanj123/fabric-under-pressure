@@ -14,6 +14,7 @@ Prove tractable primitives first. Do not begin with whole-fabric exhaustive proo
 - write route tracker: every accepted W burst follows registered accepted-AW context;
 - read response: response maps to a manager with matching valid outstanding context;
 - counters: no underflow; never exceed configured capacity.
+- write owner: registered accepted-AW context remains stable through W completion; beat counts stay in range; correct WLAST releases ownership; malformed W events are diagnosed without counter underflow; same-cycle final-W/AW recycling is blocked.
 
 ## Liveness discipline
 All bounded-service claims must list environmental readiness assumptions. Add covers/non-vacuity checks so a proof cannot pass merely because requests or service opportunities never occur.
@@ -22,3 +23,7 @@ For scheduler fairness, assumptions are limited to a continuously legal pending 
 
 ## Evidence language
 A formal PASS applies only to the named property, assumptions, engine, depth/mode and exact commit. It is not a whole-fabric correctness or compliance claim.
+
+## Executed standalone evidence
+
+The per-manager write-owner primitive is checked by `formal/axi_write_owner_formal.sv` using Yices through SBY: prove is bounded BMC to depth 12 and cover is bounded to depth 16. Legal allocation traces assume `allocate_len <= 15`; malformed W events remain unconstrained for diagnostic properties. This is primitive evidence only, not AXI channel or integrated-Fabric proof.

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-26T20:51:35" hostname="Mac.ultrahub" package="axi_write_owner" id="0" name="prove" tests="24" errors="0" failures="0" time="0" skipped="8">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:74.7-74.36" time="0" type="ASSERT" location="axi_write_owner_formal.sv:74.7-74.36" id="_witness_.check_assert_axi_write_owner_formal_sv_74_31">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:75.7-75.47" time="0" type="ASSERT" location="axi_write_owner_formal.sv:75.7-75.47" id="_witness_.check_assert_axi_write_owner_formal_sv_75_33">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:76.7-76.64" time="0" type="ASSERT" location="axi_write_owner_formal.sv:76.7-76.64" id="_witness_.check_assert_axi_write_owner_formal_sv_76_36">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:77.7-77.56" time="0" type="ASSERT" location="axi_write_owner_formal.sv:77.7-77.56" id="_witness_.check_assert_axi_write_owner_formal_sv_77_39">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:78.7-78.74" time="0" type="ASSERT" location="axi_write_owner_formal.sv:78.7-78.74" id="_witness_.check_assert_axi_write_owner_formal_sv_78_42">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:79.7-79.66" time="0" type="ASSERT" location="axi_write_owner_formal.sv:79.7-79.66" id="_witness_.check_assert_axi_write_owner_formal_sv_79_45">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:80.7-80.69" time="0" type="ASSERT" location="axi_write_owner_formal.sv:80.7-80.69" id="_witness_.check_assert_axi_write_owner_formal_sv_80_48">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:81.7-81.67" time="0" type="ASSERT" location="axi_write_owner_formal.sv:81.7-81.67" id="_witness_.check_assert_axi_write_owner_formal_sv_81_52">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:82.7-82.68" time="0" type="ASSERT" location="axi_write_owner_formal.sv:82.7-82.68" id="_witness_.check_assert_axi_write_owner_formal_sv_82_55">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:83.7-85.48" time="0" type="ASSERT" location="axi_write_owner_formal.sv:83.7-85.48" id="_witness_.check_assert_axi_write_owner_formal_sv_83_59">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:86.7-86.80" time="0" type="ASSERT" location="axi_write_owner_formal.sv:86.7-86.80" id="_witness_.check_assert_axi_write_owner_formal_sv_86_65">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:88.7-88.23" time="0" type="ASSERT" location="axi_write_owner_formal.sv:88.7-88.23" id="_witness_.check_assert_axi_write_owner_formal_sv_88_71">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:89.7-89.39" time="0" type="ASSERT" location="axi_write_owner_formal.sv:89.7-89.39" id="_witness_.check_assert_axi_write_owner_formal_sv_89_73">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:90.7-90.94" time="0" type="ASSERT" location="axi_write_owner_formal.sv:90.7-90.94" id="_witness_.check_assert_axi_write_owner_formal_sv_90_75">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:95.5-95.78" time="0" type="ASSERT" location="axi_write_owner_formal.sv:95.5-95.78" id="_witness_.check_assert_axi_write_owner_formal_sv_95_82">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_write_owner_formal at axi_write_owner_formal.sv:96.5-96.47" time="0" type="ASSERT" location="axi_write_owner_formal.sv:96.5-96.47" id="_witness_.check_assert_axi_write_owner_formal_sv_96_88">
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:100.5-100.45" time="0" type="COVER" location="axi_write_owner_formal.sv:100.5-100.45" id="_witness_.check_cover_axi_write_owner_formal_sv_100_99">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:101.5-101.75" time="0" type="COVER" location="axi_write_owner_formal.sv:101.5-101.75" id="_witness_.check_cover_axi_write_owner_formal_sv_101_103">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:102.5-102.77" time="0" type="COVER" location="axi_write_owner_formal.sv:102.5-102.77" id="_witness_.check_cover_axi_write_owner_formal_sv_102_109">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:103.5-103.45" time="0" type="COVER" location="axi_write_owner_formal.sv:103.5-103.45" id="_witness_.check_cover_axi_write_owner_formal_sv_103_116">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:104.5-104.51" time="0" type="COVER" location="axi_write_owner_formal.sv:104.5-104.51" id="_witness_.check_cover_axi_write_owner_formal_sv_104_120">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:105.5-105.32" time="0" type="COVER" location="axi_write_owner_formal.sv:105.5-105.32" id="_witness_.check_cover_axi_write_owner_formal_sv_105_123">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:98.5-98.59" time="0" type="COVER" location="axi_write_owner_formal.sv:98.5-98.59" id="_witness_.check_cover_axi_write_owner_formal_sv_98_91">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_write_owner_formal at axi_write_owner_formal.sv:99.5-99.60" time="0" type="COVER" location="axi_write_owner_formal.sv:99.5-99.60" id="_witness_.check_cover_axi_write_owner_formal_sv_99_95">
+<skipped />
+</testcase>
+<system-out>SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove'.
+SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_write_owner.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove/src/axi_write_owner.sv'.
+SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_write_owner_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove/src/axi_write_owner_formal.sv'.
+SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: smtbmc
+SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] base: finished (returncode=0)
+SBY 20:51:34 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] prep: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] smt2: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: ##   0:00:00  Status: passed
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: finished (returncode=0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] engine_0: Status returned by engine: pass
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] summary: engine_0 (smtbmc) returned pass
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] summary: engine_0 did not produce any traces
+SBY 20:51:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/formal_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

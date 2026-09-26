@@ -1,0 +1,1504 @@
+
+-- Running command `read_verilog -sv /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv; synth_ecp5 -top axi_write_owner -json /Users/Dilan/Projects/fabric-under-pressure/results/raw/write_owner/axi_write_owner_ecp5.json; stat' --
+
+1. Executing Verilog-2005 frontend: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv
+Parsing SystemVerilog input from `/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv' to AST representation.
+Generating RTLIL representation for module `\axi_write_owner'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_LATTICE pass.
+
+2.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_sim_ecp5.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_sim_ecp5.v' to AST representation.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\$__ABC9_LUT5'.
+Generating RTLIL representation for module `\$__ABC9_LUT6'.
+Generating RTLIL representation for module `\$__ABC9_LUT7'.
+Generating RTLIL representation for module `\L6MUX21'.
+Generating RTLIL representation for module `\TRELLIS_RAM16X2'.
+Generating RTLIL representation for module `\PFUMX'.
+Generating RTLIL representation for module `\TRELLIS_DPR16X4'.
+Generating RTLIL representation for module `\DPR16X4C'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\TRELLIS_FF'.
+Generating RTLIL representation for module `\TRELLIS_IO'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\TRELLIS_COMB'.
+Generating RTLIL representation for module `\VLO'.
+Generating RTLIL representation for module `\VHI'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `\CCU2C'.
+Generating RTLIL representation for module `\DP16KD'.
+Replacing existing blackbox module `\FD1P3AX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:2.1-2.261.
+Generating RTLIL representation for module `\FD1P3AX'.
+Replacing existing blackbox module `\FD1P3AY' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:3.1-3.261.
+Generating RTLIL representation for module `\FD1P3AY'.
+Replacing existing blackbox module `\FD1P3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:4.1-4.261.
+Generating RTLIL representation for module `\FD1P3BX'.
+Replacing existing blackbox module `\FD1P3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:5.1-5.261.
+Generating RTLIL representation for module `\FD1P3DX'.
+Replacing existing blackbox module `\FD1P3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:6.1-6.261.
+Generating RTLIL representation for module `\FD1P3IX'.
+Replacing existing blackbox module `\FD1P3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:7.1-7.261.
+Generating RTLIL representation for module `\FD1P3JX'.
+Replacing existing blackbox module `\FD1S3AX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:8.1-8.261.
+Generating RTLIL representation for module `\FD1S3AX'.
+Replacing existing blackbox module `\FD1S3AY' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:9.1-9.261.
+Generating RTLIL representation for module `\FD1S3AY'.
+Replacing existing blackbox module `\FD1S3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:10.1-10.261.
+Generating RTLIL representation for module `\FD1S3BX'.
+Replacing existing blackbox module `\FD1S3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:11.1-11.261.
+Generating RTLIL representation for module `\FD1S3DX'.
+Replacing existing blackbox module `\FD1S3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:12.1-12.261.
+Generating RTLIL representation for module `\FD1S3IX'.
+Replacing existing blackbox module `\FD1S3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:13.1-13.261.
+Generating RTLIL representation for module `\FD1S3JX'.
+Replacing existing blackbox module `\IFS1P3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:26.1-26.301.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Replacing existing blackbox module `\IFS1P3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:27.1-27.301.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Replacing existing blackbox module `\IFS1P3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:28.1-28.301.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Replacing existing blackbox module `\IFS1P3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:29.1-29.301.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Replacing existing blackbox module `\OFS1P3BX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:31.1-31.302.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Replacing existing blackbox module `\OFS1P3DX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:32.1-32.302.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Replacing existing blackbox module `\OFS1P3IX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:33.1-33.302.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Replacing existing blackbox module `\OFS1P3JX' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_ff.vh:34.1-34.302.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Replacing existing blackbox module `\IB' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:2.1-2.157.
+Generating RTLIL representation for module `\IB'.
+Replacing existing blackbox module `\IBPU' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:3.1-3.157.
+Generating RTLIL representation for module `\IBPU'.
+Replacing existing blackbox module `\IBPD' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:4.1-4.157.
+Generating RTLIL representation for module `\IBPD'.
+Replacing existing blackbox module `\OB' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:5.1-5.157.
+Generating RTLIL representation for module `\OB'.
+Replacing existing blackbox module `\OBZ' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:6.1-6.164.
+Generating RTLIL representation for module `\OBZ'.
+Replacing existing blackbox module `\OBZPU' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:7.1-7.164.
+Generating RTLIL representation for module `\OBZPU'.
+Replacing existing blackbox module `\OBZPD' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:8.1-8.164.
+Generating RTLIL representation for module `\OBZPD'.
+Replacing existing blackbox module `\OBCO' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:9.1-9.90.
+Generating RTLIL representation for module `\OBCO'.
+Replacing existing blackbox module `\BB' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:10.1-10.179.
+Generating RTLIL representation for module `\BB'.
+Replacing existing blackbox module `\BBPU' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:11.1-11.179.
+Generating RTLIL representation for module `\BBPU'.
+Replacing existing blackbox module `\BBPD' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:12.1-12.179.
+Generating RTLIL representation for module `\BBPD'.
+Replacing existing blackbox module `\ILVDS' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:13.1-13.139.
+Generating RTLIL representation for module `\ILVDS'.
+Replacing existing blackbox module `\OLVDS' at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_io.vh:14.1-14.146.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+2.2. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_bb_ecp5.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_bb_ecp5.v' to AST representation.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\PUR'.
+Generating RTLIL representation for module `\SGSR'.
+Generating RTLIL representation for module `\PDPW16KD'.
+Generating RTLIL representation for module `\MULT18X18D'.
+Generating RTLIL representation for module `\ALU54B'.
+Generating RTLIL representation for module `\CLKDIVF'.
+Generating RTLIL representation for module `\PCSCLKDIV'.
+Generating RTLIL representation for module `\DCSC'.
+Generating RTLIL representation for module `\DCCA'.
+Generating RTLIL representation for module `\ECLKSYNCB'.
+Generating RTLIL representation for module `\ECLKBRIDGECS'.
+Generating RTLIL representation for module `\DELAYF'.
+Generating RTLIL representation for module `\DELAYG'.
+Generating RTLIL representation for module `\USRMCLK'.
+Generating RTLIL representation for module `\DQSBUFM'.
+Generating RTLIL representation for module `\DDRDLLA'.
+Generating RTLIL representation for module `\DLLDELD'.
+Generating RTLIL representation for module `\IDDRX1F'.
+Generating RTLIL representation for module `\IDDRX2F'.
+Generating RTLIL representation for module `\IDDR71B'.
+Generating RTLIL representation for module `\IDDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX1F'.
+Generating RTLIL representation for module `\ODDRX2F'.
+Generating RTLIL representation for module `\ODDR71B'.
+Generating RTLIL representation for module `\OSHX2A'.
+Generating RTLIL representation for module `\TSHX2DQA'.
+Generating RTLIL representation for module `\TSHX2DQSA'.
+Generating RTLIL representation for module `\ODDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX2DQSB'.
+Generating RTLIL representation for module `\EHXPLLL'.
+Generating RTLIL representation for module `\DTR'.
+Generating RTLIL representation for module `\OSCG'.
+Generating RTLIL representation for module `\EXTREFB'.
+Generating RTLIL representation for module `\JTAGG'.
+Generating RTLIL representation for module `\DCUA'.
+Successfully finished Verilog frontend.
+
+2.3. Executing HIERARCHY pass (managing design hierarchy).
+
+2.3.1. Analyzing design hierarchy..
+Top module:  \axi_write_owner
+
+2.3.2. Analyzing design hierarchy..
+Top module:  \axi_write_owner
+Removed 0 unused modules.
+
+2.4. Executing PROC pass (convert processes to netlists).
+
+2.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19 in module axi_write_owner.
+Removed a total of 0 dead cases.
+
+2.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 10 assignments to connections.
+
+2.4.4. Executing PROC_INIT pass (extract init attributes).
+
+2.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \ARESETn in `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+
+2.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+2.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+     1/5: $0\beats_q[4:0]
+     2/5: $0\internal_id_q[5:0]
+     3/5: $0\id_q[3:0]
+     4/5: $0\target_q[3:0]
+     5/5: $0\active_q[0:0]
+Creating decoders for process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+
+2.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\axi_write_owner.\allocate_allowed' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\active' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\owner_target' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\owner_id' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\owner_internal_id' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\beats_remaining' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\expected_wlast' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\allocate_violation' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\w_without_owner_violation' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+No latch inferred for signal `\axi_write_owner.\wlast_mismatch_violation' from process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+
+2.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\axi_write_owner.\active_q' using process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+  created $adff cell `$procdff$302' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\target_q' using process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+  created $adff cell `$procdff$307' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\id_q' using process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+  created $adff cell `$procdff$312' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\internal_id_q' using process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+  created $adff cell `$procdff$317' with positive edge clock and positive level reset.
+Creating register for signal `\axi_write_owner.\beats_q' using process `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+  created $adff cell `$procdff$322' with positive edge clock and positive level reset.
+
+2.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+Removing empty process `axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:49$19'.
+Removing empty process `axi_write_owner.$proc$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:34$1'.
+Cleaned up 4 empty switches.
+
+2.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~10 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+Checking module axi_write_owner...
+Found and reported 0 problems.
+
+2.6. Executing FLATTEN pass (flatten design).
+
+2.7. Executing TRIBUF pass.
+
+2.8. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.10. Executing CHECK pass (checking for obvious problems).
+Checking module axi_write_owner...
+Found and reported 0 problems.
+
+2.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 6 unused cells and 51 unused wires.
+<suppressed ~7 debug messages>
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 48 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+2.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+2.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+2.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.12.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.13. Executing FSM pass (extract and optimize FSM).
+
+2.13.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.13.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.13.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.13.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.13.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.13.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.13.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$322 ($adff) from module axi_write_owner (D = $0\beats_q[4:0], Q = \beats_q).
+Adding EN signal on $procdff$302 ($adff) from module axi_write_owner (D = $0\active_q[0:0], Q = \active_q).
+Adding EN signal on $procdff$312 ($adff) from module axi_write_owner (D = $0\id_q[3:0], Q = \id_q).
+Adding EN signal on $procdff$317 ($adff) from module axi_write_owner (D = $0\internal_id_q[5:0], Q = \internal_id_q).
+Adding EN signal on $procdff$307 ($adff) from module axi_write_owner (D = $0\target_q[3:0], Q = \target_q).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~10 debug messages>
+
+2.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+2.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 60 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 52 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 48 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+<suppressed ~36 debug messages>
+Removed a total of 12 cells.
+
+2.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+2.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.14.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+2.14.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.14.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 48 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.14.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.14.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.14.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing WREDUCE pass (reducing word size of cells).
+Removed top 4 bits (of 8) from port B of cell axi_write_owner.$gt$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$23 ($gt).
+Removed top 1 bits (of 5) from port A of cell axi_write_owner.$add$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$24 ($add).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$add$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$24 ($add).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$eq$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:63$27 ($eq).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$gt$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:69$29 ($gt).
+Removed top 4 bits (of 5) from port B of cell axi_write_owner.$sub$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:72$30 ($sub).
+
+2.16. Executing PEEPOPT pass (run peephole optimizers).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.18. Executing SHARE pass (SAT-based resource sharing).
+
+2.19. Executing TECHMAP pass (map to technology primitives).
+
+2.19.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.19.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~59 debug messages>
+
+2.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.23. Executing TECHMAP pass (map to technology primitives).
+
+2.23.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/dsp_map_18x18.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/dsp_map_18x18.v' to AST representation.
+Generating RTLIL representation for module `$__MUL18X18'.
+Successfully finished Verilog frontend.
+
+2.23.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+2.24. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module axi_write_owner:
+  creating $macc model for $sub$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:72$30 ($sub).
+  creating $macc model for $add$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$24 ($add).
+  creating $alu model for $macc $add$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$24.
+  creating $alu model for $macc $sub$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:72$30.
+  creating $alu model for $gt$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:69$29 ($gt): merged with $sub$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:72$30.
+  creating $alu model for $gt$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$23 ($gt): new $alu
+  creating $alu model for $eq$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:63$27 ($eq): merged with $sub$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:72$30.
+  creating $alu cell for $gt$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$23: $auto$alumacc.cc:548:replace_alu$360
+  creating $alu cell for $sub$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:72$30, $gt$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:69$29, $eq$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:63$27: $auto$alumacc.cc:548:replace_alu$371
+  creating $alu cell for $add$/Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_owner.sv:61$24: $auto$alumacc.cc:548:replace_alu$382
+  created 3 $alu and 0 $macc cells.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~2 debug messages>
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 54 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+2.25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 54 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 1 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+2.25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.25.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.25.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+2.25.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.25.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 53 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.25.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.25.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.25.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.26. Executing MEMORY pass.
+
+2.26.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.26.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.26.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.26.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.26.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.26.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.26.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.26.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.26.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.26.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.28. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.29. Executing TECHMAP pass (map to technology primitives).
+
+2.29.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/lutrams_map_trellis.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/lutrams_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$__TRELLIS_DPR16X4_'.
+Successfully finished Verilog frontend.
+
+2.29.2. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/brams_map_16kd.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/brams_map_16kd.v' to AST representation.
+Generating RTLIL representation for module `$__DP16KD_'.
+Generating RTLIL representation for module `$__PDPW16KD_'.
+Successfully finished Verilog frontend.
+
+2.29.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+2.30. Executing OPT pass (performing simple optimizations).
+
+2.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~8 debug messages>
+
+2.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 45 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.30.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+2.30.5. Finished fast OPT passes.
+
+2.31. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.32. Executing OPT pass (performing simple optimizations).
+
+2.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~1 debug messages>
+
+2.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 44 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.32.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.32.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.32.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 44 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.32.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.32.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.32.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.32.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.32.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.32.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 44 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.32.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.32.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.32.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.33. Executing TECHMAP pass (map to technology primitives).
+
+2.33.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.33.2. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v' to AST representation.
+Generating RTLIL representation for module `\_80_ccu2c_alu'.
+Successfully finished Verilog frontend.
+
+2.33.3. Continuing TECHMAP pass.
+Using template $paramod$943564b9366bbc392bf4bbc801aa0a2d7742a4e0\_80_ccu2c_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$dc04b7d98e503a7bab16fce2df70e6e2c5ca34d6\_80_ccu2c_alu for cells of type $alu.
+Using template $paramod$50421b562f8eb1318d93ca56f0d931d9bef85d75\_80_ccu2c_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~231 debug messages>
+
+2.34. Executing OPT pass (performing simple optimizations).
+
+2.34.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~90 debug messages>
+
+2.34.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 133 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 131 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+2.34.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 9 unused cells and 115 unused wires.
+<suppressed ~10 debug messages>
+
+2.34.5. Finished fast OPT passes.
+
+2.35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.36. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+
+2.37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 142 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 123 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+<suppressed ~57 debug messages>
+Removed a total of 19 cells.
+
+2.38. Executing TECHMAP pass (map to technology primitives).
+
+2.38.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NN_'.
+Generating RTLIL representation for module `$_DFFE_PN_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_DFFE_NP0N_'.
+Generating RTLIL representation for module `$_DFFE_NP1N_'.
+Generating RTLIL representation for module `$_DFFE_PP0N_'.
+Generating RTLIL representation for module `$_DFFE_PP1N_'.
+Generating RTLIL representation for module `$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `$_ALDFF_NP_'.
+Generating RTLIL representation for module `$_ALDFF_PP_'.
+Generating RTLIL representation for module `$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+2.38.2. Continuing TECHMAP pass.
+Using template $_DFFE_PP0P_ for cells of type $_DFFE_PP0P_.
+No more expansions possible.
+<suppressed ~91 debug messages>
+
+2.39. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.40. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.41. Executing LATTICE_GSR pass (implement FF init values).
+Handling GSR in axi_write_owner.
+
+2.42. Executing ATTRMVCP pass (move or copy attributes).
+
+2.43. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 0 unused cells and 139 unused wires.
+<suppressed ~1 debug messages>
+
+2.44. Executing CHECK pass (checking for obvious problems).
+Checking module axi_write_owner...
+Found and reported 0 problems.
+
+2.45. Executing TECHMAP pass (map to technology primitives).
+
+2.45.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/latches_map.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/latches_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+2.45.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.46. Executing ABC9 pass.
+
+2.46.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.46.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.46.3. Executing PROC pass (convert processes to netlists).
+
+2.46.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.46.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$959 in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Removed a total of 0 dead cases.
+
+2.46.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.46.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$960'.
+  Set init value: \Q = 1'0
+
+2.46.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \muxlsr in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$959'.
+
+2.46.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+2.46.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$960'.
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$959'.
+     1/1: $0\Q[0:0]
+
+2.46.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.46.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.\Q' using process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$959'.
+  created $adff cell `$procdff$965' with positive edge clock and positive level reset.
+
+2.46.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.46.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:278$960'.
+Found and cleaned up 1 empty switch in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$959'.
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:282$959'.
+Cleaned up 1 empty switch.
+
+2.46.4. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module axi_write_owner.
+Found 0 SCCs.
+
+2.46.5. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.46.6. Executing TECHMAP pass (map to technology primitives).
+
+2.46.6.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.46.6.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~168 debug messages>
+
+2.46.7. Executing OPT pass (performing simple optimizations).
+
+2.46.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+
+2.46.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Computing hashes of 2 cells of `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding duplicate cells in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Removed a total of 0 cells.
+
+2.46.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.46.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Performed a total of 0 changes.
+
+2.46.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Computing hashes of 2 cells of `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding duplicate cells in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Removed a total of 0 cells.
+
+2.46.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.46.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF..
+
+2.46.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+
+2.46.7.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.46.8. Executing TECHMAP pass (map to technology primitives).
+
+2.46.8.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_map.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+2.46.8.2. Continuing TECHMAP pass.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+No more expansions possible.
+<suppressed ~23 debug messages>
+
+2.46.9. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_model.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+2.46.10. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.46.11. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.46.12. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.46.13. Executing TECHMAP pass (map to technology primitives).
+
+2.46.13.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.46.13.2. Continuing TECHMAP pass.
+Using template $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C for cells of type $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\LUT2\INIT=4'1010 for cells of type LUT2.
+Using template $paramod\LUT4\INIT=16'1001011010101010 for cells of type LUT4.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~205 debug messages>
+
+2.46.14. Executing OPT pass (performing simple optimizations).
+
+2.46.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+<suppressed ~18 debug messages>
+
+2.46.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 59 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Computing hashes of 57 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+2.46.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.46.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.46.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 57 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.46.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.46.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+Removed 0 unused cells and 55 unused wires.
+<suppressed ~1 debug messages>
+
+2.46.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.46.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.46.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi_write_owner..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.46.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi_write_owner.
+Performed a total of 0 changes.
+
+2.46.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi_write_owner'.
+Computing hashes of 57 cells of `\axi_write_owner'.
+Finding duplicate cells in `\axi_write_owner'.
+Removed a total of 0 cells.
+
+2.46.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.46.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi_write_owner..
+
+2.46.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi_write_owner.
+
+2.46.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.46.15. Executing AIGMAP pass (map logic to AIG).
+Module axi_write_owner: replaced 55 cells with 367 new cells, skipped 88 cells.
+  replaced 3 cell types:
+      48 $_MUX_
+       6 $_OR_
+       1 $_XOR_
+  not replaced 5 cell types:
+      25 $_AND_
+      13 $_NOT_
+      20 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF
+      10 $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C
+      20 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp
+
+2.46.15.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.46.15.2. Executing ABC9_OPS pass (helper functions for ABC9).
+Warning: Feature 'write_xaiger2' is experimental.
+
+2.46.15.3. Executing XAIGER2 backend.
+<suppressed ~116 debug messages>
+Extracted 191 AND gates and 0 wires from module `axi_write_owner' to a netlist network with 97 inputs and 241 outputs.
+
+2.46.15.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+2.46.15.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     47/    111  and =      93  lev =    8 (0.93)  mem = 0.01 MB  box = 30  bb = 20
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 1 carries.
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     47/    111  and =      90  lev =    7 (0.99)  mem = 0.01 MB  ch =    6  box = 27  bb = 20
+ABC: cst =       0  cls =      6  lit =       6  unused =     166  proof =     0
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 1 carries.
+ABC: + &if -W 300 -v 
+ABC: K = 7. Memory (bytes): Truth =    0. Cut =   76. Obj =  156. Set =  780. CutMin = no
+ABC: Node =      90.  Ch =     6.  Total mem =    0.06 MB. Peak cut mem =    0.01 MB.
+ABC: P:  Del = 1380.00.  Ar =      85.0.  Edge =      157.  Cut =      534.  T =     0.00 sec
+ABC: P:  Del = 1380.00.  Ar =      85.0.  Edge =      158.  Cut =      531.  T =     0.00 sec
+ABC: P:  Del = 1380.00.  Ar =      85.0.  Edge =      158.  Cut =      663.  T =     0.00 sec
+ABC: F:  Del = 1373.00.  Ar =      53.0.  Edge =      137.  Cut =      598.  T =     0.00 sec
+ABC: A:  Del = 1373.00.  Ar =      53.0.  Edge =      121.  Cut =      415.  T =     0.00 sec
+ABC: A:  Del = 1373.00.  Ar =      53.0.  Edge =      121.  Cut =      397.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: The network is not changed by "&mfs".
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =     47/    111  and =      81  lev =    7 (0.99)  mem = 0.01 MB  box = 27  bb = 20
+ABC: Mapping (K=6)  :  lut =     49  edge =     121  lev =    2 (0.50)  levB =    5  mem = 0.00 MB
+ABC: LUT = 49 : 2=38 77.6 %  3=2 4.1 %  4=7 14.3 %  5=1 2.0 %  6=1 2.0 %  Ave = 2.47
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 1 carries.
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
+ABC: Networks are equivalent.  Time =     0.01 sec
+ABC: + time 
+ABC: elapse: 0.03 seconds, total: 0.03 seconds
+
+2.46.15.6. Executing AIGER frontend.
+<suppressed ~10 debug messages>
+Removed 65 unused cells and 305 unused wires.
+
+2.46.15.7. Executing ABC_OPS_REINTEGRATE pass (reintegrate ABC mapped design into module).
+ABC RESULTS:              $lut cells:       50
+ABC RESULTS:   $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C cells:        7
+ABC RESULTS:   $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp cells:       20
+ABC RESULTS:           input signals:       29
+ABC RESULTS:          output signals:       10
+<suppressed ~319 debug messages>
+Removing temp directory.
+
+2.46.16. Executing TECHMAP pass (map to technology primitives).
+
+2.46.16.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+2.46.16.2. Continuing TECHMAP pass.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp.
+Using template $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C for cells of type $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C.
+No more expansions possible.
+<suppressed ~55 debug messages>
+Removed 6 unused cells and 565 unused wires.
+
+2.47. Executing TECHMAP pass (map to technology primitives).
+
+2.47.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v
+Parsing Verilog input from `/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NN_'.
+Generating RTLIL representation for module `$_DFFE_PN_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_DFFE_NP0N_'.
+Generating RTLIL representation for module `$_DFFE_NP1N_'.
+Generating RTLIL representation for module `$_DFFE_PP0N_'.
+Generating RTLIL representation for module `$_DFFE_PP1N_'.
+Generating RTLIL representation for module `$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `$_ALDFF_NP_'.
+Generating RTLIL representation for module `$_ALDFF_PP_'.
+Generating RTLIL representation for module `$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+2.47.2. Continuing TECHMAP pass.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$eba7de026ff587370e320127e266317dae097a89$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$4a0bb66839a4213eaeb87afd9450c2224b75b5e2$lut for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8$lut for cells of type $lut.
+Using template $paramod$6cd12bdee1c8fc46f908f85661901877e27cf7a0$lut for cells of type $lut.
+Using template $paramod$9df1e53c116646719f493df1ff6801cf34ec8402$lut for cells of type $lut.
+Using template $paramod$36f7339d8866fddb17787eed6729b0cf1e3b5ca8$lut for cells of type $lut.
+Using template $paramod$66e741791413519a466d4f44240bc83d3a191818$lut for cells of type $lut.
+Using template $paramod$d3ef1e4c51780d0a5425e32110ea022c31c1404f$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11011000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+No more expansions possible.
+<suppressed ~265 debug messages>
+
+2.48. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in axi_write_owner.
+  Optimizing lut $auto$abc_ops_reintegrate.cc:655:reintegrate$4122.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 2)
+  Optimizing lut $auto$abc_ops_reintegrate.cc:655:reintegrate$4122.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $auto$abc_ops_reintegrate.cc:655:reintegrate$4122.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4115$lut$aiger4114$93.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $auto$abc_ops_reintegrate.cc:655:reintegrate$4122.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+Removed 0 unused cells and 111 unused wires.
+
+2.49. Executing AUTONAME pass.
+Renamed 148 objects in module axi_write_owner.
+<suppressed ~148 debug messages>
+
+2.50. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `axi_write_owner'. Setting top module to axi_write_owner.
+
+2.50.1. Analyzing design hierarchy..
+Top module:  \axi_write_owner
+
+2.50.2. Analyzing design hierarchy..
+Top module:  \axi_write_owner
+Removed 0 unused modules.
+
+2.51. Printing statistics.
+
+=== axi_write_owner ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       82 wires
+      149 wire bits
+       82 public wires
+      149 public wire bits
+       19 ports
+       52 port bits
+       85 submodules
+        7   CCU2C
+        1   L6MUX21
+       54   LUT4
+        3   PFUMX
+       20   TRELLIS_FF
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+        - axi_write_owner
+
+        +----------Count including submodules.
+        | 
+       82 wires
+      149 wire bits
+       82 public wires
+      149 public wire bits
+       19 ports
+       52 port bits
+        - memories
+        - memory bits
+        - processes
+        - cells
+       85 submodules
+        7   CCU2C
+        1   L6MUX21
+       54   LUT4
+        3   PFUMX
+       20   TRELLIS_FF
+
+2.52. Executing CHECK pass (checking for obvious problems).
+Checking module axi_write_owner...
+Found and reported 0 problems.
+
+2.53. Executing JSON backend.
+
+3. Printing statistics.
+
+=== axi_write_owner ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       82 wires
+      149 wire bits
+       82 public wires
+      149 public wire bits
+       19 ports
+       52 port bits
+       85 cells
+        7   CCU2C
+        1   L6MUX21
+       54   LUT4
+        3   PFUMX
+       20   TRELLIS_FF
+
+Warnings: 1 unique messages, 1 total
+Warnings: 1 experimental features used (not excluded with -x).
+End of script. Logfile hash: 2238410b7d, time: 0.50s, user: 0.37s, system: 0.04s, MEM: 31.25 MB peak
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 64% 21x read_verilog (0 sec), 10% 1x abc9_exe (0 sec), ...

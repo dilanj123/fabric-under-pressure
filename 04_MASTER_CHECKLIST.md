@@ -125,7 +125,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] W may assert before AW and be backpressured.
 - [x] WREADY is not asserted without accepted write context.
 - [x] one data-active write context per manager.
-- [x] one write-data owner per target.
+- [x] one write-data owner per target is a frozen integrated invariant; target-uniqueness proof remains open and is not established by the per-manager primitive.
 - [x] target cannot accept new AW until owner's WLAST handshakes.
 - [x] every W beat routes using captured AW target.
 - [x] ownership clears on accepted WLAST, not B.
@@ -138,7 +138,10 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] W stall mid-burst passes.
 - [ ] W stall on WLAST passes.
 - [ ] wrong/missing WLAST is detected.
-- [ ] formal write-owner properties pass under documented assumptions.
+- [x] standalone per-manager write-owner directed state transitions pass (`results/raw/write_owner/simulation.log`, 22 checks).
+- [x] standalone M0/M1/M2 write-owner composition passes (`results/raw/write_owner/composition_simulation.log`, 6 checks).
+- [x] write-owner formal stability, beat accounting, WLAST release and malformed-event properties pass under documented bounded assumptions (`results/raw/write_owner/formal_prove/logfile.txt`, depth 12).
+- [x] write-owner formal covers reach stalls, malformed events, completion and reallocation (`results/raw/write_owner/formal_cover/logfile.txt`, depth 16).
 
 ---
 
@@ -350,7 +353,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] RR one-hot proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
 - [x] RR no-grant-without-request proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
 - [x] RR hold stability proof passes (`results/raw/rr_arbiter/formal_prove/logfile.txt`, bounded depth 12).
-- [x] RR fairness proof has explicit assumptions (`results/raw/rr_arbiter/formal_fairness/logfile.txt`, bounded depth 12).
+- [x] RR fairness proof has explicit watched-request/always-ready assumptions for M0, M1 and M2 (`results/raw/rr_arbiter/formal_fairness_m0/logfile.txt`, `formal_fairness_m1/logfile.txt`, `formal_fairness_m2/logfile.txt`, bounded depth 12).
 - [ ] QOS one-hot proof passes.
 - [ ] QOS hold stability proof passes.
 - [ ] age saturation/no-wrap proof passes.
