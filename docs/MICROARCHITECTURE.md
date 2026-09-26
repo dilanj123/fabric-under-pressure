@@ -25,7 +25,17 @@ Per-target AW and AR RR, handshake-driven pointer update, held grant under backp
 Normal: maximum AxQOS, RR tie-break. Starvation escape: age >=64, serve starved set RR. The 8-bit age counter increments by one on every clock cycle that a legal request remains pending without handshake and saturates at 255; reset age to zero when no legal pending request or when the request handshakes. Service-opportunity assumptions apply to the later liveness guarantee, not to age measurement.
 
 ## 7. Buffers
-Each manager-facing and target-facing channel has one registered ready/valid boundary. Payload and VALID remain stable while VALID is asserted and READY is low. The AW, W, B, AR and R boundaries are independent. A and B use the same boundary count, widths and placement; a B-only pipeline is a named variant and is not part of the frozen comparison.
+AW and AR use the explicit address path:
+
+```text
+manager interface
+    -> eligibility/arbitration
+    -> manager-facing admission handshake
+    -> one-entry registered target address slot
+    -> target-facing AW/AR handshake
+```
+
+There is no additional manager-side ingress request queue. The manager-facing handshake is `t_addr_accept`; the target-facing handshake consumes the already-admitted slot. Slot availability is evaluated from registered pre-state, so a slot drained on cycle N is not refilled until the following cycle. Payload and VALID remain stable while VALID is asserted and READY is low. W, B and R retain their independent registered ready/valid boundary semantics. Architectures A and B use the same address-slot placement and depth.
 
 ## 7a. Exact state decomposition
 
