@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="t d">
+<title id="t">Fabric Under Pressure Architecture A overview</title>
+<desc id="d">Three AXI manager ports connect through request legality, decoding, round robin arbitration, outstanding state and response paths to four logical targets.</desc>
+<defs>
+ <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker>
+ <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#15803d"/></marker>
+ <style>
+ .h{font:700 28px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#0f172a}.s{font:700 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#334155;letter-spacing:.07em}.bt{font:700 16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#0f172a}.tx{font:400 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#334155}.sm{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#475569}.lb{font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#334155}
+ .mgr{fill:#e0f2fe;stroke:#0284c7;stroke-width:2}.fab{fill:#f8fafc;stroke:#475569;stroke-width:2.5}.ver{fill:#dcfce7;stroke:#16a34a;stroke-width:1.8}.pl{fill:#fef3c7;stroke:#d97706;stroke-width:1.8}.tar{fill:#ede9fe;stroke:#7c3aed;stroke-width:1.8}.def{fill:#f1f5f9;stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:7 5}.ln{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#a)}.ret{stroke:#15803d;stroke-width:2;fill:none;marker-end:url(#g)}.ds{stroke:#64748b;stroke-width:1.7;fill:none;stroke-dasharray:7 5;marker-end:url(#a)}
+ </style>
+</defs>
+<rect width="1500" height="900" fill="#fff"/>
+<text x="60" y="52" class="h">Fabric Under Pressure — Architecture A overview</text>
+<text x="60" y="80" class="sm">Deterministic 3-manager / 4-target AXI4-subset interconnect • green = verified standalone • amber = planned integration</text>
+<text x="60" y="125" class="s">MANAGER PORTS</text>
+<rect x="60" y="150" width="220" height="105" rx="12" class="mgr"/><text x="84" y="182" class="bt">M0 AXI manager</text><text x="84" y="208" class="tx">64-bit data • 32-bit address</text><text x="84" y="231" class="tx">4-bit manager ID</text>
+<rect x="60" y="285" width="220" height="105" rx="12" class="mgr"/><text x="84" y="317" class="bt">M1 AXI manager</text><text x="84" y="343" class="tx">independent AW/W and AR/R</text><text x="84" y="366" class="tx">backpressure on every channel</text>
+<rect x="60" y="420" width="220" height="105" rx="12" class="mgr"/><text x="84" y="452" class="bt">M2 AXI manager</text><text x="84" y="478" class="tx">INCR bursts • 1–16 beats</text><text x="84" y="501" class="tx">full-width aligned transfers</text>
+<path d="M280 202H330" class="ln"/><path d="M280 337H330" class="ln"/><path d="M280 472H330" class="ln"/><text x="286" y="190" class="lb">AW / AR</text><text x="286" y="325" class="lb">W / B</text><text x="286" y="460" class="lb">R</text>
+
+<rect x="330" y="110" width="760" height="650" rx="18" class="fab"/><text x="360" y="147" class="s">FABRIC UNDER PRESSURE — SINGLE-CLOCK MVP</text>
+<rect x="360" y="170" width="215" height="82" rx="10" class="ver"/><text x="382" y="201" class="bt">Request legality</text><text x="382" y="224" class="tx">INCR • SIZE=3 • aligned</text><text x="382" y="243" class="tx">1–16 beats • no 4-KiB cross</text>
+<rect x="600" y="170" width="215" height="82" rx="10" class="ver"/><text x="622" y="201" class="bt">Address decode</text><text x="622" y="224" class="tx">S0 / S1 / S2 map</text><text x="622" y="243" class="tx">unmapped → S3 / DECERR</text>
+<rect x="840" y="170" width="215" height="82" rx="10" class="ver"/><text x="862" y="201" class="bt">ID widening</text><text x="862" y="224" class="tx">manager prefix + ID</text><text x="862" y="243" class="tx">4-bit → 6-bit</text>
+<path d="M575 211h25M815 211h25" class="ln"/>
+
+<rect x="360" y="285" width="695" height="100" rx="10" class="pl"/><text x="385" y="316" class="bt">Eligible request boundary</text><text x="385" y="341" class="tx">Legal shape + decoded target + free ID + outstanding capacity.</text><text x="385" y="363" class="tx">Write requests also observe the registered unfinished-W ownership rule.</text><text x="385" y="379" class="sm">Integration boundary is planned; standalone primitives do not admit AXI traffic.</text>
+<path d="M708 252v33" class="ln"/>
+
+<rect x="360" y="420" width="335" height="115" rx="10" class="ver"/><text x="385" y="451" class="bt">Architecture A schedulers</text><text x="385" y="476" class="tx">per target × direction</text><text x="385" y="498" class="tx">3-way RR • held grant • handshake advance</text><text x="385" y="519" class="sm">Standalone verified; 8 instances planned.</text>
+<rect x="720" y="420" width="335" height="115" rx="10" class="pl"/><text x="745" y="451" class="bt">Outstanding / ownership</text><text x="745" y="476" class="tx">4 reads + 4 writes per manager</text><text x="745" y="498" class="tx">one busy transaction per ID/direction</text><text x="745" y="519" class="sm">Tracker verified; AW/W integration planned.</text>
+<path d="M695 477h25" class="ds"/>
+
+<rect x="360" y="570" width="335" height="110" rx="10" class="pl"/><text x="385" y="601" class="bt">Write data path</text><text x="385" y="626" class="tx">accepted AW establishes one owner</text><text x="385" y="647" class="tx">W follows target through WLAST</text><text x="385" y="666" class="sm">No AW/W coupling is assumed.</text>
+<rect x="720" y="570" width="335" height="110" rx="10" class="pl"/><text x="745" y="601" class="bt">Response paths</text><text x="745" y="626" class="tx">B routes by widened BID</text><text x="745" y="647" class="tx">R holds burst ownership through RLAST</text><text x="745" y="666" class="sm">Response routing remains unimplemented.</text>
+<path d="M527 535v35M887 535v35" class="ds"/>
+
+<text x="1130" y="125" class="s">LOGICAL TARGETS / ENDPOINTS</text>
+<rect x="1130" y="150" width="320" height="100" rx="12" class="tar"/><text x="1155" y="182" class="bt">S0 — mapped target</text><text x="1155" y="208" class="tx">0x0000_0000 – 0x0000_FFFF</text><text x="1155" y="231" class="sm">canonical endpoint model, depth 8</text>
+<rect x="1130" y="285" width="320" height="100" rx="12" class="tar"/><text x="1155" y="317" class="bt">S1 — mapped target</text><text x="1155" y="343" class="tx">0x1000_0000 – 0x1000_FFFF</text><text x="1155" y="366" class="sm">same topology and buffering contract</text>
+<rect x="1130" y="420" width="320" height="100" rx="12" class="tar"/><text x="1155" y="452" class="bt">S2 — mapped target</text><text x="1155" y="478" class="tx">0x2000_0000 – 0x2000_0FFF</text><text x="1155" y="501" class="sm">same topology and buffering contract</text>
+<rect x="1130" y="555" width="320" height="100" rx="12" class="def"/><text x="1155" y="587" class="bt">S3 — default/error target</text><text x="1155" y="613" class="tx">all other legal supported addresses</text><text x="1155" y="636" class="sm">DECERR completion is future integration</text>
+<path d="M1055 335h75M1090 335V200h40M1090 335V335h40M1090 335V470h40M1090 335V605h40" class="ds"/><text x="915" y="326" class="lb">target select</text>
+<path d="M1130 200h-75M1130 335h-75M1130 470h-75M1130 605h-75" class="ret"/>
+<path d="M720 625H695M360 625H300Q245 625 245 525" class="ret"/><text x="285" y="612" class="lb">B / R return</text>
+
+<rect x="60" y="735" width="1390" height="105" rx="12" fill="#f8fafc" stroke="#cbd5e1"/><text x="85" y="765" class="s">STATUS LEGEND</text><rect x="85" y="785" width="18" height="18" rx="3" class="ver"/><text x="113" y="799" class="sm">verified standalone primitive</text><rect x="330" y="785" width="18" height="18" rx="3" class="pl"/><text x="358" y="799" class="sm">planned integration block</text><rect x="585" y="785" width="18" height="18" rx="3" class="def"/><text x="613" y="799" class="sm">deferred/error endpoint</text><line x1="855" y1="794" x2="910" y2="794" class="ln"/><text x="925" y="799" class="sm">forward path</text><line x1="1165" y1="794" x2="1220" y2="794" class="ret"/><text x="1235" y="799" class="sm">return path</text>
+</svg>
