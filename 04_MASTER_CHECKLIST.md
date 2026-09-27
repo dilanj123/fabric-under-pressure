@@ -156,8 +156,11 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] simultaneous R availability from multiple subordinates test passes.
 - [ ] R backpressure maintains lock/payload.
 - [ ] RLAST frees burst lock exactly once.
-- [ ] response route assertions reject invalid manager-index code.
-- [ ] response route assertions reject non-busy ID.
+- [x] focused B response validation rejects invalid manager-index code (`results/raw/b_response_router/router_simulation.log`, `formal_router_prove/logfile.txt`; router scope).
+- [x] focused B response validation rejects non-busy ID (`results/raw/b_response_router/router_simulation.log`, `formal_router_prove/logfile.txt`; router scope).
+- [x] focused simultaneous B responses from multiple targets and different managers pass (`results/raw/b_response_router/router_simulation.log`; router scope).
+- [x] focused manager B payload stability under backpressure passes (`results/raw/b_response_router/router_simulation.log`; router scope).
+- [x] focused widened BID strip/manager routing and manager-facing completion event pass (`results/raw/b_response_router/router_simulation.log`, `composition_simulation.log`; router/state scope).
 
 ---
 
@@ -639,11 +642,3 @@ Before any new major feature ask:
 - [ ] Is it more valuable than closing the current gate?
 
 If not, defer it.
-
-## Narrow Architecture-A AW path evidence
-
-- [x] one-target manager AW admission and one-hot manager AWREADY pass (`results/raw/aw_target_path/simulation.log`, 23 checks).
-- [x] one-entry registered target AW payload/VALID slot and all-field payload stability pass (`results/raw/aw_target_path/simulation.log`, `formal_prove/logfile.txt`).
-- [x] target AW ID widening and S3 legal admission pass (`results/raw/aw_target_path/simulation.log`, `formal_cover/logfile.txt`).
-- [x] D032 no same-cycle drain/refill property passes (`results/raw/aw_target_path/formal_prove/logfile.txt`, bounded depth 20).
-- [x] focused production shared outstanding/write-owner allocation is connected to AW admission (`results/raw/write_state_bank/composition_simulation.log`, `results/raw/write_state_bank/formal_comp_prove/PASS`; one-target composition scope).

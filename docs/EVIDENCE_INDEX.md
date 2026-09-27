@@ -135,3 +135,13 @@ No AXI functional correctness or performance evidence exists yet.
 | WTP-E005 | SYNTH | registered W target path completes target-aware Yosys ECP5 synthesis | `results/raw/w_target_path/yosys_synth.log`, `axi_w_target_path_ecp5.json` | PASS; 646 LUT4, 77 TRELLIS_FF, 313 PFUMX, 159 L6MUX21; primitive/path evidence only |
 | WTP-E006 | FORMAL | focused AW/state/W composition preserves owner-directed W routing and target-delivery-only owner progression | `results/raw/aw_w_composition/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 24, documented source-stability assumptions |
 | WTP-E007 | FORMAL | focused AW/state/W composition covers stalled W, non-final delivery, final delivery and outstanding state retained after WLAST | `results/raw/aw_w_composition/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 32 |
+
+## Registered B response routing evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| B-E001 | SIM | standalone four-source RR and focused per-manager B routing pass contention, backpressure, validation, BRESP, S3 and reset checks | `results/raw/b_response_router/rr4_simulation.log`, `router_simulation.log` | PASS; 15 RR4 checks and 15 router checks |
+| B-E002 | SIM | focused B router plus shared write-state composition separates target B admission from manager B completion and preserves same-ID pre-state reuse | `results/raw/b_response_router/composition_simulation.log` | PASS; 8 checks |
+| B-E003 | FORMAL | RR4 safety, hold/pointer behavior and four-source covers pass | `results/raw/b_response_router/formal_rr4_prove/logfile.txt`, `formal_rr4_cover/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 16 and cover depth 20 |
+| B-E004 | FORMAL | B validation, registered slot gating, completion mapping and manager-valid wiring pass under documented target-source stability assumptions | `results/raw/b_response_router/formal_router_prove/logfile.txt`, `formal_router_cover/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 20 and cover depth 24 |
+| B-E005 | SYNTH | RR4 and registered B response router complete ECP5-targeted Yosys synthesis | `results/raw/b_response_router/rr4_yosys_synth.log`, `router_yosys_synth.log`, `results/processed/b_response_router/summary.md` | PASS; primitive/path evidence only, no Fabric PPA claim |

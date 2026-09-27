@@ -1,0 +1,21 @@
+[tasks]
+prove
+cover
+
+[options]
+prove: mode bmc
+prove: depth 20
+cover: mode cover
+cover: depth 24
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv axi_rr_arbiter_4.sv axi_b_response_router.sv axi_b_response_router_formal.sv
+prep -top axi_b_response_router_formal
+
+[files]
+../rtl/axi_rr_arbiter_4.sv
+../rtl/axi_b_response_router.sv
+axi_b_response_router_formal.sv
