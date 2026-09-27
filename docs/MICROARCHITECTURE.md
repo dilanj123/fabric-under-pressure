@@ -12,7 +12,7 @@ Decode AW and AR independently. Legal supported requests select one logical targ
 Manager IDs are 4 bits. Append 2-bit manager index downstream for 6-bit internal IDs. Limit to 4 outstanding read and 4 outstanding write transactions per manager, with one outstanding per ID per direction.
 
 ## 4. Write path
-Accepted AW allocates/records shared per-manager write route ownership. Because AXI4 has no WID, W data are accepted only for a registered owner and are forwarded to that owner's target. The manager-facing W handshake captures a beat into the selected target's one-entry registered W slot; the target-facing W handshake advances owner beat accounting and releases ownership on the correct final WLAST. B uses returned internal BID to recover manager and original ID.
+Accepted AW allocates/records shared per-manager write route ownership. Because AXI4 has no WID, W data are accepted only for a registered owner and are forwarded to that owner's target. The manager-facing W handshake captures a beat into the selected target's one-entry registered W slot; the target-facing W handshake advances owner beat accounting and releases ownership on the correct final WLAST. B responses decode widened BID, arbitrate S0-S3 responses independently per manager into one registered manager-facing B slot, and clear outstanding state only on the manager-facing B handshake. Invalid manager prefixes and non-busy IDs are rejected. B transport is common to Architectures A and B.
 
 ## 5. Read path
 AR routing uses target decode/arbitration. R returns based on widened RID. Per-manager return arbitration must not interleave beats from a burst in a way that violates the accepted subordinate stream; lock chosen return source through RLAST when needed.

@@ -131,13 +131,13 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] ownership clears on accepted WLAST, not B.
 - [x] B may remain outstanding after WLAST.
 - [x] manager can proceed to next AW after WLAST subject to count/ID limits.
-- [ ] AW-before-W directed test passes.
-- [ ] W-before-AW directed test passes.
-- [ ] same-cycle AW/W directed test passes.
+- [x] focused AW-before-W directed test passes (`results/raw/w_target_path/composition_simulation.log`).
+- [x] focused W-before-AW directed test passes (`results/raw/w_target_path/composition_simulation.log`).
+- [x] focused same-cycle AW/W directed test passes (`results/raw/w_target_path/composition_simulation.log`).
 - [ ] W stall at first beat passes.
 - [ ] W stall mid-burst passes.
-- [ ] W stall on WLAST passes.
-- [ ] wrong/missing WLAST is detected.
+- [x] focused W stall on WLAST passes (`results/raw/w_target_path/standalone_simulation.log`, `composition_simulation.log`).
+- [x] wrong/missing WLAST is detected in the standalone owner primitive (`results/raw/write_owner/simulation.log`, `formal_prove/logfile.txt`).
 - [x] standalone per-manager write-owner directed state transitions pass (`results/raw/write_owner/simulation.log`, 22 checks).
 - [x] standalone M0/M1/M2 write-owner composition passes (`results/raw/write_owner/composition_simulation.log`, 6 checks).
 - [x] write-owner formal stability, beat accounting, WLAST release and malformed-event properties pass under documented bounded assumptions (`results/raw/write_owner/formal_prove/logfile.txt`, depth 12).
@@ -646,4 +646,4 @@ If not, defer it.
 - [x] one-entry registered target AW payload/VALID slot and all-field payload stability pass (`results/raw/aw_target_path/simulation.log`, `formal_prove/logfile.txt`).
 - [x] target AW ID widening and S3 legal admission pass (`results/raw/aw_target_path/simulation.log`, `formal_cover/logfile.txt`).
 - [x] D032 no same-cycle drain/refill property passes (`results/raw/aw_target_path/formal_prove/logfile.txt`, bounded depth 20).
-- [ ] production outstanding/write-owner allocation is connected to AW admission.
+- [x] focused production shared outstanding/write-owner allocation is connected to AW admission (`results/raw/write_state_bank/composition_simulation.log`, `results/raw/write_state_bank/formal_comp_prove/PASS`; one-target composition scope).
