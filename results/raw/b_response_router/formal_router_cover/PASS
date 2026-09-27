@@ -1,0 +1,24 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_70_137 at axi_b_response_router_formal.sv:70.5-71.37 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_67_128 at axi_b_response_router_formal.sv:67.5-67.40 step 2
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_66_126 at axi_b_response_router_formal.sv:66.5-66.40 step 2
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_65_124 at axi_b_response_router_formal.sv:65.5-65.40 step 2
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_64_122 at axi_b_response_router_formal.sv:64.5-64.40 step 2
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_68_130 at axi_b_response_router_formal.sv:68.5-68.63 step 3
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement axi_b_response_router_formal._witness_.check_cover_axi_b_response_router_formal_sv_69_134 at axi_b_response_router_formal.sv:69.5-69.48 step 3

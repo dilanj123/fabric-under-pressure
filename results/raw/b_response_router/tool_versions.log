@@ -1,0 +1,5 @@
+commit=f4b7701da1e050888a1b15c921dbe41567ac26e7
+verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+yosys=Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+sby=SBY v0.69
+solver=Yices 2.7.0
