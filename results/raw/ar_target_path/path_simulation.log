@@ -1,0 +1,5 @@
+PASS axi_ar_target_path_tb checks=42
+- /Users/Dilan/Projects/fabric-under-pressure/tb/directed/axi_ar_target_path_tb.sv:35: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 386ps; walltime 0.000 s; speed 4.825 us/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB

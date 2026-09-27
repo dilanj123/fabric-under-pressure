@@ -323,6 +323,8 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] QOS/age arbiter unit tests pass when B begins.
 - [x] ID mapping tests pass (`results/raw/id_mapping/simulation.log`).
 - [x] outstanding counter/bitmap tests pass (`results/raw/outstanding_tracker/simulation.log`).
+- [x] focused shared read-state bank tests pass (`results/raw/ar_target_path/bank_simulation.log`, 14 checks); four-read capacity and same-ID exclusion are covered.
+- [x] focused one-target AR admission/payload and D032 transport tests pass (`results/raw/ar_target_path/path_simulation.log`, 42 checks).
 - [ ] AW/W decoupling tests pass.
 - [ ] B path tests pass.
 - [ ] AR/R tests pass.
@@ -377,6 +379,8 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] outstanding counters cannot underflow (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).
 - [x] outstanding counters cannot exceed 4 (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).
 - [x] busy ID cannot be double-accepted (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).
+- [x] focused AR/read-state count and admission invariants pass (`results/raw/ar_target_path/formal_ar_prove/PASS`, `formal_bank_prove/PASS`; bounded depths 20 and 8).
+- [x] focused AR target slot stability, D032 no drain/refill and D036 suppression pass (`results/raw/ar_target_path/formal_ar_prove/PASS`).
 - [ ] R route only targets valid outstanding manager/ID under assumptions.
 - [ ] cover statements show meaningful states are reachable.
 - [ ] every proof summary records mode/depth/engine/assumptions.

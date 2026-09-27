@@ -1,0 +1,21 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_ar_target_path_formal._witness_.check_cover_axi_ar_target_path_formal_sv_81_187 at axi_ar_target_path_formal.sv:81.5-81.63 step 3
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_ar_target_path_formal._witness_.check_cover_axi_ar_target_path_formal_sv_83_195 at axi_ar_target_path_formal.sv:83.5-83.63 step 3
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_ar_target_path_formal._witness_.check_cover_axi_ar_target_path_formal_sv_82_191 at axi_ar_target_path_formal.sv:82.5-82.63 step 3
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_ar_target_path_formal._witness_.check_cover_axi_ar_target_path_formal_sv_84_199 at axi_ar_target_path_formal.sv:84.5-84.56 step 4
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_ar_target_path_formal._witness_.check_cover_axi_ar_target_path_formal_sv_85_203 at axi_ar_target_path_formal.sv:85.5-85.55 step 4
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_ar_target_path_formal._witness_.check_cover_axi_ar_target_path_formal_sv_86_206 at axi_ar_target_path_formal.sv:86.5-86.61 step 5

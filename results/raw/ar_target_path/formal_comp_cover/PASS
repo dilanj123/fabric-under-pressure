@@ -1,0 +1,12 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_ar_read_state_composition_formal._witness_.check_cover_axi_ar_read_state_composition_formal_sv_56_240 at axi_ar_read_state_composition_formal.sv:56.5-56.41 step 4
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_ar_read_state_composition_formal._witness_.check_cover_axi_ar_read_state_composition_formal_sv_57_242 at axi_ar_read_state_composition_formal.sv:57.5-57.60 step 5
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_ar_read_state_composition_formal._witness_.check_cover_axi_ar_read_state_composition_formal_sv_58_246 at axi_ar_read_state_composition_formal.sv:58.5-58.37 step 5

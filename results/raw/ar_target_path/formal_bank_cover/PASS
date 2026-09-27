@@ -1,0 +1,24 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_25_125 at axi_read_state_bank_formal.sv:25.5-25.32 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_31_144 at axi_read_state_bank_formal.sv:31.5-31.45 step 3
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_26_129 at axi_read_state_bank_formal.sv:26.5-26.37 step 4
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_30_141 at axi_read_state_bank_formal.sv:30.5-30.46 step 4
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_27_132 at axi_read_state_bank_formal.sv:27.5-27.37 step 5
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_28_135 at axi_read_state_bank_formal.sv:28.5-28.37 step 6
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement axi_read_state_bank_formal._witness_.check_cover_axi_read_state_bank_formal_sv_29_138 at axi_read_state_bank_formal.sv:29.5-29.37 step 7
