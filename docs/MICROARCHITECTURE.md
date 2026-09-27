@@ -12,7 +12,7 @@ Decode AW and AR independently. Legal supported requests select one logical targ
 Manager IDs are 4 bits. Append 2-bit manager index downstream for 6-bit internal IDs. Limit to 4 outstanding read and 4 outstanding write transactions per manager, with one outstanding per ID per direction.
 
 ## 4. Write path
-Accepted AW allocates/records write route ownership. Because AXI4 has no WID, write data are forwarded in accepted address order. Target W ownership remains through WLAST handshake. B uses returned internal BID to recover manager and original ID.
+Accepted AW allocates/records shared per-manager write route ownership. Because AXI4 has no WID, W data are accepted only for a registered owner and are forwarded to that owner's target. The manager-facing W handshake captures a beat into the selected target's one-entry registered W slot; the target-facing W handshake advances owner beat accounting and releases ownership on the correct final WLAST. B uses returned internal BID to recover manager and original ID.
 
 ## 5. Read path
 AR routing uses target decode/arbitration. R returns based on widened RID. Per-manager return arbitration must not interleave beats from a burst in a way that violates the accepted subordinate stream; lock chosen return source through RLAST when needed.
@@ -35,7 +35,7 @@ manager interface
     -> target-facing AW/AR handshake
 ```
 
-There is no additional manager-side ingress request queue. The manager-facing handshake is `t_addr_accept`; the target-facing handshake consumes the already-admitted slot. Slot availability is evaluated from registered pre-state, so a slot drained on cycle N is not refilled until the following cycle. Payload and VALID remain stable while VALID is asserted and READY is low. W, B and R retain their independent registered ready/valid boundary semantics. Architectures A and B use the same address-slot placement and depth.
+There is no additional manager-side ingress request queue. The manager-facing handshake is `t_addr_accept`; the target-facing handshake consumes the already-admitted slot. Slot availability is evaluated from registered pre-state, so a slot drained on cycle N is not refilled until the following cycle. Payload and VALID remain stable while VALID is asserted and READY is low. W uses a common one-entry target holding slot with no manager-side W FIFO. A non-final target W handshake may drain and refill the slot in the same cycle; a final WLAST slot may not refill on its target handshake. Manager WREADY is asserted only for the registered owner of this target. B and R retain their independent registered ready/valid boundary semantics. Architectures A and B use identical W datapath/buffering.
 
 ## 7a. Exact state decomposition
 

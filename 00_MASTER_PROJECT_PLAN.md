@@ -398,7 +398,7 @@ AXI4 has no WID, so write routing is frozen as follows:
    - that manager ID is not busy;
    - request fields satisfy the documented subset;
    - its decoded target can accept a new write owner.
-3. When AW handshakes to the selected subordinate, the fabric records the manager/target as the write-data ownership context.
+3. When AW handshakes at the manager-facing Fabric interface after successful target selection/admission, the Fabric atomically records the outstanding write and registered write-data ownership context. The registered target-facing AW slot may handshake with the selected subordinate later; that later target-side AW handshake does not allocate transaction state.
 4. `WREADY` for that manager is not asserted until a valid AW context has been accepted and registered. Therefore W may legally arrive before AW and simply waits; the fabric never assumes simultaneous AW/W.
 5. The selected subordinate accepts no second AW from any manager until the current owner's `WLAST` beat handshakes.
 6. Every W beat is routed only to the subordinate recorded by the current write ownership context.
