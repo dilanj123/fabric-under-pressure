@@ -128,6 +128,7 @@ No AXI functional correctness or performance evidence exists yet.
 | ID | Class | Claim | Evidence | Status |
 |---|---|---|---|---|
 | WTP-E001 | SIM | one-target owner-directed W routing, W-before-AW blocking, target stalls, non-final drain/refill, final no-refill and conflict protection pass | `results/raw/w_target_path/standalone_simulation.log` | PASS; 15 self-checking checks |
+| WTP-E001a | SIM | parameterized owner routing selects only the matching target for S0, S1, S2 and S3 | `results/raw/w_target_path/route_simulation.log` | PASS; 32 self-checking checks |
 | WTP-E002 | SIM | focused AW/state/W composition allocates shared state at AW admission, routes W from the registered owner and keeps outstanding state through WLAST until B | `results/raw/w_target_path/composition_simulation.log` | PASS; 14 self-checking checks |
 | WTP-E003 | FORMAL | one-target WREADY ownership, one-hot fire, stalled payload stability, target-only owner events and final-beat no-refill pass | `results/raw/w_target_path/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 20 |
 | WTP-E004 | FORMAL | one-target W covers reach pending-before-owner, accepted, stalled, non-final drain/refill, final delivery and conflict states | `results/raw/w_target_path/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 24 |

@@ -20,6 +20,12 @@ verilator --binary --timing --top-module axi_w_target_path_tb \
   "$ROOT/tb/directed/axi_w_target_path_tb.sv" 2>&1 | tee "$OUT/verilator_standalone_build.log"
 "$BUILD/standalone/axi_w_target_path_tb" 2>&1 | tee "$OUT/standalone_simulation.log"
 
+verilator --binary --timing --top-module axi_w_target_route_tb \
+  --Mdir "$BUILD/routes" -o axi_w_target_route_tb \
+  "$ROOT/rtl/axi_w_target_path.sv" \
+  "$ROOT/tb/directed/axi_w_target_route_tb.sv" 2>&1 | tee "$OUT/verilator_route_build.log"
+"$BUILD/routes/axi_w_target_route_tb" 2>&1 | tee "$OUT/route_simulation.log"
+
 verilator --binary --timing --top-module axi_aw_w_state_composition_tb \
   --Mdir "$BUILD/composition" -o axi_aw_w_state_composition_tb \
   "$ROOT/rtl/axi_outstanding_tracker.sv" \

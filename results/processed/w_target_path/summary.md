@@ -9,6 +9,7 @@ One parameterized logical-target W path, driven only by registered shared write-
 - `./scripts/run_w_target_path_checks.sh` — exit 0.
 - Verilator 5.053 devel (`v5.052-119-g014c9820d`) lint/build — exit 0.
 - `axi_w_target_path_tb` — PASS, 15 checks.
+- `axi_w_target_route_tb` — PASS, 32 checks across TARGET_INDEX 0, 1, 2 and 3.
 - `axi_aw_w_state_composition_tb` — PASS, 14 checks.
 - `yosys -Q -p "read_verilog -sv rtl/axi_w_target_path.sv; synth_ecp5 -top axi_w_target_path -json results/raw/w_target_path/axi_w_target_path_ecp5.json; stat"` — exit 0; Yosys found 0 structural problems.
 - `sby -f -d results/raw/w_target_path/formal_prove axi_w_target_path.sby prove` — PASS, smtbmc/Yices, bounded BMC depth 20.
@@ -18,7 +19,7 @@ One parameterized logical-target W path, driven only by registered shared write-
 
 ## Simulation scope
 
-The standalone suite checks W-before-AW blocking, owner-only WREADY, target routing, final-beat stall stability, target-side owner progress, non-final drain/refill, final no-refill, wrong-target blocking and conflicting-owner suppression. The composition suite checks AW admission into shared owner/outstanding state, W-before-AW, same-cycle AW/W behavior, target-stalled final W, target-side owner release while outstanding remains until B, and manager-indexed state behavior.
+The standalone suite checks W-before-AW blocking, owner-only WREADY, target routing, final-beat stall stability, target-side owner progress, non-final drain/refill, final no-refill, wrong-target blocking and conflicting-owner suppression. The four-instance route suite checks that only the target matching the registered owner accepts and delivers W for S0, S1, S2 and S3. The composition suite checks AW admission into shared owner/outstanding state, W-before-AW, same-cycle AW/W behavior, target-stalled final W, target-side owner release while outstanding remains until B, and manager-indexed state behavior.
 
 ## Formal scope
 
