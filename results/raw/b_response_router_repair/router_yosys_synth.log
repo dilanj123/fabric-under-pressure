@@ -3954,7 +3954,7 @@ ABC: Node =    2503.  Ch =   291.  Total mem =    0.54 MB. Peak cut mem =    0.0
 ABC: P:  Del = 5339.00.  Ar =    1628.0.  Edge =     1882.  Cut =    25567.  T =     0.00 sec
 ABC: P:  Del = 5339.00.  Ar =    1539.0.  Edge =     1821.  Cut =    25247.  T =     0.00 sec
 ABC: P:  Del = 5339.00.  Ar =    1192.0.  Edge =     2249.  Cut =    39843.  T =     0.01 sec
-ABC: F:  Del = 5339.00.  Ar =     921.0.  Edge =     2077.  Cut =    30778.  T =     0.00 sec
+ABC: F:  Del = 5339.00.  Ar =     921.0.  Edge =     2077.  Cut =    30778.  T =     0.01 sec
 ABC: A:  Del = 5337.00.  Ar =     811.0.  Edge =     1790.  Cut =    28888.  T =     0.01 sec
 ABC: A:  Del = 5335.00.  Ar =     780.0.  Edge =     1784.  Cut =    28911.  T =     0.01 sec
 ABC: Total time =     0.03 sec
@@ -4482,6 +4482,6 @@ Found and reported 0 problems.
 
 Warnings: 1 unique messages, 1 total
 Warnings: 1 experimental features used (not excluded with -x).
-End of script. Logfile hash: c9331a34c3, time: 0.92s, user: 0.60s, system: 0.03s, MEM: 73.44 MB peak
+End of script. Logfile hash: 3ffa2a05d0, time: 0.93s, user: 0.61s, system: 0.03s, MEM: 73.42 MB peak
 Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
-Time spent: 32% 1x abc9_exe (0 sec), 26% 22x read_verilog (0 sec), ...
+Time spent: 32% 1x abc9_exe (0 sec), 25% 22x read_verilog (0 sec), ...
