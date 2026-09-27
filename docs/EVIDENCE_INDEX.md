@@ -140,7 +140,7 @@ No AXI functional correctness or performance evidence exists yet.
 
 | ID | Class | Claim | Evidence | Status |
 |---|---|---|---|---|
-| B-E001 | SIM | standalone four-source RR and focused per-manager B routing pass contention, backpressure, validation, BRESP, S3 and reset checks | `results/raw/b_response_router/rr4_simulation.log`, `router_simulation.log` | PASS; 15 RR4 checks and 15 router checks |
+| B-E001 | SIM | standalone four-source RR and focused per-manager B routing pass contention, backpressure, validation, BRESP, S3 and reset checks | `results/raw/b_response_router/rr4_simulation.log`, `router_simulation.log` | PASS; 79 RR4 checks including the exhaustive 4×16 table and 15 router checks |
 | B-E002 | SIM | focused B router plus shared write-state composition separates target B admission from manager B completion and preserves same-ID pre-state reuse | `results/raw/b_response_router/composition_simulation.log` | PASS; 8 checks |
 | B-E003 | FORMAL | RR4 safety, hold/pointer behavior and four-source covers pass | `results/raw/b_response_router/formal_rr4_prove/logfile.txt`, `formal_rr4_cover/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 16 and cover depth 20 |
 | B-E004 | FORMAL | B validation, registered slot gating, completion mapping and manager-valid wiring pass under documented target-source stability assumptions | `results/raw/b_response_router/formal_router_prove/logfile.txt`, `formal_router_cover/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 20 and cover depth 24 |

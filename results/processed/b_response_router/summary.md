@@ -12,7 +12,7 @@ The script ran Verilator lint/build/simulation, ECP5-targeted Yosys synthesis, a
 
 ## Simulation
 
-- `axi_rr_arbiter_4_tb`: PASS, 15 self-checking checks. Reset-to-S0, held grant, cyclic rotation, subsets, withdrawal and reset-during-hold are covered.
+- `axi_rr_arbiter_4_tb`: PASS, 79 self-checking checks. This includes the exhaustive 4 pointer states × 16 request masks table, reset-to-S0, held grant, cyclic rotation, subsets, withdrawal and reset-during-hold.
 - `axi_b_response_router_tb`: PASS, 15 self-checking checks. All-four same-manager contention, RR continuation, manager backpressure, invalid prefix, nonbusy ID, different-manager concurrency with the same visible ID, BRESP propagation, S3 transport and reset are covered.
 - `axi_b_write_state_composition_tb`: PASS, 8 self-checking checks. Target B admission does not complete the write; manager B handshake clears the outstanding entry; owner release remains separate; same-ID reuse is blocked on the completion cycle and available on the following cycle.
 
