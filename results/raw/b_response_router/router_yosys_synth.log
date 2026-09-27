@@ -4248,6 +4248,6 @@ Found and reported 0 problems.
 
 Warnings: 1 unique messages, 1 total
 Warnings: 1 experimental features used (not excluded with -x).
-End of script. Logfile hash: 90a7e053c3, time: 1.04s, user: 0.71s, system: 0.04s, MEM: 68.25 MB peak
+End of script. Logfile hash: 90a7e053c3, time: 1.06s, user: 0.72s, system: 0.04s, MEM: 68.53 MB peak
 Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
 Time spent: 30% 1x abc9_exe (0 sec), 28% 22x read_verilog (0 sec), ...
