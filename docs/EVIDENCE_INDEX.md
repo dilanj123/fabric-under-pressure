@@ -145,3 +145,15 @@ No AXI functional correctness or performance evidence exists yet.
 | B-E003 | FORMAL | RR4 safety, hold/pointer behavior and four-source covers pass | `results/raw/b_response_router/formal_rr4_prove/logfile.txt`, `formal_rr4_cover/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 16 and cover depth 20 |
 | B-E004 | FORMAL | B validation, registered slot gating, completion mapping and manager-valid wiring pass under documented target-source stability assumptions | `results/raw/b_response_router/formal_router_prove/logfile.txt`, `formal_router_cover/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 20 and cover depth 24 |
 | B-E005 | SYNTH | RR4 and registered B response router complete ECP5-targeted Yosys synthesis | `results/raw/b_response_router/rr4_yosys_synth.log`, `router_yosys_synth.log`, `results/processed/b_response_router/summary.md` | PASS; primitive/path evidence only, no Fabric PPA claim |
+
+The initial B-router functional entries above are retained as historical evidence for the pre-repair implementation. A live audit found that an occupied manager B slot could retain a target grant and that slot capture was not explicitly derived from the target handshake. The repair evidence below is authoritative for current B-router functional claims.
+
+## B response router backpressure repair evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| BR-E001 | SIM | repaired B router rejects occupied-slot overwrite, blocks all same-manager target responses while the manager slot is stalled, preserves slot payload/source and resumes RR after completion | `results/raw/b_response_router_repair/router_simulation.log` | PASS; 36 self-checking checks, including the mandatory two-response and four-pending-target regressions; the same reproducer aborts on the pre-repair `f57b4fd` RTL in a temporary checkout |
+| BR-E002 | SIM | RR4 and repaired B-router plus shared write-state regressions pass | `results/raw/b_response_router_repair/rr4_simulation.log`, `composition_simulation.log` | PASS; 79 RR4 checks and 8 write-state composition checks |
+| BR-E003 | FORMAL | per-target source stability assumptions, occupied-slot arbitration suppression, target-handshake admission correspondence, completion separation and validation safety pass | `results/raw/b_response_router_repair/formal_router_prove/logfile.txt` | PASS; Yices via SBY smtbmc bounded BMC depth 20 |
+| BR-E004 | FORMAL | repaired B-router covers target selection, manager stall and validation states under the repaired registered-slot lifecycle | `results/raw/b_response_router_repair/formal_router_cover/logfile.txt` | PASS; Yices via SBY bounded cover depth 32 |
+| BR-E005 | SYNTH | repaired registered B response router completes ECP5-targeted Yosys synthesis | `results/raw/b_response_router_repair/router_yosys_synth.log`, `results/processed/b_response_router_repair/summary.md` | PASS; 598 LUT4, 61 TRELLIS_FF, 128 PFUMX, 48 L6MUX21; primitive/path evidence only, no Fabric PPA claim |

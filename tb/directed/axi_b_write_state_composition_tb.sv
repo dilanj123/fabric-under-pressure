@@ -30,6 +30,7 @@ module axi_b_write_state_composition_tb;
   logic [2:0] router_b_complete_fire;
   logic [2:0][3:0] router_b_complete_id;
   logic [3:0] invalid_manager_violation, nonbusy_id_violation;
+  logic [2:0] response_admit_fire;
   logic [2:0] slot_valid;
   logic [2:0][1:0] slot_source_target;
   integer checks = 0;
@@ -41,7 +42,7 @@ module axi_b_write_state_composition_tb;
     .manager_bvalid, .manager_bid, .manager_bresp, .manager_bready,
     .manager_b_fire, .b_complete_fire(router_b_complete_fire),
     .b_complete_id(router_b_complete_id), .invalid_manager_violation,
-    .nonbusy_id_violation, .slot_valid, .slot_source_target
+    .nonbusy_id_violation, .response_admit_fire, .slot_valid, .slot_source_target
   );
   assign b_complete_fire = router_b_complete_fire;
   assign b_complete_id = router_b_complete_id;

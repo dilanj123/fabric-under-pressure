@@ -23,21 +23,22 @@ module axi_b_response_router (
 
   output logic [3:0]       invalid_manager_violation,
   output logic [3:0]       nonbusy_id_violation,
+  output logic [2:0]       response_admit_fire,
   output logic [2:0]       slot_valid,
   output logic [2:0][1:0]  slot_source_target
 );
-  logic [2:0][3:0] candidate_request;
+  logic [2:0][3:0] raw_candidate_request;
+  logic [2:0][3:0] arbiter_request;
   logic [2:0][3:0] arb_grant;
   logic [2:0] arb_grant_valid;
   logic [2:0][1:0] arb_selected;
   logic [2:0] arb_ready;
   logic [2:0] slot_can_accept;
-  logic [2:0] response_admit_fire;
   logic [3:0] validated_response;
   logic [2:0][3:0] slot_bid_q;
   logic [2:0][1:0] slot_bresp_q;
   logic [2:0][1:0] slot_source_q;
-  integer response_m, comb_m, comb_t, seq_m;
+  integer response_m, comb_m, comb_t, arb_m, seq_m;
 
   function automatic logic busy_for(
       input logic [1:0] manager_index,
@@ -76,13 +77,7 @@ module axi_b_response_router (
   endfunction
 
   always_comb begin
-    response_admit_fire = 3'b000;
-    for (response_m = 0; response_m < 3; response_m = response_m + 1)
-      response_admit_fire[response_m] = |(arb_grant[response_m] & validated_response);
-  end
-
-  always_comb begin
-    candidate_request = '0;
+    raw_candidate_request = '0;
     validated_response = 4'b0;
     invalid_manager_violation = 4'b0;
     nonbusy_id_violation = 4'b0;
@@ -94,7 +89,7 @@ module axi_b_response_router (
             if (!busy_for(2'b00, id_for(comb_t)))
               nonbusy_id_violation[comb_t] = 1'b1;
             else begin
-              candidate_request[0][comb_t] = 1'b1;
+              raw_candidate_request[0][comb_t] = 1'b1;
               validated_response[comb_t] = 1'b1;
             end
           end
@@ -102,7 +97,7 @@ module axi_b_response_router (
             if (!busy_for(2'b01, id_for(comb_t)))
               nonbusy_id_violation[comb_t] = 1'b1;
             else begin
-              candidate_request[1][comb_t] = 1'b1;
+              raw_candidate_request[1][comb_t] = 1'b1;
               validated_response[comb_t] = 1'b1;
             end
           end
@@ -110,7 +105,7 @@ module axi_b_response_router (
             if (!busy_for(2'b10, id_for(comb_t)))
               nonbusy_id_violation[comb_t] = 1'b1;
             else begin
-              candidate_request[2][comb_t] = 1'b1;
+              raw_candidate_request[2][comb_t] = 1'b1;
               validated_response[comb_t] = 1'b1;
             end
           end
@@ -121,18 +116,22 @@ module axi_b_response_router (
 
     for (comb_m = 0; comb_m < 3; comb_m = comb_m + 1) begin
       slot_can_accept[comb_m] = ARESETn && !slot_valid[comb_m];
-      // Do not select a successor on the same edge that fills the slot.
-      if (response_admit_fire[comb_m])
-        candidate_request[comb_m] = 4'b0000;
       arb_ready[comb_m] = slot_can_accept[comb_m] &&
                           arb_grant_valid[comb_m] &&
                           (|(arb_grant[comb_m] & validated_response));
     end
 
     target_bready = 4'b0000;
-    for (comb_m = 0; comb_m < 3; comb_m = comb_m + 1)
-      if (slot_can_accept[comb_m])
-        target_bready = target_bready | (arb_grant[comb_m] & validated_response);
+    for (comb_t = 0; comb_t < 4; comb_t = comb_t + 1) begin
+      if (validated_response[comb_t]) begin
+        case (manager_for(comb_t))
+          2'b00: if (!slot_valid[0]) target_bready[comb_t] = arb_grant[0][comb_t];
+          2'b01: if (!slot_valid[1]) target_bready[comb_t] = arb_grant[1][comb_t];
+          2'b10: if (!slot_valid[2]) target_bready[comb_t] = arb_grant[2][comb_t];
+          default: target_bready[comb_t] = 1'b0;
+        endcase
+      end
+    end
     target_b_fire = target_bvalid & target_bready;
 
     manager_bvalid = slot_valid;
@@ -141,6 +140,24 @@ module axi_b_response_router (
     manager_b_fire = manager_bvalid & manager_bready;
     b_complete_fire = manager_b_fire;
     b_complete_id = manager_bid;
+  end
+
+  always_comb begin
+    // Admission is the actual target-side B handshake, never merely a
+    // registered grant plus a currently valid response.
+    response_admit_fire = 3'b000;
+    for (response_m = 0; response_m < 3; response_m = response_m + 1)
+      response_admit_fire[response_m] = |(arb_grant[response_m] & target_b_fire);
+  end
+
+  always_comb begin
+    arbiter_request = raw_candidate_request;
+    for (arb_m = 0; arb_m < 3; arb_m = arb_m + 1) begin
+      // D035: do not preselect behind an occupied manager slot.
+      // Also suppress same-edge successor lookahead after an admission.
+      if (slot_valid[arb_m] || response_admit_fire[arb_m])
+        arbiter_request[arb_m] = 4'b0000;
+    end
   end
 
   genvar g;
@@ -152,7 +169,7 @@ module axi_b_response_router (
       axi_rr_arbiter_4 u_rr (
         .ACLK(ACLK),
         .ARESETn(ARESETn),
-        .request(candidate_request[g]),
+        .request(arbiter_request[g]),
         .downstream_ready(arb_ready[g]),
         .grant(arb_grant[g]),
         .grant_valid(arb_grant_valid[g]),

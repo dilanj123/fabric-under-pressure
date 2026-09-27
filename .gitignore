@@ -115,3 +115,13 @@ results/raw/b_response_router/formal_*/engine_*/
 results/raw/b_response_router/formal_*/config.sby
 results/raw/b_response_router/formal_*/status
 results/raw/b_response_router/formal_*/*.xml
+
+results/raw/b_response_router_repair/sim_work/
+results/raw/b_response_router_repair/**/model/
+results/raw/b_response_router_repair/**/src/
+results/raw/b_response_router_repair/**/status.sqlite
+results/raw/b_response_router_repair/**/*.json
+results/raw/b_response_router_repair/formal_*/engine_*/
+results/raw/b_response_router_repair/formal_*/config.sby
+results/raw/b_response_router_repair/formal_*/status
+results/raw/b_response_router_repair/formal_*/*.xml

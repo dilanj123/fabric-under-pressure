@@ -156,11 +156,11 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] simultaneous R availability from multiple subordinates test passes.
 - [ ] R backpressure maintains lock/payload.
 - [ ] RLAST frees burst lock exactly once.
-- [x] focused B response validation rejects invalid manager-index code (`results/raw/b_response_router/router_simulation.log`, `formal_router_prove/logfile.txt`; router scope).
-- [x] focused B response validation rejects non-busy ID (`results/raw/b_response_router/router_simulation.log`, `formal_router_prove/logfile.txt`; router scope).
-- [x] focused simultaneous B responses from multiple targets and different managers pass (`results/raw/b_response_router/router_simulation.log`; router scope).
-- [x] focused manager B payload stability under backpressure passes (`results/raw/b_response_router/router_simulation.log`; router scope).
-- [x] focused widened BID strip/manager routing and manager-facing completion event pass (`results/raw/b_response_router/router_simulation.log`, `composition_simulation.log`; router/state scope).
+- [x] focused B response validation rejects invalid manager-index code (`results/raw/b_response_router_repair/router_simulation.log`, `formal_router_prove/logfile.txt`; repaired router scope).
+- [x] focused B response validation rejects non-busy ID (`results/raw/b_response_router_repair/router_simulation.log`, `formal_router_prove/logfile.txt`; repaired router scope).
+- [x] focused simultaneous B responses from multiple targets and different managers pass (`results/raw/b_response_router_repair/router_simulation.log`, `composition_simulation.log`; focused router/state scope).
+- [x] focused manager B payload stability and occupied-slot no-overwrite regression pass (`results/raw/b_response_router_repair/router_simulation.log`, `formal_router_prove/logfile.txt`; repaired router scope).
+- [x] focused widened BID strip/manager routing and manager-facing completion event pass (`results/raw/b_response_router_repair/router_simulation.log`, `composition_simulation.log`; repaired router/state scope).
 
 ---
 

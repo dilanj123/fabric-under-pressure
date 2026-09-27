@@ -11,6 +11,7 @@ module axi_b_response_router_tb;
   logic [2:0][1:0] manager_bresp;
   logic [2:0] b_complete_fire, slot_valid;
   logic [3:0] invalid_manager_violation, nonbusy_id_violation;
+  logic [2:0] response_admit_fire;
   logic [2:0][1:0] slot_source_target;
   integer checks=0;
 
@@ -51,8 +52,61 @@ module axi_b_response_router_tb;
                                     "manager handshake is completion event");
     tick(); check(!manager_bvalid[0], "manager completion clears slot");
     target_bvalid[0]=0;
-    #1; check(target_bready==4'b0010 && target_b_fire==4'b0010, "RR selects S1");
+    tick(); check(target_bready==4'b0010 && target_b_fire==4'b0010, "RR selects S1");
     tick(); check(manager_bid[0]==4'h1 && manager_bresp[0]==2'b10, "S1 response preserved");
+
+    // Regression for the occupied-slot overwrite bug: a held response for
+    // the same manager must not be preselected or admitted while B stalls.
+    reset_router();
+    busy_bitmap[0][0]=1; busy_bitmap[0][1]=1;
+    target_bvalid=4'b0011;
+    target_bid[0]={2'b00,4'h0}; target_bid[1]={2'b00,4'h1};
+    target_bresp[0]=2'b00; target_bresp[1]=2'b10;
+    tick(); check(target_bready==4'b0001 && target_b_fire==4'b0001,
+                  "overwrite regression admits first response");
+    tick();
+    check(slot_valid[0] && slot_source_target[0]==2'b00 && manager_bid[0]==4'h0,
+          "overwrite regression fills S0 slot");
+    manager_bready[0]=0;
+    repeat (4) begin
+      #1;
+      check(!target_bready[1] && !target_b_fire[1],
+            "occupied slot blocks pending S1 handshake");
+      check(slot_valid[0] && slot_source_target[0]==2'b00 && manager_bid[0]==4'h0 &&
+            manager_bresp[0]==2'b00 && !manager_b_fire[0] && !response_admit_fire[0],
+            "occupied slot remains stable without completion");
+      tick();
+    end
+    manager_bready[0]=1;
+    #1; check(manager_b_fire[0] && b_complete_fire[0] && !response_admit_fire[0],
+              "stalled slot completes without same-cycle refill");
+    tick();
+    check(!manager_bvalid[0] && !target_b_fire[1],
+          "slot drains before pending response is reconsidered");
+    tick(); check(target_bready[1] && target_b_fire[1],
+              "pending response resumes after slot becomes empty");
+    tick(); check(manager_bid[0]==4'h1 && manager_bresp[0]==2'b10,
+                  "pending response reaches manager after stall");
+
+    // Repeat with all other target sources pending for the occupied manager.
+    reset_router();
+    busy_bitmap[0][0]=1; busy_bitmap[0][1]=1; busy_bitmap[0][2]=1; busy_bitmap[0][3]=1;
+    target_bvalid=4'b1111;
+    target_bid[0]={2'b00,4'h0}; target_bid[1]={2'b00,4'h1};
+    target_bid[2]={2'b00,4'h2}; target_bid[3]={2'b00,4'h3};
+    tick(); check(target_bready==4'b0001 && target_b_fire==4'b0001,
+                  "all-pending regression admits first response");
+    tick(); manager_bready[0]=0;
+    repeat (4) begin
+      #1;
+      check(target_bready==4'b0000 && target_b_fire==4'b0000 &&
+            manager_bvalid[0] && manager_bid[0]==4'h0 && slot_source_target[0]==2'b00,
+            "all pending responses blocked by occupied slot");
+      tick();
+    end
+    manager_bready[0]=1; #1; check(manager_b_fire[0] && !response_admit_fire[0],
+                                    "all-pending slot completion has no refill");
+    tick(); check(!manager_bvalid[0], "all-pending slot drains cleanly");
 
     // Invalid prefix and non-busy ID are rejected.
     reset_router();
