@@ -1,0 +1,5 @@
+PASS axi_r_burst_lengths_tb checks=50
+- /Users/Dilan/Projects/fabric-under-pressure/tb/directed/axi_r_burst_lengths_tb.sv:31: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 366ps; walltime 0.000 s; speed 7.957 us/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB

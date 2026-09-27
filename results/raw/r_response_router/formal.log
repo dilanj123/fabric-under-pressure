@@ -1,0 +1,140 @@
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove'.
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_4.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove/src/axi_rr_arbiter_4.sv'.
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_r_response_router.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove/src/axi_r_response_router.sv'.
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_r_response_router_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove/src/axi_r_response_router_formal.sv'.
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: smtbmc yices
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] base: finished (returncode=0)
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] prep: finished (returncode=0)
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] smt2: finished (returncode=0)
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove; yosys-smtbmc -s yices --presat --unroll --noprogress -t 24  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  0:06:13 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  0:06:14 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:01  Checking assumptions in step 10..
+SBY  0:06:15 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:01  Checking assertions in step 10..
+SBY  0:06:15 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:01  Checking assumptions in step 11..
+SBY  0:06:15 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:02  Checking assertions in step 11..
+SBY  0:06:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:02  Checking assumptions in step 12..
+SBY  0:06:16 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:02  Checking assertions in step 12..
+SBY  0:06:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:03  Checking assumptions in step 13..
+SBY  0:06:17 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:03  Checking assertions in step 13..
+SBY  0:06:18 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:04  Checking assumptions in step 14..
+SBY  0:06:18 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:04  Checking assertions in step 14..
+SBY  0:06:19 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:05  Checking assumptions in step 15..
+SBY  0:06:19 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:05  Checking assertions in step 15..
+SBY  0:06:20 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:06  Checking assumptions in step 16..
+SBY  0:06:20 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:06  Checking assertions in step 16..
+SBY  0:06:21 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:07  Checking assumptions in step 17..
+SBY  0:06:21 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:07  Checking assertions in step 17..
+SBY  0:06:22 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:08  Checking assumptions in step 18..
+SBY  0:06:22 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:08  Checking assertions in step 18..
+SBY  0:06:24 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:10  Checking assumptions in step 19..
+SBY  0:06:24 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:10  Checking assertions in step 19..
+SBY  0:06:26 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:12  Checking assumptions in step 20..
+SBY  0:06:26 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:12  Checking assertions in step 20..
+SBY  0:06:27 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:14  Checking assumptions in step 21..
+SBY  0:06:27 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:14  Checking assertions in step 21..
+SBY  0:06:29 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:16  Checking assumptions in step 22..
+SBY  0:06:29 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:16  Checking assertions in step 22..
+SBY  0:06:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:18  Checking assumptions in step 23..
+SBY  0:06:32 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:18  Checking assertions in step 23..
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: ##   0:00:21  Status: passed
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: finished (returncode=0)
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] engine_0: Status returned by engine: pass
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:22 (22)
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:22 (22)
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] summary: engine_0 (smtbmc yices) returned pass
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] summary: engine_0 did not produce any traces
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_prove] DONE (PASS, rc=0)
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover'.
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_rr_arbiter_4.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/src/axi_rr_arbiter_4.sv'.
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_r_response_router.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/src/axi_r_response_router.sv'.
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_r_response_router_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/src/axi_r_response_router_formal.sv'.
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: smtbmc yices
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] base: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] base: finished (returncode=0)
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] prep: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] prep: finished (returncode=0)
+SBY  0:06:35 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] smt2: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] smt2: finished (returncode=0)
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: starting process "cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover; yosys-smtbmc -s yices --presat --unroll -c --noprogress -t 32  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Solver: yices
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 4 at axi_r_response_router_formal: axi_r_response_router_formal.sv:117.5-117.45 (_witness_.check_cover_axi_r_response_router_formal_sv_117_636)
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 5 at axi_r_response_router_formal: axi_r_response_router_formal.sv:118.5-118.54 (_witness_.check_cover_axi_r_response_router_formal_sv_118_638)
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 5 at axi_r_response_router_formal: axi_r_response_router_formal.sv:120.5-120.62 (_witness_.check_cover_axi_r_response_router_formal_sv_120_648)
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Reached cover statement in step 6 at axi_r_response_router_formal: axi_r_response_router_formal.sv:119.5-119.96 (_witness_.check_cover_axi_r_response_router_formal_sv_119_641)
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY  0:06:36 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:00  Checking cover reachability in step 9..
+SBY  0:06:37 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:01  Checking cover reachability in step 10..
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:01  Checking cover reachability in step 11..
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:02  Reached cover statement in step 11 at axi_r_response_router_formal: axi_r_response_router_formal.sv:121.5-121.97 (_witness_.check_cover_axi_r_response_router_formal_sv_121_651)
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:02  Writing trace to VCD file: engine_0/trace4.vcd
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:02  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:02  Writing trace to constraints file: engine_0/trace4.smtc
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:02  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: ##   0:00:02  Status: passed
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: finished (returncode=0)
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] engine_0: Status returned by engine: pass
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: engine_0 (smtbmc yices) returned pass
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/engine_0/trace0.vcd
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary:   reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_117_636 at axi_r_response_router_formal.sv:117.5-117.45 step 4
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/engine_0/trace1.vcd
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary:   reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_118_638 at axi_r_response_router_formal.sv:118.5-118.54 step 5
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/engine_0/trace2.vcd
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary:   reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_120_648 at axi_r_response_router_formal.sv:120.5-120.62 step 5
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/engine_0/trace3.vcd
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary:   reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_119_641 at axi_r_response_router_formal.sv:119.5-119.96 step 6
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary: cover trace: /Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover/engine_0/trace4.vcd
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] summary:   reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_121_651 at axi_r_response_router_formal.sv:121.5-121.97 step 11
+SBY  0:06:38 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/r_response_router/formal_cover] DONE (PASS, rc=0)

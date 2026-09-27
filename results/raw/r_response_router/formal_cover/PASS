@@ -1,0 +1,18 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+engine_0 (smtbmc yices) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_117_636 at axi_r_response_router_formal.sv:117.5-117.45 step 4
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_118_638 at axi_r_response_router_formal.sv:118.5-118.54 step 5
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_120_648 at axi_r_response_router_formal.sv:120.5-120.62 step 5
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_119_641 at axi_r_response_router_formal.sv:119.5-119.96 step 6
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_r_response_router_formal._witness_.check_cover_axi_r_response_router_formal_sv_121_651 at axi_r_response_router_formal.sv:121.5-121.97 step 11

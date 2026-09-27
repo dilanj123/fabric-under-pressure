@@ -135,3 +135,12 @@ results/raw/ar_target_path/formal_*/engine_*/
 results/raw/ar_target_path/formal_*/config.sby
 results/raw/ar_target_path/formal_*/status
 results/raw/ar_target_path/formal_*/*.xml
+
+results/raw/r_response_router/sim_work/
+results/raw/r_response_router/**/model/
+results/raw/r_response_router/**/src/
+results/raw/r_response_router/**/status.sqlite
+results/raw/r_response_router/formal_*/engine_*/
+results/raw/r_response_router/formal_*/config.sby
+results/raw/r_response_router/formal_*/status
+results/raw/r_response_router/formal_*/*.xml

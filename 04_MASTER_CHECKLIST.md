@@ -153,9 +153,9 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] selected R subordinate locks through accepted RLAST.
 - [x] R response arbitration remains common between A/B.
 - [ ] simultaneous B from multiple subordinates test passes.
-- [ ] simultaneous R availability from multiple subordinates test passes.
-- [ ] R backpressure maintains lock/payload.
-- [ ] RLAST frees burst lock exactly once.
+- [x] focused simultaneous R availability from multiple subordinates passes (`results/raw/r_response_router/router_simulation.log`; 34 checks).
+- [x] focused R backpressure maintains lock/payload (`results/raw/r_response_router/router_simulation.log`, `formal_prove/logfile.txt`).
+- [x] focused RLAST frees burst lock exactly once (`results/raw/r_response_router/router_simulation.log`, `burst_simulation.log`, `formal_prove/logfile.txt`).
 - [x] focused B response validation rejects invalid manager-index code (`results/raw/b_response_router_repair/router_simulation.log`, `formal_router_prove/logfile.txt`; repaired router scope).
 - [x] focused B response validation rejects non-busy ID (`results/raw/b_response_router_repair/router_simulation.log`, `formal_router_prove/logfile.txt`; repaired router scope).
 - [x] focused simultaneous B responses from multiple targets and different managers pass (`results/raw/b_response_router_repair/router_simulation.log`, `composition_simulation.log`; focused router/state scope).
@@ -381,9 +381,9 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] busy ID cannot be double-accepted (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).
 - [x] focused AR/read-state count and admission invariants pass (`results/raw/ar_target_path/formal_ar_prove/PASS`, `formal_bank_prove/PASS`; bounded depths 20 and 8).
 - [x] focused AR target slot stability, D032 no drain/refill and D036 suppression pass (`results/raw/ar_target_path/formal_ar_prove/PASS`).
-- [ ] R route only targets valid outstanding manager/ID under assumptions.
-- [ ] cover statements show meaningful states are reachable.
-- [ ] every proof summary records mode/depth/engine/assumptions.
+- [x] focused R route accepts only valid outstanding manager/ID under documented assumptions (`results/raw/r_response_router/formal_prove/logfile.txt`).
+- [x] focused R cover statements reach meaningful lock, stall, completion and concurrent-manager states (`results/raw/r_response_router/formal_cover/logfile.txt`).
+- [x] R formal summary records mode/depth/engine/assumptions (`results/processed/r_response_router/summary.md`).
 - [ ] no bounded check is described as unbounded proof.
 - [ ] whole-fabric exhaustive proof is not attempted prematurely.
 

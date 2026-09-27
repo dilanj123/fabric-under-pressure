@@ -171,3 +171,15 @@ The initial B-router functional entries above are retained as historical evidenc
 | AR-E006 | FORMAL | shared read-state count/popcount, four-entry bound, admission gating and reset/manager-state covers pass | `results/raw/ar_target_path/formal_bank_prove/logfile.txt`, `formal_bank_cover/logfile.txt` | PASS; Yices via SBY `smtbmc`, bounded BMC depth 8; cover depth 24 |
 | AR-E007 | FORMAL | one-target AR path plus shared read-state composition commits manager-facing AR admission, separates target consumption and read-state allocation, and preserves bounded count safety | `results/raw/ar_target_path/formal_comp_prove/logfile.txt`, `formal_comp_cover/logfile.txt` | PASS; Yices via SBY `smtbmc`, bounded BMC depth 12; cover depth 20 with per-manager source-stability and busy-completion assumptions |
 | AR-E008 | SYNTH | one-target AR path and shared read-state bank complete ECP5-targeted Yosys synthesis | `results/raw/ar_target_path/yosys_ar_path_synth.log`, `yosys_read_bank_synth.log`, `results/processed/ar_target_path/summary.md` | PASS; 198 LUT4/74 TRELLIS_FF path and 550 LUT4/57 TRELLIS_FF bank; primitive/composition evidence only |
+
+## Architecture-A R response routing and read completion evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| R-E001 | SIM | focused per-manager four-target R routing passes contention, burst locking, stalls/gaps, non-final drain/refill, final no-refill, validation diagnostics, same visible IDs across managers, out-of-order IDs, S3 transport and reset | `results/raw/r_response_router/router_simulation.log`, `burst_simulation.log` | PASS; 34 standalone checks and 50 burst-length checks |
+| R-E002 | SIM | focused AR/R lifecycle allocates read state on AR admission, preserves it through target R transport and clears it only on manager accepted RLAST | `results/raw/r_response_router/lifecycle_simulation.log` | PASS; 9 self-checking checks |
+| R-E003 | FORMAL | per-target source stability assumptions, target-handshake admission, validation safety, occupied-slot blocking, lock persistence, no interleaving, final no-refill and completion separation pass | `results/raw/r_response_router/formal_prove/logfile.txt` | PASS; Yices via SBY smtbmc bounded BMC depth 24 |
+| R-E004 | FORMAL | focused R lifecycle covers first admission, locked slot, locked-target gap, manager completion and concurrent manager admissions | `results/raw/r_response_router/formal_cover/logfile.txt` | PASS; Yices via SBY bounded cover depth 32 |
+| R-E005 | SYNTH | focused registered R response router completes ECP5-targeted Yosys synthesis | `results/raw/r_response_router/yosys_r_router_synth.log`, `results/processed/r_response_router/summary.md` | PASS; 1,786 LUT4, 284 TRELLIS_FF, 353 PFUMX, 102 L6MUX21; primitive/path evidence only, no Fabric PPA claim |
+
+The R evidence is scoped to the common response router and focused AR/R lifecycle composition. Recorded-target versus returned-target matching is not implemented because the current shared read-state bank does not expose the required table. S3 response generation and full four-target production integration remain future work.
