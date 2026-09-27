@@ -17,8 +17,8 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 - SV frontend, cocotb, BFM, formal, synthesis, P&R and wrapper raw evidence.
 
 ## Still unproven
-- all Fabric AXI behavior, formal properties, performance, PPA and timing;
-- any integrated Architecture-A Fabric behavior or Architecture-B RTL result.
+- integrated multi-target Fabric AXI behavior, end-to-end formal properties, performance, PPA and timing;
+- production write-state allocation, W/B/AR/R integration, or Architecture-B RTL. One-target AW admission and registered AW transport are separately evidenced.
 
 ## Risks
 Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.

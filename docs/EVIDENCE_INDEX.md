@@ -111,13 +111,3 @@ No AXI functional correctness or performance evidence exists yet.
 | AWP-E003 | FORMAL | D031 request suppression and D032 no-overwrite property pass | `results/raw/aw_target_path/formal_prove/logfile.txt` | PASS; bounded BMC depth 20 |
 | AWP-E004 | FORMAL | admissions, S3, stalls, target handshake and following-cycle drain/admit scenarios are reachable | `results/raw/aw_target_path/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 24 |
 | AWP-E005 | SYNTH | one-target Architecture-A AW path completes ECP5-targeted Yosys synthesis | `results/raw/aw_target_path/yosys_synth.log`, `axi_aw_target_path_a_ecp5.json` | PASS; 210 LUT4, 74 TRELLIS_FF, 29 PFUMX, 11 L6MUX21; path evidence only |
-
-## Architecture-A one-target AW channel path evidence
-
-| ID | Class | Claim | Evidence | Status |
-|---|---|---|---|---|
-| AWP-E001 | SIM | one-target AW manager admission, payload selection, target stall, D032 no drain/refill, blockers, reset and S3 handling pass | `results/raw/aw_target_path/simulation.log` | PASS; 23 self-checking checks |
-| AWP-E002 | FORMAL | AWREADY/fire one-hot, owner exclusion, admission safety, held-slot payload capture and stalled payload stability pass | `results/raw/aw_target_path/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 20 |
-| AWP-E003 | FORMAL | D031 request suppression and D032 no-overwrite property pass | `results/raw/aw_target_path/formal_prove/logfile.txt` | PASS; bounded BMC depth 20 |
-| AWP-E004 | FORMAL | admissions, S3, stalls, target handshake and following-cycle drain/admit scenarios are reachable | `results/raw/aw_target_path/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 24 |
-| AWP-E005 | SYNTH | one-target Architecture-A AW path completes ECP5-targeted Yosys synthesis | `results/raw/aw_target_path/yosys_synth.log`, `axi_aw_target_path_a_ecp5.json` | PASS; 210 LUT4, 74 TRELLIS_FF, 29 PFUMX, 11 L6MUX21; path evidence only |
