@@ -367,7 +367,10 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] normal-mode priority property passes.
 - [ ] starvation-escape property passes under explicit assumptions.
 - [ ] write-owner uniqueness proof passes.
-- [ ] W route follows accepted AW proof passes.
+- [x] focused registered W route follows the accepted AW owner (`results/raw/w_target_path/composition_simulation.log`, `formal_prove/PASS`; one target only).
+- [x] W-before-AW, AW-before-W and same-cycle AW/W checks pass at focused AW/state/W scope (`results/raw/w_target_path/composition_simulation.log`).
+- [x] stalled W payload stability and final-WLAST no-refill checks pass (`results/raw/w_target_path/standalone_simulation.log`, `formal_prove/logfile.txt`).
+- [ ] complete four-target W route follows accepted AW proof passes.
 - [x] outstanding counters cannot underflow (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).
 - [x] outstanding counters cannot exceed 4 (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).
 - [x] busy ID cannot be double-accepted (`results/raw/outstanding_tracker/formal_prove/logfile.txt`, bounded depth 6).

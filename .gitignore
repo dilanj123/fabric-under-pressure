@@ -88,3 +88,20 @@ results/raw/write_state_bank/formal_*[0-9]*/
 
 results/raw/write_state_bank/formal_*diag*/
 results/raw/write_state_bank/formal_*diag*.log
+results/raw/w_target_path/sim_work/
+results/raw/w_target_path/**/model/
+results/raw/w_target_path/**/src/
+results/raw/w_target_path/**/status.sqlite
+results/raw/w_target_path/**/*.json
+results/raw/w_target_path/formal_*/engine_*/
+results/raw/w_target_path/formal_*/config.sby
+results/raw/w_target_path/formal_*/status
+results/raw/w_target_path/formal_*/*.xml
+results/raw/aw_w_composition/**/model/
+results/raw/aw_w_composition/**/src/
+results/raw/aw_w_composition/**/status.sqlite
+results/raw/aw_w_composition/**/*.json
+results/raw/aw_w_composition/formal_*/engine_*/
+results/raw/aw_w_composition/formal_*/config.sby
+results/raw/aw_w_composition/formal_*/status
+results/raw/aw_w_composition/formal_*/*.xml

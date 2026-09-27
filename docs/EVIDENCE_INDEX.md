@@ -122,3 +122,15 @@ No AXI functional correctness or performance evidence exists yet.
 | AWP-E003 | FORMAL | D031 request suppression and D032 no-overwrite property pass | `results/raw/aw_target_path/formal_prove/logfile.txt` | PASS; bounded BMC depth 20 |
 | AWP-E004 | FORMAL | admissions, S3, stalls, target handshake and following-cycle drain/admit scenarios are reachable | `results/raw/aw_target_path/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 24 |
 | AWP-E005 | SYNTH | one-target Architecture-A AW path completes ECP5-targeted Yosys synthesis | `results/raw/aw_target_path/yosys_synth.log`, `axi_aw_target_path_a_ecp5.json` | PASS; 210 LUT4, 74 TRELLIS_FF, 29 PFUMX, 11 L6MUX21; path evidence only |
+
+## Registered owner-directed W target path evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| WTP-E001 | SIM | one-target owner-directed W routing, W-before-AW blocking, target stalls, non-final drain/refill, final no-refill and conflict protection pass | `results/raw/w_target_path/standalone_simulation.log` | PASS; 15 self-checking checks |
+| WTP-E002 | SIM | focused AW/state/W composition allocates shared state at AW admission, routes W from the registered owner and keeps outstanding state through WLAST until B | `results/raw/w_target_path/composition_simulation.log` | PASS; 14 self-checking checks |
+| WTP-E003 | FORMAL | one-target WREADY ownership, one-hot fire, stalled payload stability, target-only owner events and final-beat no-refill pass | `results/raw/w_target_path/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 20 |
+| WTP-E004 | FORMAL | one-target W covers reach pending-before-owner, accepted, stalled, non-final drain/refill, final delivery and conflict states | `results/raw/w_target_path/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 24 |
+| WTP-E005 | SYNTH | registered W target path completes target-aware Yosys ECP5 synthesis | `results/raw/w_target_path/yosys_synth.log`, `axi_w_target_path_ecp5.json` | PASS; 646 LUT4, 77 TRELLIS_FF, 313 PFUMX, 159 L6MUX21; primitive/path evidence only |
+| WTP-E006 | FORMAL | focused AW/state/W composition preserves owner-directed W routing and target-delivery-only owner progression | `results/raw/aw_w_composition/formal_prove/logfile.txt` | PASS; Yices via SBY, bounded BMC depth 24, documented source-stability assumptions |
+| WTP-E007 | FORMAL | focused AW/state/W composition covers stalled W, non-final delivery, final delivery and outstanding state retained after WLAST | `results/raw/aw_w_composition/formal_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 32 |

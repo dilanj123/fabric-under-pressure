@@ -1,0 +1,18 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_aw_w_state_composition_formal._witness_.check_cover_axi_aw_w_state_composition_formal_sv_120_235 at axi_aw_w_state_composition_formal.sv:120.5-120.84 step 3
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_aw_w_state_composition_formal._witness_.check_cover_axi_aw_w_state_composition_formal_sv_121_240 at axi_aw_w_state_composition_formal.sv:121.5-121.55 step 5
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_aw_w_state_composition_formal._witness_.check_cover_axi_aw_w_state_composition_formal_sv_122_244 at axi_aw_w_state_composition_formal.sv:122.5-122.72 step 5
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_aw_w_state_composition_formal._witness_.check_cover_axi_aw_w_state_composition_formal_sv_123_250 at axi_aw_w_state_composition_formal.sv:123.5-123.52 step 5
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_aw_w_state_composition_formal._witness_.check_cover_axi_aw_w_state_composition_formal_sv_124_253 at axi_aw_w_state_composition_formal.sv:124.5-124.88 step 6
