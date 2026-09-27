@@ -15,7 +15,7 @@ Manager IDs are 4 bits. Append 2-bit manager index downstream for 6-bit internal
 Accepted AW allocates/records shared per-manager write route ownership. Because AXI4 has no WID, W data are accepted only for a registered owner and are forwarded to that owner's target. The manager-facing W handshake captures a beat into the selected target's one-entry registered W slot; the target-facing W handshake advances owner beat accounting and releases ownership on the correct final WLAST. B responses decode widened BID, arbitrate S0-S3 responses independently per manager into one registered manager-facing B slot, and clear outstanding state only on the manager-facing B handshake. Invalid manager prefixes and non-busy IDs are rejected. B transport is common to Architectures A and B.
 
 ## 5. Read path
-AR routing uses target decode/arbitration. R returns based on widened RID. Per-manager return arbitration must not interleave beats from a burst in a way that violates the accepted subordinate stream; lock chosen return source through RLAST when needed.
+AR routing uses target decode/arbitration. A manager-facing AR handshake is the read admission event and allocates shared per-manager read state; target-facing AR consumption only consumes the registered address slot. The Architecture-A AR scheduler suppresses same-edge successor selection after admission, while the pointer still advances from the accepted manager. R returns based on widened RID. Per-manager return arbitration must not interleave beats from a burst in a way that violates the accepted subordinate stream; lock chosen return source through RLAST when needed.
 
 ## 6. Arbitration
 ### A — RR
