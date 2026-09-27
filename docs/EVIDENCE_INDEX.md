@@ -102,6 +102,17 @@ No AXI functional correctness or performance evidence exists yet.
 | AW-E005 | FORMAL | focused composition covers reach accepted AW and registered owner-busy/no-accept states | `results/raw/aw_target_scheduler/formal_composition_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depth 32 |
 | AW-E006 | SYNTH | target-specific AW scheduler boundary completes ECP5-targeted Yosys synthesis | `results/raw/aw_target_scheduler/yosys_synth.log`, `axi_aw_target_scheduler_a_ecp5.json` | PASS; 43 LUT4, 6 TRELLIS_FF, 16 PFUMX, 7 L6MUX21; primitive/composed-boundary evidence only |
 
+## Shared per-manager write-state evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| WS-E001 | SIM | shared three-manager write-state bank allocates outstanding and unfinished-W state atomically, enforces four writes and one owner, separates WLAST from B completion, and resets all lanes | `results/raw/write_state_bank/bank_simulation.log` | PASS; 24 self-checking checks |
+| WS-E002 | SIM | one-target AW path plus shared bank composition allocates on manager-facing AW admission, preserves state through target stall/consumption, and releases owner/outstanding state at their separate events | `results/raw/write_state_bank/composition_simulation.log` | PASS; 8 self-checking checks |
+| WS-E003 | FORMAL | shared-bank count bound and defensive invalid-admission gating pass under documented bounded event assumptions | `results/raw/write_state_bank/formal_bank_prove/logfile.txt` | PASS; Yices via SBY, smtbmc bounded BMC depth 12 |
+| WS-E004 | FORMAL | shared AW/path composition proves admission safety, target-side consumption non-allocation and one-target state composition under documented source stability and pre-existing completion assumptions | `results/raw/write_state_bank/formal_comp_prove/logfile.txt` | PASS; Yices via SBY, smtbmc bounded BMC depth 24 |
+| WS-E005 | FORMAL | shared-bank and AW/path composition covers reach populated, stalled, consumed and owner/outstanding-lifetime states | `results/raw/write_state_bank/formal_bank_cover/logfile.txt`, `formal_comp_cover/logfile.txt` | PASS; Yices via SBY, bounded cover depths 24 and 32 |
+| WS-E006 | SYNTH | shared per-manager write-state bank completes ECP5-targeted Yosys synthesis | `results/raw/write_state_bank/yosys_synth.log`, `axi_write_state_bank_ecp5.json` | PASS; 706 LUT4, 117 TRELLIS_FF, 39 CCU2C, 225 PFUMX, 147 L6MUX21; primitive/composition evidence only, not Fabric PPA |
+
 ## Architecture-A one-target AW channel path evidence
 
 | ID | Class | Claim | Evidence | Status |

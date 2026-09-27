@@ -1,0 +1,25 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_150_299 at axi_aw_write_state_composition_formal.sv:150.5-150.66 step 4
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_149_295 at axi_aw_write_state_composition_formal.sv:149.5-149.66 step 4
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_148_291 at axi_aw_write_state_composition_formal.sv:148.5-148.66 step 4
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_151_303 at axi_aw_write_state_composition_formal.sv:151.5-151.81 step 5
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_154_314 at axi_aw_write_state_composition_formal.sv:154.5-155.68 step 5
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_152_308 at axi_aw_write_state_composition_formal.sv:152.5-152.56 step 5
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_156_319 at axi_aw_write_state_composition_formal.sv:156.5-157.41 step 6
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement axi_aw_write_state_composition_formal._witness_.check_cover_axi_aw_write_state_composition_formal_sv_153_311 at axi_aw_write_state_composition_formal.sv:153.5-153.61 step 7

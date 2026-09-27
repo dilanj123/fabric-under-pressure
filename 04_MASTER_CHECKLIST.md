@@ -357,6 +357,10 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] one target-specific AW eligibility/RR boundary composes the required blockers and target-owner exclusion (`results/raw/aw_target_scheduler/simulation.log`).
 - [x] target-owned AW scheduling is blocked and D031 same-edge successor suppression is checked (`results/raw/aw_target_scheduler/simulation.log`, `formal_prove/logfile.txt`).
 - [x] focused AW boundary/owner composition target-uniqueness property passes under bounded assumptions (`results/raw/aw_target_scheduler/formal_composition_prove/logfile.txt`).
+- [x] shared per-manager write-state bank allocates one outstanding tracker and one unfinished-W owner per manager (`results/raw/write_state_bank/bank_simulation.log`, 24 checks).
+- [x] shared write-state admission is atomic and invalid injected admissions report without partial allocation (`results/raw/write_state_bank/bank_simulation.log`, `formal_bank_prove/PASS`).
+- [x] one-target AW path feeds the shared bank at manager-facing admission; target AW consumption does not allocate state again (`results/raw/write_state_bank/composition_simulation.log`, 8 checks; `formal_comp_prove/PASS`).
+- [x] shared write-state bank completes target-aware Yosys synthesis (`results/raw/write_state_bank/yosys_synth.log`).
 - [ ] QOS one-hot proof passes.
 - [ ] QOS hold stability proof passes.
 - [ ] age saturation/no-wrap proof passes.

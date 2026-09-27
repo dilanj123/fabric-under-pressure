@@ -1,0 +1,34 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+Elapsed process time [H:MM:SS (secs)]: 0:00:03 (3)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_64_96 at axi_write_state_bank_formal.sv:64.5-64.42 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_69_112 at axi_write_state_bank_formal.sv:69.5-69.52 step 3
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_75_132 at axi_write_state_bank_formal.sv:75.5-76.40 step 3
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_65_100 at axi_write_state_bank_formal.sv:65.5-65.52 step 4
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_70_114 at axi_write_state_bank_formal.sv:70.5-70.63 step 4
+cover trace: engine_0/trace4.vcd
+cover trace: engine_0/trace4.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_72_123 at axi_write_state_bank_formal.sv:72.5-72.63 step 4
+cover trace: engine_0/trace5.vcd
+cover trace: engine_0/trace5.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_73_126 at axi_write_state_bank_formal.sv:73.5-74.41 step 6
+cover trace: engine_0/trace6.vcd
+cover trace: engine_0/trace6.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_66_103 at axi_write_state_bank_formal.sv:66.5-66.52 step 7
+cover trace: engine_0/trace7.vcd
+cover trace: engine_0/trace7.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_67_106 at axi_write_state_bank_formal.sv:67.5-67.52 step 10
+cover trace: engine_0/trace8.vcd
+cover trace: engine_0/trace8.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_68_109 at axi_write_state_bank_formal.sv:68.5-68.52 step 13
+cover trace: engine_0/trace9.vcd
+cover trace: engine_0/trace9.yw
+  reached cover statement axi_write_state_bank_formal._witness_.check_cover_axi_write_state_bank_formal_sv_71_118 at axi_write_state_bank_formal.sv:71.5-71.72 step 15

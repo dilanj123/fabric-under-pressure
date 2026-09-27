@@ -1,0 +1,29 @@
+%Warning-MULTITOP: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:4:8: Multiple top level modules
+                                                                                              : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... For warning description see https://verilator.org/warn/MULTITOP?v=5.053
+                   ... Use "/* verilator lint_off MULTITOP */" and lint_on around source to disable this message.
+                                                                                              : ... Top module 'axi_write_state_bank'
+    7 | module axi_write_state_bank #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                                                                                              : ... Top module 'axi_aw_target_path_a'
+    4 | module axi_aw_target_path_a #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:45:13: Signal is not used: 'outstanding_complete_known'
+                                                                                                    : ... note: In instance 'axi_write_state_bank'
+   45 |       logic outstanding_complete_known;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.053
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:48:13: Signal is not used: 'outstanding_lookup_busy'
+                                                                                                    : ... note: In instance 'axi_write_state_bank'
+   48 |       logic outstanding_lookup_busy;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:49:19: Signal is not used: 'outstanding_lookup_target'
+                                                                                                    : ... note: In instance 'axi_write_state_bank'
+   49 |       logic [3:0] outstanding_lookup_target;
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:50:19: Signal is not used: 'outstanding_lookup_len'
+                                                                                                    : ... note: In instance 'axi_write_state_bank'
+   50 |       logic [7:0] outstanding_lookup_len;
+      |                   ^~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 5 warning(s)

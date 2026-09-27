@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-26
 **Gate:** Gate 1 PASS; `kg-g1-spec` exists remotely at `aecfb8c`
-**Architecture:** planning frozen; raw-address decode, request-shape legality, manager/internal ID mapping, per-manager/per-direction outstanding tracking, Architecture-A 3-way RR arbiter, per-manager write-owner context and one target-specific Architecture-A AW eligibility/RR boundary plus one registered one-target AW channel path exist, project AXI fabric is not integrated.
+**Architecture:** planning frozen; raw-address decode, request-shape legality, manager/internal ID mapping, per-manager/per-direction outstanding tracking, Architecture-A 3-way RR arbiter, per-manager write-owner context, one target-specific Architecture-A AW eligibility/RR boundary, one registered one-target AW channel path and a shared three-manager write-state bank exist, project AXI fabric is not integrated.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -18,7 +18,7 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 
 ## Still unproven
 - integrated multi-target Fabric AXI behavior, end-to-end formal properties, performance, PPA and timing;
-- production write-state allocation, W/B/AR/R integration, or Architecture-B RTL. One-target AW admission and registered AW transport are separately evidenced.
+- production W/B/AR/R integration, multi-target state fanout, or Architecture-B RTL. One-target AW admission and registered AW transport are separately evidenced, and the shared bank is separately verified in focused bank/path composition.
 
 ## Risks
 Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.
@@ -38,6 +38,7 @@ No frozen AXI behavior changed. This task added the standalone decoder, request-
 - The standalone Architecture-A 3-way RR arbiter has directed scheduling/backpressure simulation, bounded safety/hold/pointer/selection formal evidence, bounded fairness evidence for M0, M1 and M2 under explicit continuous-request/READY assumptions, and full Yosys synthesis; no target-specific arbiter instantiation or AXI channel integration exists.
 - The standalone per-manager write-owner context has directed state-transition and three-manager composition simulation, bounded formal proof/cover for context stability, beat accounting, WLAST release and malformed-event diagnostics, and full Yosys synthesis; the focused AW boundary/owner composition now checks target exclusion and limited target-owner uniqueness, while AXI channel integration remains absent.
 - The target-specific Architecture-A AW boundary composes the frozen eligibility equation with the verified RR primitive, blocks a write-owned target, preserves held grants under READY stall and suppresses D031 same-edge successor lookahead. The one-target AW channel path now adds manager-facing admission, complete payload selection, internal ID widening, a one-entry registered target AW slot, target handshake and D032 no drain/refill behavior. Production outstanding/write-owner allocation, W routing, response paths and four-target integration remain absent.
+- The shared write-state bank instantiates one outstanding tracker and one unfinished-W owner per manager. The one-target AW path plus bank composition allocates both from manager-facing AW admission, keeps state allocated through target AW stall/consumption, releases owner at final W and outstanding state at B, and preserves shared four-write/one-owner limits. Production W routing, B routing and four-target integration remain absent.
 
 ## Next smallest task
-Connect production outstanding and write-owner allocation to the verified manager-facing AW admission event while keeping W routing and response routing separate. Do not implement Architecture B, CPU integration or CDC in that task.
+Implement the W routing path driven exclusively by registered shared write-owner state, without implementing B routing, AR/R, S3 completion or four-target top-level integration.
