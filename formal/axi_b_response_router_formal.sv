@@ -109,6 +109,18 @@ module axi_b_response_router_formal;
     assert (!response_admit_fire[0] || |target_b_fire);
     assert (!response_admit_fire[1] || |target_b_fire);
     assert (!response_admit_fire[2] || |target_b_fire);
-    end
+    assert (!(target_b_fire[0] && target_bid[0][5:4] == 2'b00) || response_admit_fire[0]);
+    assert (!(target_b_fire[1] && target_bid[1][5:4] == 2'b00) || response_admit_fire[0]);
+    assert (!(target_b_fire[2] && target_bid[2][5:4] == 2'b00) || response_admit_fire[0]);
+    assert (!(target_b_fire[3] && target_bid[3][5:4] == 2'b00) || response_admit_fire[0]);
+    assert (!(target_b_fire[0] && target_bid[0][5:4] == 2'b01) || response_admit_fire[1]);
+    assert (!(target_b_fire[1] && target_bid[1][5:4] == 2'b01) || response_admit_fire[1]);
+    assert (!(target_b_fire[2] && target_bid[2][5:4] == 2'b01) || response_admit_fire[1]);
+    assert (!(target_b_fire[3] && target_bid[3][5:4] == 2'b01) || response_admit_fire[1]);
+    assert (!(target_b_fire[0] && target_bid[0][5:4] == 2'b10) || response_admit_fire[2]);
+    assert (!(target_b_fire[1] && target_bid[1][5:4] == 2'b10) || response_admit_fire[2]);
+    assert (!(target_b_fire[2] && target_bid[2][5:4] == 2'b10) || response_admit_fire[2]);
+    assert (!(target_b_fire[3] && target_bid[3][5:4] == 2'b10) || response_admit_fire[2]);
+  end
   end
 endmodule
