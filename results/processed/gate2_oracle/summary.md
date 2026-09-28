@@ -9,7 +9,7 @@ implemented.
 
 ## Passing evidence
 
-- Pure Python detector/self tests: 8 tests pass in
+- Pure Python detector/self tests: 11 tests pass in
   `tb/model/test_axi_reference_model.py`.
 - DUT-facing Verilator/cocotb test: 1 test passes against `axi_fabric_a`.
 - S3 legal write/read transport: DECERR, widened-ID restoration, zero read
@@ -20,6 +20,15 @@ implemented.
   separately maintained reference memory.
 - Three-manager same-visible-ID write overlap: widened AWID disambiguation,
   target W routing and manager BID restoration for M0/M1/M2.
+- Manager-W expectations are recorded at manager handshakes and compared at
+  target delivery; target-address observations validate admitted transaction,
+  address and widened ID.
+- The independent endpoint memory implementation is used by the DUT-facing
+  test and its initialization agrees with the reference memory at sampled
+  addresses.
+- The normal run has monotonic multi-cycle JSONL trace data. A deliberate
+  `ORACLE_FAULT_MODE=bad_rdata` run fails with `bad RDATA`, and the closure
+  driver records that expected failure as sensitivity PASS.
 - Reference-model trace: `results/raw/gate2_oracle/event_trace.jsonl`.
 
 ## Detector non-vacuity
@@ -34,10 +43,9 @@ data and requires an `OracleViolation`.
 The current DUT-facing oracle still needs explicit independent end-to-end
 scenarios for S2 behavior, whole-top reset with outstanding work, target and
 manager backpressure in the oracle run, four outstanding IDs, read-side
-same-visible-ID overlap, distinct-ID out-of-order completion, and a separate
-expected-fail DUT-facing corruption experiment. The existing 348-check
-hand-written directed regression covers several of these, but it does not
-substitute for the independent oracle.
+same-visible-ID overlap and distinct-ID out-of-order completion. The existing
+348-check hand-written directed regression covers several of these, but it
+does not substitute for the independent oracle.
 
 Existing full-Fabric synthesis remains historical evidence; this task made no
 RTL changes and makes no new PPA, timing or performance claim. The known

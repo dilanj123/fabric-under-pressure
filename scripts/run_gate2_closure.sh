@@ -69,5 +69,48 @@ assert suite.attrib.get("failures", "0") == "0", suite.attrib
 assert all(tc.find("failure") is None and tc.find("error") is None
            for tc in suite.findall("testcase")), "cocotb testcase failure"
 PY
+python3 - "$OUT/event_trace.jsonl" <<'PY'
+import json
+import sys
+events = [json.loads(line) for line in open(sys.argv[1], encoding="utf-8") if line.strip()]
+assert events, "empty oracle trace"
+cycles = [int(e["cycle"]) for e in events]
+assert cycles == sorted(cycles), "oracle trace cycles are not monotonic"
+assert len(set(cycles)) > 1, "oracle cycle tracking did not advance"
+admits = [e for e in events if e.get("kind") in {"aw_admit", "ar_admit"}]
+assert admits and any(c > admits[0]["cycle"] for c in cycles), "trace lacks post-admission cycles"
+PY
+
+set +e
+ORACLE_FAULT_MODE=bad_rdata python3 - <<'PY' >"$OUT/fault_sensitivity.log" 2>&1
+import os
+from pathlib import Path
+from cocotb_tools.runner import get_runner
+root = Path(os.environ["ROOT"])
+out = root / "results/raw/gate2_oracle"
+runner = get_runner("verilator")
+rtl = [root / p for p in [
+    "rtl/fabric_addr_map_pkg.sv", "rtl/axi_address_decoder.sv", "rtl/axi_request_legal.sv",
+    "rtl/axi_outstanding_tracker.sv", "rtl/axi_write_owner.sv", "rtl/axi_write_state_bank.sv",
+    "rtl/axi_read_state_bank.sv", "rtl/axi_rr_arbiter_3.sv", "rtl/axi_rr_arbiter_4.sv",
+    "rtl/axi_aw_target_scheduler_a.sv", "rtl/axi_aw_target_path_a.sv",
+    "rtl/axi_ar_target_scheduler_a.sv", "rtl/axi_ar_target_path_a.sv", "rtl/axi_w_target_path.sv",
+    "rtl/axi_b_response_router.sv", "rtl/axi_r_response_router.sv", "rtl/axi_s3_error_target.sv",
+    "rtl/axi_fabric_a.sv"]]
+runner.build(sources=rtl, hdl_toplevel="axi_fabric_a", build_dir=out / "fault_work",
+             always=True, build_args=["-Wno-fatal"])
+runner.test(hdl_toplevel="axi_fabric_a", test_module="test_axi_fabric_a_oracle",
+            test_dir=root / "tb/cocotb", results_xml=str(out / "fault_results.xml"))
+PY
+fault_rc=$?
+set -e
+if [ "$fault_rc" -eq 0 ]; then
+  grep -q '<failure ' "$OUT/fault_results.xml" || {
+    echo "fault sensitivity unexpectedly passed" >&2
+    exit 1
+  }
+fi
+grep -q "bad RDATA" "$OUT/fault_sensitivity.log"
+echo "PASS expected-fail DUT corruption sensitivity" >"$OUT/fault_sensitivity_result.log"
 
 echo "PASS Gate-2 oracle closure"

@@ -11,18 +11,21 @@ make: Nothing to be done for `default'.
      0.00ns INFO     cocotb.regression                  running test_axi_fabric_a_oracle.fabric_a_s3_oracle (1/1)
      0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:278: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
                                                           cocotb.start_soon(Clock(dut.ACLK, 10, units="ns").start())
- 10440.00ns INFO     cocotb.axi_fabric_a                oracle mapped lengths PASS
- 10500.00ns INFO     cocotb.axi_fabric_a                oracle concurrent AW target handshakes PASS
- 10530.00ns INFO     cocotb.axi_fabric_a                oracle concurrent W target handshakes PASS
- 10560.00ns INFO     cocotb.axi_fabric_a                oracle concurrent B completions PASS
- 10580.00ns INFO     cocotb.axi_fabric_a                oracle concurrent same-ID PASS
- 10580.00ns INFO     cocotb.axi_fabric_a                oracle S3 end-to-end PASS epoch=3
- 10580.00ns INFO     cocotb.regression                  test_axi_fabric_a_oracle.fabric_a_s3_oracle passed
- 10580.00ns INFO     cocotb.regression                  *****************************************************************************************************
+   380.00ns WARNING  ..otb.task.Test fabric_a_s3_oracle bad RDATA manager=0 id=0 beat=0
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py", line 357, in fabric_a_s3_oracle
+                                                            await mapped_read(dut, model, endpoint_memory, 0, ident, target, length,
+                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py", line 153, in mapped_read
+                                                            model.observe_r(manager, ident, beat, obs_data, obs_resp, obs_last,
+                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/model/axi_reference_model.py", line 217, in observe_r
+                                                            raise OracleViolation(f"bad RDATA manager={manager} id={ident} beat={beat}")
+                                                        axi_reference_model.OracleViolation: bad RDATA manager=0 id=0 beat=0
+   380.00ns WARNING  cocotb.regression                  test_axi_fabric_a_oracle.fabric_a_s3_oracle failed
+   380.00ns INFO     cocotb.regression                  *****************************************************************************************************
                                                         ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         *****************************************************************************************************
-                                                        ** test_axi_fabric_a_oracle.fabric_a_s3_oracle   PASS       10580.00           0.05     218269.59  **
+                                                        ** test_axi_fabric_a_oracle.fabric_a_s3_oracle   FAIL         380.00           0.02      16318.24  **
                                                         *****************************************************************************************************
-                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                             10580.00           0.05     204423.94  **
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               380.00           0.03      12696.24  **
                                                         *****************************************************************************************************
 - :0: Verilog $finish

@@ -3,13 +3,32 @@
 It is deliberately separate from the reference model: it consumes observed
 target handshakes and owns its own byte memory.
 """
-from axi_reference_model import ByteMemory, RESP_OKAY
+RESP_OKAY = 0b00
+
+
+class EndpointMemory:
+    """Independent verification-endpoint byte memory implementation."""
+    def __init__(self, size: int = 64 * 1024, target: int = 0):
+        salt = (target + 1) * 0x10
+        self.data = bytearray(((i * 37 + salt * 53 + 0x19) & 0xFF)
+                              for i in range(size))
+
+    def read64(self, addr: int) -> int:
+        off = addr & (len(self.data) - 1)
+        return int.from_bytes(self.data[off:off + 8], "little")
+
+    def write64(self, addr: int, value: int, strobe: int) -> None:
+        off = addr & (len(self.data) - 1)
+        raw = int(value).to_bytes(8, "little")
+        for lane in range(8):
+            if strobe & (1 << lane):
+                self.data[off + lane] = raw[lane]
 
 
 class ExternalEndpoint:
     def __init__(self, target: int):
         self.target = target
-        self.memory = ByteMemory(salt=target + 1)
+        self.memory = EndpointMemory(target=target)
         self.aw = None
         self.w_beats = []
 

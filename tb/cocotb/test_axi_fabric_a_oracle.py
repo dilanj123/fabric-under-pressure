@@ -7,6 +7,9 @@ from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge
 
 from axi_reference_model import AxiReferenceModel, RESP_DECERR
+from axi_endpoint_model import EndpointMemory
+
+_ACTIVE_MODEL = None
 
 
 def lane(value: int, width: int, index: int) -> int:
@@ -26,6 +29,8 @@ def get_lane(handle, width: int, index: int) -> int:
 async def cycles(dut, count=1):
     for _ in range(count):
         await RisingEdge(dut.ACLK)
+        if _ACTIVE_MODEL is not None:
+            _ACTIVE_MODEL.advance()
 
 
 def address_for(target: int, offset: int) -> int:
@@ -33,21 +38,12 @@ def address_for(target: int, offset: int) -> int:
     return bases[target] + offset
 
 
-def endpoint_read(memory, addr: int) -> int:
-    raw = bytes(memory[(addr & 0xFFFF):((addr & 0xFFFF) + 8)])
-    return int.from_bytes(raw, "little")
+def endpoint_read(memory: EndpointMemory, addr: int) -> int:
+    return memory.read64(addr)
 
 
-def endpoint_write(memory, addr: int, data: int, strobe: int) -> None:
-    raw = int(data).to_bytes(8, "little")
-    off = addr & 0xFFFF
-    for lane in range(8):
-        if strobe & (1 << lane):
-            memory[off + lane] = raw[lane]
-
-
-def init_endpoint_memory(salt: int) -> bytearray:
-    return bytearray(((i * 37 + salt * 53 + 0x19) & 0xFF) for i in range(64 * 1024))
+def endpoint_write(memory: EndpointMemory, addr: int, data: int, strobe: int) -> None:
+    memory.write64(addr, data, strobe)
 
 
 async def mapped_write(dut, model, memory, manager, ident, target, length, strobes):
@@ -69,7 +65,7 @@ async def mapped_write(dut, model, memory, manager, ident, target, length, strob
     observed_id = get_lane(dut.target_awid, 6, target)
     if observed_id != ((manager << 4) | ident):
         raise AssertionError(f"bad target AWID M{manager} ID{ident}: {observed_id:#x}")
-    model.observe_target_address("aw", manager, ident, target, addr)
+    model.observe_target_address("aw", manager, ident, observed_id, target, addr)
     await cycles(dut)
     for beat in range(length + 1):
         data = (0x1000_0000_0000_0000 | (manager << 48) | (ident << 32) | beat)
@@ -81,6 +77,7 @@ async def mapped_write(dut, model, memory, manager, ident, target, length, strob
         set_lane(dut.manager_wvalid, 1, manager, 1)
         while not get_lane(dut.manager_wready, 1, manager):
             await cycles(dut)
+        model.accept_manager_w(manager, data, strobe, last)
         await cycles(dut)
         set_lane(dut.manager_wvalid, 1, manager, 0)
         while not get_lane(dut.target_wvalid, 1, target):
@@ -128,11 +125,13 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
         await cycles(dut)
     if get_lane(dut.target_arid, 6, target) != ((manager << 4) | ident):
         raise AssertionError("bad target ARID")
-    model.observe_target_address("ar", manager, ident, target, addr)
+    model.observe_target_address("ar", manager, ident, get_lane(dut.target_arid, 6, target), target, addr)
     await cycles(dut)
     set_lane(dut.manager_rready, 1, manager, 1)
     for beat in range(length + 1):
         data = endpoint_read(memory[target], addr + beat * 8) if target in (0, 1) else 0
+        if os.environ.get("ORACLE_FAULT_MODE") == "bad_rdata" and target == 0 and beat == 0:
+            data ^= 1
         last = int(beat == length)
         set_lane(dut.target_rid, 6, target, (manager << 4) | ident)
         set_lane(dut.target_rdata, 64, target, data)
@@ -197,7 +196,7 @@ async def concurrent_same_id(dut, model, memory):
             if not seen_aw[m] and get_lane(dut.target_awvalid, 1, t):
                 if get_lane(dut.target_awid, 6, t) != ((m << 4) | ident):
                     raise AssertionError("same-ID widened AWID collision")
-                model.observe_target_address("aw", m, ident, t, addresses[m])
+                model.observe_target_address("aw", m, ident, get_lane(dut.target_awid, 6, t), t, addresses[m])
                 seen_aw[m] = True
         if not all(seen_aw):
             await cycles(dut)
@@ -213,6 +212,8 @@ async def concurrent_same_id(dut, model, memory):
     dut.manager_wstrb.value = wstrb
     dut.manager_wlast.value = wlast
     dut.manager_wvalid.value = wvalid
+    for m in range(3):
+        model.accept_manager_w(m, 0xABC000 + m, 0xFF, 1)
     delivered = [False] * 3
     while not all(delivered):
         await cycles(dut)
@@ -250,8 +251,11 @@ async def concurrent_same_id(dut, model, memory):
 
 @cocotb.test()
 async def fabric_a_s3_oracle(dut):
+    global _ACTIVE_MODEL
     model = AxiReferenceModel()
-    trace_path = Path(os.environ["ROOT"]) / "results/raw/gate2_oracle/event_trace.jsonl"
+    _ACTIVE_MODEL = model
+    trace_name = "fault_event_trace.jsonl" if os.environ.get("ORACLE_FAULT_MODE") else "event_trace.jsonl"
+    trace_path = Path(os.environ["ROOT"]) / "results/raw/gate2_oracle" / trace_name
     trace_path.parent.mkdir(parents=True, exist_ok=True)
     trace = trace_path.open("w", encoding="utf-8")
 
@@ -287,7 +291,6 @@ async def fabric_a_s3_oracle(dut):
     while not (get_lane(dut.manager_awready, 1, manager)):
         await cycles(dut)
     tx = model.admit_aw(manager, ident, addr, 0)
-    trace.write(json.dumps({"cycle": model.cycle, "kind": "aw_admit", "target": tx.target, "id": ident}) + "\n")
     await cycles(dut)
     set_lane(dut.manager_awvalid, 1, manager, 0)
 
@@ -297,8 +300,7 @@ async def fabric_a_s3_oracle(dut):
     set_lane(dut.manager_wvalid, 1, manager, 1)
     while not get_lane(dut.manager_wready, 1, manager):
         await cycles(dut)
-    model.observe_target_w(manager, 3, 0x1122334455667788, 0xAA, 1)
-    trace.write(json.dumps({"cycle": model.cycle, "kind": "w_target", "target": 3, "id": ident}) + "\n")
+    model.accept_manager_w(manager, 0x1122334455667788, 0xAA, 1)
     await cycles(dut)
     set_lane(dut.manager_wvalid, 1, manager, 0)
     set_lane(dut.manager_bready, 1, manager, 1)
@@ -307,7 +309,6 @@ async def fabric_a_s3_oracle(dut):
     assert get_lane(dut.manager_bid, 4, manager) == ident
     assert get_lane(dut.manager_bresp, 2, manager) == RESP_DECERR
     model.observe_b(manager, ident, RESP_DECERR)
-    trace.write(json.dumps({"cycle": model.cycle, "kind": "b_complete", "target": 3, "id": ident}) + "\n")
     await cycles(dut)
     set_lane(dut.manager_bready, 1, manager, 0)
 
@@ -321,7 +322,6 @@ async def fabric_a_s3_oracle(dut):
     while not get_lane(dut.manager_arready, 1, manager):
         await cycles(dut)
     tx = model.admit_ar(manager, 6, 0x4000_0000, 0)
-    trace.write(json.dumps({"cycle": model.cycle, "kind": "ar_admit", "target": tx.target, "id": 6}) + "\n")
     await cycles(dut)
     set_lane(dut.manager_arvalid, 1, manager, 0)
     set_lane(dut.manager_rready, 1, manager, 1)
@@ -333,7 +333,6 @@ async def fabric_a_s3_oracle(dut):
     assert get_lane(dut.manager_rlast, 1, manager) == 1
     model.observe_r(manager, 6, 0, 0, RESP_DECERR, 1)
     model.assert_drained()
-    trace.write(json.dumps({"cycle": model.cycle, "kind": "r_complete", "target": 3, "id": 6}) + "\n")
 
     # Start an independent mapped-memory phase.  The endpoint memories are a
     # separate implementation from the oracle memories; only observations at
@@ -346,7 +345,7 @@ async def fabric_a_s3_oracle(dut):
     await cycles(dut, 3)
     dut.ARESETn.value = 1
     model.reset()
-    endpoint_memory = {0: init_endpoint_memory(0x10), 1: init_endpoint_memory(0x20)}
+    endpoint_memory = {0: EndpointMemory(target=0), 1: EndpointMemory(target=1)}
     # All legal lengths exercise target routing, WLAST/RLAST position and
     # independent byte-strobe memory updates on both mapped banks.
     for length in range(16):
@@ -371,3 +370,4 @@ async def fabric_a_s3_oracle(dut):
         trace.write(json.dumps(event) + "\n")
     trace.close()
     dut._log.info("oracle S3 end-to-end PASS epoch=%d", model.epoch)
+    _ACTIVE_MODEL = None
