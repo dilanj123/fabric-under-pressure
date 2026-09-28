@@ -208,3 +208,10 @@ The R evidence is scoped to the common response router and focused AR/R lifecycl
 | FAB-E003 | SYNTH | Complete `axi_fabric_a` production composition completes ECP5-targeted Yosys synthesis | `results/raw/fabric_a_integration/synthesis.log`, `results/raw/fabric_a_integration/axi_fabric_a_ecp5.json` | PASS; 5,046 LUT4, 1,219 TRELLIS_FF, 288 CCU2C, 807 PFUMX, 270 L6MUX21; no PPA/timing claim |
 
 The whole-top directed environment uses verification-only external responders for S0-S2 and the real S3 endpoint. It is focused integration evidence, not a complete correctness proof. Recorded-target versus returned-target response-source matching remains unproven, and the independent Python oracle is still absent.
+
+## Architecture-A Gate-2 directed integration regression
+
+| FAB-G2-E001 | LINT/ELAB | Production top lint/elaboration remains clean during the expanded Gate-2 directed run | `results/raw/fabric_a_gate2_directed/lint.log` | PASS; Verilator 5.053 |
+| FAB-G2-E002 | SIM | Expanded whole-top directed regression covers retained route smoke plus timing permutations, shared read/write capacity, unsupported shapes, target/manager backpressure, contention and parallel target progress | `results/raw/fabric_a_gate2_directed/simulation.log`, `results/processed/fabric_a_gate2_directed/summary.md` | PASS; 296 self-checking checks |
+
+This closes the hand-written directed integration pass only. The independent Python oracle and Gate-2 closure decision remain outstanding.
