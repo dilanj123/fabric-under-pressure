@@ -1,4 +1,4 @@
-git_commit=083dc5d791d667c87d424177dfd3e722c9ceda3e
+git_commit=13eb452652c7078129259bc5121dbc06a3810a0a
 architecture=A
 seed=0xA3F30001
 plan=/Users/Dilan/Projects/fabric-under-pressure/results/raw/gate3_random/plans/seed_A3F30001.json
@@ -185,7 +185,7 @@ verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
                     /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.923 MB sources in 20 modules, into 3.341 MB in 10 C++ files needing 0.000 MB
-- Verilator: Walltime 0.203 s (elab=0.012, cvt=0.154, bld=0.000); cpu 0.200 s on 1 threads; allocated 46.906 MB
+- Verilator: Walltime 0.191 s (elab=0.012, cvt=0.145, bld=0.000); cpu 0.190 s on 1 threads; allocated 46.438 MB
 g++  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -Os  -c -o verilator.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
 g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated.cpp
 g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_dpi.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated_dpi.cpp
@@ -214,109 +214,109 @@ rm Vtop__ALL.verilator_deplist.tmp
      0.00ns INFO     cocotb.regression                  running test_axi_fabric_a_random.fabric_a_random_qualification (1/1)
      0.00ns INFO     cocotb.axi_fabric_a                random setup complete; starting clock
     20.00ns INFO     cocotb.axi_fabric_a                random reset edges complete
-  1480.00ns INFO     cocotb.axi_fabric_a                random op=0 write M0 ID0 S0 LEN0
-  1650.00ns INFO     cocotb.axi_fabric_a                random op=1 read M0 ID6 S0 LEN0
-  1810.00ns INFO     cocotb.axi_fabric_a                random op=2 write M1 ID13 S0 LEN0
-  1990.00ns INFO     cocotb.axi_fabric_a                random op=3 read M1 ID3 S0 LEN0
-  2120.00ns INFO     cocotb.axi_fabric_a                random op=4 write M2 ID10 S0 LEN0
-  2320.00ns INFO     cocotb.axi_fabric_a                random op=5 read M2 ID0 S0 LEN0
-  2470.00ns INFO     cocotb.axi_fabric_a                random op=6 write M0 ID14 S1 LEN1
-  2660.00ns INFO     cocotb.axi_fabric_a                random op=7 read M0 ID4 S1 LEN1
-  2790.00ns INFO     cocotb.axi_fabric_a                random op=8 write M1 ID11 S1 LEN1
-  2970.00ns INFO     cocotb.axi_fabric_a                random op=9 read M1 ID1 S1 LEN1
-  3260.00ns INFO     cocotb.axi_fabric_a                random op=10 write M2 ID8 S1 LEN1
-  3440.00ns INFO     cocotb.axi_fabric_a                random op=11 read M2 ID14 S1 LEN1
-  3690.00ns INFO     cocotb.axi_fabric_a                random op=12 write M0 ID12 S2 LEN2
-  3930.00ns INFO     cocotb.axi_fabric_a                random op=13 read M0 ID2 S2 LEN2
-  4130.00ns INFO     cocotb.axi_fabric_a                random op=14 write M1 ID9 S2 LEN2
-  4330.00ns INFO     cocotb.axi_fabric_a                random op=15 read M1 ID15 S2 LEN2
-  4710.00ns INFO     cocotb.axi_fabric_a                random op=16 write M2 ID6 S2 LEN2
-  4900.00ns INFO     cocotb.axi_fabric_a                random op=17 read M2 ID12 S2 LEN2
-  5130.00ns INFO     cocotb.axi_fabric_a                random op=18 write M0 ID10 S3 LEN3
-  5250.00ns INFO     cocotb.axi_fabric_a                random op=19 read M0 ID0 S3 LEN3
-  5350.00ns INFO     cocotb.axi_fabric_a                random op=20 write M1 ID7 S3 LEN3
-  5470.00ns INFO     cocotb.axi_fabric_a                random op=21 read M1 ID13 S3 LEN3
-  5570.00ns INFO     cocotb.axi_fabric_a                random op=22 write M2 ID4 S3 LEN3
-  5690.00ns INFO     cocotb.axi_fabric_a                random op=23 read M2 ID10 S3 LEN3
-  5790.00ns INFO     cocotb.axi_fabric_a                random op=24 write M0 ID8 S0 LEN4
-  6060.00ns INFO     cocotb.axi_fabric_a                random op=25 read M0 ID14 S0 LEN4
-  6610.00ns INFO     cocotb.axi_fabric_a                random op=26 write M1 ID5 S0 LEN4
-  6890.00ns INFO     cocotb.axi_fabric_a                random op=27 read M1 ID11 S0 LEN4
-  7340.00ns INFO     cocotb.axi_fabric_a                random op=28 write M2 ID2 S0 LEN4
-  7630.00ns INFO     cocotb.axi_fabric_a                random op=29 read M2 ID8 S0 LEN4
-  8280.00ns INFO     cocotb.axi_fabric_a                random op=30 write M0 ID6 S1 LEN5
-  8570.00ns INFO     cocotb.axi_fabric_a                random op=31 read M0 ID12 S1 LEN5
-  9330.00ns INFO     cocotb.axi_fabric_a                random op=32 write M1 ID3 S1 LEN5
-  9600.00ns INFO     cocotb.axi_fabric_a                random op=33 read M1 ID9 S1 LEN5
- 10310.00ns INFO     cocotb.axi_fabric_a                random op=34 write M2 ID0 S1 LEN5
- 10590.00ns INFO     cocotb.axi_fabric_a                random op=35 read M2 ID6 S1 LEN5
- 10880.00ns INFO     cocotb.axi_fabric_a                random op=36 write M0 ID4 S2 LEN6
- 11250.00ns INFO     cocotb.axi_fabric_a                random op=37 read M0 ID10 S2 LEN6
- 12070.00ns INFO     cocotb.axi_fabric_a                random op=38 write M1 ID1 S2 LEN6
- 12390.00ns INFO     cocotb.axi_fabric_a                random op=39 read M1 ID7 S2 LEN6
- 13280.00ns INFO     cocotb.axi_fabric_a                random op=40 write M2 ID14 S2 LEN6
- 13590.00ns INFO     cocotb.axi_fabric_a                random op=41 read M2 ID4 S2 LEN6
- 14200.00ns INFO     cocotb.axi_fabric_a                random op=42 write M0 ID2 S3 LEN7
- 14360.00ns INFO     cocotb.axi_fabric_a                random op=43 read M0 ID8 S3 LEN7
- 14500.00ns INFO     cocotb.axi_fabric_a                random op=44 write M1 ID15 S3 LEN7
- 14660.00ns INFO     cocotb.axi_fabric_a                random op=45 read M1 ID5 S3 LEN7
- 14800.00ns INFO     cocotb.axi_fabric_a                random op=46 write M2 ID12 S3 LEN7
- 14960.00ns INFO     cocotb.axi_fabric_a                random op=47 read M2 ID2 S3 LEN7
- 15100.00ns INFO     cocotb.axi_fabric_a                random op=48 write M0 ID0 S0 LEN8
- 15500.00ns INFO     cocotb.axi_fabric_a                random op=49 read M0 ID6 S0 LEN8
- 16090.00ns INFO     cocotb.axi_fabric_a                random op=50 write M1 ID13 S0 LEN8
- 16470.00ns INFO     cocotb.axi_fabric_a                random op=51 read M1 ID3 S0 LEN8
- 17510.00ns INFO     cocotb.axi_fabric_a                random op=52 write M2 ID10 S0 LEN8
- 17930.00ns INFO     cocotb.axi_fabric_a                random op=53 read M2 ID0 S0 LEN8
- 18700.00ns INFO     cocotb.axi_fabric_a                random op=54 write M0 ID14 S1 LEN9
- 19140.00ns INFO     cocotb.axi_fabric_a                random op=55 read M0 ID4 S1 LEN9
- 19690.00ns INFO     cocotb.axi_fabric_a                random op=56 write M1 ID11 S1 LEN9
- 20160.00ns INFO     cocotb.axi_fabric_a                random op=57 read M1 ID1 S1 LEN9
- 20510.00ns INFO     cocotb.axi_fabric_a                random op=58 write M2 ID8 S1 LEN9
- 20960.00ns INFO     cocotb.axi_fabric_a                random op=59 read M2 ID14 S1 LEN9
- 21510.00ns INFO     cocotb.axi_fabric_a                random op=60 write M0 ID12 S2 LEN10
- 21960.00ns INFO     cocotb.axi_fabric_a                random op=61 read M0 ID2 S2 LEN10
- 22780.00ns INFO     cocotb.axi_fabric_a                random op=62 write M1 ID9 S2 LEN10
- 23250.00ns INFO     cocotb.axi_fabric_a                random op=63 read M1 ID15 S2 LEN10
- 24670.00ns INFO     cocotb.axi_fabric_a                random op=64 write M2 ID6 S2 LEN10
- 25120.00ns INFO     cocotb.axi_fabric_a                random op=65 read M2 ID12 S2 LEN10
- 25940.00ns INFO     cocotb.axi_fabric_a                random op=66 write M0 ID10 S3 LEN11
- 26140.00ns INFO     cocotb.axi_fabric_a                random op=67 read M0 ID0 S3 LEN11
- 26320.00ns INFO     cocotb.axi_fabric_a                random op=68 write M1 ID7 S3 LEN11
- 26520.00ns INFO     cocotb.axi_fabric_a                random op=69 read M1 ID13 S3 LEN11
- 26700.00ns INFO     cocotb.axi_fabric_a                random op=70 write M2 ID4 S3 LEN11
- 26900.00ns INFO     cocotb.axi_fabric_a                random op=71 read M2 ID10 S3 LEN11
- 27080.00ns INFO     cocotb.axi_fabric_a                random op=72 write M0 ID8 S0 LEN12
- 27580.00ns INFO     cocotb.axi_fabric_a                random op=73 read M0 ID14 S0 LEN12
- 28410.00ns INFO     cocotb.axi_fabric_a                random op=74 write M1 ID5 S0 LEN12
- 28910.00ns INFO     cocotb.axi_fabric_a                random op=75 read M1 ID11 S0 LEN12
- 29740.00ns INFO     cocotb.axi_fabric_a                random op=76 write M2 ID2 S0 LEN12
- 30270.00ns INFO     cocotb.axi_fabric_a                random op=77 read M2 ID8 S0 LEN12
- 31880.00ns INFO     cocotb.axi_fabric_a                random op=78 write M0 ID6 S1 LEN13
- 32460.00ns INFO     cocotb.axi_fabric_a                random op=79 read M0 ID12 S1 LEN13
- 33630.00ns INFO     cocotb.axi_fabric_a                random op=80 write M1 ID3 S1 LEN13
- 34190.00ns INFO     cocotb.axi_fabric_a                random op=81 read M1 ID9 S1 LEN13
- 34800.00ns INFO     cocotb.axi_fabric_a                random op=82 write M2 ID0 S1 LEN13
- 35360.00ns INFO     cocotb.axi_fabric_a                random op=83 read M2 ID6 S1 LEN13
- 36670.00ns INFO     cocotb.axi_fabric_a                random op=84 write M0 ID4 S2 LEN14
- 37270.00ns INFO     cocotb.axi_fabric_a                random op=85 read M0 ID10 S2 LEN14
- 39120.00ns INFO     cocotb.axi_fabric_a                random op=86 write M1 ID1 S2 LEN14
- 39720.00ns INFO     cocotb.axi_fabric_a                random op=87 read M1 ID7 S2 LEN14
- 40970.00ns INFO     cocotb.axi_fabric_a                random op=88 write M2 ID14 S2 LEN14
- 41500.00ns INFO     cocotb.axi_fabric_a                random op=89 read M2 ID4 S2 LEN14
- 43200.00ns INFO     cocotb.axi_fabric_a                random op=90 write M0 ID2 S3 LEN15
- 43440.00ns INFO     cocotb.axi_fabric_a                random op=91 read M0 ID8 S3 LEN15
- 43660.00ns INFO     cocotb.axi_fabric_a                random op=92 write M1 ID15 S3 LEN15
- 43900.00ns INFO     cocotb.axi_fabric_a                random op=93 read M1 ID5 S3 LEN15
- 44120.00ns INFO     cocotb.axi_fabric_a                random op=94 write M2 ID12 S3 LEN15
- 44360.00ns INFO     cocotb.axi_fabric_a                random op=95 read M2 ID2 S3 LEN15
-144580.00ns INFO     cocotb.axi_fabric_a                Gate-3 random PASS seed=0xa3f30001 operations=96 resets=2
-144580.00ns INFO     cocotb.regression                  test_axi_fabric_a_random.fabric_a_random_qualification passed
-144580.00ns INFO     cocotb.regression                  ****************************************************************************************************************
+  1600.00ns INFO     cocotb.axi_fabric_a                random op=0 write M0 ID0 S0 LEN0
+  1770.00ns INFO     cocotb.axi_fabric_a                random op=1 read M0 ID6 S0 LEN0
+  1930.00ns INFO     cocotb.axi_fabric_a                random op=2 write M1 ID13 S0 LEN0
+  2110.00ns INFO     cocotb.axi_fabric_a                random op=3 read M1 ID3 S0 LEN0
+  2240.00ns INFO     cocotb.axi_fabric_a                random op=4 write M2 ID10 S0 LEN0
+  2440.00ns INFO     cocotb.axi_fabric_a                random op=5 read M2 ID0 S0 LEN0
+  2590.00ns INFO     cocotb.axi_fabric_a                random op=6 write M0 ID14 S1 LEN1
+  2780.00ns INFO     cocotb.axi_fabric_a                random op=7 read M0 ID4 S1 LEN1
+  2910.00ns INFO     cocotb.axi_fabric_a                random op=8 write M1 ID11 S1 LEN1
+  3090.00ns INFO     cocotb.axi_fabric_a                random op=9 read M1 ID1 S1 LEN1
+  3380.00ns INFO     cocotb.axi_fabric_a                random op=10 write M2 ID8 S1 LEN1
+  3560.00ns INFO     cocotb.axi_fabric_a                random op=11 read M2 ID14 S1 LEN1
+  3810.00ns INFO     cocotb.axi_fabric_a                random op=12 write M0 ID12 S2 LEN2
+  4050.00ns INFO     cocotb.axi_fabric_a                random op=13 read M0 ID2 S2 LEN2
+  4250.00ns INFO     cocotb.axi_fabric_a                random op=14 write M1 ID9 S2 LEN2
+  4450.00ns INFO     cocotb.axi_fabric_a                random op=15 read M1 ID15 S2 LEN2
+  4830.00ns INFO     cocotb.axi_fabric_a                random op=16 write M2 ID6 S2 LEN2
+  5020.00ns INFO     cocotb.axi_fabric_a                random op=17 read M2 ID12 S2 LEN2
+  5250.00ns INFO     cocotb.axi_fabric_a                random op=18 write M0 ID10 S3 LEN3
+  5370.00ns INFO     cocotb.axi_fabric_a                random op=19 read M0 ID0 S3 LEN3
+  5470.00ns INFO     cocotb.axi_fabric_a                random op=20 write M1 ID7 S3 LEN3
+  5590.00ns INFO     cocotb.axi_fabric_a                random op=21 read M1 ID13 S3 LEN3
+  5690.00ns INFO     cocotb.axi_fabric_a                random op=22 write M2 ID4 S3 LEN3
+  5810.00ns INFO     cocotb.axi_fabric_a                random op=23 read M2 ID10 S3 LEN3
+  5910.00ns INFO     cocotb.axi_fabric_a                random op=24 write M0 ID8 S0 LEN4
+  6180.00ns INFO     cocotb.axi_fabric_a                random op=25 read M0 ID14 S0 LEN4
+  6730.00ns INFO     cocotb.axi_fabric_a                random op=26 write M1 ID5 S0 LEN4
+  7010.00ns INFO     cocotb.axi_fabric_a                random op=27 read M1 ID11 S0 LEN4
+  7460.00ns INFO     cocotb.axi_fabric_a                random op=28 write M2 ID2 S0 LEN4
+  7750.00ns INFO     cocotb.axi_fabric_a                random op=29 read M2 ID8 S0 LEN4
+  8400.00ns INFO     cocotb.axi_fabric_a                random op=30 write M0 ID6 S1 LEN5
+  8690.00ns INFO     cocotb.axi_fabric_a                random op=31 read M0 ID12 S1 LEN5
+  9450.00ns INFO     cocotb.axi_fabric_a                random op=32 write M1 ID3 S1 LEN5
+  9720.00ns INFO     cocotb.axi_fabric_a                random op=33 read M1 ID9 S1 LEN5
+ 10430.00ns INFO     cocotb.axi_fabric_a                random op=34 write M2 ID0 S1 LEN5
+ 10710.00ns INFO     cocotb.axi_fabric_a                random op=35 read M2 ID6 S1 LEN5
+ 11000.00ns INFO     cocotb.axi_fabric_a                random op=36 write M0 ID4 S2 LEN6
+ 11370.00ns INFO     cocotb.axi_fabric_a                random op=37 read M0 ID10 S2 LEN6
+ 12190.00ns INFO     cocotb.axi_fabric_a                random op=38 write M1 ID1 S2 LEN6
+ 12510.00ns INFO     cocotb.axi_fabric_a                random op=39 read M1 ID7 S2 LEN6
+ 13400.00ns INFO     cocotb.axi_fabric_a                random op=40 write M2 ID14 S2 LEN6
+ 13710.00ns INFO     cocotb.axi_fabric_a                random op=41 read M2 ID4 S2 LEN6
+ 14320.00ns INFO     cocotb.axi_fabric_a                random op=42 write M0 ID2 S3 LEN7
+ 14480.00ns INFO     cocotb.axi_fabric_a                random op=43 read M0 ID8 S3 LEN7
+ 14620.00ns INFO     cocotb.axi_fabric_a                random op=44 write M1 ID15 S3 LEN7
+ 14780.00ns INFO     cocotb.axi_fabric_a                random op=45 read M1 ID5 S3 LEN7
+ 14920.00ns INFO     cocotb.axi_fabric_a                random op=46 write M2 ID12 S3 LEN7
+ 15080.00ns INFO     cocotb.axi_fabric_a                random op=47 read M2 ID2 S3 LEN7
+ 15220.00ns INFO     cocotb.axi_fabric_a                random op=48 write M0 ID0 S0 LEN8
+ 15620.00ns INFO     cocotb.axi_fabric_a                random op=49 read M0 ID6 S0 LEN8
+ 16210.00ns INFO     cocotb.axi_fabric_a                random op=50 write M1 ID13 S0 LEN8
+ 16590.00ns INFO     cocotb.axi_fabric_a                random op=51 read M1 ID3 S0 LEN8
+ 17630.00ns INFO     cocotb.axi_fabric_a                random op=52 write M2 ID10 S0 LEN8
+ 18050.00ns INFO     cocotb.axi_fabric_a                random op=53 read M2 ID0 S0 LEN8
+ 18820.00ns INFO     cocotb.axi_fabric_a                random op=54 write M0 ID14 S1 LEN9
+ 19260.00ns INFO     cocotb.axi_fabric_a                random op=55 read M0 ID4 S1 LEN9
+ 19810.00ns INFO     cocotb.axi_fabric_a                random op=56 write M1 ID11 S1 LEN9
+ 20280.00ns INFO     cocotb.axi_fabric_a                random op=57 read M1 ID1 S1 LEN9
+ 20630.00ns INFO     cocotb.axi_fabric_a                random op=58 write M2 ID8 S1 LEN9
+ 21080.00ns INFO     cocotb.axi_fabric_a                random op=59 read M2 ID14 S1 LEN9
+ 21630.00ns INFO     cocotb.axi_fabric_a                random op=60 write M0 ID12 S2 LEN10
+ 22080.00ns INFO     cocotb.axi_fabric_a                random op=61 read M0 ID2 S2 LEN10
+ 22900.00ns INFO     cocotb.axi_fabric_a                random op=62 write M1 ID9 S2 LEN10
+ 23370.00ns INFO     cocotb.axi_fabric_a                random op=63 read M1 ID15 S2 LEN10
+ 24790.00ns INFO     cocotb.axi_fabric_a                random op=64 write M2 ID6 S2 LEN10
+ 25240.00ns INFO     cocotb.axi_fabric_a                random op=65 read M2 ID12 S2 LEN10
+ 26060.00ns INFO     cocotb.axi_fabric_a                random op=66 write M0 ID10 S3 LEN11
+ 26260.00ns INFO     cocotb.axi_fabric_a                random op=67 read M0 ID0 S3 LEN11
+ 26440.00ns INFO     cocotb.axi_fabric_a                random op=68 write M1 ID7 S3 LEN11
+ 26640.00ns INFO     cocotb.axi_fabric_a                random op=69 read M1 ID13 S3 LEN11
+ 26820.00ns INFO     cocotb.axi_fabric_a                random op=70 write M2 ID4 S3 LEN11
+ 27020.00ns INFO     cocotb.axi_fabric_a                random op=71 read M2 ID10 S3 LEN11
+ 27200.00ns INFO     cocotb.axi_fabric_a                random op=72 write M0 ID8 S0 LEN12
+ 27700.00ns INFO     cocotb.axi_fabric_a                random op=73 read M0 ID14 S0 LEN12
+ 28530.00ns INFO     cocotb.axi_fabric_a                random op=74 write M1 ID5 S0 LEN12
+ 29030.00ns INFO     cocotb.axi_fabric_a                random op=75 read M1 ID11 S0 LEN12
+ 29860.00ns INFO     cocotb.axi_fabric_a                random op=76 write M2 ID2 S0 LEN12
+ 30390.00ns INFO     cocotb.axi_fabric_a                random op=77 read M2 ID8 S0 LEN12
+ 32000.00ns INFO     cocotb.axi_fabric_a                random op=78 write M0 ID6 S1 LEN13
+ 32580.00ns INFO     cocotb.axi_fabric_a                random op=79 read M0 ID12 S1 LEN13
+ 33750.00ns INFO     cocotb.axi_fabric_a                random op=80 write M1 ID3 S1 LEN13
+ 34310.00ns INFO     cocotb.axi_fabric_a                random op=81 read M1 ID9 S1 LEN13
+ 34920.00ns INFO     cocotb.axi_fabric_a                random op=82 write M2 ID0 S1 LEN13
+ 35480.00ns INFO     cocotb.axi_fabric_a                random op=83 read M2 ID6 S1 LEN13
+ 36790.00ns INFO     cocotb.axi_fabric_a                random op=84 write M0 ID4 S2 LEN14
+ 37390.00ns INFO     cocotb.axi_fabric_a                random op=85 read M0 ID10 S2 LEN14
+ 39240.00ns INFO     cocotb.axi_fabric_a                random op=86 write M1 ID1 S2 LEN14
+ 39840.00ns INFO     cocotb.axi_fabric_a                random op=87 read M1 ID7 S2 LEN14
+ 41090.00ns INFO     cocotb.axi_fabric_a                random op=88 write M2 ID14 S2 LEN14
+ 41620.00ns INFO     cocotb.axi_fabric_a                random op=89 read M2 ID4 S2 LEN14
+ 43320.00ns INFO     cocotb.axi_fabric_a                random op=90 write M0 ID2 S3 LEN15
+ 43560.00ns INFO     cocotb.axi_fabric_a                random op=91 read M0 ID8 S3 LEN15
+ 43780.00ns INFO     cocotb.axi_fabric_a                random op=92 write M1 ID15 S3 LEN15
+ 44020.00ns INFO     cocotb.axi_fabric_a                random op=93 read M1 ID5 S3 LEN15
+ 44240.00ns INFO     cocotb.axi_fabric_a                random op=94 write M2 ID12 S3 LEN15
+ 44480.00ns INFO     cocotb.axi_fabric_a                random op=95 read M2 ID2 S3 LEN15
+144700.00ns INFO     cocotb.axi_fabric_a                Gate-3 random PASS seed=0xa3f30001 operations=96 resets=3
+144700.00ns INFO     cocotb.regression                  test_axi_fabric_a_random.fabric_a_random_qualification passed
+144700.00ns INFO     cocotb.regression                  ****************************************************************************************************************
                                                         ** TEST                                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         ****************************************************************************************************************
-                                                        ** test_axi_fabric_a_random.fabric_a_random_qualification   PASS      144580.00           0.22     668680.69  **
+                                                        ** test_axi_fabric_a_random.fabric_a_random_qualification   PASS      144700.00           0.22     659042.78  **
                                                         ****************************************************************************************************************
-                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                       144580.00           0.22     657289.29  **
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                       144700.00           0.22     647230.48  **
                                                         ****************************************************************************************************************
 - :0: Verilog $finish

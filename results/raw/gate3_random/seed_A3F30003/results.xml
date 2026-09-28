@@ -1,8 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
     <property name="random_seed" value="2750611459" />
-    <testcase name="fabric_a_random_qualification" classname="test_axi_fabric_a_random" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random.py" lineno="110" time="0.0003960132598876953" sim_time_ns="0.0" ratio_time="0.0">
-      <failure error_type="FileNotFoundError" error_msg="[Errno 2] No such file or directory: 'results/raw/gate3_random/plans/seed_A3F30003.json'" />
-    </testcase>
+    <testcase name="fabric_a_random_qualification" classname="test_axi_fabric_a_random" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random.py" lineno="110" time="0.21860313415527344" sim_time_ns="141330.0" ratio_time="646514.0609540096" />
   </testsuite>
 </testsuites>

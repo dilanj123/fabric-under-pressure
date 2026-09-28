@@ -40,7 +40,7 @@
     80,
     80
   ],
-  "resets": 10,
+  "resets": 15,
   "max_live_reads": 4,
   "max_live_writes": 4,
   "pressure_depth_four": 10,

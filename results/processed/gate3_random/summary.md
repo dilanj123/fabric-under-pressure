@@ -2,7 +2,7 @@
 
 Status: **PASS** for the fixed qualification matrix; Gate 3 remains open.
 
-The harness uses D040 pre-generated plans and the project-owned Python oracle. The five functional seeds are `0xA3F30001` through `0xA3F30005`. Each saved plan contains 96 legal operations, finite independent pause/delay schedules, reset points and a 10,000-cycle post-drain interval. No DUT arbitration result is used to generate later plan values.
+The harness uses D040 pre-generated plans and the project-owned Python oracle. The five functional seeds are `0xA3F30001` through `0xA3F30005`. Each saved plan contains 96 legal operations, finite independent pause/delay schedules and a 10,000-cycle post-drain interval; the driver also injects scheduled resets and a live-write reset epoch. No DUT arbitration result is used to generate later plan values.
 
 ## Results
 
@@ -13,7 +13,7 @@ The harness uses D040 pre-generated plans and the project-owned Python oracle. T
 - Maximum live reads and writes: 4 per manager pressure scenario.
 - Target AW/AR/W stalls, manager B/R stalls and finite response delays were all observed.
 - Same-visible-ID cross-manager overlap, same-target three-manager contention, all-manager activity and legal different-ID reverse completion were exercised.
-- Two coordinated reset epochs per seed were executed and traces retain epoch transitions.
+- Three coordinated reset epochs per seed were executed, including one reset with a completed data phase waiting for B; traces retain epoch transitions and the pre-reset transaction is abandoned.
 
 ## Evidence
 

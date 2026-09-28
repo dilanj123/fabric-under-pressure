@@ -190,6 +190,13 @@ async def fabric_a_random_qualification(dut):
     await gate2._return_b(dut, model, 0, 11, 1)
     await gate2._return_b(dut, model, 0, 10, 0)
     coverage["out_of_order_completions"] = 1
+    # Keep a completed data phase waiting for B across a coordinated reset.
+    # The oracle abandons this live transaction and starts the plan in the
+    # next epoch.
+    live_tx, _ = await gate2._admit_write_no_b(dut, model, 0, 14, 0, 0)
+    await gate2._write_data_only(dut, model, live_tx, 0, 0, [0xFF])
+    await random_reset(dut, model)
+    coverage["resets"] += 1
     for op in plan["operations"]:
         if op["sequence"] in plan.get("resets_after_sequence", []):
             await random_reset(dut, model)

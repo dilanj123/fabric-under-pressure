@@ -52,7 +52,7 @@
     6,
     9
   ],
-  "resets": 2,
+  "resets": 3,
   "target_aw_stalls": 8,
   "target_ar_stalls": 7,
   "target_w_stalls": 12,
