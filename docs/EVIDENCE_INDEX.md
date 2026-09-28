@@ -212,6 +212,6 @@ The whole-top directed environment uses verification-only external responders fo
 ## Architecture-A Gate-2 directed integration regression
 
 | FAB-G2-E001 | LINT/ELAB | Production top lint/elaboration remains clean during the expanded Gate-2 directed run | `results/raw/fabric_a_gate2_directed/lint.log` | PASS; Verilator 5.053 |
-| FAB-G2-E002 | SIM | Expanded whole-top directed regression covers retained route smoke plus timing permutations, shared read/write capacity, unsupported shapes, target/manager backpressure, contention and parallel target progress | `results/raw/fabric_a_gate2_directed/simulation.log`, `results/processed/fabric_a_gate2_directed/summary.md` | PASS; 296 self-checking checks |
+| FAB-G2-E002 | SIM | Expanded whole-top directed closure regression covers retained route smoke plus timing permutations, shared read/write capacity, unsupported shapes, target/manager backpressure, contention, parallel progress, cross-manager ID disambiguation, distinct-ID out-of-order completion, locked-source gaps, target-W stalls and reset recovery | `results/raw/fabric_a_gate2_directed/simulation.log`, `results/processed/fabric_a_gate2_directed/summary.md` | PASS; 340 self-checking checks |
 
 This closes the hand-written directed integration pass only. The independent Python oracle and Gate-2 closure decision remain outstanding.

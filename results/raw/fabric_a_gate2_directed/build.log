@@ -1,39 +1,43 @@
-%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:124:43: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
+%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:128:43: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
                                                           : ... note: In instance 'axi_fabric_a_tb'
-  124 |       awid[m]=id; awaddr[m]=base; awlen[m]=beats-1; awsize[m]=3; awburst[m]=1; awlock[m]=0; awcache[m]=0; awprot[m]=0; awqos[m]=0; awregion[m]=0; awvalid[m]=1;
+  128 |       awid[m]=id; awaddr[m]=base; awlen[m]=beats-1; awsize[m]=3; awburst[m]=1; awlock[m]=0; awcache[m]=0; awprot[m]=0; awqos[m]=0; awregion[m]=0; awvalid[m]=1;
       |                                           ^
                      ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.053
                      ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
-%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:129:29: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'n' generates 32 bits.
+%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:133:29: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'n' generates 32 bits.
                                                            : ... note: In instance 'axi_fabric_a_tb'
-  129 |         wdata[m] = 64'h1000 + n; wstrb[m]=8'hff; wlast[m]=(n==beats-1); wvalid[m]=1;
+  133 |         wdata[m] = 64'h1000 + n; wstrb[m]=8'hff; wlast[m]=(n==beats-1); wvalid[m]=1;
       |                             ^
                       ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.053
                       ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
-%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:147:43: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
+%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:151:43: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
                                                           : ... note: In instance 'axi_fabric_a_tb'
-  147 |       arid[m]=id; araddr[m]=base; arlen[m]=beats-1; arsize[m]=3; arburst[m]=1; arlock[m]=0; arcache[m]=0; arprot[m]=0; arqos[m]=0; arregion[m]=0; arvalid[m]=1;
+  151 |       arid[m]=id; araddr[m]=base; arlen[m]=beats-1; arsize[m]=3; arburst[m]=1; arlock[m]=0; arcache[m]=0; arprot[m]=0; arqos[m]=0; arregion[m]=0; arvalid[m]=1;
       |                                           ^
-%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:169:22: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'id' generates 4 bits.
+%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:173:22: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'id' generates 4 bits.
                                                            : ... note: In instance 'axi_fabric_a_tb'
-  169 |       wdata[m]=64'h55+id; wstrb[m]=8'hff; wlast[m]=1; wvalid[m]=1;
+  173 |       wdata[m]=64'h55+id; wstrb[m]=8'hff; wlast[m]=1; wvalid[m]=1;
       |                      ^
-%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:259:88: Operator EQ expects 6 bits on the LHS, but LHS's SEL generates 4 bits.
+%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:263:88: Operator EQ expects 6 bits on the LHS, but LHS's SEL generates 4 bits.
                                                            : ... note: In instance 'axi_fabric_a_tb'
-  259 |     repeat(2) begin check(bvalid[0], "B held under manager backpressure"); check(bid[0]==6'ha, "BID stable under backpressure"); tick(); end
+  263 |     repeat(2) begin check(bvalid[0], "B held under manager backpressure"); check(bid[0]==6'ha, "BID stable under backpressure"); tick(); end
       |                                                                                        ^~
-%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:262:88: Operator EQ expects 6 bits on the LHS, but LHS's SEL generates 4 bits.
+%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:266:88: Operator EQ expects 6 bits on the LHS, but LHS's SEL generates 4 bits.
                                                            : ... note: In instance 'axi_fabric_a_tb'
-  262 |     repeat(2) begin check(rvalid[0], "R held under manager backpressure"); check(rid[0]==6'hb && rlast[0], "R payload stable under backpressure"); tick(); end
+  266 |     repeat(2) begin check(rvalid[0], "R held under manager backpressure"); check(rid[0]==6'hb && rlast[0], "R payload stable under backpressure"); tick(); end
       |                                                                                        ^~
-%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:268:15: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:272:15: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
                                                           : ... note: In instance 'axi_fabric_a_tb'
-  268 |       awid[cm]=cm+1; awaddr[cm]=32'h0000_0900; awlen[cm]=0; awsize[cm]=3; awburst[cm]=1; awlock[cm]=0; awcache[cm]=0; awprot[cm]=0; awqos[cm]=0; awregion[cm]=0; awvalid[cm]=1;
+  272 |       awid[cm]=cm+1; awaddr[cm]=32'h0000_0900; awlen[cm]=0; awsize[cm]=3; awburst[cm]=1; awlock[cm]=0; awcache[cm]=0; awprot[cm]=0; awqos[cm]=0; awregion[cm]=0; awvalid[cm]=1;
       |               ^
-%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:275:15: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+%Warning-WIDTHTRUNC: tb/directed/axi_fabric_a_tb.sv:279:15: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
                                                           : ... note: In instance 'axi_fabric_a_tb'
-  275 |       awid[pm]=pm+1; awaddr[pm]=(pm==0)?32'h0000_0a00:(pm==1)?32'h1000_0a00:32'h2000_0a00; awlen[pm]=0; awsize[pm]=3; awburst[pm]=1; awlock[pm]=0; awcache[pm]=0; awprot[pm]=0; awqos[pm]=0; awregion[pm]=0; awvalid[pm]=1;
+  279 |       awid[pm]=pm+1; awaddr[pm]=(pm==0)?32'h0000_0a00:(pm==1)?32'h1000_0a00:32'h2000_0a00; awlen[pm]=0; awsize[pm]=3; awburst[pm]=1; awlock[pm]=0; awcache[pm]=0; awprot[pm]=0; awqos[pm]=0; awregion[pm]=0; awvalid[pm]=1;
       |               ^
+%Warning-WIDTHEXPAND: tb/directed/axi_fabric_a_tb.sv:290:25: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'im' generates 32 bits.
+                                                           : ... note: In instance 'axi_fabric_a_tb'
+  290 |       wdata[im]=64'h5000+im; wstrb[im]=8'hff; wlast[im]=1; wvalid[im]=1;
+      |                         ^
 %Warning-PROCASSINIT: tb/directed/axi_fabric_a_tb.sv:2:16: Procedural assignment to declaration with initial value: 'ACLK'
                                                          : ... note: In instance 'axi_fabric_a_tb'
                                                          : ... Location of variable initialization
@@ -119,7 +123,7 @@
                                                            : ... note: In instance 'axi_fabric_a_tb'
    27 |   logic [2:0][3:0] tawcache, tawqos, tawregion, tarcache, tarqos, tarregion;
       |                                                                   ^~~~~~~~~
-%Warning-UNUSEDSIGNAL: tb/directed/axi_fabric_a_tb.sv:28:21: Signal is not used: 'twdata'
+%Warning-UNUSEDSIGNAL: tb/directed/axi_fabric_a_tb.sv:28:21: Bits of signal are not used: 'twdata'[191:64]
                                                            : ... note: In instance 'axi_fabric_a_tb'
    28 |   logic [2:0][63:0] twdata, trdata;
       |                     ^~~~~~
@@ -134,6 +138,7 @@ g++ -Os  -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/
 g++ -Os  -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -include-pch Vaxi_fabric_a_tb__pch.h.fast.gch -c Vaxi_fabric_a_tb.cpp
 g++ -Os  -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -include-pch Vaxi_fabric_a_tb__pch.h.fast.gch -c Vaxi_fabric_a_tb___024root__0.cpp
 g++ -Os  -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -include-pch Vaxi_fabric_a_tb__pch.h.fast.gch -c Vaxi_fabric_a_tb___024root__1.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -include-pch Vaxi_fabric_a_tb__pch.h.fast.gch -c Vaxi_fabric_a_tb___024root__2.cpp
 g++ -Os  -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -include-pch Vaxi_fabric_a_tb__pch.h.fast.gch -c Vaxi_fabric_a_tb__main.cpp
 g++   -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -c -x c++-header Vaxi_fabric_a_tb__pch.h -o Vaxi_fabric_a_tb__pch.h.slow.gch
 g++   -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vaxi_fabric_a_tb.h>"   -DVL_TIME_CONTEXT   -std=gnu++20 -include-pch Vaxi_fabric_a_tb__pch.h.slow.gch -c Vaxi_fabric_a_tb__ConstPool__0__Slow.cpp
@@ -143,5 +148,5 @@ g++   -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/ver
 g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines   verilated.o verilated_timing.o verilated_threads.o Vaxi_fabric_a_tb__ALL.a    -pthread -lpthread   -o /Users/Dilan/Projects/fabric-under-pressure/results/raw/fabric_a_gate2_directed/axi_fabric_a_tb
 rm Vaxi_fabric_a_tb__ALL.verilator_deplist.tmp
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
-- Verilator: Built from 1.000 MB sources in 21 modules, into 1.572 MB in 8 C++ files needing 0.002 MB
-- Verilator: Walltime 7.743 s (elab=0.014, cvt=0.113, bld=7.586); cpu 0.157 s on 1 threads; allocated 44.766 MB
+- Verilator: Built from 1.006 MB sources in 21 modules, into 1.907 MB in 9 C++ files needing 0.003 MB
+- Verilator: Walltime 10.513 s (elab=0.016, cvt=0.143, bld=10.315); cpu 0.190 s on 1 threads; allocated 49.984 MB

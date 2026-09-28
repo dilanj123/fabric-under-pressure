@@ -36,6 +36,8 @@ module axi_fabric_a_tb;
   logic [2:0] ext_bvalid_q, ext_rvalid_q;
   logic [2:0][4:0] ext_rbeats_q;
   logic [2:0] ext_rlast_q;
+  logic r_gap_s0;
+  logic b_hold_s0;
 
   axi_fabric_a dut (.*,
     .manager_awid(awid), .manager_awaddr(awaddr), .manager_awlen(awlen), .manager_awsize(awsize),
@@ -60,9 +62,11 @@ module axi_fabric_a_tb;
 
   always_comb begin
     tbvalid = ext_bvalid_q;
+    if (b_hold_s0) tbvalid[0] = 1'b0;
     tbid = ext_bid_q;
     tbresp = '0;
     trvalid = ext_rvalid_q;
+    if (r_gap_s0) trvalid[0] = 1'b0;
     trid = ext_rid_q;
     trdata = '0;
     trresp = '0;
@@ -183,7 +187,7 @@ module axi_fabric_a_tb;
   initial begin
     awid='0; awaddr='0; awlen='0; awsize='0; awburst='0; awlock='0; awcache='0; awprot='0; awqos='0; awregion='0; awvalid='0;
     wdata='0; wstrb='0; wlast='0; wvalid='0; bready='0;
-    arid='0; araddr='0; arlen='0; arsize='0; arburst='0; arlock='0; arcache='0; arprot='0; arqos='0; arregion='0; arvalid='0; rready='0;
+    arid='0; araddr='0; arlen='0; arsize='0; arburst='0; arlock='0; arcache='0; arprot='0; arqos='0; arregion='0; arvalid='0; rready='0; r_gap_s0=0; b_hold_s0=0;
     reset_dut();
     for (integer m=0; m<3; m=m+1) begin
       for (integer t=0; t<4; t=t+1) begin
@@ -278,6 +282,75 @@ module axi_fabric_a_tb;
     tick();
     begin $display("parallel awr=%b", awready); check((awready[0]&&awready[1]&&awready[2]), "parallel target AW progress"); tick(); end
     awvalid='0;
+
+    // Same visible ID from all managers, with distinct external targets.
+    $display("G2 same visible ID across managers"); reset_dut(); bready='0;
+    for (integer im=0; im<3; im=im+1) begin
+      awid[im]=4'h5; awaddr[im]=(im==0)?32'h0000_0b00:(im==1)?32'h1000_0b00:32'h2000_0b00; awlen[im]=0; awsize[im]=3; awburst[im]=1; awlock[im]=0; awcache[im]=0; awprot[im]=0; awqos[im]=0; awregion[im]=0; awvalid[im]=1;
+      wdata[im]=64'h5000+im; wstrb[im]=8'hff; wlast[im]=1; wvalid[im]=1;
+    end
+    repeat(5) tick();
+    check(ext_bid_q[0]==6'b00_0101 && ext_bid_q[1]==6'b01_0101 && ext_bid_q[2]==6'b10_0101, "widened write IDs disambiguate managers");
+    awvalid='0; wvalid='0; bready='1; repeat(8) tick();
+    for (integer im2=0; im2<3; im2=im2+1) if (bvalid[im2]) check(bid[im2]==4'h5, "same-ID write BID restored");
+    reset_dut(); rready='0;
+    for (integer ir=0; ir<3; ir=ir+1) begin
+      arid[ir]=4'h5; araddr[ir]=(ir==0)?32'h0000_0c00:(ir==1)?32'h1000_0c00:32'h2000_0c00; arlen[ir]=0; arsize[ir]=3; arburst[ir]=1; arlock[ir]=0; arcache[ir]=0; arprot[ir]=0; arqos[ir]=0; arregion[ir]=0; arvalid[ir]=1;
+    end
+    repeat(5) tick();
+    check(ext_rid_q[0]==6'b00_0101 && ext_rid_q[1]==6'b01_0101 && ext_rid_q[2]==6'b10_0101, "widened read IDs disambiguate managers");
+    arvalid='0; rready='1; repeat(8) tick();
+    for (integer ir2=0; ir2<3; ir2=ir2+1) if (rvalid[ir2]) check(rid[ir2]==4'h5, "same-ID read RID restored");
+
+    // Distinct-ID out-of-order completion: rotate each response pointer first,
+    // then leave S0/S1 responses pending so S1 is serviced before S0.
+    $display("G2 distinct-ID out-of-order completion"); reset_dut();
+    do_write(0,0,4'h0,1); bready[0]=0; b_hold_s0=1;
+    write_without_b(0,0,4'h1); write_without_b(0,1,4'h2); repeat(4) tick();
+    b_hold_s0=0; repeat(2) tick(); check(bvalid[0] && bid[0]==4'h2, "later write ID completes first"); bready[0]=1; tick(); bready[0]=0; repeat(2) tick();
+    check(bvalid[0] && bid[0]==4'h1, "earlier write ID completes second"); bready[0]=1; tick(); bready[0]=0;
+    reset_dut(); rready[0]=0;
+    do_read(0,0,4'h0,1); rready[0]=0; r_gap_s0=1;
+    read_without_r(0,0,4'h1); read_without_r(0,1,4'h2); repeat(4) tick();
+    check(rvalid[0] && rid[0]==4'h2, "later read ID completes first"); rready[0]=1; tick(); rready[0]=0; r_gap_s0=0; repeat(2) tick();
+    check(rvalid[0] && rid[0]==4'h1, "earlier read ID completes second"); rready[0]=1; tick(); rready[0]=0;
+
+    // First, middle and final target-W stalls preserve registered beats.
+    $display("G2 target W stalls"); reset_dut(); twready[0]=0;
+    awid[0]=4'hc; awaddr[0]=32'h0000_0d00; awlen[0]=3; awsize[0]=3; awburst[0]=1; awlock[0]=0; awcache[0]=0; awprot[0]=0; awqos[0]=0; awregion[0]=0; awvalid[0]=1;
+    while (!awready[0]) tick(); tick(); awvalid[0]=0;
+    wdata[0]=64'hd0; wstrb[0]=8'hf0; wlast[0]=0; wvalid[0]=1; while (!wready[0]) tick(); tick(); wvalid[0]=0;
+    repeat(3) begin check(twvalid[0] && twdata[0]==64'hd0 && !twlast[0], "first W beat stable while target stalled"); tick(); end
+    twready[0]=1; tick(); twready[0]=0;
+    wdata[0]=64'hd1; wstrb[0]=8'h0f; wlast[0]=0; wvalid[0]=1; while (!wready[0]) tick(); tick(); wvalid[0]=0;
+    repeat(2) begin check(twvalid[0] && twdata[0]==64'hd1 && !twlast[0], "middle W beat stable while target stalled"); tick(); end
+    twready[0]=1; tick(); twready[0]=0;
+    wdata[0]=64'hd2; wstrb[0]=8'hff; wlast[0]=0; wvalid[0]=1; while (!wready[0]) tick(); tick(); wvalid[0]=0; twready[0]=1; tick(); twready[0]=0;
+    wdata[0]=64'hd3; wstrb[0]=8'hff; wlast[0]=1; wvalid[0]=1; while (!wready[0]) tick(); tick(); wvalid[0]=0;
+    repeat(3) begin check(twvalid[0] && twdata[0]==64'hd3 && twlast[0], "final WLAST stable while target stalled"); tick(); end
+    twready[0]=1; bready[0]=1; repeat(8) tick(); bready[0]=0;
+
+    // Locked-source gap: S1 must wait while M0's S0 burst is temporarily absent.
+    $display("G2 R locked-source gap"); reset_dut(); rready[0]=1; r_gap_s0=0;
+    arid[0]=4'h1; araddr[0]=32'h0000_1100; arlen[0]=3; arsize[0]=3; arburst[0]=1; arlock[0]=0; arcache[0]=0; arprot[0]=0; arqos[0]=0; arregion[0]=0; arvalid[0]=1;
+    while (!arready[0]) tick(); tick(); arvalid[0]=0;
+    arid[0]=4'h2; araddr[0]=32'h1000_1100; arlen[0]=0; arsize[0]=3; arburst[0]=1; arlock[0]=0; arcache[0]=0; arprot[0]=0; arqos[0]=0; arregion[0]=0; arvalid[0]=1;
+    while (!arready[0]) tick(); tick(); arvalid[0]=0;
+    for (integer rg=0; rg<30 && !(rvalid[0] && rid[0]==4'h1); rg=rg+1) tick(); check(rvalid[0] && rid[0]==4'h1, "S0 establishes first R burst"); tick();
+    r_gap_s0=1;
+    repeat(3) begin check(!trready[1] && trvalid[1], "alternate R source blocked during locked-source gap"); tick(); end
+    r_gap_s0=0;
+    for (integer rc=0; rc<30 && !(rvalid[0] && rlast[0]); rc=rc+1) tick(); check(rvalid[0] && rlast[0], "locked S0 burst resumes to RLAST"); tick();
+    for (integer rs=0; rs<30 && !(rvalid[0] && rid[0]==4'h2); rs=rs+1) tick(); check(rvalid[0] && rid[0]==4'h2, "waiting S1 response follows accepted RLAST"); tick();
+    rready[0]=0; r_gap_s0=0;
+
+    // Reset abandonment for stalled address slots and a fresh recovery.
+    $display("G2 reset partial traffic"); reset_dut(); tawready[0]=0;
+    awid[0]=4'h1; awaddr[0]=32'h0000_0e00; awlen[0]=0; awsize[0]=3; awburst[0]=1; awlock[0]=0; awcache[0]=0; awprot[0]=0; awqos[0]=0; awregion[0]=0; awvalid[0]=1;
+    while (!awready[0]) tick(); tick(); awvalid[0]=0; check(tawvalid[0], "AW slot occupied before reset"); reset_dut(); check(!tawvalid[0] && !bvalid[0] && !rvalid[0], "reset clears address/response state");
+    tarready[0]=0; arid[0]=4'h2; araddr[0]=32'h0000_0f00; arlen[0]=0; arsize[0]=3; arburst[0]=1; arlock[0]=0; arcache[0]=0; arprot[0]=0; arqos[0]=0; arregion[0]=0; arvalid[0]=1;
+    while (!arready[0]) tick(); tick(); arvalid[0]=0; check(tarvalid[0], "AR slot occupied before reset"); reset_dut(); check(!tarvalid[0] && !rvalid[0], "reset abandons stalled read");
+    do_write(0,0,4'h3,1); do_read(0,0,4'h4,1);
     $display("PASS axi_fabric_a_tb checks=%0d", checks); $finish;
   end
 endmodule
