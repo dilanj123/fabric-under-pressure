@@ -61,7 +61,7 @@ always_ff @(posedge ACLK or negedge ARESETn) begin
 end
 ```
 
-The coordinated environment is responsible for synchronous reset release; individual MVP blocks do not add reset synchronizers. S3 consumes legal supported request shape and returns DECERR while preserving required beat count/LAST semantics.
+The coordinated environment is responsible for synchronous reset release; individual MVP blocks do not add reset synchronizers. S3 consumes legal supported request shape and returns DECERR while preserving required beat count/LAST semantics. Its write and read sides are independent one-context error-target channels: S3 accepts one widened-ID AW, consumes the complete W burst through correct WLAST before B/DECERR, and emits ARLEN+1 zero-data R/DECERR beats with RLAST only on the final beat. WDATA/WSTRB are consumed and discarded; no memory side effects are modeled.
 
 Outstanding capacity is derived from registered pre-state. A completion on cycle N cannot recycle its ID or count capacity into a new allocation on cycle N. Different-ID allocation is allowed in the same cycle only when the pre-state ID is free and the pre-state count is below four.
 
