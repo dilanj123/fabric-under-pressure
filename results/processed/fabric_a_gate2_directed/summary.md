@@ -4,7 +4,7 @@ Status: PASS
 
 Command: `scripts/run_fabric_a_gate2_directed.sh`
 
-Checks: 296 self-checking simulation checks, including the retained 260-check route/payload smoke.
+Checks: 348 self-checking simulation checks, including the retained 260-check route/payload smoke.
 
 Coverage added beyond the route smoke:
 

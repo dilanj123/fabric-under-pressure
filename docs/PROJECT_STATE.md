@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-28
 **Gate:** Gate 1 PASS; `kg-g1-spec` exists remotely at `aecfb8c`
-**Architecture:** Architecture-A production RTL now exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression now passes 340 checks, including multi-manager ID disambiguation, distinct-ID out-of-order completion, locked-source gaps, target-W stalls and reset abandonment/recovery. Gate 2 remains open pending the independent Python oracle and final closure review.
+**Architecture:** Architecture-A production RTL now exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression now passes 348 checks, including multi-manager ID disambiguation, distinct-ID out-of-order completion, locked-source gaps, target-W stalls and reset abandonment/recovery. Gate 2 remains open pending the independent Python oracle and final closure review.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.

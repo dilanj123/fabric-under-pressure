@@ -350,6 +350,10 @@ module axi_fabric_a_tb;
     while (!awready[0]) tick(); tick(); awvalid[0]=0; check(tawvalid[0], "AW slot occupied before reset"); reset_dut(); check(!tawvalid[0] && !bvalid[0] && !rvalid[0], "reset clears address/response state");
     tarready[0]=0; arid[0]=4'h2; araddr[0]=32'h0000_0f00; arlen[0]=0; arsize[0]=3; arburst[0]=1; arlock[0]=0; arcache[0]=0; arprot[0]=0; arqos[0]=0; arregion[0]=0; arvalid[0]=1;
     while (!arready[0]) tick(); tick(); arvalid[0]=0; check(tarvalid[0], "AR slot occupied before reset"); reset_dut(); check(!tarvalid[0] && !rvalid[0], "reset abandons stalled read");
+    reset_dut(); bready[0]=0; write_without_b(0,0,4'h5); for (integer rb=0; rb<20 && !bvalid[0]; rb=rb+1) tick(); check(bvalid[0], "B slot occupied before reset"); reset_dut(); check(!bvalid[0], "reset clears stalled B slot");
+    reset_dut(); rready[0]=0; read_without_r(0,0,4'h6); for (integer rr=0; rr<20 && !rvalid[0]; rr=rr+1) tick(); check(rvalid[0], "R slot occupied before reset"); reset_dut(); check(!rvalid[0], "reset clears stalled R slot");
+    reset_dut(); twready[0]=0; awid[0]=4'h7; awaddr[0]=32'h0000_1000; awlen[0]=0; awsize[0]=3; awburst[0]=1; awlock[0]=0; awcache[0]=0; awprot[0]=0; awqos[0]=0; awregion[0]=0; awvalid[0]=1; while (!awready[0]) tick(); tick(); awvalid[0]=0; wdata[0]=64'h77; wstrb[0]=8'hff; wlast[0]=1; wvalid[0]=1; while (!wready[0]) tick(); tick(); wvalid[0]=0; check(twvalid[0], "W slot occupied before reset"); reset_dut(); check(!twvalid[0], "reset clears stalled W slot");
+    reset_dut(); rready[0]=0; read_without_r(0,3,4'h8); for (integer rf=0; rf<20 && !rvalid[0]; rf=rf+1) tick(); check(rvalid[0] && rlast[0], "final RLAST stalled before reset"); reset_dut(); check(!rvalid[0], "reset clears stalled final RLAST");
     do_write(0,0,4'h3,1); do_read(0,0,4'h4,1);
     $display("PASS axi_fabric_a_tb checks=%0d", checks); $finish;
   end

@@ -14,8 +14,8 @@ G2 distinct-ID out-of-order completion
 G2 target W stalls
 G2 R locked-source gap
 G2 reset partial traffic
-PASS axi_fabric_a_tb checks=340
-- tb/directed/axi_fabric_a_tb.sv:354: Verilog $finish
+PASS axi_fabric_a_tb checks=348
+- tb/directed/axi_fabric_a_tb.sv:358: Verilog $finish
 - S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
-- Verilator: $finish at 6ns; walltime 0.002 s; speed 2.659 us/s
-- Verilator: cpu 0.002 s on 1 threads; allocated 2 MB
+- Verilator: $finish at 6ns; walltime 0.001 s; speed 6.790 us/s
+- Verilator: cpu 0.001 s on 1 threads; allocated 2 MB
