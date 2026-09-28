@@ -183,3 +183,12 @@ The initial B-router functional entries above are retained as historical evidenc
 | R-E005 | SYNTH | focused registered R response router completes ECP5-targeted Yosys synthesis | `results/raw/r_response_router/yosys_r_router_synth.log`, `results/processed/r_response_router/summary.md` | PASS; 1,786 LUT4, 284 TRELLIS_FF, 353 PFUMX, 102 L6MUX21; primitive/path evidence only, no Fabric PPA claim |
 
 The R evidence is scoped to the common response router and focused AR/R lifecycle composition. Recorded-target versus returned-target matching is not implemented because the current shared read-state bank does not expose the required table. S3 response generation and full four-target production integration remain future work.
+
+## S3 error-target evidence
+
+| S3-E001 | SIM | Standalone S3 legal unmapped write/read behavior passes 1/2/4/16-beat bursts, WLAST diagnostics, response backpressure, simultaneous read/write activity and reset | `results/raw/s3_error_target/standalone_simulation.log` | PASS; 72 self-checking checks |
+| S3-E002 | SIM | Focused Architecture-A manager-to-S3-to-manager write lifecycle allocates shared write state on AW admission, consumes W through S3 and returns manager-visible DECERR B before clearing the busy ID | `results/raw/s3_error_target/write_lifecycle_simulation.log` | PASS; 5 self-checking checks |
+| S3-E003 | SIM | Focused Architecture-A manager-to-S3-to-manager read lifecycle allocates shared read state, transports a two-beat DECERR burst and clears the ID only on accepted manager RLAST | `results/raw/s3_error_target/read_lifecycle_simulation.log` | PASS; 6 self-checking checks |
+| S3-E004 | FORMAL | Standalone S3 write/read state, DECERR payload, beat bounds and backpressure-stability properties pass | `results/raw/s3_error_target/formal_write_run.log`, `formal_read_run.log` | PASS; Yices via SBY smtbmc, bounded BMC depth 24; legal AWLEN/ARLEN <= 15 assumptions |
+| S3-E005 | FORMAL | Standalone S3 write/read covers reach one-beat, 16-beat, stalled-response and final-response states | `results/raw/s3_error_target/formal_write_run.log`, `formal_read_run.log` | PASS; Yices via SBY bounded cover depth 24 |
+| S3-E006 | SYNTH | S3 error target completes ECP5-targeted Yosys synthesis | `results/raw/s3_error_target/synthesis.log`, `axi_s3_error_target_ecp5.json` | PASS; 52 LUT4, 29 TRELLIS_FF, 12 CCU2C, 13 PFUMX, 7 L6MUX21; primitive evidence only, no Fabric PPA claim |

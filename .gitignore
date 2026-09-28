@@ -144,3 +144,8 @@ results/raw/r_response_router/formal_*/engine_*/
 results/raw/r_response_router/formal_*/config.sby
 results/raw/r_response_router/formal_*/status
 results/raw/r_response_router/formal_*/*.xml
+formal/axi_s3_error_target_*/
+results/raw/s3_error_target/model/
+results/raw/s3_error_target/src/
+results/raw/s3_error_target/*_prove/
+results/raw/s3_error_target/*_cover/

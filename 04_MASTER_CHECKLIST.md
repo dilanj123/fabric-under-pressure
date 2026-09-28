@@ -339,8 +339,8 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] B backpressure tested.
 - [ ] AR backpressure tested.
 - [ ] R backpressure tested.
-- [ ] default/error read tests pass.
-- [ ] default/error write tests pass.
+- [x] default/error read tests pass. (`results/raw/s3_error_target/standalone_simulation.log`; standalone S3 scope)
+- [x] default/error write tests pass. (`results/raw/s3_error_target/standalone_simulation.log`; standalone S3 scope)
 - [ ] reset idle passes.
 - [ ] reset partially accepted traffic passes.
 - [ ] long randomized contention passes.
@@ -455,7 +455,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [ ] AW/write-owner path works.
 - [ ] W route through WLAST works.
 - [ ] B route works.
-- [ ] S3 default/error target works.
+- [ ] S3 default/error target works. (Broad Gate-2 integration item remains open; focused endpoint/lifecycle evidence is indexed as S3-E001–S3-E006.)
 - [ ] independent Python model checks end-to-end behavior.
 - [ ] directed regression passes.
 - [ ] no deep-verification/PPA claim made prematurely.
