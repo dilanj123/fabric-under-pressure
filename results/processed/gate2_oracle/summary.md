@@ -9,7 +9,7 @@ implemented.
 
 ## Passing evidence
 
-- Pure Python detector/self tests: 11 tests pass in
+- Pure Python detector/self tests: 14 tests pass in
   `tb/model/test_axi_reference_model.py`.
 - DUT-facing Verilator/cocotb test: 1 test passes against `axi_fabric_a`.
 - S3 legal write/read transport: DECERR, widened-ID restoration, zero read
@@ -22,13 +22,15 @@ implemented.
   target W routing and manager BID restoration for M0/M1/M2.
 - Manager-W expectations are recorded at manager handshakes and compared at
   target delivery; target-address observations validate admitted transaction,
-  address and widened ID.
+  address, complete AW/AR carried payload and widened ID.
 - The independent endpoint memory implementation is used by the DUT-facing
   test and its initialization agrees with the reference memory at sampled
   addresses.
 - The normal run has monotonic multi-cycle JSONL trace data. A deliberate
   `ORACLE_FAULT_MODE=bad_rdata` run fails with `bad RDATA`, and the closure
   driver records that expected failure as sensitivity PASS.
+- The model rejects premature B before any or all expected W beats and owns
+  R beat indexing internally rather than trusting the caller.
 - Reference-model trace: `results/raw/gate2_oracle/event_trace.jsonl`.
 
 ## Detector non-vacuity

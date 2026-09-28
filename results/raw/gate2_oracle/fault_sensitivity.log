@@ -1,6 +1,6 @@
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 0.002 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.234 MB
+- Verilator: Walltime 0.001 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.266 MB
 make: Nothing to be done for `default'.
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/bin/tabbypy3
@@ -9,23 +9,23 @@ make: Nothing to be done for `default'.
      0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
      0.00ns INFO     cocotb                             Running tests
      0.00ns INFO     cocotb.regression                  running test_axi_fabric_a_oracle.fabric_a_s3_oracle (1/1)
-     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:278: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:292: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
                                                           cocotb.start_soon(Clock(dut.ACLK, 10, units="ns").start())
    380.00ns WARNING  ..otb.task.Test fabric_a_s3_oracle bad RDATA manager=0 id=0 beat=0
                                                         Traceback (most recent call last):
-                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py", line 357, in fabric_a_s3_oracle
+                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py", line 371, in fabric_a_s3_oracle
                                                             await mapped_read(dut, model, endpoint_memory, 0, ident, target, length,
-                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py", line 153, in mapped_read
-                                                            model.observe_r(manager, ident, beat, obs_data, obs_resp, obs_last,
-                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/model/axi_reference_model.py", line 217, in observe_r
+                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py", line 167, in mapped_read
+                                                            model.observe_r(manager, ident, obs_data, obs_resp, obs_last,
+                                                          File "/Users/Dilan/Projects/fabric-under-pressure/tb/model/axi_reference_model.py", line 246, in observe_r
                                                             raise OracleViolation(f"bad RDATA manager={manager} id={ident} beat={beat}")
                                                         axi_reference_model.OracleViolation: bad RDATA manager=0 id=0 beat=0
    380.00ns WARNING  cocotb.regression                  test_axi_fabric_a_oracle.fabric_a_s3_oracle failed
    380.00ns INFO     cocotb.regression                  *****************************************************************************************************
                                                         ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         *****************************************************************************************************
-                                                        ** test_axi_fabric_a_oracle.fabric_a_s3_oracle   FAIL         380.00           0.02      16318.24  **
+                                                        ** test_axi_fabric_a_oracle.fabric_a_s3_oracle   FAIL         380.00           0.02      15418.30  **
                                                         *****************************************************************************************************
-                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               380.00           0.03      12696.24  **
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               380.00           0.03      11655.36  **
                                                         *****************************************************************************************************
 - :0: Verilog $finish

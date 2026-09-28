@@ -34,6 +34,10 @@ class Transaction:
     qos: int
     accept_cycle: int
     expected_beats: int
+    lock: int = 0
+    cache: int = 0
+    prot: int = 0
+    region: int = 0
     w_beats: List[Tuple[int, int, int]] = field(default_factory=list)
     manager_w_beats: List[Tuple[int, int, int]] = field(default_factory=list)
     r_beats: int = 0
@@ -91,14 +95,15 @@ class AxiReferenceModel:
         self.r_source_lock.clear()
 
     def _admit(self, direction: str, manager: int, ident: int, addr: int,
-               length: int, size: int, burst: int, qos: int = 0) -> Transaction:
+               length: int, size: int, burst: int, qos: int = 0,
+               lock: int = 0, cache: int = 0, prot: int = 0, region: int = 0) -> Transaction:
         if not legal_request(addr, length, size, burst):
             raise OracleViolation(f"unsupported {direction} request manager={manager} id={ident}")
         key = TxKey(direction, manager, ident, self.epoch)
         if key in self.transactions and not self.transactions[key].completed:
             raise OracleViolation(f"duplicate live {key}")
         tx = Transaction(key, decode_target(addr), addr, length, size, burst, qos,
-                         self.cycle, length + 1)
+                         self.cycle, length + 1, lock, cache, prot, region)
         self.transactions[key] = tx
         self.events.append({"kind": direction + "_admit", "cycle": self.cycle,
                             "epoch": self.epoch, "manager": manager, "id": ident,
@@ -106,19 +111,27 @@ class AxiReferenceModel:
         return tx
 
     def admit_aw(self, manager: int, ident: int, addr: int, length: int,
-                 size: int = 3, burst: int = 1, qos: int = 0) -> Transaction:
+                 size: int = 3, burst: int = 1, qos: int = 0, lock: int = 0,
+                 cache: int = 0, prot: int = 0, region: int = 0) -> Transaction:
         if manager in self.active_write:
             raise OracleViolation(f"manager {manager} has unfinished W owner")
-        tx = self._admit("aw", manager, ident, addr, length, size, burst, qos)
+        tx = self._admit("aw", manager, ident, addr, length, size, burst, qos,
+                         lock, cache, prot, region)
         self.active_write[manager] = tx.key
         return tx
 
     def admit_ar(self, manager: int, ident: int, addr: int, length: int,
-                 size: int = 3, burst: int = 1, qos: int = 0) -> Transaction:
-        return self._admit("ar", manager, ident, addr, length, size, burst, qos)
+                 size: int = 3, burst: int = 1, qos: int = 0, lock: int = 0,
+                 cache: int = 0, prot: int = 0, region: int = 0) -> Transaction:
+        return self._admit("ar", manager, ident, addr, length, size, burst, qos,
+                           lock, cache, prot, region)
 
     def observe_target_address(self, direction: str, manager: int, ident: int,
-                               observed_internal_id: int, target: int, addr: int) -> None:
+                               observed_internal_id: int, target: int, addr: int,
+                               length: Optional[int] = None, size: Optional[int] = None,
+                               burst: Optional[int] = None, lock: Optional[int] = None,
+                               cache: Optional[int] = None, prot: Optional[int] = None,
+                               qos: Optional[int] = None, region: Optional[int] = None) -> None:
         matches = [tx for tx in self.transactions.values()
                    if tx.key.direction == direction and tx.key.manager == manager
                    and tx.key.ident == ident and tx.key.epoch == self.epoch]
@@ -129,6 +142,10 @@ class AxiReferenceModel:
             raise OracleViolation(f"misroute cycle={self.cycle} expected=S{tx.target} observed=S{target}")
         if tx.addr != addr:
             raise OracleViolation(f"bad {direction} address expected={tx.addr:#x} observed={addr:#x}")
+        observed = (length, size, burst, lock, cache, prot, qos, region)
+        expected = (tx.length, tx.size, tx.burst, tx.lock, tx.cache, tx.prot, tx.qos, tx.region)
+        if all(value is not None for value in observed) and observed != expected:
+            raise OracleViolation(f"bad {direction} payload expected={expected} observed={observed}")
         expected_internal = (manager << 4) | ident
         if observed_internal_id != expected_internal:
             raise OracleViolation(
@@ -189,6 +206,15 @@ class AxiReferenceModel:
         if len(matches) != 1:
             raise OracleViolation(f"duplicate/lost B manager={manager} id={ident}")
         tx = matches[0]
+        if len(tx.manager_w_beats) != tx.expected_beats:
+            raise OracleViolation(
+                f"premature B manager={manager} id={ident}: "
+                f"manager W beats={len(tx.manager_w_beats)} expected={tx.expected_beats}")
+        if tx.target != 3:
+            if not tx.target_address_seen or len(tx.w_beats) != tx.expected_beats:
+                raise OracleViolation(
+                    f"premature mapped B manager={manager} id={ident}: "
+                    f"target AW/W incomplete")
         expected = RESP_DECERR if tx.target == 3 else RESP_OKAY
         if resp != expected:
             raise OracleViolation(f"bad BRESP expected={expected} observed={resp}")
@@ -197,14 +223,17 @@ class AxiReferenceModel:
                             "manager": manager, "id": ident, "target": tx.target})
         return tx
 
-    def observe_r(self, manager: int, ident: int, beat: int, data: int,
-                  resp: int, last: int, addr: Optional[int] = None) -> Transaction:
+    def observe_r(self, manager: int, ident: int, data: int, resp: int,
+                  last: int, addr: Optional[int] = None) -> Transaction:
         matches = [tx for tx in self.transactions.values()
                    if tx.key.direction == "ar" and tx.key.manager == manager
                    and tx.key.ident == ident and not tx.completed]
         if len(matches) != 1:
             raise OracleViolation(f"duplicate/lost R manager={manager} id={ident}")
         tx = matches[0]
+        beat = tx.r_beats
+        if beat >= tx.expected_beats:
+            raise OracleViolation(f"duplicate/extra R manager={manager} id={ident}")
         expected_last = int(beat == tx.expected_beats - 1)
         if int(last) != expected_last:
             raise OracleViolation(f"bad RLAST beat={beat} expected={expected_last} observed={last}")

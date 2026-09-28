@@ -13,8 +13,8 @@ class OracleNegativeTests(unittest.TestCase):
 
     def test_duplication(self):
         self.m.admit_ar(0, 1, 0, 0)
-        self.m.observe_r(0, 1, 0, 0, 0, 1)
-        with self.assertRaises(OracleViolation): self.m.observe_r(0, 1, 0, 0, 0, 1)
+        self.m.observe_r(0, 1, 0, 0, 1)
+        with self.assertRaises(OracleViolation): self.m.observe_r(0, 1, 0, 0, 1)
 
     def test_misroute(self):
         self.m.admit_ar(0, 1, 0, 0)
@@ -47,12 +47,34 @@ class OracleNegativeTests(unittest.TestCase):
         self.m.reset()
         self.m.admit_ar(0, 2, 0, 0)
         with self.assertRaisesRegex(OracleViolation, "duplicate/lost R"):
-            self.m.observe_r(0, 3, 0, 0, 0, 1)
+            self.m.observe_r(0, 3, 0, 0, 1)
+
+    def test_premature_b_before_any_w(self):
+        self.m.admit_aw(0, 6, 0, 0)
+        with self.assertRaisesRegex(OracleViolation, "premature B"):
+            self.m.observe_b(0, 6, 0)
+
+    def test_premature_b_before_complete_burst(self):
+        self.m.admit_aw(0, 7, 0, 3)
+        for beat in range(2):
+            self.m.accept_manager_w(0, beat + 1, 0xFF, 0)
+            self.m.observe_target_w(0, 0, beat + 1, 0xFF, 0)
+        with self.assertRaisesRegex(OracleViolation, "premature B"):
+            self.m.observe_b(0, 7, 0)
+
+    def test_r_progression_is_model_owned(self):
+        self.m.admit_ar(0, 8, 0, 3)
+        self.m.observe_r(0, 8, 0x10, 0, 0)
+        self.m.observe_r(0, 8, 0x11, 0, 0)
+        self.m.observe_r(0, 8, 0x12, 0, 0)
+        with self.assertRaises(OracleViolation):
+            self.m.observe_r(0, 8, 0x13, 0, 0)
+        self.m.observe_r(0, 8, 0x13, 0, 1)
 
     def test_stale_epoch(self):
         self.m.admit_ar(0, 2, 0, 0)
         self.m.reset()
-        with self.assertRaises(OracleViolation): self.m.observe_r(0, 2, 0, 0, 0, 1)
+        with self.assertRaises(OracleViolation): self.m.observe_r(0, 2, 0, 0, 1)
 
     def test_r_source_interleaving(self):
         self.m.admit_ar(0, 2, 0, 1)
@@ -64,7 +86,7 @@ class OracleNegativeTests(unittest.TestCase):
     def test_corruption_sensitivity(self):
         self.m.admit_ar(0, 3, 0, 0)
         with self.assertRaises(OracleViolation):
-            self.m.observe_r(0, 3, 0, 0xDEAD, 0, 1, addr=0)
+            self.m.observe_r(0, 3, 0xDEAD, 0, 1, addr=0)
 
     def test_memory_strobes(self):
         mem = ByteMemory(salt=1)

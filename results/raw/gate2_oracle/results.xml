@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
     <property name="random_seed" value="2697068545" />
-    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="252" time="0.04847216606140137" sim_time_ns="10580.0" ratio_time="218269.59386543502" />
+    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="266" time="0.05036330223083496" sim_time_ns="10580.0" ratio_time="210073.59587954875" />
   </testsuite>
 </testsuites>

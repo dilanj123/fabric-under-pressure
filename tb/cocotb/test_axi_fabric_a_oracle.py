@@ -48,16 +48,22 @@ def endpoint_write(memory: EndpointMemory, addr: int, data: int, strobe: int) ->
 
 async def mapped_write(dut, model, memory, manager, ident, target, length, strobes):
     addr = address_for(target, 0x080 + (ident * 8))
+    cache, prot, qos, region = 0xA, 0x5, 0x3, 0x9
     set_lane(dut.manager_awid, 4, manager, ident)
     set_lane(dut.manager_awaddr, 32, manager, addr)
     set_lane(dut.manager_awlen, 8, manager, length)
     set_lane(dut.manager_awsize, 3, manager, 3)
     set_lane(dut.manager_awburst, 2, manager, 1)
     set_lane(dut.manager_awlock, 1, manager, 0)
+    set_lane(dut.manager_awcache, 4, manager, cache)
+    set_lane(dut.manager_awprot, 3, manager, prot)
+    set_lane(dut.manager_awqos, 4, manager, qos)
+    set_lane(dut.manager_awregion, 4, manager, region)
     set_lane(dut.manager_awvalid, 1, manager, 1)
     while not get_lane(dut.manager_awready, 1, manager):
         await cycles(dut)
-    tx = model.admit_aw(manager, ident, addr, length)
+    tx = model.admit_aw(manager, ident, addr, length, cache=cache, prot=prot,
+                        qos=qos, region=region)
     set_lane(dut.manager_awvalid, 1, manager, 0)
     await cycles(dut)
     while not get_lane(dut.target_awvalid, 1, target):
@@ -65,7 +71,8 @@ async def mapped_write(dut, model, memory, manager, ident, target, length, strob
     observed_id = get_lane(dut.target_awid, 6, target)
     if observed_id != ((manager << 4) | ident):
         raise AssertionError(f"bad target AWID M{manager} ID{ident}: {observed_id:#x}")
-    model.observe_target_address("aw", manager, ident, observed_id, target, addr)
+    model.observe_target_address("aw", manager, ident, observed_id, target, addr,
+                                 length, 3, 1, 0, cache, prot, qos, region)
     await cycles(dut)
     for beat in range(length + 1):
         data = (0x1000_0000_0000_0000 | (manager << 48) | (ident << 32) | beat)
@@ -109,23 +116,30 @@ async def mapped_write(dut, model, memory, manager, ident, target, length, strob
 
 
 async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
+    cache, prot, qos, region = 0x6, 0x2, 0x7, 0x4
     set_lane(dut.manager_arid, 4, manager, ident)
     set_lane(dut.manager_araddr, 32, manager, addr)
     set_lane(dut.manager_arlen, 8, manager, length)
     set_lane(dut.manager_arsize, 3, manager, 3)
     set_lane(dut.manager_arburst, 2, manager, 1)
     set_lane(dut.manager_arlock, 1, manager, 0)
+    set_lane(dut.manager_arcache, 4, manager, cache)
+    set_lane(dut.manager_arprot, 3, manager, prot)
+    set_lane(dut.manager_arqos, 4, manager, qos)
+    set_lane(dut.manager_arregion, 4, manager, region)
     set_lane(dut.manager_arvalid, 1, manager, 1)
     while not get_lane(dut.manager_arready, 1, manager):
         await cycles(dut)
-    model.admit_ar(manager, ident, addr, length)
+    model.admit_ar(manager, ident, addr, length, cache=cache, prot=prot,
+                   qos=qos, region=region)
     set_lane(dut.manager_arvalid, 1, manager, 0)
     await cycles(dut)
     while not get_lane(dut.target_arvalid, 1, target):
         await cycles(dut)
     if get_lane(dut.target_arid, 6, target) != ((manager << 4) | ident):
         raise AssertionError("bad target ARID")
-    model.observe_target_address("ar", manager, ident, get_lane(dut.target_arid, 6, target), target, addr)
+    model.observe_target_address("ar", manager, ident, get_lane(dut.target_arid, 6, target), target, addr,
+                                 length, 3, 1, 0, cache, prot, qos, region)
     await cycles(dut)
     set_lane(dut.manager_rready, 1, manager, 1)
     for beat in range(length + 1):
@@ -150,7 +164,7 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
         obs_last = get_lane(dut.manager_rlast, 1, manager)
         if (obs_id, obs_data, obs_resp, obs_last) != (ident, data, 0, last):
             raise AssertionError("manager R payload mismatch")
-        model.observe_r(manager, ident, beat, obs_data, obs_resp, obs_last,
+        model.observe_r(manager, ident, obs_data, obs_resp, obs_last,
                         addr + beat * 8 if target in (0, 1) else None)
         await cycles(dut)
     set_lane(dut.manager_rready, 1, manager, 0)
@@ -331,7 +345,7 @@ async def fabric_a_s3_oracle(dut):
     assert get_lane(dut.manager_rdata, 64, manager) == 0
     assert get_lane(dut.manager_rresp, 2, manager) == RESP_DECERR
     assert get_lane(dut.manager_rlast, 1, manager) == 1
-    model.observe_r(manager, 6, 0, 0, RESP_DECERR, 1)
+    model.observe_r(manager, 6, 0, RESP_DECERR, 1)
     model.assert_drained()
 
     # Start an independent mapped-memory phase.  The endpoint memories are a
