@@ -9,7 +9,7 @@ implemented.
 
 ## Passing evidence
 
-- Pure Python detector/self tests: 14 tests pass in
+- Pure Python detector/self tests: 15 tests pass in
   `tb/model/test_axi_reference_model.py`.
 - DUT-facing Verilator/cocotb test: 1 test passes against `axi_fabric_a`.
 - S3 legal write/read transport: DECERR, widened-ID restoration, zero read
