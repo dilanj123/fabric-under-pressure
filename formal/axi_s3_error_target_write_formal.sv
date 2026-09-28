@@ -25,6 +25,9 @@ module axi_s3_error_target_write_formal(input logic ACLK);
     if (ARESETn) begin
       assert(awready == (!write_active && !bvalid));
       assert(wready == write_active);
+      // WVALID may be asserted before local AW acceptance; only WREADY gates
+      // the handshake and state transition.
+      if (!write_active) assert(!wready);
       assert(!bvalid || (bresp == 2'b11));
       assert(!bvalid || !write_active);
       if ($past(ARESETn && bvalid && !bready)) begin
@@ -40,6 +43,7 @@ module axi_s3_error_target_write_formal(input logic ACLK);
     cover(ARESETn && awvalid && awready && awlen==0);
     cover(ARESETn && awvalid && awready && awlen==15);
     cover(ARESETn && bvalid && !bready);
-    cover(ARESETn && wvalid && !write_active);
+    cover(ARESETn && wvalid && !write_active && !wready);
+    cover(ARESETn && $past(ARESETn && wvalid && !write_active) && awvalid && awready);
   end
 endmodule

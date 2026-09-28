@@ -101,7 +101,10 @@ module axi_s3_error_target #(
 
     early_wlast_violation = ARESETn && w_fire && (write_beats_q > 5'd1) && wlast;
     missing_wlast_violation = ARESETn && w_fire && expected_wlast && !wlast;
-    w_without_aw_violation = ARESETn && wvalid && !write_active;
+    // WVALID may legally precede local AW acceptance.  WREADY is the
+    // protocol gate; this diagnostic is retained only as an impossible
+    // defensive check for an accepted W without a registered context.
+    w_without_aw_violation = ARESETn && w_fire && !write_active;
 
     write_id = write_id_q;
     write_beats_remaining = write_beats_q;

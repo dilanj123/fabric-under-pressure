@@ -1,0 +1,167 @@
+SBY 21:03:09 [axi_s3_error_target_read_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_prove'.
+SBY 21:03:09 [axi_s3_error_target_read_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_s3_error_target.sv' to '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_prove/src/axi_s3_error_target.sv'.
+SBY 21:03:09 [axi_s3_error_target_read_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_prove/src/axi_s3_error_target_read_formal.sv'.
+SBY 21:03:09 [axi_s3_error_target_read_prove] engine_0: smtbmc yices
+SBY 21:03:09 [axi_s3_error_target_read_cover] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_cover'.
+SBY 21:03:09 [axi_s3_error_target_read_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_s3_error_target.sv' to '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_cover/src/axi_s3_error_target.sv'.
+SBY 21:03:09 [axi_s3_error_target_read_cover] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_s3_error_target_read_cover/src/axi_s3_error_target_read_formal.sv'.
+SBY 21:03:09 [axi_s3_error_target_read_cover] engine_0: smtbmc yices
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: starting process "cd axi_s3_error_target_read_prove/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: starting process "cd axi_s3_error_target_read_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arregion from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arqos from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arprot from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arcache from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arlock from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arburst from 32 bits to 2 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arsize from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.bready from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wvalid from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wlast from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wstrb from 32 bits to 8 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wdata from 32 bits to 64 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awvalid from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awregion from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awqos from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awprot from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awcache from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awlock from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awburst from 32 bits to 2 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awsize from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awlen from 32 bits to 8 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awid from 32 bits to 6 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arregion from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arqos from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arprot from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arcache from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arlock from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arburst from 32 bits to 2 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.arsize from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.bready from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wvalid from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wlast from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wstrb from 32 bits to 8 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.wdata from 32 bits to 64 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awvalid from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awregion from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awqos from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awprot from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awcache from 32 bits to 4 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awlock from 32 bits to 1 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awburst from 32 bits to 2 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awsize from 32 bits to 3 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awlen from 32 bits to 8 bits.
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: Warning: Resizing cell port axi_s3_error_target_read_formal.dut.awid from 32 bits to 6 bits.
+SBY 21:03:09 [axi_s3_error_target_read_prove] base: finished (returncode=0)
+SBY 21:03:09 [axi_s3_error_target_read_prove] prep: starting process "cd axi_s3_error_target_read_prove/model; yosys -ql design_prep.log design_prep.ys"
+SBY 21:03:09 [axi_s3_error_target_read_cover] base: finished (returncode=0)
+SBY 21:03:09 [axi_s3_error_target_read_cover] prep: starting process "cd axi_s3_error_target_read_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 21:03:10 [axi_s3_error_target_read_prove] prep: finished (returncode=0)
+SBY 21:03:10 [axi_s3_error_target_read_prove] smt2: starting process "cd axi_s3_error_target_read_prove/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 21:03:10 [axi_s3_error_target_read_cover] prep: finished (returncode=0)
+SBY 21:03:10 [axi_s3_error_target_read_cover] smt2: starting process "cd axi_s3_error_target_read_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 21:03:10 [axi_s3_error_target_read_prove] smt2: finished (returncode=0)
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: starting process "cd axi_s3_error_target_read_prove; yosys-smtbmc -s yices --presat --unroll --noprogress -t 24  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 21:03:10 [axi_s3_error_target_read_cover] smt2: finished (returncode=0)
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: starting process "cd axi_s3_error_target_read_cover; yosys-smtbmc -s yices --presat --unroll -c --noprogress -t 24  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at axi_s3_error_target_read_formal: axi_s3_error_target_read_formal.sv:37.5-37.53 (_witness_.check_cover_axi_s3_error_target_read_formal_sv_37_92)
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Reached cover statement in step 3 at axi_s3_error_target_read_formal: axi_s3_error_target_read_formal.sv:38.5-38.54 (_witness_.check_cover_axi_s3_error_target_read_formal_sv_38_97)
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Reached cover statement in step 4 at axi_s3_error_target_read_formal: axi_s3_error_target_read_formal.sv:39.5-39.40 (_witness_.check_cover_axi_s3_error_target_read_formal_sv_39_102)
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Reached cover statement in step 4 at axi_s3_error_target_read_formal: axi_s3_error_target_read_formal.sv:40.5-40.38 (_witness_.check_cover_axi_s3_error_target_read_formal_sv_40_106)
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: ##   0:00:00  Status: passed
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: finished (returncode=0)
+SBY 21:03:10 [axi_s3_error_target_read_cover] engine_0: Status returned by engine: pass
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: engine_0 (smtbmc yices) returned pass
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: cover trace: axi_s3_error_target_read_cover/engine_0/trace0.vcd
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary:   reached cover statement axi_s3_error_target_read_formal._witness_.check_cover_axi_s3_error_target_read_formal_sv_37_92 at axi_s3_error_target_read_formal.sv:37.5-37.53 step 3
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: cover trace: axi_s3_error_target_read_cover/engine_0/trace1.vcd
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary:   reached cover statement axi_s3_error_target_read_formal._witness_.check_cover_axi_s3_error_target_read_formal_sv_38_97 at axi_s3_error_target_read_formal.sv:38.5-38.54 step 3
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: cover trace: axi_s3_error_target_read_cover/engine_0/trace2.vcd
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary:   reached cover statement axi_s3_error_target_read_formal._witness_.check_cover_axi_s3_error_target_read_formal_sv_39_102 at axi_s3_error_target_read_formal.sv:39.5-39.40 step 4
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary: cover trace: axi_s3_error_target_read_cover/engine_0/trace3.vcd
+SBY 21:03:10 [axi_s3_error_target_read_cover] summary:   reached cover statement axi_s3_error_target_read_formal._witness_.check_cover_axi_s3_error_target_read_formal_sv_40_106 at axi_s3_error_target_read_formal.sv:40.5-40.38 step 4
+SBY 21:03:10 [axi_s3_error_target_read_cover] DONE (PASS, rc=0)
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: ##   0:00:00  Status: passed
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: finished (returncode=0)
+SBY 21:03:10 [axi_s3_error_target_read_prove] engine_0: Status returned by engine: pass
+SBY 21:03:10 [axi_s3_error_target_read_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:03:10 [axi_s3_error_target_read_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:03:10 [axi_s3_error_target_read_prove] summary: engine_0 (smtbmc yices) returned pass
+SBY 21:03:10 [axi_s3_error_target_read_prove] summary: engine_0 did not produce any traces
+SBY 21:03:10 [axi_s3_error_target_read_prove] DONE (PASS, rc=0)

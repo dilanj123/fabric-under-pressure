@@ -60,8 +60,13 @@ module axi_s3_error_target_tb;
     araddr=0; arsize=3; arburst=2'b01; arlock=0; arcache=0; arqos=0; arregion=0; arprot=0;
     wdata=0; wstrb=8'hFF; reset_dut();
 
-    // W before AW is held by upstream backpressure and diagnosed.
-    wvalid=1; wlast=1; #1; ck(!wready && w_without_aw_violation,"W before AW blocked"); tick(); wvalid=0;
+    // WVALID may precede local AW acceptance. S3 holds WREADY low without
+    // diagnosing the legal independent-channel ordering.
+    wvalid=1; wlast=1;
+    repeat(3) begin #1; ck(!wready && !w_without_aw_violation && !write_active && !bvalid,"W before local AW is backpressured legally"); tick(); end
+    awid=6'h00; awlen=0; awvalid=1; #1; ck(awready,"AW accepts after early WVALID"); tick(); awvalid=0;
+    #1; ck(wready && !w_without_aw_violation,"held W becomes admissible after AW"); tick(); wvalid=0;
+    #1; ck(bvalid && bid==6'h00 && bresp==2'b11,"early-held W completes DECERR"); bready=1; tick(); bready=0;
     write_burst(1,6'h01);
     write_burst(2,6'h02);
     write_burst(4,6'h03);

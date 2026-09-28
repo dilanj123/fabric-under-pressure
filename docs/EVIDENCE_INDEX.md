@@ -192,3 +192,11 @@ The R evidence is scoped to the common response router and focused AR/R lifecycl
 | S3-E004 | FORMAL | Standalone S3 write/read state, DECERR payload, beat bounds and backpressure-stability properties pass | `results/raw/s3_error_target/formal_write_run.log`, `formal_read_run.log` | PASS; Yices via SBY smtbmc, bounded BMC depth 24; legal AWLEN/ARLEN <= 15 assumptions |
 | S3-E005 | FORMAL | Standalone S3 write/read covers reach one-beat, 16-beat, stalled-response and final-response states | `results/raw/s3_error_target/formal_write_run.log`, `formal_read_run.log` | PASS; Yices via SBY bounded cover depth 24 |
 | S3-E006 | SYNTH | S3 error target completes ECP5-targeted Yosys synthesis | `results/raw/s3_error_target/synthesis.log`, `axi_s3_error_target_ecp5.json` | PASS; 52 LUT4, 29 TRELLIS_FF, 12 CCU2C, 13 PFUMX, 7 L6MUX21; primitive evidence only, no Fabric PPA claim |
+
+## S3 W-before-AW repair evidence
+
+| S3R-E001 | SIM | Legal WVALID-before-local-AW is backpressured without a diagnostic; the held beat completes after AW acceptance and produces DECERR B | `results/raw/s3_error_target_repair/standalone_simulation.log` | PASS; 77 checks |
+| S3R-E002 | SIM | Focused AW/state/W/S3 composition delays target AW acceptance while W is presented through the registered owner path, then completes normally without a false diagnostic | `results/raw/s3_error_target_repair/write_lifecycle_simulation.log` | PASS; 7 checks |
+| S3R-E003 | FORMAL | `!write_active -> !wready` and no-W-handshake-without-context safety pass; W-before-AW followed by later AW is covered | `results/raw/s3_error_target_repair/formal_write_run.log` | PASS; Yices via SBY smtbmc, bounded prove/cover depth 24 |
+| S3R-E004 | SIM/FORMAL | Existing S3 read lifecycle and read endpoint checks remain passing after the diagnostic repair | `results/raw/s3_error_target_repair/read_lifecycle_simulation.log`, `formal_read_run.log` | PASS; 6 simulation checks and bounded prove/cover |
+| S3R-E005 | SYNTH | Repaired S3 endpoint completes fresh ECP5-targeted synthesis | `results/raw/s3_error_target_repair/synthesis.log`, `axi_s3_error_target_ecp5.json` | PASS; 52 LUT4, 29 TRELLIS_FF, 12 CCU2C, 13 PFUMX, 7 L6MUX21 |
