@@ -1,0 +1,13 @@
+test_bad_ids_data_strobe_resp_last_and_order (tb.model.test_axi_reference_model.OracleNegativeTests.test_bad_ids_data_strobe_resp_last_and_order) ... ok
+test_corruption_sensitivity (tb.model.test_axi_reference_model.OracleNegativeTests.test_corruption_sensitivity) ... ok
+test_duplication (tb.model.test_axi_reference_model.OracleNegativeTests.test_duplication) ... ok
+test_loss (tb.model.test_axi_reference_model.OracleNegativeTests.test_loss) ... ok
+test_memory_strobes (tb.model.test_axi_reference_model.OracleNegativeTests.test_memory_strobes) ... ok
+test_misroute (tb.model.test_axi_reference_model.OracleNegativeTests.test_misroute) ... ok
+test_r_source_interleaving (tb.model.test_axi_reference_model.OracleNegativeTests.test_r_source_interleaving) ... ok
+test_stale_epoch (tb.model.test_axi_reference_model.OracleNegativeTests.test_stale_epoch) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.084s
+
+OK

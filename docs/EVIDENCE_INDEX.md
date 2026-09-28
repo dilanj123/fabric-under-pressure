@@ -207,7 +207,7 @@ The R evidence is scoped to the common response router and focused AR/R lifecycl
 | FAB-E002 | SIM | Whole-top directed responder checks route every manager through S0-S3 for AW/W/B and AR/R, including S3 DECERR traffic and 16-beat mapped/unmapped transactions | `results/raw/fabric_a_integration/simulation.log`, `tb/directed/axi_fabric_a_tb.sv` | PASS; 260 self-checking checks |
 | FAB-E003 | SYNTH | Complete `axi_fabric_a` production composition completes ECP5-targeted Yosys synthesis | `results/raw/fabric_a_integration/synthesis.log`, `results/raw/fabric_a_integration/axi_fabric_a_ecp5.json` | PASS; 5,046 LUT4, 1,219 TRELLIS_FF, 288 CCU2C, 807 PFUMX, 270 L6MUX21; no PPA/timing claim |
 
-The whole-top directed environment uses verification-only external responders for S0-S2 and the real S3 endpoint. It is focused integration evidence, not a complete correctness proof. Recorded-target versus returned-target response-source matching remains unproven, and the independent Python oracle is still absent.
+The whole-top directed environment uses verification-only external responders for S0-S2 and the real S3 endpoint. It is focused integration evidence, not a complete correctness proof. Recorded-target versus returned-target response-source matching remains unproven. A project-owned Python oracle now exists with scoped S0/S1/S3 DUT evidence; the complete Gate-2 oracle matrix remains outstanding.
 
 ## Architecture-A Gate-2 directed integration regression
 
@@ -215,3 +215,9 @@ The whole-top directed environment uses verification-only external responders fo
 | FAB-G2-E002 | SIM | Expanded whole-top directed closure regression covers retained route smoke plus timing permutations, shared read/write capacity, unsupported shapes, target/manager backpressure, contention, parallel progress, cross-manager ID disambiguation, distinct-ID out-of-order completion, locked-source gaps, target-W stalls and reset recovery | `results/raw/fabric_a_gate2_directed/simulation.log`, `results/processed/fabric_a_gate2_directed/summary.md` | PASS; 348 self-checking checks |
 
 This closes the hand-written directed integration pass only. The independent Python oracle and Gate-2 closure decision remain outstanding.
+
+## Independent Python oracle — scoped evidence
+
+| ORACLE-E001 | SIM/UNIT | Project-owned Python reference model detector self-tests reject loss, duplication, misrouting, bad IDs/data/WSTRB/RESP/LAST, R-source interleaving and stale reset epochs | `results/raw/gate2_oracle/pytest_oracle_model.log`, `tb/model/test_axi_reference_model.py` | PASS; 8 tests |
+| ORACLE-E002 | SIM | DUT-facing cocotb oracle checks S3 DECERR lifecycle, S0/S1 mapped read/write data, all legal LEN values 0..15, WSTRB readback, target payload/ID routing and three-manager same-visible-ID write overlap | `results/raw/gate2_oracle/cocotb_build.log`, `results/raw/gate2_oracle/event_trace.jsonl` | PASS; scoped single-test run |
+| ORACLE-E003 | BOOKKEEPING | Closure summary records the implemented scope and remaining independent-oracle gaps; no Gate-2 tag is created | `results/processed/gate2_oracle/summary.md` | Gate 2 remains open |

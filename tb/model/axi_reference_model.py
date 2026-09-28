@@ -1,0 +1,210 @@
+"""Independent Architecture-A Gate-2 reference model.
+
+The model consumes manager-facing handshakes and target observations.  It does
+not import RTL constants or inspect DUT state.
+"""
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Tuple
+
+BEATS_MAX = 16
+RESP_OKAY = 0b00
+RESP_DECERR = 0b11
+
+
+class OracleViolation(AssertionError):
+    pass
+
+
+@dataclass(frozen=True)
+class TxKey:
+    direction: str
+    manager: int
+    ident: int
+    epoch: int
+
+
+@dataclass
+class Transaction:
+    key: TxKey
+    target: int
+    addr: int
+    length: int
+    size: int
+    burst: int
+    qos: int
+    accept_cycle: int
+    expected_beats: int
+    w_beats: List[Tuple[int, int, int]] = field(default_factory=list)
+    r_beats: int = 0
+    completed: bool = False
+
+
+def decode_target(addr: int) -> int:
+    if 0x0000_0000 <= addr <= 0x0000_FFFF:
+        return 0
+    if 0x1000_0000 <= addr <= 0x1000_FFFF:
+        return 1
+    if 0x2000_0000 <= addr <= 0x2000_0FFF:
+        return 2
+    return 3
+
+
+def legal_request(addr: int, length: int, size: int, burst: int, lock: int = 0) -> bool:
+    beats = length + 1
+    return (0 <= length <= 15 and size == 3 and burst == 1 and lock == 0
+            and (addr & 7) == 0 and ((addr & 0xFFF) + beats * 8) <= 4096)
+
+
+class ByteMemory:
+    def __init__(self, size: int = 64 * 1024, salt: int = 0):
+        self.data = bytearray(((i * 37 + salt * 53 + 0x19) & 0xFF) for i in range(size))
+
+    def read64(self, addr: int) -> int:
+        off = addr & (len(self.data) - 1)
+        return int.from_bytes(self.data[off:off + 8], "little")
+
+    def write64(self, addr: int, value: int, strobe: int) -> None:
+        off = addr & (len(self.data) - 1)
+        raw = int(value).to_bytes(8, "little")
+        for lane in range(8):
+            if strobe & (1 << lane):
+                self.data[off + lane] = raw[lane]
+
+
+class AxiReferenceModel:
+    def __init__(self):
+        self.epoch = 0
+        self.cycle = 0
+        self.transactions: Dict[TxKey, Transaction] = {}
+        self.active_write: Dict[int, TxKey] = {}
+        self.memories = {0: ByteMemory(salt=0x10), 1: ByteMemory(salt=0x20)}
+        self.events: List[dict] = []
+        self.r_source_lock: Dict[int, Tuple[int, int]] = {}
+
+    def reset(self) -> None:
+        self.events.append({"kind": "reset", "cycle": self.cycle, "epoch": self.epoch + 1})
+        self.epoch += 1
+        self.transactions.clear()
+        self.active_write.clear()
+        self.r_source_lock.clear()
+
+    def _admit(self, direction: str, manager: int, ident: int, addr: int,
+               length: int, size: int, burst: int, qos: int = 0) -> Transaction:
+        if not legal_request(addr, length, size, burst):
+            raise OracleViolation(f"unsupported {direction} request manager={manager} id={ident}")
+        key = TxKey(direction, manager, ident, self.epoch)
+        if key in self.transactions and not self.transactions[key].completed:
+            raise OracleViolation(f"duplicate live {key}")
+        tx = Transaction(key, decode_target(addr), addr, length, size, burst, qos,
+                         self.cycle, length + 1)
+        self.transactions[key] = tx
+        self.events.append({"kind": direction + "_admit", "cycle": self.cycle,
+                            "epoch": self.epoch, "manager": manager, "id": ident,
+                            "internal_id": (manager << 4) | ident, "target": tx.target})
+        return tx
+
+    def admit_aw(self, manager: int, ident: int, addr: int, length: int,
+                 size: int = 3, burst: int = 1, qos: int = 0) -> Transaction:
+        if manager in self.active_write:
+            raise OracleViolation(f"manager {manager} has unfinished W owner")
+        tx = self._admit("aw", manager, ident, addr, length, size, burst, qos)
+        self.active_write[manager] = tx.key
+        return tx
+
+    def admit_ar(self, manager: int, ident: int, addr: int, length: int,
+                 size: int = 3, burst: int = 1, qos: int = 0) -> Transaction:
+        return self._admit("ar", manager, ident, addr, length, size, burst, qos)
+
+    def observe_target_address(self, direction: str, manager: int, ident: int,
+                               target: int, addr: int) -> None:
+        expected = decode_target(addr)
+        if target != expected:
+            raise OracleViolation(f"misroute cycle={self.cycle} expected=S{expected} observed=S{target}")
+        internal = (manager << 4) | ident
+        if internal != ((manager << 4) | ident):
+            raise OracleViolation("internal ID calculation failure")
+        self.events.append({"kind": direction + "_target", "cycle": self.cycle,
+                            "manager": manager, "id": ident, "target": target,
+                            "internal_id": internal})
+
+    def observe_target_w(self, manager: int, target: int, data: int,
+                         strobe: int, last: int) -> Transaction:
+        if manager not in self.active_write:
+            raise OracleViolation("W without accepted AW")
+        tx = self.transactions[self.active_write[manager]]
+        beat = len(tx.w_beats)
+        if target != tx.target:
+            raise OracleViolation(f"W misroute expected=S{tx.target} observed=S{target}")
+        expected_last = int(beat == tx.expected_beats - 1)
+        if int(last) != expected_last:
+            raise OracleViolation(f"bad WLAST beat={beat} expected={expected_last} observed={last}")
+        tx.w_beats.append((data, strobe, int(last)))
+        if target in self.memories:
+            self.memories[target].write64(tx.addr + 8 * beat, data, strobe)
+        self.events.append({"kind": "w_target", "cycle": self.cycle, "manager": manager,
+                            "id": tx.key.ident, "target": target, "beat": beat,
+                            "data": data, "strobe": strobe, "last": int(last)})
+        if expected_last:
+            self.active_write.pop(manager)
+        return tx
+
+    def observe_b(self, manager: int, ident: int, resp: int) -> Transaction:
+        matches = [tx for tx in self.transactions.values()
+                   if tx.key.direction == "aw" and tx.key.manager == manager
+                   and tx.key.ident == ident and not tx.completed]
+        if len(matches) != 1:
+            raise OracleViolation(f"duplicate/lost B manager={manager} id={ident}")
+        tx = matches[0]
+        expected = RESP_DECERR if tx.target == 3 else RESP_OKAY
+        if resp != expected:
+            raise OracleViolation(f"bad BRESP expected={expected} observed={resp}")
+        tx.completed = True
+        self.events.append({"kind": "b_complete", "cycle": self.cycle,
+                            "manager": manager, "id": ident, "target": tx.target})
+        return tx
+
+    def observe_r(self, manager: int, ident: int, beat: int, data: int,
+                  resp: int, last: int, addr: Optional[int] = None) -> Transaction:
+        matches = [tx for tx in self.transactions.values()
+                   if tx.key.direction == "ar" and tx.key.manager == manager
+                   and tx.key.ident == ident and not tx.completed]
+        if len(matches) != 1:
+            raise OracleViolation(f"duplicate/lost R manager={manager} id={ident}")
+        tx = matches[0]
+        expected_last = int(beat == tx.expected_beats - 1)
+        if int(last) != expected_last:
+            raise OracleViolation(f"bad RLAST beat={beat} expected={expected_last} observed={last}")
+        expected_resp = RESP_DECERR if tx.target == 3 else RESP_OKAY
+        if resp != expected_resp:
+            raise OracleViolation(f"bad RRESP expected={expected_resp} observed={resp}")
+        if tx.target == 3 and data != 0:
+            raise OracleViolation("S3 returned non-zero RDATA")
+        if tx.target in self.memories and addr is not None and data != self.memories[tx.target].read64(addr):
+            raise OracleViolation(f"bad RDATA manager={manager} id={ident} beat={beat}")
+        tx.r_beats += 1
+        if expected_last:
+            tx.completed = True
+        self.events.append({"kind": "r_beat", "cycle": self.cycle, "manager": manager,
+                            "id": ident, "target": tx.target, "beat": beat,
+                            "data": data, "resp": resp, "last": int(last)})
+        return tx
+
+    def observe_r_source(self, manager: int, target: int, ident: int, last: int) -> None:
+        """Check the frozen contiguous-source rule independently of RTL state."""
+        held = self.r_source_lock.get(manager)
+        source = (target, ident)
+        if held is not None and held != source:
+            raise OracleViolation(
+                f"R source interleaving manager={manager} held={held} observed={source}")
+        if held is None:
+            self.r_source_lock[manager] = source
+        if last:
+            self.r_source_lock.pop(manager, None)
+
+    def advance(self, cycles: int = 1) -> None:
+        self.cycle += cycles
+
+    def assert_drained(self) -> None:
+        live = [tx.key for tx in self.transactions.values() if not tx.completed]
+        if live:
+            raise OracleViolation(f"transactions not drained: {live}")

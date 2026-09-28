@@ -457,7 +457,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] B route works. (Focused whole-top directed scope.)
 - [x] S3 default/error target works. (Focused whole-top directed scope; no full-fabric correctness claim.)
 - [ ] independent Python model checks end-to-end behavior.
-- [x] directed regression passes. (`results/processed/fabric_a_gate2_directed/summary.md`; 340 checks.)
+- [x] directed regression passes. (`results/processed/fabric_a_gate2_directed/summary.md`; 348 checks.)
 - [ ] no deep-verification/PPA claim made prematurely.
 - [ ] known-good Gate-2 commit recorded.
 
