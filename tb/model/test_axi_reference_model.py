@@ -11,6 +11,10 @@ class OracleNegativeTests(unittest.TestCase):
         self.m.admit_ar(0, 1, 0, 0)
         with self.assertRaises(OracleViolation): self.m.assert_drained()
 
+    def test_lock_is_unsupported(self):
+        with self.assertRaisesRegex(OracleViolation, "unsupported aw"):
+            self.m.admit_aw(0, 1, 0, 0, lock=1)
+
     def test_duplication(self):
         self.m.admit_ar(0, 1, 0, 0)
         self.m.observe_r(0, 1, 0, 0, 1)

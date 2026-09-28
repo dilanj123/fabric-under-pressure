@@ -3,6 +3,7 @@ test_corruption_sensitivity (tb.model.test_axi_reference_model.OracleNegativeTes
 test_duplication (tb.model.test_axi_reference_model.OracleNegativeTests.test_duplication) ... ok
 test_explicit_bad_returned_ids (tb.model.test_axi_reference_model.OracleNegativeTests.test_explicit_bad_returned_ids) ... ok
 test_explicit_bad_target_ids (tb.model.test_axi_reference_model.OracleNegativeTests.test_explicit_bad_target_ids) ... ok
+test_lock_is_unsupported (tb.model.test_axi_reference_model.OracleNegativeTests.test_lock_is_unsupported) ... ok
 test_loss (tb.model.test_axi_reference_model.OracleNegativeTests.test_loss) ... ok
 test_memory_strobes (tb.model.test_axi_reference_model.OracleNegativeTests.test_memory_strobes) ... ok
 test_misroute (tb.model.test_axi_reference_model.OracleNegativeTests.test_misroute) ... ok
@@ -14,6 +15,6 @@ test_reference_endpoint_initialization_contract (tb.model.test_axi_reference_mod
 test_stale_epoch (tb.model.test_axi_reference_model.OracleNegativeTests.test_stale_epoch) ... ok
 
 ----------------------------------------------------------------------
-Ran 14 tests in 0.169s
+Ran 15 tests in 0.180s
 
 OK

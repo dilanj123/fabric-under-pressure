@@ -1,6 +1,6 @@
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 0.001 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.266 MB
+- Verilator: Walltime 0.002 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.234 MB
 make: Nothing to be done for `default'.
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/bin/tabbypy3
@@ -24,8 +24,8 @@ make: Nothing to be done for `default'.
    380.00ns INFO     cocotb.regression                  *****************************************************************************************************
                                                         ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         *****************************************************************************************************
-                                                        ** test_axi_fabric_a_oracle.fabric_a_s3_oracle   FAIL         380.00           0.02      15418.30  **
+                                                        ** test_axi_fabric_a_oracle.fabric_a_s3_oracle   FAIL         380.00           0.02      16240.10  **
                                                         *****************************************************************************************************
-                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               380.00           0.03      11655.36  **
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               380.00           0.03      12562.05  **
                                                         *****************************************************************************************************
 - :0: Verilog $finish

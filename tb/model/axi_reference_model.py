@@ -97,7 +97,7 @@ class AxiReferenceModel:
     def _admit(self, direction: str, manager: int, ident: int, addr: int,
                length: int, size: int, burst: int, qos: int = 0,
                lock: int = 0, cache: int = 0, prot: int = 0, region: int = 0) -> Transaction:
-        if not legal_request(addr, length, size, burst):
+        if not legal_request(addr, length, size, burst, lock):
             raise OracleViolation(f"unsupported {direction} request manager={manager} id={ident}")
         key = TxKey(direction, manager, ident, self.epoch)
         if key in self.transactions and not self.transactions[key].completed:

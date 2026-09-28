@@ -370,6 +370,11 @@ async def fabric_a_s3_oracle(dut):
         await mapped_write(dut, model, endpoint_memory, 0, ident, target, length, strobes)
         await mapped_read(dut, model, endpoint_memory, 0, ident, target, length,
                           address_for(target, 0x080 + ident * 8))
+    # S2 is verified with a stateless test endpoint: legal writes consume and
+    # discard W beats, while reads return deterministic zero data/OKAY.  This
+    # is testbench behavior, not an architectural S2 register-map claim.
+    await mapped_write(dut, model, endpoint_memory, 1, 9, 2, 3, [0xFF, 0xAA, 0x55, 0x81])
+    await mapped_read(dut, model, endpoint_memory, 1, 10, 2, 3, address_for(2, 0x500))
     dut._log.info("oracle mapped lengths PASS")
     # A coordinated epoch boundary also verifies that the same visible IDs
     # can be reused as fresh transactions after outstanding state is flushed.

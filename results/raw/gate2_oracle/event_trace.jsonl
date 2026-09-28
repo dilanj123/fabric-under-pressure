@@ -493,19 +493,36 @@
 {"kind": "r_beat", "cycle": 1038, "manager": 0, "id": 15, "target": 1, "beat": 13, "data": 1152921569031356429, "resp": 0, "last": 0}
 {"kind": "r_beat", "cycle": 1041, "manager": 0, "id": 15, "target": 1, "beat": 14, "data": 1152921569031356430, "resp": 0, "last": 0}
 {"kind": "r_beat", "cycle": 1044, "manager": 0, "id": 15, "target": 1, "beat": 15, "data": 1152921569031356431, "resp": 0, "last": 1}
-{"kind": "reset", "cycle": 1048, "epoch": 3}
-{"kind": "aw_admit", "cycle": 1050, "epoch": 3, "manager": 0, "id": 5, "internal_id": 5, "target": 0}
-{"kind": "aw_admit", "cycle": 1050, "epoch": 3, "manager": 1, "id": 5, "internal_id": 21, "target": 1}
-{"kind": "aw_admit", "cycle": 1050, "epoch": 3, "manager": 2, "id": 5, "internal_id": 37, "target": 2}
-{"kind": "aw_target", "cycle": 1051, "manager": 0, "id": 5, "target": 0, "internal_id": 5, "addr": 1792}
-{"kind": "aw_target", "cycle": 1051, "manager": 1, "id": 5, "target": 1, "internal_id": 21, "addr": 268437256}
-{"kind": "aw_target", "cycle": 1051, "manager": 2, "id": 5, "target": 2, "internal_id": 37, "addr": 536872720}
-{"kind": "w_admit", "cycle": 1052, "manager": 0, "id": 5, "target": 0, "beat": 0, "data": 11255808, "strobe": 255, "last": 1}
-{"kind": "w_admit", "cycle": 1052, "manager": 1, "id": 5, "target": 1, "beat": 0, "data": 11255809, "strobe": 255, "last": 1}
-{"kind": "w_admit", "cycle": 1052, "manager": 2, "id": 5, "target": 2, "beat": 0, "data": 11255810, "strobe": 255, "last": 1}
-{"kind": "w_target", "cycle": 1054, "manager": 0, "id": 5, "target": 0, "beat": 0, "data": 11255808, "strobe": 255, "last": 1}
-{"kind": "w_target", "cycle": 1054, "manager": 1, "id": 5, "target": 1, "beat": 0, "data": 11255809, "strobe": 255, "last": 1}
-{"kind": "w_target", "cycle": 1054, "manager": 2, "id": 5, "target": 2, "beat": 0, "data": 11255810, "strobe": 255, "last": 1}
-{"kind": "b_complete", "cycle": 1057, "manager": 0, "id": 5, "target": 0}
-{"kind": "b_complete", "cycle": 1057, "manager": 1, "id": 5, "target": 1}
-{"kind": "b_complete", "cycle": 1057, "manager": 2, "id": 5, "target": 2}
+{"kind": "aw_admit", "cycle": 1047, "epoch": 2, "manager": 1, "id": 9, "internal_id": 25, "target": 2}
+{"kind": "aw_target", "cycle": 1048, "manager": 1, "id": 9, "target": 2, "internal_id": 25, "addr": 536871112}
+{"kind": "w_admit", "cycle": 1049, "manager": 1, "id": 9, "target": 2, "beat": 0, "data": 1153203018238263296, "strobe": 255, "last": 0}
+{"kind": "w_target", "cycle": 1051, "manager": 1, "id": 9, "target": 2, "beat": 0, "data": 1153203018238263296, "strobe": 255, "last": 0}
+{"kind": "w_admit", "cycle": 1052, "manager": 1, "id": 9, "target": 2, "beat": 1, "data": 1153203018238263297, "strobe": 170, "last": 0}
+{"kind": "w_target", "cycle": 1054, "manager": 1, "id": 9, "target": 2, "beat": 1, "data": 1153203018238263297, "strobe": 170, "last": 0}
+{"kind": "w_admit", "cycle": 1055, "manager": 1, "id": 9, "target": 2, "beat": 2, "data": 1153203018238263298, "strobe": 85, "last": 0}
+{"kind": "w_target", "cycle": 1057, "manager": 1, "id": 9, "target": 2, "beat": 2, "data": 1153203018238263298, "strobe": 85, "last": 0}
+{"kind": "w_admit", "cycle": 1058, "manager": 1, "id": 9, "target": 2, "beat": 3, "data": 1153203018238263299, "strobe": 129, "last": 1}
+{"kind": "w_target", "cycle": 1060, "manager": 1, "id": 9, "target": 2, "beat": 3, "data": 1153203018238263299, "strobe": 129, "last": 1}
+{"kind": "b_complete", "cycle": 1064, "manager": 1, "id": 9, "target": 2}
+{"kind": "ar_admit", "cycle": 1067, "epoch": 2, "manager": 1, "id": 10, "internal_id": 26, "target": 2}
+{"kind": "ar_target", "cycle": 1068, "manager": 1, "id": 10, "target": 2, "internal_id": 26, "addr": 536872192}
+{"kind": "r_beat", "cycle": 1072, "manager": 1, "id": 10, "target": 2, "beat": 0, "data": 0, "resp": 0, "last": 0}
+{"kind": "r_beat", "cycle": 1075, "manager": 1, "id": 10, "target": 2, "beat": 1, "data": 0, "resp": 0, "last": 0}
+{"kind": "r_beat", "cycle": 1078, "manager": 1, "id": 10, "target": 2, "beat": 2, "data": 0, "resp": 0, "last": 0}
+{"kind": "r_beat", "cycle": 1081, "manager": 1, "id": 10, "target": 2, "beat": 3, "data": 0, "resp": 0, "last": 1}
+{"kind": "reset", "cycle": 1085, "epoch": 3}
+{"kind": "aw_admit", "cycle": 1087, "epoch": 3, "manager": 0, "id": 5, "internal_id": 5, "target": 0}
+{"kind": "aw_admit", "cycle": 1087, "epoch": 3, "manager": 1, "id": 5, "internal_id": 21, "target": 1}
+{"kind": "aw_admit", "cycle": 1087, "epoch": 3, "manager": 2, "id": 5, "internal_id": 37, "target": 2}
+{"kind": "aw_target", "cycle": 1088, "manager": 0, "id": 5, "target": 0, "internal_id": 5, "addr": 1792}
+{"kind": "aw_target", "cycle": 1088, "manager": 1, "id": 5, "target": 1, "internal_id": 21, "addr": 268437256}
+{"kind": "aw_target", "cycle": 1088, "manager": 2, "id": 5, "target": 2, "internal_id": 37, "addr": 536872720}
+{"kind": "w_admit", "cycle": 1089, "manager": 0, "id": 5, "target": 0, "beat": 0, "data": 11255808, "strobe": 255, "last": 1}
+{"kind": "w_admit", "cycle": 1089, "manager": 1, "id": 5, "target": 1, "beat": 0, "data": 11255809, "strobe": 255, "last": 1}
+{"kind": "w_admit", "cycle": 1089, "manager": 2, "id": 5, "target": 2, "beat": 0, "data": 11255810, "strobe": 255, "last": 1}
+{"kind": "w_target", "cycle": 1091, "manager": 0, "id": 5, "target": 0, "beat": 0, "data": 11255808, "strobe": 255, "last": 1}
+{"kind": "w_target", "cycle": 1091, "manager": 1, "id": 5, "target": 1, "beat": 0, "data": 11255809, "strobe": 255, "last": 1}
+{"kind": "w_target", "cycle": 1091, "manager": 2, "id": 5, "target": 2, "beat": 0, "data": 11255810, "strobe": 255, "last": 1}
+{"kind": "b_complete", "cycle": 1094, "manager": 0, "id": 5, "target": 0}
+{"kind": "b_complete", "cycle": 1094, "manager": 1, "id": 5, "target": 1}
+{"kind": "b_complete", "cycle": 1094, "manager": 2, "id": 5, "target": 2}
