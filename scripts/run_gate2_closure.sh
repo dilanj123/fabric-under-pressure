@@ -113,4 +113,4 @@ fi
 grep -q "bad RDATA" "$OUT/fault_sensitivity.log"
 echo "PASS expected-fail DUT corruption sensitivity" >"$OUT/fault_sensitivity_result.log"
 
-echo "PASS Gate-2 oracle closure"
+echo "PASS scoped Gate-2 oracle checks; full Gate 2 closure remains pending"
