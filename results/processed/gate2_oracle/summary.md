@@ -18,6 +18,10 @@ implemented.
   byte-addressed endpoint memory, full and partial WSTRB patterns, target AW/
   AR/W ID and payload checks, B/R response checks and readback against a
   separately maintained reference memory.
+- S2 verification-only endpoint phase: one legal multi-beat write and read
+  route through S2 with OKAY responses, exact beat/LAST behavior and widened
+  ID restoration. Reads use deterministic zero data; this is testbench
+  endpoint behavior, not architectural S2 storage semantics.
 - Three-manager same-visible-ID write overlap: widened AWID disambiguation,
   target W routing and manager BID restoration for M0/M1/M2.
 - Manager-W expectations are recorded at manager handshakes and compared at
@@ -43,7 +47,7 @@ data and requires an `OracleViolation`.
 ## Remaining closure gaps
 
 The current DUT-facing oracle still needs explicit independent end-to-end
-scenarios for S2 behavior, whole-top reset with outstanding work, target and
+scenarios for whole-top reset with outstanding work, target and
 manager backpressure in the oracle run, four outstanding IDs, read-side
 same-visible-ID overlap and distinct-ID out-of-order completion. The existing
 348-check hand-written directed regression covers several of these, but it
