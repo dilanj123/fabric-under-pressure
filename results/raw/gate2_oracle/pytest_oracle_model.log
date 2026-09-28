@@ -15,6 +15,6 @@ test_reference_endpoint_initialization_contract (tb.model.test_axi_reference_mod
 test_stale_epoch (tb.model.test_axi_reference_model.OracleNegativeTests.test_stale_epoch) ... ok
 
 ----------------------------------------------------------------------
-Ran 15 tests in 0.175s
+Ran 15 tests in 0.174s
 
 OK

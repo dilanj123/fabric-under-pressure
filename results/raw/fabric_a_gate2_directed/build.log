@@ -1,4 +1,4 @@
-make: Nothing to be done for `default'.
+g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines   verilated.o verilated_timing.o verilated_threads.o Vaxi_fabric_a_tb__ALL.a    -pthread -lpthread   -o /Users/Dilan/Projects/fabric-under-pressure/results/raw/fabric_a_gate2_directed/axi_fabric_a_tb
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 0.032 s (elab=0.000, cvt=0.000, bld=0.031); cpu 0.001 s on 1 threads; allocated 3.266 MB
+- Verilator: Walltime 0.250 s (elab=0.000, cvt=0.000, bld=0.249); cpu 0.001 s on 1 threads; allocated 3.297 MB
