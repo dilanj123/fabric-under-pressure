@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-28
 **Gate:** Gate 1 PASS; `kg-g1-spec` exists remotely at `aecfb8c`
-**Architecture:** planning frozen; raw-address decode, request-shape legality, manager/internal ID mapping, per-manager/per-direction outstanding tracking, Architecture-A 3-way RR arbiter, per-manager write-owner context, one target-specific Architecture-A AW eligibility/RR boundary, one registered one-target AW channel path, a shared three-manager write-state bank, one registered owner-directed W target path, a four-source RR response arbiter, one registered per-manager B response router, one target-specific Architecture-A AR path, a shared three-manager read-state bank and the S3 DECERR error target exist, project AXI fabric is not integrated.
+**Architecture:** Architecture-A production RTL now exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. Whole-top evidence is limited to lint/elaboration, focused directed integration and primitive synthesis; Gate 2 remains open pending the independent Python oracle.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -17,8 +17,8 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 - SV frontend, cocotb, BFM, formal, synthesis, P&R and wrapper raw evidence.
 
 ## Still unproven
-- integrated multi-target Fabric AXI behavior, end-to-end formal properties, performance, PPA and timing;
-- four-target production write composition, full S3 routing integration, or Architecture-B RTL. Focused one-target AW/AR admission and registered transport, shared read/write state, owner-directed W transport, B response/write-completion transport, and the common focused R response lifecycle are evidenced. Recorded-target versus returned-target matching is not implemented because the current shared bank interface does not expose it.
+- independent end-to-end Python-oracle validation, end-to-end formal properties, performance, PPA and timing;
+- recorded-target versus returned-target response-source matching is not implemented because the current shared bank interface does not expose it; Architecture-B RTL remains absent.
 
 ## Risks
 Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.
@@ -47,4 +47,4 @@ No frozen AXI behavior changed. This task added the standalone decoder, request-
 - The S3 error target has independent one-context write/read sides. It consumes legal unmapped write bursts through WLAST before generating stable DECERR B, and emits exact zero-data DECERR read bursts with ARLEN+1 beats and final RLAST. Focused manager-to-S3-to-manager write and read lifecycle simulations and bounded endpoint formal checks pass. A repair also confirms legal WVALID-before-local-AW is backpressured without a false diagnostic; full four-target routing remains absent.
 
 ## Next smallest task
-Assemble the complete four-target Architecture-A production Fabric from the verified target paths, shared state, response routers and S3 endpoint, then run whole-Fabric lint and focused integration.
+Implement the independent project-owned Python AXI transaction oracle/scoreboard and use it to check the complete Architecture-A Fabric end-to-end before deciding whether Gate 2 can close.

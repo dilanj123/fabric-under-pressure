@@ -200,3 +200,11 @@ The R evidence is scoped to the common response router and focused AR/R lifecycl
 | S3R-E003 | FORMAL | `!write_active -> !wready` and no-W-handshake-without-context safety pass; W-before-AW followed by later AW is covered | `results/raw/s3_error_target_repair/formal_write_run.log` | PASS; Yices via SBY smtbmc, bounded prove/cover depth 24 |
 | S3R-E004 | SIM/FORMAL | Existing S3 read lifecycle and read endpoint checks remain passing after the diagnostic repair | `results/raw/s3_error_target_repair/read_lifecycle_simulation.log`, `formal_read_run.log` | PASS; 6 simulation checks and bounded prove/cover |
 | S3R-E005 | SYNTH | Repaired S3 endpoint completes fresh ECP5-targeted synthesis | `results/raw/s3_error_target_repair/synthesis.log`, `axi_s3_error_target_ecp5.json` | PASS; 52 LUT4, 29 TRELLIS_FF, 12 CCU2C, 13 PFUMX, 7 L6MUX21 |
+
+## Architecture-A four-target production integration evidence
+
+| FAB-E001 | LINT/ELAB | `axi_fabric_a` composes the four target paths, shared state banks, common response routers and internal S3 endpoint with no Verilator lint warnings | `results/raw/fabric_a_integration/lint.log` | PASS; Verilator 5.053 |
+| FAB-E002 | SIM | Whole-top directed responder checks route every manager through S0-S3 for AW/W/B and AR/R, including S3 DECERR traffic and 16-beat mapped/unmapped transactions | `results/raw/fabric_a_integration/simulation.log`, `tb/directed/axi_fabric_a_tb.sv` | PASS; 260 self-checking checks |
+| FAB-E003 | SYNTH | Complete `axi_fabric_a` production composition completes ECP5-targeted Yosys synthesis | `results/raw/fabric_a_integration/synthesis.log`, `results/raw/fabric_a_integration/axi_fabric_a_ecp5.json` | PASS; 5,046 LUT4, 1,219 TRELLIS_FF, 288 CCU2C, 807 PFUMX, 270 L6MUX21; no PPA/timing claim |
+
+The whole-top directed environment uses verification-only external responders for S0-S2 and the real S3 endpoint. It is focused integration evidence, not a complete correctness proof. Recorded-target versus returned-target response-source matching remains unproven, and the independent Python oracle is still absent.

@@ -444,20 +444,20 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 # R. Gate 2 — Architecture A functional baseline
 
-- [ ] A core RTL exists.
-- [ ] lint/elaboration passes.
-- [ ] decoder integrated.
-- [ ] RR request arbiters integrated.
-- [ ] ID widen/strip integrated.
-- [ ] outstanding tracking integrated.
-- [ ] AR path works.
-- [ ] R response route/lock works.
-- [ ] AW/write-owner path works.
-- [ ] W route through WLAST works.
-- [ ] B route works.
-- [ ] S3 default/error target works. (Broad Gate-2 integration item remains open; focused endpoint/lifecycle evidence is indexed as S3-E001–S3-E006.)
+- [x] A core RTL exists. (`rtl/axi_fabric_a.sv`; whole-top scope is RTL/lint evidence, not a correctness claim.)
+- [x] lint/elaboration passes. (`results/raw/fabric_a_integration/lint.log`)
+- [x] decoder integrated. (Whole-top directed route checks.)
+- [x] RR request arbiters integrated. (AW/AR target-path composition.)
+- [x] ID widen/strip integrated. (Whole-top directed route checks.)
+- [x] outstanding tracking integrated. (Shared write/read banks in the production top.)
+- [x] AR path works. (Focused whole-top directed scope.)
+- [x] R response route/lock works. (Focused whole-top directed scope.)
+- [x] AW/write-owner path works. (Focused whole-top directed scope.)
+- [x] W route through WLAST works. (Focused whole-top directed scope.)
+- [x] B route works. (Focused whole-top directed scope.)
+- [x] S3 default/error target works. (Focused whole-top directed scope; no full-fabric correctness claim.)
 - [ ] independent Python model checks end-to-end behavior.
-- [ ] directed regression passes.
+- [x] directed regression passes. (`results/raw/fabric_a_integration/simulation.log`; 260 checks.)
 - [ ] no deep-verification/PPA claim made prematurely.
 - [ ] known-good Gate-2 commit recorded.
 
