@@ -390,3 +390,324 @@ async def fabric_a_s3_oracle(dut):
     trace.close()
     dut._log.info("oracle S3 end-to-end PASS epoch=%d", model.epoch)
     _ACTIVE_MODEL = None
+
+
+async def _oracle_reset(dut, model):
+    for name in ("manager_awvalid", "manager_wvalid", "manager_arvalid",
+                 "manager_bready", "manager_rready", "target_bvalid",
+                 "target_rvalid"):
+        getattr(dut, name).value = 0
+    dut.target_awready.value = 0b111
+    dut.target_wready.value = 0b111
+    dut.target_arready.value = 0b111
+    dut.ARESETn.value = 0
+    await cycles(dut, 3)
+    dut.ARESETn.value = 1
+    model.reset()
+    await cycles(dut, 2)
+
+
+def _set_aw(dut, manager, ident, target, length):
+    addr = address_for(target, 0x180 + ident * 8)
+    fields = (0xA, 0x5, 0x3, 0x9)
+    set_lane(dut.manager_awid, 4, manager, ident)
+    set_lane(dut.manager_awaddr, 32, manager, addr)
+    set_lane(dut.manager_awlen, 8, manager, length)
+    set_lane(dut.manager_awsize, 3, manager, 3)
+    set_lane(dut.manager_awburst, 2, manager, 1)
+    set_lane(dut.manager_awlock, 1, manager, 0)
+    set_lane(dut.manager_awcache, 4, manager, fields[0])
+    set_lane(dut.manager_awprot, 3, manager, fields[1])
+    set_lane(dut.manager_awqos, 4, manager, fields[2])
+    set_lane(dut.manager_awregion, 4, manager, fields[3])
+    set_lane(dut.manager_awvalid, 1, manager, 1)
+    return addr, fields
+
+
+async def _admit_write_no_b(dut, model, manager, ident, target, length=0,
+                            target_aw_stall=0):
+    if target_aw_stall:
+        dut.target_awready.value = int(dut.target_awready.value) & ~(1 << target)
+    addr, fields = _set_aw(dut, manager, ident, target, length)
+    while not get_lane(dut.manager_awready, 1, manager):
+        await cycles(dut)
+    tx = model.admit_aw(manager, ident, addr, length, cache=fields[0], prot=fields[1],
+                        qos=fields[2], region=fields[3])
+    await cycles(dut)
+    set_lane(dut.manager_awvalid, 1, manager, 0)
+    if target_aw_stall:
+        while not get_lane(dut.target_awvalid, 1, target):
+            await cycles(dut)
+        for _ in range(target_aw_stall):
+            assert get_lane(dut.target_awvalid, 1, target)
+            await cycles(dut)
+        dut.target_awready.value = int(dut.target_awready.value) | (1 << target)
+    while not (get_lane(dut.target_awvalid, 1, target) and
+               get_lane(dut.target_awready, 1, target)):
+        await cycles(dut)
+    observed = (get_lane(dut.target_awid, 6, target),
+                get_lane(dut.target_awaddr, 32, target),
+                get_lane(dut.target_awlen, 8, target),
+                get_lane(dut.target_awsize, 3, target),
+                get_lane(dut.target_awburst, 2, target),
+                get_lane(dut.target_awlock, 1, target),
+                get_lane(dut.target_awcache, 4, target),
+                get_lane(dut.target_awprot, 3, target),
+                get_lane(dut.target_awqos, 4, target),
+                get_lane(dut.target_awregion, 4, target))
+    model.observe_target_address("aw", manager, ident, observed[0], target, addr,
+                                 *observed[2:])
+    await cycles(dut)
+    return tx, addr
+
+
+async def _write_data_only(dut, model, tx, manager, target, strobes,
+                           stall_target_beat=None):
+    for beat in range(tx.expected_beats):
+        data = 0x5500000000000000 | (manager << 48) | (tx.key.ident << 32) | beat
+        strobe = strobes[beat]
+        last = int(beat == tx.expected_beats - 1)
+        if stall_target_beat == beat:
+            dut.target_wready.value = int(dut.target_wready.value) & ~(1 << target)
+        set_lane(dut.manager_wdata, 64, manager, data)
+        set_lane(dut.manager_wstrb, 8, manager, strobe)
+        set_lane(dut.manager_wlast, 1, manager, last)
+        set_lane(dut.manager_wvalid, 1, manager, 1)
+        while not get_lane(dut.manager_wready, 1, manager):
+            await cycles(dut)
+        model.accept_manager_w(manager, data, strobe, last)
+        await cycles(dut)
+        set_lane(dut.manager_wvalid, 1, manager, 0)
+        if stall_target_beat == beat:
+            while not get_lane(dut.target_wvalid, 1, target):
+                await cycles(dut)
+            for _ in range(3):
+                assert get_lane(dut.target_wvalid, 1, target)
+                assert get_lane(dut.target_wdata, 64, target) == data
+                assert get_lane(dut.target_wstrb, 8, target) == strobe
+                assert get_lane(dut.target_wlast, 1, target) == last
+                await cycles(dut)
+            dut.target_wready.value = int(dut.target_wready.value) | (1 << target)
+        while not (get_lane(dut.target_wvalid, 1, target) and
+                   get_lane(dut.target_wready, 1, target)):
+            await cycles(dut)
+        obs_data = get_lane(dut.target_wdata, 64, target)
+        obs_strobe = get_lane(dut.target_wstrb, 8, target)
+        obs_last = get_lane(dut.target_wlast, 1, target)
+        model.observe_target_w(manager, target, obs_data, obs_strobe, obs_last)
+        await cycles(dut)
+    return tx
+
+
+async def _admit_read_no_response(dut, model, manager, ident, target, length=0,
+                                  target_ar_stall=0):
+    if target_ar_stall:
+        dut.target_arready.value = int(dut.target_arready.value) & ~(1 << target)
+    addr = address_for(target, 0x980 + ident * 8)
+    cache, prot, qos, region = 0x6, 0x2, 0x7, 0x4
+    set_lane(dut.manager_arid, 4, manager, ident)
+    set_lane(dut.manager_araddr, 32, manager, addr)
+    set_lane(dut.manager_arlen, 8, manager, length)
+    set_lane(dut.manager_arsize, 3, manager, 3)
+    set_lane(dut.manager_arburst, 2, manager, 1)
+    set_lane(dut.manager_arlock, 1, manager, 0)
+    set_lane(dut.manager_arcache, 4, manager, cache)
+    set_lane(dut.manager_arprot, 3, manager, prot)
+    set_lane(dut.manager_arqos, 4, manager, qos)
+    set_lane(dut.manager_arregion, 4, manager, region)
+    set_lane(dut.manager_arvalid, 1, manager, 1)
+    while not get_lane(dut.manager_arready, 1, manager):
+        await cycles(dut)
+    tx = model.admit_ar(manager, ident, addr, length, cache=cache, prot=prot,
+                        qos=qos, region=region)
+    await cycles(dut)
+    set_lane(dut.manager_arvalid, 1, manager, 0)
+    if target_ar_stall:
+        while not get_lane(dut.target_arvalid, 1, target):
+            await cycles(dut)
+        for _ in range(target_ar_stall):
+            assert get_lane(dut.target_arvalid, 1, target)
+            await cycles(dut)
+        dut.target_arready.value = int(dut.target_arready.value) | (1 << target)
+    while not (get_lane(dut.target_arvalid, 1, target) and
+               get_lane(dut.target_arready, 1, target)):
+        await cycles(dut)
+    observed_id = get_lane(dut.target_arid, 6, target)
+    observed_addr = get_lane(dut.target_araddr, 32, target)
+    observed_fields = (get_lane(dut.target_arlen, 8, target),
+                       get_lane(dut.target_arsize, 3, target),
+                       get_lane(dut.target_arburst, 2, target),
+                       get_lane(dut.target_arlock, 1, target),
+                       get_lane(dut.target_arcache, 4, target),
+                       get_lane(dut.target_arprot, 3, target),
+                       get_lane(dut.target_arqos, 4, target),
+                       get_lane(dut.target_arregion, 4, target))
+    model.observe_target_address("ar", manager, ident, observed_id, target,
+                                 observed_addr, *observed_fields)
+    await cycles(dut)
+    return tx
+
+
+async def _return_b(dut, model, manager, ident, target, ready=True):
+    set_lane(dut.target_bid, 6, target, (manager << 4) | ident)
+    set_lane(dut.target_bresp, 2, target, 0)
+    set_lane(dut.target_bvalid, 1, target, 1)
+    set_lane(dut.manager_bready, 1, manager, int(ready))
+    while not get_lane(dut.target_bready, 1, target):
+        await cycles(dut)
+    await cycles(dut)
+    set_lane(dut.target_bvalid, 1, target, 0)
+    while not get_lane(dut.manager_bvalid, 1, manager):
+        await cycles(dut)
+    if not ready:
+        for _ in range(3):
+            assert get_lane(dut.manager_bvalid, 1, manager)
+            await cycles(dut)
+        set_lane(dut.manager_bready, 1, manager, 1)
+        await cycles(dut)
+    assert get_lane(dut.manager_bid, 4, manager) == ident
+    model.observe_b(manager, ident, get_lane(dut.manager_bresp, 2, manager))
+    await cycles(dut)
+    set_lane(dut.manager_bready, 1, manager, 0)
+
+
+async def _return_r(dut, model, manager, ident, target, length=0,
+                    ready=True, source_check=True):
+    set_lane(dut.manager_rready, 1, manager, int(ready))
+    for beat in range(length + 1):
+        last = int(beat == length)
+        data = 0 if target == 3 else 0x9000000000000000 | (target << 40) | (ident << 8) | beat
+        set_lane(dut.target_rid, 6, target, (manager << 4) | ident)
+        set_lane(dut.target_rdata, 64, target, data)
+        set_lane(dut.target_rresp, 2, target, 0 if target != 3 else RESP_DECERR)
+        set_lane(dut.target_rlast, 1, target, last)
+        set_lane(dut.target_rvalid, 1, target, 1)
+        while not get_lane(dut.target_rready, 1, target):
+            await cycles(dut)
+        await cycles(dut)
+        set_lane(dut.target_rvalid, 1, target, 0)
+        while not get_lane(dut.manager_rvalid, 1, manager):
+            await cycles(dut)
+        if not ready:
+            for _ in range(3):
+                assert get_lane(dut.manager_rvalid, 1, manager)
+                await cycles(dut)
+            set_lane(dut.manager_rready, 1, manager, 1)
+            await cycles(dut)
+            ready = True
+        obs_id = get_lane(dut.manager_rid, 4, manager)
+        obs_data = get_lane(dut.manager_rdata, 64, manager)
+        obs_resp = get_lane(dut.manager_rresp, 2, manager)
+        obs_last = get_lane(dut.manager_rlast, 1, manager)
+        assert obs_id == ident
+        if source_check:
+            model.observe_r_source(manager, target, ident, obs_last)
+        model.observe_r(manager, ident, obs_data, obs_resp, obs_last)
+        await cycles(dut)
+    set_lane(dut.manager_rready, 1, manager, 0)
+
+
+@cocotb.test()
+async def fabric_a_oracle_closure_matrix(dut):
+    global _ACTIVE_MODEL
+    model = AxiReferenceModel()
+    _ACTIVE_MODEL = model
+    trace_path = Path(os.environ["ROOT"]) / "results/raw/gate2_oracle" / "closure_event_trace.jsonl"
+    trace_path.parent.mkdir(parents=True, exist_ok=True)
+    cocotb.start_soon(Clock(dut.ACLK, 10, units="ns").start())
+    await _oracle_reset(dut, model)
+    endpoint_memory = {0: EndpointMemory(target=0), 1: EndpointMemory(target=1)}
+
+    # A/F/G: target AW/AR/W and manager B/R backpressure, with public handshakes.
+    tx, _ = await _admit_write_no_b(dut, model, 0, 10, 0, 3, target_aw_stall=3)
+    await _write_data_only(dut, model, tx, 0, 0, [0xFF, 0xAA, 0x55, 0x81], stall_target_beat=1)
+    await _return_b(dut, model, 0, 10, 0, ready=False)
+    txr = await _admit_read_no_response(dut, model, 0, 11, 1, 3, target_ar_stall=3)
+    await _return_r(dut, model, 0, 11, 1, 3, ready=False)
+    dut._log.info("oracle deterministic AW/AR/W/B/R backpressure PASS")
+
+    # A: four writes live after complete data phases, then fifth-ID blocking.
+    live_w = []
+    for ident in range(1, 5):
+        tx, _ = await _admit_write_no_b(dut, model, 0, ident, 0, 0)
+        await _write_data_only(dut, model, tx, 0, 0, [0xFF])
+        live_w.append(ident)
+    _set_aw(dut, 0, 5, 0, 0)
+    for _ in range(3):
+        assert not get_lane(dut.manager_awready, 1, 0)
+        await cycles(dut)
+    await _return_b(dut, model, 0, 1, 0)
+    assert not get_lane(dut.manager_awready, 1, 0)
+    await cycles(dut)
+    assert get_lane(dut.manager_awready, 1, 0)
+    model.admit_aw(0, 5, address_for(0, 0x180 + 5 * 8), 0, cache=0xA, prot=0x5, qos=0x3, region=0x9)
+    await cycles(dut)
+    set_lane(dut.manager_awvalid, 1, 0, 0)
+    # deliver ID5 and drain it, then the remaining four responses
+    while not get_lane(dut.target_awvalid, 1, 0): await cycles(dut)
+    model.observe_target_address("aw", 0, 5, get_lane(dut.target_awid, 6, 0), 0,
+                                 address_for(0, 0x180 + 5 * 8), 0, 3, 1, 0, 0xA, 0x5, 0x3, 0x9)
+    await cycles(dut)
+    await _write_data_only(dut, model, model.transactions[[k for k in model.transactions if k.ident == 5 and k.direction == "aw"][0]], 0, 0, [0xFF])
+    await _return_b(dut, model, 0, 5, 0)
+    for ident in (2, 3, 4): await _return_b(dut, model, 0, ident, 0)
+    dut._log.info("oracle four-write capacity and D028 recovery PASS")
+
+    # B: four reads live, fifth blocked, then following-cycle recovery.
+    for ident in range(1, 5): await _admit_read_no_response(dut, model, 0, ident, 0, 0)
+    _set_aw(dut, 0, 99, 0, 0)  # clear AW inputs; AR is tested below
+    set_lane(dut.manager_awvalid, 1, 0, 0)
+    addr5 = address_for(0, 0x980 + 5 * 8)
+    for ident in (5,):
+        set_lane(dut.manager_arid, 4, 0, ident); set_lane(dut.manager_araddr, 32, 0, addr5)
+        set_lane(dut.manager_arlen, 8, 0, 0); set_lane(dut.manager_arsize, 3, 0, 3)
+        set_lane(dut.manager_arburst, 2, 0, 1); set_lane(dut.manager_arlock, 1, 0, 0)
+        set_lane(dut.manager_arcache, 4, 0, 6); set_lane(dut.manager_arprot, 3, 0, 2)
+        set_lane(dut.manager_arqos, 4, 0, 7); set_lane(dut.manager_arregion, 4, 0, 4)
+        set_lane(dut.manager_arvalid, 1, 0, 1)
+    for _ in range(3): assert not get_lane(dut.manager_arready, 1, 0); await cycles(dut)
+    await _return_r(dut, model, 0, 1, 0, 0)
+    assert not get_lane(dut.manager_arready, 1, 0)
+    await cycles(dut)
+    assert get_lane(dut.manager_arready, 1, 0)
+    model.admit_ar(0, 5, addr5, 0, cache=6, prot=2, qos=7, region=4)
+    await cycles(dut); set_lane(dut.manager_arvalid, 1, 0, 0)
+    while not get_lane(dut.target_arvalid, 1, 0): await cycles(dut)
+    model.observe_target_address("ar", 0, 5, get_lane(dut.target_arid, 6, 0), 0, addr5, 0, 3, 1, 0, 6, 2, 7, 4)
+    await cycles(dut)
+    for ident in (2, 3, 4, 5): await _return_r(dut, model, 0, ident, 0, 0)
+    dut._log.info("oracle four-read capacity and D028 recovery PASS")
+
+    # C: same visible read ID overlaps across all managers with distinct widened IDs.
+    for manager, target in enumerate((0, 1, 2)):
+        await _admit_read_no_response(dut, model, manager, 5, target, 0)
+    for manager, target in enumerate((0, 1, 2)):
+        await _return_r(dut, model, manager, 5, target, 0)
+    dut._log.info("oracle same-visible-ID read concurrency PASS")
+
+    # D/E: legal different-ID out-of-order completion.
+    for ident, target in ((6, 0), (7, 1)):
+        tx, _ = await _admit_write_no_b(dut, model, 0, ident, target, 0)
+        await _write_data_only(dut, model, tx, 0, target, [0xFF])
+    await _return_b(dut, model, 0, 7, 1)
+    await _return_b(dut, model, 0, 6, 0)
+    for ident, target in ((8, 0), (9, 1)):
+        await _admit_read_no_response(dut, model, 0, ident, target, 0)
+    await _return_r(dut, model, 0, 9, 1, 0)
+    await _return_r(dut, model, 0, 8, 0, 0)
+    dut._log.info("oracle distinct-ID out-of-order B/R PASS")
+
+    # H: live work is abandoned at a coordinated reset; same IDs are fresh after it.
+    tx, _ = await _admit_write_no_b(dut, model, 0, 12, 0, 0)
+    await _write_data_only(dut, model, tx, 0, 0, [0xFF])
+    await _admit_read_no_response(dut, model, 0, 13, 1, 1)
+    assert any(not tx.completed for tx in model.transactions.values())
+    await _oracle_reset(dut, model)
+    await mapped_write(dut, model, endpoint_memory, 0, 12, 0, 0, [0xFF])
+    await mapped_read(dut, model, endpoint_memory, 0, 13, 0, 0, address_for(0, 0x080 + 13 * 8))
+    model.assert_drained()
+    with trace_path.open("w", encoding="utf-8") as trace:
+        for event in model.events:
+            trace.write(json.dumps(event) + "\n")
+    dut._log.info("oracle live-work reset epoch and fresh same-ID reuse PASS")
+    _ACTIVE_MODEL = None

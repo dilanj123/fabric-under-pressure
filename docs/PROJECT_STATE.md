@@ -1,8 +1,8 @@
 # Project State
 
 **Date:** 2026-09-28
-**Gate:** Gate 1 PASS; `kg-g1-spec` exists remotely at `aecfb8c`
-**Architecture:** Architecture-A production RTL now exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression passes 348 checks. The project-owned Python oracle now passes 15 model self-tests, cycle-traced S0/S1/S2/S3 DUT checks, independent manager-W/target-W comparison and expected-fail data corruption sensitivity. Gate 2 remains open pending the complete independent-oracle matrix and final closure review.
+**Gate:** Gate 2 PASS pending the final tagged closure commit; `kg-g1-spec` exists remotely at `aecfb8c`
+**Architecture:** Architecture-A production RTL exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression passes 348 checks. The project-owned Python oracle passes 15 model self-tests and the complete deterministic DUT matrix, including S0/S1/S2/S3, all legal lengths, WSTRB memory checks, capacity, ID concurrency, response reordering, backpressure and live-work reset with fresh same-ID reuse.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -17,7 +17,7 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 - SV frontend, cocotb, BFM, formal, synthesis, P&R and wrapper raw evidence.
 
 ## Still unproven
-- complete independent end-to-end Python-oracle validation, including four-entry capacity, read-side concurrency, deterministic backpressure and live-work reset; end-to-end formal properties, performance, PPA and timing;
+- end-to-end formal properties, performance, PPA and timing;
 - recorded-target versus returned-target response-source matching is not implemented because the current shared bank interface does not expose it; Architecture-B RTL remains absent.
 
 ## Risks
@@ -26,7 +26,9 @@ Do not interpret generic smoke evidence as Fabric behavior or performance eviden
 ## Specification changes
 No frozen AXI behavior changed. This task added the standalone decoder, request-legality, RR fairness-case and per-manager write-owner evidence; Gate-1 documentation continues to freeze the interface bundle, buffering, endpoint model, workload generator, metrics, traceability and formal assumptions; see D023-D024.
 
-## Phase-0 execution status
+## Historical milestone details
+
+The following phase-status bullets are retained as historical milestone descriptions; they do not describe the current production-top state.
 
 - The physical Apple-Silicon host passed the complete Gate-0 driver at exit code 0.
 - The BFM smoke passed aligned 64-bit read/write, a 4-beat INCR transfer, explicit IDs/QoS and deterministic backpressure.
@@ -47,4 +49,4 @@ No frozen AXI behavior changed. This task added the standalone decoder, request-
 - The S3 error target has independent one-context write/read sides. It consumes legal unmapped write bursts through WLAST before generating stable DECERR B, and emits exact zero-data DECERR read bursts with ARLEN+1 beats and final RLAST. Focused manager-to-S3-to-manager write and read lifecycle simulations and bounded endpoint formal checks pass. A repair also confirms legal WVALID-before-local-AW is backpressured without a false diagnostic; full four-target routing remains absent.
 
 ## Next smallest task
-Complete the independent Python oracle matrix for four-target reset, backpressure, capacity, read-side ID concurrency and out-of-order response cases, then repeat the Gate-2 acceptance review.
+Gate 3 Task 1: build replayable randomized Architecture-A stress around the trusted Python oracle with fixed seeds, legal transactions and independent channel backpressure.

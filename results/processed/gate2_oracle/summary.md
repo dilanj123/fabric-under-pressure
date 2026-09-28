@@ -1,58 +1,19 @@
-# Gate-2 independent Python oracle evidence
+# Gate-2 independent Python oracle
 
-Status: **PARTIAL — Gate 2 remains open**
+Status: **PASS**
 
-The project-owned reference model and DUT-facing cocotb run pass for the
-currently implemented scope. The run is intentionally not treated as Gate-2
-closure evidence because the complete requested oracle matrix is not yet
-implemented.
+The project-owned reference model and public-port Verilator/cocotb run pass the complete deterministic matrix. Production RTL was unchanged.
 
-## Passing evidence
+## Evidence
 
-- Pure Python detector/self tests: 15 tests pass in
-  `tb/model/test_axi_reference_model.py`.
-- DUT-facing Verilator/cocotb test: 1 test passes against `axi_fabric_a`.
-- S3 legal write/read transport: DECERR, widened-ID restoration, zero read
-  data and one-beat completion.
-- S0/S1 mapped memory phase: all LEN values 0 through 15, independent
-  byte-addressed endpoint memory, full and partial WSTRB patterns, target AW/
-  AR/W ID and payload checks, B/R response checks and readback against a
-  separately maintained reference memory.
-- S2 verification-only endpoint phase: one legal multi-beat write and read
-  route through S2 with OKAY responses, exact beat/LAST behavior and widened
-  ID restoration. Reads use deterministic zero data; this is testbench
-  endpoint behavior, not architectural S2 storage semantics.
-- Three-manager same-visible-ID write overlap: widened AWID disambiguation,
-  target W routing and manager BID restoration for M0/M1/M2.
-- Manager-W expectations are recorded at manager handshakes and compared at
-  target delivery; target-address observations validate admitted transaction,
-  address, complete AW/AR carried payload and widened ID.
-- The independent endpoint memory implementation is used by the DUT-facing
-  test and its initialization agrees with the reference memory at sampled
-  addresses.
-- The normal run has monotonic multi-cycle JSONL trace data. A deliberate
-  `ORACLE_FAULT_MODE=bad_rdata` run fails with `bad RDATA`, and the closure
-  driver records that expected failure as sensitivity PASS.
-- The model rejects premature B before any or all expected W beats and owns
-  R beat indexing internally rather than trusting the caller.
-- Reference-model trace: `results/raw/gate2_oracle/event_trace.jsonl`.
+- 15 pure-Python self-tests pass, covering loss, duplication, address/W misrouting, target/returned IDs, carried payload, premature B, bad data, WSTRB, RESP, LAST, R-source interleaving, stale epoch, unsupported LOCK and byte preservation.
+- The normal DUT-facing run passes the original S0/S1 memory and WSTRB readback, S2 verification endpoint, S3 DECERR, all LEN 0..15, full AW/AR payloads, manager-W versus target-W comparison and widened-ID restoration.
+- The closure matrix passes four live writes and four live reads with fifth request blocking and following-cycle recovery, same visible read ID 5 on M0/M1/M2, distinct-ID out-of-order B and R, target AW/AR/W backpressure, manager B/R backpressure, and live-work reset with fresh same-ID reuse.
+- JSONL traces are cycle/epoch traced and monotonic. The normal event trace is `results/raw/gate2_oracle/event_trace.jsonl`; closure scenarios are in `results/raw/gate2_oracle/closure_event_trace.jsonl`.
+- `ORACLE_FAULT_MODE=bad_rdata` fails for the specific `bad RDATA` mismatch; the closure driver records this as expected-fail sensitivity PASS.
 
-## Detector non-vacuity
+S2 data behavior is verification-only endpoint semantics: legal writes are consumed and return OKAY, and reads return deterministic OKAY data with exact beat/LAST behavior. It is not an architectural S2 register-map claim.
 
-The pure model self-tests deliberately reject loss, duplication, misrouting,
-bad IDs, bad data, bad WSTRB, bad RESP, bad LAST, R-source interleaving and a
-stale reset epoch. The corruption-sensitivity test injects incorrect read
-data and requires an `OracleViolation`.
+The known limitation remains that production B/R routers do not compare the returned source target with target metadata recorded at admission. Coordinated reset is assumed; an independently reset subordinate emitting an indistinguishable stale response remains outside the MVP contract.
 
-## Remaining closure gaps
-
-The current DUT-facing oracle still needs explicit independent end-to-end
-scenarios for whole-top reset with outstanding work, target and
-manager backpressure in the oracle run, four outstanding IDs, read-side
-same-visible-ID overlap and distinct-ID out-of-order completion. The existing
-348-check hand-written directed regression covers several of these, but it
-does not substitute for the independent oracle.
-
-Existing full-Fabric synthesis remains historical evidence; this task made no
-RTL changes and makes no new PPA, timing or performance claim. The known
-recorded-target versus returned-target validation limitation remains.
+Existing full-Fabric ECP5 synthesis remains historical SYNTH evidence: 5,046 LUT4, 1,219 TRELLIS_FF, 288 CCU2C, 807 PFUMX and 270 L6MUX21. No new timing, PPA, performance or deep-verification claim is made.

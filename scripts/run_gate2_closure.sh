@@ -69,6 +69,18 @@ assert suite.attrib.get("failures", "0") == "0", suite.attrib
 assert all(tc.find("failure") is None and tc.find("error") is None
            for tc in suite.findall("testcase")), "cocotb testcase failure"
 PY
+for marker in \
+  "oracle deterministic AW/AR/W/B/R backpressure PASS" \
+  "oracle four-write capacity and D028 recovery PASS" \
+  "oracle four-read capacity and D028 recovery PASS" \
+  "oracle same-visible-ID read concurrency PASS" \
+  "oracle distinct-ID out-of-order B/R PASS" \
+  "oracle live-work reset epoch and fresh same-ID reuse PASS"; do
+  grep -q "$marker" "$OUT/cocotb_build.log" || {
+    echo "missing required oracle matrix marker: $marker" >&2
+    exit 1
+  }
+done
 python3 - "$OUT/event_trace.jsonl" <<'PY'
 import json
 import sys
@@ -79,6 +91,17 @@ assert cycles == sorted(cycles), "oracle trace cycles are not monotonic"
 assert len(set(cycles)) > 1, "oracle cycle tracking did not advance"
 admits = [e for e in events if e.get("kind") in {"aw_admit", "ar_admit"}]
 assert admits and any(c > admits[0]["cycle"] for c in cycles), "trace lacks post-admission cycles"
+PY
+python3 - "$OUT/closure_event_trace.jsonl" <<'PY'
+import json
+import sys
+events = [json.loads(line) for line in open(sys.argv[1], encoding="utf-8") if line.strip()]
+assert events, "empty closure oracle trace"
+cycles = [int(e["cycle"]) for e in events]
+assert cycles == sorted(cycles), "closure trace cycles are not monotonic"
+assert len(set(cycles)) > 1, "closure trace did not advance"
+epochs = {int(e["epoch"]) for e in events}
+assert len(epochs) >= 2, "closure trace lacks reset epoch transition"
 PY
 
 set +e
@@ -113,4 +136,4 @@ fi
 grep -q "bad RDATA" "$OUT/fault_sensitivity.log"
 echo "PASS expected-fail DUT corruption sensitivity" >"$OUT/fault_sensitivity_result.log"
 
-echo "PASS scoped Gate-2 oracle checks; full Gate 2 closure remains pending"
+echo "PASS Gate-2 Architecture-A functional closure"

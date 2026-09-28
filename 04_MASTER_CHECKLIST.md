@@ -303,16 +303,16 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] model tracks expected RESP/LAST.
 - [x] model tracks memory contents.
 - [x] model tracks reset epoch.
-- [ ] loss detection implemented/tested.
-- [ ] duplication detection implemented/tested.
-- [ ] misrouting detection implemented/tested.
-- [ ] bad ID detection implemented/tested.
-- [ ] bad data detection implemented/tested.
-- [ ] bad WSTRB memory update detection implemented/tested.
-- [ ] bad RESP detection implemented/tested.
-- [ ] bad LAST detection implemented/tested.
-- [ ] ordering violation detection implemented/tested.
-- [ ] stale-after-reset detection implemented/tested.
+- [x] loss detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`.)
+- [x] duplication detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`.)
+- [x] misrouting detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`, `closure_matrix.log`.)
+- [x] bad ID detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`, `event_trace.jsonl`.)
+- [x] bad data detection implemented/tested. (`results/raw/gate2_oracle/fault_sensitivity.log`, `event_trace.jsonl`.)
+- [x] bad WSTRB memory update detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`, mapped readback trace.)
+- [x] bad RESP detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`, `closure_matrix.log`.)
+- [x] bad LAST detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`, `closure_matrix.log`.)
+- [x] ordering violation detection implemented/tested. (`results/raw/gate2_oracle/pytest_oracle_model.log`, `closure_matrix.log`.)
+- [x] stale-after-reset detection implemented/tested under the coordinated-reset contract. (`results/raw/gate2_oracle/pytest_oracle_model.log`, `closure_event_trace.jsonl`.)
 
 ---
 
@@ -456,9 +456,9 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] W route through WLAST works. (Focused whole-top directed scope.)
 - [x] B route works. (Focused whole-top directed scope.)
 - [x] S3 default/error target works. (Focused whole-top directed scope; no full-fabric correctness claim.)
-- [ ] independent Python model checks end-to-end behavior.
+- [x] independent Python model checks end-to-end behavior. (`results/processed/gate2_oracle/summary.md`; complete deterministic DUT matrix and expected-fail sensitivity.)
 - [x] directed regression passes. (`results/processed/fabric_a_gate2_directed/summary.md`; 348 checks.)
-- [ ] no deep-verification/PPA claim made prematurely.
+- [x] no deep-verification/PPA claim made prematurely. (`results/processed/gate2/summary.md`.)
 - [ ] known-good Gate-2 commit recorded.
 
 ---

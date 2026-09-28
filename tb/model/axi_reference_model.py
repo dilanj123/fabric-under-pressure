@@ -154,6 +154,7 @@ class AxiReferenceModel:
             raise OracleViolation(f"duplicate target {direction} delivery manager={manager} id={ident}")
         tx.target_address_seen = True
         self.events.append({"kind": direction + "_target", "cycle": self.cycle,
+                            "epoch": self.epoch,
                             "manager": manager, "id": ident, "target": target,
                             "internal_id": observed_internal_id, "addr": addr})
 
@@ -168,7 +169,7 @@ class AxiReferenceModel:
         if beat >= tx.expected_beats:
             raise OracleViolation("duplicate manager W beat")
         tx.manager_w_beats.append((data, strobe, int(last)))
-        self.events.append({"kind": "w_admit", "cycle": self.cycle, "manager": manager,
+        self.events.append({"kind": "w_admit", "cycle": self.cycle, "epoch": self.epoch, "manager": manager,
                             "id": tx.key.ident, "target": tx.target, "beat": beat,
                             "data": data, "strobe": strobe, "last": int(last)})
         return tx
@@ -192,7 +193,7 @@ class AxiReferenceModel:
         tx.w_beats.append((data, strobe, int(last)))
         if target in self.memories:
             self.memories[target].write64(tx.addr + 8 * beat, data, strobe)
-        self.events.append({"kind": "w_target", "cycle": self.cycle, "manager": manager,
+        self.events.append({"kind": "w_target", "cycle": self.cycle, "epoch": self.epoch, "manager": manager,
                             "id": tx.key.ident, "target": target, "beat": beat,
                             "data": data, "strobe": strobe, "last": int(last)})
         if expected_last:
@@ -219,7 +220,7 @@ class AxiReferenceModel:
         if resp != expected:
             raise OracleViolation(f"bad BRESP expected={expected} observed={resp}")
         tx.completed = True
-        self.events.append({"kind": "b_complete", "cycle": self.cycle,
+        self.events.append({"kind": "b_complete", "cycle": self.cycle, "epoch": self.epoch,
                             "manager": manager, "id": ident, "target": tx.target})
         return tx
 
@@ -247,7 +248,7 @@ class AxiReferenceModel:
         tx.r_beats += 1
         if expected_last:
             tx.completed = True
-        self.events.append({"kind": "r_beat", "cycle": self.cycle, "manager": manager,
+        self.events.append({"kind": "r_beat", "cycle": self.cycle, "epoch": self.epoch, "manager": manager,
                             "id": ident, "target": tx.target, "beat": beat,
                             "data": data, "resp": resp, "last": int(last)})
         return tx
