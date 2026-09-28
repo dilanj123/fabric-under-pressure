@@ -46,9 +46,10 @@ def endpoint_write(memory: EndpointMemory, addr: int, data: int, strobe: int) ->
     memory.write64(addr, data, strobe)
 
 
-async def mapped_write(dut, model, memory, manager, ident, target, length, strobes):
+async def mapped_write(dut, model, memory, manager, ident, target, length, strobes,
+                      qos_value=0x3, response_delay=0, manager_b_stall=0):
     addr = address_for(target, 0x080 + (ident * 8))
-    cache, prot, qos, region = 0xA, 0x5, 0x3, 0x9
+    cache, prot, qos, region = 0xA, 0x5, qos_value & 0xF, 0x9
     set_lane(dut.manager_awid, 4, manager, ident)
     set_lane(dut.manager_awaddr, 32, manager, addr)
     set_lane(dut.manager_awlen, 8, manager, length)
@@ -98,15 +99,22 @@ async def mapped_write(dut, model, memory, manager, ident, target, length, strob
         if target in (0, 1):
             endpoint_write(memory[target], tx.addr + 8 * beat, obs_data, obs_strobe)
         await cycles(dut)
+    await cycles(dut, response_delay)
     set_lane(dut.target_bid, 6, target, (manager << 4) | ident)
     set_lane(dut.target_bresp, 2, target, 0)
     set_lane(dut.target_bvalid, 1, target, 1)
-    set_lane(dut.manager_bready, 1, manager, 1)
+    set_lane(dut.manager_bready, 1, manager, int(manager_b_stall == 0))
     while not get_lane(dut.target_bready, 1, target):
         await cycles(dut)
     await cycles(dut)
     set_lane(dut.target_bvalid, 1, target, 0)
     while not get_lane(dut.manager_bvalid, 1, manager):
+        await cycles(dut)
+    if manager_b_stall:
+        for _ in range(manager_b_stall):
+            assert get_lane(dut.manager_bvalid, 1, manager)
+            await cycles(dut)
+        set_lane(dut.manager_bready, 1, manager, 1)
         await cycles(dut)
     if get_lane(dut.manager_bid, 4, manager) != ident or get_lane(dut.manager_bresp, 2, manager) != 0:
         raise AssertionError("mapped B response mismatch")
@@ -115,8 +123,9 @@ async def mapped_write(dut, model, memory, manager, ident, target, length, strob
     set_lane(dut.manager_bready, 1, manager, 0)
 
 
-async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
-    cache, prot, qos, region = 0x6, 0x2, 0x7, 0x4
+async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
+                     qos_value=0x7, response_delay=0, manager_r_stall=0):
+    cache, prot, qos, region = 0x6, 0x2, qos_value & 0xF, 0x4
     set_lane(dut.manager_arid, 4, manager, ident)
     set_lane(dut.manager_araddr, 32, manager, addr)
     set_lane(dut.manager_arlen, 8, manager, length)
@@ -128,8 +137,13 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
     set_lane(dut.manager_arqos, 4, manager, qos)
     set_lane(dut.manager_arregion, 4, manager, region)
     set_lane(dut.manager_arvalid, 1, manager, 1)
+    wait_count = 0
     while not get_lane(dut.manager_arready, 1, manager):
         await cycles(dut)
+        wait_count += 1
+        if wait_count == 100:
+            raise AssertionError(f"manager ARREADY timeout M{manager} ID{ident} "
+                                 f"ready={int(dut.manager_arready.value):03b}")
     model.admit_ar(manager, ident, addr, length, cache=cache, prot=prot,
                    qos=qos, region=region)
     set_lane(dut.manager_arvalid, 1, manager, 0)
@@ -141,8 +155,8 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
     model.observe_target_address("ar", manager, ident, get_lane(dut.target_arid, 6, target), target, addr,
                                  length, 3, 1, 0, cache, prot, qos, region)
     await cycles(dut)
-    set_lane(dut.manager_rready, 1, manager, 1)
     for beat in range(length + 1):
+        await cycles(dut, response_delay)
         data = endpoint_read(memory[target], addr + beat * 8) if target in (0, 1) else 0
         if os.environ.get("ORACLE_FAULT_MODE") == "bad_rdata" and target == 0 and beat == 0:
             data ^= 1
@@ -152,11 +166,18 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr):
         set_lane(dut.target_rresp, 2, target, 0)
         set_lane(dut.target_rlast, 1, target, last)
         set_lane(dut.target_rvalid, 1, target, 1)
+        set_lane(dut.manager_rready, 1, manager, int(manager_r_stall == 0))
         while not get_lane(dut.target_rready, 1, target):
             await cycles(dut)
         await cycles(dut)
         set_lane(dut.target_rvalid, 1, target, 0)
         while not get_lane(dut.manager_rvalid, 1, manager):
+            await cycles(dut)
+        if manager_r_stall:
+            for _ in range(manager_r_stall):
+                assert get_lane(dut.manager_rvalid, 1, manager)
+                await cycles(dut)
+            set_lane(dut.manager_rready, 1, manager, 1)
             await cycles(dut)
         obs_id = get_lane(dut.manager_rid, 4, manager)
         obs_data = get_lane(dut.manager_rdata, 64, manager)
@@ -516,6 +537,7 @@ async def _admit_read_no_response(dut, model, manager, ident, target, length=0,
     set_lane(dut.manager_arqos, 4, manager, qos)
     set_lane(dut.manager_arregion, 4, manager, region)
     set_lane(dut.manager_arvalid, 1, manager, 1)
+    wait_count = 0
     while not get_lane(dut.manager_arready, 1, manager):
         await cycles(dut)
     tx = model.admit_ar(manager, ident, addr, length, cache=cache, prot=prot,
@@ -532,6 +554,11 @@ async def _admit_read_no_response(dut, model, manager, ident, target, length=0,
     while not (get_lane(dut.target_arvalid, 1, target) and
                get_lane(dut.target_arready, 1, target)):
         await cycles(dut)
+        wait_count += 1
+        if wait_count == 200:
+            raise AssertionError(f"target AR timeout M{manager} ID{ident} S{target} "
+                                 f"valid={int(dut.target_arvalid.value):04b} "
+                                 f"ready={int(dut.target_arready.value):03b}")
     observed_id = get_lane(dut.target_arid, 6, target)
     observed_addr = get_lane(dut.target_araddr, 32, target)
     observed_fields = (get_lane(dut.target_arlen, 8, target),
@@ -582,8 +609,16 @@ async def _return_r(dut, model, manager, ident, target, length=0,
         set_lane(dut.target_rresp, 2, target, 0 if target != 3 else RESP_DECERR)
         set_lane(dut.target_rlast, 1, target, last)
         set_lane(dut.target_rvalid, 1, target, 1)
+        wait_count = 0
         while not get_lane(dut.target_rready, 1, target):
             await cycles(dut)
+            wait_count += 1
+            if wait_count == 100:
+                raise AssertionError(
+                    f"target RREADY timeout M{manager} ID{ident} S{target} "
+                    f"rready={int(dut.target_rready.value):04b} "
+                    f"rvalid={int(dut.target_rvalid.value):04b} "
+                    f"manager_rvalid={int(dut.manager_rvalid.value):03b}")
         await cycles(dut)
         set_lane(dut.target_rvalid, 1, target, 0)
         while not get_lane(dut.manager_rvalid, 1, manager):

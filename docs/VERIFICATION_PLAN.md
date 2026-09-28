@@ -1,6 +1,10 @@
 # Verification Plan
 
-**Status:** Gate-1 verification contract frozen; no AXI verification has run.
+**Status:** Gate-1 verification contract frozen; Gate-2 deterministic evidence and Gate-3 Task-1 randomized qualification evidence are recorded below. Gate 3 remains open for long seeded contention, adversarial fairness, targeted integrated formal review and coverage closure.
+
+### Gate-3 Task-1 randomized qualification
+
+Architecture-A qualification uses D040 pre-generated plans and the project-owned Python oracle. Fixed functional seeds are `0xA3F30001` through `0xA3F30005`; each plan contains 96 legal operations, independent finite pause/delay schedules, two coordinated reset points and a 10,000-cycle post-drain qualification interval. Plans and per-seed coverage are retained under `results/raw/gate3_random/`. These runs provide functional stress evidence only and do not provide latency, throughput, fairness, timing or PPA evidence.
 
 ## Independent checking
 A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.

@@ -1,0 +1,75 @@
+{
+  "seed": 2750611459,
+  "accepted_reads": [
+    16,
+    16,
+    16
+  ],
+  "accepted_writes": [
+    16,
+    16,
+    16
+  ],
+  "targets": [
+    24,
+    24,
+    24,
+    24
+  ],
+  "lengths": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "qos": [
+    8,
+    5,
+    5,
+    3,
+    10,
+    10,
+    8,
+    8,
+    6,
+    7,
+    6,
+    4,
+    3,
+    7,
+    4,
+    2
+  ],
+  "resets": 2,
+  "target_aw_stalls": 7,
+  "target_ar_stalls": 8,
+  "target_w_stalls": 12,
+  "aw_w_styles": {
+    "aw_before_w": 16,
+    "ar_then_r": 48,
+    "near_cycle": 16,
+    "w_before_aw": 16
+  },
+  "response_delays": 80,
+  "manager_b_stalls": 37,
+  "manager_r_stalls": 30,
+  "max_live_reads": 4,
+  "max_live_writes": 4,
+  "all_manager_active_cycles": 1,
+  "pressure_depth_four": 2,
+  "same_id_cross_manager": 1,
+  "out_of_order_completions": 1,
+  "same_target_contention": 1
+}

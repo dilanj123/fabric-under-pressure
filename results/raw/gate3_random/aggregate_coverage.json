@@ -1,0 +1,57 @@
+{
+  "seeds": [
+    2750611457,
+    2750611458,
+    2750611459,
+    2750611460,
+    2750611461
+  ],
+  "targets": [
+    120,
+    120,
+    120,
+    120
+  ],
+  "lengths": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "accepted_reads": [
+    80,
+    80,
+    80
+  ],
+  "accepted_writes": [
+    80,
+    80,
+    80
+  ],
+  "resets": 10,
+  "max_live_reads": 4,
+  "max_live_writes": 4,
+  "pressure_depth_four": 10,
+  "same_id_cross_manager": 1,
+  "out_of_order_completions": 1,
+  "same_target_contention": 1,
+  "target_aw_stalls": 38,
+  "target_ar_stalls": 38,
+  "target_w_stalls": 60,
+  "response_delays": 407,
+  "manager_b_stalls": 175,
+  "manager_r_stalls": 174,
+  "all_manager_active_cycles": 5
+}

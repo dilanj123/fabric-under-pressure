@@ -2,6 +2,7 @@
 
 **Date:** 2026-09-28
 **Gate:** Gate 2 PASS; `kg-g2-a-functional` points to `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` and its annotated tag object is `15190879d68fb7f94f425556d60a20609f818c79`. `kg-g1-spec` remains at `aecfb8c`.
+**Gate 3 Task 1:** PASS qualification for the replayable randomized Architecture-A harness at fixed seeds `0xA3F30001`–`0xA3F30005`; Gate 3 remains OPEN. D040 freezes pre-generated plans independent of DUT arbitration and the Python oracle as expected-results authority.
 **Architecture:** Architecture-A production RTL exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression passes 348 checks. The project-owned Python oracle passes 15 model self-tests and the complete deterministic DUT matrix, including S0/S1/S2/S3, all legal lengths, WSTRB memory checks, capacity, ID concurrency, response reordering, backpressure and live-work reset with fresh same-ID reuse.
 
 ## What changed

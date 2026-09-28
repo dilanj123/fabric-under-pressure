@@ -18,7 +18,7 @@
 
 | G0-E013 | REPRO | Apple-Silicon CI qualification workflow | `.github/workflows/gate0-macos-arm64.yml`; run 35801448593 artifact under `results/raw/gate0/github-actions/35801448593/`, reviewed report in `results/processed/gate0/ci-run-35801448593.md` | PASS; all workflow steps succeeded |
 
-No AXI functional correctness or performance evidence exists yet.
+Historical Gate-0 note: at that milestone no project AXI functional-correctness or performance evidence existed. Gate-2 and Gate-3 evidence below supersede that statement for their explicitly scoped claims; no performance claim is made from functional stress runs.
 
 ## Gate-1 specification evidence
 
@@ -232,3 +232,13 @@ This closes the hand-written directed integration pass only. The independent Pyt
 | G2-O004 | SIM | Complete closure driver runs self-tests, the 348-check whole-top directed regression, normal oracle matrix, fault sensitivity and trace checks | `scripts/run_gate2_closure.sh`, `results/raw/gate2_oracle/gate2_closure.log` | PASS |
 | G2-O005 | SYNTH | Existing complete `axi_fabric_a` ECP5 synthesis remains the authoritative production resource reference; no RTL changed in oracle closure | `results/raw/fabric_a_integration/synthesis.log`, `results/processed/gate2/summary.md` | PASS; historical SYNTH only |
 | G2-O006 | BOOKKEEPING | Gate-2 known-good Architecture-A functional baseline recorded after closure evidence passed | `kg-g2-a-functional`, `results/processed/gate2/summary.md`, `docs/PROJECT_STATE.md` | PASS; tag object `15190879d68fb7f94f425556d60a20609f818c79`, commit `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` |
+
+## Gate-3 randomized Architecture-A qualification evidence
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| G3-E001 | REPRO/SIM | Pre-generated replayable Architecture-A plans for fixed seeds `0xA3F30001`–`0xA3F30005` pass qualification runs | `results/raw/gate3_random/plans/`, `results/raw/gate3_random/seed_*/run.log` | PASS; 96 planned operations per seed, 10,000 post-drain qualification cycles |
+| G3-E002 | SIM | Random legal manager traffic covers S0-S3, all managers, LEN 0-15 and QoS variation | `results/raw/gate3_random/aggregate_coverage.json` | PASS; aggregate target and length bins are non-zero |
+| G3-E003 | SIM | Random target/manager backpressure and finite response delays pass through the trusted oracle | `results/raw/gate3_random/aggregate_coverage.json`, `results/raw/gate3_random/seed_*/coverage.json` | PASS; AW/AR/W, B/R stalls and response delays are exercised |
+| G3-E004 | SIM | Four-entry read/write pressure, same-visible-ID overlap, same-target contention and reset epochs are exercised | `results/raw/gate3_random/aggregate_coverage.json`, `results/raw/gate3_random/seed_*/events.jsonl` | PASS; bounded qualification coverage, not long-stress or fairness evidence |
+| G3-E005 | REPRO | Exact saved plan replay is supported by the Gate-3 driver | `scripts/run_gate3_random.sh`, `tb/random/axi_random_plan.py` | PASS; `--seed` and `--plan` modes |
