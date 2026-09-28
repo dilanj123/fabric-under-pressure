@@ -2,6 +2,10 @@
 
 Status: **PASS**
 
+Gate-2 tag: `kg-g2-a-functional` ->
+`cbb801aaf87870cb6f7aaa938f3d364e5b16d472` (tag object
+`15190879d68fb7f94f425556d60a20609f818c79`).
+
 The project-owned reference model and public-port Verilator/cocotb run pass the complete deterministic matrix. Production RTL was unchanged.
 
 ## Evidence

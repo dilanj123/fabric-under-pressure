@@ -1,6 +1,11 @@
 # Architecture-A Gate-2 closure
 
-Status: **PASS pending tagged closure commit**
+Status: **PASS**
+
+Closing known-good commit: `cbb801aaf87870cb6f7aaa938f3d364e5b16d472`.
+Annotated tag `kg-g2-a-functional`: object
+`15190879d68fb7f94f425556d60a20609f818c79`, dereferenced commit
+`cbb801aaf87870cb6f7aaa938f3d364e5b16d472`.
 
 The complete documented AXI4-subset Architecture-A production top is covered by deterministic hand-written and independent project-owned oracle evidence.
 

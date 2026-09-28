@@ -1,7 +1,7 @@
 # Project State
 
 **Date:** 2026-09-28
-**Gate:** Gate 2 PASS pending the final tagged closure commit; `kg-g1-spec` exists remotely at `aecfb8c`
+**Gate:** Gate 2 PASS; `kg-g2-a-functional` points to `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` and its annotated tag object is `15190879d68fb7f94f425556d60a20609f818c79`. `kg-g1-spec` remains at `aecfb8c`.
 **Architecture:** Architecture-A production RTL exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression passes 348 checks. The project-owned Python oracle passes 15 model self-tests and the complete deterministic DUT matrix, including S0/S1/S2/S3, all legal lengths, WSTRB memory checks, capacity, ID concurrency, response reordering, backpressure and live-work reset with fresh same-ID reuse.
 
 ## What changed

@@ -459,7 +459,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] independent Python model checks end-to-end behavior. (`results/processed/gate2_oracle/summary.md`; complete deterministic DUT matrix and expected-fail sensitivity.)
 - [x] directed regression passes. (`results/processed/fabric_a_gate2_directed/summary.md`; 348 checks.)
 - [x] no deep-verification/PPA claim made prematurely. (`results/processed/gate2/summary.md`.)
-- [ ] known-good Gate-2 commit recorded.
+- [x] known-good Gate-2 commit recorded. (`kg-g2-a-functional` -> `cbb801aaf87870cb6f7aaa938f3d364e5b16d472`; tag object `15190879d68fb7f94f425556d60a20609f818c79`.)
 
 ---
 
