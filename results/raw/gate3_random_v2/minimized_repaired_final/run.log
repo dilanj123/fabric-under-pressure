@@ -1,0 +1,423 @@
+git_commit=09a9a7fd7a3440d9f18c261d108703cd9e647639
+architecture=A
+seed=0xA3F30001
+plan=/Users/Dilan/Projects/fabric-under-pressure/results/raw/gate3_rdata_investigation/minimized_plan.json
+configuration=24 anchors plus 512 genuinely random operations with bounded drain
+verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.aw_valid_t'
+  109 |   logic [3:0] aw_valid_t;
+      |               ^~~~~~~~~~
+                    ... For warning description see https://verilator.org/warn/UNOPTFLAT?v=5.053
+                    ... Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:117:15:      Example path: axi_fabric_a.aw_target_ready_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:41:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:225:10:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:120:15: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.w_valid_t'
+  120 |   logic [3:0] w_valid_t, w_last_t, w_target_ready_t, w_target_fire_t;
+      |               ^~~~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:120:15:      Example path: axi_fabric_a.w_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:117:15:      Example path: axi_fabric_a.aw_target_ready_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:41:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:225:10:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:130:15: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.ar_valid_t'
+  130 |   logic [3:0] ar_valid_t;
+      |               ^~~~~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:130:15:      Example path: axi_fabric_a.ar_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:117:15:      Example path: axi_fabric_a.aw_target_ready_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:41:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:225:10:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:52:13: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.write_state.gen_manager_state[0].outstanding_allowed_lane'
+   52 |       logic outstanding_allowed_lane;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:52:13:      Example path: axi_fabric_a.write_state.gen_manager_state[0].outstanding_allowed_lane
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:110:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: axi_fabric_a.write_state.gen_manager_state[2].u_outstanding.allocate_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:34:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: axi_fabric_a.write_state.gen_manager_state[2].u_outstanding.allocate_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:52:13:      Example path: axi_fabric_a.write_state.gen_manager_state[2].outstanding_allowed_lane
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:110:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:28:13: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.read_state.gen_read_state[0].allowed_lane'
+   28 |       logic allowed_lane;
+      |             ^~~~~~~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:28:13:      Example path: axi_fabric_a.read_state.gen_read_state[0].allowed_lane
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:52:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:20:42:      Example path: axi_fabric_a.read_state.commit_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: axi_fabric_a.read_state.gen_read_state[2].u_tracker.allocate_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:34:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: axi_fabric_a.read_state.gen_read_state[2].u_tracker.allocate_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:28:13:      Example path: axi_fabric_a.read_state.gen_read_state[2].allowed_lane
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:52:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_read_state_bank.sv:20:42:      Example path: axi_fabric_a.read_state.commit_fire
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:21:33: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.s3.awvalid'
+   21 |   input  logic                  awvalid,
+      |                                 ^~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:21:33:      Example path: axi_fabric_a.s3.awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:78:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:22:33:      Example path: axi_fabric_a.s3.awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:22:33:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:188:9:      Example path: axi_fabric_a.s3_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:117:15:      Example path: axi_fabric_a.aw_target_ready_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:41:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:225:10:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:27:33: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.s3.wvalid'
+   27 |   input  logic                  wvalid,
+      |                                 ^~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:27:33:      Example path: axi_fabric_a.s3.wvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:78:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:22:33:      Example path: axi_fabric_a.s3.awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:22:33:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:188:9:      Example path: axi_fabric_a.s3_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:117:15:      Example path: axi_fabric_a.aw_target_ready_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:41:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:225:10:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:53:33: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.s3.rready'
+   53 |   input  logic                  rready,
+      |                                 ^~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:53:33:      Example path: axi_fabric_a.s3.rready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:78:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:46:33:      Example path: axi_fabric_a.s3.arready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_s3_error_target.sv:46:33:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:194:65:      Example path: axi_fabric_a.s3_arready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:117:15:      Example path: axi_fabric_a.aw_target_ready_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:30:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awready
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:41:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_awvalid
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:225:10:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:109:15:      Example path: axi_fabric_a.aw_valid_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:286:3:      Example path: ALWAYS
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:140:15: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.outstanding_w_allowed'
+  140 |   logic [2:0] outstanding_w_allowed, owner_active, state_allowed;
+      |               ^~~~~~~~~~~~~~~~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:140:15:      Example path: axi_fabric_a.outstanding_w_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:24:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:24:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.outstanding_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:13:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:13:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.u_scheduler.outstanding_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:35:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:23:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.u_scheduler.target_owner_busy
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_scheduler_a.sv:23:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:74:15:      Example path: axi_fabric_a.gen_paths[3].u_aw.target_owner_busy
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:197:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_aw_target_path_a.sv:33:22:      Example path: axi_fabric_a.gen_paths[3].u_aw.manager_aw_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:223:82:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:104:32:      Example path: axi_fabric_a.aw_fire_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:266:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:152:15:      Example path: axi_fabric_a.aw_state_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:14:42:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:14:42:      Example path: axi_fabric_a.write_state.aw_admit_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:110:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: axi_fabric_a.write_state.gen_manager_state[2].u_outstanding.allocate_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:34:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: axi_fabric_a.write_state.gen_manager_state[2].u_outstanding.allocate_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:52:13:      Example path: axi_fabric_a.write_state.gen_manager_state[2].outstanding_allowed_lane
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:110:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
+%Warning-UNOPTFLAT: /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:148:15: Signal unoptimizable: Circular combinational logic: 'axi_fabric_a.outstanding_r_allowed'
+  148 |   logic [2:0] outstanding_r_allowed;
+      |               ^~~~~~~~~~~~~~~~~~~~~
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:148:15:      Example path: axi_fabric_a.outstanding_r_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_path_a.sv:22:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_path_a.sv:22:22:      Example path: axi_fabric_a.gen_paths[3].u_ar.outstanding_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_scheduler_a.sv:9:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_scheduler_a.sv:9:22:      Example path: axi_fabric_a.gen_paths[3].u_ar.u_scheduler.outstanding_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_scheduler_a.sv:23:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_scheduler_a.sv:11:22:      Example path: axi_fabric_a.gen_paths[3].u_ar.u_scheduler.raw_eligible
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_scheduler_a.sv:11:22:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_path_a.sv:63:15:      Example path: axi_fabric_a.gen_paths[3].u_ar.raw_eligible
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_path_a.sv:145:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_ar_target_path_a.sv:25:22:      Example path: axi_fabric_a.gen_paths[3].u_ar.manager_ar_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:230:82:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:125:32:      Example path: axi_fabric_a.ar_fire_t
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:266:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_fabric_a.sv:152:15:      Example path: axi_fabric_a.aw_state_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:14:42:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:14:42:      Example path: axi_fabric_a.write_state.aw_admit_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:110:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:8:23:      Example path: axi_fabric_a.write_state.gen_manager_state[2].u_outstanding.allocate_fire
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:34:3:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: axi_fabric_a.write_state.gen_manager_state[2].u_outstanding.allocate_allowed
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_outstanding_tracker.sv:18:23:      Example path: ASSIGNW
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:52:13:      Example path: axi_fabric_a.write_state.gen_manager_state[2].outstanding_allowed_lane
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:110:7:      Example path: ALWAYS
+                    /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- Verilator: Built from 0.923 MB sources in 20 modules, into 3.341 MB in 10 C++ files needing 0.000 MB
+- Verilator: Walltime 0.270 s (elab=0.026, cvt=0.185, bld=0.000); cpu 0.221 s on 1 threads; allocated 46.359 MB
+g++  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -Os  -c -o verilator.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_dpi.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated_dpi.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_vpi.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated_vpi.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_threads.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated_threads.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -x c++-header Vtop__pch.h -o Vtop__pch.h.fast.gch
+g++   -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -x c++-header Vtop__pch.h -o Vtop__pch.h.slow.gch
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.fast.gch -c Vtop.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.fast.gch -c Vtop___024root__0.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.fast.gch -c Vtop___024root__1.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.fast.gch -c Vtop___024root__2.cpp
+g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.fast.gch -c Vtop__Dpi.cpp
+g++   -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.slow.gch -c Vtop__ConstPool__0__Slow.cpp
+g++   -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.slow.gch -c Vtop___024root__Slow.cpp
+g++   -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.slow.gch -c Vtop___024root__0__Slow.cpp
+g++   -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.slow.gch -c Vtop_fabric_addr_map_pkg__Slow.cpp
+g++   -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -include-pch Vtop__pch.h.slow.gch -c Vtop__Syms__Slow.cpp
+g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines   -rdynamic verilator.o verilated.o verilated_dpi.o verilated_vpi.o verilated_threads.o Vtop__ALL.a   -Wl,-rpath,/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -L/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -lcocotbvpi_verilator  -pthread -lpthread -ldl   -o axi_fabric_a
+rm Vtop__ALL.verilator_deplist.tmp
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 2750611457
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:8: DeprecationWarning: Join has been moved to `cocotb.task`.
+                                                          from cocotb.triggers import RisingEdge, Lock, Join, Timer
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_fabric_a_random_v2.fabric_a_random_v2 (1/1)
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:53: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          now = get_sim_time(units="ns")
+  2210.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:676: DeprecationWarning: Using `task` directly is preferred to `Join(task)` in all situations where the latter could be used.
+                                                          await Join(task)
+  2210.00ns INFO     cocotb.axi_fabric_a                random start seq=7 read M1 ID4 S1 LEN3
+  2230.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID4 cycle=224 addr=0x10000200 len=3
+  2230.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID4 cycle=224
+  2230.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID4 cycle=224
+  4570.00ns INFO     cocotb.axi_fabric_a                random start seq=1 read M2 ID13 S1 LEN13
+  4590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID13 cycle=460 addr=0x10000080 len=13
+  4590.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID13 cycle=460
+  4590.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID13 cycle=460
+  5690.00ns INFO     cocotb.axi_fabric_a                random start seq=15 write M1 ID11 S1 LEN13
+  5710.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=0 cycle=572 data=0x1001000b00000000 strb=0xff last=0
+  5730.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=1 cycle=574 data=0x1001000b00000001 strb=0x96 last=0
+  5750.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=2 cycle=576 data=0x1001000b00000002 strb=0x1a last=0
+  5770.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=3 cycle=578 data=0x1001000b00000003 strb=0xb0 last=0
+  5790.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=4 cycle=580 data=0x1001000b00000004 strb=0xf8 last=0
+  5810.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=5 cycle=582 data=0x1001000b00000005 strb=0x5e last=0
+  5830.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=6 cycle=584 data=0x1001000b00000006 strb=0x8e last=0
+  5850.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=7 cycle=586 data=0x1001000b00000007 strb=0xdf last=0
+  5870.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=8 cycle=588 data=0x1001000b00000008 strb=0x48 last=0
+  5890.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=9 cycle=590 data=0x1001000b00000009 strb=0x4f last=0
+  5910.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=10 cycle=592 data=0x1001000b0000000a strb=0xc5 last=0
+  5930.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=11 cycle=594 data=0x1001000b0000000b strb=0x61 last=0
+  5950.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=12 cycle=596 data=0x1001000b0000000c strb=0xc1 last=0
+  5970.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=13 cycle=598 data=0x1001000b0000000d strb=0xdd last=1
+ 25650.00ns INFO     cocotb.axi_fabric_a                random start seq=2 read M2 ID15 S2 LEN0
+ 25670.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID15 cycle=2568 addr=0x20000100 len=0
+ 25670.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID15 cycle=2568
+ 25670.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID15 cycle=2568
+ 25740.00ns INFO     cocotb.axi_fabric_a                random start seq=3 write M2 ID9 S2 LEN6
+ 25760.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=2577 data=0x1002000900000000 strb=0x55 last=0
+ 25780.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=2579 data=0x1002000900000001 strb=0xce last=0
+ 25800.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=2 cycle=2581 data=0x1002000900000002 strb=0xab last=0
+ 25820.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=3 cycle=2583 data=0x1002000900000003 strb=0x17 last=0
+ 25840.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=4 cycle=2585 data=0x1002000900000004 strb=0x99 last=0
+ 25860.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=2587 data=0x1002000900000005 strb=0xa9 last=0
+ 25880.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=6 cycle=2589 data=0x1002000900000006 strb=0x8f last=1
+ 25960.00ns INFO     cocotb.axi_fabric_a                random start seq=6 write M2 ID0 S2 LEN9
+ 25980.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=2599 data=0x1002000000000000 strb=0x0 last=0
+ 26000.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=2601 data=0x1002000000000001 strb=0x5c last=0
+ 26020.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=2 cycle=2603 data=0x1002000000000002 strb=0xe9 last=0
+ 26040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=3 cycle=2605 data=0x1002000000000003 strb=0xda last=0
+ 26060.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=4 cycle=2607 data=0x1002000000000004 strb=0x2 last=0
+ 26080.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=2609 data=0x1002000000000005 strb=0xb6 last=0
+ 26100.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=6 cycle=2611 data=0x1002000000000006 strb=0xcb last=0
+ 26120.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=7 cycle=2613 data=0x1002000000000007 strb=0xb last=0
+ 26140.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=8 cycle=2615 data=0x1002000000000008 strb=0x27 last=0
+ 26160.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=9 cycle=2617 data=0x1002000000000009 strb=0x9e last=1
+ 31200.00ns INFO     cocotb.axi_fabric_a                random start seq=16 read M1 ID14 S0 LEN13
+ 31220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID14 cycle=3123 addr=0x440 len=13
+ 31220.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID14 cycle=3123
+ 31220.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID14 cycle=3123
+ 31570.00ns INFO     cocotb.axi_fabric_a                random start seq=17 read M1 ID11 S1 LEN5
+ 31590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID11 cycle=3160 addr=0x10000480 len=5
+ 31590.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID11 cycle=3160
+ 31590.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID11 cycle=3160
+ 31870.00ns INFO     cocotb.axi_fabric_a                random start seq=18 read M1 ID4 S3 LEN15
+ 32090.00ns INFO     cocotb.axi_fabric_a                random start seq=24 read M1 ID8 S2 LEN5
+ 32110.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S2 ID8 cycle=3212 addr=0x20000080 len=5
+ 32110.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S2 ID8 cycle=3212
+ 32110.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S2 ID8 cycle=3212
+ 32310.00ns INFO     cocotb.axi_fabric_a                random start seq=25 read M1 ID13 S1 LEN15
+ 32330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID13 cycle=3234 addr=0x10000680 len=15
+ 32330.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID13 cycle=3234
+ 32330.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID13 cycle=3234
+ 41230.00ns INFO     cocotb.axi_fabric_a                random start seq=0 write M0 ID1 S1 LEN5
+ 41250.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=0 cycle=4126 data=0x1000000100000000 strb=0xff last=0
+ 41270.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=1 cycle=4128 data=0x1000000100000001 strb=0xeb last=0
+ 41290.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=2 cycle=4130 data=0x1000000100000002 strb=0x4f last=0
+ 41310.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=3 cycle=4132 data=0x1000000100000003 strb=0xf8 last=0
+ 41330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=4134 data=0x1000000100000004 strb=0x81 last=0
+ 41350.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=5 cycle=4136 data=0x1000000100000005 strb=0xdc last=1
+ 41480.00ns INFO     cocotb.axi_fabric_a                random start seq=4 read M0 ID0 S0 LEN6
+ 41500.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID0 cycle=4151 addr=0x140 len=6
+ 41500.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID0 cycle=4151
+ 41500.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID0 cycle=4151
+ 41850.00ns INFO     cocotb.axi_fabric_a                random start seq=5 write M0 ID1 S2 LEN13
+ 41870.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=4188 data=0x1000000100000000 strb=0xff last=0
+ 41890.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=1 cycle=4190 data=0x1000000100000001 strb=0x4f last=0
+ 41910.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=2 cycle=4192 data=0x1000000100000002 strb=0x13 last=0
+ 41930.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=3 cycle=4194 data=0x1000000100000003 strb=0x56 last=0
+ 41950.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=4 cycle=4196 data=0x1000000100000004 strb=0x73 last=0
+ 41970.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=5 cycle=4198 data=0x1000000100000005 strb=0x60 last=0
+ 41990.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=6 cycle=4200 data=0x1000000100000006 strb=0x33 last=0
+ 42010.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=7 cycle=4202 data=0x1000000100000007 strb=0x64 last=0
+ 42030.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=8 cycle=4204 data=0x1000000100000008 strb=0x5b last=0
+ 42050.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=9 cycle=4206 data=0x1000000100000009 strb=0x4c last=0
+ 42070.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=10 cycle=4208 data=0x100000010000000a strb=0xe5 last=0
+ 42090.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=11 cycle=4210 data=0x100000010000000b strb=0x12 last=0
+ 42110.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=12 cycle=4212 data=0x100000010000000c strb=0xa9 last=0
+ 42130.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=13 cycle=4214 data=0x100000010000000d strb=0x2c last=1
+ 42200.00ns INFO     cocotb.axi_fabric_a                random start seq=11 read M0 ID4 S3 LEN13
+ 42400.00ns INFO     cocotb.axi_fabric_a                random start seq=12 write M0 ID3 S1 LEN8
+ 42420.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=0 cycle=4243 data=0x1000000300000000 strb=0xaa last=0
+ 42440.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=1 cycle=4245 data=0x1000000300000001 strb=0x79 last=0
+ 42460.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=2 cycle=4247 data=0x1000000300000002 strb=0x16 last=0
+ 42480.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=3 cycle=4249 data=0x1000000300000003 strb=0x13 last=0
+ 42500.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=4251 data=0x1000000300000004 strb=0x1a last=0
+ 42520.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=5 cycle=4253 data=0x1000000300000005 strb=0xe4 last=0
+ 42540.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=6 cycle=4255 data=0x1000000300000006 strb=0x93 last=0
+ 42560.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=7 cycle=4257 data=0x1000000300000007 strb=0x74 last=0
+ 42580.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=8 cycle=4259 data=0x1000000300000008 strb=0x6c last=1
+ 42690.00ns INFO     cocotb.axi_fabric_a                random start seq=13 write M0 ID15 S0 LEN2
+ 42710.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=4272 data=0x1000000f00000000 strb=0x55 last=0
+ 42730.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=1 cycle=4274 data=0x1000000f00000001 strb=0x5 last=0
+ 42750.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=2 cycle=4276 data=0x1000000f00000002 strb=0x8b last=1
+ 42860.00ns INFO     cocotb.axi_fabric_a                random start seq=20 read M0 ID4 S2 LEN1
+ 42880.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S2 ID4 cycle=4289 addr=0x20000580 len=1
+ 42880.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID4 cycle=4289
+ 42880.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S2 ID4 cycle=4289
+ 43030.00ns INFO     cocotb.axi_fabric_a                random start seq=21 read M0 ID0 S1 LEN7
+ 43050.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID0 cycle=4306 addr=0x10000580 len=7
+ 43050.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID0 cycle=4306
+ 43050.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID0 cycle=4306
+ 43270.00ns INFO     cocotb.axi_fabric_a                random start seq=22 write M0 ID10 S0 LEN1
+ 43290.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=4330 data=0x1000000a00000000 strb=0xaa last=0
+ 43310.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=1 cycle=4332 data=0x1000000a00000001 strb=0x65 last=1
+ 43400.00ns INFO     cocotb.axi_fabric_a                random start seq=26 write M0 ID14 S2 LEN11
+ 43420.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=4343 data=0x1000000e00000000 strb=0x0 last=0
+ 43440.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=1 cycle=4345 data=0x1000000e00000001 strb=0xb0 last=0
+ 43460.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=2 cycle=4347 data=0x1000000e00000002 strb=0xe9 last=0
+ 43480.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=3 cycle=4349 data=0x1000000e00000003 strb=0x53 last=0
+ 43500.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=4 cycle=4351 data=0x1000000e00000004 strb=0xcf last=0
+ 43520.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=5 cycle=4353 data=0x1000000e00000005 strb=0xfa last=0
+ 43540.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=6 cycle=4355 data=0x1000000e00000006 strb=0x63 last=0
+ 43560.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=7 cycle=4357 data=0x1000000e00000007 strb=0xa8 last=0
+ 43580.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=8 cycle=4359 data=0x1000000e00000008 strb=0x38 last=0
+ 43600.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=9 cycle=4361 data=0x1000000e00000009 strb=0x7d last=0
+ 43620.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=10 cycle=4363 data=0x1000000e0000000a strb=0x96 last=0
+ 43640.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=11 cycle=4365 data=0x1000000e0000000b strb=0x65 last=1
+ 43960.00ns INFO     cocotb.axi_fabric_a                random start seq=28 read M1 ID6 S0 LEN8
+ 43980.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID6 cycle=4399 addr=0x740 len=8
+ 43980.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID6 cycle=4399
+ 43980.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID6 cycle=4399
+ 48550.00ns INFO     cocotb.axi_fabric_a                random start seq=8 write M2 ID11 S1 LEN12
+ 48570.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=4858 data=0x1002000b00000000 strb=0x55 last=0
+ 48590.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=4860 data=0x1002000b00000001 strb=0x46 last=0
+ 48610.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=4862 data=0x1002000b00000002 strb=0x34 last=0
+ 48630.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=3 cycle=4864 data=0x1002000b00000003 strb=0xbc last=0
+ 48650.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=4 cycle=4866 data=0x1002000b00000004 strb=0xdd last=0
+ 48670.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=5 cycle=4868 data=0x1002000b00000005 strb=0x8c last=0
+ 48690.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=6 cycle=4870 data=0x1002000b00000006 strb=0xf0 last=0
+ 48710.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=7 cycle=4872 data=0x1002000b00000007 strb=0x2 last=0
+ 48730.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=8 cycle=4874 data=0x1002000b00000008 strb=0x15 last=0
+ 48750.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=9 cycle=4876 data=0x1002000b00000009 strb=0xf5 last=0
+ 48770.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=10 cycle=4878 data=0x1002000b0000000a strb=0x19 last=0
+ 48790.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=11 cycle=4880 data=0x1002000b0000000b strb=0xc7 last=0
+ 48810.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=12 cycle=4882 data=0x1002000b0000000c strb=0x2e last=1
+ 48900.00ns INFO     cocotb.axi_fabric_a                random start seq=9 write M2 ID5 S1 LEN15
+ 48920.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=4893 data=0x1002000500000000 strb=0x81 last=0
+ 48940.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=4895 data=0x1002000500000001 strb=0xe2 last=0
+ 48960.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=4897 data=0x1002000500000002 strb=0x29 last=0
+ 48980.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=3 cycle=4899 data=0x1002000500000003 strb=0xf7 last=0
+ 49000.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=4 cycle=4901 data=0x1002000500000004 strb=0x8e last=0
+ 49020.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=5 cycle=4903 data=0x1002000500000005 strb=0x75 last=0
+ 49040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=6 cycle=4905 data=0x1002000500000006 strb=0xd9 last=0
+ 49060.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=7 cycle=4907 data=0x1002000500000007 strb=0xfd last=0
+ 49080.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=8 cycle=4909 data=0x1002000500000008 strb=0xfc last=0
+ 49100.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=9 cycle=4911 data=0x1002000500000009 strb=0xd1 last=0
+ 49120.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=10 cycle=4913 data=0x100200050000000a strb=0xbb last=0
+ 49140.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=11 cycle=4915 data=0x100200050000000b strb=0xf2 last=0
+ 49160.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=12 cycle=4917 data=0x100200050000000c strb=0x71 last=0
+ 49180.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=13 cycle=4919 data=0x100200050000000d strb=0xe9 last=0
+ 49200.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=14 cycle=4921 data=0x100200050000000e strb=0x57 last=0
+ 49220.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=15 cycle=4923 data=0x100200050000000f strb=0xfe last=1
+ 49320.00ns INFO     cocotb.axi_fabric_a                random start seq=10 write M2 ID9 S2 LEN1
+ 49340.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=4935 data=0x1002000900000000 strb=0xff last=0
+ 49360.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=4937 data=0x1002000900000001 strb=0xa5 last=1
+ 49420.00ns INFO     cocotb.axi_fabric_a                random start seq=14 write M2 ID1 S0 LEN5
+ 49440.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=4945 data=0x1002000100000000 strb=0x81 last=0
+ 49460.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=4947 data=0x1002000100000001 strb=0x3f last=0
+ 49480.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=4949 data=0x1002000100000002 strb=0xde last=0
+ 49500.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=3 cycle=4951 data=0x1002000100000003 strb=0x51 last=0
+ 49520.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=4 cycle=4953 data=0x1002000100000004 strb=0xac last=0
+ 49540.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=4955 data=0x1002000100000005 strb=0x59 last=1
+ 49650.00ns INFO     cocotb.axi_fabric_a                random start seq=19 write M2 ID2 S0 LEN8
+ 49670.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=4968 data=0x1002000200000000 strb=0x81 last=0
+ 49690.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=4970 data=0x1002000200000001 strb=0xb2 last=0
+ 49710.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=4972 data=0x1002000200000002 strb=0x3 last=0
+ 49730.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=3 cycle=4974 data=0x1002000200000003 strb=0x1 last=0
+ 49750.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=4 cycle=4976 data=0x1002000200000004 strb=0x18 last=0
+ 49770.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=4978 data=0x1002000200000005 strb=0xe9 last=0
+ 49790.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=6 cycle=4980 data=0x1002000200000006 strb=0xf1 last=0
+ 49810.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=7 cycle=4982 data=0x1002000200000007 strb=0x92 last=0
+ 49830.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=8 cycle=4984 data=0x1002000200000008 strb=0xaf last=1
+ 49950.00ns INFO     cocotb.axi_fabric_a                random start seq=23 read M2 ID11 S1 LEN1
+ 49970.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID11 cycle=4998 addr=0x10000600 len=1
+ 49970.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID11 cycle=4998
+ 49970.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID11 cycle=4998
+ 50050.00ns INFO     cocotb.axi_fabric_a                random start seq=27 read M2 ID6 S0 LEN11
+ 50070.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=5008 addr=0x700 len=11
+ 50070.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID6 cycle=5008
+ 50070.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID6 cycle=5008
+ 50700.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:677: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          monitor.kill()
+ 50700.00ns INFO     cocotb.axi_fabric_a                Gate-3 random v2 PASS seed=0xa3f30001 random_ops=29
+ 50700.00ns INFO     cocotb.regression                  test_axi_fabric_a_random_v2.fabric_a_random_v2 passed
+ 50700.00ns INFO     cocotb.regression                  ********************************************************************************************************
+                                                        ** TEST                                            STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************************
+                                                        ** test_axi_fabric_a_random_v2.fabric_a_random_v2   PASS       50700.00           0.16     314693.84  **
+                                                        ********************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                50700.00           0.17     307203.99  **
+                                                        ********************************************************************************************************
+- :0: Verilog $finish

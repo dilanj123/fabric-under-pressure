@@ -466,9 +466,9 @@ Use this as the execution/gate checklist. A checked item means the required evid
 # S. Gate 3 — deep Architecture A verification
 
 - [x] all-channel random backpressure passes. (`results/processed/gate3_random/summary.md`; fixed-seed AW/AR/W/B/R pause schedules.)
-- [x] random legal IDs/bursts/QOS/targets pass. (`results/processed/gate3_random/summary.md`; five replayable qualification plans.)
+- [ ] random legal IDs/bursts/QOS/targets pass. (Historical Task-1 matrix used deterministic coverage anchors; repaired concurrent random-body evidence pending in `results/processed/gate3_random_v2/`.)
 - [x] randomized response latency passes. (`results/processed/gate3_random/summary.md`; finite verification-only endpoint delays.)
-- [x] simultaneous channel stress passes. (`results/processed/gate3_random/summary.md`; overlapping manager/target pressure scenarios.)
+- [ ] simultaneous channel stress passes. (Historical pressure prologues retained; genuine random-body qualification pending.)
 - [ ] long seeded contention passes.
 - [ ] reset-with-traffic regression passes.
 - [ ] adversarial A fairness tests pass as specified.

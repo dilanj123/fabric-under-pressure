@@ -1,0 +1,8 @@
+Task-1B RDATA dependency experiments
+
+1. Exact saved-plan replay (--plan absolute saved JSON): deterministic failure at M1 ID6 S0 beat 5, same expected/observed values and same sequence 28.
+2. Manager-RREADY factor: failing operation has manager_r_stall=3. The boundary trace shows endpoint presentation of beat 5 while the helper's immediately sampled target_rready is stale high, followed by target_rready=0 after the clock edge. The helper then clears target_rvalid even though target handshake did not occur. A variant removing manager R stalls changes the first failure to an earlier helper-induced R payload mismatch, so the failure mechanism is tied to response backpressure handling, not reference-memory overlap.
+3. Target response gap: no independent target response-gap scheduler exists in v2; the only gaps are helper response-delay/READY interactions. Therefore no valid production R-gap conclusion can be drawn from this run.
+4. Competing target for M1: the v2 target lock serializes helpers per S0-S2, and each manager worker executes one helper at a time. No second M1 target response is concurrently driven by the v2 body.
+5. Other manager on S0: other managers can run concurrently, but target locks prevent same-target helper overlap. This is a possible packed-signal scheduling stressor, not the first observed boundary divergence.
+6. Address overlap: the failing S0 read byte range has zero overlapping writes in the saved plan; see address_overlap.txt. Memory collision semantics are not involved in this reproducer.

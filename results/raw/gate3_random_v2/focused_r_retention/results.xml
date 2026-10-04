@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1790812255" />
+    <testcase name="endpoint_rvalid_retention" classname="test_axi_fabric_a_concurrent_endpoint" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_concurrent_endpoint.py" lineno="20" time="0.01920008659362793" sim_time_ns="150.0" ratio_time="7812.464765121506" />
+  </testsuite>
+</testsuites>

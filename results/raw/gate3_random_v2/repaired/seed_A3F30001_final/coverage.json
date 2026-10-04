@@ -1,0 +1,75 @@
+{
+  "seed": 2750611457,
+  "random_operations": 512,
+  "accepted_reads": [
+    82,
+    93,
+    85
+  ],
+  "accepted_writes": [
+    85,
+    86,
+    81
+  ],
+  "targets": [
+    204,
+    150,
+    107,
+    51
+  ],
+  "lengths": [
+    41,
+    26,
+    29,
+    28,
+    27,
+    34,
+    33,
+    36,
+    40,
+    28,
+    26,
+    34,
+    28,
+    37,
+    36,
+    29
+  ],
+  "qos": [
+    32,
+    30,
+    40,
+    24,
+    30,
+    38,
+    28,
+    31,
+    33,
+    26,
+    37,
+    33,
+    35,
+    29,
+    38,
+    28
+  ],
+  "aw_w_styles": {
+    "ar_then_r": 260,
+    "aw_before_w": 92,
+    "near_cycle": 83,
+    "w_before_aw": 77
+  },
+  "target_aw_stalls": 0,
+  "target_ar_stalls": 0,
+  "target_w_stalls": 0,
+  "manager_b_stalls": 192,
+  "manager_r_stalls": 193,
+  "response_delays": 428,
+  "random_max_live_reads": 2,
+  "random_max_live_writes": 2,
+  "random_all_manager_active_cycles": 1270,
+  "random_same_target_contention": 0,
+  "random_same_id_cross_manager": 0,
+  "random_out_of_order_completions": 0,
+  "random_reset_with_live_work": 0
+}

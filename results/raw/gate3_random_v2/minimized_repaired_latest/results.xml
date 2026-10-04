@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1790811037" />
+    <testcase name="fabric_a_random_v2" classname="test_axi_fabric_a_random_v2" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py" lineno="338" time="0.04554319381713867" sim_time_ns="5740.001" ratio_time="126034.22199696371">
+      <failure error_type="OracleViolation" error_msg="target W mismatch manager=1 beat=2 expected=(0x1001000b00000002,0x1a,0) observed=(0x1001000b00000001,0x96,0)" />
+    </testcase>
+  </testsuite>
+</testsuites>

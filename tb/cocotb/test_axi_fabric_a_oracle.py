@@ -5,11 +5,22 @@ from pathlib import Path
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge
+from cocotb.utils import get_sim_time
 
 from axi_reference_model import AxiReferenceModel, RESP_DECERR
 from axi_endpoint_model import EndpointMemory
 
 _ACTIVE_MODEL = None
+_LAST_MODEL_TIME = None
+_SHADOW_VALUES = {}
+
+
+def _gate3_trace(event):
+    path = os.environ.get("GATE3_BOUNDARY_TRACE")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(event) + "\n")
 
 
 def lane(value: int, width: int, index: int) -> int:
@@ -17,9 +28,18 @@ def lane(value: int, width: int, index: int) -> int:
 
 
 def set_lane(handle, width: int, index: int, value: int) -> None:
-    current = int(handle.value)
+    key = id(handle)
+    current = _SHADOW_VALUES.get(key, int(handle.value))
     mask = ((1 << width) - 1) << (width * index)
-    handle.value = (current & ~mask) | lane(value, width, index)
+    updated = (current & ~mask) | lane(value, width, index)
+    _SHADOW_VALUES[key] = updated
+    handle.value = updated
+
+
+def reset_shadow(*handles) -> None:
+    """Synchronize packed-lane shadows after a whole-bus assignment."""
+    for handle in handles:
+        _SHADOW_VALUES[id(handle)] = int(handle.value)
 
 
 def get_lane(handle, width: int, index: int) -> int:
@@ -27,10 +47,13 @@ def get_lane(handle, width: int, index: int) -> int:
 
 
 async def cycles(dut, count=1):
+    global _LAST_MODEL_TIME
     for _ in range(count):
         await RisingEdge(dut.ACLK)
-        if _ACTIVE_MODEL is not None:
+        now = get_sim_time(units="ns")
+        if _ACTIVE_MODEL is not None and now != _LAST_MODEL_TIME:
             _ACTIVE_MODEL.advance()
+            _LAST_MODEL_TIME = now
 
 
 def address_for(target: int, offset: int) -> int:
@@ -47,8 +70,9 @@ def endpoint_write(memory: EndpointMemory, addr: int, data: int, strobe: int) ->
 
 
 async def mapped_write(dut, model, memory, manager, ident, target, length, strobes,
-                      qos_value=0x3, response_delay=0, manager_b_stall=0):
-    addr = address_for(target, 0x080 + (ident * 8))
+                      qos_value=0x3, response_delay=0, manager_b_stall=0,
+                      addr_override=None):
+    addr = address_for(target, 0x080 + (ident * 8)) if addr_override is None else addr_override
     cache, prot, qos, region = 0xA, 0x5, qos_value & 0xF, 0x9
     set_lane(dut.manager_awid, 4, manager, ident)
     set_lane(dut.manager_awaddr, 32, manager, addr)
@@ -167,9 +191,23 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
         set_lane(dut.target_rlast, 1, target, last)
         set_lane(dut.target_rvalid, 1, target, 1)
         set_lane(dut.manager_rready, 1, manager, int(manager_r_stall == 0))
+        _gate3_trace({"boundary": "endpoint_presentation", "cycle": model.cycle,
+                      "manager": manager, "id": ident, "target": target,
+                      "beat": beat, "addr": addr + beat * 8, "rid": (manager << 4) | ident,
+                      "data": data, "resp": 0, "last": last,
+                      "rvalid": 1, "rready": get_lane(dut.target_rready, 1, target)})
         while not get_lane(dut.target_rready, 1, target):
             await cycles(dut)
         await cycles(dut)
+        _gate3_trace({"boundary": "target_handshake", "cycle": model.cycle,
+                      "manager": manager, "id": ident, "target": target,
+                      "beat": beat, "addr": addr + beat * 8,
+                      "rid": get_lane(dut.target_rid, 6, target),
+                      "data": get_lane(dut.target_rdata, 64, target),
+                      "resp": get_lane(dut.target_rresp, 2, target),
+                      "last": get_lane(dut.target_rlast, 1, target),
+                      "rvalid": get_lane(dut.target_rvalid, 1, target),
+                      "rready": get_lane(dut.target_rready, 1, target)})
         set_lane(dut.target_rvalid, 1, target, 0)
         while not get_lane(dut.manager_rvalid, 1, manager):
             await cycles(dut)
@@ -183,8 +221,21 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
         obs_data = get_lane(dut.manager_rdata, 64, manager)
         obs_resp = get_lane(dut.manager_rresp, 2, manager)
         obs_last = get_lane(dut.manager_rlast, 1, manager)
+        _gate3_trace({"boundary": "manager_handshake", "cycle": model.cycle,
+                      "manager": manager, "id": ident, "target": target,
+                      "beat": beat, "addr": addr + beat * 8,
+                      "rid": obs_id, "data": obs_data, "resp": obs_resp,
+                      "last": obs_last, "rvalid": get_lane(dut.manager_rvalid, 1, manager),
+                      "rready": get_lane(dut.manager_rready, 1, manager)})
         if (obs_id, obs_data, obs_resp, obs_last) != (ident, data, 0, last):
-            raise AssertionError("manager R payload mismatch")
+            ref_data = None
+            if target in (0, 1):
+                ref_data = model.memories[target].read64(addr + beat * 8)
+            raise AssertionError(
+                f"manager R payload mismatch M{manager} ID{ident} S{target} "
+                f"beat={beat} expected=({ident:#x},{data:#x},0,{last}) "
+                f"observed=({obs_id:#x},{obs_data:#x},{obs_resp},{obs_last}) "
+                f"ref={ref_data!r}")
         model.observe_r(manager, ident, obs_data, obs_resp, obs_last,
                         addr + beat * 8 if target in (0, 1) else None)
         await cycles(dut)

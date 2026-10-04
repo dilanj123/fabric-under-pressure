@@ -1,7 +1,7 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
     <property name="random_seed" value="2697068545" />
-    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="266" time="0.050332069396972656" sim_time_ns="10950.0" ratio_time="217555.13197036588" />
-    <testcase name="fabric_a_oracle_closure_matrix" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="610" time="0.02753305435180664" sim_time_ns="2580.0" ratio_time="93705.54995583727" />
+    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="358" time="0.06713294982910156" sim_time_ns="10950.0" ratio_time="163109.17407733612" />
+    <testcase name="fabric_a_oracle_closure_matrix" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="716" time="0.029632091522216797" sim_time_ns="2580.0" ratio_time="87067.76563732038" />
   </testsuite>
 </testsuites>

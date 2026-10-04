@@ -1,0 +1,21 @@
+{
+  "method": "static-and-observed scheduler audit",
+  "manager_worker": "one coroutine per manager awaits each complete mapped/S3 operation before selecting the next operation",
+  "response_completion_is_required_before_next_issue": true,
+  "random_body_max_live_reads_by_seed": {
+    "A3F30001": 2,
+    "A3F30002": 2,
+    "A3F30003": 2,
+    "A3F30004": 2,
+    "A3F30005": 2
+  },
+  "random_body_max_live_writes_by_seed": {
+    "A3F30001": 2,
+    "A3F30002": 2,
+    "A3F30003": 2,
+    "A3F30004": 2,
+    "A3F30005": 2
+  },
+  "conclusion": "depth 4 is unreachable in the current execution path without splitting request issue from B/R completion; no seed or distribution change can repair this serial scheduler",
+  "production_rtl_changed": false
+}

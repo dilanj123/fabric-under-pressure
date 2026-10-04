@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/Dilan/Projects/fabric-under-pressure/results/raw/gate3_random_v2/seed_A3F30001/coverage.json'
+exit=1
+
+The simulator log for this exact replay is results/raw/gate3_random_v2/seed_A3F30001/run.log; the failure is deterministic and reports random sequence 28, M1/ID6/S0 beat 5.

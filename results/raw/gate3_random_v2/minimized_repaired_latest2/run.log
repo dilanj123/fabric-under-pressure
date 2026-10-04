@@ -1,0 +1,290 @@
+git_commit=09a9a7fd7a3440d9f18c261d108703cd9e647639
+architecture=A
+seed=0xA3F30001
+plan=/Users/Dilan/Projects/fabric-under-pressure/results/raw/gate3_rdata_investigation/minimized_plan.json
+configuration=24 anchors plus 512 genuinely random operations with bounded drain
+verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.002 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.001 s on 1 threads; allocated 3.219 MB
+make: Nothing to be done for `default'.
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 2750611457
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:8: DeprecationWarning: Join has been moved to `cocotb.task`.
+                                                          from cocotb.triggers import RisingEdge, Lock, Join, Timer
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_fabric_a_random_v2.fabric_a_random_v2 (1/1)
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:43: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          now = get_sim_time(units="ns")
+  2210.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:564: DeprecationWarning: Using `task` directly is preferred to `Join(task)` in all situations where the latter could be used.
+                                                          await Join(task)
+  2210.00ns INFO     cocotb.axi_fabric_a                random start seq=7 read M1 ID4 S1 LEN3
+  2290.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xbc97724d2803deb9 ready=1
+  2300.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xe4bf9a75502b06e1 ready=1
+  2320.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xce7c29d78532e09 ready=1
+  2340.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x340feac5a07b5631 ready=1
+  2360.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:310: DeprecationWarning: Using `task` directly is preferred to `Join(task)` in all situations where the latter could be used.
+                                                          await Join(endpoint)
+  4570.00ns INFO     cocotb.axi_fabric_a                random start seq=1 read M2 ID13 S1 LEN13
+  4630.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x3c17f2cda8835e39 ready=1
+  4640.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x1000000100000000 ready=1
+  4660.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x8c67421df8d3ae89 ready=1
+  4680.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xb48f6a4520fbd6b1 ready=1
+  4700.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xdcb7926d4823fed9 ready=1
+  4720.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x4dfba95704b2601 ready=1
+  4740.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x2c07e2bd98734e29 ready=1
+  4760.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x542f0ae5c09b7651 ready=1
+  4780.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x7c57320de8c39e79 ready=1
+  4800.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xa47f5a3510ebc6a1 ready=1
+  4820.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xcca7825d3813eec9 ready=1
+  4840.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x1002000b00000000 ready=1
+  4860.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x1cf7d2ad88633e19 ready=1
+  4880.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x441ffad5b08b6641 ready=1
+  5690.00ns INFO     cocotb.axi_fabric_a                random start seq=15 write M1 ID11 S1 LEN13
+  5710.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=0 cycle=572 data=0x1001000b00000000 strb=0xff last=0
+  5730.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=1 cycle=574 data=0x1001000b00000001 strb=0x96 last=0
+  5750.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=2 cycle=576 data=0x1001000b00000002 strb=0x1a last=0
+  5770.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=3 cycle=578 data=0x1001000b00000003 strb=0xb0 last=0
+  5790.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=4 cycle=580 data=0x1001000b00000004 strb=0xf8 last=0
+  5810.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=5 cycle=582 data=0x1001000b00000005 strb=0x5e last=0
+  5830.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=6 cycle=584 data=0x1001000b00000006 strb=0x8e last=0
+  5850.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=7 cycle=586 data=0x1001000b00000007 strb=0xdf last=0
+  5870.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=8 cycle=588 data=0x1001000b00000008 strb=0x48 last=0
+  5890.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=9 cycle=590 data=0x1001000b00000009 strb=0x4f last=0
+  5910.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=10 cycle=592 data=0x1001000b0000000a strb=0xc5 last=0
+  5930.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=11 cycle=594 data=0x1001000b0000000b strb=0x61 last=0
+  5950.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=12 cycle=596 data=0x1001000b0000000c strb=0xc1 last=0
+  5970.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=13 cycle=598 data=0x1001000b0000000d strb=0xdd last=1
+ 25650.00ns INFO     cocotb.axi_fabric_a                random start seq=2 read M2 ID15 S2 LEN0
+ 25710.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0xce7c29d78532e09 ready=1
+ 25720.00ns INFO     cocotb.axi_fabric_a                random start seq=3 write M2 ID9 S2 LEN6
+ 25740.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=2575 data=0x1002000900000000 strb=0x55 last=0
+ 25760.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=2577 data=0x1002000900000001 strb=0xce last=0
+ 25780.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=2 cycle=2579 data=0x1002000900000002 strb=0xab last=0
+ 25800.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=3 cycle=2581 data=0x1002000900000003 strb=0x17 last=0
+ 25820.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=4 cycle=2583 data=0x1002000900000004 strb=0x99 last=0
+ 25840.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=2585 data=0x1002000900000005 strb=0xa9 last=0
+ 25860.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=6 cycle=2587 data=0x1002000900000006 strb=0x8f last=1
+ 25940.00ns INFO     cocotb.axi_fabric_a                random start seq=6 write M2 ID0 S2 LEN9
+ 25960.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=2597 data=0x1002000000000000 strb=0x0 last=0
+ 25980.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=2599 data=0x1002000000000001 strb=0x5c last=0
+ 26000.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=2 cycle=2601 data=0x1002000000000002 strb=0xe9 last=0
+ 26020.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=3 cycle=2603 data=0x1002000000000003 strb=0xda last=0
+ 26040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=4 cycle=2605 data=0x1002000000000004 strb=0x2 last=0
+ 26060.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=2607 data=0x1002000000000005 strb=0xb6 last=0
+ 26080.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=6 cycle=2609 data=0x1002000000000006 strb=0xcb last=0
+ 26100.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=7 cycle=2611 data=0x1002000000000007 strb=0xb last=0
+ 26120.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=8 cycle=2613 data=0x1002000000000008 strb=0x27 last=0
+ 26140.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=9 cycle=2615 data=0x1002000000000009 strb=0x9e last=1
+ 31200.00ns INFO     cocotb.axi_fabric_a                random start seq=16 read M1 ID14 S0 LEN13
+ 31290.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xac87623d18f3cea9 ready=1
+ 31300.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xd4af8a65401bf6d1 ready=1
+ 31310.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xfcd7b28d68431ef9 ready=1
+ 31320.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x24ffdab5906b4621 ready=1
+ 31330.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x4c2702ddb8936e49 ready=1
+ 31340.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x744f2a05e0bb9671 ready=1
+ 31350.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x9c77522d08e3be99 ready=1
+ 31360.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xc49f7a55300be6c1 ready=1
+ 31370.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xecc7a27d58330ee9 ready=1
+ 31380.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x14efcaa5805b3611 ready=1
+ 31390.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x3c17f2cda8835e39 ready=1
+ 31400.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x643f1af5d0ab8661 ready=1
+ 31410.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x8c67421df8d3ae89 ready=1
+ 31420.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xb48f6a4520fbd6b1 ready=1
+ 31430.00ns INFO     cocotb.axi_fabric_a                random start seq=17 read M1 ID11 S1 LEN5
+ 31490.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x3c17f2cda8835e39 ready=1
+ 31500.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x643f1af5d0ab8661 ready=1
+ 31530.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x8c67421df8d3ae89 ready=1
+ 31560.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xb48f6a4520fbd6b1 ready=1
+ 31590.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xdcb7926d4823fed9 ready=1
+ 31620.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x4dfba95704b2601 ready=1
+ 31650.00ns INFO     cocotb.axi_fabric_a                random start seq=18 read M1 ID4 S3 LEN15
+ 31870.00ns INFO     cocotb.axi_fabric_a                random start seq=24 read M1 ID8 S2 LEN5
+ 31910.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0x8c67421df8d3ae89 ready=1
+ 31920.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0xb48f6a4520fbd6b1 ready=1
+ 31940.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0xdcb7926d4823fed9 ready=1
+ 31960.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0x4dfba95704b2601 ready=1
+ 31980.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0x2c07e2bd98734e29 ready=1
+ 32000.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0x542f0ae5c09b7651 ready=1
+ 32020.00ns INFO     cocotb.axi_fabric_a                random start seq=25 read M1 ID13 S1 LEN15
+ 32110.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x3c17f2cda8835e39 ready=1
+ 32120.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x643f1af5d0ab8661 ready=1
+ 32140.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x8c67421df8d3ae89 ready=1
+ 32160.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xb48f6a4520fbd6b1 ready=1
+ 32180.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xdcb7926d4823fed9 ready=1
+ 32200.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x4dfba95704b2601 ready=1
+ 32220.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x2c07e2bd98734e29 ready=1
+ 32240.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x542f0ae5c09b7651 ready=1
+ 32260.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x7c57320de8c39e79 ready=1
+ 32280.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xa47f5a3510ebc6a1 ready=1
+ 32300.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xcca7825d3813eec9 ready=1
+ 32320.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xf4cfaa85603b16f1 ready=1
+ 32340.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x1cf7d2ad88633e19 ready=1
+ 32360.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x441ffad5b08b6641 ready=1
+ 32380.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x6c4722fdd8b38e69 ready=1
+ 32400.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x946f4a2500dbb691 ready=1
+ 41230.00ns INFO     cocotb.axi_fabric_a                random start seq=0 write M0 ID1 S1 LEN5
+ 41250.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=0 cycle=4126 data=0x1000000100000000 strb=0xff last=0
+ 41270.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=1 cycle=4128 data=0x1000000100000001 strb=0xeb last=0
+ 41290.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=2 cycle=4130 data=0x1000000100000002 strb=0x4f last=0
+ 41310.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=3 cycle=4132 data=0x1000000100000003 strb=0xf8 last=0
+ 41330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=4134 data=0x1000000100000004 strb=0x81 last=0
+ 41350.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=5 cycle=4136 data=0x1000000100000005 strb=0xdc last=1
+ 41480.00ns INFO     cocotb.axi_fabric_a                random start seq=4 read M0 ID0 S0 LEN6
+ 41570.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xac87623d18f3cea9 ready=1
+ 41580.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xd4af8a65401bf6d1 ready=1
+ 41610.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xfcd7b28d68431ef9 ready=1
+ 41640.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x24ffdab5906b4621 ready=1
+ 41670.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x4c2702ddb8936e49 ready=1
+ 41700.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x744f2a05e0bb9671 ready=1
+ 41730.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x9c77522d08e3be99 ready=1
+ 41760.00ns INFO     cocotb.axi_fabric_a                random start seq=5 write M0 ID1 S2 LEN13
+ 41780.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=4179 data=0x1000000100000000 strb=0xff last=0
+ 41800.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=1 cycle=4181 data=0x1000000100000001 strb=0x4f last=0
+ 41820.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=2 cycle=4183 data=0x1000000100000002 strb=0x13 last=0
+ 41840.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=3 cycle=4185 data=0x1000000100000003 strb=0x56 last=0
+ 41860.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=4 cycle=4187 data=0x1000000100000004 strb=0x73 last=0
+ 41880.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=5 cycle=4189 data=0x1000000100000005 strb=0x60 last=0
+ 41900.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=6 cycle=4191 data=0x1000000100000006 strb=0x33 last=0
+ 41920.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=7 cycle=4193 data=0x1000000100000007 strb=0x64 last=0
+ 41940.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=8 cycle=4195 data=0x1000000100000008 strb=0x5b last=0
+ 41960.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=9 cycle=4197 data=0x1000000100000009 strb=0x4c last=0
+ 41980.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=10 cycle=4199 data=0x100000010000000a strb=0xe5 last=0
+ 42000.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=11 cycle=4201 data=0x100000010000000b strb=0x12 last=0
+ 42020.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=12 cycle=4203 data=0x100000010000000c strb=0xa9 last=0
+ 42040.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=13 cycle=4205 data=0x100000010000000d strb=0x2c last=1
+ 42110.00ns INFO     cocotb.axi_fabric_a                random start seq=11 read M0 ID4 S3 LEN13
+ 42310.00ns INFO     cocotb.axi_fabric_a                random start seq=12 write M0 ID3 S1 LEN8
+ 42330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=0 cycle=4234 data=0x1000000300000000 strb=0xaa last=0
+ 42350.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=1 cycle=4236 data=0x1000000300000001 strb=0x79 last=0
+ 42370.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=2 cycle=4238 data=0x1000000300000002 strb=0x16 last=0
+ 42390.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=3 cycle=4240 data=0x1000000300000003 strb=0x13 last=0
+ 42410.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=4242 data=0x1000000300000004 strb=0x1a last=0
+ 42430.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=5 cycle=4244 data=0x1000000300000005 strb=0xe4 last=0
+ 42450.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=6 cycle=4246 data=0x1000000300000006 strb=0x93 last=0
+ 42470.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=7 cycle=4248 data=0x1000000300000007 strb=0x74 last=0
+ 42490.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=8 cycle=4250 data=0x1000000300000008 strb=0x6c last=1
+ 42600.00ns INFO     cocotb.axi_fabric_a                random start seq=13 write M0 ID15 S0 LEN2
+ 42620.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=4263 data=0x1000000f00000000 strb=0x55 last=0
+ 42640.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=1 cycle=4265 data=0x1000000f00000001 strb=0x5 last=0
+ 42660.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=2 cycle=4267 data=0x1000000f00000002 strb=0x8b last=1
+ 42770.00ns INFO     cocotb.axi_fabric_a                random start seq=20 read M0 ID4 S2 LEN1
+ 42860.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0x8c67421df8d3ae89 ready=1
+ 42870.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S2 beat_data=0xb48f6a4520fbd6b1 ready=1
+ 42900.00ns INFO     cocotb.axi_fabric_a                random start seq=21 read M0 ID0 S1 LEN7
+ 42980.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x3c17f2cda8835e39 ready=1
+ 42990.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x643f1af5d0ab8661 ready=1
+ 43000.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x8c67421df8d3ae89 ready=1
+ 43010.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xb48f6a4520fbd6b1 ready=1
+ 43020.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xdcb7926d4823fed9 ready=1
+ 43030.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x4dfba95704b2601 ready=1
+ 43040.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x2c07e2bd98734e29 ready=1
+ 43050.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0x542f0ae5c09b7651 ready=1
+ 43060.00ns INFO     cocotb.axi_fabric_a                random start seq=22 write M0 ID10 S0 LEN1
+ 43080.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=4309 data=0x1000000a00000000 strb=0xaa last=0
+ 43100.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=1 cycle=4311 data=0x1000000a00000001 strb=0x65 last=1
+ 43190.00ns INFO     cocotb.axi_fabric_a                random start seq=26 write M0 ID14 S2 LEN11
+ 43210.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=4322 data=0x1000000e00000000 strb=0x0 last=0
+ 43230.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=1 cycle=4324 data=0x1000000e00000001 strb=0xb0 last=0
+ 43250.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=2 cycle=4326 data=0x1000000e00000002 strb=0xe9 last=0
+ 43270.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=3 cycle=4328 data=0x1000000e00000003 strb=0x53 last=0
+ 43290.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=4 cycle=4330 data=0x1000000e00000004 strb=0xcf last=0
+ 43310.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=5 cycle=4332 data=0x1000000e00000005 strb=0xfa last=0
+ 43330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=6 cycle=4334 data=0x1000000e00000006 strb=0x63 last=0
+ 43350.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=7 cycle=4336 data=0x1000000e00000007 strb=0xa8 last=0
+ 43370.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=8 cycle=4338 data=0x1000000e00000008 strb=0x38 last=0
+ 43390.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=9 cycle=4340 data=0x1000000e00000009 strb=0x7d last=0
+ 43410.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=10 cycle=4342 data=0x1000000e0000000a strb=0x96 last=0
+ 43430.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=11 cycle=4344 data=0x1000000e0000000b strb=0x65 last=1
+ 43960.00ns INFO     cocotb.axi_fabric_a                random start seq=28 read M1 ID6 S0 LEN8
+ 44010.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xac87623d18f3cea9 ready=1
+ 44020.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xd4af8a65401bf6d1 ready=1
+ 44060.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xfcd7b28d68431ef9 ready=1
+ 44100.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x24ffdab5906b4621 ready=1
+ 44140.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x4c2702ddb8936e49 ready=1
+ 44180.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x744f2a05e0bb9671 ready=1
+ 44220.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x9c77522d08e3be99 ready=1
+ 44260.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xc49f7a55300be6c1 ready=1
+ 44300.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xecc7a27d58330ee9 ready=1
+ 48550.00ns INFO     cocotb.axi_fabric_a                random start seq=8 write M2 ID11 S1 LEN12
+ 48570.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=4858 data=0x1002000b00000000 strb=0x55 last=0
+ 48590.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=4860 data=0x1002000b00000001 strb=0x46 last=0
+ 48610.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=4862 data=0x1002000b00000002 strb=0x34 last=0
+ 48630.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=3 cycle=4864 data=0x1002000b00000003 strb=0xbc last=0
+ 48650.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=4 cycle=4866 data=0x1002000b00000004 strb=0xdd last=0
+ 48670.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=5 cycle=4868 data=0x1002000b00000005 strb=0x8c last=0
+ 48690.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=6 cycle=4870 data=0x1002000b00000006 strb=0xf0 last=0
+ 48710.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=7 cycle=4872 data=0x1002000b00000007 strb=0x2 last=0
+ 48730.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=8 cycle=4874 data=0x1002000b00000008 strb=0x15 last=0
+ 48750.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=9 cycle=4876 data=0x1002000b00000009 strb=0xf5 last=0
+ 48770.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=10 cycle=4878 data=0x1002000b0000000a strb=0x19 last=0
+ 48790.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=11 cycle=4880 data=0x1002000b0000000b strb=0xc7 last=0
+ 48810.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=12 cycle=4882 data=0x1002000b0000000c strb=0x2e last=1
+ 48900.00ns INFO     cocotb.axi_fabric_a                random start seq=9 write M2 ID5 S1 LEN15
+ 48920.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=4893 data=0x1002000500000000 strb=0x81 last=0
+ 48940.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=4895 data=0x1002000500000001 strb=0xe2 last=0
+ 48960.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=4897 data=0x1002000500000002 strb=0x29 last=0
+ 48980.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=3 cycle=4899 data=0x1002000500000003 strb=0xf7 last=0
+ 49000.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=4 cycle=4901 data=0x1002000500000004 strb=0x8e last=0
+ 49020.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=5 cycle=4903 data=0x1002000500000005 strb=0x75 last=0
+ 49040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=6 cycle=4905 data=0x1002000500000006 strb=0xd9 last=0
+ 49060.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=7 cycle=4907 data=0x1002000500000007 strb=0xfd last=0
+ 49080.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=8 cycle=4909 data=0x1002000500000008 strb=0xfc last=0
+ 49100.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=9 cycle=4911 data=0x1002000500000009 strb=0xd1 last=0
+ 49120.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=10 cycle=4913 data=0x100200050000000a strb=0xbb last=0
+ 49140.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=11 cycle=4915 data=0x100200050000000b strb=0xf2 last=0
+ 49160.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=12 cycle=4917 data=0x100200050000000c strb=0x71 last=0
+ 49180.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=13 cycle=4919 data=0x100200050000000d strb=0xe9 last=0
+ 49200.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=14 cycle=4921 data=0x100200050000000e strb=0x57 last=0
+ 49220.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=15 cycle=4923 data=0x100200050000000f strb=0xfe last=1
+ 49320.00ns INFO     cocotb.axi_fabric_a                random start seq=10 write M2 ID9 S2 LEN1
+ 49340.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=4935 data=0x1002000900000000 strb=0xff last=0
+ 49360.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=4937 data=0x1002000900000001 strb=0xa5 last=1
+ 49420.00ns INFO     cocotb.axi_fabric_a                random start seq=14 write M2 ID1 S0 LEN5
+ 49440.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=4945 data=0x1002000100000000 strb=0x81 last=0
+ 49460.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=4947 data=0x1002000100000001 strb=0x3f last=0
+ 49480.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=4949 data=0x1002000100000002 strb=0xde last=0
+ 49500.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=3 cycle=4951 data=0x1002000100000003 strb=0x51 last=0
+ 49520.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=4 cycle=4953 data=0x1002000100000004 strb=0xac last=0
+ 49540.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=4955 data=0x1002000100000005 strb=0x59 last=1
+ 49650.00ns INFO     cocotb.axi_fabric_a                random start seq=19 write M2 ID2 S0 LEN8
+ 49670.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=4968 data=0x1002000200000000 strb=0x81 last=0
+ 49690.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=4970 data=0x1002000200000001 strb=0xb2 last=0
+ 49710.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=4972 data=0x1002000200000002 strb=0x3 last=0
+ 49730.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=3 cycle=4974 data=0x1002000200000003 strb=0x1 last=0
+ 49750.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=4 cycle=4976 data=0x1002000200000004 strb=0x18 last=0
+ 49770.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=4978 data=0x1002000200000005 strb=0xe9 last=0
+ 49790.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=6 cycle=4980 data=0x1002000200000006 strb=0xf1 last=0
+ 49810.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=7 cycle=4982 data=0x1002000200000007 strb=0x92 last=0
+ 49830.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=8 cycle=4984 data=0x1002000200000008 strb=0xaf last=1
+ 49950.00ns INFO     cocotb.axi_fabric_a                random start seq=23 read M2 ID11 S1 LEN1
+ 50010.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xbc97724d2803deb9 ready=1
+ 50020.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S1 beat_data=0xe4bf9a75502b06e1 ready=1
+ 50030.00ns INFO     cocotb.axi_fabric_a                random start seq=27 read M2 ID6 S0 LEN11
+ 50080.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x6c4722fdd8b38e69 ready=1
+ 50090.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x946f4a2500dbb691 ready=1
+ 50130.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xbc97724d2803deb9 ready=1
+ 50170.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xe4bf9a75502b06e1 ready=1
+ 50210.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xce7c29d78532e09 ready=1
+ 50250.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x340feac5a07b5631 ready=1
+ 50290.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x5c3712edc8a37e59 ready=1
+ 50330.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x845f3a15f0cba681 ready=1
+ 50370.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xac87623d18f3cea9 ready=1
+ 50410.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xd4af8a65401bf6d1 ready=1
+ 50450.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0xfcd7b28d68431ef9 ready=1
+ 50490.00ns INFO     cocotb.axi_fabric_a                endpoint R fire S0 beat_data=0x24ffdab5906b4621 ready=1
+ 50530.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:565: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          monitor.kill()
+ 50530.00ns INFO     cocotb.axi_fabric_a                Gate-3 random v2 PASS seed=0xa3f30001 random_ops=29
+ 50530.00ns INFO     cocotb.regression                  test_axi_fabric_a_random_v2.fabric_a_random_v2 passed
+ 50530.00ns INFO     cocotb.regression                  ********************************************************************************************************
+                                                        ** TEST                                            STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************************
+                                                        ** test_axi_fabric_a_random_v2.fabric_a_random_v2   PASS       50530.00           0.16     310725.63  **
+                                                        ********************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                50530.00           0.17     304404.79  **
+                                                        ********************************************************************************************************
+- :0: Verilog $finish
