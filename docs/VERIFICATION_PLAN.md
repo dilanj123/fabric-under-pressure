@@ -1,10 +1,10 @@
 # Verification Plan
 
-**Status:** Gate-1 verification contract frozen; Gate-2 deterministic evidence and Gate-3 Task-1 randomized qualification evidence are recorded below. Gate 3 remains open for long seeded contention, adversarial fairness, targeted integrated formal review and coverage closure.
+**Status:** Gate-1 verification contract frozen; Gate-2 deterministic evidence is complete. The original Gate-3 Task-1 matrix is retained as historical/reclassified evidence while Task 1B repairs its random-body concurrency methodology. Gate 3 remains open.
 
 ### Gate-3 Task-1 randomized qualification
 
-Architecture-A qualification uses D040 pre-generated plans and the project-owned Python oracle. Fixed functional seeds are `0xA3F30001` through `0xA3F30005`; each plan contains 96 legal operations, independent finite pause/delay schedules, two coordinated reset points and a 10,000-cycle post-drain qualification interval. Plans and per-seed coverage are retained under `results/raw/gate3_random/`. These runs provide functional stress evidence only and do not provide latency, throughput, fairness, timing or PPA evidence.
+The historical matrix uses D040 pre-generated plans and the project-owned Python oracle. Fixed functional seeds are `0xA3F30001` through `0xA3F30005`; its 96-operation deterministic prefix consumed the intended random branch and its driver completed operations serially. Task 1B generates 24 explicit anchors plus 512 seeded random operations per plan, validates seed diversity before simulation and uses independent manager workers. The repaired v2 path observes finite target AW/AR/W pauses, separates request issue from B/R retirement, and reaches global live depth 12 (4/4 per manager) for both reads and writes across all five seeds. These runs provide functional stress evidence only and do not provide latency, throughput, fairness, timing or PPA evidence.
 
 ## Independent checking
 A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.

@@ -5,11 +5,22 @@ from pathlib import Path
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge
+from cocotb.utils import get_sim_time
 
 from axi_reference_model import AxiReferenceModel, RESP_DECERR
 from axi_endpoint_model import EndpointMemory
 
 _ACTIVE_MODEL = None
+_LAST_MODEL_TIME = None
+_SHADOW_VALUES = {}
+
+
+def _gate3_trace(event):
+    path = os.environ.get("GATE3_BOUNDARY_TRACE")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(event) + "\n")
 
 
 def lane(value: int, width: int, index: int) -> int:
@@ -17,9 +28,18 @@ def lane(value: int, width: int, index: int) -> int:
 
 
 def set_lane(handle, width: int, index: int, value: int) -> None:
-    current = int(handle.value)
+    key = id(handle)
+    current = _SHADOW_VALUES.get(key, int(handle.value))
     mask = ((1 << width) - 1) << (width * index)
-    handle.value = (current & ~mask) | lane(value, width, index)
+    updated = (current & ~mask) | lane(value, width, index)
+    _SHADOW_VALUES[key] = updated
+    handle.value = updated
+
+
+def reset_shadow(*handles) -> None:
+    """Synchronize packed-lane shadows after a whole-bus assignment."""
+    for handle in handles:
+        _SHADOW_VALUES[id(handle)] = int(handle.value)
 
 
 def get_lane(handle, width: int, index: int) -> int:
@@ -27,10 +47,13 @@ def get_lane(handle, width: int, index: int) -> int:
 
 
 async def cycles(dut, count=1):
+    global _LAST_MODEL_TIME
     for _ in range(count):
         await RisingEdge(dut.ACLK)
-        if _ACTIVE_MODEL is not None:
+        now = get_sim_time(units="ns")
+        if _ACTIVE_MODEL is not None and now != _LAST_MODEL_TIME:
             _ACTIVE_MODEL.advance()
+            _LAST_MODEL_TIME = now
 
 
 def address_for(target: int, offset: int) -> int:
@@ -47,8 +70,9 @@ def endpoint_write(memory: EndpointMemory, addr: int, data: int, strobe: int) ->
 
 
 async def mapped_write(dut, model, memory, manager, ident, target, length, strobes,
-                      qos_value=0x3, response_delay=0, manager_b_stall=0):
-    addr = address_for(target, 0x080 + (ident * 8))
+                      qos_value=0x3, response_delay=0, manager_b_stall=0,
+                      addr_override=None):
+    addr = address_for(target, 0x080 + (ident * 8)) if addr_override is None else addr_override
     cache, prot, qos, region = 0xA, 0x5, qos_value & 0xF, 0x9
     set_lane(dut.manager_awid, 4, manager, ident)
     set_lane(dut.manager_awaddr, 32, manager, addr)
@@ -167,9 +191,23 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
         set_lane(dut.target_rlast, 1, target, last)
         set_lane(dut.target_rvalid, 1, target, 1)
         set_lane(dut.manager_rready, 1, manager, int(manager_r_stall == 0))
+        _gate3_trace({"boundary": "endpoint_presentation", "cycle": model.cycle,
+                      "manager": manager, "id": ident, "target": target,
+                      "beat": beat, "addr": addr + beat * 8, "rid": (manager << 4) | ident,
+                      "data": data, "resp": 0, "last": last,
+                      "rvalid": 1, "rready": get_lane(dut.target_rready, 1, target)})
         while not get_lane(dut.target_rready, 1, target):
             await cycles(dut)
         await cycles(dut)
+        _gate3_trace({"boundary": "target_handshake", "cycle": model.cycle,
+                      "manager": manager, "id": ident, "target": target,
+                      "beat": beat, "addr": addr + beat * 8,
+                      "rid": get_lane(dut.target_rid, 6, target),
+                      "data": get_lane(dut.target_rdata, 64, target),
+                      "resp": get_lane(dut.target_rresp, 2, target),
+                      "last": get_lane(dut.target_rlast, 1, target),
+                      "rvalid": get_lane(dut.target_rvalid, 1, target),
+                      "rready": get_lane(dut.target_rready, 1, target)})
         set_lane(dut.target_rvalid, 1, target, 0)
         while not get_lane(dut.manager_rvalid, 1, manager):
             await cycles(dut)
@@ -183,8 +221,21 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
         obs_data = get_lane(dut.manager_rdata, 64, manager)
         obs_resp = get_lane(dut.manager_rresp, 2, manager)
         obs_last = get_lane(dut.manager_rlast, 1, manager)
+        _gate3_trace({"boundary": "manager_handshake", "cycle": model.cycle,
+                      "manager": manager, "id": ident, "target": target,
+                      "beat": beat, "addr": addr + beat * 8,
+                      "rid": obs_id, "data": obs_data, "resp": obs_resp,
+                      "last": obs_last, "rvalid": get_lane(dut.manager_rvalid, 1, manager),
+                      "rready": get_lane(dut.manager_rready, 1, manager)})
         if (obs_id, obs_data, obs_resp, obs_last) != (ident, data, 0, last):
-            raise AssertionError("manager R payload mismatch")
+            ref_data = None
+            if target in (0, 1):
+                ref_data = model.memories[target].read64(addr + beat * 8)
+            raise AssertionError(
+                f"manager R payload mismatch M{manager} ID{ident} S{target} "
+                f"beat={beat} expected=({ident:#x},{data:#x},0,{last}) "
+                f"observed=({obs_id:#x},{obs_data:#x},{obs_resp},{obs_last}) "
+                f"ref={ref_data!r}")
         model.observe_r(manager, ident, obs_data, obs_resp, obs_last,
                         addr + beat * 8 if target in (0, 1) else None)
         await cycles(dut)
@@ -446,10 +497,15 @@ def _set_aw(dut, manager, ident, target, length):
 
 
 async def _admit_write_no_b(dut, model, manager, ident, target, length=0,
-                            target_aw_stall=0):
+                            target_aw_stall=0, addr_override=None, qos=3):
     if target_aw_stall:
         dut.target_awready.value = int(dut.target_awready.value) & ~(1 << target)
     addr, fields = _set_aw(dut, manager, ident, target, length)
+    if addr_override is not None:
+        addr = addr_override
+        set_lane(dut.manager_awaddr, 32, manager, addr)
+    set_lane(dut.manager_awqos, 4, manager, qos)
+    fields = (fields[0], fields[1], qos, fields[3])
     while not get_lane(dut.manager_awready, 1, manager):
         await cycles(dut)
     tx = model.admit_aw(manager, ident, addr, length, cache=fields[0], prot=fields[1],
@@ -483,13 +539,15 @@ async def _admit_write_no_b(dut, model, manager, ident, target, length=0,
 
 
 async def _write_data_only(dut, model, tx, manager, target, strobes,
-                           stall_target_beat=None):
+                           stall_target_beat=None, memory=None):
     for beat in range(tx.expected_beats):
         data = 0x5500000000000000 | (manager << 48) | (tx.key.ident << 32) | beat
         strobe = strobes[beat]
         last = int(beat == tx.expected_beats - 1)
-        if stall_target_beat == beat:
-            dut.target_wready.value = int(dut.target_wready.value) & ~(1 << target)
+        # The target W slot is registered.  Keep its READY lane low while the
+        # manager beat is admitted so a target handshake cannot occur before
+        # this coroutine has sampled and accounted for the slot.
+        set_lane(dut.target_wready, 1, target, 0)
         set_lane(dut.manager_wdata, 64, manager, data)
         set_lane(dut.manager_wstrb, 8, manager, strobe)
         set_lane(dut.manager_wlast, 1, manager, last)
@@ -508,7 +566,9 @@ async def _write_data_only(dut, model, tx, manager, target, strobes,
                 assert get_lane(dut.target_wstrb, 8, target) == strobe
                 assert get_lane(dut.target_wlast, 1, target) == last
                 await cycles(dut)
-            dut.target_wready.value = int(dut.target_wready.value) | (1 << target)
+            set_lane(dut.target_wready, 1, target, 1)
+        else:
+            set_lane(dut.target_wready, 1, target, 1)
         while not (get_lane(dut.target_wvalid, 1, target) and
                    get_lane(dut.target_wready, 1, target)):
             await cycles(dut)
@@ -516,16 +576,18 @@ async def _write_data_only(dut, model, tx, manager, target, strobes,
         obs_strobe = get_lane(dut.target_wstrb, 8, target)
         obs_last = get_lane(dut.target_wlast, 1, target)
         model.observe_target_w(manager, target, obs_data, obs_strobe, obs_last)
+        if memory is not None and target in memory:
+            memory[target].write64(tx.addr + 8 * beat, obs_data, obs_strobe)
         await cycles(dut)
     return tx
 
 
 async def _admit_read_no_response(dut, model, manager, ident, target, length=0,
-                                  target_ar_stall=0):
+                                  target_ar_stall=0, addr_override=None, qos=7):
     if target_ar_stall:
         dut.target_arready.value = int(dut.target_arready.value) & ~(1 << target)
-    addr = address_for(target, 0x980 + ident * 8)
-    cache, prot, qos, region = 0x6, 0x2, 0x7, 0x4
+    addr = address_for(target, 0x980 + ident * 8) if addr_override is None else addr_override
+    cache, prot, region = 0x6, 0x2, 0x4
     set_lane(dut.manager_arid, 4, manager, ident)
     set_lane(dut.manager_araddr, 32, manager, addr)
     set_lane(dut.manager_arlen, 8, manager, length)
@@ -586,6 +648,12 @@ async def _return_b(dut, model, manager, ident, target, ready=True):
     set_lane(dut.target_bvalid, 1, target, 0)
     while not get_lane(dut.manager_bvalid, 1, manager):
         await cycles(dut)
+    if get_lane(dut.manager_bid, 4, manager) != ident:
+        # Another live B may win the response arbiter first.  Keep READY
+        # asserted and wait for the public BID belonging to this live ID.
+        while (not get_lane(dut.manager_bvalid, 1, manager) or
+               get_lane(dut.manager_bid, 4, manager) != ident):
+            await cycles(dut)
     if not ready:
         for _ in range(3):
             assert get_lane(dut.manager_bvalid, 1, manager)
@@ -599,11 +667,14 @@ async def _return_b(dut, model, manager, ident, target, ready=True):
 
 
 async def _return_r(dut, model, manager, ident, target, length=0,
-                    ready=True, source_check=True):
+                    ready=True, source_check=True, data_override=None):
     set_lane(dut.manager_rready, 1, manager, int(ready))
     for beat in range(length + 1):
         last = int(beat == length)
-        data = 0 if target == 3 else 0x9000000000000000 | (target << 40) | (ident << 8) | beat
+        if data_override is not None:
+            data = data_override[beat]
+        else:
+            data = 0 if target == 3 else 0x9000000000000000 | (target << 40) | (ident << 8) | beat
         set_lane(dut.target_rid, 6, target, (manager << 4) | ident)
         set_lane(dut.target_rdata, 64, target, data)
         set_lane(dut.target_rresp, 2, target, 0 if target != 3 else RESP_DECERR)
@@ -631,6 +702,12 @@ async def _return_r(dut, model, manager, ident, target, length=0,
             await cycles(dut)
             ready = True
         obs_id = get_lane(dut.manager_rid, 4, manager)
+        # Responses may be selected out of issue order.  Only the live
+        # transaction whose public ID is visible may retire this response;
+        # leave a different held response for its matching driver.
+        if obs_id != ident:
+            await cycles(dut)
+            continue
         obs_data = get_lane(dut.manager_rdata, 64, manager)
         obs_resp = get_lane(dut.manager_rresp, 2, manager)
         obs_last = get_lane(dut.manager_rlast, 1, manager)

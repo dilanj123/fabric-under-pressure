@@ -225,7 +225,8 @@ class AxiReferenceModel:
         return tx
 
     def observe_r(self, manager: int, ident: int, data: int, resp: int,
-                  last: int, addr: Optional[int] = None) -> Transaction:
+                  last: int, addr: Optional[int] = None,
+                  expected_data: Optional[int] = None) -> Transaction:
         matches = [tx for tx in self.transactions.values()
                    if tx.key.direction == "ar" and tx.key.manager == manager
                    and tx.key.ident == ident and not tx.completed]
@@ -243,7 +244,10 @@ class AxiReferenceModel:
             raise OracleViolation(f"bad RRESP expected={expected_resp} observed={resp}")
         if tx.target == 3 and data != 0:
             raise OracleViolation("S3 returned non-zero RDATA")
-        if tx.target in self.memories and addr is not None and data != self.memories[tx.target].read64(addr):
+        expected_rdata = expected_data
+        if expected_rdata is None and tx.target in self.memories and addr is not None:
+            expected_rdata = self.memories[tx.target].read64(addr)
+        if expected_rdata is not None and data != expected_rdata:
             raise OracleViolation(f"bad RDATA manager={manager} id={ident} beat={beat}")
         tx.r_beats += 1
         if expected_last:

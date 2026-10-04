@@ -1,0 +1,19 @@
+{
+  "implementation_commit": "121d903297ea3d1fc31974bcab0855ea655cba0f",
+  "evidence_record_parent": "8aa84d2",
+  "random_operations_per_seed": 512,
+  "seeds": {
+    "A3F30001": {"exit": 0, "reads": 12, "writes": 12, "per_manager_reads": [4, 4, 4], "per_manager_writes": [4, 4, 4], "target_aw_ar_w_stalls": [218, 219, 39], "manager_b_r_stalls": [183, 184]},
+    "A3F30002": {"exit": 0, "reads": 12, "writes": 12, "per_manager_reads": [4, 4, 4], "per_manager_writes": [4, 4, 4], "target_aw_ar_w_stalls": [204, 237, 35], "manager_b_r_stalls": [169, 193]},
+    "A3F30003": {"exit": 0, "reads": 12, "writes": 12, "per_manager_reads": [4, 4, 4], "per_manager_writes": [4, 4, 4], "target_aw_ar_w_stalls": [209, 225, 37], "manager_b_r_stalls": [174, 186]},
+    "A3F30004": {"exit": 0, "reads": 12, "writes": 12, "per_manager_reads": [4, 4, 4], "per_manager_writes": [4, 4, 4], "target_aw_ar_w_stalls": [239, 211, 41], "manager_b_r_stalls": [196, 174]},
+    "A3F30005": {"exit": 0, "reads": 12, "writes": 12, "per_manager_reads": [4, 4, 4], "per_manager_writes": [4, 4, 4], "target_aw_ar_w_stalls": [221, 211, 34], "manager_b_r_stalls": [194, 179]}
+  },
+  "scheduler_checks_exit": 0,
+  "random_matrix_exit": 0,
+  "replay_exit": 0,
+  "gate2_closure_exit": 0,
+  "production_rtl_changed": false,
+  "raw_log_whitespace_edits": false,
+  "scope": "Task-1B only"
+}
