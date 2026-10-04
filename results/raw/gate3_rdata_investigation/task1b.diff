@@ -1,0 +1,236 @@
+diff --git a/04_MASTER_CHECKLIST.md b/04_MASTER_CHECKLIST.md
+index 6596ef0..5105fd6 100644
+--- a/04_MASTER_CHECKLIST.md
++++ b/04_MASTER_CHECKLIST.md
+@@ -466,9 +466,9 @@ Use this as the execution/gate checklist. A checked item means the required evid
+ # S. Gate 3 — deep Architecture A verification
+ 
+ - [x] all-channel random backpressure passes. (`results/processed/gate3_random/summary.md`; fixed-seed AW/AR/W/B/R pause schedules.)
+-- [x] random legal IDs/bursts/QOS/targets pass. (`results/processed/gate3_random/summary.md`; five replayable qualification plans.)
++- [ ] random legal IDs/bursts/QOS/targets pass. (Historical Task-1 matrix used deterministic coverage anchors; repaired concurrent random-body evidence pending in `results/processed/gate3_random_v2/`.)
+ - [x] randomized response latency passes. (`results/processed/gate3_random/summary.md`; finite verification-only endpoint delays.)
+-- [x] simultaneous channel stress passes. (`results/processed/gate3_random/summary.md`; overlapping manager/target pressure scenarios.)
++- [ ] simultaneous channel stress passes. (Historical pressure prologues retained; genuine random-body qualification pending.)
+ - [ ] long seeded contention passes.
+ - [ ] reset-with-traffic regression passes.
+ - [ ] adversarial A fairness tests pass as specified.
+diff --git a/docs/EVIDENCE_INDEX.md b/docs/EVIDENCE_INDEX.md
+index 48cf878..9c41a6f 100644
+--- a/docs/EVIDENCE_INDEX.md
++++ b/docs/EVIDENCE_INDEX.md
+@@ -242,3 +242,11 @@ This closes the hand-written directed integration pass only. The independent Pyt
+ | G3-E003 | SIM | Random target/manager backpressure and finite response delays pass through the trusted oracle | `results/raw/gate3_random/aggregate_coverage.json`, `results/raw/gate3_random/seed_*/coverage.json` | PASS; AW/AR/W, B/R stalls and response delays are exercised |
+ | G3-E004 | SIM | Four-entry read/write pressure, same-visible-ID overlap, same-target contention and reset epochs are exercised | `results/raw/gate3_random/aggregate_coverage.json`, `results/raw/gate3_random/seed_*/events.jsonl` | PASS; bounded qualification coverage, not long-stress or fairness evidence |
+ | G3-E005 | REPRO | Exact saved plan replay is supported by the Gate-3 driver | `scripts/run_gate3_random.sh`, `tb/random/axi_random_plan.py` | PASS; `--seed` and `--plan` modes |
++
++## Gate-3 Task 1B randomized qualification repair
++
++| ID | Class | Claim | Evidence | Status |
++|---|---|---|---|---|
++| G3B-E001 | REPRO/UNIT | v2 separates 24 deterministic anchors from 512 seeded random operations, validates legal fields, same-seed identity and cross-seed diversity | `tb/random/test_axi_random_plan.py`, `scripts/run_gate3_random_v2.sh` | PASS; plan-generation checks |
++| G3B-E002 | SIM | v2 independent manager-worker prototype reaches overlapping public-port activity but fails a reproducible S0 RDATA comparison before qualification completion | `results/processed/gate3_random_v2/summary.md`, `results/raw/gate3_random_v2/seed_A3F30001/run.log` | OPEN; seed `0xA3F30001`, M1 ID6 S0 beat5 |
++| G3B-E003 | BOOKKEEPING | Historical Task-1 evidence is reclassified; random legal-ID/target and simultaneous-channel checklist claims are reopened pending a passing v2 random body | `results/processed/gate3_random/summary.md`, `04_MASTER_CHECKLIST.md` | PASS; scope corrected |
+diff --git a/docs/PROJECT_STATE.md b/docs/PROJECT_STATE.md
+index dbfc6fb..c122dda 100644
+--- a/docs/PROJECT_STATE.md
++++ b/docs/PROJECT_STATE.md
+@@ -2,7 +2,7 @@
+ 
+ **Date:** 2026-09-28
+ **Gate:** Gate 2 PASS; `kg-g2-a-functional` points to `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` and its annotated tag object is `15190879d68fb7f94f425556d60a20609f818c79`. `kg-g1-spec` remains at `aecfb8c`.
+-**Gate 3 Task 1:** PASS qualification for the replayable randomized Architecture-A harness at fixed seeds `0xA3F30001`–`0xA3F30005`; Gate 3 remains OPEN. D040 freezes pre-generated plans independent of DUT arbitration and the Python oracle as expected-results authority.
++**Gate 3 Task 1:** Historical fixed-seed qualification evidence is retained, but Task 1B is repairing its random-body concurrency methodology. The current qualification claims remain open until the 512-operation seeded body executes concurrently and passes. Gate 3 remains OPEN. D040 freezes pre-generated plans independent of DUT arbitration and the Python oracle as expected-results authority.
+ **Architecture:** Architecture-A production RTL exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression passes 348 checks. The project-owned Python oracle passes 15 model self-tests and the complete deterministic DUT matrix, including S0/S1/S2/S3, all legal lengths, WSTRB memory checks, capacity, ID concurrency, response reordering, backpressure and live-work reset with fresh same-ID reuse.
+ 
+ ## What changed
+diff --git a/docs/VERIFICATION_PLAN.md b/docs/VERIFICATION_PLAN.md
+index e3a218b..460c1ac 100644
+--- a/docs/VERIFICATION_PLAN.md
++++ b/docs/VERIFICATION_PLAN.md
+@@ -1,10 +1,10 @@
+ # Verification Plan
+ 
+-**Status:** Gate-1 verification contract frozen; Gate-2 deterministic evidence and Gate-3 Task-1 randomized qualification evidence are recorded below. Gate 3 remains open for long seeded contention, adversarial fairness, targeted integrated formal review and coverage closure.
++**Status:** Gate-1 verification contract frozen; Gate-2 deterministic evidence is complete. The original Gate-3 Task-1 matrix is retained as historical/reclassified evidence while Task 1B repairs its random-body concurrency methodology. Gate 3 remains open.
+ 
+ ### Gate-3 Task-1 randomized qualification
+ 
+-Architecture-A qualification uses D040 pre-generated plans and the project-owned Python oracle. Fixed functional seeds are `0xA3F30001` through `0xA3F30005`; each plan contains 96 legal operations, independent finite pause/delay schedules, two coordinated reset points and a 10,000-cycle post-drain qualification interval. Plans and per-seed coverage are retained under `results/raw/gate3_random/`. These runs provide functional stress evidence only and do not provide latency, throughput, fairness, timing or PPA evidence.
++The historical matrix uses D040 pre-generated plans and the project-owned Python oracle. Fixed functional seeds are `0xA3F30001` through `0xA3F30005`; its 96-operation deterministic prefix consumed the intended random branch and its driver completed operations serially. Task 1B generates 24 explicit anchors plus 512 seeded random operations per plan, validates seed diversity before simulation and uses independent manager workers. The v2 run remains open until the random body also demonstrates concurrent pressure, AW/W style execution, random live depth and reset-with-live-work without a reproducible failure. These runs provide functional stress evidence only and do not provide latency, throughput, fairness, timing or PPA evidence.
+ 
+ ## Independent checking
+ A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.
+diff --git a/results/processed/gate3_random/summary.md b/results/processed/gate3_random/summary.md
+index 145491c..96a0796 100644
+--- a/results/processed/gate3_random/summary.md
++++ b/results/processed/gate3_random/summary.md
+@@ -1,12 +1,12 @@
+ # Gate-3 Task 1 — Architecture-A randomized qualification
+ 
+-Status: **PASS** for the fixed qualification matrix; Gate 3 remains open.
++Status: **historical / reclassified**. This matrix remains useful replayable evidence, but it is not sufficient to claim genuinely randomized concurrent qualification.
+ 
+-The harness uses D040 pre-generated plans and the project-owned Python oracle. The five functional seeds are `0xA3F30001` through `0xA3F30005`. Each saved plan contains 96 legal operations, finite independent pause/delay schedules and a 10,000-cycle post-drain interval; the driver also injects scheduled resets and a live-write reset epoch. No DUT arbitration result is used to generate later plan values.
++The harness uses D040 pre-generated plans and the project-owned Python oracle. The five functional seeds are `0xA3F30001` through `0xA3F30005`. Each saved plan contains 96 legal operations, finite pause/delay schedules and deterministic pressure prologues. The operation values and reset plan are replayable, but the 96-operation forced prefix consumed the intended random branch, the manager/direction/target/LEN fields were therefore not genuinely seeded, and the driver completed operations serially. The prior 10,000-cycle interval was post-drain idle time rather than active stress.
+ 
+ ## Results
+ 
+-- All five seeds passed; no randomized failure or RTL change was required.
++- All five historical runs passed; no randomized RTL claim is made from them.
+ - Aggregate accepted traffic: 80 reads and 80 writes per manager.
+ - Targets S0/S1/S2/S3: 120 observations each.
+ - LEN 0–15: 30 occurrences each.
+@@ -19,4 +19,4 @@ The harness uses D040 pre-generated plans and the project-owned Python oracle. T
+ 
+ Per-seed plans, logs, coverage and JSONL event traces are under `results/raw/gate3_random/seed_*/`; aggregate counters are in `results/raw/gate3_random/aggregate_coverage.json`. Replay is provided by `scripts/run_gate3_random.sh --seed ...` and `--plan ...`.
+ 
+-This is deterministic functional qualification evidence. It makes no claim about long seeded contention, adversarial fairness, latency/throughput, timing, PPA, CDC or whole-Fabric formal proof. Architecture B remains absent.
++This is deterministic functional evidence with randomized parameter metadata and deterministic pressure prologues. It makes no claim about genuine random-body concurrency, long seeded contention, adversarial fairness, latency/throughput, timing, PPA, CDC or whole-Fabric formal proof. Architecture B remains absent.
+diff --git a/tb/cocotb/test_axi_fabric_a_oracle.py b/tb/cocotb/test_axi_fabric_a_oracle.py
+index ec57a82..cc30089 100644
+--- a/tb/cocotb/test_axi_fabric_a_oracle.py
++++ b/tb/cocotb/test_axi_fabric_a_oracle.py
+@@ -5,11 +5,13 @@ from pathlib import Path
+ import cocotb
+ from cocotb.clock import Clock
+ from cocotb.triggers import RisingEdge
++from cocotb.utils import get_sim_time
+ 
+ from axi_reference_model import AxiReferenceModel, RESP_DECERR
+ from axi_endpoint_model import EndpointMemory
+ 
+ _ACTIVE_MODEL = None
++_LAST_MODEL_TIME = None
+ 
+ 
+ def lane(value: int, width: int, index: int) -> int:
+@@ -27,10 +29,13 @@ def get_lane(handle, width: int, index: int) -> int:
+ 
+ 
+ async def cycles(dut, count=1):
++    global _LAST_MODEL_TIME
+     for _ in range(count):
+         await RisingEdge(dut.ACLK)
+-        if _ACTIVE_MODEL is not None:
++        now = get_sim_time(units="ns")
++        if _ACTIVE_MODEL is not None and now != _LAST_MODEL_TIME:
+             _ACTIVE_MODEL.advance()
++            _LAST_MODEL_TIME = now
+ 
+ 
+ def address_for(target: int, offset: int) -> int:
+@@ -47,8 +52,9 @@ def endpoint_write(memory: EndpointMemory, addr: int, data: int, strobe: int) ->
+ 
+ 
+ async def mapped_write(dut, model, memory, manager, ident, target, length, strobes,
+-                      qos_value=0x3, response_delay=0, manager_b_stall=0):
+-    addr = address_for(target, 0x080 + (ident * 8))
++                      qos_value=0x3, response_delay=0, manager_b_stall=0,
++                      addr_override=None):
++    addr = address_for(target, 0x080 + (ident * 8)) if addr_override is None else addr_override
+     cache, prot, qos, region = 0xA, 0x5, qos_value & 0xF, 0x9
+     set_lane(dut.manager_awid, 4, manager, ident)
+     set_lane(dut.manager_awaddr, 32, manager, addr)
+@@ -184,7 +190,14 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
+         obs_resp = get_lane(dut.manager_rresp, 2, manager)
+         obs_last = get_lane(dut.manager_rlast, 1, manager)
+         if (obs_id, obs_data, obs_resp, obs_last) != (ident, data, 0, last):
+-            raise AssertionError("manager R payload mismatch")
++            ref_data = None
++            if target in (0, 1):
++                ref_data = model.memories[target].read64(addr + beat * 8)
++            raise AssertionError(
++                f"manager R payload mismatch M{manager} ID{ident} S{target} "
++                f"beat={beat} expected=({ident:#x},{data:#x},0,{last}) "
++                f"observed=({obs_id:#x},{obs_data:#x},{obs_resp},{obs_last}) "
++                f"ref={ref_data!r}")
+         model.observe_r(manager, ident, obs_data, obs_resp, obs_last,
+                         addr + beat * 8 if target in (0, 1) else None)
+         await cycles(dut)
+diff --git a/tb/random/axi_random_plan.py b/tb/random/axi_random_plan.py
+index 3527ceb..499df58 100644
+--- a/tb/random/axi_random_plan.py
++++ b/tb/random/axi_random_plan.py
+@@ -14,30 +14,46 @@ SEEDS = [0xA3F30001, 0xA3F30002, 0xA3F30003, 0xA3F30004, 0xA3F30005]
+ TARGET_BASE = [0x0000_0000, 0x1000_0000, 0x2000_0000, 0x3000_0000]
+ 
+ 
+-def make_plan(seed: int, operations: int = 96) -> dict:
++def make_plan(seed: int, operations: int = 512) -> dict:
+     rng = random.Random(seed)
+     plan = {
+         "seed": seed,
+         "architecture": "A",
+         "qualification_cycles": 10_000,
+         "target_distribution": {"S0": 40, "S1": 30, "S2": 20, "S3": 10},
+-        "operations": [],
+-        "resets_after_sequence": [32, 64],
++        "coverage_anchors": [],
++        "random_operations": [],
++        "resets": sorted(rng.sample(range(256, 5000), 3)),
++        "resets_after_sequence": [],
+     }
+-    # Force every manager, target and LEN before using seeded choices.
+-    forced = [(m, d, l % 4, l) for l in range(16)
+-              for m in range(3) for d in ("write", "read")]
++    # Anchors are deliberately separate from random-body coverage.
++    for seq, (manager, direction, target, length) in enumerate(
++            [(m, d, t, 0) for m in range(3) for d in ("write", "read")
++             for t in range(4)]):
++        ident = (seq + manager * 5 + (1 if direction == "read" else 0)) & 0xF
++        plan["coverage_anchors"].append({"kind": "anchor", "sequence": seq,
++                                         "manager": manager, "direction": direction,
++                                         "id": ident, "target": target, "length": length,
++                                         "address": TARGET_BASE[target] + 0x080 + ident * 8,
++                                         "qos": seq & 0xF,
++                                         "strobes": [0xFF], "launch_cycle": seq * 4,
++                                         "aw_w_style": "aw_before_w"})
+     for seq in range(operations):
+-        if seq < len(forced):
+-            manager, direction, target, length = forced[seq]
++        manager = rng.randrange(3)
++        direction = "write" if rng.randrange(2) else "read"
++        roll = rng.randrange(100)
++        target = 0 if roll < 40 else 1 if roll < 70 else 2 if roll < 90 else 3
++        length = rng.randrange(16)
++        ident = rng.randrange(16)
++        # Keep random manager/sequence locations distinct within the 4-KiB
++        # legal-burst window so concurrent functional traffic has no
++        # accidental read/write ordering dependency.
++        if target in (0, 1):
++            page = (seq // 31) * 0x800
++            slot = (seq % 31) * 0x40 + 0x40
++            addr = TARGET_BASE[target] + page + slot
+         else:
+-            manager = rng.randrange(3)
+-            direction = "write" if rng.randrange(2) else "read"
+-            roll = rng.randrange(100)
+-            target = 0 if roll < 40 else 1 if roll < 70 else 2 if roll < 90 else 3
+-            length = rng.randrange(16)
+-        ident = (seq * 5 + manager * 3 + (1 if direction == "read" else 0)) & 0xF
+-        addr = TARGET_BASE[target] + 0x080 + (ident * 8)
++            addr = TARGET_BASE[target] + 0x080 + ((seq % 24) * 0x40)
+         strobes = [rng.randrange(256) for _ in range(length + 1)]
+         if seq % 5 == 0:
+             strobes[0] = 0xFF
+@@ -49,8 +65,8 @@ def make_plan(seed: int, operations: int = 96) -> dict:
+             strobes[0] = 0x55
+         else:
+             strobes[0] = 0x81
+-        plan["operations"].append({
+-            "sequence": seq,
++        plan["random_operations"].append({
++            "kind": "random", "sequence": seq,
+             "manager": manager,
+             "direction": direction,
+             "id": ident,
+@@ -68,7 +84,9 @@ def make_plan(seed: int, operations: int = 96) -> dict:
+             "response_delay": rng.randrange(6),
+             "manager_b_stall": rng.randrange(4) if direction == "write" else 0,
+             "manager_r_stall": rng.randrange(4) if direction == "read" else 0,
++            "launch_cycle": rng.randrange(64, 5000),
+         })
++    plan["operations"] = plan["random_operations"]
+     return plan
+ 
+ 
