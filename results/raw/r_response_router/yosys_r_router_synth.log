@@ -4493,40 +4493,40 @@ Extracted 9145 AND gates and 0 wires from module `axi_r_response_router' to a ne
 3.46.17.5. Executing ABC9.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
-ABC: + read_lut <abc-temp-dir>/input.lut
-ABC: + read_box <abc-temp-dir>/input.box
-ABC: + &read <abc-temp-dir>/input.xaig
-ABC: + &ps
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =    633/   1188  and =    8201  lev =   62 (9.39)  mem = 0.14 MB  box = 284  bb = 284
-ABC: + &scorr
+ABC: + &scorr 
 ABC: Warning: The network is combinational.
-ABC: + &sweep
-ABC: + &dc2
-ABC: + &dch -f -r
-ABC: + &ps
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =    633/   1188  and =    7315  lev =   36 (5.46)  mem = 0.13 MB  ch =  950  box = 284  bb = 284
 ABC: cst =       0  cls =    844  lit =     950  unused =    6438  proof =     0
-ABC: + &if -W 300 -v
+ABC: + &if -W 300 -v 
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   76. Obj =  156. Set =  780. CutMin = no
 ABC: Node =    7315.  Ch =   844.  Total mem =    1.64 MB. Peak cut mem =    0.11 MB.
 ABC: P:  Del = 5786.00.  Ar =    6530.0.  Edge =     7589.  Cut =    79002.  T =     0.01 sec
 ABC: P:  Del = 5786.00.  Ar =    5982.0.  Edge =     6561.  Cut =    74144.  T =     0.01 sec
 ABC: P:  Del = 5786.00.  Ar =    3723.0.  Edge =     6260.  Cut =   188294.  T =     0.03 sec
-ABC: F:  Del = 5786.00.  Ar =    2175.0.  Edge =     5676.  Cut =    89174.  T =     0.01 sec
+ABC: F:  Del = 5786.00.  Ar =    2175.0.  Edge =     5676.  Cut =    89174.  T =     0.02 sec
 ABC: A:  Del = 5786.00.  Ar =    2081.0.  Edge =     5401.  Cut =    77842.  T =     0.02 sec
 ABC: A:  Del = 5786.00.  Ar =    2076.0.  Edge =     5397.  Cut =    77844.  T =     0.02 sec
-ABC: Total time =     0.10 sec
-ABC: + &write -n <abc-temp-dir>/output.aig
-ABC: + &mfs
-ABC: + &ps -l
+ABC: Total time =     0.11 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: + &ps -l 
 ABC: <abc-temp-dir>/input : i/o =    633/   1188  and =    4247  lev =   39 (5.00)  mem = 0.09 MB  box = 284  bb = 284
 ABC: Mapping (K=7)  :  lut =   1327  edge =    5178  lev =   11 (2.00)  levB =   12  mem = 0.06 MB
 ABC: LUT = 1327 : 2=90 6.8 %  3=277 20.9 %  4=709 53.4 %  5=201 15.1 %  6=24 1.8 %  7=26 2.0 %  Ave = 3.90
-ABC: + &write -n <abc-temp-dir>/output.aig
-ABC: + &verify
-ABC: Networks are equivalent.  Time =     0.13 sec
-ABC: + time
-ABC: elapse: 1.53 seconds, total: 1.53 seconds
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
+ABC: Networks are equivalent.  Time =     0.14 sec
+ABC: + time 
+ABC: elapse: 1.66 seconds, total: 1.66 seconds
 
 3.46.17.6. Executing AIGER frontend.
 <suppressed ~10 debug messages>
@@ -5226,7 +5226,7 @@ Removed 0 unused modules.
 === axi_r_response_router ===
 
         +----------Local Count, excluding submodules.
-        |
+        | 
      1825 wires
      4303 wire bits
      1825 public wires
@@ -5242,11 +5242,11 @@ Removed 0 unused modules.
 === design hierarchy ===
 
         +----------Count including submodules.
-        |
+        | 
         - axi_r_response_router
 
         +----------Count including submodules.
-        |
+        | 
      1825 wires
      4303 wire bits
      1825 public wires
@@ -5274,7 +5274,7 @@ Found and reported 0 problems.
 === axi_r_response_router ===
 
         +----------Local Count, excluding submodules.
-        |
+        | 
      1825 wires
      4303 wire bits
      1825 public wires
@@ -5289,6 +5289,6 @@ Found and reported 0 problems.
 
 Warnings: 1 unique messages, 1 total
 Warnings: 1 experimental features used (not excluded with -x).
-End of script. Logfile hash: 107974dcc7, time: 2.81s, user: 1.15s, system: 0.08s, MEM: 100.30 MB peak
+End of script. Logfile hash: 9cb8e1e5f9, time: 2.91s, user: 1.20s, system: 0.07s, MEM: 99.62 MB peak
 Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
-Time spent: 56% 1x abc9_exe (1 sec), 10% 22x read_verilog (0 sec), ...
+Time spent: 55% 1x abc9_exe (1 sec), 9% 22x read_verilog (0 sec), ...

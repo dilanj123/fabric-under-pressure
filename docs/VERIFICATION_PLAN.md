@@ -1,10 +1,14 @@
 # Verification Plan
 
-**Status:** Gate-1 verification contract frozen; Gate-2 deterministic evidence is complete. The original Gate-3 Task-1 matrix is retained as historical/reclassified evidence while Task 1B repairs its random-body concurrency methodology. Gate 3 remains open.
+**Status:** Gate-1 contract frozen; Gate-2 PASS; Gate-3 Architecture-A verification PASS. The authoritative Gate-3 evidence is `results/processed/gate3/summary.md` with raw seed runs in `results/raw/gate3_final/`.
 
-### Gate-3 Task-1 randomized qualification
+### Gate-3 randomized and directed qualification
 
-The historical matrix uses D040 pre-generated plans and the project-owned Python oracle. Fixed functional seeds are `0xA3F30001` through `0xA3F30005`; its 96-operation deterministic prefix consumed the intended random branch and its driver completed operations serially. Task 1B generates 24 explicit anchors plus 512 seeded random operations per plan, validates seed diversity before simulation and uses independent manager workers. The repaired v2 path observes finite target AW/AR/W pauses during random traffic, but remains open until the manager issue/response path reaches random live depth four and the remaining concurrent-pressure evidence is present. These runs provide functional stress evidence only and do not provide latency, throughput, fairness, timing or PPA evidence.
+D040 uses pre-generated replayable plans for fixed seeds `0xA3F30001`–`0xA3F30005`; transaction values and pause/reset schedules do not depend on DUT arbitration. Each seed passed with 512 and 2,048 random operations using the project-owned Python oracle. Plans are checked against the frozen decoder and supported AXI subset before simulation. The observed random live depth is two reads and two writes. Under D042, the required four-outstanding behavior is evidenced by whole-DUT Gate-2 directed tests, including fifth-request blocking and following-cycle recovery; random depth four is not claimed.
+
+Random coverage includes manager/direction, S0-S3, LEN 0-15, AW/W timing styles, target AW/AR/W stalls, manager B/R stalls, finite endpoint delays and simultaneous all-manager activity. The 2,048-operation random counters do not hit same-target overlap, cross-manager same-ID overlap, different-ID response reordering or reset with live random work; those behaviors are separately covered by whole-DUT directed/oracle tests and the integrated fairness scenarios. Integrated AW and AR tests each observe nine grants in cyclic order `0 1 2 0 1 2 0 1 2`. The original 3,800 long-plan target/address mismatches, including sequence 960 S0-claimed `0x00010040` decoding to S3, are historical generator failures; the region-aware allocator and independent validator now report zero mismatches.
+
+These runs provide functional stress and service-opportunity fairness evidence only. They are not performance measurements, unconditional wall-clock fairness guarantees or whole-Fabric formal proofs. Historical Task-1, v2 failure and forensic records are retained and are not current qualification evidence.
 
 ## Independent checking
 A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.

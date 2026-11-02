@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).parent))
-from axi_random_plan import make_plan
+from axi_random_plan import make_plan, validate_plan
 sys.path.insert(0, str(Path(__file__).parents[1] / "model"))
 from axi_reference_model import legal_request
 
@@ -36,6 +36,26 @@ class RandomPlanTests(unittest.TestCase):
         plan = make_plan(0xA3F30004)
         encoded = json.dumps(plan, sort_keys=True)
         self.assertEqual(plan, json.loads(encoded))
+
+    def test_all_frozen_seeds_and_lengths_validate(self):
+        for seed in (0xA3F30001, 0xA3F30002, 0xA3F30003, 0xA3F30004, 0xA3F30005):
+            for count in (512, 2048):
+                plan = make_plan(seed, count)
+                validate_plan(plan)
+                self.assertEqual(len(plan["random_operations"]), count)
+
+    def test_rejects_original_s0_s3_mismatch(self):
+        plan = make_plan(0xA3F30001, 512)
+        plan["random_operations"][0].update(target=0, address=0x00010040)
+        with self.assertRaisesRegex(ValueError, "decodes to S3"):
+            validate_plan(plan)
+
+    def test_rejects_mapped_burst_crossing_region(self):
+        plan = make_plan(0xA3F30001, 512)
+        op = plan["random_operations"][0]
+        op.update(target=0, address=0x0000FFC0, length=15)
+        with self.assertRaisesRegex(ValueError, "4-KiB crossing|leaves mapped"):
+            validate_plan(plan)
 
 
 if __name__ == "__main__":

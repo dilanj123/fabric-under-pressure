@@ -1,6 +1,6 @@
 # Formal Strategy
 
-**Status:** Gate-1 formal contract frozen; Phase-0 generic formal harness passed, but no project AXI property has run.
+**Status:** Gate-1 formal contract frozen; targeted project primitive formal jobs have rerun successfully. Evidence remains bounded and property-scoped; no whole-fabric exhaustive proof is claimed.
 
 ## Scope order
 Prove tractable primitives first. Do not begin with whole-fabric exhaustive proof.

@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
     <property name="random_seed" value="2750611458" />
-    <testcase name="fabric_a_random_v2" classname="test_axi_fabric_a_random_v2" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py" lineno="593" time="0.7369480133056641" sim_time_ns="130630.0" ratio_time="177258.09370737604" />
+    <testcase name="fabric_a_random_v2" classname="test_axi_fabric_a_random_v2" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py" lineno="590" time="0.8579361438751221" sim_time_ns="130630.0" ratio_time="152260.74916248547" />
   </testsuite>
 </testsuites>

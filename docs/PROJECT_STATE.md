@@ -1,9 +1,9 @@
 # Project State
 
-**Date:** 2026-09-28
-**Gate:** Gate 2 PASS; `kg-g2-a-functional` points to `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` and its annotated tag object is `15190879d68fb7f94f425556d60a20609f818c79`. `kg-g1-spec` remains at `aecfb8c`.
-**Gate 3 Task 1:** Historical fixed-seed qualification evidence is retained, but Task 1B is repairing its random-body concurrency methodology. The current qualification claims remain open until the 512-operation seeded body executes concurrently and passes. Gate 3 remains OPEN. D040 freezes pre-generated plans independent of DUT arbitration and the Python oracle as expected-results authority.
-**Architecture:** Architecture-A production RTL exists as `rtl/axi_fabric_a.sv`, composing four AW paths, four AR paths, four owner-directed W paths, shared per-manager write/read state, common B/R routers and the internal S3 DECERR endpoint. The hand-written whole-top Gate-2 directed closure regression passes 348 checks. The project-owned Python oracle passes 15 model self-tests and the complete deterministic DUT matrix, including S0/S1/S2/S3, all legal lengths, WSTRB memory checks, capacity, ID concurrency, response reordering, backpressure and live-work reset with fresh same-ID reuse.
+**Date:** 2026-11-02
+**Gate:** Gate 3 Architecture-A verification PASS; Gate-2 `kg-g2-a-functional` remains immutable at commit `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` (annotated tag object `15190879d68fb7f94f425556d60a20609f818c79`). The final Gate-3 annotated tag is recorded after the qualification commit.
+**Gate 3:** Five frozen seeds pass at both 512 and 2,048 random operations. Integrated whole-DUT AW and AR fairness each pass with manager order `0 1 2 0 1 2 0 1 2`. Random live depth is two reads/two writes; D042 allocates four-outstanding proof to Gate-2 directed tests, which demonstrate four, fifth-request blocking and next-cycle recovery. The final coverage review distinguishes random observations from directed same-target, ordering and live-reset evidence. See `results/processed/gate3/summary.md`.
+**Architecture:** Production `rtl/axi_fabric_a.sv` is unchanged during Gate 3. Gate-2 closure passes and the expanded whole-top directed suite passes 384 checks (348 Gate-2 checks plus integrated fairness checks). Architecture B is absent. Performance, PPA, P99 and timing closure have not been measured.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -18,8 +18,9 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 - SV frontend, cocotb, BFM, formal, synthesis, P&R and wrapper raw evidence.
 
 ## Still unproven
-- end-to-end formal properties, performance, PPA and timing;
-- recorded-target versus returned-target response-source matching is not implemented because the current shared bank interface does not expose it; Architecture-B RTL remains absent.
+- exhaustive whole-Fabric formal proof and unrestricted AXI4 compliance;
+- recorded-target versus returned-target response-source matching because the shared state interface does not expose the required metadata;
+- performance, PPA, P99 and routed timing; Architecture-B RTL remains absent.
 
 ## Risks
 Do not interpret generic smoke evidence as Fabric behavior or performance evidence. Gate 0 qualifies the toolchain; Gate 1 freezes the contract; neither gate qualifies project AXI RTL.
@@ -50,4 +51,4 @@ The following phase-status bullets are retained as historical milestone descript
 - The S3 error target has independent one-context write/read sides. It consumes legal unmapped write bursts through WLAST before generating stable DECERR B, and emits exact zero-data DECERR read bursts with ARLEN+1 beats and final RLAST. Focused manager-to-S3-to-manager write and read lifecycle simulations and bounded endpoint formal checks pass. A repair also confirms legal WVALID-before-local-AW is backpressured without a false diagnostic; full four-target routing remains absent.
 
 ## Next smallest task
-Gate 3 Task 1: build replayable randomized Architecture-A stress around the trusted Python oracle with fixed seeds, legal transactions and independent channel backpressure.
+Begin the separately authorized Architecture-A measurement mission using frozen workloads and the ECP5 implementation flow. Do not begin Architecture B until the measured bottleneck is identified and its hypothesis is frozen.

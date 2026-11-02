@@ -1,10 +1,10 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
     <property name="random_seed" value="2697068545" />
-    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="358" time="0.02944803237915039" sim_time_ns="380.0" ratio_time="12904.08795764043">
+    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="338" time="0.04735112190246582" sim_time_ns="380.0" ratio_time="8025.153042471237">
       <failure error_type="OracleViolation" error_msg="bad RDATA manager=0 id=0 beat=0" />
     </testcase>
-    <testcase name="fabric_a_oracle_closure_matrix" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="716" time="0.03570985794067383" sim_time_ns="2570.0" ratio_time="71968.92253869059">
+    <testcase name="fabric_a_oracle_closure_matrix" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="696" time="0.04550480842590332" sim_time_ns="2570.0" ratio_time="56477.54795374644">
       <failure error_type="OracleViolation" error_msg="bad RDATA manager=0 id=13 beat=0" />
     </testcase>
   </testsuite>

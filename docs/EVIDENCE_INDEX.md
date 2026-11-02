@@ -233,7 +233,7 @@ This closes the hand-written directed integration pass only. The independent Pyt
 | G2-O005 | SYNTH | Existing complete `axi_fabric_a` ECP5 synthesis remains the authoritative production resource reference; no RTL changed in oracle closure | `results/raw/fabric_a_integration/synthesis.log`, `results/processed/gate2/summary.md` | PASS; historical SYNTH only |
 | G2-O006 | BOOKKEEPING | Gate-2 known-good Architecture-A functional baseline recorded after closure evidence passed | `kg-g2-a-functional`, `results/processed/gate2/summary.md`, `docs/PROJECT_STATE.md` | PASS; tag object `15190879d68fb7f94f425556d60a20609f818c79`, commit `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` |
 
-## Gate-3 randomized Architecture-A qualification evidence
+## Historical Gate-3 Task-1 randomized evidence (superseded by final closure below)
 
 | ID | Class | Claim | Evidence | Status |
 |---|---|---|---|---|
@@ -243,12 +243,29 @@ This closes the hand-written directed integration pass only. The independent Pyt
 | G3-E004 | SIM | Four-entry read/write pressure, same-visible-ID overlap, same-target contention and reset epochs are exercised | `results/raw/gate3_random/aggregate_coverage.json`, `results/raw/gate3_random/seed_*/events.jsonl` | PASS; bounded qualification coverage, not long-stress or fairness evidence |
 | G3-E005 | REPRO | Exact saved plan replay is supported by the Gate-3 driver | `scripts/run_gate3_random.sh`, `tb/random/axi_random_plan.py` | PASS; `--seed` and `--plan` modes |
 
-## Gate-3 Task 1B randomized qualification repair
+## Historical Gate-3 Task 1B development evidence (superseded by final closure below)
 
 | ID | Class | Claim | Evidence | Status |
 |---|---|---|---|---|
 | G3B-E001 | REPRO/UNIT | v2 separates 24 deterministic anchors from 512 seeded random operations, validates legal fields, same-seed identity and cross-seed diversity | `tb/random/test_axi_random_plan.py`, `scripts/run_gate3_random_v2.sh` | PASS; plan-generation checks |
-| G3B-E002 | SIM | v2 handshake-safe endpoint path removes the original S0 beat-5 RDATA loss, applies finite target AW/AR/W pauses on public handshakes, and all five 512-operation seeds complete | `results/processed/gate3_random_v2/summary.md`, `results/raw/gate3_random_v2/aggregate_coverage.json`, `results/raw/gate3_random_v2/seed_A3F30001/` through `seed_A3F30005/` | PASS per-seed execution and target-stall evidence; qualification remains OPEN because random depth-4 pressure is not reached |
+| G3B-E002 | SIM | v2 handshake-safe endpoint path removes the original S0 beat-5 RDATA loss, applies finite target AW/AR/W pauses and all five 512-operation seeds complete | `results/processed/gate3_random_v2/summary.md`, `results/raw/gate3_random_v2/aggregate_coverage.json` | Historical PASS; random depth two only, four-outstanding requirement allocated to directed Gate-2 evidence by D042 |
 | G3B-E004 | UNIT/SIM | Handshake-driven endpoint retention, packed-lane shadow updates and focused DUT RVALID retention pass | `tb/random/concurrent_endpoint.py`, `tb/random/concurrent_bus.py`, `tb/random/test_concurrent_endpoint.py`, `tb/random/test_concurrent_bus.py`, `results/raw/gate3_random_v2/focused_r_retention/` | PASS; 9 Python checks plus focused DUT regression |
 | G3B-E005 | SIM/DIAGNOSTIC | The complete seed-1 AR timeout was traced to an illegal generated S1 burst start crossing 4 KiB; the generator now rejects such plans, and packed-lane shadows prevent cross-manager AWVALID loss | `results/raw/gate3_random_v2/repaired/ar_deadlock_investigation.jsonl`, `tb/random/axi_random_plan.py`, `tb/cocotb/test_axi_fabric_a_oracle.py` | PASS repair; no RTL defect |
-| G3B-E003 | BOOKKEEPING | Historical Task-1 evidence is reclassified; target AW/AR/W pause bins are now observed, while random depth-4 pressure and the remaining concurrency claims remain open | `results/processed/gate3_random/summary.md`, `results/processed/gate3_random_v2/summary.md`, `results/raw/gate3_random_v2/aggregate_coverage.json`, `results/raw/gate3_random_v2/random_depth_reachability.json`, `04_MASTER_CHECKLIST.md` | PASS; scope corrected |
+| G3B-E003 | BOOKKEEPING | Historical Task-1 evidence is reclassified; v2 random depth remains exactly two and same-target/reorder/live-reset random bins were not hit | `results/processed/gate3_random/summary.md`, `results/processed/gate3_random_v2/summary.md`, `results/raw/gate3_random_v2/aggregate_coverage.json` | Historical scope correction; directed evidence is indexed in final closure below |
+| G3B-E006 | SIM/REPRO | Original 2,048-operation plans had a sequence-960 address/target mismatch and 3,800 invalid associations across five plans; this failure is preserved as historical evidence | `scripts/run_gate3_random_long.sh`, `results/raw/gate3_random_long/`, `results/raw/gate3_random_long_repaired/` | Historical FAIL; corrected region-aware plans and final reruns are recorded below |
+| G3B-E007 | FORMAL | Targeted decoder, legality, outstanding, write-owner and RR/fairness primitive jobs rerun with the qualified OSS CAD environment | `results/raw/decoder/`, `results/raw/request_legality/`, `results/raw/outstanding_tracker/`, `results/raw/write_owner/`, `results/raw/rr_arbiter/` | PASS; bounded named properties only |
+| G3B-E008 | BOOKKEEPING | Earlier Gate-3 status remained OPEN pending long random stress and integrated fairness | Historical summaries and checklist | Superseded by final Gate-3 closure below |
+
+## Final Gate-3 Architecture-A qualification (authoritative)
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| G3-F001 | SIM/REPRO | All five frozen seeds pass at 512 random operations each; each cocotb XML contains one passing test with zero errors, failures or skips | `results/raw/gate3_final/random_512/seed_*/run.log`, `results.xml`, `coverage.json` | PASS |
+| G3-F002 | SIM/REPRO | All five frozen seeds pass at 2,048 random operations each with bounded drain and the same plan methodology | `results/raw/gate3_final/random_2048/seed_*/run.log`, `results.xml`, `coverage.json` | PASS |
+| G3-F003 | SIM | Random public handshakes cover each manager’s reads/writes, S0-S3, LEN0-15, three AW/W timing styles, target AW/AR/W stalls, manager B/R stalls, finite response delays and all-manager-active cycles | `results/raw/gate3_final/random_512/aggregate_coverage.json`, `random_2048/aggregate_coverage.json`, per-seed `coverage.json` | PASS — random; maximum random live depth remains two |
+| G3-F004 | SIM | Four live reads/writes, fifth blocking, following-cycle recovery, same-ID protection, different-ID response ordering and reset with live work pass through whole-DUT/oracle directed tests | `scripts/run_gate2_closure.sh`, `results/raw/gate2_oracle/closure_matrix.log`, `closure_event_trace.jsonl` | PASS — directed; D042 allocation |
+| G3-F005 | SIM | Three-manager integrated AR arbitration passes nine admissions in cyclic order; held S0 AR payload remains stable during backpressure | `results/raw/fabric_a_gate2_directed/simulation.log`, `tb/directed/axi_fabric_a_tb.sv` | PASS — directed; `0 1 2 0 1 2 0 1 2` |
+| G3-F006 | SIM | Three-manager integrated AW arbitration passes nine admissions in cyclic order; 3 AWs/manager, 9 W handshakes, 9 target WLAST handshakes, 9 B completions, no owner overlap | `results/raw/fabric_a_gate2_directed/simulation.log`, `tb/directed/axi_fabric_a_tb.sv` | PASS — directed; `0 1 2 0 1 2 0 1 2` |
+| G3-F007 | FORMAL | Targeted bounded proofs/covers pass for decoder, legality, outstanding/state, owner, AW/AR/W paths, B/R routers, S3 and RR properties | `results/raw/gate3_final/formal_rechecks/`, component `formal_*` directories | PASS; bounded, assumptions documented; no whole-Fabric proof |
+| G3-F008 | SIM/LINT/SYNTH | Gate-2 closure and Architecture-A integration lint/simulation/ECP5 synthesis scripts pass on current source | `results/raw/gate2_oracle/gate2_closure.log`, `results/raw/fabric_a_integration/` | PASS; synthesis is not timing/PPA evidence |
+| G3-F009 | BOOKKEEPING | Final observed coverage and limitations are reconciled; original failures remain historical; production RTL unchanged | `results/processed/gate3/summary.md`, `docs/PROJECT_STATE.md`, `04_MASTER_CHECKLIST.md` | PASS |

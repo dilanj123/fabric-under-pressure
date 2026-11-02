@@ -1,4 +1,4 @@
-git_commit=09a9a7fd7a3440d9f18c261d108703cd9e647639
+git_commit=ea03ccef981e09afbc88111cb701db9cec2e005f
 functional_seed=0xA0C20001
 verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 python=Python 3.11.6

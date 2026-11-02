@@ -1703,22 +1703,22 @@ Extracted 1839 AND gates and 0 wires from module `axi_write_state_bank' to a net
 4.46.16.5. Executing ABC9.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
-ABC: + read_lut <abc-temp-dir>/input.lut
-ABC: + read_box <abc-temp-dir>/input.box
-ABC: + &read <abc-temp-dir>/input.xaig
-ABC: + &ps
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =    221/    576  and =    1350  lev =   18 (2.58)  mem = 0.04 MB  box = 165  bb = 117
 ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 3 carries.
-ABC: + &scorr
+ABC: + &scorr 
 ABC: Warning: The network is combinational.
-ABC: + &sweep
-ABC: + &dc2
-ABC: + &dch -f -r
-ABC: + &ps
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =    221/    576  and =    1479  lev =   16 (2.33)  mem = 0.04 MB  ch =  128  box = 156  bb = 117
 ABC: cst =       0  cls =    127  lit =     128  unused =    1679  proof =     0
 ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 3 carries.
-ABC: + &if -W 300 -v
+ABC: + &if -W 300 -v 
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   76. Obj =  156. Set =  780. CutMin = no
 ABC: Node =    1479.  Ch =   127.  Total mem =    0.51 MB. Peak cut mem =    0.03 MB.
 ABC: P:  Del = 2769.00.  Ar =    1020.0.  Edge =     1524.  Cut =    13027.  T =     0.00 sec
@@ -1727,19 +1727,19 @@ ABC: P:  Del = 2769.00.  Ar =     907.0.  Edge =     1390.  Cut =    17983.  T =
 ABC: F:  Del = 2769.00.  Ar =     792.0.  Edge =     1320.  Cut =    12427.  T =     0.00 sec
 ABC: A:  Del = 2769.00.  Ar =     732.0.  Edge =     1215.  Cut =    13558.  T =     0.00 sec
 ABC: A:  Del = 2769.00.  Ar =     732.0.  Edge =     1215.  Cut =    13722.  T =     0.00 sec
-ABC: Total time =     0.02 sec
-ABC: + &write -n <abc-temp-dir>/output.aig
-ABC: + &mfs
-ABC: + &ps -l
+ABC: Total time =     0.01 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: + &ps -l 
 ABC: <abc-temp-dir>/input : i/o =    221/    576  and =    1026  lev =   14 (2.06)  mem = 0.04 MB  box = 156  bb = 117
 ABC: Mapping (K=7)  :  lut =    330  edge =    1179  lev =    5 (0.89)  levB =    6  mem = 0.02 MB
 ABC: LUT = 330 : 2=132 40.0 %  3=57 17.3 %  4=63 19.1 %  5=21 6.4 %  6=12 3.6 %  7=45 13.6 %  Ave = 3.57
 ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 3 carries.
-ABC: + &write -n <abc-temp-dir>/output.aig
-ABC: + &verify
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
 ABC: Networks are equivalent.  Time =     0.02 sec
-ABC: + time
-ABC: elapse: 0.21 seconds, total: 0.21 seconds
+ABC: + time 
+ABC: elapse: 0.15 seconds, total: 0.15 seconds
 
 4.46.16.6. Executing AIGER frontend.
 <suppressed ~10 debug messages>
@@ -2227,7 +2227,7 @@ Removed 0 unused modules.
 === axi_write_state_bank ===
 
         +----------Local Count, excluding submodules.
-        |
+        | 
      1123 wires
      1823 wire bits
      1123 public wires
@@ -2244,11 +2244,11 @@ Removed 0 unused modules.
 === design hierarchy ===
 
         +----------Count including submodules.
-        |
+        | 
         - axi_write_state_bank
 
         +----------Count including submodules.
-        |
+        | 
      1123 wires
      1823 wire bits
      1123 public wires
@@ -2277,7 +2277,7 @@ Found and reported 0 problems.
 === axi_write_state_bank ===
 
         +----------Local Count, excluding submodules.
-        |
+        | 
      1123 wires
      1823 wire bits
      1123 public wires
@@ -2293,6 +2293,6 @@ Found and reported 0 problems.
 
 Warnings: 3 unique messages, 3 total
 Warnings: 1 experimental features used (not excluded with -x).
-End of script. Logfile hash: febd2acc58, time: 0.95s, user: 0.65s, system: 0.05s, MEM: 60.28 MB peak
+End of script. Logfile hash: 0cd1d63e3a, time: 0.77s, user: 0.55s, system: 0.03s, MEM: 60.78 MB peak
 Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
-Time spent: 33% 23x read_verilog (0 sec), 23% 1x abc9_exe (0 sec), ...
+Time spent: 33% 23x read_verilog (0 sec), 22% 1x abc9_exe (0 sec), ...

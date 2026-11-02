@@ -1,4 +1,4 @@
-git_commit=09a9a7fd7a3440d9f18c261d108703cd9e647639
+git_commit=ea03ccef981e09afbc88111cb701db9cec2e005f
 architecture=A
 seed=0xA3F30005
 plan=/Users/Dilan/Projects/fabric-under-pressure/results/raw/gate3_random_v2/plans/seed_A3F30005.json
@@ -185,7 +185,7 @@ verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
                     /Users/Dilan/Projects/fabric-under-pressure/rtl/axi_write_state_bank.sv:37:42:      Example path: axi_fabric_a.write_state.commit_fire
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.923 MB sources in 20 modules, into 3.341 MB in 10 C++ files needing 0.000 MB
-- Verilator: Walltime 0.193 s (elab=0.012, cvt=0.146, bld=0.000); cpu 0.190 s on 1 threads; allocated 46.562 MB
+- Verilator: Walltime 0.196 s (elab=0.012, cvt=0.149, bld=0.000); cpu 0.195 s on 1 threads; allocated 48.328 MB
 g++  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -Os  -c -o verilator.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
 g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated.cpp
 g++ -Os  -std=c++17 -I.  -MMD -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_dpi.o /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/share/verilator/include/verilated_dpi.cpp
@@ -214,12 +214,12 @@ rm Vtop__ALL.verilator_deplist.tmp
                                                           from cocotb.triggers import RisingEdge, Lock, Join, Timer
      0.00ns INFO     cocotb                             Running tests
      0.00ns INFO     cocotb.regression                  running test_axi_fabric_a_random_v2.fabric_a_random_v2 (1/1)
-     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:73: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py:53: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
                                                           now = get_sim_time(units="ns")
-  2210.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:748: DeprecationWarning: Using `task` directly is preferred to `Join(task)` in all situations where the latter could be used.
+  2210.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:743: DeprecationWarning: Using `task` directly is preferred to `Join(task)` in all situations where the latter could be used.
                                                           await Join(task)
  14080.00ns INFO     cocotb.axi_fabric_a                random start seq=6 read M0 ID14 S0 LEN10
- 14100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=1411 addr=0x1c0 len=10
+ 14100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=1411 addr=0x340 len=10
  14100.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID14 cycle=1411
  14100.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID14 cycle=1411
  14460.00ns INFO     cocotb.axi_fabric_a                random start seq=7 write M0 ID11 S0 LEN12
@@ -241,7 +241,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  21590.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID1 cycle=2160
  21590.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID1 cycle=2160
  39440.00ns INFO     cocotb.axi_fabric_a                random start seq=1 read M2 ID11 S0 LEN15
- 39460.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID11 cycle=3947 addr=0x80 len=15
+ 39460.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID11 cycle=3947 addr=0xc0 len=15
  39460.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID11 cycle=3947
  39470.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID11 cycle=3948
  42650.00ns INFO     cocotb.axi_fabric_a                random start seq=2 write M2 ID9 S0 LEN10
@@ -265,15 +265,15 @@ rm Vtop__ALL.verilator_deplist.tmp
  43040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=4305 data=0x1002000500000005 strb=0xa4 last=0
  43060.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=6 cycle=4307 data=0x1002000500000006 strb=0x49 last=1
  43160.00ns INFO     cocotb.axi_fabric_a                random start seq=10 read M2 ID4 S1 LEN8
- 43180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID4 cycle=4319 addr=0x100002c0 len=8
+ 43180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID4 cycle=4319 addr=0x10000540 len=8
  43180.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID4 cycle=4319
  43180.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID4 cycle=4319
  43400.00ns INFO     cocotb.axi_fabric_a                random start seq=12 read M2 ID3 S0 LEN10
- 43420.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID3 cycle=4343 addr=0x340 len=10
+ 43420.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID3 cycle=4343 addr=0x640 len=10
  43420.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID3 cycle=4343
  43420.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID3 cycle=4343
  43790.00ns INFO     cocotb.axi_fabric_a                random start seq=13 read M2 ID3 S0 LEN14
- 43810.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID3 cycle=4382 addr=0x380 len=14
+ 43810.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID3 cycle=4382 addr=0x6c0 len=14
  43810.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID3 cycle=4382
  43810.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID3 cycle=4382
  44600.00ns INFO     cocotb.axi_fabric_a                random start seq=16 write M2 ID3 S1 LEN9
@@ -300,11 +300,11 @@ rm Vtop__ALL.verilator_deplist.tmp
  45970.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=5 cycle=4598 data=0x1001000800000005 strb=0xcf last=0
  45990.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=6 cycle=4600 data=0x1001000800000006 strb=0xa5 last=1
  46070.00ns INFO     cocotb.axi_fabric_a                random start seq=4 read M1 ID14 S0 LEN5
- 46090.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID14 cycle=4610 addr=0x140 len=5
+ 46090.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID14 cycle=4610 addr=0x240 len=5
  46090.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID14 cycle=4610
  46090.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID14 cycle=4610
  46350.00ns INFO     cocotb.axi_fabric_a                random start seq=11 read M1 ID14 S1 LEN2
- 46370.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID14 cycle=4638 addr=0x10000300 len=2
+ 46370.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID14 cycle=4638 addr=0x100005c0 len=2
  46370.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID14 cycle=4638
  46370.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID14 cycle=4638
  46540.00ns INFO     cocotb.axi_fabric_a                random start seq=14 write M1 ID7 S1 LEN7
@@ -337,7 +337,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  47520.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=4753 data=0x1000000300000000 strb=0x55 last=0
  47540.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=1 cycle=4755 data=0x1000000300000001 strb=0x92 last=1
  47620.00ns INFO     cocotb.axi_fabric_a                random start seq=20 read M0 ID14 S0 LEN13
- 47640.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=4765 addr=0x540 len=13
+ 47640.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=4765 addr=0xa40 len=13
  47640.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID14 cycle=4765
  47640.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID14 cycle=4765
  47680.00ns INFO     cocotb.axi_fabric_a                random start seq=21 read M2 ID1 S2 LEN3
@@ -364,7 +364,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  48230.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=4824 data=0x1002000700000001 strb=0xba last=1
  48310.00ns INFO     cocotb.axi_fabric_a                random start seq=24 write M0 ID4 S1 LEN1
  48310.00ns INFO     cocotb.axi_fabric_a                random start seq=33 read M2 ID11 S0 LEN13
- 48330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID11 cycle=4834 addr=0x900 len=13
+ 48330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID11 cycle=4834 addr=0x11c0 len=13
  48330.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID11 cycle=4834
  48330.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID11 cycle=4834
  48330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=0 cycle=4834 data=0x1000000400000000 strb=0x81 last=0
@@ -374,7 +374,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  48500.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=1 cycle=4851 data=0x1000000e00000001 strb=0x66 last=0
  48520.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=2 cycle=4853 data=0x1000000e00000002 strb=0xb7 last=1
  48610.00ns INFO     cocotb.axi_fabric_a                random start seq=27 read M0 ID8 S1 LEN1
- 48630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID8 cycle=4864 addr=0x10000700 len=1
+ 48630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID8 cycle=4864 addr=0x10000dc0 len=1
  48630.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID8 cycle=4864
  48630.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID8 cycle=4864
  48770.00ns INFO     cocotb.axi_fabric_a                random start seq=28 write M0 ID15 S2 LEN6
@@ -391,7 +391,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  49070.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID10 cycle=4908
  49070.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID10 cycle=4908
  49140.00ns INFO     cocotb.axi_fabric_a                random start seq=31 read M0 ID1 S0 LEN4
- 49160.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID1 cycle=4917 addr=0x880 len=4
+ 49160.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID1 cycle=4917 addr=0x10c0 len=4
  49160.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID1 cycle=4917
  49160.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID1 cycle=4917
  49260.00ns INFO     cocotb.axi_fabric_a                random start seq=22 write M1 ID2 S1 LEN3
@@ -401,12 +401,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  49340.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=3 cycle=4935 data=0x1001000200000003 strb=0x18 last=1
  49440.00ns INFO     cocotb.axi_fabric_a                random start seq=30 write M1 ID7 S3 LEN7
  49440.00ns INFO     cocotb.axi_fabric_a                random start seq=32 read M0 ID1 S1 LEN7
- 49460.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID1 cycle=4947 addr=0x100008c0 len=7
+ 49460.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID1 cycle=4947 addr=0x10001140 len=7
  49460.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID1 cycle=4947
  49460.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID1 cycle=4947
  49600.00ns INFO     cocotb.axi_fabric_a                random start seq=35 read M1 ID4 S0 LEN6
  49600.00ns INFO     cocotb.axi_fabric_a                random start seq=38 read M2 ID13 S2 LEN12
- 49620.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID4 cycle=4963 addr=0x980 len=6
+ 49620.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID4 cycle=4963 addr=0x12c0 len=6
  49620.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID4 cycle=4963
  49620.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID13 cycle=4963 addr=0x20000400 len=12
  49620.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID13 cycle=4963
@@ -417,7 +417,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  49860.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=1 cycle=4987 data=0x1000000c00000001 strb=0x30 last=1
  49960.00ns INFO     cocotb.axi_fabric_a                random start seq=43 read M1 ID5 S1 LEN1
  49960.00ns INFO     cocotb.axi_fabric_a                random start seq=37 write M0 ID14 S0 LEN3
- 49980.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID5 cycle=4999 addr=0x10000b80 len=1
+ 49980.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID5 cycle=4999 addr=0x100016c0 len=1
  49980.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID5 cycle=4999
  49980.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID5 cycle=4999
  49980.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=4999 data=0x1000000e00000000 strb=0xaa last=0
@@ -434,14 +434,14 @@ rm Vtop__ALL.verilator_deplist.tmp
  50180.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=5 cycle=5019 data=0x1001000d00000005 strb=0x2c last=0
  50190.00ns INFO     cocotb.axi_fabric_a                random start seq=42 read M2 ID10 S1 LEN3
  50200.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=6 cycle=5021 data=0x1001000d00000006 strb=0x5 last=1
- 50210.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID10 cycle=5022 addr=0x10000b40 len=3
+ 50210.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID10 cycle=5022 addr=0x10001640 len=3
  50210.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID10 cycle=5022
  50210.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID10 cycle=5022
  50260.00ns INFO     cocotb.axi_fabric_a                random start seq=39 read M0 ID5 S2 LEN3
  50260.00ns INFO     cocotb.axi_fabric_a                random start seq=46 read M1 ID12 S0 LEN13
  50280.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S2 ID5 cycle=5029 addr=0x20000440 len=3
  50280.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID5 cycle=5029
- 50280.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID12 cycle=5029 addr=0xc40 len=13
+ 50280.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID12 cycle=5029 addr=0x1840 len=13
  50280.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID12 cycle=5029
  50280.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S2 ID5 cycle=5029
  50280.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID12 cycle=5029
@@ -463,22 +463,22 @@ rm Vtop__ALL.verilator_deplist.tmp
  50740.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=6 cycle=5075 data=0x1000000800000006 strb=0xe9 last=0
  50760.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=7 cycle=5077 data=0x1000000800000007 strb=0xc7 last=1
  50780.00ns INFO     cocotb.axi_fabric_a                random start seq=47 read M1 ID1 S0 LEN13
- 50800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=5081 addr=0xc80 len=13
+ 50800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=5081 addr=0x18c0 len=13
  50800.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID1 cycle=5081
  50800.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID1 cycle=5081
  50870.00ns INFO     cocotb.axi_fabric_a                random start seq=49 read M0 ID8 S3 LEN10
  51040.00ns INFO     cocotb.axi_fabric_a                random start seq=52 read M0 ID13 S1 LEN13
- 51060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID13 cycle=5107 addr=0x10000dc0 len=13
+ 51060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID13 cycle=5107 addr=0x10001b40 len=13
  51060.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID13 cycle=5107
  51060.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID13 cycle=5107
  51110.00ns INFO     cocotb.axi_fabric_a                random start seq=48 write M1 ID11 S3 LEN3
  51110.00ns INFO     cocotb.axi_fabric_a                random start seq=54 read M2 ID12 S0 LEN6
- 51130.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=5114 addr=0xe40 len=6
+ 51130.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=5114 addr=0x1c40 len=6
  51130.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID12 cycle=5114
  51130.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID12 cycle=5114
  51510.00ns INFO     cocotb.axi_fabric_a                random start seq=53 read M0 ID0 S3 LEN0
  51510.00ns INFO     cocotb.axi_fabric_a                random start seq=51 read M1 ID7 S1 LEN12
- 51530.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID7 cycle=5154 addr=0x10000d80 len=12
+ 51530.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID7 cycle=5154 addr=0x10001ac0 len=12
  51530.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID7 cycle=5154
  51530.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID7 cycle=5154
  51580.00ns INFO     cocotb.axi_fabric_a                random start seq=55 read M0 ID13 S2 LEN0
@@ -512,7 +512,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  52150.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=2 cycle=5216 data=0x1001000500000002 strb=0x2e last=1
  52170.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=4 cycle=5218 data=0x1002000500000004 strb=0xed last=1
  52260.00ns INFO     cocotb.axi_fabric_a                random start seq=69 read M0 ID6 S0 LEN15
- 52280.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=5229 addr=0x1280 len=15
+ 52280.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=5229 addr=0x24c0 len=15
  52280.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID6 cycle=5229
  52280.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID6 cycle=5229
  52810.00ns INFO     cocotb.axi_fabric_a                random start seq=58 write M1 ID12 S0 LEN4
@@ -523,7 +523,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  52910.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=4 cycle=5292 data=0x1001000c00000004 strb=0x5e last=1
  52980.00ns INFO     cocotb.axi_fabric_a                random start seq=74 read M2 ID13 S0 LEN7
  52980.00ns INFO     cocotb.axi_fabric_a                random start seq=59 read M1 ID15 S2 LEN14
- 53000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID13 cycle=5301 addr=0x13c0 len=7
+ 53000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID13 cycle=5301 addr=0x2740 len=7
  53000.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID13 cycle=5301
  53000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S2 ID15 cycle=5301 addr=0x20000340 len=14
  53000.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S2 ID15 cycle=5301
@@ -531,7 +531,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  53000.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S2 ID15 cycle=5301
  53190.00ns INFO     cocotb.axi_fabric_a                random start seq=70 write M0 ID13 S0 LEN15
  53190.00ns INFO     cocotb.axi_fabric_a                random start seq=76 read M2 ID2 S1 LEN12
- 53210.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID2 cycle=5322 addr=0x10001440 len=12
+ 53210.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID2 cycle=5322 addr=0x10002840 len=12
  53210.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID2 cycle=5322
  53210.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID2 cycle=5322
  53210.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=5322 data=0x1000000d00000000 strb=0xff last=0
@@ -551,7 +551,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  53490.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=14 cycle=5350 data=0x1000000d0000000e strb=0x9a last=0
  53510.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=15 cycle=5352 data=0x1000000d0000000f strb=0xc7 last=1
  53630.00ns INFO     cocotb.axi_fabric_a                random start seq=60 read M1 ID11 S0 LEN14
- 53650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=5366 addr=0x1040 len=14
+ 53650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=5366 addr=0x2040 len=14
  53650.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID11 cycle=5366
  53650.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID11 cycle=5366
  53790.00ns INFO     cocotb.axi_fabric_a                random start seq=78 read M2 ID13 S3 LEN3
@@ -618,7 +618,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  54750.00ns INFO     cocotb.axi_fabric_a                random start seq=89 read M2 ID8 S0 LEN7
  54750.00ns INFO     cocotb.axi_fabric_a                random start seq=75 write M0 ID12 S1 LEN14
  54750.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=7 cycle=5476 data=0x1001000d00000007 strb=0xfb last=0
- 54770.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID8 cycle=5478 addr=0x1780 len=7
+ 54770.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID8 cycle=5478 addr=0x2ec0 len=7
  54770.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID8 cycle=5478
  54770.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=8 cycle=5478 data=0x1001000d00000008 strb=0xb last=0
  54770.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID8 cycle=5478
@@ -644,7 +644,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  55030.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=13 cycle=5504 data=0x1000000c0000000d strb=0xa8 last=0
  55050.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=14 cycle=5506 data=0x1000000c0000000e strb=0xcd last=1
  55080.00ns INFO     cocotb.axi_fabric_a                random start seq=96 read M2 ID10 S0 LEN3
- 55100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID10 cycle=5511 addr=0x19c0 len=3
+ 55100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID10 cycle=5511 addr=0x3340 len=3
  55100.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID10 cycle=5511
  55100.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID10 cycle=5511
  55130.00ns INFO     cocotb.axi_fabric_a                random start seq=67 write M1 ID3 S1 LEN1
@@ -655,7 +655,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  55170.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=1 cycle=5518 data=0x1000000500000001 strb=0xdf last=0
  55190.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=2 cycle=5520 data=0x1000000500000002 strb=0x78 last=1
  55220.00ns INFO     cocotb.axi_fabric_a                random start seq=68 read M1 ID15 S0 LEN0
- 55240.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=5525 addr=0x1240 len=0
+ 55240.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=5525 addr=0x2440 len=0
  55240.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID15 cycle=5525
  55240.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID15 cycle=5525
  55280.00ns INFO     cocotb.axi_fabric_a                random start seq=100 write M2 ID11 S2 LEN6
@@ -670,12 +670,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  55490.00ns INFO     cocotb.axi_fabric_a                random start seq=101 read M2 ID11 S1 LEN0
  55510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S2 ID15 cycle=5552 addr=0x20000300 len=8
  55510.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID15 cycle=5552
- 55510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID11 cycle=5552 addr=0x10001b00 len=0
+ 55510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID11 cycle=5552 addr=0x100035c0 len=0
  55510.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID11 cycle=5552
  55510.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S2 ID15 cycle=5552
  55510.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID11 cycle=5552
  55590.00ns INFO     cocotb.axi_fabric_a                random start seq=102 read M2 ID11 S1 LEN11
- 55610.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID11 cycle=5562 addr=0x10001b40 len=11
+ 55610.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID11 cycle=5562 addr=0x10003640 len=11
  55610.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID11 cycle=5562
  55610.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID11 cycle=5562
  55880.00ns INFO     cocotb.axi_fabric_a                random start seq=105 write M2 ID5 S0 LEN14
@@ -699,7 +699,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  56160.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=13 cycle=5617 data=0x100200050000000d strb=0xb6 last=0
  56180.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=14 cycle=5619 data=0x100200050000000e strb=0xbf last=1
  56230.00ns INFO     cocotb.axi_fabric_a                random start seq=107 read M2 ID1 S1 LEN3
- 56250.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID1 cycle=5626 addr=0x10001c80 len=3
+ 56250.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID1 cycle=5626 addr=0x100038c0 len=3
  56250.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID1 cycle=5626
  56250.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID1 cycle=5626
  56390.00ns INFO     cocotb.axi_fabric_a                random start seq=83 write M0 ID14 S2 LEN11
@@ -708,7 +708,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  56450.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=2 cycle=5646 data=0x1000000e00000002 strb=0x89 last=0
  56460.00ns INFO     cocotb.axi_fabric_a                random start seq=77 read M1 ID0 S1 LEN6
  56470.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=3 cycle=5648 data=0x1000000e00000003 strb=0xbb last=0
- 56480.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=5649 addr=0x10001480 len=6
+ 56480.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=5649 addr=0x100028c0 len=6
  56480.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID0 cycle=5649
  56480.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID0 cycle=5649
  56490.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=4 cycle=5650 data=0x1000000e00000004 strb=0xd1 last=0
@@ -728,7 +728,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  56910.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=5692 data=0x1002000200000001 strb=0xbf last=0
  56930.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=5694 data=0x1002000200000002 strb=0x8d last=1
  56990.00ns INFO     cocotb.axi_fabric_a                random start seq=98 read M0 ID5 S1 LEN13
- 57010.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID5 cycle=5702 addr=0x10001a40 len=13
+ 57010.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID5 cycle=5702 addr=0x10003440 len=13
  57010.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID5 cycle=5702
  57010.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID5 cycle=5702
  57320.00ns INFO     cocotb.axi_fabric_a                random start seq=80 write M1 ID13 S0 LEN15
@@ -754,7 +754,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  57750.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S2 ID5 cycle=5776
  57760.00ns INFO     cocotb.axi_fabric_a                random start seq=119 write M2 ID1 S1 LEN5
  57760.00ns INFO     cocotb.axi_fabric_a                random start seq=99 read M0 ID8 S0 LEN8
- 57780.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=5779 addr=0x1a80 len=8
+ 57780.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=5779 addr=0x34c0 len=8
  57780.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID8 cycle=5779
  57790.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=5780 data=0x1002000100000000 strb=0x81 last=0
  57800.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID8 cycle=5781
@@ -771,7 +771,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  58150.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=3 cycle=5816 data=0x1002000d00000003 strb=0x3d last=0
  58160.00ns INFO     cocotb.axi_fabric_a                random start seq=86 read M1 ID6 S1 LEN5
  58170.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=4 cycle=5818 data=0x1002000d00000004 strb=0x85 last=0
- 58180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID6 cycle=5819 addr=0x100016c0 len=5
+ 58180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID6 cycle=5819 addr=0x10002d40 len=5
  58180.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID6 cycle=5819
  58180.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID6 cycle=5819
  58190.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=5820 data=0x1002000d00000005 strb=0x81 last=0
@@ -782,7 +782,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  58290.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=10 cycle=5830 data=0x1002000d0000000a strb=0xd last=0
  58310.00ns INFO     cocotb.axi_fabric_a                random start seq=103 read M0 ID8 S0 LEN12
  58310.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=11 cycle=5832 data=0x1002000d0000000b strb=0xa1 last=0
- 58330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=5834 addr=0x1b80 len=12
+ 58330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=5834 addr=0x36c0 len=12
  58330.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID8 cycle=5834
  58330.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=12 cycle=5834 data=0x1002000d0000000c strb=0xe2 last=0
  58330.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID8 cycle=5834
@@ -794,11 +794,11 @@ rm Vtop__ALL.verilator_deplist.tmp
  58530.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S2 ID6 cycle=5854
  58530.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S2 ID6 cycle=5854
  58610.00ns INFO     cocotb.axi_fabric_a                random start seq=126 read M2 ID0 S0 LEN15
- 58630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID0 cycle=5864 addr=0x21c0 len=15
+ 58630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID0 cycle=5864 addr=0x4340 len=15
  58630.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID0 cycle=5864
  58630.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID0 cycle=5864
  58770.00ns INFO     cocotb.axi_fabric_a                random start seq=92 read M1 ID3 S1 LEN5
- 58790.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=5880 addr=0x100018c0 len=5
+ 58790.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=5880 addr=0x10003140 len=5
  58790.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID3 cycle=5880
  58810.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID3 cycle=5882
  59110.00ns INFO     cocotb.axi_fabric_a                random start seq=93 write M1 ID0 S3 LEN11
@@ -835,9 +835,9 @@ rm Vtop__ALL.verilator_deplist.tmp
  59750.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=1 cycle=5976 data=0x1002000a00000001 strb=0x6e last=1
  59790.00ns INFO     cocotb.axi_fabric_a                random start seq=95 read M1 ID11 S0 LEN14
  59790.00ns INFO     cocotb.axi_fabric_a                random start seq=110 read M0 ID13 S1 LEN3
- 59810.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=5982 addr=0x1980 len=14
+ 59810.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=5982 addr=0x32c0 len=14
  59810.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID11 cycle=5982
- 59810.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID13 cycle=5982 addr=0x10001d40 len=3
+ 59810.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID13 cycle=5982 addr=0x10003a40 len=3
  59810.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID13 cycle=5982
  59810.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID11 cycle=5982
  59810.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID13 cycle=5982
@@ -846,7 +846,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  60330.00ns INFO     cocotb.axi_fabric_a                random start seq=97 write M1 ID5 S3 LEN4
  60330.00ns INFO     cocotb.axi_fabric_a                random start seq=116 read M0 ID7 S1 LEN2
  60330.00ns INFO     cocotb.axi_fabric_a                random start seq=131 write M2 ID7 S0 LEN15
- 60350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID7 cycle=6036 addr=0x10001ec0 len=2
+ 60350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID7 cycle=6036 addr=0x10003d40 len=2
  60350.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID7 cycle=6036
  60350.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID7 cycle=6036
  60350.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=6036 data=0x1002000700000000 strb=0x0 last=0
@@ -893,7 +893,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  60880.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=6089 data=0x1002000100000005 strb=0x94 last=1
  60970.00ns INFO     cocotb.axi_fabric_a                random start seq=129 write M0 ID7 S0 LEN4
  60970.00ns INFO     cocotb.axi_fabric_a                random start seq=134 read M2 ID14 S1 LEN12
- 60990.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID14 cycle=6100 addr=0x100023c0 len=12
+ 60990.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID14 cycle=6100 addr=0x10004740 len=12
  60990.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID14 cycle=6100
  60990.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID14 cycle=6100
  60990.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=6100 data=0x1000000700000000 strb=0x81 last=0
@@ -920,7 +920,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  61530.00ns INFO     cocotb.axi_fabric_a                random start seq=135 write M2 ID10 S3 LEN2
  61530.00ns INFO     cocotb.axi_fabric_a                random start seq=111 read M1 ID13 S1 LEN13
  61540.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=3 cycle=6155 data=0x1000000f00000003 strb=0x7a last=0
- 61550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID13 cycle=6156 addr=0x10001d80 len=13
+ 61550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID13 cycle=6156 addr=0x10003ac0 len=13
  61550.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID13 cycle=6156
  61550.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID13 cycle=6156
  61560.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=4 cycle=6157 data=0x1000000f00000004 strb=0x67 last=0
@@ -974,7 +974,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  62720.00ns INFO     cocotb.axi_fabric_a                random start seq=117 write M1 ID5 S3 LEN4
  62720.00ns INFO     cocotb.axi_fabric_a                random start seq=148 read M2 ID1 S0 LEN2
  62720.00ns INFO     cocotb.axi_fabric_a                random start seq=146 write M0 ID13 S2 LEN11
- 62740.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID1 cycle=6275 addr=0x2740 len=2
+ 62740.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID1 cycle=6275 addr=0x4e40 len=2
  62740.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID1 cycle=6275
  62740.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID1 cycle=6275
  62740.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=6275 data=0x1000000d00000000 strb=0x0 last=0
@@ -1026,9 +1026,9 @@ rm Vtop__ALL.verilator_deplist.tmp
  63550.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=15 cycle=6356 data=0x1002000e0000000f strb=0xf0 last=1
  63640.00ns INFO     cocotb.axi_fabric_a                random start seq=120 read M1 ID3 S1 LEN15
  63640.00ns INFO     cocotb.axi_fabric_a                random start seq=154 read M2 ID7 S0 LEN9
- 63660.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=6367 addr=0x10002040 len=15
+ 63660.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=6367 addr=0x10004040 len=15
  63660.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID3 cycle=6367
- 63660.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID7 cycle=6367 addr=0x2940 len=9
+ 63660.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID7 cycle=6367 addr=0x5240 len=9
  63660.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID7 cycle=6367
  63660.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID7 cycle=6367
  63670.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID3 cycle=6368
@@ -1045,35 +1045,35 @@ rm Vtop__ALL.verilator_deplist.tmp
  64220.00ns INFO     cocotb.axi_fabric_a                random start seq=156 write M0 ID11 S0 LEN0
  64240.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=6425 data=0x1000000b00000000 strb=0x0 last=1
  64330.00ns INFO     cocotb.axi_fabric_a                random start seq=157 read M0 ID4 S0 LEN6
- 64350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID4 cycle=6436 addr=0x2a00 len=6
+ 64350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID4 cycle=6436 addr=0x53c0 len=6
  64350.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID4 cycle=6436
  64350.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID4 cycle=6436
  64490.00ns INFO     cocotb.axi_fabric_a                random start seq=162 read M2 ID7 S1 LEN6
- 64510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID7 cycle=6452 addr=0x10002b40 len=6
+ 64510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID7 cycle=6452 addr=0x10005640 len=6
  64510.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID7 cycle=6452
  64510.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID7 cycle=6452
  64630.00ns INFO     cocotb.axi_fabric_a                random start seq=121 read M1 ID9 S0 LEN10
- 64650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID9 cycle=6466 addr=0x2080 len=10
+ 64650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID9 cycle=6466 addr=0x40c0 len=10
  64650.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID9 cycle=6466
  64650.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID9 cycle=6466
  64830.00ns INFO     cocotb.axi_fabric_a                random start seq=159 read M0 ID1 S1 LEN11
- 64850.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID1 cycle=6486 addr=0x10002a80 len=11
+ 64850.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID1 cycle=6486 addr=0x100054c0 len=11
  64850.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID1 cycle=6486
  64850.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID1 cycle=6486
  65160.00ns INFO     cocotb.axi_fabric_a                random start seq=164 read M2 ID14 S1 LEN7
- 65180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID14 cycle=6519 addr=0x10002bc0 len=7
+ 65180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID14 cycle=6519 addr=0x10005740 len=7
  65180.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID14 cycle=6519
  65180.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID14 cycle=6519
  65230.00ns INFO     cocotb.axi_fabric_a                random start seq=160 read M0 ID1 S0 LEN12
- 65250.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID1 cycle=6526 addr=0x2ac0 len=12
+ 65250.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID1 cycle=6526 addr=0x5540 len=12
  65250.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID1 cycle=6526
  65250.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID1 cycle=6526
  65610.00ns INFO     cocotb.axi_fabric_a                random start seq=124 read M1 ID14 S1 LEN11
- 65630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID14 cycle=6564 addr=0x10002140 len=11
+ 65630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID14 cycle=6564 addr=0x10004240 len=11
  65630.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID14 cycle=6564
  65630.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID14 cycle=6564
  65900.00ns INFO     cocotb.axi_fabric_a                random start seq=167 read M2 ID8 S1 LEN1
- 65920.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID8 cycle=6593 addr=0x10002c80 len=1
+ 65920.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID8 cycle=6593 addr=0x100058c0 len=1
  65920.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID8 cycle=6593
  65920.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID8 cycle=6593
  66060.00ns INFO     cocotb.axi_fabric_a                random start seq=132 write M1 ID2 S1 LEN11
@@ -1105,19 +1105,19 @@ rm Vtop__ALL.verilator_deplist.tmp
  66320.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=12 cycle=6633 data=0x100200060000000c strb=0xd5 last=1
  66380.00ns INFO     cocotb.axi_fabric_a                random start seq=161 read M0 ID2 S1 LEN9
  66390.00ns INFO     cocotb.axi_fabric_a                random start seq=172 read M2 ID0 S0 LEN6
- 66400.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID2 cycle=6641 addr=0x10002b00 len=9
+ 66400.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID2 cycle=6641 addr=0x100055c0 len=9
  66400.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID2 cycle=6641
  66400.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID2 cycle=6641
- 66410.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID0 cycle=6642 addr=0x2dc0 len=6
+ 66410.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID0 cycle=6642 addr=0x5b40 len=6
  66410.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID0 cycle=6642
  66410.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID0 cycle=6642
  66780.00ns INFO     cocotb.axi_fabric_a                random start seq=174 read M2 ID1 S0 LEN11
- 66800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID1 cycle=6681 addr=0x2e40 len=11
+ 66800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID1 cycle=6681 addr=0x5c40 len=11
  66800.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID1 cycle=6681
  66800.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID1 cycle=6681
  66870.00ns INFO     cocotb.axi_fabric_a                random start seq=163 write M0 ID3 S3 LEN2
  66870.00ns INFO     cocotb.axi_fabric_a                random start seq=136 read M1 ID2 S1 LEN5
- 66890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID2 cycle=6690 addr=0x10002440 len=5
+ 66890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID2 cycle=6690 addr=0x10004840 len=5
  66890.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID2 cycle=6690
  66890.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID2 cycle=6690
  66980.00ns INFO     cocotb.axi_fabric_a                random start seq=166 read M0 ID13 S2 LEN5
@@ -1159,7 +1159,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  67550.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=6756 data=0x1002000100000000 strb=0x0 last=0
  67570.00ns INFO     cocotb.axi_fabric_a                random start seq=139 read M1 ID15 S1 LEN2
  67570.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=6758 data=0x1002000100000001 strb=0x29 last=0
- 67590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=6760 addr=0x10002500 len=2
+ 67590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=6760 addr=0x100049c0 len=2
  67590.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID15 cycle=6760
  67590.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=6760 data=0x1002000100000002 strb=0x6b last=0
  67590.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID15 cycle=6760
@@ -1179,14 +1179,14 @@ rm Vtop__ALL.verilator_deplist.tmp
  67850.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=15 cycle=6786 data=0x100200010000000f strb=0xd4 last=1
  67980.00ns INFO     cocotb.axi_fabric_a                random start seq=169 read M0 ID8 S0 LEN9
  67980.00ns INFO     cocotb.axi_fabric_a                random start seq=179 write M2 ID12 S1 LEN1
- 68000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=6801 addr=0x2d00 len=9
+ 68000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=6801 addr=0x59c0 len=9
  68000.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID8 cycle=6801
  68000.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=6801 data=0x1002000c00000000 strb=0x81 last=0
  68010.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID8 cycle=6802
  68020.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=6803 data=0x1002000c00000001 strb=0x65 last=1
  68280.00ns INFO     cocotb.axi_fabric_a                random start seq=141 read M1 ID1 S0 LEN7
  68280.00ns INFO     cocotb.axi_fabric_a                random start seq=171 write M0 ID6 S2 LEN4
- 68300.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=6831 addr=0x2580 len=7
+ 68300.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=6831 addr=0x4ac0 len=7
  68300.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID1 cycle=6831
  68300.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=6831 data=0x1000000600000000 strb=0x0 last=0
  68310.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID1 cycle=6832
@@ -1201,11 +1201,11 @@ rm Vtop__ALL.verilator_deplist.tmp
  68570.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=3 cycle=6858 data=0x1000000000000003 strb=0xc5 last=0
  68590.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=6860 data=0x1000000000000004 strb=0x4f last=1
  68780.00ns INFO     cocotb.axi_fabric_a                random start seq=182 read M2 ID12 S0 LEN0
- 68800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=6881 addr=0x30c0 len=0
+ 68800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=6881 addr=0x6140 len=0
  68800.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID12 cycle=6881
  68800.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID12 cycle=6881
  68870.00ns INFO     cocotb.axi_fabric_a                random start seq=175 read M0 ID14 S0 LEN10
- 68890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=6890 addr=0x2e80 len=10
+ 68890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=6890 addr=0x5cc0 len=10
  68890.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID14 cycle=6890
  68890.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID14 cycle=6890
  69260.00ns INFO     cocotb.axi_fabric_a                random start seq=145 write M1 ID6 S0 LEN9
@@ -1239,12 +1239,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  69570.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=6958 data=0x1002000100000000 strb=0x81 last=0
  69590.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=6960 data=0x1002000100000001 strb=0x1d last=1
  69670.00ns INFO     cocotb.axi_fabric_a                random start seq=178 read M0 ID12 S1 LEN11
- 69690.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID12 cycle=6970 addr=0x10002f40 len=11
+ 69690.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID12 cycle=6970 addr=0x10005e40 len=11
  69690.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID12 cycle=6970
  69690.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID12 cycle=6970
  69710.00ns INFO     cocotb.axi_fabric_a                random start seq=150 read M1 ID0 S0 LEN8
  69710.00ns INFO     cocotb.axi_fabric_a                random start seq=185 read M2 ID5 S2 LEN6
- 69730.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID0 cycle=6974 addr=0x2840 len=8
+ 69730.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID0 cycle=6974 addr=0x5040 len=8
  69730.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID0 cycle=6974
  69730.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID5 cycle=6974 addr=0x200004c0 len=6
  69730.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID5 cycle=6974
@@ -1255,7 +1255,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  70080.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID15 cycle=7009
  70080.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID15 cycle=7009
  70130.00ns INFO     cocotb.axi_fabric_a                random start seq=180 read M0 ID11 S0 LEN6
- 70150.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID11 cycle=7016 addr=0x3040 len=6
+ 70150.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID11 cycle=7016 addr=0x6040 len=6
  70150.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID11 cycle=7016
  70150.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID11 cycle=7016
  70160.00ns INFO     cocotb.axi_fabric_a                random start seq=152 write M1 ID4 S2 LEN13
@@ -1275,7 +1275,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  70440.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=13 cycle=7045 data=0x100100040000000d strb=0x16 last=1
  70530.00ns INFO     cocotb.axi_fabric_a                random start seq=187 read M0 ID1 S0 LEN3
  70530.00ns INFO     cocotb.axi_fabric_a                random start seq=195 read M2 ID1 S2 LEN8
- 70550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID1 cycle=7056 addr=0x3200 len=3
+ 70550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID1 cycle=7056 addr=0x63c0 len=3
  70550.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID1 cycle=7056
  70550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID1 cycle=7056 addr=0x20000140 len=8
  70550.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID1 cycle=7056
@@ -1325,7 +1325,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  71330.00ns INFO     cocotb.axi_fabric_a                random start seq=201 write M2 ID13 S0 LEN0
  71350.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=7136 data=0x1002000d00000000 strb=0x0 last=1
  71440.00ns INFO     cocotb.axi_fabric_a                random start seq=189 read M0 ID3 S0 LEN6
- 71460.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID3 cycle=7147 addr=0x3280 len=6
+ 71460.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID3 cycle=7147 addr=0x64c0 len=6
  71460.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID3 cycle=7147
  71460.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID3 cycle=7147
  71660.00ns INFO     cocotb.axi_fabric_a                random start seq=203 write M2 ID3 S0 LEN10
@@ -1355,7 +1355,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  72230.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=11 cycle=7224 data=0x1001000c0000000b strb=0x10 last=1
  72300.00ns INFO     cocotb.axi_fabric_a                random start seq=190 read M0 ID0 S0 LEN9
  72300.00ns INFO     cocotb.axi_fabric_a                random start seq=186 write M1 ID8 S2 LEN5
- 72320.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID0 cycle=7233 addr=0x32c0 len=9
+ 72320.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID0 cycle=7233 addr=0x6540 len=9
  72320.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID0 cycle=7233
  72320.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID0 cycle=7233
  72320.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=0 cycle=7233 data=0x1001000800000000 strb=0x0 last=0
@@ -1415,12 +1415,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  73630.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=11 cycle=7364 data=0x100100080000000b strb=0x6c last=0
  73650.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=12 cycle=7366 data=0x100100080000000c strb=0xb1 last=1
  73690.00ns INFO     cocotb.axi_fabric_a                random start seq=197 read M0 ID6 S0 LEN7
- 73710.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=7372 addr=0x3480 len=7
+ 73710.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=7372 addr=0x68c0 len=7
  73710.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID6 cycle=7372
  73710.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID6 cycle=7372
  73970.00ns INFO     cocotb.axi_fabric_a                random start seq=210 read M2 ID6 S0 LEN1
  73970.00ns INFO     cocotb.axi_fabric_a                random start seq=199 write M0 ID12 S2 LEN0
- 73990.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=7400 addr=0x3840 len=1
+ 73990.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=7400 addr=0x7040 len=1
  73990.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID6 cycle=7400
  73990.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID6 cycle=7400
  73990.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=7400 data=0x1000000c00000000 strb=0x81 last=1
@@ -1466,7 +1466,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  74580.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=2 cycle=7459 data=0x1000000900000002 strb=0x5b last=0
  74590.00ns INFO     cocotb.axi_fabric_a                random start seq=222 read M2 ID12 S0 LEN1
  74600.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=3 cycle=7461 data=0x1000000900000003 strb=0xe last=0
- 74610.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=7462 addr=0x3b40 len=1
+ 74610.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=7462 addr=0x7640 len=1
  74610.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID12 cycle=7462
  74610.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID12 cycle=7462
  74620.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=7463 data=0x1000000900000004 strb=0x4e last=0
@@ -1478,7 +1478,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  74780.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=7479 data=0x1002000d00000000 strb=0xff last=0
  74800.00ns INFO     cocotb.axi_fabric_a                random start seq=205 read M1 ID1 S1 LEN0
  74800.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=7481 data=0x1002000d00000001 strb=0xcb last=0
- 74820.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID1 cycle=7483 addr=0x10003680 len=0
+ 74820.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID1 cycle=7483 addr=0x10006cc0 len=0
  74820.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID1 cycle=7483
  74820.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=7483 data=0x1002000d00000002 strb=0xd7 last=0
  74820.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID1 cycle=7483
@@ -1487,7 +1487,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  74880.00ns INFO     cocotb.axi_fabric_a                random start seq=207 write M1 ID3 S3 LEN7
  74880.00ns INFO     cocotb.axi_fabric_a                random start seq=214 read M0 ID10 S1 LEN9
  74880.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=7489 data=0x1002000d00000005 strb=0x6e last=0
- 74900.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID10 cycle=7491 addr=0x10003940 len=9
+ 74900.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID10 cycle=7491 addr=0x10007240 len=9
  74900.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID10 cycle=7491
  74900.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=6 cycle=7491 data=0x1002000d00000006 strb=0xfe last=0
  74900.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID10 cycle=7491
@@ -1498,16 +1498,16 @@ rm Vtop__ALL.verilator_deplist.tmp
  75080.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=7509 data=0x1002000000000000 strb=0xff last=0
  75100.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=7511 data=0x1002000000000001 strb=0x9f last=1
  75250.00ns INFO     cocotb.axi_fabric_a                random start seq=208 read M1 ID12 S1 LEN9
- 75270.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID12 cycle=7528 addr=0x10003740 len=9
+ 75270.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID12 cycle=7528 addr=0x10006e40 len=9
  75270.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID12 cycle=7528
  75270.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID12 cycle=7528
  75690.00ns INFO     cocotb.axi_fabric_a                random start seq=248 read M2 ID0 S1 LEN0
- 75710.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID0 cycle=7572 addr=0x10004240 len=0
+ 75710.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID0 cycle=7572 addr=0x10008440 len=0
  75710.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID0 cycle=7572
  75710.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID0 cycle=7572
  75780.00ns INFO     cocotb.axi_fabric_a                random start seq=218 write M0 ID3 S1 LEN0
  75780.00ns INFO     cocotb.axi_fabric_a                random start seq=249 read M2 ID8 S0 LEN7
- 75800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID8 cycle=7581 addr=0x4280 len=7
+ 75800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID8 cycle=7581 addr=0x84c0 len=7
  75800.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID8 cycle=7581
  75800.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID8 cycle=7581
  75800.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=0 cycle=7581 data=0x1000000300000000 strb=0x55 last=1
@@ -1533,10 +1533,10 @@ rm Vtop__ALL.verilator_deplist.tmp
  76320.00ns INFO     cocotb.axi_fabric_a                random start seq=223 read M0 ID10 S3 LEN11
  76330.00ns INFO     cocotb.axi_fabric_a                random start seq=216 read M1 ID12 S0 LEN3
  76340.00ns INFO     cocotb.axi_fabric_a                random start seq=261 read M2 ID13 S1 LEN15
- 76350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID12 cycle=7636 addr=0x39c0 len=3
+ 76350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID12 cycle=7636 addr=0x7340 len=3
  76350.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID12 cycle=7636
  76350.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID12 cycle=7636
- 76360.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID13 cycle=7637 addr=0x10004580 len=15
+ 76360.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID13 cycle=7637 addr=0x10008ac0 len=15
  76360.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID13 cycle=7637
  76360.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID13 cycle=7637
  76500.00ns INFO     cocotb.axi_fabric_a                random start seq=217 write M1 ID9 S0 LEN7
@@ -1552,7 +1552,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  76800.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=0 cycle=7681 data=0x1001000800000000 strb=0x81 last=1
  76880.00ns INFO     cocotb.axi_fabric_a                random start seq=225 read M0 ID4 S1 LEN15
  76880.00ns INFO     cocotb.axi_fabric_a                random start seq=264 write M2 ID1 S0 LEN8
- 76900.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID4 cycle=7691 addr=0x10003c00 len=15
+ 76900.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID4 cycle=7691 addr=0x100077c0 len=15
  76900.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID4 cycle=7691
  76900.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=7691 data=0x1002000100000000 strb=0x81 last=0
  76910.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID4 cycle=7692
@@ -1645,7 +1645,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  78850.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=10 cycle=7886 data=0x100200060000000a strb=0x13 last=0
  78870.00ns INFO     cocotb.axi_fabric_a                random start seq=239 read M0 ID3 S1 LEN9
  78870.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=11 cycle=7888 data=0x100200060000000b strb=0x72 last=1
- 78890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID3 cycle=7890 addr=0x10003f80 len=9
+ 78890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID3 cycle=7890 addr=0x10007ec0 len=9
  78890.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID3 cycle=7890
  78890.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID3 cycle=7890
  78990.00ns INFO     cocotb.axi_fabric_a                random start seq=229 write M1 ID5 S2 LEN7
@@ -1694,7 +1694,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  80140.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=4 cycle=8015 data=0x1000000900000004 strb=0x1c last=0
  80160.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=5 cycle=8017 data=0x1000000900000005 strb=0x30 last=1
  80190.00ns INFO     cocotb.axi_fabric_a                random start seq=231 read M1 ID3 S1 LEN1
- 80210.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=8022 addr=0x10003d80 len=1
+ 80210.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=8022 addr=0x10007ac0 len=1
  80210.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID3 cycle=8022
  80210.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID3 cycle=8022
  80240.00ns INFO     cocotb.axi_fabric_a                random start seq=286 write M2 ID14 S0 LEN11
@@ -1739,27 +1739,27 @@ rm Vtop__ALL.verilator_deplist.tmp
  81100.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=13 cycle=8111 data=0x100100010000000d strb=0x78 last=0
  81120.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=14 cycle=8113 data=0x100100010000000e strb=0x2 last=1
  81200.00ns INFO     cocotb.axi_fabric_a                random start seq=287 read M2 ID13 S0 LEN1
- 81220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID13 cycle=8123 addr=0x4c80 len=1
+ 81220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID13 cycle=8123 addr=0x98c0 len=1
  81220.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID13 cycle=8123
  81220.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID13 cycle=8123
  81380.00ns INFO     cocotb.axi_fabric_a                random start seq=251 read M0 ID8 S0 LEN4
  81380.00ns INFO     cocotb.axi_fabric_a                random start seq=291 read M2 ID9 S1 LEN15
- 81400.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=8141 addr=0x4300 len=4
+ 81400.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=8141 addr=0x85c0 len=4
  81400.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID8 cycle=8141
- 81400.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID9 cycle=8141 addr=0x10004d80 len=15
+ 81400.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID9 cycle=8141 addr=0x10009ac0 len=15
  81400.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID9 cycle=8141
  81400.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID8 cycle=8141
  81400.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID9 cycle=8141
  81550.00ns INFO     cocotb.axi_fabric_a                random start seq=238 read M1 ID13 S0 LEN10
- 81570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID13 cycle=8158 addr=0x3f40 len=10
+ 81570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID13 cycle=8158 addr=0x7e40 len=10
  81570.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID13 cycle=8158
  81570.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID13 cycle=8158
  82040.00ns INFO     cocotb.axi_fabric_a                random start seq=252 read M0 ID13 S0 LEN14
- 82060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID13 cycle=8207 addr=0x4340 len=14
+ 82060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID13 cycle=8207 addr=0x8640 len=14
  82060.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID13 cycle=8207
  82060.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID13 cycle=8207
  82840.00ns INFO     cocotb.axi_fabric_a                random start seq=240 read M1 ID11 S0 LEN5
- 82860.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=8287 addr=0x4040 len=5
+ 82860.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=8287 addr=0x8040 len=5
  82860.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID11 cycle=8287
  82860.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID11 cycle=8287
  83030.00ns INFO     cocotb.axi_fabric_a                random start seq=292 write M2 ID9 S0 LEN5
@@ -1774,7 +1774,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  83130.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=4 cycle=8314 data=0x1002000900000004 strb=0xe2 last=0
  83150.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=8316 data=0x1002000900000005 strb=0x59 last=1
  83180.00ns INFO     cocotb.axi_fabric_a                random start seq=250 read M1 ID2 S1 LEN1
- 83200.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID2 cycle=8321 addr=0x100042c0 len=1
+ 83200.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID2 cycle=8321 addr=0x10008540 len=1
  83200.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID2 cycle=8321
  83200.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID2 cycle=8321
  83230.00ns INFO     cocotb.axi_fabric_a                random start seq=255 write M0 ID13 S0 LEN11
@@ -1784,7 +1784,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  83310.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=3 cycle=8332 data=0x1000000d00000003 strb=0xe5 last=0
  83330.00ns INFO     cocotb.axi_fabric_a                random start seq=254 read M1 ID9 S1 LEN4
  83330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=4 cycle=8334 data=0x1000000d00000004 strb=0x44 last=0
- 83350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID9 cycle=8336 addr=0x100043c0 len=4
+ 83350.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID9 cycle=8336 addr=0x10008740 len=4
  83350.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID9 cycle=8336
  83350.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=5 cycle=8336 data=0x1000000d00000005 strb=0x9e last=0
  83350.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID9 cycle=8336
@@ -1795,7 +1795,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  83450.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=10 cycle=8346 data=0x1000000d0000000a strb=0x9 last=0
  83470.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=11 cycle=8348 data=0x1000000d0000000b strb=0xd last=1
  83550.00ns INFO     cocotb.axi_fabric_a                random start seq=256 read M1 ID15 S1 LEN5
- 83570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=8358 addr=0x10004440 len=5
+ 83570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=8358 addr=0x10008840 len=5
  83570.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID15 cycle=8358
  83570.00ns INFO     cocotb.axi_fabric_a                random start seq=293 write M2 ID14 S0 LEN2
  83570.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID15 cycle=8358
@@ -1848,12 +1848,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  84330.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=12 cycle=8434 data=0x100000010000000c strb=0x35 last=0
  84350.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=13 cycle=8436 data=0x100000010000000d strb=0x1a last=1
  84410.00ns INFO     cocotb.axi_fabric_a                random start seq=298 read M2 ID15 S0 LEN10
- 84430.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID15 cycle=8444 addr=0x4f40 len=10
+ 84430.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID15 cycle=8444 addr=0x9e40 len=10
  84430.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID15 cycle=8444
  84430.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID15 cycle=8444
  85040.00ns INFO     cocotb.axi_fabric_a                random start seq=263 write M1 ID5 S0 LEN6
  85040.00ns INFO     cocotb.axi_fabric_a                random start seq=303 read M2 ID2 S1 LEN5
- 85060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID2 cycle=8507 addr=0x10005100 len=5
+ 85060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID2 cycle=8507 addr=0x1000a1c0 len=5
  85060.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID2 cycle=8507
  85060.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID2 cycle=8507
  85060.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=0 cycle=8507 data=0x1001000500000000 strb=0x55 last=0
@@ -1864,7 +1864,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  85160.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=5 cycle=8517 data=0x1001000500000005 strb=0x3d last=0
  85180.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=6 cycle=8519 data=0x1001000500000006 strb=0x54 last=1
  85250.00ns INFO     cocotb.axi_fabric_a                random start seq=260 read M0 ID0 S0 LEN3
- 85270.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID0 cycle=8528 addr=0x4540 len=3
+ 85270.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID0 cycle=8528 addr=0x8a40 len=3
  85270.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID0 cycle=8528
  85270.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID0 cycle=8528
  85370.00ns INFO     cocotb.axi_fabric_a                random start seq=265 write M1 ID8 S1 LEN3
@@ -1987,13 +1987,13 @@ rm Vtop__ALL.verilator_deplist.tmp
  87510.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=10 cycle=8752 data=0x1000000f0000000a strb=0x29 last=0
  87530.00ns INFO     cocotb.axi_fabric_a                random start seq=326 read M2 ID5 S0 LEN7
  87530.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=11 cycle=8754 data=0x1000000f0000000b strb=0xfa last=0
- 87550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID5 cycle=8756 addr=0x56c0 len=7
+ 87550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID5 cycle=8756 addr=0xad40 len=7
  87550.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID5 cycle=8756
  87550.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=12 cycle=8756 data=0x1000000f0000000c strb=0x21 last=1
  87550.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID5 cycle=8756
  87630.00ns INFO     cocotb.axi_fabric_a                random start seq=272 read M1 ID4 S1 LEN6
  87630.00ns INFO     cocotb.axi_fabric_a                random start seq=290 read M0 ID3 S2 LEN2
- 87650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID4 cycle=8766 addr=0x100048c0 len=6
+ 87650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID4 cycle=8766 addr=0x10009140 len=6
  87650.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID4 cycle=8766
  87650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S2 ID3 cycle=8766 addr=0x20000100 len=2
  87650.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID3 cycle=8766
@@ -2008,7 +2008,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  88040.00ns INFO     cocotb.axi_fabric_a                random start seq=275 write M1 ID7 S2 LEN10
  88040.00ns INFO     cocotb.axi_fabric_a                random start seq=297 read M0 ID6 S0 LEN15
  88040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=8805 data=0x1002000800000001 strb=0x58 last=0
- 88060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=8807 addr=0x4f00 len=15
+ 88060.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=8807 addr=0x9dc0 len=15
  88060.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID6 cycle=8807
  88060.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=8807 data=0x1002000800000002 strb=0x2c last=0
  88060.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID6 cycle=8807
@@ -2078,16 +2078,16 @@ rm Vtop__ALL.verilator_deplist.tmp
  88870.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=13 cycle=8888 data=0x100200050000000d strb=0xd6 last=0
  88890.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=14 cycle=8890 data=0x100200050000000e strb=0xfc last=1
  88980.00ns INFO     cocotb.axi_fabric_a                random start seq=277 read M1 ID12 S0 LEN9
- 89000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID12 cycle=8901 addr=0x4a00 len=9
+ 89000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID12 cycle=8901 addr=0x93c0 len=9
  89000.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID12 cycle=8901
  89000.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID12 cycle=8901
  89560.00ns INFO     cocotb.axi_fabric_a                random start seq=333 read M2 ID15 S0 LEN13
- 89580.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID15 cycle=8959 addr=0x5900 len=13
+ 89580.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID15 cycle=8959 addr=0xb1c0 len=13
  89580.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID15 cycle=8959
  89580.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID15 cycle=8959
  89890.00ns INFO     cocotb.axi_fabric_a                random start seq=283 read M1 ID6 S0 LEN4
  89890.00ns INFO     cocotb.axi_fabric_a                random start seq=338 read M2 ID15 S2 LEN10
- 89910.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID6 cycle=8992 addr=0x4b80 len=4
+ 89910.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID6 cycle=8992 addr=0x96c0 len=4
  89910.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID6 cycle=8992
  89910.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID15 cycle=8992 addr=0x20000100 len=10
  89910.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID15 cycle=8992
@@ -2095,7 +2095,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  89910.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID15 cycle=8992
  90080.00ns INFO     cocotb.axi_fabric_a                random start seq=285 write M1 ID15 S3 LEN0
  90080.00ns INFO     cocotb.axi_fabric_a                random start seq=302 read M0 ID9 S0 LEN10
- 90100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID9 cycle=9011 addr=0x50c0 len=10
+ 90100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID9 cycle=9011 addr=0xa140 len=10
  90100.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID9 cycle=9011
  90110.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID9 cycle=9012
  90490.00ns INFO     cocotb.axi_fabric_a                random start seq=288 read M1 ID6 S2 LEN15
@@ -2103,7 +2103,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  90500.00ns INFO     cocotb.axi_fabric_a                random start seq=304 read M0 ID11 S1 LEN11
  90510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S2 ID6 cycle=9052 addr=0x20000080 len=15
  90510.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S2 ID6 cycle=9052
- 90520.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID11 cycle=9053 addr=0x10005140 len=11
+ 90520.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID11 cycle=9053 addr=0x1000a240 len=11
  90520.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID11 cycle=9053
  90520.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID11 cycle=9053
  90520.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=0 cycle=9053 data=0x1002000e00000000 strb=0x55 last=0
@@ -2131,7 +2131,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  91080.00ns INFO     cocotb.axi_fabric_a                random start seq=309 write M0 ID8 S2 LEN3
  91080.00ns INFO     cocotb.axi_fabric_a                random start seq=289 read M1 ID6 S0 LEN8
  91090.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=2 cycle=9110 data=0x1002000a00000002 strb=0xa6 last=0
- 91100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID6 cycle=9111 addr=0x4d00 len=8
+ 91100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID6 cycle=9111 addr=0x99c0 len=8
  91100.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID6 cycle=9111
  91100.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID6 cycle=9111
  91100.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=9111 data=0x1000000800000000 strb=0x81 last=0
@@ -2177,7 +2177,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  91590.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=8 cycle=9160 data=0x1001000100000008 strb=0xc3 last=1
  91780.00ns INFO     cocotb.axi_fabric_a                random start seq=311 write M0 ID5 S2 LEN9
  91780.00ns INFO     cocotb.axi_fabric_a                random start seq=354 read M2 ID8 S1 LEN5
- 91800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID8 cycle=9181 addr=0x10005e40 len=5
+ 91800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID8 cycle=9181 addr=0x1000bc40 len=5
  91800.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID8 cycle=9181
  91800.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID8 cycle=9181
  91800.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=9181 data=0x1000000500000000 strb=0x0 last=0
@@ -2204,12 +2204,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  92180.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=5 cycle=9219 data=0x1000000a00000005 strb=0x64 last=0
  92200.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=6 cycle=9221 data=0x1000000a00000006 strb=0x43 last=1
  92270.00ns INFO     cocotb.axi_fabric_a                random start seq=372 read M2 ID1 S0 LEN12
- 92290.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID1 cycle=9230 addr=0x6340 len=12
+ 92290.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID1 cycle=9230 addr=0xc640 len=12
  92290.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID1 cycle=9230
  92290.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID1 cycle=9230
  92610.00ns INFO     cocotb.axi_fabric_a                random start seq=308 read M1 ID15 S0 LEN9
  92610.00ns INFO     cocotb.axi_fabric_a                random start seq=374 write M2 ID11 S1 LEN2
- 92630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=9264 addr=0x5240 len=9
+ 92630.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=9264 addr=0xa440 len=9
  92630.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID15 cycle=9264
  92630.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID15 cycle=9264
  92630.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=9264 data=0x1002000b00000000 strb=0x81 last=0
@@ -2221,12 +2221,12 @@ rm Vtop__ALL.verilator_deplist.tmp
  92800.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID4 cycle=9281
  92950.00ns INFO     cocotb.axi_fabric_a                random start seq=320 read M0 ID3 S0 LEN2
  92950.00ns INFO     cocotb.axi_fabric_a                random start seq=315 write M1 ID9 S1 LEN0
- 92970.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID3 cycle=9298 addr=0x5540 len=2
+ 92970.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID3 cycle=9298 addr=0xaa40 len=2
  92970.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID3 cycle=9298
  92970.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID3 cycle=9298
  92980.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=0 cycle=9299 data=0x1001000900000000 strb=0xff last=1
  93030.00ns INFO     cocotb.axi_fabric_a                random start seq=383 read M2 ID15 S1 LEN3
- 93050.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID15 cycle=9306 addr=0x10006600 len=3
+ 93050.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID15 cycle=9306 addr=0x1000cbc0 len=3
  93050.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID15 cycle=9306
  93050.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID15 cycle=9306
  93140.00ns INFO     cocotb.axi_fabric_a                random start seq=316 write M1 ID3 S0 LEN2
@@ -2321,14 +2321,14 @@ rm Vtop__ALL.verilator_deplist.tmp
  95020.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=1 cycle=9503 data=0x1002000c00000001 strb=0x82 last=0
  95040.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=2 cycle=9505 data=0x1002000c00000002 strb=0xa0 last=1
  95120.00ns INFO     cocotb.axi_fabric_a                random start seq=321 read M1 ID3 S0 LEN1
- 95140.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID3 cycle=9515 addr=0x5580 len=1
+ 95140.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID3 cycle=9515 addr=0xaac0 len=1
  95140.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID3 cycle=9515
  95140.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID3 cycle=9515
  95240.00ns INFO     cocotb.axi_fabric_a                random start seq=328 read M0 ID6 S0 LEN15
  95240.00ns INFO     cocotb.axi_fabric_a                random start seq=325 read M1 ID1 S1 LEN12
- 95260.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=9527 addr=0x5740 len=15
+ 95260.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID6 cycle=9527 addr=0xae40 len=15
  95260.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID6 cycle=9527
- 95260.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID1 cycle=9527 addr=0x10005680 len=12
+ 95260.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID1 cycle=9527 addr=0x1000acc0 len=12
  95260.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID1 cycle=9527
  95260.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID6 cycle=9527
  95260.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID1 cycle=9527
@@ -2337,30 +2337,30 @@ rm Vtop__ALL.verilator_deplist.tmp
  95710.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=1 cycle=9572 data=0x1001000e00000001 strb=0xe6 last=1
  95760.00ns INFO     cocotb.axi_fabric_a                random start seq=331 write M0 ID13 S3 LEN15
  95760.00ns INFO     cocotb.axi_fabric_a                random start seq=396 read M2 ID7 S0 LEN12
- 95780.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID7 cycle=9579 addr=0x69c0 len=12
+ 95780.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID7 cycle=9579 addr=0xd340 len=12
  95780.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID7 cycle=9579
  95780.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID7 cycle=9579
  96000.00ns INFO     cocotb.axi_fabric_a                random start seq=332 write M0 ID12 S2 LEN0
  96020.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=9603 data=0x1000000c00000000 strb=0xaa last=1
  96080.00ns INFO     cocotb.axi_fabric_a                random start seq=334 read M1 ID0 S0 LEN3
- 96100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID0 cycle=9611 addr=0x5940 len=3
+ 96100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID0 cycle=9611 addr=0xb240 len=3
  96100.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID0 cycle=9611
  96100.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID0 cycle=9611
  96120.00ns INFO     cocotb.axi_fabric_a                random start seq=397 read M2 ID0 S2 LEN5
  96120.00ns INFO     cocotb.axi_fabric_a                random start seq=335 read M0 ID7 S1 LEN12
  96140.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID0 cycle=9615 addr=0x200003c0 len=5
  96140.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID0 cycle=9615
- 96140.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID7 cycle=9615 addr=0x10005980 len=12
+ 96140.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID7 cycle=9615 addr=0x1000b2c0 len=12
  96140.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID7 cycle=9615
  96140.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID0 cycle=9615
  96140.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID7 cycle=9615
  96280.00ns INFO     cocotb.axi_fabric_a                random start seq=336 read M1 ID9 S0 LEN2
- 96300.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID9 cycle=9631 addr=0x59c0 len=2
+ 96300.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID9 cycle=9631 addr=0xb340 len=2
  96300.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID9 cycle=9631
  96300.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID9 cycle=9631
  96420.00ns INFO     cocotb.axi_fabric_a                random start seq=398 read M2 ID0 S0 LEN13
  96440.00ns INFO     cocotb.axi_fabric_a                random start seq=337 write M0 ID12 S3 LEN9
- 96440.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID0 cycle=9645 addr=0x6a40 len=13
+ 96440.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID0 cycle=9645 addr=0xd440 len=13
  96440.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID0 cycle=9645
  96440.00ns INFO     cocotb.axi_fabric_a                random start seq=340 write M1 ID4 S1 LEN11
  96440.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID0 cycle=9645
@@ -2377,21 +2377,21 @@ rm Vtop__ALL.verilator_deplist.tmp
  96660.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=10 cycle=9667 data=0x100100040000000a strb=0x16 last=0
  96680.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=11 cycle=9669 data=0x100100040000000b strb=0x84 last=1
  96800.00ns INFO     cocotb.axi_fabric_a                random start seq=339 read M0 ID8 S1 LEN1
- 96820.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID8 cycle=9683 addr=0x10005a80 len=1
+ 96820.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID8 cycle=9683 addr=0x1000b4c0 len=1
  96820.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID8 cycle=9683
  96820.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID8 cycle=9683
  97070.00ns INFO     cocotb.axi_fabric_a                random start seq=349 read M1 ID4 S0 LEN3
  97070.00ns INFO     cocotb.axi_fabric_a                random start seq=399 read M2 ID15 S1 LEN15
- 97090.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID4 cycle=9710 addr=0x5d00 len=3
+ 97090.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID4 cycle=9710 addr=0xb9c0 len=3
  97090.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID4 cycle=9710
- 97090.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID15 cycle=9710 addr=0x10006a80 len=15
+ 97090.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID15 cycle=9710 addr=0x1000d4c0 len=15
  97090.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID15 cycle=9710
  97090.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID4 cycle=9710
  97090.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID15 cycle=9710
  97230.00ns INFO     cocotb.axi_fabric_a                random start seq=341 write M0 ID13 S0 LEN0
  97250.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=0 cycle=9726 data=0x1000000d00000000 strb=0x0 last=1
  97350.00ns INFO     cocotb.axi_fabric_a                random start seq=353 read M1 ID2 S0 LEN2
- 97370.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID2 cycle=9738 addr=0x5e00 len=2
+ 97370.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID2 cycle=9738 addr=0xbbc0 len=2
  97370.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID2 cycle=9738
  97370.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID2 cycle=9738
  97590.00ns INFO     cocotb.axi_fabric_a                random start seq=342 write M0 ID4 S0 LEN14
@@ -2413,7 +2413,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  97940.00ns INFO     cocotb.axi_fabric_a                random start seq=404 write M2 ID7 S1 LEN7
  97960.00ns INFO     cocotb.axi_fabric_a                random start seq=355 read M1 ID15 S0 LEN3
  97960.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=0 cycle=9797 data=0x1002000700000000 strb=0x81 last=0
- 97980.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=9799 addr=0x5e80 len=3
+ 97980.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=9799 addr=0xbcc0 len=3
  97980.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID15 cycle=9799
  97980.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=9799 data=0x1002000700000001 strb=0x25 last=0
  97980.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID15 cycle=9799
@@ -2425,7 +2425,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  98090.00ns INFO     cocotb.axi_fabric_a                random start seq=344 read M0 ID5 S0 LEN6
  98090.00ns INFO     cocotb.axi_fabric_a                random start seq=356 read M1 ID9 S2 LEN10
  98100.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=7 cycle=9811 data=0x1002000700000007 strb=0x1 last=1
- 98110.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID5 cycle=9812 addr=0x5bc0 len=6
+ 98110.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID5 cycle=9812 addr=0xb740 len=6
  98110.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID5 cycle=9812
  98110.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S2 ID9 cycle=9812 addr=0x20000580 len=10
  98110.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S2 ID9 cycle=9812
@@ -2451,21 +2451,21 @@ rm Vtop__ALL.verilator_deplist.tmp
  98550.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=2 cycle=9856 data=0x1001000e00000002 strb=0xa7 last=0
  98560.00ns INFO     cocotb.axi_fabric_a                random start seq=346 read M0 ID10 S1 LEN11
  98570.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=3 cycle=9858 data=0x1001000e00000003 strb=0x3 last=0
- 98580.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID10 cycle=9859 addr=0x10005c40 len=11
+ 98580.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID10 cycle=9859 addr=0x1000b840 len=11
  98580.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID10 cycle=9859
  98580.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID10 cycle=9859
  98590.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=4 cycle=9860 data=0x1001000e00000004 strb=0x38 last=0
  98610.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=5 cycle=9862 data=0x1001000e00000005 strb=0xf4 last=1
  99200.00ns INFO     cocotb.axi_fabric_a                random start seq=406 read M2 ID15 S1 LEN1
  99200.00ns INFO     cocotb.axi_fabric_a                random start seq=350 read M0 ID14 S0 LEN4
- 99220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID15 cycle=9923 addr=0x10006c40 len=1
+ 99220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID15 cycle=9923 addr=0x1000d840 len=1
  99220.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID15 cycle=9923
- 99220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=9923 addr=0x5d40 len=4
+ 99220.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID14 cycle=9923 addr=0xba40 len=4
  99220.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID14 cycle=9923
  99220.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID15 cycle=9923
  99220.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID14 cycle=9923
  99360.00ns INFO     cocotb.axi_fabric_a                random start seq=358 read M1 ID6 S1 LEN3
- 99380.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID6 cycle=9939 addr=0x10005f40 len=3
+ 99380.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID6 cycle=9939 addr=0x1000be40 len=3
  99380.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID6 cycle=9939
  99380.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID6 cycle=9939
  99530.00ns INFO     cocotb.axi_fabric_a                random start seq=351 read M0 ID5 S3 LEN15
@@ -2481,7 +2481,7 @@ rm Vtop__ALL.verilator_deplist.tmp
  99710.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=8 cycle=9972 data=0x1002000600000008 strb=0x17 last=0
  99730.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=9 cycle=9974 data=0x1002000600000009 strb=0xc2 last=1
  99810.00ns INFO     cocotb.axi_fabric_a                random start seq=361 read M1 ID11 S1 LEN5
- 99830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID11 cycle=9984 addr=0x10006080 len=5
+ 99830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID11 cycle=9984 addr=0x1000c0c0 len=5
  99830.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID11 cycle=9984
  99830.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID11 cycle=9984
 100060.00ns INFO     cocotb.axi_fabric_a                random start seq=360 write M0 ID13 S1 LEN13
@@ -2506,9 +2506,9 @@ rm Vtop__ALL.verilator_deplist.tmp
 100490.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=3 cycle=10050 data=0x1002000d00000003 strb=0xb6 last=1
 100570.00ns INFO     cocotb.axi_fabric_a                random start seq=362 read M1 ID8 S1 LEN11
 100570.00ns INFO     cocotb.axi_fabric_a                random start seq=422 read M2 ID12 S0 LEN9
-100590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID8 cycle=10060 addr=0x100060c0 len=11
+100590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID8 cycle=10060 addr=0x1000c140 len=11
 100590.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID8 cycle=10060
-100590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=10060 addr=0x70c0 len=9
+100590.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID12 cycle=10060 addr=0xe140 len=9
 100590.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID12 cycle=10060
 100590.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID8 cycle=10060
 100590.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID12 cycle=10060
@@ -2528,7 +2528,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 101110.00ns INFO     cocotb.axi_fabric_a                random start seq=363 read M1 ID4 S0 LEN5
 101110.00ns INFO     cocotb.axi_fabric_a                random start seq=423 read M2 ID2 S2 LEN13
 101120.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=12 cycle=10113 data=0x100000030000000c strb=0xb6 last=1
-101130.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID4 cycle=10114 addr=0x6100 len=5
+101130.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID4 cycle=10114 addr=0xc1c0 len=5
 101130.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID4 cycle=10114
 101130.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S2 ID2 cycle=10114 addr=0x20000440 len=13
 101130.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID2 cycle=10114
@@ -2542,26 +2542,26 @@ rm Vtop__ALL.verilator_deplist.tmp
 101320.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=4 cycle=10133 data=0x1000000300000004 strb=0xce last=0
 101340.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=5 cycle=10135 data=0x1000000300000005 strb=0xc last=1
 101420.00ns INFO     cocotb.axi_fabric_a                random start seq=364 read M1 ID0 S1 LEN3
-101440.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=10145 addr=0x10006140 len=3
+101440.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=10145 addr=0x1000c240 len=3
 101440.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID0 cycle=10145
 101440.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID0 cycle=10145
 101480.00ns INFO     cocotb.axi_fabric_a                random start seq=426 read M2 ID6 S0 LEN15
-101500.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=10151 addr=0x71c0 len=15
+101500.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=10151 addr=0xe340 len=15
 101500.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID6 cycle=10151
 101500.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID6 cycle=10151
 101550.00ns INFO     cocotb.axi_fabric_a                random start seq=370 read M0 ID9 S1 LEN3
-101570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID9 cycle=10158 addr=0x100062c0 len=3
+101570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID9 cycle=10158 addr=0x1000c540 len=3
 101570.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID9 cycle=10158
 101570.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID9 cycle=10158
 101710.00ns INFO     cocotb.axi_fabric_a                random start seq=371 write M0 ID0 S2 LEN1
 101750.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=0 cycle=10176 data=0x1000000000000000 strb=0x0 last=0
 101770.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=1 cycle=10178 data=0x1000000000000001 strb=0x9f last=1
 101840.00ns INFO     cocotb.axi_fabric_a                random start seq=375 read M0 ID12 S1 LEN11
-101860.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID12 cycle=10187 addr=0x10006400 len=11
+101860.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID12 cycle=10187 addr=0x1000c7c0 len=11
 101860.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID12 cycle=10187
 101860.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID12 cycle=10187
 102160.00ns INFO     cocotb.axi_fabric_a                random start seq=365 read M1 ID7 S0 LEN3
-102180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID7 cycle=10219 addr=0x6180 len=3
+102180.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID7 cycle=10219 addr=0xc2c0 len=3
 102180.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID7 cycle=10219
 102180.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID7 cycle=10219
 102370.00ns INFO     cocotb.axi_fabric_a                random start seq=427 write M2 ID15 S0 LEN9
@@ -2587,13 +2587,13 @@ rm Vtop__ALL.verilator_deplist.tmp
 102800.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=6 cycle=10281 data=0x1001000600000006 strb=0x9a last=0
 102810.00ns INFO     cocotb.axi_fabric_a                random start seq=432 read M2 ID10 S1 LEN13
 102820.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=7 cycle=10283 data=0x1001000600000007 strb=0x9e last=0
-102830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID10 cycle=10284 addr=0x10007340 len=13
+102830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S1 ID10 cycle=10284 addr=0x1000e640 len=13
 102830.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S1 ID10 cycle=10284
 102830.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S1 ID10 cycle=10284
 102840.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=8 cycle=10285 data=0x1001000600000008 strb=0xcb last=0
 102860.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=9 cycle=10287 data=0x1001000600000009 strb=0x62 last=1
 102930.00ns INFO     cocotb.axi_fabric_a                random start seq=381 read M0 ID3 S0 LEN5
-102950.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID3 cycle=10296 addr=0x6580 len=5
+102950.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID3 cycle=10296 addr=0xcac0 len=5
 102950.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID3 cycle=10296
 102950.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID3 cycle=10296
 103140.00ns INFO     cocotb.axi_fabric_a                random start seq=382 read M0 ID7 S3 LEN13
@@ -2640,7 +2640,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 104110.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=11 cycle=10412 data=0x100000090000000b strb=0x61 last=1
 104210.00ns INFO     cocotb.axi_fabric_a                random start seq=373 read M1 ID15 S0 LEN11
 104210.00ns INFO     cocotb.axi_fabric_a                random start seq=391 read M0 ID13 S2 LEN3
-104230.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=10424 addr=0x6380 len=11
+104230.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID15 cycle=10424 addr=0xc6c0 len=11
 104230.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID15 cycle=10424
 104230.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S2 ID13 cycle=10424 addr=0x20000240 len=3
 104230.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID13 cycle=10424
@@ -2662,7 +2662,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 104600.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=12 cycle=10461 data=0x100000080000000c strb=0x63 last=0
 104620.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S2 beat=13 cycle=10463 data=0x100000080000000d strb=0x6a last=1
 104650.00ns INFO     cocotb.axi_fabric_a                random start seq=436 read M2 ID10 S0 LEN15
-104670.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID10 cycle=10468 addr=0x7440 len=15
+104670.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID10 cycle=10468 addr=0xe840 len=15
 104670.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID10 cycle=10468
 104670.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID10 cycle=10468
 105330.00ns INFO     cocotb.axi_fabric_a                random start seq=377 write M1 ID0 S0 LEN12
@@ -2704,7 +2704,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 105780.00ns INFO     cocotb.axi_fabric_a                random start seq=441 write M2 ID13 S3 LEN2
 105780.00ns INFO     cocotb.axi_fabric_a                random start seq=379 read M1 ID3 S1 LEN10
 105790.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=6 cycle=10580 data=0x1000000e00000006 strb=0xff last=1
-105800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=10581 addr=0x10006500 len=10
+105800.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID3 cycle=10581 addr=0x1000c9c0 len=10
 105800.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID3 cycle=10581
 105800.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID3 cycle=10581
 105870.00ns INFO     cocotb.axi_fabric_a                random start seq=401 write M0 ID10 S3 LEN6
@@ -2713,14 +2713,14 @@ rm Vtop__ALL.verilator_deplist.tmp
 105910.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S2 ID8 cycle=10592
 105920.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S2 ID8 cycle=10593
 106020.00ns INFO     cocotb.axi_fabric_a                random start seq=402 read M0 ID9 S0 LEN10
-106040.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID9 cycle=10605 addr=0x6b40 len=10
+106040.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID9 cycle=10605 addr=0xd640 len=10
 106040.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID9 cycle=10605
 106040.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID9 cycle=10605
 106260.00ns INFO     cocotb.axi_fabric_a                random start seq=380 write M1 ID9 S1 LEN13
 106280.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=0 cycle=10629 data=0x1001000900000000 strb=0xff last=0
 106300.00ns INFO     cocotb.axi_fabric_a                random start seq=446 read M2 ID10 S0 LEN6
 106300.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=1 cycle=10631 data=0x1001000900000001 strb=0x5f last=0
-106320.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID10 cycle=10633 addr=0x76c0 len=6
+106320.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID10 cycle=10633 addr=0xed40 len=6
 106320.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID10 cycle=10633
 106320.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=2 cycle=10633 data=0x1001000900000002 strb=0xd3 last=0
 106320.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID10 cycle=10633
@@ -2736,12 +2736,12 @@ rm Vtop__ALL.verilator_deplist.tmp
 106520.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=12 cycle=10653 data=0x100100090000000c strb=0xc1 last=0
 106540.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=13 cycle=10655 data=0x100100090000000d strb=0x51 last=1
 106560.00ns INFO     cocotb.axi_fabric_a                random start seq=447 read M2 ID7 S0 LEN2
-106580.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID7 cycle=10659 addr=0x7700 len=2
+106580.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID7 cycle=10659 addr=0xedc0 len=2
 106580.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID7 cycle=10659
 106580.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID7 cycle=10659
 106630.00ns INFO     cocotb.axi_fabric_a                random start seq=408 read M0 ID15 S1 LEN0
 106630.00ns INFO     cocotb.axi_fabric_a                random start seq=387 write M1 ID10 S2 LEN9
-106650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID15 cycle=10666 addr=0x10006cc0 len=0
+106650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID15 cycle=10666 addr=0x1000d940 len=0
 106650.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID15 cycle=10666
 106650.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID15 cycle=10666
 106650.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=0 cycle=10666 data=0x1001000a00000000 strb=0xaa last=0
@@ -2818,7 +2818,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 107680.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=5 cycle=10769 data=0x1001000e00000005 strb=0xb8 last=0
 107700.00ns INFO     cocotb.axi_fabric_a                random start seq=415 read M0 ID15 S0 LEN6
 107700.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=6 cycle=10771 data=0x1001000e00000006 strb=0x4c last=0
-107720.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID15 cycle=10773 addr=0x6e80 len=6
+107720.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID15 cycle=10773 addr=0xdcc0 len=6
 107720.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID15 cycle=10773
 107720.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=7 cycle=10773 data=0x1001000e00000007 strb=0x48 last=1
 107720.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID15 cycle=10773
@@ -2827,9 +2827,9 @@ rm Vtop__ALL.verilator_deplist.tmp
 107880.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=1 cycle=10789 data=0x1002000200000001 strb=0x71 last=1
 107980.00ns INFO     cocotb.axi_fabric_a                random start seq=394 read M1 ID12 S1 LEN10
 107980.00ns INFO     cocotb.axi_fabric_a                random start seq=457 read M2 ID11 S0 LEN13
-108000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID12 cycle=10801 addr=0x10006940 len=10
+108000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID12 cycle=10801 addr=0x1000d240 len=10
 108000.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID12 cycle=10801
-108000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID11 cycle=10801 addr=0x7a00 len=13
+108000.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID11 cycle=10801 addr=0xf3c0 len=13
 108000.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID11 cycle=10801
 108000.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID12 cycle=10801
 108000.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID11 cycle=10801
@@ -2874,17 +2874,17 @@ rm Vtop__ALL.verilator_deplist.tmp
 108990.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=3 cycle=10900 data=0x1001000a00000003 strb=0x57 last=0
 109000.00ns INFO     cocotb.axi_fabric_a                random start seq=463 read M2 ID13 S0 LEN13
 109010.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=4 cycle=10902 data=0x1001000a00000004 strb=0x46 last=0
-109020.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID13 cycle=10903 addr=0x7b80 len=13
+109020.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID13 cycle=10903 addr=0xf6c0 len=13
 109020.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID13 cycle=10903
 109030.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=5 cycle=10904 data=0x1001000a00000005 strb=0xbe last=1
 109040.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID13 cycle=10905
 109100.00ns INFO     cocotb.axi_fabric_a                random start seq=421 read M0 ID0 S1 LEN5
-109120.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID0 cycle=10913 addr=0x10007080 len=5
+109120.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID0 cycle=10913 addr=0x1000e0c0 len=5
 109120.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID0 cycle=10913
 109130.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID0 cycle=10914
 109370.00ns INFO     cocotb.axi_fabric_a                random start seq=424 write M0 ID3 S3 LEN5
 109370.00ns INFO     cocotb.axi_fabric_a                random start seq=413 read M1 ID0 S1 LEN8
-109390.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=10940 addr=0x10006e00 len=8
+109390.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=10940 addr=0x1000dbc0 len=8
 109390.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID0 cycle=10940
 109390.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID0 cycle=10940
 109510.00ns INFO     cocotb.axi_fabric_a                random start seq=433 write M0 ID15 S3 LEN1
@@ -2902,9 +2902,9 @@ rm Vtop__ALL.verilator_deplist.tmp
 109730.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S1 beat=6 cycle=10974 data=0x1002000d00000006 strb=0x5 last=1
 109810.00ns INFO     cocotb.axi_fabric_a                random start seq=414 read M1 ID15 S1 LEN10
 109810.00ns INFO     cocotb.axi_fabric_a                random start seq=468 read M2 ID8 S0 LEN8
-109830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=10984 addr=0x10006e40 len=10
+109830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=10984 addr=0x1000dc40 len=10
 109830.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID15 cycle=10984
-109830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID8 cycle=10984 addr=0x7cc0 len=8
+109830.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID8 cycle=10984 addr=0xf940 len=8
 109830.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID8 cycle=10984
 109830.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID15 cycle=10984
 109830.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID8 cycle=10984
@@ -2916,7 +2916,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 110230.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=1 cycle=11024 data=0x1001000600000001 strb=0xc last=0
 110250.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=2 cycle=11026 data=0x1001000600000002 strb=0xa0 last=1
 110310.00ns INFO     cocotb.axi_fabric_a                random start seq=445 read M0 ID12 S0 LEN0
-110330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID12 cycle=11034 addr=0x7680 len=0
+110330.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID12 cycle=11034 addr=0xecc0 len=0
 110330.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID12 cycle=11034
 110330.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID12 cycle=11034
 110350.00ns INFO     cocotb.axi_fabric_a                random start seq=471 read M2 ID5 S2 LEN7
@@ -2975,7 +2975,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 111700.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=14 cycle=11171 data=0x1000000c0000000e strb=0x3c last=0
 111720.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S0 beat=15 cycle=11173 data=0x1000000c0000000f strb=0x4b last=1
 111820.00ns INFO     cocotb.axi_fabric_a                random start seq=459 read M0 ID0 S1 LEN5
-111840.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID0 cycle=11185 addr=0x10007a80 len=5
+111840.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID0 cycle=11185 addr=0x1000f4c0 len=5
 111840.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID0 cycle=11185
 111840.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID0 cycle=11185
 111970.00ns INFO     cocotb.axi_fabric_a                random start seq=428 read M1 ID0 S2 LEN14
@@ -2983,11 +2983,11 @@ rm Vtop__ALL.verilator_deplist.tmp
 111990.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S2 ID0 cycle=11200
 112000.00ns INFO     cocotb.axi_fabric_a                random start seq=464 read M0 ID12 S0 LEN14
 112010.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S2 ID0 cycle=11202
-112020.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID12 cycle=11203 addr=0x7bc0 len=14
+112020.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID12 cycle=11203 addr=0xf740 len=14
 112020.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID12 cycle=11203
 112020.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID12 cycle=11203
 112490.00ns INFO     cocotb.axi_fabric_a                random start seq=472 read M0 ID11 S0 LEN14
-112510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID11 cycle=11252 addr=0x7dc0 len=14
+112510.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID11 cycle=11252 addr=0xfb40 len=14
 112510.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID11 cycle=11252
 112510.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID11 cycle=11252
 112680.00ns INFO     cocotb.axi_fabric_a                random start seq=480 read M2 ID15 S2 LEN9
@@ -3007,7 +3007,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 113400.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID0 cycle=11341
 113400.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S2 ID0 cycle=11341
 113550.00ns INFO     cocotb.axi_fabric_a                random start seq=438 read M1 ID10 S0 LEN5
-113570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID10 cycle=11358 addr=0x74c0 len=5
+113570.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID10 cycle=11358 addr=0xe940 len=5
 113570.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID10 cycle=11358
 113570.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID10 cycle=11358
 113580.00ns INFO     cocotb.axi_fabric_a                random start seq=485 write M2 ID13 S2 LEN5
@@ -3019,24 +3019,24 @@ rm Vtop__ALL.verilator_deplist.tmp
 113700.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=5 cycle=11371 data=0x1002000d00000005 strb=0x20 last=1
 113890.00ns INFO     cocotb.axi_fabric_a                random start seq=443 read M1 ID5 S3 LEN9
 113890.00ns INFO     cocotb.axi_fabric_a                random start seq=475 read M0 ID8 S0 LEN3
-113910.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=11392 addr=0x7e80 len=3
+113910.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID8 cycle=11392 addr=0xfcc0 len=3
 113910.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID8 cycle=11392
 113910.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID8 cycle=11392
 114050.00ns INFO     cocotb.axi_fabric_a                random start seq=444 read M1 ID9 S1 LEN10
-114070.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID9 cycle=11408 addr=0x10007640 len=10
+114070.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID9 cycle=11408 addr=0x1000ec40 len=10
 114070.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID9 cycle=11408
 114070.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID9 cycle=11408
 114100.00ns INFO     cocotb.axi_fabric_a                random start seq=495 read M2 ID5 S0 LEN10
-114120.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID5 cycle=11413 addr=0x8400 len=10
+114120.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID5 cycle=11413 addr=0x7c0 len=10
 114120.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID5 cycle=11413
 114120.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID5 cycle=11413
 114730.00ns INFO     cocotb.axi_fabric_a                random start seq=476 read M0 ID11 S0 LEN14
-114750.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID11 cycle=11476 addr=0x7ec0 len=14
+114750.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S0 ID11 cycle=11476 addr=0xfd40 len=14
 114750.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S0 ID11 cycle=11476
 114750.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S0 ID11 cycle=11476
 115220.00ns INFO     cocotb.axi_fabric_a                random start seq=450 read M1 ID2 S0 LEN11
 115220.00ns INFO     cocotb.axi_fabric_a                random start seq=487 read M0 ID11 S2 LEN0
-115240.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID2 cycle=11525 addr=0x7840 len=11
+115240.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID2 cycle=11525 addr=0xf040 len=11
 115240.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID2 cycle=11525
 115240.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S2 ID11 cycle=11525 addr=0x20000240 len=0
 115240.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S2 ID11 cycle=11525
@@ -3084,7 +3084,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 115900.00ns INFO     cocotb.axi_fabric_a                random start seq=499 read M2 ID12 S3 LEN9
 115900.00ns INFO     cocotb.axi_fabric_a                random start seq=453 read M1 ID1 S0 LEN5
 115900.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=7 cycle=11591 data=0x1000000d00000007 strb=0xce last=0
-115920.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=11593 addr=0x7900 len=5
+115920.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=11593 addr=0xf1c0 len=5
 115920.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID1 cycle=11593
 115920.00ns INFO     cocotb.axi_fabric_a                manager W fire M0 S1 beat=8 cycle=11593 data=0x1000000d00000008 strb=0x87 last=0
 115920.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID1 cycle=11593
@@ -3114,7 +3114,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 116390.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=5 cycle=11640 data=0x1002000000000005 strb=0x37 last=0
 116410.00ns INFO     cocotb.axi_fabric_a                random start seq=501 read M0 ID5 S1 LEN3
 116410.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=6 cycle=11642 data=0x1002000000000006 strb=0x88 last=0
-116430.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID5 cycle=11644 addr=0x10008580 len=3
+116430.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID5 cycle=11644 addr=0x10000ac0 len=3
 116430.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID5 cycle=11644
 116430.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=7 cycle=11644 data=0x1002000000000007 strb=0xe1 last=0
 116430.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID5 cycle=11644
@@ -3127,12 +3127,12 @@ rm Vtop__ALL.verilator_deplist.tmp
 116570.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=14 cycle=11658 data=0x100200000000000e strb=0x6f last=0
 116590.00ns INFO     cocotb.axi_fabric_a                random start seq=509 read M0 ID9 S1 LEN8
 116590.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S0 beat=15 cycle=11660 data=0x100200000000000f strb=0x25 last=1
-116610.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID9 cycle=11662 addr=0x10008780 len=8
+116610.00ns INFO     cocotb.axi_fabric_a                manager AR fire M0 S1 ID9 cycle=11662 addr=0x10000ec0 len=8
 116610.00ns INFO     cocotb.axi_fabric_a                target AR wait M0 S1 ID9 cycle=11662
 116610.00ns INFO     cocotb.axi_fabric_a                target AR fire M0 S1 ID9 cycle=11662
 116660.00ns INFO     cocotb.axi_fabric_a                random start seq=454 read M1 ID7 S0 LEN7
 116660.00ns INFO     cocotb.axi_fabric_a                random start seq=503 write M2 ID6 S2 LEN1
-116680.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID7 cycle=11669 addr=0x7940 len=7
+116680.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID7 cycle=11669 addr=0xf240 len=7
 116680.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID7 cycle=11669
 116680.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID7 cycle=11669
 116680.00ns INFO     cocotb.axi_fabric_a                manager W fire M2 S2 beat=0 cycle=11669 data=0x1002000600000000 strb=0x55 last=0
@@ -3192,7 +3192,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 117610.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=9 cycle=11762 data=0x1001000500000009 strb=0xc4 last=0
 117630.00ns INFO     cocotb.axi_fabric_a                random start seq=510 read M2 ID6 S0 LEN2
 117640.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=10 cycle=11765 data=0x100100050000000a strb=0x5e last=0
-117650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=11766 addr=0x8840 len=2
+117650.00ns INFO     cocotb.axi_fabric_a                manager AR fire M2 S0 ID6 cycle=11766 addr=0x1040 len=2
 117650.00ns INFO     cocotb.axi_fabric_a                target AR wait M2 S0 ID6 cycle=11766
 117650.00ns INFO     cocotb.axi_fabric_a                target AR fire M2 S0 ID6 cycle=11766
 117660.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=11 cycle=11767 data=0x100100050000000b strb=0x39 last=1
@@ -3236,15 +3236,15 @@ rm Vtop__ALL.verilator_deplist.tmp
 118790.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=9 cycle=11880 data=0x1001000900000009 strb=0xa6 last=0
 118810.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=10 cycle=11882 data=0x100100090000000a strb=0xad last=1
 118870.00ns INFO     cocotb.axi_fabric_a                random start seq=473 read M1 ID1 S0 LEN6
-118890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=11890 addr=0x7e00 len=6
+118890.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID1 cycle=11890 addr=0xfbc0 len=6
 118890.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID1 cycle=11890
 118890.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID1 cycle=11890
 119230.00ns INFO     cocotb.axi_fabric_a                random start seq=478 read M1 ID0 S1 LEN5
-119250.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=11926 addr=0x10007f40 len=5
+119250.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID0 cycle=11926 addr=0x1000fe40 len=5
 119250.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID0 cycle=11926
 119250.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID0 cycle=11926
 119530.00ns INFO     cocotb.axi_fabric_a                random start seq=482 read M1 ID15 S1 LEN7
-119550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=11956 addr=0x100080c0 len=7
+119550.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=11956 addr=0x10000140 len=7
 119550.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID15 cycle=11956
 119550.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID15 cycle=11956
 119810.00ns INFO     cocotb.axi_fabric_a                random start seq=483 write M1 ID0 S2 LEN7
@@ -3257,11 +3257,11 @@ rm Vtop__ALL.verilator_deplist.tmp
 119950.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=6 cycle=11996 data=0x1001000000000006 strb=0xea last=0
 119970.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S2 beat=7 cycle=11998 data=0x1001000000000007 strb=0x8c last=1
 120080.00ns INFO     cocotb.axi_fabric_a                random start seq=484 read M1 ID5 S1 LEN7
-120100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID5 cycle=12011 addr=0x10008140 len=7
+120100.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID5 cycle=12011 addr=0x10000240 len=7
 120100.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID5 cycle=12011
 120100.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID5 cycle=12011
 120540.00ns INFO     cocotb.axi_fabric_a                random start seq=486 read M1 ID11 S0 LEN15
-120560.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=12057 addr=0x81c0 len=15
+120560.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID11 cycle=12057 addr=0x340 len=15
 120560.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID11 cycle=12057
 120560.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID11 cycle=12057
 121110.00ns INFO     cocotb.axi_fabric_a                random start seq=489 write M1 ID11 S1 LEN6
@@ -3273,7 +3273,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 121230.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=5 cycle=12124 data=0x1001000b00000005 strb=0xe0 last=0
 121250.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=6 cycle=12126 data=0x1001000b00000006 strb=0x27 last=1
 121370.00ns INFO     cocotb.axi_fabric_a                random start seq=490 read M1 ID15 S1 LEN0
-121390.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=12140 addr=0x100082c0 len=0
+121390.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S1 ID15 cycle=12140 addr=0x10000540 len=0
 121390.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S1 ID15 cycle=12140
 121390.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S1 ID15 cycle=12140
 121460.00ns INFO     cocotb.axi_fabric_a                random start seq=492 write M1 ID12 S1 LEN1
@@ -3305,7 +3305,7 @@ rm Vtop__ALL.verilator_deplist.tmp
 122230.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=3 cycle=12224 data=0x1001000800000003 strb=0x7c last=0
 122250.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S0 beat=4 cycle=12226 data=0x1001000800000004 strb=0xb4 last=1
 122360.00ns INFO     cocotb.axi_fabric_a                random start seq=505 read M1 ID7 S0 LEN10
-122380.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID7 cycle=12239 addr=0x8680 len=10
+122380.00ns INFO     cocotb.axi_fabric_a                manager AR fire M1 S0 ID7 cycle=12239 addr=0xcc0 len=10
 122380.00ns INFO     cocotb.axi_fabric_a                target AR wait M1 S0 ID7 cycle=12239
 122380.00ns INFO     cocotb.axi_fabric_a                target AR fire M1 S0 ID7 cycle=12239
 122730.00ns INFO     cocotb.axi_fabric_a                random start seq=506 read M1 ID10 S3 LEN4
@@ -3321,15 +3321,15 @@ rm Vtop__ALL.verilator_deplist.tmp
 123020.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=8 cycle=12303 data=0x1001000600000008 strb=0x93 last=0
 123040.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=9 cycle=12305 data=0x1001000600000009 strb=0x9a last=0
 123060.00ns INFO     cocotb.axi_fabric_a                manager W fire M1 S1 beat=10 cycle=12307 data=0x100100060000000a strb=0xaf last=1
-123170.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:749: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+123170.00ns WARNING  py.warnings                        /Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py:744: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
                                                           monitor.kill()
 123170.00ns INFO     cocotb.axi_fabric_a                Gate-3 random v2 PASS seed=0xa3f30005 random_ops=512
 123170.00ns INFO     cocotb.regression                  test_axi_fabric_a_random_v2.fabric_a_random_v2 passed
 123170.00ns INFO     cocotb.regression                  ********************************************************************************************************
                                                         ** TEST                                            STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         ********************************************************************************************************
-                                                        ** test_axi_fabric_a_random_v2.fabric_a_random_v2   PASS      123170.00           0.71     172353.00  **
+                                                        ** test_axi_fabric_a_random_v2.fabric_a_random_v2   PASS      123170.00           0.79     156013.15  **
                                                         ********************************************************************************************************
-                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                               123170.00           0.72     171374.57  **
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                               123170.00           0.79     155199.59  **
                                                         ********************************************************************************************************
 - :0: Verilog $finish

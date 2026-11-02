@@ -38,6 +38,97 @@ module axi_fabric_a_tb;
   logic [2:0] ext_rlast_q;
   logic r_gap_s0;
   logic b_hold_s0;
+  logic fairness_ar_record, fairness_aw_record;
+  integer fairness_ar_count, fairness_aw_count, fairness_cycle;
+  integer fairness_ar_manager [0:8], fairness_ar_cycle [0:8];
+  integer fairness_aw_manager [0:8], fairness_aw_cycle [0:8];
+  logic [3:0] fairness_ar_id [0:8], fairness_aw_id [0:8];
+  integer fairness_wlast_count;
+  logic [2:0] fairness_w_pending;
+  integer fairness_aw_accepted [0:2];
+  integer fairness_wlast_by_manager [0:2];
+  integer fairness_b_count;
+  logic [2:0] fairness_aw_clear, fairness_w_start, fairness_w_clear;
+  logic fairness_s0_owner_active;
+  integer fairness_owner_overlap_count, fairness_owner_wlast_without_aw;
+
+  // Public manager-side admissions are captured at the accepting edge,
+  // before DUT nonblocking state updates.
+  always @(posedge ACLK) begin
+    fairness_cycle <= fairness_cycle + 1;
+    if (!ARESETn) begin
+      fairness_ar_count <= 0;
+      fairness_aw_count <= 0;
+      fairness_b_count <= 0;
+      fairness_aw_clear <= '0;
+      fairness_w_start <= '0;
+      fairness_w_clear <= '0;
+      fairness_w_pending <= '0;
+      fairness_wlast_count <= 0;
+      fairness_s0_owner_active <= 0;
+      fairness_owner_overlap_count <= 0;
+      fairness_owner_wlast_without_aw <= 0;
+      for (integer fm=0; fm<3; fm=fm+1) begin
+        fairness_aw_accepted[fm] <= 0;
+        fairness_wlast_by_manager[fm] <= 0;
+      end
+    end else begin
+      integer b_fires;
+      b_fires = 0;
+      for (integer fm=0; fm<3; fm=fm+1) begin
+        if (fairness_ar_record && arvalid[fm] && arready[fm] && fairness_ar_count<9) begin
+          fairness_ar_manager[fairness_ar_count] <= fm;
+          fairness_ar_id[fairness_ar_count] <= arid[fm];
+          fairness_ar_cycle[fairness_ar_count] <= fairness_cycle;
+          $display("FAIR_AR cycle=%0d m=%0d valid=%b ready=%b id=%0d s0v=%b s0r=%b count=%0d",
+                   fairness_cycle,fm,arvalid[fm],arready[fm],arid[fm],tarvalid[0],tarready[0],fairness_ar_count);
+          fairness_ar_count <= fairness_ar_count + 1;
+        end
+        if (fairness_aw_record && awvalid[fm] && awready[fm] && fairness_aw_count<9) begin
+          fairness_aw_manager[fairness_aw_count] <= fm;
+          fairness_aw_id[fairness_aw_count] <= awid[fm];
+          fairness_aw_cycle[fairness_aw_count] <= fairness_cycle;
+          $display("FAIR_AW cycle=%0d m=%0d valid=%b ready=%b id=%0d s0v=%b s0r=%b wlast_fire=%b count=%0d",
+                   fairness_cycle,fm,awvalid[fm],awready[fm],awid[fm],tawvalid[0],tawready[0],
+                   twvalid[0]&&twready[0]&&twlast[0],fairness_aw_count);
+          fairness_aw_count <= fairness_aw_count + 1;
+          fairness_aw_accepted[fm] <= fairness_aw_accepted[fm] + 1;
+          fairness_aw_clear[fm] <= 1;
+          fairness_w_pending[fm] <= 1;
+        end
+        if (fairness_aw_record && wvalid[fm] && wready[fm]) begin
+          $display("FAIR_W cycle=%0d m=%0d fire=1 last=%b s0v=%b s0r=%b pending=%b",
+                   fairness_cycle,fm,wlast[fm],twvalid[0],twready[0],fairness_w_pending[fm]);
+          fairness_w_clear[fm] <= 1;
+        end
+        if (fairness_aw_record && bvalid[fm] && bready[fm]) begin
+          b_fires = b_fires + 1;
+          $display("FAIR_B cycle=%0d m=%0d id=%0d resp=%0d",fairness_cycle,fm,bid[fm],bresp[fm]);
+        end
+      end
+      // Wait for actual delivery to S0 before offering this test's W beat.
+      // This avoids making the simple endpoint model infer an AW context from
+      // a manager-side admission that has not yet crossed the target port.
+      if (fairness_aw_record && tawvalid[0] && tawready[0]) begin
+        if (fairness_s0_owner_active)
+          fairness_owner_overlap_count <= fairness_owner_overlap_count + 1;
+        fairness_s0_owner_active <= 1;
+        fairness_w_start[tawid[0][5:4]] <= 1;
+        $display("FAIR_TAW cycle=%0d id=%0d m=%0d",fairness_cycle,tawid[0],tawid[0][5:4]);
+      end
+      if (fairness_aw_record && twvalid[0] && twready[0] && twlast[0]) begin
+        if (!fairness_s0_owner_active)
+          fairness_owner_wlast_without_aw <= fairness_owner_wlast_without_aw + 1;
+        fairness_s0_owner_active <= 0;
+        fairness_wlast_count <= fairness_wlast_count + 1;
+        fairness_wlast_by_manager[twdata[0][17:16]] <=
+            fairness_wlast_by_manager[twdata[0][17:16]] + 1;
+        $display("FAIR_TWLAST cycle=%0d m=%0d data=%h ext_aw_seen=%b",fairness_cycle,
+                 twdata[0][17:16],twdata[0],ext_aw_seen[0]);
+      end
+      if (b_fires != 0) fairness_b_count <= fairness_b_count + b_fires;
+    end
+  end
 
   axi_fabric_a dut (.*,
     .manager_awid(awid), .manager_awaddr(awaddr), .manager_awlen(awlen), .manager_awsize(awsize),
@@ -181,6 +272,155 @@ module axi_fabric_a_tb;
       base = (t==0) ? 32'h0000_0400 : (t==1) ? 32'h1000_0400 : (t==2) ? 32'h2000_0400 : 32'h3000_0400;
       arid[m]=id; araddr[m]=base; arlen[m]=0; arsize[m]=3; arburst[m]=1; arlock[m]=0; arcache[m]=0; arprot[m]=0; arqos[m]=0; arregion[m]=0; arvalid[m]=1;
       while (!arready[m]) tick(); tick(); arvalid[m]=0;
+    end
+  endtask
+
+  task automatic test_integrated_ar_fairness;
+    integer cycles, m, expected;
+    logic [5:0] held_id;
+    logic [31:0] held_addr;
+    begin
+      $display("G3 integrated AR fairness"); reset_dut();
+      rready='1; tarready[0]=0; fairness_ar_record=1;
+      fairness_ar_count=0;
+      for (integer k=0;k<3;k=k+1) begin
+        arid[k]=k; araddr[k]=32'h0000_2000 + (k*8); arlen[k]=0;
+        arsize[k]=3; arburst[k]=1; arlock[k]=0; arcache[k]=0;
+        arprot[k]=0; arqos[k]=0; arregion[k]=0; arvalid[k]=1;
+      end
+      // Manager admission fills the registered S0 slot.  Hold S0 stalled and
+      // verify the selected public target payload remains stable.
+      for (integer waitc=0;waitc<40 && !tarvalid[0];waitc=waitc+1) tick();
+      check(tarvalid[0], "AR fairness target slot presented");
+      held_id=tarid[0]; held_addr=taraddr[0];
+      repeat(3) begin
+        check(tarvalid[0] && !tarready[0] && tarid[0]==held_id && taraddr[0]==held_addr,
+              "AR fairness held target payload stable"); tick();
+      end
+      tarready[0]=1; cycles=0;
+      while (fairness_ar_count<9 && cycles<300) begin
+        tick(); cycles=cycles+1;
+        for (m=0;m<3;m=m+1) begin
+          integer accepted;
+          accepted=0;
+          for (integer q=0;q<fairness_ar_count;q=q+1)
+            if (fairness_ar_manager[q]==m) accepted=accepted+1;
+          if (accepted<3 && !arvalid[m]) begin
+            arid[m]=accepted; araddr[m]=32'h0000_2100+(m*8)+(accepted*8);
+            arlen[m]=0; arsize[m]=3; arburst[m]=1; arlock[m]=0;
+            arcache[m]=0; arprot[m]=0; arqos[m]=0; arregion[m]=0; arvalid[m]=1;
+          end
+        end
+      end
+      check(fairness_ar_count==9, "AR fairness nine admissions complete");
+      fairness_ar_record=0;
+      $write("FAIR_AR_ORDER");
+      for (integer q=0;q<9;q=q+1) begin
+        expected=q%3;
+        $write(" %0d",fairness_ar_manager[q]);
+        check(fairness_ar_manager[q]==expected, "AR fairness cyclic manager order");
+      end
+      $write("\n");
+      reset_dut();
+    end
+  endtask
+
+  // Apply monitor results after tick() has returned from the accepting edge.
+  // This keeps stimulus changes out of the DUT's sampling region.
+  task automatic service_aw_fairness;
+    begin
+      for (integer fm=0; fm<3; fm=fm+1) begin
+        if (fairness_aw_clear[fm]) begin
+          awvalid[fm]=0;
+          fairness_aw_clear[fm]=0;
+        end
+        if (fairness_w_start[fm]) begin
+          wdata[fm]=64'hA000_0000_0000_0000 + (fm*64'h0000_0000_0001_0000)
+                    + fairness_aw_accepted[fm]-1;
+          wstrb[fm]=8'hff; wlast[fm]=1; wvalid[fm]=1;
+          fairness_w_start[fm]=0;
+        end
+        if (fairness_w_clear[fm]) begin
+          wvalid[fm]=0;
+          fairness_w_pending[fm]=0;
+          fairness_w_clear[fm]=0;
+        end
+      end
+      // A manager may issue its next address after its prior final target W
+      // handshake. B retirement is deliberately independent of AW issuance.
+      for (integer fm=0; fm<3; fm=fm+1) begin
+        if (fairness_aw_accepted[fm] < 3 && !awvalid[fm] &&
+            !fairness_w_pending[fm] &&
+            fairness_wlast_by_manager[fm] >= fairness_aw_accepted[fm]) begin
+          awid[fm]=fairness_aw_accepted[fm];
+          awaddr[fm]=32'h0000_3100+(fm*8)+(fairness_aw_accepted[fm]*8);
+          awlen[fm]=0; awsize[fm]=3; awburst[fm]=1; awlock[fm]=0;
+          awcache[fm]=0; awprot[fm]=0; awqos[fm]=0; awregion[fm]=0;
+          awvalid[fm]=1;
+        end
+      end
+    end
+  endtask
+
+  task automatic test_integrated_aw_fairness;
+    integer cycles;
+    logic [5:0] held_id;
+    logic [31:0] held_addr;
+    begin
+      $display("G3 integrated AW fairness"); reset_dut();
+      bready='1; tawready[0]=0; fairness_w_pending='0; fairness_aw_record=1;
+      fairness_aw_count=0; fairness_wlast_count=0; fairness_b_count=0;
+      fairness_aw_clear='0; fairness_w_start='0; fairness_w_clear='0;
+      fairness_s0_owner_active=0; fairness_owner_overlap_count=0;
+      fairness_owner_wlast_without_aw=0;
+      for (integer k=0;k<3;k=k+1) begin
+        fairness_aw_accepted[k]=0; fairness_wlast_by_manager[k]=0;
+        awid[k]=0; awaddr[k]=32'h0000_3000+(k*8); awlen[k]=0;
+        awsize[k]=3; awburst[k]=1; awlock[k]=0; awcache[k]=0;
+        awprot[k]=0; awqos[k]=0; awregion[k]=0; awvalid[k]=1;
+      end
+      // First manager admission creates the registered target AW slot.
+      for (integer waitc=0;waitc<40 && !tawvalid[0];waitc=waitc+1) begin
+        tick(); service_aw_fairness();
+      end
+      check(tawvalid[0], "AW fairness target slot presented");
+      held_id=tawid[0]; held_addr=tawaddr[0];
+      repeat(3) begin
+        check(tawvalid[0] && !tawready[0] && tawid[0]==held_id && tawaddr[0]==held_addr,
+              "AW fairness held target payload stable"); tick(); service_aw_fairness();
+      end
+      tawready[0]=1;
+      cycles=0;
+      while (fairness_aw_count<9 && cycles<500) begin
+        tick(); service_aw_fairness(); cycles=cycles+1;
+      end
+      check(fairness_aw_count==9, "AW fairness nine admissions complete");
+      $write("FAIR_AW_ORDER");
+      for (integer q=0;q<9;q=q+1) begin
+        $write(" %0d",fairness_aw_manager[q]);
+        check(fairness_aw_manager[q]==q%3, "AW fairness cyclic manager order");
+      end
+      $write("\n");
+      // Drain final W/B work; the per-target endpoint model emits B after
+      // accepted final target WLAST.  Limit the wait to keep failures clear.
+      for (integer drain=0;drain<150 &&
+           (fairness_b_count<9 || fairness_wlast_count<9 || fairness_w_pending!='0);drain=drain+1) begin
+        tick(); service_aw_fairness();
+      end
+      fairness_aw_record=0;
+      $display("FAIR_AW_DRAIN accepted=%0d wlast=%0d b=%0d pending=%b aw_counts=%0d,%0d,%0d wlast_counts=%0d,%0d,%0d",
+               fairness_aw_count,fairness_wlast_count,fairness_b_count,fairness_w_pending,
+               fairness_aw_accepted[0],fairness_aw_accepted[1],fairness_aw_accepted[2],
+               fairness_wlast_by_manager[0],fairness_wlast_by_manager[1],fairness_wlast_by_manager[2]);
+      check(fairness_w_pending==0, "AW fairness manager W beats accepted");
+      check(fairness_wlast_count==9, "AW fairness nine target WLAST handshakes");
+      check(fairness_b_count==9, "AW fairness nine B responses retired");
+      check(fairness_owner_overlap_count==0, "AW fairness S0 owner not overwritten before WLAST");
+      check(fairness_owner_wlast_without_aw==0 && !fairness_s0_owner_active,
+            "AW fairness each target WLAST releases one S0 owner");
+      for (integer m=0;m<3;m=m+1)
+        check(fairness_aw_accepted[m]==3, "AW fairness exactly three requests per manager");
+      reset_dut();
     end
   endtask
 
@@ -355,6 +595,8 @@ module axi_fabric_a_tb;
     reset_dut(); twready[0]=0; awid[0]=4'h7; awaddr[0]=32'h0000_1000; awlen[0]=0; awsize[0]=3; awburst[0]=1; awlock[0]=0; awcache[0]=0; awprot[0]=0; awqos[0]=0; awregion[0]=0; awvalid[0]=1; while (!awready[0]) tick(); tick(); awvalid[0]=0; wdata[0]=64'h77; wstrb[0]=8'hff; wlast[0]=1; wvalid[0]=1; while (!wready[0]) tick(); tick(); wvalid[0]=0; check(twvalid[0], "W slot occupied before reset"); reset_dut(); check(!twvalid[0], "reset clears stalled W slot");
     reset_dut(); rready[0]=0; read_without_r(0,3,4'h8); for (integer rf=0; rf<20 && !rvalid[0]; rf=rf+1) tick(); check(rvalid[0] && rlast[0], "final RLAST stalled before reset"); reset_dut(); check(!rvalid[0], "reset clears stalled final RLAST");
     do_write(0,0,4'h3,1); do_read(0,0,4'h4,1);
+    test_integrated_ar_fairness();
+    test_integrated_aw_fairness();
     $display("PASS axi_fabric_a_tb checks=%0d", checks); $finish;
   end
 endmodule

@@ -10,7 +10,7 @@ export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
 export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
 export DYLD_LIBRARY_PATH="/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
 
-OUT="$ROOT/results/raw/gate3_random_v2"
+OUT="${GATE3_OUT_DIR:-$ROOT/results/raw/gate3_random_v2}"
 PLAN_DIR="$OUT/plans"
 mkdir -p "$PLAN_DIR"
 SEEDS=(0xA3F30001 0xA3F30002 0xA3F30003 0xA3F30004 0xA3F30005)
@@ -29,14 +29,14 @@ if [ -n "$requested_plan" ]; then
 elif [ -n "$requested_seed" ]; then
   seed_value=$((requested_seed))
   plan="$PLAN_DIR/seed_$(printf '%08X' "$seed_value").json"
-  python3 tb/random/axi_random_plan.py --seed "$requested_seed" --output "$plan"
+  python3 tb/random/axi_random_plan.py --seed "$requested_seed" --operations "${GATE3_OPERATIONS:-512}" --output "$plan"
   plans=("$plan")
 else
   plans=()
   for seed in "${SEEDS[@]}"; do
     seed_value=$((seed))
     plan="$PLAN_DIR/seed_$(printf '%08X' "$seed_value").json"
-    python3 tb/random/axi_random_plan.py --seed "$seed" --output "$plan"
+    python3 tb/random/axi_random_plan.py --seed "$seed" --operations "${GATE3_OPERATIONS:-512}" --output "$plan"
     plans+=("$plan")
   done
 fi
@@ -88,8 +88,8 @@ for plan in "${plans[@]}"; do
   ln -sfn "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib" "$seed_out/lib"
   export GATE3_PLAN="$plan"
   export GATE3_OUT="$seed_out"
-  export GATE3_BOUNDARY_TRACE="$ROOT/results/raw/gate3_rdata_investigation/boundary_trace.jsonl"
-  export GATE3_AR_DIAG="$ROOT/results/raw/gate3_random_v2/repaired/ar_deadlock_investigation.jsonl"
+  export GATE3_BOUNDARY_TRACE="$seed_out/boundary_trace.jsonl"
+  export GATE3_AR_DIAG="$seed_out/ar_deadlock_diagnostic.jsonl"
   : > "$GATE3_BOUNDARY_TRACE"
   rm -f "$seed_out/results.xml" "$seed_out/coverage.json" "$seed_out/events.jsonl"
   export COCOTB_RANDOM_SEED="0x$seed"
@@ -98,7 +98,7 @@ for plan in "${plans[@]}"; do
     echo "architecture=A"
     echo "seed=0x$seed"
     echo "plan=$plan"
-    echo "configuration=24 anchors plus 512 genuinely random operations with bounded drain"
+    echo "configuration=24 anchors plus ${GATE3_EXPECTED_OPERATIONS:-512} genuinely random operations with bounded drain"
     echo "verilator=$(verilator --version | head -1)"
   } >"$seed_out/run.log"
   python3 - <<'PY' >>"$seed_out/run.log" 2>&1
@@ -130,7 +130,7 @@ import json,os,sys
 from pathlib import Path
 c=json.loads((Path(sys.argv[1])/"coverage.json").read_text())
 if not os.environ.get("GATE3_ALLOW_SHORT_PLAN"):
-    assert c["random_operations"] == 512
+    assert c["random_operations"] == int(os.environ.get("GATE3_EXPECTED_OPERATIONS", "512"))
     assert all(c["accepted_reads"]) and all(c["accepted_writes"])
     assert all(c["targets"]) and all(c["lengths"])
 PY

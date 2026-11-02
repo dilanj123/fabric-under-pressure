@@ -7,4 +7,4 @@ g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routin
 rm Vaxi_aw_target_scheduler_tb__ALL.verilator_deplist.tmp
 - V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
 - Verilator: Built from 0.094 MB sources in 5 modules, into 0.096 MB in 7 C++ files needing 0.000 MB
-- Verilator: Walltime 6.621 s (elab=0.003, cvt=0.012, bld=6.601); cpu 0.018 s on 1 threads; allocated 13.453 MB
+- Verilator: Walltime 4.699 s (elab=0.002, cvt=0.008, bld=4.684); cpu 0.015 s on 1 threads; allocated 13.688 MB

@@ -1,0 +1,52 @@
+{
+  "seeds": [
+    2750611457,
+    2750611458,
+    2750611459,
+    2750611460,
+    2750611461
+  ],
+  "accepted_reads": [
+    1709,
+    1715,
+    1683
+  ],
+  "accepted_writes": [
+    1696,
+    1798,
+    1639
+  ],
+  "targets": [
+    4155,
+    3021,
+    2034,
+    1030
+  ],
+  "lengths": [
+    610,
+    670,
+    625,
+    637,
+    644,
+    624,
+    624,
+    656,
+    630,
+    619,
+    654,
+    645,
+    624,
+    689,
+    651,
+    638
+  ],
+  "random_max_live_reads": 2,
+  "random_max_live_writes": 2,
+  "random_all_manager_active_cycles": 5352,
+  "target_aw_stalls": 957,
+  "target_ar_stalls": 957,
+  "target_w_stalls": 159,
+  "manager_b_stalls": 794,
+  "manager_r_stalls": 803,
+  "response_delays": 1731
+}

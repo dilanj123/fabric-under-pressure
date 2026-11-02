@@ -1112,20 +1112,20 @@ Extracted 266 AND gates and 0 wires from module `axi_address_decoder' to a netli
 3.46.14.5. Executing ABC9.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
-ABC: + read_lut <abc-temp-dir>/input.lut
-ABC: + read_box <abc-temp-dir>/input.box
-ABC: + &read <abc-temp-dir>/input.xaig
-ABC: + &ps
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =     32/     94  and =      89  lev =   10 (0.07)  mem = 0.01 MB  box = 48  bb = 0
-ABC: + &scorr
+ABC: + &scorr 
 ABC: Warning: The network is combinational.
-ABC: + &sweep
-ABC: + &dc2
-ABC: + &dch -f -r
-ABC: + &ps
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =     32/     94  and =      82  lev =   10 (0.08)  mem = 0.01 MB  ch =   11  box = 32  bb = 0
 ABC: cst =       0  cls =     11  lit =      11  unused =     188  proof =     0
-ABC: + &if -W 300 -v
+ABC: + &if -W 300 -v 
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   76. Obj =  156. Set =  780. CutMin = no
 ABC: Node =      82.  Ch =    11.  Total mem =    0.10 MB. Peak cut mem =    0.01 MB.
 ABC: P:  Del = 2328.00.  Ar =      59.0.  Edge =       78.  Cut =      621.  T =     0.00 sec
@@ -1135,17 +1135,17 @@ ABC: F:  Del = 2304.00.  Ar =      33.0.  Edge =       81.  Cut =      549.  T =
 ABC: A:  Del = 2304.00.  Ar =      32.0.  Edge =       76.  Cut =      433.  T =     0.00 sec
 ABC: A:  Del = 2304.00.  Ar =      32.0.  Edge =       76.  Cut =      433.  T =     0.00 sec
 ABC: Total time =     0.00 sec
-ABC: + &write -n <abc-temp-dir>/output.aig
-ABC: + &mfs
-ABC: + &ps -l
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: + &ps -l 
 ABC: <abc-temp-dir>/input : i/o =     32/     94  and =      32  lev =    8 (0.27)  mem = 0.00 MB  box = 0  bb = 0
 ABC: Mapping (K=5)  :  lut =     13  edge =      45  lev =    4 (0.15)  mem = 0.00 MB
 ABC: LUT = 13 : 2=2 15.4 %  3=5 38.5 %  4=4 30.8 %  5=2 15.4 %  Ave = 3.46
-ABC: + &write -n <abc-temp-dir>/output.aig
-ABC: + &verify
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
 ABC: Networks are equivalent.  Time =     0.01 sec
-ABC: + time
-ABC: elapse: 0.04 seconds, total: 0.04 seconds
+ABC: + time 
+ABC: elapse: 0.06 seconds, total: 0.06 seconds
 
 3.46.14.6. Executing AIGER frontend.
 <suppressed ~10 debug messages>
@@ -1283,7 +1283,7 @@ Removed 0 unused modules.
 === axi_address_decoder ===
 
         +----------Local Count, excluding submodules.
-        |
+        | 
        12 wires
        61 wire bits
        12 public wires
@@ -1297,11 +1297,11 @@ Removed 0 unused modules.
 === design hierarchy ===
 
         +----------Count including submodules.
-        |
+        | 
         - axi_address_decoder
 
         +----------Count including submodules.
-        |
+        | 
        12 wires
        61 wire bits
        12 public wires
@@ -1327,7 +1327,7 @@ Found and reported 0 problems.
 === axi_address_decoder ===
 
         +----------Local Count, excluding submodules.
-        |
+        | 
        12 wires
        61 wire bits
        12 public wires
@@ -1340,6 +1340,6 @@ Found and reported 0 problems.
 
 Warnings: 1 unique messages, 1 total
 Warnings: 1 experimental features used (not excluded with -x).
-End of script. Logfile hash: 4a47119be7, time: 0.52s, user: 0.38s, system: 0.04s, MEM: 33.75 MB peak
+End of script. Logfile hash: 5be57216a9, time: 1.24s, user: 0.41s, system: 0.06s, MEM: 32.20 MB peak
 Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
-Time spent: 62% 22x read_verilog (0 sec), 11% 1x abc9_exe (0 sec), ...
+Time spent: 60% 22x read_verilog (0 sec), 12% 1x abc9_exe (0 sec), ...

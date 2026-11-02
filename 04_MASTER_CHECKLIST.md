@@ -465,17 +465,17 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 # S. Gate 3 — deep Architecture A verification
 
-- [x] all-channel random backpressure passes. (`results/processed/gate3_random/summary.md`; fixed-seed AW/AR/W/B/R pause schedules.)
-- [ ] random legal IDs/bursts/QOS/targets pass. (Historical Task-1 matrix used deterministic coverage anchors; repaired concurrent random-body evidence pending in `results/processed/gate3_random_v2/`.)
-- [x] randomized response latency passes. (`results/processed/gate3_random/summary.md`; finite verification-only endpoint delays.)
-- [ ] simultaneous channel stress passes. (Historical pressure prologues retained; genuine random-body qualification pending.)
-- [ ] long seeded contention passes.
-- [ ] reset-with-traffic regression passes.
-- [ ] adversarial A fairness tests pass as specified.
-- [ ] targeted formal properties for trusted primitives pass.
-- [ ] bug regression set is current.
-- [ ] coverage/reachability review completed.
-- [ ] known-good Gate-3 commit recorded.
+- [x] all-channel random backpressure passes. (`results/raw/gate3_final/random_2048/seed_*/coverage.json`; independent AW/AR/W/B/R pauses and endpoint delays.)
+- [x] random legal IDs/bursts/QOS/targets pass. (`results/raw/gate3_final/random_512/` and `random_2048/`; all five frozen seeds; no random depth-four claim.)
+- [x] randomized response latency passes. (`results/raw/gate3_final/random_2048/seed_*/coverage.json`; finite verification-only delays.)
+- [x] simultaneous channel stress passes. (Observed all-manager activity in long random runs; directed S0 contention and response-order coverage are separate evidence.)
+- [x] long seeded contention passes. (`results/raw/gate3_final/random_2048/seed_*/results.xml`; 2,048 random operations per frozen seed.)
+- [x] reset-with-traffic regression passes. (`results/raw/gate2_oracle/closure_matrix.log`; directed live-work reset and recovery.)
+- [x] adversarial Architecture-A fairness tests pass. (`results/raw/fabric_a_gate2_directed/simulation.log`; integrated AW/AR nine-grant cycles.)
+- [x] targeted formal properties for trusted primitives pass. (`results/raw/gate3_final/formal_rechecks/`; bounded proofs/covers with assumptions retained.)
+- [x] bug regression set is current. (Plan negative validation, minimized RDATA replay/R retention, endpoint and packed-bus tests, plus directed/oracle matrix.)
+- [x] coverage/reachability review completed. (`results/processed/gate3/summary.md`; D042 assigns depth-four proof to directed Gate-2 evidence; random maximum is two.)
+- [x] known-good Gate-3 commit/tag recorded. (`kg-g3-a-verified`; final commit recorded in the processed Gate-3 summary.)
 
 ---
 

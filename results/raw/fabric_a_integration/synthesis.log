@@ -11621,12 +11621,12 @@ ABC: + &if -W 300 -v
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   76. Obj =  156. Set =  780. CutMin = no
 ABC: Node =   19145.  Ch =  1802.  Total mem =    5.73 MB. Peak cut mem =    0.39 MB.
 ABC: P:  Del = 6299.00.  Ar =   18964.0.  Edge =    22980.  Cut =   224770.  T =     0.03 sec
-ABC: P:  Del = 6194.00.  Ar =   19069.0.  Edge =    22298.  Cut =   222773.  T =     0.03 sec
-ABC: P:  Del = 6194.00.  Ar =   12405.0.  Edge =    21894.  Cut =   357059.  T =     0.05 sec
-ABC: F:  Del = 6194.00.  Ar =    6517.0.  Edge =    17368.  Cut =   309611.  T =     0.04 sec
+ABC: P:  Del = 6194.00.  Ar =   19069.0.  Edge =    22298.  Cut =   222773.  T =     0.04 sec
+ABC: P:  Del = 6194.00.  Ar =   12405.0.  Edge =    21894.  Cut =   357059.  T =     0.06 sec
+ABC: F:  Del = 6194.00.  Ar =    6517.0.  Edge =    17368.  Cut =   309611.  T =     0.05 sec
 ABC: A:  Del = 6194.00.  Ar =    5774.0.  Edge =    16108.  Cut =   308941.  T =     0.07 sec
 ABC: A:  Del = 6194.00.  Ar =    5643.0.  Edge =    16000.  Cut =   307009.  T =     0.07 sec
-ABC: Total time =     0.30 sec
+ABC: Total time =     0.32 sec
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + &mfs 
 ABC: + &ps -l 
@@ -11636,9 +11636,9 @@ ABC: LUT = 3947 : 2=440 11.1 %  3=690 17.5 %  4=2280 57.8 %  5=369 9.3 %  6=117 
 ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 3 carries.
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + &verify 
-ABC: Networks are equivalent.  Time =     0.43 sec
+ABC: Networks are equivalent.  Time =     0.47 sec
 ABC: + time 
-ABC: elapse: 3.76 seconds, total: 3.76 seconds
+ABC: elapse: 4.22 seconds, total: 4.22 seconds
 
 19.46.17.6. Executing AIGER frontend.
 <suppressed ~10 debug messages>
@@ -13287,6 +13287,6 @@ Found and reported 0 problems.
 
 Warnings: 3 unique messages, 3 total
 Warnings: 1 experimental features used (not excluded with -x).
-End of script. Logfile hash: b49a384e56, time: 7.00s, user: 3.57s, system: 0.16s, MEM: 316.42 MB peak
+End of script. Logfile hash: cac463ac59, time: 8.72s, user: 4.39s, system: 0.22s, MEM: 281.81 MB peak
 Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
-Time spent: 50% 1x abc9_exe (3 sec), 7% 12x techmap (0 sec), ...
+Time spent: 47% 1x abc9_exe (4 sec), 8% 12x techmap (0 sec), ...
