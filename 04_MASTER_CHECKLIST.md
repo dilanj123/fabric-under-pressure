@@ -492,21 +492,21 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] A timing/resources processed. (All-seed clean target 60 MHz; wrapper and direct synthesis counts are separate.)
 - [x] measured bottleneck identified. (W08 S0 read-queue pressure plus same-target arbitration contention; see processed summary.)
 - [x] bottleneck mechanism linked to traces/counters, not guesswork. (S0 AR stall cycles, depth-8 queue, eligible grant losses and measured response tail.)
-- [x] B hypothesis written before B results. (D045; no B RTL exists.)
+- [x] B hypothesis written before B results. (D045 remains frozen; no canonical B performance result exists.)
 
 ---
 
 # U. Architecture B controlled change
 
-- [ ] B implementation changes scheduler policy/state only or deviations are explicitly reclassified.
-- [ ] no B-only hidden buffer.
-- [ ] no B-only hidden pipeline.
-- [ ] no workload change.
-- [ ] no outstanding-depth change.
-- [ ] no target-model change.
-- [ ] same functional regression passes.
-- [ ] B-specific scheduler directed tests pass.
-- [ ] B formal properties pass with assumptions.
+- [x] B implementation changes scheduler policy/age state only; B-specific wrappers preserve the registered address-slot structure.
+- [x] no B-only hidden buffer.
+- [x] no B-only hidden pipeline.
+- [x] no workload/plan/seed change.
+- [x] no outstanding-depth change.
+- [x] no target-model change.
+- [x] B whole-DUT functional regression passes, including five 512- and five 2,048-operation seeds.
+- [x] B-specific scheduler directed tests pass.
+- [x] B formal properties/covers pass at the stated bounded depths and assumptions.
 - [ ] B canonical benchmark uses identical seeds/config.
 - [ ] B synthesis/P&R uses identical target/settings/seeds.
 - [ ] processed A/B comparison contains regressions and improvements.

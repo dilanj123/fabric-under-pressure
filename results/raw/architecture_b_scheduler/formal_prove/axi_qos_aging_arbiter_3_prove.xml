@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-11-03T20:19:09" hostname="MacBook-Pro.local" package="axi_qos_aging_arbiter_3" id="0" name="prove" tests="40" errors="0" failures="0" time="1" skipped="4">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prove" name="build execution" time="0">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:48.7-48.31" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:48.7-48.31" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_48_92">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:49.7-49.43" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:49.7-49.43" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_49_106">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:50.24-50.64" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:50.24-50.64" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_50_109">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:51.7-51.35" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:51.7-51.35" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_51_111">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:52.7-52.42" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:52.7-52.42" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_52_125">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:54.9-54.43" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:54.9-54.43" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_54_153">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:55.9-55.56" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:55.9-55.56" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_55_185">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:57.9-57.59" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:57.9-57.59" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_57_228">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_231">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_233">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_235">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_238">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_240">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_242">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_245">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_247">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:61.32-61.57" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_61_249">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:62.16-62.37" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:62.16-62.37" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_62_251">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:64.7-64.64" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:64.7-64.64" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_64_253">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:71.56-71.79" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:71.56-71.79" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_71_271">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:71.56-71.79" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:71.56-71.79" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_71_282">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:71.56-71.79" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:71.56-71.79" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_71_293">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:72.33-72.60" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:72.33-72.60" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_72_274">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:72.33-72.60" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:72.33-72.60" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_72_285">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:72.33-72.60" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:72.33-72.60" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_72_296">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:73.14-73.49" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:73.14-73.49" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_73_276">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:73.14-73.49" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:73.14-73.49" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_73_287">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:73.14-73.49" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:73.14-73.49" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_73_298">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:76.9-76.62" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:76.9-76.62" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_76_305">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:77.9-77.52" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:77.9-77.52" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_77_307">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:79.9-79.39" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:79.9-79.39" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_79_311">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:81.11-81.37" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:81.11-81.37" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_81_315">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:82.11-82.36" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:82.11-82.36" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_82_317">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:83.11-83.51" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:83.11-83.51" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_83_318">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:85.11-85.41" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:85.11-85.41" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_85_320">
+</testcase>
+<testcase classname="prove" name="Property ASSERT in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:86.11-86.52" time="0" type="ASSERT" location="axi_qos_aging_arbiter_3_formal.sv:86.11-86.52" id="_witness_.check_assert_axi_qos_aging_arbiter_3_formal_sv_86_322">
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:93.5-93.57" time="0" type="COVER" location="axi_qos_aging_arbiter_3_formal.sv:93.5-93.57" id="_witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_93_335">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:94.5-95.45" time="0" type="COVER" location="axi_qos_aging_arbiter_3_formal.sv:94.5-95.45" id="_witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_94_339">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:96.5-97.48" time="0" type="COVER" location="axi_qos_aging_arbiter_3_formal.sv:96.5-97.48" id="_witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_96_393">
+<skipped />
+</testcase>
+<testcase classname="prove" name="Property COVER in axi_qos_aging_arbiter_3_formal at axi_qos_aging_arbiter_3_formal.sv:98.5-98.46" time="0" type="COVER" location="axi_qos_aging_arbiter_3_formal.sv:98.5-98.46" id="_witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_98_398">
+<skipped />
+</testcase>
+<system-out>SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] Removing directory '/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove'.
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/../rtl/axi_qos_aging_arbiter_3.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove/src/axi_qos_aging_arbiter_3.sv'.
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] Copy '/Users/Dilan/Projects/fabric-under-pressure/formal/axi_qos_aging_arbiter_3_formal.sv' to '/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove/src/axi_qos_aging_arbiter_3_formal.sv'.
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: smtbmc
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$16.m [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:68$261': $auto$proc_dlatch.cc:545:proc_dlatch$1934
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$16.m [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:68$261': $auto$proc_dlatch.cc:543:proc_dlatch$1943
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.\rr_pick$func$axi_qos_aging_arbiter_3_formal.sv:55$18.$fordecl_block$10.n [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:545:proc_dlatch$1960
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.\rr_pick$func$axi_qos_aging_arbiter_3_formal.sv:55$18.$fordecl_block$10.n [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:543:proc_dlatch$1981
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.\rr_pick$func$axi_qos_aging_arbiter_3_formal.sv:57$22.$fordecl_block$10.n [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:545:proc_dlatch$2002
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.\rr_pick$func$axi_qos_aging_arbiter_3_formal.sv:57$22.$fordecl_block$10.n [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:543:proc_dlatch$2045
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.m [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:545:proc_dlatch$2048
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.m [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:543:proc_dlatch$2051
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.$for_loop$13[0].$fordecl_block$14.n [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:545:proc_dlatch$2088
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.$for_loop$13[0].$fordecl_block$14.n [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:543:proc_dlatch$2157
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.$for_loop$13[1].$fordecl_block$14.n [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:545:proc_dlatch$2160
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.$for_loop$13[1].$fordecl_block$14.n [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:543:proc_dlatch$2229
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.$for_loop$13[2].$fordecl_block$14.n [1:0]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:545:proc_dlatch$2232
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: Warning: Latch inferred for signal `\axi_qos_aging_arbiter_3_formal.$fordecl_block$12.$for_loop$13[2].$fordecl_block$14.n [31:2]' from process `\axi_qos_aging_arbiter_3_formal.$proc$axi_qos_aging_arbiter_3_formal.sv:42$36': $auto$proc_dlatch.cc:543:proc_dlatch$2301
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] base: finished (returncode=0)
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] prep: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] prep: finished (returncode=0)
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] smt2: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] smt2: finished (returncode=0)
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: starting process &quot;cd /Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Solver: yices
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 20:19:08 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: ##   0:00:00  Status: passed
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: finished (returncode=0)
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] engine_0: Status returned by engine: pass
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] summary: engine_0 (smtbmc) returned pass
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] summary: engine_0 did not produce any traces
+SBY 20:19:09 [/Users/Dilan/Projects/fabric-under-pressure/results/raw/architecture_b_scheduler/formal_prove] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

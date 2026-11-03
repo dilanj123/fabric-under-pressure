@@ -1,9 +1,9 @@
 # Project State
 
 **Date:** 2026-11-03
-**Gate:** Gate 3 Architecture-A verification PASS; Gate-2 `kg-g2-a-functional` remains immutable at commit `cbb801aaf87870cb6f7aaa938f3d364e5b16d472` (annotated tag object `15190879d68fb7f94f425556d60a20609f818c79`). Gate-3 remains recorded by `kg-g3-a-verified`.
+**Gate:** Architecture A remains verified at `kg-g3-a-verified`; Architecture B functional implementation and targeted scheduler verification PASS at the current B functional checkpoint. Gate-0/1/2/3-A tags remain protected and unchanged.
 **Gate 3:** Five frozen seeds pass at both 512 and 2,048 random operations. Integrated whole-DUT AW and AR fairness each pass with manager order `0 1 2 0 1 2 0 1 2`. Random live depth is two reads/two writes; D042 allocates four-outstanding proof to Gate-2 directed tests, which demonstrate four, fifth-request blocking and next-cycle recovery. The final coverage review distinguishes random observations from directed same-target, ordering and live-reset evidence. See `results/processed/gate3/summary.md`.
-**Architecture:** Production `rtl/axi_fabric_a.sv` is unchanged. Gate-2 closure passes and the expanded whole-top directed suite passes 384 checks (348 Gate-2 checks plus integrated fairness checks). Architecture-A Mission 2 measurement is complete: all 70 W00–W13/seed runs passed quota and XML checks; the common-wrapper ECP5 sweep completed 55 routes and is all-seed timing-clean through 60 MHz. D045 freezes one falsifiable B hypothesis. Architecture B and the A/B comparison remain open.
+**Architecture:** Architecture A RTL and Mission-2 measurements remain unchanged. B is implemented in B-specific top/path/scheduler modules and reuses unchanged common decode, outstanding/owner state, W datapath, response routers and S3. The B whole-DUT directed suite passes 444 checks; all five frozen 512- and 2,048-operation functional seeds pass; scheduler directed and bounded formal checks pass. D045 remains unchanged. Canonical B performance measurement, B P&R and the A/B comparison have not started.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -20,7 +20,7 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 ## Still unproven
 - exhaustive whole-Fabric formal proof and unrestricted AXI4 compliance;
 - recorded-target versus returned-target response-source matching because the shared state interface does not expose the required metadata;
-- Architecture-B behavior and the controlled A/B comparison; the measured synthetic endpoint does not represent a particular production memory/peripheral;
+- Architecture-B canonical performance, resource comparison and routed timing; the measured synthetic endpoint does not represent a particular production memory/peripheral;
 - general ECP5 timing signoff beyond the documented common-wrapper, fixed-seed method.
 
 ## Risks
@@ -52,4 +52,4 @@ The following phase-status bullets are retained as historical milestone descript
 - The S3 error target has independent one-context write/read sides. It consumes legal unmapped write bursts through WLAST before generating stable DECERR B, and emits exact zero-data DECERR read bursts with ARLEN+1 beats and final RLAST. Focused manager-to-S3-to-manager write and read lifecycle simulations and bounded endpoint formal checks pass. A repair also confirms legal WVALID-before-local-AW is backpressured without a false diagnostic; full four-target routing remains absent.
 
 ## Next smallest task
-Begin the separately reviewed Architecture-B implementation mission only after preserving D045's evaluation criteria and reusing the frozen benchmark driver, endpoint, wrapper, constraints, seeds and tools unchanged. Do not claim an A/B result until the full matched B measurements are complete.
+Next: run the separately reviewed Architecture-B canonical benchmark and matched ECP5 comparison using the frozen driver, endpoint, wrapper, constraints, workloads, seeds and tools unchanged. Do not tune D045 or claim an A/B result until full matched measurements are complete.

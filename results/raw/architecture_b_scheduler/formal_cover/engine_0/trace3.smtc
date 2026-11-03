@@ -1,0 +1,204 @@
+initial
+assume (= [dut._witness_.anyinit_procdff_2306] #b000)
+assume (= [dut._witness_.anyinit_procdff_2311] false)
+assume (= [dut._witness_.anyinit_procdff_2316] #b00)
+assume (= [dut._witness_.anyinit_procdff_2321] #b00)
+assume (= [dut._witness_.anyinit_procdff_2326] #b000000000000000000000000)
+
+state 0
+assume (= [ACLK] false)
+
+state 1
+assume (= [ACLK] false)
+
+state 2
+assume (= [ACLK] false)
+
+state 3
+assume (= [ACLK] false)
+
+state 4
+assume (= [ACLK] false)
+
+state 5
+assume (= [ACLK] false)
+
+state 6
+assume (= [ACLK] false)
+
+state 7
+assume (= [ACLK] false)
+
+state 8
+assume (= [ACLK] false)
+
+state 9
+assume (= [ACLK] false)
+
+state 10
+assume (= [ACLK] false)
+
+state 11
+assume (= [ACLK] false)
+
+state 12
+assume (= [ACLK] false)
+
+state 13
+assume (= [ACLK] false)
+
+state 14
+assume (= [ACLK] false)
+
+state 15
+assume (= [ACLK] false)
+
+state 16
+assume (= [ACLK] false)
+
+state 17
+assume (= [ACLK] false)
+
+state 18
+assume (= [ACLK] false)
+
+state 19
+assume (= [ACLK] false)
+
+state 20
+assume (= [ACLK] false)
+
+state 21
+assume (= [ACLK] false)
+
+state 22
+assume (= [ACLK] false)
+
+state 23
+assume (= [ACLK] false)
+
+state 24
+assume (= [ACLK] false)
+
+state 25
+assume (= [ACLK] false)
+
+state 26
+assume (= [ACLK] false)
+
+state 27
+assume (= [ACLK] false)
+
+state 28
+assume (= [ACLK] false)
+
+state 29
+assume (= [ACLK] false)
+
+state 30
+assume (= [ACLK] false)
+
+state 31
+assume (= [ACLK] false)
+
+state 32
+assume (= [ACLK] false)
+
+state 33
+assume (= [ACLK] false)
+
+state 34
+assume (= [ACLK] false)
+
+state 35
+assume (= [ACLK] false)
+
+state 36
+assume (= [ACLK] false)
+
+state 37
+assume (= [ACLK] false)
+
+state 38
+assume (= [ACLK] false)
+
+state 39
+assume (= [ACLK] false)
+
+state 40
+assume (= [ACLK] false)
+
+state 41
+assume (= [ACLK] false)
+
+state 42
+assume (= [ACLK] false)
+
+state 43
+assume (= [ACLK] false)
+
+state 44
+assume (= [ACLK] false)
+
+state 45
+assume (= [ACLK] false)
+
+state 46
+assume (= [ACLK] false)
+
+state 47
+assume (= [ACLK] false)
+
+state 48
+assume (= [ACLK] false)
+
+state 49
+assume (= [ACLK] false)
+
+state 50
+assume (= [ACLK] false)
+
+state 51
+assume (= [ACLK] false)
+
+state 52
+assume (= [ACLK] false)
+
+state 53
+assume (= [ACLK] false)
+
+state 54
+assume (= [ACLK] false)
+
+state 55
+assume (= [ACLK] false)
+
+state 56
+assume (= [ACLK] false)
+
+state 57
+assume (= [ACLK] false)
+
+state 58
+assume (= [ACLK] false)
+
+state 59
+assume (= [ACLK] false)
+
+state 60
+assume (= [ACLK] false)
+
+state 61
+assume (= [ACLK] false)
+
+state 62
+assume (= [ACLK] false)
+
+state 63
+assume (= [ACLK] false)
+
+state 64
+assume (= [ACLK] false)
+
+state 65
+assume (= [ACLK] false)

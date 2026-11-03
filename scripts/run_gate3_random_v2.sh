@@ -67,19 +67,40 @@ if len(plans) > 1:
     assert len({p["_body_digest"] for p in plans}) == len(plans), "seed plans are identical"
 PY
 
-rtl=(
-  "$ROOT/rtl/fabric_addr_map_pkg.sv" "$ROOT/rtl/axi_address_decoder.sv"
-  "$ROOT/rtl/axi_request_legal.sv" "$ROOT/rtl/axi_outstanding_tracker.sv"
-  "$ROOT/rtl/axi_write_owner.sv" "$ROOT/rtl/axi_write_state_bank.sv"
-  "$ROOT/rtl/axi_read_state_bank.sv" "$ROOT/rtl/axi_rr_arbiter_3.sv"
-  "$ROOT/rtl/axi_rr_arbiter_4.sv" "$ROOT/rtl/axi_aw_target_scheduler_a.sv"
-  "$ROOT/rtl/axi_aw_target_path_a.sv" "$ROOT/rtl/axi_ar_target_scheduler_a.sv"
-  "$ROOT/rtl/axi_ar_target_path_a.sv" "$ROOT/rtl/axi_w_target_path.sv"
-  "$ROOT/rtl/axi_b_response_router.sv" "$ROOT/rtl/axi_r_response_router.sv"
-  "$ROOT/rtl/axi_s3_error_target.sv" "$ROOT/rtl/axi_fabric_a.sv"
-)
+ARCH="${GATE3_ARCH:-A}"
+if [ "$ARCH" = "B" ]; then
+  DUT_TOP=axi_fabric_b
+  rtl=(
+    "$ROOT/rtl/fabric_addr_map_pkg.sv" "$ROOT/rtl/axi_address_decoder.sv"
+    "$ROOT/rtl/axi_request_legal.sv" "$ROOT/rtl/axi_outstanding_tracker.sv"
+    "$ROOT/rtl/axi_write_owner.sv" "$ROOT/rtl/axi_write_state_bank.sv"
+    "$ROOT/rtl/axi_read_state_bank.sv" "$ROOT/rtl/axi_rr_arbiter_3.sv"
+    "$ROOT/rtl/axi_rr_arbiter_4.sv" "$ROOT/rtl/axi_qos_aging_arbiter_3.sv"
+    "$ROOT/rtl/axi_aw_target_scheduler_b.sv" "$ROOT/rtl/axi_aw_target_path_b.sv"
+    "$ROOT/rtl/axi_ar_target_scheduler_b.sv" "$ROOT/rtl/axi_ar_target_path_b.sv"
+    "$ROOT/rtl/axi_w_target_path.sv" "$ROOT/rtl/axi_b_response_router.sv"
+    "$ROOT/rtl/axi_r_response_router.sv" "$ROOT/rtl/axi_s3_error_target.sv"
+    "$ROOT/rtl/axi_fabric_b.sv"
+  )
+elif [ "$ARCH" = "A" ]; then
+  DUT_TOP=axi_fabric_a
+  rtl=(
+    "$ROOT/rtl/fabric_addr_map_pkg.sv" "$ROOT/rtl/axi_address_decoder.sv"
+    "$ROOT/rtl/axi_request_legal.sv" "$ROOT/rtl/axi_outstanding_tracker.sv"
+    "$ROOT/rtl/axi_write_owner.sv" "$ROOT/rtl/axi_write_state_bank.sv"
+    "$ROOT/rtl/axi_read_state_bank.sv" "$ROOT/rtl/axi_rr_arbiter_3.sv"
+    "$ROOT/rtl/axi_rr_arbiter_4.sv" "$ROOT/rtl/axi_aw_target_scheduler_a.sv"
+    "$ROOT/rtl/axi_aw_target_path_a.sv" "$ROOT/rtl/axi_ar_target_scheduler_a.sv"
+    "$ROOT/rtl/axi_ar_target_path_a.sv" "$ROOT/rtl/axi_w_target_path.sv"
+    "$ROOT/rtl/axi_b_response_router.sv" "$ROOT/rtl/axi_r_response_router.sv"
+    "$ROOT/rtl/axi_s3_error_target.sv" "$ROOT/rtl/axi_fabric_a.sv"
+  )
+else
+  echo "unsupported GATE3_ARCH=$ARCH" >&2; exit 2
+fi
+
 GATE3_RTL=$(IFS=:; echo "${rtl[*]}")
-export GATE3_RTL
+export GATE3_RTL DUT_TOP
 
 for plan in "${plans[@]}"; do
   seed=$(python3 -c 'import json,sys; print("%08X" % json.load(open(sys.argv[1]))["seed"])' "$plan")
@@ -95,7 +116,9 @@ for plan in "${plans[@]}"; do
   export COCOTB_RANDOM_SEED="0x$seed"
   {
     echo "git_commit=$(env -u DYLD_LIBRARY_PATH git rev-parse HEAD)"
-    echo "architecture=A"
+    echo "architecture=$ARCH"
+    echo "dut_top=$DUT_TOP"
+    printf "rtl_source=%s\n" "${rtl[@]}"
     echo "seed=0x$seed"
     echo "plan=$plan"
     echo "configuration=24 anchors plus ${GATE3_EXPECTED_OPERATIONS:-512} genuinely random operations with bounded drain"
@@ -109,9 +132,9 @@ root = Path(os.environ["ROOT"])
 out = Path(os.environ["GATE3_OUT"])
 rtl = [Path(p) for p in os.environ["GATE3_RTL"].split(":")]
 runner = get_runner("verilator")
-runner.build(sources=rtl, hdl_toplevel="axi_fabric_a", build_dir=out / "work", always=True,
+runner.build(sources=rtl, hdl_toplevel=os.environ["DUT_TOP"], build_dir=out / "work", always=True,
              build_args=["-Wno-fatal"])
-runner.test(hdl_toplevel="axi_fabric_a", test_module="test_axi_fabric_a_random_v2",
+runner.test(hdl_toplevel=os.environ["DUT_TOP"], test_module="test_axi_fabric_a_random_v2",
             test_dir=root / "tb/cocotb", results_xml=str(out / "results.xml"))
 PY
 python3 - "$seed_out/results.xml" <<'PY'

@@ -1,5 +1,20 @@
 # Evidence Index
 
+## Architecture-B functional qualification
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| B-E001 | SIM | QoS/age policy directed cases pass | `results/raw/architecture_b_scheduler/directed.log` | PASS; 28 checks including QoS ordering, RR ties, age 63/64/255, escape and reset |
+| B-E002 | FORMAL | B scheduler bounded safety/policy checks and threshold covers | `results/raw/architecture_b_scheduler/formal.log`, `formal_prove/`, `formal_cover/` | PASS; Yices BMC prove depth 20, cover depth 80; arbiter only |
+| B-E003 | SIM | B whole-DUT directed functional matrix and B policy cases pass | `results/raw/fabric_b_directed/simulation.log` | PASS; 444 checks |
+| B-E004 | SIM | Independent oracle confirms B protocol, capacity, ordering, S3 and live-reset behavior | `results/raw/gate2_oracle_b/results.xml`, `build_and_test.log` | PASS; 2 XML testcases, zero failures/errors/skips |
+| B-E005 | SIM | Five frozen functional seeds pass at 512 operations | `results/raw/gate3_random_b_512/`, `results/processed/architecture_b_functional/seed_results.csv` | PASS; all five XML results checked |
+| B-E006 | SIM | Five frozen functional seeds pass at 2,048 operations | `results/raw/gate3_random_b_2048/`, `results/processed/architecture_b_functional/seed_results.csv` | PASS; all five XML results checked |
+| B-E007 | LINT/SYNTH | B top lints and direct ECP5 synthesis completes | `results/raw/fabric_b_directed/lint.log`, `results/raw/architecture_b_scheduler/yosys_synth.log.gz` | PASS; feasibility only, no routed timing or A/B PPA claim |
+| B-E008 | REPRO | B implementation boundary and verification allocation are documented | `results/processed/architecture_b_functional/summary.md`, D046 | PASS; D045 remains unchanged; canonical B benchmark remains open |
+
+Architecture-B's random maximum outstanding depth is two reads and two writes. Four-outstanding, same-ID, reordering and live-reset behaviors are supported by B whole-DUT directed/oracle evidence and must not be represented as randomized observations.
+
 | ID | Class | Claim | Evidence | Status |
 |---|---|---|---|---|
 | G0-E001 | PLAN | repository skeleton and scripts exist | repository tree | COMPLETE |

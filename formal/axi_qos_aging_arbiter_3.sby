@@ -1,0 +1,20 @@
+[tasks]
+prove
+cover
+
+[options]
+prove: mode bmc
+prove: depth 20
+cover: mode cover
+cover: depth 80
+
+[engines]
+smtbmc
+
+[script]
+read -formal -D FORMAL -sv axi_qos_aging_arbiter_3.sv axi_qos_aging_arbiter_3_formal.sv
+prep -top axi_qos_aging_arbiter_3_formal
+
+[files]
+../rtl/axi_qos_aging_arbiter_3.sv
+axi_qos_aging_arbiter_3_formal.sv

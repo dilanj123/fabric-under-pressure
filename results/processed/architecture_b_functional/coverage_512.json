@@ -1,0 +1,88 @@
+{
+  "seeds": 5,
+  "operations_per_seed": 512,
+  "seed_values": [
+    "0xA3F30001",
+    "0xA3F30002",
+    "0xA3F30003",
+    "0xA3F30004",
+    "0xA3F30005"
+  ],
+  "accepted_reads": [
+    430,
+    427,
+    424
+  ],
+  "accepted_writes": [
+    436,
+    458,
+    385
+  ],
+  "targets": [
+    1027,
+    767,
+    520,
+    246
+  ],
+  "lengths": [
+    165,
+    163,
+    167,
+    151,
+    148,
+    163,
+    177,
+    162,
+    165,
+    155,
+    169,
+    158,
+    152,
+    160,
+    152,
+    153
+  ],
+  "qos": [
+    151,
+    168,
+    166,
+    177,
+    141,
+    167,
+    167,
+    160,
+    156,
+    148,
+    152,
+    162,
+    165,
+    154,
+    184,
+    142
+  ],
+  "aw_w_styles": {
+    "ar_then_r": 1281,
+    "aw_before_w": 433,
+    "near_cycle": 443,
+    "w_before_aw": 403
+  },
+  "target_aw_stall_episodes": 1151,
+  "target_aw_stalls": 1151,
+  "target_aw_stall_cycles": 1232,
+  "target_ar_stall_episodes": 1163,
+  "target_ar_stalls": 1163,
+  "target_ar_stall_cycles": 1272,
+  "target_w_stall_episodes": 199,
+  "target_w_stalls": 199,
+  "target_w_stall_cycles": 398,
+  "manager_b_stalls": 960,
+  "manager_r_stalls": 965,
+  "response_delays": 2137,
+  "random_all_manager_active_cycles": 5510,
+  "random_max_live_reads": 2,
+  "random_max_live_writes": 2,
+  "random_same_target_contention": 0,
+  "random_same_id_cross_manager": 0,
+  "random_out_of_order_completions": 0,
+  "random_reset_with_live_work": 0
+}

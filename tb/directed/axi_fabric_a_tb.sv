@@ -130,7 +130,11 @@ module axi_fabric_a_tb;
     end
   end
 
+`ifdef ARCHITECTURE_B
+  axi_fabric_b dut (.*,
+`else
   axi_fabric_a dut (.*,
+`endif
     .manager_awid(awid), .manager_awaddr(awaddr), .manager_awlen(awlen), .manager_awsize(awsize),
     .manager_awburst(awburst), .manager_awlock(awlock), .manager_awcache(awcache), .manager_awprot(awprot),
     .manager_awqos(awqos), .manager_awregion(awregion), .manager_awvalid(awvalid), .manager_awready(awready),
@@ -424,6 +428,170 @@ module axi_fabric_a_tb;
     end
   endtask
 
+`ifdef ARCHITECTURE_B
+  integer b_starve_cycles;
+  task automatic b_high_qos_read(input logic [3:0] id);
+    integer wait_cycles;
+    logic accepted, completed;
+    begin
+      arid[1]=id; araddr[1]=32'h0000_2800+(id*8); arlen[1]=0; arsize[1]=3;
+      arburst[1]=1; arlock[1]=0; arcache[1]=0; arprot[1]=0;
+      arqos[1]=15; arregion[1]=0; arvalid[1]=1; rready[1]=1;
+      accepted=0; wait_cycles=0;
+      while (!accepted && wait_cycles<60) begin
+        @(posedge ACLK);
+        if (arvalid[1] && arready[1]) begin accepted=1; #1; arvalid[1]=0; end
+        else #1;
+        wait_cycles=wait_cycles+1;
+        if (arvalid[0]) b_starve_cycles=b_starve_cycles+1;
+      end
+      check(accepted, "B high-QoS contender AR admitted");
+      completed=0; wait_cycles=0;
+      while (!completed && wait_cycles<60) begin
+        @(posedge ACLK);
+        if (rvalid[1] && rready[1]) begin
+          check(rid[1]==id && rlast[1], "B high-QoS contender R completion");
+          completed=1;
+        end
+        #1; wait_cycles=wait_cycles+1;
+        if (arvalid[0]) b_starve_cycles=b_starve_cycles+1;
+      end
+      check(completed, "B high-QoS contender response drained");
+    end
+  endtask
+
+  task automatic test_b_ar_independent_of_aw_owner;
+    integer wait_cycles;
+    logic aw_done, w_done, ar_done;
+    begin
+      $display("B AR scheduling independent of active AW/W owner");
+      reset_dut();
+      twready[0]=0; tawready[0]=1; tarready[0]=1; rready[1]=1;
+      awid[0]=4'h9; awaddr[0]=32'h0000_2b00; awlen[0]=0; awsize[0]=3;
+      awburst[0]=1; awlock[0]=0; awcache[0]=0; awprot[0]=0;
+      awqos[0]=0; awregion[0]=0; awvalid[0]=1;
+      aw_done=0; wait_cycles=0;
+      while (!aw_done && wait_cycles<40) begin
+        @(posedge ACLK);
+        if (awvalid[0] && awready[0]) begin aw_done=1; #1; awvalid[0]=0; end
+        else #1;
+        wait_cycles=wait_cycles+1;
+      end
+      check(aw_done, "B owner test AW admitted");
+      for (wait_cycles=0;wait_cycles<30 && !tawvalid[0];wait_cycles=wait_cycles+1) tick();
+      check(tawvalid[0] && tawready[0], "B owner test target AW delivered");
+      tick();
+      wdata[0]=64'hB00B_0000_0000_0009; wstrb[0]=8'hff; wlast[0]=1; wvalid[0]=1;
+      for (wait_cycles=0;wait_cycles<30 && !wready[0];wait_cycles=wait_cycles+1) tick();
+      check(wready[0], "B owner test manager W accepted into target slot");
+      tick(); wvalid[0]=0;
+      check(twvalid[0] && !twready[0] && twlast[0], "B final W remains held and owns S0");
+
+      arid[1]=4'hA; araddr[1]=32'h0000_2c00; arlen[1]=0; arsize[1]=3;
+      arburst[1]=1; arlock[1]=0; arcache[1]=0; arprot[1]=0;
+      arqos[1]=12; arregion[1]=0; arvalid[1]=1;
+      ar_done=0; wait_cycles=0;
+      while (!ar_done && wait_cycles<50) begin
+        @(posedge ACLK);
+        if (arvalid[1] && arready[1]) begin ar_done=1; #1; arvalid[1]=0; end
+        else #1;
+        wait_cycles=wait_cycles+1;
+      end
+      check(ar_done, "B AR admission progresses during active S0 W owner");
+      for (wait_cycles=0;wait_cycles<30 && !tarvalid[0];wait_cycles=wait_cycles+1) tick();
+      check(tarvalid[0] && tarready[0] && taraddr[0]==32'h0000_2c00,
+            "B AR target delivery independent of S0 W owner");
+      $display("B_AR_DURING_AW_OWNER PASS");
+      reset_dut();
+    end
+  endtask
+
+  task automatic test_integrated_b_starvation_escape;
+    integer first_manager, wait_cycles;
+    logic fire0, fire1;
+    begin
+      $display("B integrated age/starvation escape");
+      reset_dut();
+      b_starve_cycles=0;
+      // Fill M0's four-read capacity on distinct targets while retaining its
+      // responses. The fifth legal S0 request then ages but is not eligible.
+      read_without_r(0,0,4'h0);
+      read_without_r(0,1,4'h1);
+      read_without_r(0,2,4'h2);
+      read_without_r(0,3,4'h3);
+      arid[0]=4'h4; araddr[0]=32'h0000_2900; arlen[0]=0; arsize[0]=3;
+      arburst[0]=1; arlock[0]=0; arcache[0]=0; arprot[0]=0;
+      arqos[0]=0; arregion[0]=0; arvalid[0]=1;
+      check(!arready[0], "fifth M0 AR blocked at four outstanding");
+      for (integer i=0;i<16;i=i+1) b_high_qos_read(i[3:0]);
+      while (b_starve_cycles<70) begin
+        tick(); b_starve_cycles=b_starve_cycles+1;
+        check(!arready[0], "aged M0 request remains credit-blocked");
+      end
+      check(b_starve_cycles>=64, "M0 request remained pending through age threshold");
+
+      // Retire one M0 read. Present a fresh QoS-15 request in the newly
+      // eligible arbitration window; the aged M0 request must be selected.
+      while (!rvalid[0]) tick();
+      @(negedge ACLK); rready[0]=1;
+      @(posedge ACLK);
+      check(rvalid[0] && rready[0] && rlast[0], "one M0 read credit retires");
+      #1;
+      arid[1]=4'h7; araddr[1]=32'h0000_2a00; arlen[1]=0; arsize[1]=3;
+      arburst[1]=1; arlock[1]=0; arcache[1]=0; arprot[1]=0;
+      arqos[1]=15; arregion[1]=0; arvalid[1]=1;
+      first_manager=-1; wait_cycles=0;
+      while (first_manager<0 && wait_cycles<30) begin
+        @(posedge ACLK);
+        fire0=arvalid[0] && arready[0];
+        fire1=arvalid[1] && arready[1];
+        if (fire0) first_manager=0;
+        if (fire1) first_manager=1;
+        #1;
+        if (fire0) arvalid[0]=0;
+        if (fire1) arvalid[1]=0;
+        wait_cycles=wait_cycles+1;
+      end
+      check(first_manager==0, "aged low-QoS M0 selected before fresh QoS-15 M1");
+      $display("B_STARVATION pending_cycles=%0d first_manager=%0d",b_starve_cycles,first_manager);
+      reset_dut();
+    end
+  endtask
+
+  task automatic test_integrated_b_qos_priority;
+    integer cycles, first_manager, accepted_count;
+    begin
+      $display("B integrated QoS priority");
+      reset_dut();
+      rready='1; tarready='1;
+      arid[0]=4'h1; araddr[0]=32'h0000_2500; arlen[0]=0; arsize[0]=3; arburst[0]=1; arlock[0]=0; arcache[0]=0; arprot[0]=0; arqos[0]=0; arregion[0]=0; arvalid[0]=1;
+      arid[1]=4'h2; araddr[1]=32'h0000_2510; arlen[1]=0; arsize[1]=3; arburst[1]=1; arlock[1]=0; arcache[1]=0; arprot[1]=0; arqos[1]=15; arregion[1]=0; arvalid[1]=1;
+      first_manager=-1; accepted_count=0;
+      for (cycles=0; cycles<60 && accepted_count<2; cycles=cycles+1) begin
+        logic fire0, fire1;
+        @(posedge ACLK);
+        fire0=arvalid[0] && arready[0];
+        fire1=arvalid[1] && arready[1];
+        if (fire0) begin
+          if (first_manager<0) first_manager=0;
+          accepted_count=accepted_count+1;
+        end
+        if (fire1) begin
+          if (first_manager<0) first_manager=1;
+          accepted_count=accepted_count+1;
+        end
+        #1;
+        if (fire0) arvalid[0]=0;
+        if (fire1) arvalid[1]=0;
+      end
+      check(first_manager==1, "B integrated maximum QoS request admitted first");
+      check(accepted_count==2, "B integrated competing AR requests both admitted");
+      $display("B_QOS_AR_FIRST manager=%0d admissions=%0d cycles=%0d", first_manager, accepted_count, cycles);
+      reset_dut();
+    end
+  endtask
+`endif
+
   initial begin
     awid='0; awaddr='0; awlen='0; awsize='0; awburst='0; awlock='0; awcache='0; awprot='0; awqos='0; awregion='0; awvalid='0;
     wdata='0; wstrb='0; wlast='0; wvalid='0; bready='0;
@@ -597,6 +765,13 @@ module axi_fabric_a_tb;
     do_write(0,0,4'h3,1); do_read(0,0,4'h4,1);
     test_integrated_ar_fairness();
     test_integrated_aw_fairness();
-    $display("PASS axi_fabric_a_tb checks=%0d", checks); $finish;
+`ifdef ARCHITECTURE_B
+    test_integrated_b_qos_priority();
+    test_integrated_b_starvation_escape();
+    test_b_ar_independent_of_aw_owner();
+    $display("PASS axi_fabric_b_tb checks=%0d", checks);
+`else
+    $display("PASS axi_fabric_a_tb checks=%0d", checks);
+`endif $finish;
   end
 endmodule

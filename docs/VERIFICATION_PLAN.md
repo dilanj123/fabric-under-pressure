@@ -1,6 +1,6 @@
 # Verification Plan
 
-**Status:** Gate-1 contract frozen; Gate-2 PASS; Gate-3 Architecture-A verification PASS. The authoritative Gate-3 evidence is `results/processed/gate3/summary.md` with raw seed runs in `results/raw/gate3_final/`.
+**Status:** Gate-1 contract frozen; Gate-2 and Architecture-A Gate-3 PASS; Architecture-B functional implementation and targeted scheduler verification PASS. Canonical B benchmarking and the A/B comparison remain open. A evidence remains at `results/processed/gate3/summary.md`; B functional evidence is summarized at `results/processed/architecture_b_functional/summary.md`.
 
 ### Gate-3 randomized and directed qualification
 
@@ -9,6 +9,12 @@ D040 uses pre-generated replayable plans for fixed seeds `0xA3F30001`–`0xA3F30
 Random coverage includes manager/direction, S0-S3, LEN 0-15, AW/W timing styles, target AW/AR/W stalls, manager B/R stalls, finite endpoint delays and simultaneous all-manager activity. The 2,048-operation random counters do not hit same-target overlap, cross-manager same-ID overlap, different-ID response reordering or reset with live random work; those behaviors are separately covered by whole-DUT directed/oracle tests and the integrated fairness scenarios. Integrated AW and AR tests each observe nine grants in cyclic order `0 1 2 0 1 2 0 1 2`. The original 3,800 long-plan target/address mismatches, including sequence 960 S0-claimed `0x00010040` decoding to S3, are historical generator failures; the region-aware allocator and independent validator now report zero mismatches.
 
 These runs provide functional stress and service-opportunity fairness evidence only. They are not performance measurements, unconditional wall-clock fairness guarantees or whole-Fabric formal proofs. Historical Task-1, v2 failure and forensic records are retained and are not current qualification evidence.
+
+### Architecture-B functional qualification (not performance qualification)
+
+B uses a separate `axi_fabric_b` top and B-specific AW/AR target paths/schedulers. The 4-bit QoS and 8-bit age selection policy is applied independently to each of four targets and both directions. Legal-pending age is manager VALID, request legality and target match; arbitration eligibility additionally includes existing outstanding/owner state. Age is not gated by target READY or W-owner service opportunities. See D046. The central address slots and common W, response and S3 datapaths remain shared by source.
+
+`results/raw/fabric_b_directed/simulation.log` passes the existing whole-top functional matrix plus QoS priority, a 96-cycle integrated age/escape case, active-AW-owner/AR independence and the integrated AW/AR contention scenarios (444 checks). The standalone scheduler directed test passes 28 checks. All five fixed functional seeds pass with both 512 and 2,048 random operations; random depth was observed at two, not four. B scheduler formal is bounded BMC depth 20 plus cover depth 80, with reset-low initialization, `eligible` subset of legal-pending, acceptance only for a granted eligible requester, and selected VALID persistence until admission. This is not a whole-Fabric proof or performance result. See `results/processed/architecture_b_functional/summary.md`.
 
 ## Independent checking
 A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.

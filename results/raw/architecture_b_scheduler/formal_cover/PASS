@@ -1,0 +1,15 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+Elapsed process time [H:MM:SS (secs)]: 0:00:05 (5)
+engine_0 (smtbmc) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement axi_qos_aging_arbiter_3_formal._witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_98_398 at axi_qos_aging_arbiter_3_formal.sv:98.5-98.46 step 2
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement axi_qos_aging_arbiter_3_formal._witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_93_335 at axi_qos_aging_arbiter_3_formal.sv:93.5-93.57 step 64
+cover trace: engine_0/trace2.vcd
+cover trace: engine_0/trace2.yw
+  reached cover statement axi_qos_aging_arbiter_3_formal._witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_94_339 at axi_qos_aging_arbiter_3_formal.sv:94.5-95.45 step 65
+cover trace: engine_0/trace3.vcd
+cover trace: engine_0/trace3.yw
+  reached cover statement axi_qos_aging_arbiter_3_formal._witness_.check_cover_axi_qos_aging_arbiter_3_formal_sv_96_393 at axi_qos_aging_arbiter_3_formal.sv:96.5-97.48 step 65

@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 80
+
+[engines]
+smtbmc
+
+[script]
+read -formal -D FORMAL -sv axi_qos_aging_arbiter_3.sv axi_qos_aging_arbiter_3_formal.sv
+prep -top axi_qos_aging_arbiter_3_formal
+
+[files]
+../rtl/axi_qos_aging_arbiter_3.sv
+axi_qos_aging_arbiter_3_formal.sv
