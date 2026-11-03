@@ -269,3 +269,13 @@ This closes the hand-written directed integration pass only. The independent Pyt
 | G3-F007 | FORMAL | Targeted bounded proofs/covers pass for decoder, legality, outstanding/state, owner, AW/AR/W paths, B/R routers, S3 and RR properties | `results/raw/gate3_final/formal_rechecks/`, component `formal_*` directories | PASS; bounded, assumptions documented; no whole-Fabric proof |
 | G3-F008 | SIM/LINT/SYNTH | Gate-2 closure and Architecture-A integration lint/simulation/ECP5 synthesis scripts pass on current source | `results/raw/gate2_oracle/gate2_closure.log`, `results/raw/fabric_a_integration/` | PASS; synthesis is not timing/PPA evidence |
 | G3-F009 | BOOKKEEPING | Final observed coverage and limitations are reconciled; original failures remain historical; production RTL unchanged | `results/processed/gate3/summary.md`, `docs/PROJECT_STATE.md`, `04_MASTER_CHECKLIST.md` | PASS |
+
+## Architecture-A measurement baseline (Mission 2)
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| A-MEAS-001 | BENCH/REPRO | Frozen W00-W13 × five-seed matrix completes; all 70 JUnit XML files contain one pass with zero failures/errors/skips and every active manager meets 500 warm-up + 5,000 measured completions | `results/processed/arch_a_measurement/summary.md`, `latency_throughput.csv`, `run_summary.json`; raw `results/raw/arch_a_full_final/` | PASS; workloads hash `31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4` |
+| A-MEAS-002 | BENCH | Latency, payload throughput, eligible grant-loss, queue depth, W12 Jain index and W13 parallel-target activity are recomputed from handshake records | `results/processed/arch_a_measurement/latency_throughput.csv`, `run_summary.json` | PASS; synthetic endpoint and frozen workload scope only |
+| A-MEAS-003 | SYNTH | Direct Fabric Yosys ECP5 synthesis and common-wrapper synthesis complete | `results/raw/arch_a_ppa_complete/direct/yosys.log`, `wrapped/yosys.log`; `results/processed/arch_a_measurement/ppa_summary.json` | PASS; direct and wrapper counts kept separate |
+| A-MEAS-004 | PNR | 55 fixed/refined common-wrapper routes complete for ECP5 LFE5U-45F/CABGA381/-6, seeds 1-5; all-seed timing-clean target through 60 MHz | `results/processed/arch_a_measurement/route_summary.csv`, `ppa_summary.json`; raw `results/raw/arch_a_ppa_complete/` | PASS for stated method; 65 MHz passes only seed 4; not general timing signoff |
+| A-MEAS-005 | HYPOTHESIS | D045 freezes the measured W08 M2 read-admission P99 hypothesis and predeclared A/B acceptance/regression criteria | `docs/DECISIONS.md`, `results/processed/arch_a_measurement/summary.md` | FROZEN before Architecture-B RTL; no B result exists |

@@ -481,18 +481,18 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 # T. Gate 4 — Architecture A measurement
 
-- [ ] common P&R wrapper frozen.
-- [ ] A synthesis evidence collected.
-- [ ] A P&R seed/frequency evidence collected.
-- [ ] A canonical benchmark all workloads/seeds complete.
-- [ ] A latency distributions processed.
-- [ ] A throughput processed.
-- [ ] A starvation metrics processed.
-- [ ] A fairness W12 processed.
-- [ ] A timing/resources processed.
-- [ ] measured bottleneck identified.
-- [ ] bottleneck mechanism linked to traces/counters, not guesswork.
-- [ ] B hypothesis written before B results.
+- [x] common P&R wrapper frozen. (`bench/arch_fabric_wrapper.sv`; same wrapper required for B.)
+- [x] A synthesis evidence collected. (`results/raw/arch_a_ppa_complete/direct/yosys.log`, `wrapped/yosys.log`.)
+- [x] A P&R seed/frequency evidence collected. (55 routes, five fixed seeds and common 5-MHz refinement; `results/processed/arch_a_measurement/route_summary.csv`.)
+- [x] A canonical benchmark all workloads/seeds complete. (70/70 W00-W13 × five frozen seeds, valid JUnit and quotas.)
+- [x] A latency distributions processed. (`results/processed/arch_a_measurement/latency_throughput.csv`; NumPy 2.3.5 nearest.)
+- [x] A throughput processed. (`payload_bytes_per_cycle`, measured over the common active-manager window.)
+- [x] A starvation metrics processed. (Observed eligible competing grants, per-transaction pending intervals and target stalls are separate.)
+- [x] A fairness W12 processed. (Jain grant-rate index ~1.0 across all five seeds.)
+- [x] A timing/resources processed. (All-seed clean target 60 MHz; wrapper and direct synthesis counts are separate.)
+- [x] measured bottleneck identified. (W08 S0 read-queue pressure plus same-target arbitration contention; see processed summary.)
+- [x] bottleneck mechanism linked to traces/counters, not guesswork. (S0 AR stall cycles, depth-8 queue, eligible grant losses and measured response tail.)
+- [x] B hypothesis written before B results. (D045; no B RTL exists.)
 
 ---
 

@@ -1,0 +1,8762 @@
+[
+  {
+    "workload": "W00",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 0,
+    "intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transaction_trace_sha256": "1f0ba4e0a7c8745896899eedd90b06bdebd40f627a6fd06e4a318f0eccc762fd",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 0,
+    "measurement_end_cycle": 1000,
+    "measurement_cycles": 1001,
+    "active_managers": [],
+    "completion_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      0,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      0,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 0,
+    "intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transaction_trace_sha256": "f2af57b2d240f9058c801e3e64bbda74f4ccddd28c29c9252191cebc08bc70d7",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 0,
+    "measurement_end_cycle": 1000,
+    "measurement_cycles": 1001,
+    "active_managers": [],
+    "completion_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      0,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      0,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 0,
+    "intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transaction_trace_sha256": "6e522fa2285b1e3891bf3e79114b38ce235dd8c906e576c5ba640a8c05b93c9b",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 0,
+    "measurement_end_cycle": 1000,
+    "measurement_cycles": 1001,
+    "active_managers": [],
+    "completion_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      0,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      0,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 0,
+    "intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transaction_trace_sha256": "c59d9b19c95fdffc2b8f9a6f580ddb28276ba96d69e95235a50db8757bfbdb7a",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 0,
+    "measurement_end_cycle": 1000,
+    "measurement_cycles": 1001,
+    "active_managers": [],
+    "completion_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      0,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      0,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 0,
+    "intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transaction_trace_sha256": "08360e6a9fb323fc74304c894adb9e1ee2c5b85135687fb694d5386efc4dadef",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 0,
+    "measurement_end_cycle": 1000,
+    "measurement_cycles": 1001,
+    "active_managers": [],
+    "completion_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      0,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      0,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "8d089068d2754657379f47eff8fe5491740a8acaf704411b06188574ca025862",
+    "transaction_trace_sha256": "de5f1852c547b3b9eff706cb705a3f7758c71625ccd20d0e1fe75ce72b9d19ef",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10101,
+    "measurement_end_cycle": 109773,
+    "measurement_cycles": 99673,
+    "active_managers": [
+      0
+    ],
+    "completion_count_by_manager": [
+      5500,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      1,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      1,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "fd95351e7a6014ddeb91480d42ae6ab0b46944c1db59ccb8b924403e7a840376",
+    "transaction_trace_sha256": "0eb70495a654d81f1c3f50e54da9658b267450b9fb8fc2b8959196ce1cd6d707",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10042,
+    "measurement_end_cycle": 109921,
+    "measurement_cycles": 99880,
+    "active_managers": [
+      0
+    ],
+    "completion_count_by_manager": [
+      5500,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      1,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      1,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "f5393998bc28651c6cd625e960662c9d6cf8c864262e224fdaa4ea40652c9772",
+    "transaction_trace_sha256": "13ed1096f497b5f47b05145c748141c606524a260a65531bb7e98b0e34fe7f3e",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10221,
+    "measurement_end_cycle": 109657,
+    "measurement_cycles": 99437,
+    "active_managers": [
+      0
+    ],
+    "completion_count_by_manager": [
+      5500,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      1,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      1,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "988ad2bef5ee631996527d2d443431dc13619999d160bf4a7bd50b7fb428d81c",
+    "transaction_trace_sha256": "fe30abd375ac5d7af12133a7b5bf8741fe30ade8d2428891e77f87bfbd9f4419",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9971,
+    "measurement_end_cycle": 109419,
+    "measurement_cycles": 99449,
+    "active_managers": [
+      0
+    ],
+    "completion_count_by_manager": [
+      5500,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      1,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      1,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "a10d2a40ac54318de7ef140170014b6076684a7fbac74b72049682f20bebbb81",
+    "transaction_trace_sha256": "64f271a682031eb1df0caa70942f1e43c01a8ddc398f874ede48a2e557cb9417",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9845,
+    "measurement_end_cycle": 109261,
+    "measurement_cycles": 99417,
+    "active_managers": [
+      0
+    ],
+    "completion_count_by_manager": [
+      5500,
+      0,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      0,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      0,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      0,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      1,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      1,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      0,
+      0
+    ]
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "65641f628d08e59cccb32d8277816ebbde4ed2b46598ae9911639c982b363113",
+    "transaction_trace_sha256": "1ff8dd64813caa4fc8cb5a1135d5e3d01dbbed58ce0cd390222aa39d05d5a2ef",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 4630,
+    "measurement_end_cycle": 50847,
+    "measurement_cycles": 46218,
+    "active_managers": [
+      1
+    ],
+    "completion_count_by_manager": [
+      0,
+      5506,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      500,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5001,
+      0
+    ]
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "0421c179baef018fc2a4f5c556e5e2f903aebf017f3719e34f544b73c0f21481",
+    "transaction_trace_sha256": "fb87b7ea306878ca051bf6d1f1bd9adc212623a231913278fed1c7a8963fa7f2",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 4630,
+    "measurement_end_cycle": 50851,
+    "measurement_cycles": 46222,
+    "active_managers": [
+      1
+    ],
+    "completion_count_by_manager": [
+      0,
+      5506,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      500,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5001,
+      0
+    ]
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "ce915d27eb852f9cf8f88dc841f86325d4155f0ce16ced2dc2b12e6757a3a068",
+    "transaction_trace_sha256": "f29c3724febc5591aeec62ed17f8faf119232b54e2e5e5ba6d882068cf3bf758",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 4630,
+    "measurement_end_cycle": 50847,
+    "measurement_cycles": 46218,
+    "active_managers": [
+      1
+    ],
+    "completion_count_by_manager": [
+      0,
+      5506,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      500,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5001,
+      0
+    ]
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "330ab2bf2fe0762acf042241084206fdf2a3f38fc561b9b9f0143d619ecae1de",
+    "transaction_trace_sha256": "70b1441d5051ebdfc45ae94e8eca168fdbc92982d71ac48e6719bdd861a74a73",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 4630,
+    "measurement_end_cycle": 50847,
+    "measurement_cycles": 46218,
+    "active_managers": [
+      1
+    ],
+    "completion_count_by_manager": [
+      0,
+      5506,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      500,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5001,
+      0
+    ]
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "e45e2b23db84aa12c59714f3300af274cfa314c9d484b3eea10868161b1dc8c9",
+    "transaction_trace_sha256": "3fafd59d247f6df753ded598e220e2b2e3446042f6d8dd2be665fe439b2c0edd",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 4630,
+    "measurement_end_cycle": 50847,
+    "measurement_cycles": 46218,
+    "active_managers": [
+      1
+    ],
+    "completion_count_by_manager": [
+      0,
+      5506,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      500,
+      0
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5001,
+      0
+    ]
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "278589a0ba3082e3a899301f83e415b1fd0be9a893db089aceeca2fc6ca4d349",
+    "transaction_trace_sha256": "5c0f30f23ecc911d3beed74489740d62a74d71bb3b4600bb94d7831810602239",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2535,
+    "measurement_end_cycle": 27605,
+    "measurement_cycles": 25071,
+    "active_managers": [
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      0,
+      5501
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      3,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      5000
+    ]
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "6783d7e4f47990db060731987c054cb8998f82e4790925c672c156d2080344a6",
+    "transaction_trace_sha256": "49cb768f57c76154eb4061f765f60f7cd1c8feefac5f626863adab03a666151f",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2465,
+    "measurement_end_cycle": 27437,
+    "measurement_cycles": 24973,
+    "active_managers": [
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      0,
+      5500
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      3,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      4999
+    ]
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "e681661f103f4da0db1358dc21cc3627b4a30e29b6982441d2a609f634bae906",
+    "transaction_trace_sha256": "9b71d3a4f48d7358126c5f960024ad2abc048300e022421ffd8a7134512847c8",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2454,
+    "measurement_end_cycle": 27339,
+    "measurement_cycles": 24886,
+    "active_managers": [
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      0,
+      5501
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      4999
+    ]
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "672299d7fa027d0a8cf430d7bc8e1487ed043a23b394822d0c950e103cec96aa",
+    "transaction_trace_sha256": "ecec637b31d62e90cbb6cbd07fc10555bd82b97bdd4abfcc81071f17d5e76e8f",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2457,
+    "measurement_end_cycle": 27625,
+    "measurement_cycles": 25169,
+    "active_managers": [
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      0,
+      5502
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      3
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      3,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      5001
+    ]
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 50000,
+    "intent_sha256": "f51012ad3510d49ebdd7904b551b192c7aef2e1d442f114d7b1b7b9cf7f69c2b",
+    "transaction_trace_sha256": "3ba158b9e266e35b036645fb77bdb7e7edf1e4b312337502a1ea5cb757ea55c3",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2490,
+    "measurement_end_cycle": 27578,
+    "measurement_cycles": 25089,
+    "active_managers": [
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      0,
+      5501
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      0,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      0,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      0,
+      3
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      0,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      3,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      0,
+      5000
+    ]
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "6723157975af416eba2a3a024230fb890e96df83832965421b257a891657281a",
+    "transaction_trace_sha256": "5568c978fd300e87cc057ccc7fa03e453f5b38dca7a648aca461b02d62f62f04",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9719,
+    "measurement_end_cycle": 109931,
+    "measurement_cycles": 100213,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5502,
+      10420,
+      14053
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      918,
+      1200
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        48909,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4461,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 10214,
+      "ar": 3819
+    },
+    "all_manager_active_cycles": 104421,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      8,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      9497,
+      12848
+    ]
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "f5d0c710b6b3229837b21900ced9ba057665caf5262749fd6637c2395f112a23",
+    "transaction_trace_sha256": "06da43d1a13d4f66394dfc30f311b681c70268a64390d4f34a1cfac27bd89720",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9896,
+    "measurement_end_cycle": 110469,
+    "measurement_cycles": 100574,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      10466,
+      14094
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      934,
+      1265
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47099,
+        12,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4336,
+        1,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 10251,
+      "ar": 3418
+    },
+    "all_manager_active_cycles": 103786,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      8,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5001,
+      9525,
+      12825
+    ]
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "dad6f5ff738997f499daf72d7dd0d9a039838275819713767ed69a0a8607bd5e",
+    "transaction_trace_sha256": "ae0fbcbbecd608d650264c0e98b25b6406e5a10277822cfcf12193f1e4d97602",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9938,
+    "measurement_end_cycle": 109899,
+    "measurement_cycles": 99962,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5500,
+      10377,
+      13849
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      940,
+      1267
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        46933,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4360,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 10463,
+      "ar": 3540
+    },
+    "all_manager_active_cycles": 103396,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      8,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      9431,
+      12577
+    ]
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "65d83849354677cbd3c71fc623ddd553301ffb9d87892991ec3908c638f56b04",
+    "transaction_trace_sha256": "8fad094f50346a553836efabedbeb1f8ae05964e8da344a20651f6f314ac54fd",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9910,
+    "measurement_end_cycle": 108987,
+    "measurement_cycles": 99078,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5503,
+      10299,
+      13849
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      931,
+      1251
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        46978,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4255,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 10401,
+      "ar": 3470
+    },
+    "all_manager_active_cycles": 102845,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      8,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      9362,
+      12593
+    ]
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "968e6333a60f33fb4b847080834b091eea2cda126c489ed429ea8b271c7e2e5c",
+    "transaction_trace_sha256": "f2d61e1f8be8c233b67b2e549e836d55477cce607e277b33f248c30628337972",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9982,
+    "measurement_end_cycle": 109839,
+    "measurement_cycles": 99858,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5503,
+      10398,
+      14125
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      942,
+      1269
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47192,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4399,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 10142,
+      "ar": 3543
+    },
+    "all_manager_active_cycles": 103254,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      8,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      9451,
+      12852
+    ]
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "d648f3f1e7c80ab621e489fec23b8acf5940e7fa11f1b411e2c3a4a11becef55",
+    "transaction_trace_sha256": "f11675932de14e7087aa2e92943df5cfd88952577269397519f393d3c6ee1014",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10070,
+    "measurement_end_cycle": 109511,
+    "measurement_cycles": 99442,
+    "active_managers": [
+      0,
+      1
+    ],
+    "completion_count_by_manager": [
+      5501,
+      11102,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1018,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 3506,
+      "ar": 478
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      10078,
+      0
+    ]
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "e43951e3d3a566bb58664ea8f462946ef3ceace98361778de4898084e0745d56",
+    "transaction_trace_sha256": "2efcc4b4def35d14c5a04b880f0f4fb35175e881a683b2c74da30fd0c8fa1e9e",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10084,
+    "measurement_end_cycle": 110900,
+    "measurement_cycles": 100817,
+    "active_managers": [
+      0,
+      1
+    ],
+    "completion_count_by_manager": [
+      5502,
+      11246,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1021,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 3664,
+      "ar": 403
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      10218,
+      0
+    ]
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "eb590d98d319d4f108abb008d07cf31fdf5fe923417256795b36199ddd3cd877",
+    "transaction_trace_sha256": "e577ce634ff95e5757794f43285d87b15a9a08c0dfb817360f25b8ed3add92e6",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10028,
+    "measurement_end_cycle": 109788,
+    "measurement_cycles": 99761,
+    "active_managers": [
+      0,
+      1
+    ],
+    "completion_count_by_manager": [
+      5501,
+      11140,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1015,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 3455,
+      "ar": 463
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4997,
+      10119,
+      0
+    ]
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "04815c68341f16155131a6382d9f2d1f55958bf13e9099be97c52b68317ded92",
+    "transaction_trace_sha256": "64974f5e3047dd5d0256bf52f032d618552d3ef8911bf36551ba483f41fbebf7",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10149,
+    "measurement_end_cycle": 110462,
+    "measurement_cycles": 100314,
+    "active_managers": [
+      0,
+      1
+    ],
+    "completion_count_by_manager": [
+      5502,
+      11200,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1029,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 3579,
+      "ar": 437
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5001,
+      10164,
+      0
+    ]
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "bd5aa07e83535f8df0c4c9cd876bdedef265507db576d184289442a7c32465a2",
+    "transaction_trace_sha256": "58e2141200535e0f8f1a7974662beeed3af455c45f6362c29048f642691cabad",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9867,
+    "measurement_end_cycle": 109984,
+    "measurement_cycles": 100118,
+    "active_managers": [
+      0,
+      1
+    ],
+    "completion_count_by_manager": [
+      5504,
+      11155,
+      0
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1000,
+      0
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      0
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      0
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      0
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 3513,
+      "ar": 412
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5002,
+      10149,
+      0
+    ]
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "d9b871bd6ff785ca952da7f3e8f59e9d1c5c465f6416f1b2a15e999edfc3eaa0",
+    "transaction_trace_sha256": "8bf09598d3b916939df533786abb2950af148639e9d94644840ad37c919f8a28",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 5425,
+    "measurement_end_cycle": 60445,
+    "measurement_cycles": 55021,
+    "active_managers": [
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      5507,
+      5507
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      502,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 5143,
+      "ar": 6
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      4998,
+      5002
+    ]
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "f6ec2afae16b6cc9adff6c8be9c734029ae9b3e43463e5843faf745829f5edac",
+    "transaction_trace_sha256": "7477e9027e9c1e49d9454f6b82bb6490808edabceef6eff288ad9ff6e1b92468",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 5497,
+    "measurement_end_cycle": 60734,
+    "measurement_cycles": 55238,
+    "active_managers": [
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      5508,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      502,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 5168,
+      "ar": 2
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5002,
+      5000
+    ]
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "bd2d6e09e5318be2a910ad26d4b927fee964c4da948558bf77eedebff03d7768",
+    "transaction_trace_sha256": "8d2543d715ef781fcd938662c404cf9eee329b84e2d98e291d0bb0b6a82b8025",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 5480,
+    "measurement_end_cycle": 60758,
+    "measurement_cycles": 55279,
+    "active_managers": [
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      5505,
+      5506
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 5169,
+      "ar": 4
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      4999,
+      5002
+    ]
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "4ff10aee9a067deba4d444262ca2c50bc8a44a8e791b6f7e7944ea4abe62cfb0",
+    "transaction_trace_sha256": "0787ca244d4dc3caa08ef85dd9e28564e4f58767bb2f3c8bf702df6b0a98affa",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 5451,
+    "measurement_end_cycle": 60021,
+    "measurement_cycles": 54571,
+    "active_managers": [
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      5508,
+      5513
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      503,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 5105,
+      "ar": 10
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      4999,
+      5009
+    ]
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 100000,
+    "intent_sha256": "c6f91bf405054dde78cd4339d7b4cca688ae723d6a0cc06698f7a50cf5e4f9e6",
+    "transaction_trace_sha256": "f414a5ff456492f0edf363ced28f4639cf166e2367bc32ea8a2e37973e11631a",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 5507,
+    "measurement_end_cycle": 60956,
+    "measurement_cycles": 55450,
+    "active_managers": [
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      0,
+      5511,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      0,
+      502,
+      500
+    ],
+    "measured_count_by_manager": [
+      0,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      0,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      0,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 5190,
+      "ar": 2
+    },
+    "all_manager_active_cycles": 0,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      0,
+      5002,
+      5001
+    ]
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "4c083db4db27c46b6e3a9dbaa4f15d982ede76361a157da16652580245c1c0cf",
+    "transaction_trace_sha256": "e83c330a24f99204882382a248f168936a6d0fe6f0b80d27e4bce970d384207c",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6049,
+    "measurement_end_cycle": 66375,
+    "measurement_cycles": 60327,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5508,
+      5505,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47846,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4626,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14483,
+      "ar": 18493
+    },
+    "all_manager_active_cycles": 66439,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5003,
+      4999,
+      5001
+    ]
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "9b28dc714d5d308fe0ca2a3a9c0513991863f99345b6c929eac45c7972cd3366",
+    "transaction_trace_sha256": "f81a055641a42745bf7856df07fca32f908126e63107e71ac80401885fbdab3e",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6044,
+    "measurement_end_cycle": 66444,
+    "measurement_cycles": 60401,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5505,
+      5514,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47923,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4633,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18479
+    },
+    "all_manager_active_cycles": 66507,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      5008,
+      5001
+    ]
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "e202f878113552402d508a495fe9fd6c8a64f9391581275e1d8a9aab5527f962",
+    "transaction_trace_sha256": "3b0dd1f30b333e41a4288d9db55467f3900cb8ca302d89eff04a3e5e56b71e0f",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6037,
+    "measurement_end_cycle": 66475,
+    "measurement_cycles": 60439,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5515,
+      5512,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      503,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47943,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4667,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14507,
+      "ar": 18494
+    },
+    "all_manager_active_cycles": 66540,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5007,
+      5006,
+      5001
+    ]
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "4f5cf06bda17221068fa101192dfa102678b8044dd781eca4819aaf02fe25278",
+    "transaction_trace_sha256": "e770b29147a9613a4fdb60d56fdc624890fb04a30f122299b8b970b99d93ea31",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6052,
+    "measurement_end_cycle": 66468,
+    "measurement_cycles": 60417,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5507,
+      5511,
+      5509
+    ],
+    "premeasurement_completions_by_manager": [
+      502,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47949,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4687,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18477
+    },
+    "all_manager_active_cycles": 66541,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      5005,
+      5004
+    ]
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "0131862d461d6145e52eb9297cd0fa678efe764ee46a720036bd4f2c8d327fe8",
+    "transaction_trace_sha256": "c483bd779000021845edca3094f9c95965f75b0e9e0b707e77eaf82bbd701a32",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6024,
+    "measurement_end_cycle": 66344,
+    "measurement_cycles": 60321,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5505,
+      5505,
+      5506
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47817,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4597,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14481,
+      "ar": 18506
+    },
+    "all_manager_active_cycles": 66408,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5002
+    ]
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "ef80fa9b3270b62913f807272fa22dd7beede9e8db6ef5514e490b6d5a6eb395",
+    "transaction_trace_sha256": "ee7dfd5d00fe54d0dd9f6117d35359a670a16157e2d9a2c467032635dfd3cda5",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6049,
+    "measurement_end_cycle": 66375,
+    "measurement_cycles": 60327,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5508,
+      5505,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47846,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4626,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14483,
+      "ar": 18493
+    },
+    "all_manager_active_cycles": 66439,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5003,
+      4999,
+      5001
+    ]
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "97419ecec5f5d5ed7793149157f82ab8ad51a5310ea4d07b4b875bf0ec341cc5",
+    "transaction_trace_sha256": "25a49783126e95d4e6a97edf6bc9522bdff60020969be59e4447797f3ca41742",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6044,
+    "measurement_end_cycle": 66444,
+    "measurement_cycles": 60401,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5505,
+      5514,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47923,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4633,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18479
+    },
+    "all_manager_active_cycles": 66507,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      5008,
+      5001
+    ]
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "ef505cbceb39d583fa2ea2ad170fb58a2fb6141389414f1989db3e45e01356b3",
+    "transaction_trace_sha256": "4897556ae683126e530a7c832921f23503fc345849267ed6e57f484b8757a2e5",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6037,
+    "measurement_end_cycle": 66475,
+    "measurement_cycles": 60439,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5515,
+      5512,
+      5505
+    ],
+    "premeasurement_completions_by_manager": [
+      503,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47943,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4667,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14507,
+      "ar": 18494
+    },
+    "all_manager_active_cycles": 66540,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5007,
+      5006,
+      5001
+    ]
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "1b92597226113f1eefe56f3182aca561e392a5d1afbb750be9e15a194ab9d898",
+    "transaction_trace_sha256": "50d4e8ef68161e6e4ba22f22c240566b41e584a6550cdcfab1e4cd5aa067e7a9",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6052,
+    "measurement_end_cycle": 66468,
+    "measurement_cycles": 60417,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5507,
+      5511,
+      5509
+    ],
+    "premeasurement_completions_by_manager": [
+      502,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47949,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4687,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18477
+    },
+    "all_manager_active_cycles": 66541,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      5005,
+      5004
+    ]
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "f55ef689d342c4353d060910963b5ca1b9719fe7f10b07ecdbea3618e8d13f9a",
+    "transaction_trace_sha256": "231220755f5a46eb996e6e552f90298932a4c0f5a58c05b4305f24f04d11493f",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 6024,
+    "measurement_end_cycle": 66344,
+    "measurement_cycles": 60321,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5505,
+      5505,
+      5506
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      500,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        47817,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        4597,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 14481,
+      "ar": 18506
+    },
+    "all_manager_active_cycles": 66408,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5002
+    ]
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "4051d908efb38b6f46cdbd96a56020f707d6e09164d1b3239159c4fa8fdd8944",
+    "transaction_trace_sha256": "37d2d2722c1864818248c8bdde49ec0a4d3f403214d3fe42ed0d81a4340b82aa",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10065,
+    "measurement_end_cycle": 109642,
+    "measurement_cycles": 99578,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      9694,
+      9485
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      894,
+      843
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        79623,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        7683,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11390,
+      "ar": 25695
+    },
+    "all_manager_active_cycles": 109602,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5001,
+      8794,
+      8637
+    ]
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "878bf1f6267300fbda1115566fc163f4531fc5dec129db7092d634803e5f59ca",
+    "transaction_trace_sha256": "5027ece6bbe397f88bd6101e3cb76bdaad61e5be7ae3c9bdca44249be473eb4f",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9808,
+    "measurement_end_cycle": 109713,
+    "measurement_cycles": 99906,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5501,
+      9667,
+      9633
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      868,
+      837
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        79792,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        7668,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 12118,
+      "ar": 25423
+    },
+    "all_manager_active_cycles": 109621,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4998,
+      8794,
+      8792
+    ]
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "efeb18b652a40f48704d7e6fca5cf3332e134bbcab002f7c4453d13cbbf5f58f",
+    "transaction_trace_sha256": "e072fb1221e6acf4520cad2a718ab80bf7280b385e5e136d9f3f2af6233c6a98",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10017,
+    "measurement_end_cycle": 110046,
+    "measurement_cycles": 100030,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      9699,
+      9660
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      883,
+      878
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        80086,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        7744,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 12124,
+      "ar": 25571
+    },
+    "all_manager_active_cycles": 110038,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5001,
+      8810,
+      8777
+    ]
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "0cb7a27525d388d9f8bf479461364af1b52d08f81e5fe87415c8a3e4062dcc90",
+    "transaction_trace_sha256": "208cca38c5d21dbc02d3c5cc513908fbd483666ef8ddaf991a89a4a4091f9890",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10002,
+    "measurement_end_cycle": 109775,
+    "measurement_cycles": 99774,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5503,
+      9678,
+      9585
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      879,
+      879
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        79832,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        7761,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11987,
+      "ar": 25326
+    },
+    "all_manager_active_cycles": 109760,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      8792,
+      8702
+    ]
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "32999ff358231c88bae6612b4b360aeadf1c1b8c13c0e596250f3cd5e72742cd",
+    "transaction_trace_sha256": "193dd8ec3bd74b22134bea79fa80895b4537433aaade48536527ebeb8975d8d0",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9886,
+    "measurement_end_cycle": 109602,
+    "measurement_cycles": 99717,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5503,
+      9691,
+      9510
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      876,
+      840
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      2,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        79713,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        7645,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11506,
+      "ar": 25645
+    },
+    "all_manager_active_cycles": 109568,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      8809,
+      8666
+    ]
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "c7d16311e57679575906d0f313a75ce80dbede8a3e7ed2b424b1b36cd7c67101",
+    "transaction_trace_sha256": "2d33c49f70e32a49c4d4cb9001c2311439d4354059a85325f5fecdc52f8338a5",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10714,
+    "measurement_end_cycle": 118340,
+    "measurement_cycles": 107627,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5502,
+      10213,
+      8995
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      920,
+      833
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        18195,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        1863,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 25808,
+      "ar": 1511
+    },
+    "all_manager_active_cycles": 118342,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      9287,
+      8157
+    ]
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "657b0ce4cb3e9061257ddb1779ebb768d3bb700c4d13a922c94b19bc1ca42a17",
+    "transaction_trace_sha256": "2e5fd241f4ca8267456bb57735f7a6923ab0dcc2ae86248a4a1dec8cc071c270",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10672,
+    "measurement_end_cycle": 119040,
+    "measurement_cycles": 108369,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5501,
+      10263,
+      9103
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      922,
+      799
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        19647,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        2040,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 25975,
+      "ar": 1536
+    },
+    "all_manager_active_cycles": 119047,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4999,
+      9335,
+      8301
+    ]
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "6832cc64a3a69fc828941bcf805dc74e6f2aba34558cf4199905a97e8e6310d6",
+    "transaction_trace_sha256": "27bc9b5ed9eedb1ab23b876a28b51380a58f3c73947e80f4386f9caa058e2b75",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10477,
+    "measurement_end_cycle": 118473,
+    "measurement_cycles": 107997,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5502,
+      10243,
+      8938
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      902,
+      795
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        18222,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        1885,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 25833,
+      "ar": 1514
+    },
+    "all_manager_active_cycles": 118480,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      9335,
+      8140
+    ]
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "9582193dbfe83c4f3022e1b6090266577a51195b3accca3ce7d719311470f170",
+    "transaction_trace_sha256": "3f85b4e0ff175ba87d195695ec24c36cb99bf6a455648fbcbcb868c93e93b0a8",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10960,
+    "measurement_end_cycle": 119297,
+    "measurement_cycles": 108338,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5501,
+      10281,
+      9147
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      939,
+      852
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        19800,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        1979,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 26015,
+      "ar": 1622
+    },
+    "all_manager_active_cycles": 119294,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      9337,
+      8290
+    ]
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "cf8836fbf07fcafa7d5eade3b9bd38fb59232fc0aebe549148379288d3daa241",
+    "transaction_trace_sha256": "9a4bf8b2bcc6f4bbd0148379aef37490575468b958d869e8b2719c40c3432223",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10828,
+    "measurement_end_cycle": 119422,
+    "measurement_cycles": 108595,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5501,
+      10299,
+      9163
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      931,
+      841
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        19344,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        1988,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 26064,
+      "ar": 1551
+    },
+    "all_manager_active_cycles": 119444,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      9362,
+      8320
+    ]
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "bda4aa5c0bf84e719b30a6e85e2bcd11031cdaf29a1df0e735f22fdf3e20404d",
+    "transaction_trace_sha256": "d430709ba1a2ca8bb0d495e9b73f9ecd3a67d31eca0318f5d2d2ca2f18192af1",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10042,
+    "measurement_end_cycle": 109589,
+    "measurement_cycles": 99548,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5501,
+      9534,
+      9528
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      873,
+      871
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        73276,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        6828,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 17496,
+      "ar": 12857
+    },
+    "all_manager_active_cycles": 109022,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      4998,
+      8655,
+      8652
+    ]
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "aca5fa38a11919e863bba334e4dc73f5a89a87372c064d278db8ad3e4e4bbb15",
+    "transaction_trace_sha256": "5413908410e5fd33a2d8af017bdb7279bf18752edd014ff894adf83fb0bf1f3b",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9801,
+    "measurement_end_cycle": 109731,
+    "measurement_cycles": 99931,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5501,
+      9549,
+      9543
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      851,
+      849
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        73234,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        6813,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 17590,
+      "ar": 12830
+    },
+    "all_manager_active_cycles": 109119,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      8692,
+      8690
+    ]
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "696d7e50436a5ec192be4abb9cc9d518127190a30bd62f5b7b8437d31ff8a451",
+    "transaction_trace_sha256": "d1299cb02ca6a9d84509aef794bf59b6e4cb094bdaf8a9751bb4b08137d13b02",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9999,
+    "measurement_end_cycle": 110046,
+    "measurement_cycles": 100048,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      9571,
+      9569
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      869,
+      870
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        73668,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        6878,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 17493,
+      "ar": 12743
+    },
+    "all_manager_active_cycles": 109472,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5001,
+      8696,
+      8694
+    ]
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "e2e56331f395a97b818458fc2ca9430742fbe2790f5505a1b1be9bff960d2d29",
+    "transaction_trace_sha256": "efcf83eaff9e80d73d2effd24081a8a216684928e3ad6e20533743235ff74a7e",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 10037,
+    "measurement_end_cycle": 109743,
+    "measurement_cycles": 99707,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5503,
+      9535,
+      9536
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      870,
+      870
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        72553,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        6773,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 17860,
+      "ar": 12154
+    },
+    "all_manager_active_cycles": 109042,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      8659,
+      8661
+    ]
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "c8826fb6508ca4c52318ee3e154759af56b40a51fd050e3bc98629fdf062e9c2",
+    "transaction_trace_sha256": "6ce1b914a52471933aeddb750efc6dee7e4cb9c941c5b17834bf7813bc3eff09",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9872,
+    "measurement_end_cycle": 109570,
+    "measurement_cycles": 99699,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      9532,
+      9526
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      856,
+      854
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      4,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        73508,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        6832,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 17515,
+      "ar": 12711
+    },
+    "all_manager_active_cycles": 108952,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      8,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5001,
+      8669,
+      8667
+    ]
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "826707be87ce178f9ea6043e425cd3ed1990e2ae16062f8ceb04b2b2c277495d",
+    "transaction_trace_sha256": "c961fa9895b83a480ac257e33b077bf5847a89afe93ef3b0490ee2ead83b659d",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2008,
+    "measurement_end_cycle": 22007,
+    "measurement_cycles": 20000,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      5504,
+      5503
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "all_manager_active_cycles": 22015,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      2,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": 0.999999973333334,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5001
+    ]
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "2cab4cfdce2afb0eee5b356b3a9c86e34615cc0a6c59c612ce739d600fbd18e2",
+    "transaction_trace_sha256": "d1fe62cb72493c1899e6bb5d19110b25b9ce48eeb1ebae0128c4a2f039e6d742",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2008,
+    "measurement_end_cycle": 22007,
+    "measurement_cycles": 20000,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      5504,
+      5503
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "all_manager_active_cycles": 22015,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      2,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": 0.999999973333334,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5001
+    ]
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "3e311b541f03dda620090623b22b108e9c73bfb1efdc9b2778be8d3d5c7dcc67",
+    "transaction_trace_sha256": "51da20d76259ac1df00a72830cd44a71f9c67077f9bc18a70c7f2894137f158d",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2008,
+    "measurement_end_cycle": 22007,
+    "measurement_cycles": 20000,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      5504,
+      5503
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "all_manager_active_cycles": 22015,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      2,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": 0.999999973333334,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5001
+    ]
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "8478162ee9a90970f1dfbb316aafa8e79b28f8667fbdfef5cc3c55c42ea3cb05",
+    "transaction_trace_sha256": "c8cfe9b1659f521b15f53d8f069101fcf79eff9c5198509ac4082b624c496df8",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2008,
+    "measurement_end_cycle": 22007,
+    "measurement_cycles": 20000,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      5504,
+      5503
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "all_manager_active_cycles": 22015,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      2,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": 0.999999973333334,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5001
+    ]
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "f2c5dfb610f76e15942f5df23b748eb20f11177b291a0f9b7f36c5d1381ee2dc",
+    "transaction_trace_sha256": "e2475caed333284c9bfa5fcd983da585e1bc44fa23059d6411ef70b80be2af8f",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 2008,
+    "measurement_end_cycle": 22007,
+    "measurement_cycles": 20000,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5504,
+      5504,
+      5503
+    ],
+    "premeasurement_completions_by_manager": [
+      501,
+      501,
+      500
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "max_live_writes_by_manager": [
+      1,
+      1,
+      1
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "all_manager_active_cycles": 22015,
+    "parallel_target_address_cycles": 0,
+    "endpoint_max_write_depth": [
+      2,
+      0,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      2,
+      0,
+      0
+    ],
+    "w12_jain_address_grant_rate": 0.999999973333334,
+    "manager_address_grants_in_window": [
+      4999,
+      5000,
+      5001
+    ]
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0001",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "9516661f36a57bf098630496652b8f010280fd9333c63468e596edc00299cf4a",
+    "transaction_trace_sha256": "e927277c9d5988bfbae77a80e96896f2362ef090e902d39d075cb7c9d8ea6ea2",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9992,
+    "measurement_end_cycle": 109571,
+    "measurement_cycles": 99580,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5500,
+      11859,
+      22000
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1079,
+      2010
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      2,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 1157,
+      "ar": 876
+    },
+    "all_manager_active_cycles": 37596,
+    "parallel_target_address_cycles": 2823,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      4,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      10774,
+      19989
+    ]
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0002",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "8193eb1752f2d69e5920c276aa6a7de49d38705ed52dd008bb1d97c40fcab0d4",
+    "transaction_trace_sha256": "bcf51d301bf973abedead8bf8ba910d3fdd5fe3cfb434b899fb46756c071af5e",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9751,
+    "measurement_end_cycle": 109680,
+    "measurement_cycles": 99930,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5500,
+      11871,
+      21945
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1054,
+      1941
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 1174,
+      "ar": 873
+    },
+    "all_manager_active_cycles": 37659,
+    "parallel_target_address_cycles": 2720,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      4,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      10811,
+      20002
+    ]
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0003",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "7de33e2142b6a1a44a61c56730d0078cc25429d577366ffff2f973ea9f4cef8d",
+    "transaction_trace_sha256": "4abd51f4e53dba8c25d71c5ca2582c4b860577694c9da961034f0a6e7c89b794",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9943,
+    "measurement_end_cycle": 109984,
+    "measurement_cycles": 100042,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5500,
+      11904,
+      22017
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1075,
+      1973
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      1,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 1218,
+      "ar": 843
+    },
+    "all_manager_active_cycles": 37505,
+    "parallel_target_address_cycles": 2775,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      4,
+      4,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      10822,
+      20043
+    ]
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0004",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "74951d32e844e4691d5876edf13bdf8450717948b8dcf7d48b3b720ec1777c12",
+    "transaction_trace_sha256": "be681253e443ff6c2f01b511ec7b53f1d03627bd77f7773963f3686f55683404",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9968,
+    "measurement_end_cycle": 109688,
+    "measurement_cycles": 99721,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5500,
+      11871,
+      21970
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1077,
+      1983
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      2,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 1208,
+      "ar": 843
+    },
+    "all_manager_active_cycles": 37773,
+    "parallel_target_address_cycles": 2848,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      3,
+      4,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      10789,
+      19986
+    ]
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0005",
+    "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+    "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+    "intent_count": 150000,
+    "intent_sha256": "b67ffd1c7115fafb9bf109740218858368063d311900f3b1528ec5d09ac4ff4c",
+    "transaction_trace_sha256": "75ca4ee5e7443870d4ed2809ee167833f56e36edc87284f8f54251a189c4d66b",
+    "benchmark_driver_sha256": "2f1e0e5cb7ab6a63a8ca894ae6e1cbb62036e44a70ca53cfaad3ce948d1f418b",
+    "generator_sha256": "b048b2a7b4af52d948f1359b9d393aeb721fbfb0e0869ef8e224b24608858a86",
+    "numpy_version": "2.3.5",
+    "percentile_method": "nearest",
+    "measurement_start_cycle": 9845,
+    "measurement_end_cycle": 109497,
+    "measurement_cycles": 99653,
+    "active_managers": [
+      0,
+      1,
+      2
+    ],
+    "completion_count_by_manager": [
+      5500,
+      11850,
+      21962
+    ],
+    "premeasurement_completions_by_manager": [
+      500,
+      1063,
+      1968
+    ],
+    "measured_count_by_manager": [
+      5000,
+      5000,
+      5000
+    ],
+    "max_live_reads_by_manager": [
+      2,
+      4,
+      4
+    ],
+    "max_live_writes_by_manager": [
+      2,
+      2,
+      2
+    ],
+    "manager_stall_cycles_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "manager_stall_episodes_by_manager": {
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "r": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_cycles_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "target_stall_episodes_by_target": {
+      "aw": [
+        0,
+        0,
+        0
+      ],
+      "ar": [
+        0,
+        0,
+        0
+      ],
+      "w": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lost_service_opportunities": {
+      "aw": 1180,
+      "ar": 862
+    },
+    "all_manager_active_cycles": 37664,
+    "parallel_target_address_cycles": 2868,
+    "endpoint_max_write_depth": [
+      2,
+      2,
+      0
+    ],
+    "endpoint_max_read_depth": [
+      3,
+      4,
+      0
+    ],
+    "w12_jain_address_grant_rate": null,
+    "manager_address_grants_in_window": [
+      5000,
+      10780,
+      19993
+    ]
+  }
+]
