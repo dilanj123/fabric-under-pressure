@@ -47,6 +47,8 @@ Each row shows the median across five seeds of the per-seed P50/P95/P99, plus th
 
 W08 M1 total payload throughput was 10.607 bytes/cycle (read plus write, median of per-seed sums). M2 read admission P99 was 21 cycles in every seed, with a worst individual measured admission of 35 cycles. M2 read end-to-end P99 was 86 cycles and its worst individual measured completion latency was 99 cycles. M0 control P99 admission was 21 cycles for reads and 27 for writes.
 
+Across the full matrix, the highest per-seed admission P99 was 33 cycles (M0 read, W04, seed `0xFABC0001`); the largest individual admission interval was 51 cycles (M2 read, W04, seed `0xFABC0003`). The highest per-transaction count of eligible competing address grants before service was two. This is a service-opportunity count, not a two-cycle wall-time starvation bound.
+
 ## Contention, endpoint limits and parallelism
 
 - W08 had 239,478 S0 target-AR `VALID && !READY` cycles and 23,210 stall episodes across five seeds; per-seed stalls were 47,817–47,949 cycles. The read queue reached depth 8. This is measured endpoint/buffer backpressure, distinct from arbitration.
