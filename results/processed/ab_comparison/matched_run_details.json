@@ -1,0 +1,1682 @@
+[
+  {
+    "workload": "W00",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "B_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "A_measurement_cycles": 1001,
+    "B_measurement_cycles": 1001,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "B_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "A_measurement_cycles": 1001,
+    "B_measurement_cycles": 1001,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "B_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "A_measurement_cycles": 1001,
+    "B_measurement_cycles": 1001,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "B_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "A_measurement_cycles": 1001,
+    "B_measurement_cycles": 1001,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W00",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "B_intent_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "A_measurement_cycles": 1001,
+    "B_measurement_cycles": 1001,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "8d089068d2754657379f47eff8fe5491740a8acaf704411b06188574ca025862",
+    "B_intent_sha256": "8d089068d2754657379f47eff8fe5491740a8acaf704411b06188574ca025862",
+    "A_measurement_cycles": 99673,
+    "B_measurement_cycles": 99673,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "fd95351e7a6014ddeb91480d42ae6ab0b46944c1db59ccb8b924403e7a840376",
+    "B_intent_sha256": "fd95351e7a6014ddeb91480d42ae6ab0b46944c1db59ccb8b924403e7a840376",
+    "A_measurement_cycles": 99880,
+    "B_measurement_cycles": 99880,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "f5393998bc28651c6cd625e960662c9d6cf8c864262e224fdaa4ea40652c9772",
+    "B_intent_sha256": "f5393998bc28651c6cd625e960662c9d6cf8c864262e224fdaa4ea40652c9772",
+    "A_measurement_cycles": 99437,
+    "B_measurement_cycles": 99437,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "988ad2bef5ee631996527d2d443431dc13619999d160bf4a7bd50b7fb428d81c",
+    "B_intent_sha256": "988ad2bef5ee631996527d2d443431dc13619999d160bf4a7bd50b7fb428d81c",
+    "A_measurement_cycles": 99449,
+    "B_measurement_cycles": 99449,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W01",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "a10d2a40ac54318de7ef140170014b6076684a7fbac74b72049682f20bebbb81",
+    "B_intent_sha256": "a10d2a40ac54318de7ef140170014b6076684a7fbac74b72049682f20bebbb81",
+    "A_measurement_cycles": 99417,
+    "B_measurement_cycles": 99417,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "65641f628d08e59cccb32d8277816ebbde4ed2b46598ae9911639c982b363113",
+    "B_intent_sha256": "65641f628d08e59cccb32d8277816ebbde4ed2b46598ae9911639c982b363113",
+    "A_measurement_cycles": 46218,
+    "B_measurement_cycles": 46218,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "0421c179baef018fc2a4f5c556e5e2f903aebf017f3719e34f544b73c0f21481",
+    "B_intent_sha256": "0421c179baef018fc2a4f5c556e5e2f903aebf017f3719e34f544b73c0f21481",
+    "A_measurement_cycles": 46222,
+    "B_measurement_cycles": 46222,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "ce915d27eb852f9cf8f88dc841f86325d4155f0ce16ced2dc2b12e6757a3a068",
+    "B_intent_sha256": "ce915d27eb852f9cf8f88dc841f86325d4155f0ce16ced2dc2b12e6757a3a068",
+    "A_measurement_cycles": 46218,
+    "B_measurement_cycles": 46218,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "330ab2bf2fe0762acf042241084206fdf2a3f38fc561b9b9f0143d619ecae1de",
+    "B_intent_sha256": "330ab2bf2fe0762acf042241084206fdf2a3f38fc561b9b9f0143d619ecae1de",
+    "A_measurement_cycles": 46218,
+    "B_measurement_cycles": 46218,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W02",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e45e2b23db84aa12c59714f3300af274cfa314c9d484b3eea10868161b1dc8c9",
+    "B_intent_sha256": "e45e2b23db84aa12c59714f3300af274cfa314c9d484b3eea10868161b1dc8c9",
+    "A_measurement_cycles": 46218,
+    "B_measurement_cycles": 46218,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "278589a0ba3082e3a899301f83e415b1fd0be9a893db089aceeca2fc6ca4d349",
+    "B_intent_sha256": "278589a0ba3082e3a899301f83e415b1fd0be9a893db089aceeca2fc6ca4d349",
+    "A_measurement_cycles": 25071,
+    "B_measurement_cycles": 25071,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "6783d7e4f47990db060731987c054cb8998f82e4790925c672c156d2080344a6",
+    "B_intent_sha256": "6783d7e4f47990db060731987c054cb8998f82e4790925c672c156d2080344a6",
+    "A_measurement_cycles": 24973,
+    "B_measurement_cycles": 24973,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e681661f103f4da0db1358dc21cc3627b4a30e29b6982441d2a609f634bae906",
+    "B_intent_sha256": "e681661f103f4da0db1358dc21cc3627b4a30e29b6982441d2a609f634bae906",
+    "A_measurement_cycles": 24886,
+    "B_measurement_cycles": 24886,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "672299d7fa027d0a8cf430d7bc8e1487ed043a23b394822d0c950e103cec96aa",
+    "B_intent_sha256": "672299d7fa027d0a8cf430d7bc8e1487ed043a23b394822d0c950e103cec96aa",
+    "A_measurement_cycles": 25169,
+    "B_measurement_cycles": 25169,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W03",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "f51012ad3510d49ebdd7904b551b192c7aef2e1d442f114d7b1b7b9cf7f69c2b",
+    "B_intent_sha256": "f51012ad3510d49ebdd7904b551b192c7aef2e1d442f114d7b1b7b9cf7f69c2b",
+    "A_measurement_cycles": 25089,
+    "B_measurement_cycles": 25089,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    },
+    "B_lost_service_opportunities": {
+      "aw": 0,
+      "ar": 0
+    }
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "6723157975af416eba2a3a024230fb890e96df83832965421b257a891657281a",
+    "B_intent_sha256": "6723157975af416eba2a3a024230fb890e96df83832965421b257a891657281a",
+    "A_measurement_cycles": 100213,
+    "B_measurement_cycles": 100218,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 104421,
+    "B_all_manager_active_cycles": 104210,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 10214,
+      "ar": 3819
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11688,
+      "ar": 3509
+    }
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "f5d0c710b6b3229837b21900ced9ba057665caf5262749fd6637c2395f112a23",
+    "B_intent_sha256": "f5d0c710b6b3229837b21900ced9ba057665caf5262749fd6637c2395f112a23",
+    "A_measurement_cycles": 100574,
+    "B_measurement_cycles": 100584,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 103786,
+    "B_all_manager_active_cycles": 103969,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 10251,
+      "ar": 3418
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11961,
+      "ar": 3287
+    }
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "dad6f5ff738997f499daf72d7dd0d9a039838275819713767ed69a0a8607bd5e",
+    "B_intent_sha256": "dad6f5ff738997f499daf72d7dd0d9a039838275819713767ed69a0a8607bd5e",
+    "A_measurement_cycles": 99962,
+    "B_measurement_cycles": 99958,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 103396,
+    "B_all_manager_active_cycles": 103119,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 10463,
+      "ar": 3540
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11892,
+      "ar": 3273
+    }
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "65d83849354677cbd3c71fc623ddd553301ffb9d87892991ec3908c638f56b04",
+    "B_intent_sha256": "65d83849354677cbd3c71fc623ddd553301ffb9d87892991ec3908c638f56b04",
+    "A_measurement_cycles": 99078,
+    "B_measurement_cycles": 99091,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 102845,
+    "B_all_manager_active_cycles": 102231,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 10401,
+      "ar": 3470
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11727,
+      "ar": 3238
+    }
+  },
+  {
+    "workload": "W04",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "968e6333a60f33fb4b847080834b091eea2cda126c489ed429ea8b271c7e2e5c",
+    "B_intent_sha256": "968e6333a60f33fb4b847080834b091eea2cda126c489ed429ea8b271c7e2e5c",
+    "A_measurement_cycles": 99858,
+    "B_measurement_cycles": 99858,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 103254,
+    "B_all_manager_active_cycles": 102977,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 10142,
+      "ar": 3543
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11226,
+      "ar": 3298
+    }
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "d648f3f1e7c80ab621e489fec23b8acf5940e7fa11f1b411e2c3a4a11becef55",
+    "B_intent_sha256": "d648f3f1e7c80ab621e489fec23b8acf5940e7fa11f1b411e2c3a4a11becef55",
+    "A_measurement_cycles": 99442,
+    "B_measurement_cycles": 99460,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 3506,
+      "ar": 478
+    },
+    "B_lost_service_opportunities": {
+      "aw": 2887,
+      "ar": 435
+    }
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e43951e3d3a566bb58664ea8f462946ef3ceace98361778de4898084e0745d56",
+    "B_intent_sha256": "e43951e3d3a566bb58664ea8f462946ef3ceace98361778de4898084e0745d56",
+    "A_measurement_cycles": 100817,
+    "B_measurement_cycles": 100836,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 3664,
+      "ar": 403
+    },
+    "B_lost_service_opportunities": {
+      "aw": 2964,
+      "ar": 427
+    }
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "eb590d98d319d4f108abb008d07cf31fdf5fe923417256795b36199ddd3cd877",
+    "B_intent_sha256": "eb590d98d319d4f108abb008d07cf31fdf5fe923417256795b36199ddd3cd877",
+    "A_measurement_cycles": 99761,
+    "B_measurement_cycles": 99755,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 3455,
+      "ar": 463
+    },
+    "B_lost_service_opportunities": {
+      "aw": 2878,
+      "ar": 435
+    }
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "04815c68341f16155131a6382d9f2d1f55958bf13e9099be97c52b68317ded92",
+    "B_intent_sha256": "04815c68341f16155131a6382d9f2d1f55958bf13e9099be97c52b68317ded92",
+    "A_measurement_cycles": 100314,
+    "B_measurement_cycles": 100308,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 3579,
+      "ar": 437
+    },
+    "B_lost_service_opportunities": {
+      "aw": 2971,
+      "ar": 436
+    }
+  },
+  {
+    "workload": "W05",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "bd5aa07e83535f8df0c4c9cd876bdedef265507db576d184289442a7c32465a2",
+    "B_intent_sha256": "bd5aa07e83535f8df0c4c9cd876bdedef265507db576d184289442a7c32465a2",
+    "A_measurement_cycles": 100118,
+    "B_measurement_cycles": 100116,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 3513,
+      "ar": 412
+    },
+    "B_lost_service_opportunities": {
+      "aw": 2895,
+      "ar": 454
+    }
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "d9b871bd6ff785ca952da7f3e8f59e9d1c5c465f6416f1b2a15e999edfc3eaa0",
+    "B_intent_sha256": "d9b871bd6ff785ca952da7f3e8f59e9d1c5c465f6416f1b2a15e999edfc3eaa0",
+    "A_measurement_cycles": 55021,
+    "B_measurement_cycles": 64483,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 5143,
+      "ar": 6
+    },
+    "B_lost_service_opportunities": {
+      "aw": 7436,
+      "ar": 12
+    }
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "f6ec2afae16b6cc9adff6c8be9c734029ae9b3e43463e5843faf745829f5edac",
+    "B_intent_sha256": "f6ec2afae16b6cc9adff6c8be9c734029ae9b3e43463e5843faf745829f5edac",
+    "A_measurement_cycles": 55238,
+    "B_measurement_cycles": 65332,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 5168,
+      "ar": 2
+    },
+    "B_lost_service_opportunities": {
+      "aw": 7579,
+      "ar": 2
+    }
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "bd2d6e09e5318be2a910ad26d4b927fee964c4da948558bf77eedebff03d7768",
+    "B_intent_sha256": "bd2d6e09e5318be2a910ad26d4b927fee964c4da948558bf77eedebff03d7768",
+    "A_measurement_cycles": 55279,
+    "B_measurement_cycles": 65542,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 5169,
+      "ar": 4
+    },
+    "B_lost_service_opportunities": {
+      "aw": 7579,
+      "ar": 3
+    }
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "4ff10aee9a067deba4d444262ca2c50bc8a44a8e791b6f7e7944ea4abe62cfb0",
+    "B_intent_sha256": "4ff10aee9a067deba4d444262ca2c50bc8a44a8e791b6f7e7944ea4abe62cfb0",
+    "A_measurement_cycles": 54571,
+    "B_measurement_cycles": 64060,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 5105,
+      "ar": 10
+    },
+    "B_lost_service_opportunities": {
+      "aw": 7264,
+      "ar": 10
+    }
+  },
+  {
+    "workload": "W06",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "c6f91bf405054dde78cd4339d7b4cca688ae723d6a0cc06698f7a50cf5e4f9e6",
+    "B_intent_sha256": "c6f91bf405054dde78cd4339d7b4cca688ae723d6a0cc06698f7a50cf5e4f9e6",
+    "A_measurement_cycles": 55450,
+    "B_measurement_cycles": 65182,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 0,
+    "B_all_manager_active_cycles": 0,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 5190,
+      "ar": 2
+    },
+    "B_lost_service_opportunities": {
+      "aw": 7387,
+      "ar": 2
+    }
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "4c083db4db27c46b6e3a9dbaa4f15d982ede76361a157da16652580245c1c0cf",
+    "B_intent_sha256": "4c083db4db27c46b6e3a9dbaa4f15d982ede76361a157da16652580245c1c0cf",
+    "A_measurement_cycles": 60327,
+    "B_measurement_cycles": 99240,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66439,
+    "B_all_manager_active_cycles": 108908,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14483,
+      "ar": 18493
+    },
+    "B_lost_service_opportunities": {
+      "aw": 38409,
+      "ar": 24324
+    }
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "9b28dc714d5d308fe0ca2a3a9c0513991863f99345b6c929eac45c7972cd3366",
+    "B_intent_sha256": "9b28dc714d5d308fe0ca2a3a9c0513991863f99345b6c929eac45c7972cd3366",
+    "A_measurement_cycles": 60401,
+    "B_measurement_cycles": 99482,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66507,
+    "B_all_manager_active_cycles": 109195,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18479
+    },
+    "B_lost_service_opportunities": {
+      "aw": 38525,
+      "ar": 23679
+    }
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e202f878113552402d508a495fe9fd6c8a64f9391581275e1d8a9aab5527f962",
+    "B_intent_sha256": "e202f878113552402d508a495fe9fd6c8a64f9391581275e1d8a9aab5527f962",
+    "A_measurement_cycles": 60439,
+    "B_measurement_cycles": 100981,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66540,
+    "B_all_manager_active_cycles": 110905,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14507,
+      "ar": 18494
+    },
+    "B_lost_service_opportunities": {
+      "aw": 39117,
+      "ar": 21548
+    }
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "4f5cf06bda17221068fa101192dfa102678b8044dd781eca4819aaf02fe25278",
+    "B_intent_sha256": "4f5cf06bda17221068fa101192dfa102678b8044dd781eca4819aaf02fe25278",
+    "A_measurement_cycles": 60417,
+    "B_measurement_cycles": 100935,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66541,
+    "B_all_manager_active_cycles": 110905,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18477
+    },
+    "B_lost_service_opportunities": {
+      "aw": 39105,
+      "ar": 21544
+    }
+  },
+  {
+    "workload": "W07",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "0131862d461d6145e52eb9297cd0fa678efe764ee46a720036bd4f2c8d327fe8",
+    "B_intent_sha256": "0131862d461d6145e52eb9297cd0fa678efe764ee46a720036bd4f2c8d327fe8",
+    "A_measurement_cycles": 60321,
+    "B_measurement_cycles": 101379,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66408,
+    "B_all_manager_active_cycles": 111325,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14481,
+      "ar": 18506
+    },
+    "B_lost_service_opportunities": {
+      "aw": 39287,
+      "ar": 20573
+    }
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "ef80fa9b3270b62913f807272fa22dd7beede9e8db6ef5514e490b6d5a6eb395",
+    "B_intent_sha256": "ef80fa9b3270b62913f807272fa22dd7beede9e8db6ef5514e490b6d5a6eb395",
+    "A_measurement_cycles": 60327,
+    "B_measurement_cycles": 99240,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66439,
+    "B_all_manager_active_cycles": 108908,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14483,
+      "ar": 18493
+    },
+    "B_lost_service_opportunities": {
+      "aw": 38409,
+      "ar": 24324
+    }
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "97419ecec5f5d5ed7793149157f82ab8ad51a5310ea4d07b4b875bf0ec341cc5",
+    "B_intent_sha256": "97419ecec5f5d5ed7793149157f82ab8ad51a5310ea4d07b4b875bf0ec341cc5",
+    "A_measurement_cycles": 60401,
+    "B_measurement_cycles": 99482,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66507,
+    "B_all_manager_active_cycles": 109195,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18479
+    },
+    "B_lost_service_opportunities": {
+      "aw": 38525,
+      "ar": 23679
+    }
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "ef505cbceb39d583fa2ea2ad170fb58a2fb6141389414f1989db3e45e01356b3",
+    "B_intent_sha256": "ef505cbceb39d583fa2ea2ad170fb58a2fb6141389414f1989db3e45e01356b3",
+    "A_measurement_cycles": 60439,
+    "B_measurement_cycles": 100981,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66540,
+    "B_all_manager_active_cycles": 110905,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14507,
+      "ar": 18494
+    },
+    "B_lost_service_opportunities": {
+      "aw": 39117,
+      "ar": 21548
+    }
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "1b92597226113f1eefe56f3182aca561e392a5d1afbb750be9e15a194ab9d898",
+    "B_intent_sha256": "1b92597226113f1eefe56f3182aca561e392a5d1afbb750be9e15a194ab9d898",
+    "A_measurement_cycles": 60417,
+    "B_measurement_cycles": 100935,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66541,
+    "B_all_manager_active_cycles": 110905,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14503,
+      "ar": 18477
+    },
+    "B_lost_service_opportunities": {
+      "aw": 39105,
+      "ar": 21544
+    }
+  },
+  {
+    "workload": "W08",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "f55ef689d342c4353d060910963b5ca1b9719fe7f10b07ecdbea3618e8d13f9a",
+    "B_intent_sha256": "f55ef689d342c4353d060910963b5ca1b9719fe7f10b07ecdbea3618e8d13f9a",
+    "A_measurement_cycles": 60321,
+    "B_measurement_cycles": 101379,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 66408,
+    "B_all_manager_active_cycles": 111325,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 14481,
+      "ar": 18506
+    },
+    "B_lost_service_opportunities": {
+      "aw": 39287,
+      "ar": 20573
+    }
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "4051d908efb38b6f46cdbd96a56020f707d6e09164d1b3239159c4fa8fdd8944",
+    "B_intent_sha256": "4051d908efb38b6f46cdbd96a56020f707d6e09164d1b3239159c4fa8fdd8944",
+    "A_measurement_cycles": 99578,
+    "B_measurement_cycles": 99553,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109602,
+    "B_all_manager_active_cycles": 109334,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11390,
+      "ar": 25695
+    },
+    "B_lost_service_opportunities": {
+      "aw": 6607,
+      "ar": 15313
+    }
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "878bf1f6267300fbda1115566fc163f4531fc5dec129db7092d634803e5f59ca",
+    "B_intent_sha256": "878bf1f6267300fbda1115566fc163f4531fc5dec129db7092d634803e5f59ca",
+    "A_measurement_cycles": 99906,
+    "B_measurement_cycles": 99934,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109621,
+    "B_all_manager_active_cycles": 109303,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 12118,
+      "ar": 25423
+    },
+    "B_lost_service_opportunities": {
+      "aw": 6728,
+      "ar": 15489
+    }
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "efeb18b652a40f48704d7e6fca5cf3332e134bbcab002f7c4453d13cbbf5f58f",
+    "B_intent_sha256": "efeb18b652a40f48704d7e6fca5cf3332e134bbcab002f7c4453d13cbbf5f58f",
+    "A_measurement_cycles": 100030,
+    "B_measurement_cycles": 100024,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 110038,
+    "B_all_manager_active_cycles": 109774,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 12124,
+      "ar": 25571
+    },
+    "B_lost_service_opportunities": {
+      "aw": 6899,
+      "ar": 15672
+    }
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "0cb7a27525d388d9f8bf479461364af1b52d08f81e5fe87415c8a3e4062dcc90",
+    "B_intent_sha256": "0cb7a27525d388d9f8bf479461364af1b52d08f81e5fe87415c8a3e4062dcc90",
+    "A_measurement_cycles": 99774,
+    "B_measurement_cycles": 99730,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109760,
+    "B_all_manager_active_cycles": 109392,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11987,
+      "ar": 25326
+    },
+    "B_lost_service_opportunities": {
+      "aw": 6749,
+      "ar": 15021
+    }
+  },
+  {
+    "workload": "W09",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "32999ff358231c88bae6612b4b360aeadf1c1b8c13c0e596250f3cd5e72742cd",
+    "B_intent_sha256": "32999ff358231c88bae6612b4b360aeadf1c1b8c13c0e596250f3cd5e72742cd",
+    "A_measurement_cycles": 99717,
+    "B_measurement_cycles": 99692,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109568,
+    "B_all_manager_active_cycles": 109089,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11506,
+      "ar": 25645
+    },
+    "B_lost_service_opportunities": {
+      "aw": 6552,
+      "ar": 15658
+    }
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "c7d16311e57679575906d0f313a75ce80dbede8a3e7ed2b424b1b36cd7c67101",
+    "B_intent_sha256": "c7d16311e57679575906d0f313a75ce80dbede8a3e7ed2b424b1b36cd7c67101",
+    "A_measurement_cycles": 107627,
+    "B_measurement_cycles": 202738,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 118342,
+    "B_all_manager_active_cycles": 221872,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 25808,
+      "ar": 1511
+    },
+    "B_lost_service_opportunities": {
+      "aw": 78258,
+      "ar": 2552
+    }
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "657b0ce4cb3e9061257ddb1779ebb768d3bb700c4d13a922c94b19bc1ca42a17",
+    "B_intent_sha256": "657b0ce4cb3e9061257ddb1779ebb768d3bb700c4d13a922c94b19bc1ca42a17",
+    "A_measurement_cycles": 108369,
+    "B_measurement_cycles": 201937,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 119047,
+    "B_all_manager_active_cycles": 221741,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 25975,
+      "ar": 1536
+    },
+    "B_lost_service_opportunities": {
+      "aw": 78221,
+      "ar": 2620
+    }
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "6832cc64a3a69fc828941bcf805dc74e6f2aba34558cf4199905a97e8e6310d6",
+    "B_intent_sha256": "6832cc64a3a69fc828941bcf805dc74e6f2aba34558cf4199905a97e8e6310d6",
+    "A_measurement_cycles": 107997,
+    "B_measurement_cycles": 201128,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 118480,
+    "B_all_manager_active_cycles": 220542,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 25833,
+      "ar": 1514
+    },
+    "B_lost_service_opportunities": {
+      "aw": 77780,
+      "ar": 2484
+    }
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "9582193dbfe83c4f3022e1b6090266577a51195b3accca3ce7d719311470f170",
+    "B_intent_sha256": "9582193dbfe83c4f3022e1b6090266577a51195b3accca3ce7d719311470f170",
+    "A_measurement_cycles": 108338,
+    "B_measurement_cycles": 201731,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 119294,
+    "B_all_manager_active_cycles": 222652,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 26015,
+      "ar": 1622
+    },
+    "B_lost_service_opportunities": {
+      "aw": 78479,
+      "ar": 2756
+    }
+  },
+  {
+    "workload": "W10",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "cf8836fbf07fcafa7d5eade3b9bd38fb59232fc0aebe549148379288d3daa241",
+    "B_intent_sha256": "cf8836fbf07fcafa7d5eade3b9bd38fb59232fc0aebe549148379288d3daa241",
+    "A_measurement_cycles": 108595,
+    "B_measurement_cycles": 201470,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 119444,
+    "B_all_manager_active_cycles": 221598,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 26064,
+      "ar": 1551
+    },
+    "B_lost_service_opportunities": {
+      "aw": 78185,
+      "ar": 2592
+    }
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "bda4aa5c0bf84e719b30a6e85e2bcd11031cdaf29a1df0e735f22fdf3e20404d",
+    "B_intent_sha256": "bda4aa5c0bf84e719b30a6e85e2bcd11031cdaf29a1df0e735f22fdf3e20404d",
+    "A_measurement_cycles": 99548,
+    "B_measurement_cycles": 99550,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109022,
+    "B_all_manager_active_cycles": 107942,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 17496,
+      "ar": 12857
+    },
+    "B_lost_service_opportunities": {
+      "aw": 21510,
+      "ar": 8209
+    }
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "aca5fa38a11919e863bba334e4dc73f5a89a87372c064d278db8ad3e4e4bbb15",
+    "B_intent_sha256": "aca5fa38a11919e863bba334e4dc73f5a89a87372c064d278db8ad3e4e4bbb15",
+    "A_measurement_cycles": 99931,
+    "B_measurement_cycles": 99942,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109119,
+    "B_all_manager_active_cycles": 108004,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 17590,
+      "ar": 12830
+    },
+    "B_lost_service_opportunities": {
+      "aw": 21683,
+      "ar": 8200
+    }
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "696d7e50436a5ec192be4abb9cc9d518127190a30bd62f5b7b8437d31ff8a451",
+    "B_intent_sha256": "696d7e50436a5ec192be4abb9cc9d518127190a30bd62f5b7b8437d31ff8a451",
+    "A_measurement_cycles": 100048,
+    "B_measurement_cycles": 100033,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109472,
+    "B_all_manager_active_cycles": 108489,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 17493,
+      "ar": 12743
+    },
+    "B_lost_service_opportunities": {
+      "aw": 21827,
+      "ar": 8345
+    }
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "e2e56331f395a97b818458fc2ca9430742fbe2790f5505a1b1be9bff960d2d29",
+    "B_intent_sha256": "e2e56331f395a97b818458fc2ca9430742fbe2790f5505a1b1be9bff960d2d29",
+    "A_measurement_cycles": 99707,
+    "B_measurement_cycles": 99721,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 109042,
+    "B_all_manager_active_cycles": 108013,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 17860,
+      "ar": 12154
+    },
+    "B_lost_service_opportunities": {
+      "aw": 21800,
+      "ar": 7700
+    }
+  },
+  {
+    "workload": "W11",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "c8826fb6508ca4c52318ee3e154759af56b40a51fd050e3bc98629fdf062e9c2",
+    "B_intent_sha256": "c8826fb6508ca4c52318ee3e154759af56b40a51fd050e3bc98629fdf062e9c2",
+    "A_measurement_cycles": 99699,
+    "B_measurement_cycles": 99694,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 108952,
+    "B_all_manager_active_cycles": 107993,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 17515,
+      "ar": 12711
+    },
+    "B_lost_service_opportunities": {
+      "aw": 21222,
+      "ar": 8125
+    }
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "826707be87ce178f9ea6043e425cd3ed1990e2ae16062f8ceb04b2b2c277495d",
+    "B_intent_sha256": "826707be87ce178f9ea6043e425cd3ed1990e2ae16062f8ceb04b2b2c277495d",
+    "A_measurement_cycles": 20000,
+    "B_measurement_cycles": 20000,
+    "A_w12_jain": 0.999999973333334,
+    "B_w12_jain": 0.999999973333334,
+    "A_all_manager_active_cycles": 22015,
+    "B_all_manager_active_cycles": 22015,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    }
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "2cab4cfdce2afb0eee5b356b3a9c86e34615cc0a6c59c612ce739d600fbd18e2",
+    "B_intent_sha256": "2cab4cfdce2afb0eee5b356b3a9c86e34615cc0a6c59c612ce739d600fbd18e2",
+    "A_measurement_cycles": 20000,
+    "B_measurement_cycles": 20000,
+    "A_w12_jain": 0.999999973333334,
+    "B_w12_jain": 0.999999973333334,
+    "A_all_manager_active_cycles": 22015,
+    "B_all_manager_active_cycles": 22015,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    }
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "3e311b541f03dda620090623b22b108e9c73bfb1efdc9b2778be8d3d5c7dcc67",
+    "B_intent_sha256": "3e311b541f03dda620090623b22b108e9c73bfb1efdc9b2778be8d3d5c7dcc67",
+    "A_measurement_cycles": 20000,
+    "B_measurement_cycles": 20000,
+    "A_w12_jain": 0.999999973333334,
+    "B_w12_jain": 0.999999973333334,
+    "A_all_manager_active_cycles": 22015,
+    "B_all_manager_active_cycles": 22015,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    }
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "8478162ee9a90970f1dfbb316aafa8e79b28f8667fbdfef5cc3c55c42ea3cb05",
+    "B_intent_sha256": "8478162ee9a90970f1dfbb316aafa8e79b28f8667fbdfef5cc3c55c42ea3cb05",
+    "A_measurement_cycles": 20000,
+    "B_measurement_cycles": 20000,
+    "A_w12_jain": 0.999999973333334,
+    "B_w12_jain": 0.999999973333334,
+    "A_all_manager_active_cycles": 22015,
+    "B_all_manager_active_cycles": 22015,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    }
+  },
+  {
+    "workload": "W12",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "f2c5dfb610f76e15942f5df23b748eb20f11177b291a0f9b7f36c5d1381ee2dc",
+    "B_intent_sha256": "f2c5dfb610f76e15942f5df23b748eb20f11177b291a0f9b7f36c5d1381ee2dc",
+    "A_measurement_cycles": 20000,
+    "B_measurement_cycles": 20000,
+    "A_w12_jain": 0.999999973333334,
+    "B_w12_jain": 0.999999973333334,
+    "A_all_manager_active_cycles": 22015,
+    "B_all_manager_active_cycles": 22015,
+    "A_parallel_target_address_cycles": 0,
+    "B_parallel_target_address_cycles": 0,
+    "A_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    },
+    "B_lost_service_opportunities": {
+      "aw": 11007,
+      "ar": 22009
+    }
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0001",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "9516661f36a57bf098630496652b8f010280fd9333c63468e596edc00299cf4a",
+    "B_intent_sha256": "9516661f36a57bf098630496652b8f010280fd9333c63468e596edc00299cf4a",
+    "A_measurement_cycles": 99580,
+    "B_measurement_cycles": 99580,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 37596,
+    "B_all_manager_active_cycles": 41884,
+    "A_parallel_target_address_cycles": 2823,
+    "B_parallel_target_address_cycles": 2812,
+    "A_lost_service_opportunities": {
+      "aw": 1157,
+      "ar": 876
+    },
+    "B_lost_service_opportunities": {
+      "aw": 1612,
+      "ar": 915
+    }
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0002",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "8193eb1752f2d69e5920c276aa6a7de49d38705ed52dd008bb1d97c40fcab0d4",
+    "B_intent_sha256": "8193eb1752f2d69e5920c276aa6a7de49d38705ed52dd008bb1d97c40fcab0d4",
+    "A_measurement_cycles": 99930,
+    "B_measurement_cycles": 99925,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 37659,
+    "B_all_manager_active_cycles": 42041,
+    "A_parallel_target_address_cycles": 2720,
+    "B_parallel_target_address_cycles": 2727,
+    "A_lost_service_opportunities": {
+      "aw": 1174,
+      "ar": 873
+    },
+    "B_lost_service_opportunities": {
+      "aw": 1625,
+      "ar": 912
+    }
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0003",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "7de33e2142b6a1a44a61c56730d0078cc25429d577366ffff2f973ea9f4cef8d",
+    "B_intent_sha256": "7de33e2142b6a1a44a61c56730d0078cc25429d577366ffff2f973ea9f4cef8d",
+    "A_measurement_cycles": 100042,
+    "B_measurement_cycles": 100042,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 37505,
+    "B_all_manager_active_cycles": 42192,
+    "A_parallel_target_address_cycles": 2775,
+    "B_parallel_target_address_cycles": 2783,
+    "A_lost_service_opportunities": {
+      "aw": 1218,
+      "ar": 843
+    },
+    "B_lost_service_opportunities": {
+      "aw": 1697,
+      "ar": 887
+    }
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0004",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "74951d32e844e4691d5876edf13bdf8450717948b8dcf7d48b3b720ec1777c12",
+    "B_intent_sha256": "74951d32e844e4691d5876edf13bdf8450717948b8dcf7d48b3b720ec1777c12",
+    "A_measurement_cycles": 99721,
+    "B_measurement_cycles": 99721,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 37773,
+    "B_all_manager_active_cycles": 42273,
+    "A_parallel_target_address_cycles": 2848,
+    "B_parallel_target_address_cycles": 2865,
+    "A_lost_service_opportunities": {
+      "aw": 1208,
+      "ar": 843
+    },
+    "B_lost_service_opportunities": {
+      "aw": 1689,
+      "ar": 888
+    }
+  },
+  {
+    "workload": "W13",
+    "seed": "0xFABC0005",
+    "A_source_manifest_sha256": "38ad863aff0fb44509584fca7b5755f221b3747dc78bac6867e8313ab9aa6ee6",
+    "B_source_manifest_sha256": "7d9ea658ef71150d7063f910cd6f0fca0968f8974fafc15fc2d51092c2e0ffe3",
+    "A_intent_sha256": "b67ffd1c7115fafb9bf109740218858368063d311900f3b1528ec5d09ac4ff4c",
+    "B_intent_sha256": "b67ffd1c7115fafb9bf109740218858368063d311900f3b1528ec5d09ac4ff4c",
+    "A_measurement_cycles": 99653,
+    "B_measurement_cycles": 99653,
+    "A_w12_jain": null,
+    "B_w12_jain": null,
+    "A_all_manager_active_cycles": 37664,
+    "B_all_manager_active_cycles": 41805,
+    "A_parallel_target_address_cycles": 2868,
+    "B_parallel_target_address_cycles": 2884,
+    "A_lost_service_opportunities": {
+      "aw": 1180,
+      "ar": 862
+    },
+    "B_lost_service_opportunities": {
+      "aw": 1594,
+      "ar": 905
+    }
+  }
+]

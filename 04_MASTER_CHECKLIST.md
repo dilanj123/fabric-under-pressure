@@ -492,7 +492,7 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] A timing/resources processed. (All-seed clean target 60 MHz; wrapper and direct synthesis counts are separate.)
 - [x] measured bottleneck identified. (W08 S0 read-queue pressure plus same-target arbitration contention; see processed summary.)
 - [x] bottleneck mechanism linked to traces/counters, not guesswork. (S0 AR stall cycles, depth-8 queue, eligible grant losses and measured response tail.)
-- [x] B hypothesis written before B results. (D045 remains frozen; no canonical B performance result exists.)
+- [x] B hypothesis written before B results. (Frozen D045; evaluated without tuning in Mission 4.)
 
 ---
 
@@ -507,36 +507,35 @@ Use this as the execution/gate checklist. A checked item means the required evid
 - [x] B whole-DUT functional regression passes, including five 512- and five 2,048-operation seeds.
 - [x] B-specific scheduler directed tests pass.
 - [x] B formal properties/covers pass at the stated bounded depths and assumptions.
-- [ ] B canonical benchmark uses identical seeds/config.
-- [ ] B synthesis/P&R uses identical target/settings/seeds.
-- [ ] processed A/B comparison contains regressions and improvements.
-- [ ] B retain/modify/reject decision written.
-- [ ] if common bug fix occurred, A was rerun too.
-- [ ] known-good Gate-4 commit recorded after comparison evidence.
+- [x] B canonical benchmark uses identical seeds/config. (70/70 W00–W13 × five seeds; matched plans and quotas.)
+- [x] B synthesis/P&R uses identical target/settings/seeds. (55 routes each, same final wrapper and route seeds.)
+- [x] processed A/B comparison contains regressions and improvements. (`results/processed/ab_comparison/summary.md`.)
+- [x] B retain/modify/reject decision written. (D047: REJECT under frozen D045.)
+- [x] if common harness changed, A was rerun too. (Final common benchmark engine used for both full matrices.)
+- [x] known-good Gate-4 comparison commit recorded after evidence review. (See comparison tag/repository record.)
 
 ---
 
 # V. A/B comparison completeness
 
-- [ ] M0 P50/P95/P99/max compared.
-- [ ] M1 P50/P95/P99/max compared.
-- [ ] M2 P50/P95/P99/max compared.
-- [ ] reads compared separately.
-- [ ] writes compared separately.
-- [ ] admission latency compared.
-- [ ] service-opportunity starvation compared.
-- [ ] wall-cycle max wait compared.
-- [ ] aggregate throughput compared.
-- [ ] per-manager throughput compared.
-- [ ] W12 fairness compared.
-- [ ] LUT/cell resources compared.
-- [ ] FFs compared.
-- [ ] memory use compared if any.
-- [ ] routed WNS/frequency compared.
-- [ ] critical paths inspected.
-- [ ] complexity/verification cost discussed.
-- [ ] workloads where B regresses are explicitly shown.
-- [ ] no overall “B is better” conclusion without trade-off context.
+- [x] M0 P50/P95/P99/max compared.
+- [x] M1 P50/P95/P99/max compared.
+- [x] M2 P50/P95/P99/max compared.
+- [x] reads compared separately.
+- [x] writes compared separately.
+- [x] admission, response and end-to-end latency compared.
+- [x] service-opportunity starvation and target backpressure are separated.
+- [x] wall-cycle max wait compared.
+- [x] aggregate and per-manager throughput compared.
+- [x] W12 fairness compared.
+- [x] LUT/cell resources compared.
+- [x] FFs compared.
+- [x] memory use compared (no DP16KD/TRELLIS_RAMW mapped in wrapped routes).
+- [x] routed timing and all-seed frequency compared.
+- [x] representative critical paths inspected.
+- [x] complexity/verification cost discussed in processed analysis.
+- [x] workloads where B regresses are explicitly shown.
+- [x] trade-off conclusion is explicit; B is not called universally better.
 
 ---
 
@@ -597,25 +596,17 @@ If any item above is unchecked, defer C.
 
 # Z. Public/CV-ready gate
 
-- [ ] README answers the engineering question.
-- [ ] README calls interface a documented AXI4 subset.
-- [ ] README links exact supported/unsupported feature table.
-- [ ] architecture block diagram published.
-- [ ] AW/W ownership diagram published.
-- [ ] ID widening/response routing diagram published.
-- [ ] A/B scheduler diagram published.
-- [ ] benchmark methodology published before/with results.
-- [ ] P50/P95/P99 plots have definitions/sample counts.
-- [ ] starvation plot/table published.
-- [ ] throughput/fairness data published.
-- [ ] PPA/timing table published.
-- [ ] formal summary lists assumptions/limitations.
-- [ ] negative results/trade-offs included.
-- [ ] exact commands documented.
-- [ ] tool versions documented.
-- [ ] limitations documented.
-- [ ] third-party notices complete.
-- [ ] evidence index maps every major public claim.
+- [x] README answers the engineering question and explains the measured decision.
+- [x] README calls interface a documented AXI4 subset and links requirements.
+- [x] architecture, AW/W ownership, ID routing and A/B scheduler diagrams published.
+- [x] benchmark methodology, percentiles and retained sample counts published.
+- [x] admission P99, starvation/fairness, throughput and PPA/timing figures published.
+- [x] formal scope and assumptions summarized.
+- [x] negative results/trade-offs included.
+- [x] exact reproduction commands and tool versions documented in evidence.
+- [x] limitations and source provenance documented.
+- [x] evidence index maps major public claims.
+- [ ] fresh clean-clone reproduction completed.
 - [ ] fresh clean-clone reproduction completed.
 - [ ] known-good public commit/tag recorded.
 - [ ] no raw claim exceeds evidence.

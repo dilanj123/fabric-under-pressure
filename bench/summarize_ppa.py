@@ -8,7 +8,14 @@ import sys
 
 def direct_synth_counts(path: Path) -> dict:
     text = path.read_text(errors="replace")
-    blocks = re.findall(r"=== axi_fabric_a ===\n(.*?)(?=\n===|\nWarnings:)", text, re.S)
+    config = path.parents[1] / "run_config.txt"
+    top = "axi_fabric_a"
+    if config.exists():
+        for line in config.read_text().splitlines():
+            if line.startswith("dut_top="):
+                top = line.split("=", 1)[1].strip()
+                break
+    blocks = re.findall(rf"=== {re.escape(top)} ===\n(.*?)(?=\n===|\nWarnings:)", text, re.S)
     if not blocks:
         return {}
     return {name: int(count) for count, name in

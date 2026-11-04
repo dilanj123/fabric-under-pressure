@@ -1,6 +1,6 @@
 # Timing and Performance Methodology
 
-**Status:** Gate-1 benchmark and metric contract frozen. Architecture-A canonical simulation and common-wrapper ECP5 measurement are complete; the Architecture-B comparison is not complete.
+**Status:** Gate-1 benchmark and metric contract remains frozen. The matched Architecture-A/B canonical simulation and common-wrapper ECP5 comparison is complete; see `results/processed/ab_comparison/summary.md`. D045 remains frozen and D047 rejects B under its criteria.
 
 ## Frozen implementation target
 LFE5U-45F / CABGA381 / speed grade 6 using a pinned nextpnr-ECP5/Trellis flow.
@@ -35,10 +35,18 @@ The full W00–W13 × five-seed matrix completed with 500 warm-up and 5,000 meas
 
 Direct Fabric synthesis reports 5,046 LUT4 and 1,219 FF. Common-wrapper synthesis reports 5,226 LUT4 and 1,649 FF; routed wrapper use is 6,020 combinational cells and 1,649 FF. Five-seed nextpnr runs are timing-clean through the 60-MHz target; only one of five seeds passes at 65 MHz. The critical path varies by seed and includes AW decode/owner and R response logic. This is an Architecture-A wrapper result, not a general device timing signoff.
 
-The measurable bottleneck and falsifiable QoS/aging hypothesis are frozen in D045. No Architecture-B implementation or A/B comparison has been performed.
+The measurable bottleneck and falsifiable QoS/aging hypothesis were frozen in D045 before B RTL. D045 was evaluated without tuning in Mission 4; the result and trade-offs follow.
+
+### Matched Architecture-A/B comparison (Mission 4)
+
+Both architectures completed 70/70 W00–W13 × five-seed runs with 500 warm-up and 5,000 retained completions per active manager. Workload SHA is `31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4`; the same transaction intent hashes, generator, endpoint, benchmark engine and sample policy were checked. A and B also completed 55 ECP5 routes each using the same final wrapper, device, tools and route seeds.
+
+Under W08, B's median-of-five M2 read-admission P99 is 16 cycles versus A's 21, and M0 read-admission P99 is 17 versus 21. However, M1 combined payload throughput is 6.341 versus 10.607 bytes/cycle (−40.2%), and M0 write-admission P99 is 69 versus 27 cycles. W12 Jain grant-rate index is 0.9999999733 for both. B's highest tested all-five-seed timing-clean target is 55 MHz versus A's 60 MHz. D045 therefore fails overall; decision D047 is **REJECT B under frozen criteria**. The scheduler was not tuned after results.
+
+Direct Fabric LUT4/FF counts are A 5,046/1,219 and B 5,730/1,426. Common-wrapper LUT4/FF counts are A 5,226/1,649 and B 5,826/1,856. The tested B representative critical path includes QoS/age selection from manager AW address inputs to manager AWREADY. This is evidence from the fixed wrapper and tool flow, not timing signoff. Full per-manager read/write metrics, route tables, event traces and four plots are in the processed comparison directory.
 
 ### Interpretation limitation
-The wrapper contributes overhead, so absolute resource numbers must be reported separately/with caveats. Relative A/B comparison is valid only if wrapper structure and parameters are identical.
+The wrapper contributes overhead, so direct Fabric and wrapped resource numbers are reported separately. The Mission-4 A/B PPA uses identical final wrapper logic and parameters. A/B simulation manifests contain a comment-only wrapper-hash difference because the wrapper comment changed between runs; the wrapper is not compiled in those cocotb runs, and the PPA builds use the same wrapper hash.
 
 ## CDC timing later
 When CDC is added: define clocks, asynchronous clock groups, justified false paths only, and cross-domain latency accounting. No blanket false-path masking.

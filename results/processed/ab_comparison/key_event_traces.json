@@ -1,0 +1,331 @@
+{
+  "metric": "admission P99 uses NumPy 2.3.5 method=nearest on 5,000 retained completions; transaction shown is a nearest observation of the run P99 value",
+  "w08_m2_read_p99_samples": [
+    {
+      "architecture": "A",
+      "seed": "0xFABC0001",
+      "p99_cycles": 21.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 1646,
+        "id": 4,
+        "target": 0,
+        "qos": 15,
+        "t_present": 6006,
+        "t_addr_accept": 6027,
+        "t_first_resp": 6091,
+        "t_complete": 6091,
+        "opportunity_loss_cycles": [
+          6007,
+          6024
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "A",
+      "seed": "0xFABC0002",
+      "p99_cycles": 21.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 1793,
+        "id": 5,
+        "target": 0,
+        "qos": 15,
+        "t_present": 5980,
+        "t_addr_accept": 6001,
+        "t_first_resp": 6064,
+        "t_complete": 6065,
+        "opportunity_loss_cycles": [
+          5981,
+          5998
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "A",
+      "seed": "0xFABC0003",
+      "p99_cycles": 21.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 1814,
+        "id": 12,
+        "target": 0,
+        "qos": 15,
+        "t_present": 6038,
+        "t_addr_accept": 6059,
+        "t_first_resp": 6123,
+        "t_complete": 6123,
+        "opportunity_loss_cycles": [
+          6039,
+          6056
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "A",
+      "seed": "0xFABC0004",
+      "p99_cycles": 21.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 1778,
+        "id": 0,
+        "target": 0,
+        "qos": 15,
+        "t_present": 5977,
+        "t_addr_accept": 5998,
+        "t_first_resp": 6061,
+        "t_complete": 6061,
+        "opportunity_loss_cycles": [
+          5978,
+          5995
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "A",
+      "seed": "0xFABC0005",
+      "p99_cycles": 21.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 1568,
+        "id": 10,
+        "target": 0,
+        "qos": 15,
+        "t_present": 5961,
+        "t_addr_accept": 5982,
+        "t_first_resp": 6044,
+        "t_complete": 6044,
+        "opportunity_loss_cycles": [
+          5962,
+          5979
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "B",
+      "seed": "0xFABC0001",
+      "p99_cycles": 17.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 4292,
+        "id": 6,
+        "target": 0,
+        "qos": 15,
+        "t_present": 9597,
+        "t_addr_accept": 9614,
+        "t_first_resp": 9649,
+        "t_complete": 9650,
+        "opportunity_loss_cycles": [
+          9597
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [
+            9615,
+            9616,
+            9617,
+            9618,
+            9619,
+            9620,
+            9621,
+            9622,
+            9623,
+            9624,
+            9625,
+            9626,
+            9627,
+            9628,
+            9629,
+            9630
+          ],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "B",
+      "seed": "0xFABC0002",
+      "p99_cycles": 17.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 5564,
+        "id": 14,
+        "target": 0,
+        "qos": 15,
+        "t_present": 12135,
+        "t_addr_accept": 12152,
+        "t_first_resp": 12190,
+        "t_complete": 12190,
+        "opportunity_loss_cycles": [
+          12135
+        ],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "B",
+      "seed": "0xFABC0003",
+      "p99_cycles": 16.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 5915,
+        "id": 3,
+        "target": 0,
+        "qos": 15,
+        "t_present": 13294,
+        "t_addr_accept": 13310,
+        "t_first_resp": 13364,
+        "t_complete": 13364,
+        "opportunity_loss_cycles": [],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "B",
+      "seed": "0xFABC0004",
+      "p99_cycles": 16.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 5408,
+        "id": 10,
+        "target": 0,
+        "qos": 15,
+        "t_present": 12540,
+        "t_addr_accept": 12556,
+        "t_first_resp": 12608,
+        "t_complete": 12609,
+        "opportunity_loss_cycles": [],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    },
+    {
+      "architecture": "B",
+      "seed": "0xFABC0005",
+      "p99_cycles": 16.0,
+      "representative_tx": {
+        "manager": 2,
+        "sequence": 12347,
+        "id": 3,
+        "target": 0,
+        "qos": 15,
+        "t_present": 29425,
+        "t_addr_accept": 29441,
+        "t_first_resp": 29493,
+        "t_complete": 29494,
+        "opportunity_loss_cycles": [],
+        "target_backpressure_event_cycles": {
+          "aw": [],
+          "ar": [],
+          "w": []
+        }
+      }
+    }
+  ],
+  "w08_aging_trace": [
+    {
+      "architecture": "B",
+      "seed": "0xFABC0001",
+      "manager": 0,
+      "sequence": 939,
+      "id": 9,
+      "target": 0,
+      "qos": 12,
+      "t_present": 10398,
+      "t_addr_accept": 10467,
+      "t_wlast_manager": 10468,
+      "t_first_resp": 10473,
+      "t_complete": 10473,
+      "max_pending_cycles": 69,
+      "opportunity_loss_cycles": [
+        10401,
+        10420,
+        10425,
+        10430,
+        10434,
+        10438,
+        10442,
+        10446,
+        10450,
+        10454,
+        10458,
+        10462
+      ],
+      "target_backpressure_event_cycles": {
+        "aw": [],
+        "ar": [],
+        "w": []
+      }
+    },
+    {
+      "architecture": "B",
+      "seed": "0xFABC0001",
+      "manager": 1,
+      "sequence": 970,
+      "id": 3,
+      "target": 0,
+      "qos": 0,
+      "t_present": 10402,
+      "t_addr_accept": 10471,
+      "t_wlast_manager": 10487,
+      "t_first_resp": 10492,
+      "t_complete": 10492,
+      "max_pending_cycles": 69,
+      "opportunity_loss_cycles": [
+        10420,
+        10425,
+        10430,
+        10434,
+        10438,
+        10442,
+        10446,
+        10450,
+        10454,
+        10458,
+        10462,
+        10467
+      ],
+      "target_backpressure_event_cycles": {
+        "aw": [],
+        "ar": [],
+        "w": []
+      }
+    }
+  ]
+}

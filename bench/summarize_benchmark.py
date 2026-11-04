@@ -51,7 +51,8 @@ def summarize_run(folder: Path) -> tuple[list[dict], dict]:
                                     for tx in txs if tx["manager"] == manager and
                                     tx["direction"] == direction)
             row = {
-                "workload": meta["workload"], "seed": meta["seed"], "manager": manager,
+                "architecture": meta["architecture"], "workload": meta["workload"],
+                "seed": meta["seed"], "manager": manager,
                 "direction": direction, "samples": len(sample), "measurement_cycles": window,
                 "admission_p50": nearest(admission, 50), "admission_p95": nearest(admission, 95),
                 "admission_p99": nearest(admission, 99), "admission_max": max(admission),
@@ -94,6 +95,11 @@ def summarize_run(folder: Path) -> tuple[list[dict], dict]:
     sum_sq = sum(x * x for x in rates)
     jain = (sum(rates) ** 2 / (3 * sum_sq)) if sum_sq else None
     detail = {
+        "architecture": meta["architecture"], "dut_top": meta["dut_top"],
+        "source_manifest_sha256": meta["source_manifest_sha256"],
+        "run_config_sha256": meta["run_config_sha256"],
+        "benchmark_driver_sha256": meta["benchmark_driver_sha256"],
+        "generator_sha256": meta["generator_sha256"],
         "workload": meta["workload"], "seed": meta["seed"],
         "workload_sha256": meta["workload_sha256"],
         "generator_version": meta["generator_version"],
@@ -101,8 +107,6 @@ def summarize_run(folder: Path) -> tuple[list[dict], dict]:
         "intent_sha256": meta["intent_sha256"],
         "transaction_trace_sha256": hashlib.sha256(
             (folder / "transactions.jsonl").read_bytes()).hexdigest(),
-        "benchmark_driver_sha256": meta["benchmark_driver_sha256"],
-        "generator_sha256": meta["generator_sha256"],
         "numpy_version": np.__version__, "percentile_method": "nearest",
         "measurement_start_cycle": start, "measurement_end_cycle": end,
         "measurement_cycles": window, "active_managers": meta["active_managers"],

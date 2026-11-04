@@ -1,9 +1,10 @@
 # Project State
 
-**Date:** 2026-11-03
-**Gate:** Architecture A remains verified at `kg-g3-a-verified`; Architecture B functional implementation and targeted scheduler verification PASS at the current B functional checkpoint. Gate-0/1/2/3-A tags remain protected and unchanged.
+**Date:** 2026-11-04
+**Gate:** Mission 4 A/B canonical benchmark and matched ECP5 comparison are complete at the reviewed comparison commit; Architecture B is rejected under frozen D045 criteria. Architecture A remains verified at `kg-g3-a-verified`; B functional verification remains valid at `kg-g3-b-functional`. Gate-0/1/2/3-A and B-functional tags remain protected and unchanged.
 **Gate 3:** Five frozen seeds pass at both 512 and 2,048 random operations. Integrated whole-DUT AW and AR fairness each pass with manager order `0 1 2 0 1 2 0 1 2`. Random live depth is two reads/two writes; D042 allocates four-outstanding proof to Gate-2 directed tests, which demonstrate four, fifth-request blocking and next-cycle recovery. The final coverage review distinguishes random observations from directed same-target, ordering and live-reset evidence. See `results/processed/gate3/summary.md`.
-**Architecture:** Architecture A RTL and Mission-2 measurements remain unchanged. B is implemented in B-specific top/path/scheduler modules and reuses unchanged common decode, outstanding/owner state, W datapath, response routers and S3. The B whole-DUT directed suite passes 444 checks; all five frozen 512- and 2,048-operation functional seeds pass; scheduler directed and bounded formal checks pass. D045 remains unchanged. Canonical B performance measurement, B P&R and the A/B comparison have not started.
+**Architecture:** Architecture A RTL is unchanged. B is implemented in B-specific top/path/scheduler modules and reuses the common decode, outstanding/owner state, W datapath, response routers and S3. The B whole-DUT directed suite passes 444 checks; all five frozen 512- and 2,048-operation functional seeds pass; scheduler directed and bounded formal checks pass. Mission 4 completed 70/70 canonical runs for each architecture and 55 matched ECP5 routes per architecture. B meets three D045 criteria and fails two (W08 M1 throughput and M0 write-admission P99); decision D047 is REJECT B under the frozen criteria. The B algorithm and D045 were not changed after measurement. See `results/processed/ab_comparison/summary.md`.
+**Public readiness:** README, processed comparison, four generated figures and evidence links are prepared. A fresh clean-clone reproduction has not been performed; the final public-readiness gate remains OPEN until that check is completed.
 
 ## What changed
 Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and pushed to `dilanj123/fabric-under-pressure`. The pinned OSS CAD Suite and Python environment were qualified on the physical Darwin/arm64 host. Gate-0 smoke sources/scripts were minimally repaired for the actual tool versions and the complete local driver passed. Public process-reference review remains against `dilanj123/from-rtl-to-pixels` commit `f32eb297fbe95530753673debd4739617529a84d`.
@@ -20,7 +21,7 @@ Prepared history was restored at `11501c9037b14ed60ae71c8782ff732cec7c97cb` and 
 ## Still unproven
 - exhaustive whole-Fabric formal proof and unrestricted AXI4 compliance;
 - recorded-target versus returned-target response-source matching because the shared state interface does not expose the required metadata;
-- Architecture-B canonical performance, resource comparison and routed timing; the measured synthetic endpoint does not represent a particular production memory/peripheral;
+- Production-memory/peripheral performance is not measured; the canonical endpoint is deterministic and synthetic.
 - general ECP5 timing signoff beyond the documented common-wrapper, fixed-seed method.
 
 ## Risks
@@ -52,4 +53,4 @@ The following phase-status bullets are retained as historical milestone descript
 - The S3 error target has independent one-context write/read sides. It consumes legal unmapped write bursts through WLAST before generating stable DECERR B, and emits exact zero-data DECERR read bursts with ARLEN+1 beats and final RLAST. Focused manager-to-S3-to-manager write and read lifecycle simulations and bounded endpoint formal checks pass. A repair also confirms legal WVALID-before-local-AW is backpressured without a false diagnostic; full four-target routing remains absent.
 
 ## Next smallest task
-Next: run the separately reviewed Architecture-B canonical benchmark and matched ECP5 comparison using the frozen driver, endpoint, wrapper, constraints, workloads, seeds and tools unchanged. Do not tune D045 or claim an A/B result until full matched measurements are complete.
+Mission 4 measurement and comparison is complete. Any future scheduler redesign requires a new named variant, fresh functional verification and a newly controlled experiment; do not revise D045 retrospectively. Architecture C, CDC and unrelated extensions remain out of scope.

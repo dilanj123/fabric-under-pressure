@@ -1,35 +1,62 @@
 #!/usr/bin/env bash
-set -u
+set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-OUT="${ARCH_A_PPA_OUT:-$ROOT/results/raw/arch_a_ppa_v1}"
+ARCH="${ARCH_PPA_ARCH:-A}"
+if [[ "$ARCH" == "A" ]]; then
+  DUT_TOP=axi_fabric_a
+  OUT_DEFAULT="$ROOT/results/raw/arch_a_ppa_v1"
+  rtl=(
+    rtl/fabric_addr_map_pkg.sv rtl/axi_address_decoder.sv rtl/axi_request_legal.sv
+    rtl/axi_outstanding_tracker.sv rtl/axi_write_owner.sv rtl/axi_write_state_bank.sv
+    rtl/axi_read_state_bank.sv rtl/axi_rr_arbiter_3.sv rtl/axi_rr_arbiter_4.sv
+    rtl/axi_aw_target_scheduler_a.sv rtl/axi_aw_target_path_a.sv
+    rtl/axi_ar_target_scheduler_a.sv rtl/axi_ar_target_path_a.sv rtl/axi_w_target_path.sv
+    rtl/axi_b_response_router.sv rtl/axi_r_response_router.sv rtl/axi_s3_error_target.sv
+    rtl/axi_fabric_a.sv
+  )
+elif [[ "$ARCH" == "B" ]]; then
+  DUT_TOP=axi_fabric_b
+  OUT_DEFAULT="$ROOT/results/raw/arch_b_ppa_v1"
+  rtl=(
+    rtl/fabric_addr_map_pkg.sv rtl/axi_address_decoder.sv rtl/axi_request_legal.sv
+    rtl/axi_outstanding_tracker.sv rtl/axi_write_owner.sv rtl/axi_write_state_bank.sv
+    rtl/axi_read_state_bank.sv rtl/axi_rr_arbiter_3.sv rtl/axi_rr_arbiter_4.sv
+    rtl/axi_qos_aging_arbiter_3.sv rtl/axi_aw_target_scheduler_b.sv
+    rtl/axi_aw_target_path_b.sv rtl/axi_ar_target_scheduler_b.sv
+    rtl/axi_ar_target_path_b.sv rtl/axi_w_target_path.sv rtl/axi_b_response_router.sv
+    rtl/axi_r_response_router.sv rtl/axi_s3_error_target.sv rtl/axi_fabric_b.sv
+  )
+else
+  echo "ARCH_PPA_ARCH must be A or B" >&2
+  exit 2
+fi
+OUT="${ARCH_A_PPA_OUT:-$OUT_DEFAULT}"
 mkdir -p "$OUT/direct" "$OUT/wrapped/routes"
 source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
 
-rtl=(
-  rtl/fabric_addr_map_pkg.sv rtl/axi_address_decoder.sv rtl/axi_request_legal.sv
-  rtl/axi_outstanding_tracker.sv rtl/axi_write_owner.sv rtl/axi_write_state_bank.sv
-  rtl/axi_read_state_bank.sv rtl/axi_rr_arbiter_3.sv rtl/axi_rr_arbiter_4.sv
-  rtl/axi_aw_target_scheduler_a.sv rtl/axi_aw_target_path_a.sv
-  rtl/axi_ar_target_scheduler_a.sv rtl/axi_ar_target_path_a.sv rtl/axi_w_target_path.sv
-  rtl/axi_b_response_router.sv rtl/axi_r_response_router.sv rtl/axi_s3_error_target.sv
-  rtl/axi_fabric_a.sv
-)
 read_cmd="read_verilog -sv"
+wrapper_read="read_verilog -sv"
+if [[ "$ARCH" == "B" ]]; then
+  read_cmd+=" -DARCHITECTURE_B"
+  wrapper_read+=" -DARCHITECTURE_B"
+fi
 for file in "${rtl[@]}"; do read_cmd+=" $ROOT/$file"; done
 
+printf 'architecture=%s\ndut_top=%s\n' "$ARCH" "$DUT_TOP" > "$OUT/run_config.txt"
 yosys -V > "$OUT/tool_versions.txt"
 nextpnr-ecp5 --version >> "$OUT/tool_versions.txt" 2>&1
 ecppack --version >> "$OUT/tool_versions.txt" 2>&1 || true
 sha256sum "$ROOT/bench/arch_fabric_wrapper.sv" "$ROOT/scripts/run_arch_a_ppa.sh" \
-  "${rtl[@]/#/$ROOT/}" > "$OUT/source_hashes.txt"
+  "$ROOT/bench/workloads.yaml" "$ROOT/bench/benchmark_plan.py" \
+  "$ROOT/tb/cocotb/test_axi_fabric_a_benchmark.py" "${rtl[@]/#/$ROOT/}" > "$OUT/source_hashes.txt"
 
 echo "synth direct Fabric"
-yosys -Q -p "$read_cmd; synth_ecp5 -top axi_fabric_a -json $OUT/direct/axi_fabric_a.json; stat" \
+yosys -Q -p "$read_cmd; synth_ecp5 -top $DUT_TOP -json $OUT/direct/$DUT_TOP.json; stat" \
   > "$OUT/direct/yosys.log" 2>&1 || { echo "direct synthesis failed; see $OUT/direct/yosys.log"; exit 1; }
 
 echo "synth common wrapper"
-yosys -Q -p "$read_cmd; read_verilog -sv $ROOT/bench/arch_fabric_wrapper.sv; synth_ecp5 -top arch_fabric_wrapper -json $OUT/wrapped/arch_fabric_wrapper.json; stat" \
+yosys -Q -p "$read_cmd; $wrapper_read $ROOT/bench/arch_fabric_wrapper.sv; synth_ecp5 -top arch_fabric_wrapper -json $OUT/wrapped/arch_fabric_wrapper.json; stat" \
   > "$OUT/wrapped/yosys.log" 2>&1 || { echo "wrapper synthesis failed; see $OUT/wrapped/yosys.log"; exit 1; }
 
 if [[ "${ARCH_A_PPA_ONLY_SYNTH:-0}" == 1 ]]; then

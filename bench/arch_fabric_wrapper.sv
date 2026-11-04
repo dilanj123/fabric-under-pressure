@@ -154,5 +154,9 @@ module arch_fabric_wrapper (
     signature_o <= signature;
   end
 
+`ifdef ARCHITECTURE_B
+  (* keep_hierarchy *) axi_fabric_b u_fabric (.*);
+`else
   (* keep_hierarchy *) axi_fabric_a u_fabric (.*);
+`endif
 endmodule

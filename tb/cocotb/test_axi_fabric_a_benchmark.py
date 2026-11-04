@@ -236,15 +236,24 @@ def tx_record(tx: Transaction, end_cycle: int, warmup: int,
 
 
 @cocotb.test()
-async def architecture_a_canonical_benchmark(dut):
+async def architecture_canonical_benchmark(dut):
     workload = os.environ["ARCH_BENCH_WORKLOAD"]
     seed = int(os.environ["ARCH_BENCH_SEED"], 0)
+    architecture = os.environ.get("ARCH_BENCH_ARCH", "A")
+    dut_top = os.environ.get("ARCH_BENCH_TOP", f"axi_fabric_{architecture.lower()}")
+    if architecture not in ("A", "B") or getattr(dut, "_name", None) != dut_top:
+        raise AssertionError(
+            f"benchmark DUT mismatch: architecture={architecture} expected_top={dut_top} "
+            f"actual_top={getattr(dut, '_name', None)}")
     qualification = os.environ.get("ARCH_BENCH_QUALIFICATION", "0") == "1"
     warmup = int(os.environ.get("ARCH_BENCH_WARMUP", "500"))
     samples = int(os.environ.get("ARCH_BENCH_SAMPLES", "5000"))
     intent_limit = int(os.environ.get("ARCH_BENCH_INTENTS_PER_MANAGER", "50000"))
     out = Path(os.environ["ARCH_BENCH_OUT"])
     out.mkdir(parents=True, exist_ok=True)
+    run_config = json.loads((out / "run_config.json").read_text())
+    run_config_sha = hashlib.sha256((out / "run_config.json").read_bytes()).hexdigest()
+    source_manifest_sha = run_config["source_manifest_sha256"]
     intents = make_intents(workload, seed, per_manager=intent_limit)
     validate_intents(intents)
     active = sorted({x.manager for x in intents})
@@ -730,7 +739,10 @@ async def architecture_a_canonical_benchmark(dut):
     event_file.flush()
     event_file.close()
     metadata = {
-        "architecture": "A", "workload": workload, "seed": f"0x{seed:08X}",
+        "architecture": architecture, "dut_top": dut_top,
+        "source_manifest_sha256": source_manifest_sha,
+        "run_config_sha256": run_config_sha,
+        "workload": workload, "seed": f"0x{seed:08X}",
         "workload_sha256": WORKLOAD_SHA256, "generator_version": GENERATOR_VERSION,
         "intent_sha256": intent_digest(intents), "intent_count": len(intents),
         "benchmark_driver_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

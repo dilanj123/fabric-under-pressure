@@ -1,0 +1,33 @@
+[
+  {
+    "criterion": "W08 M2 read admission P99 <= 16 cycles",
+    "value": 16.0,
+    "result": "PASS"
+  },
+  {
+    "criterion": "W08 M1 read+write throughput >= 10.07665 bytes/cycle",
+    "value": 6.340714321097736,
+    "A_bytes_per_cycle": 10.606859283571204,
+    "B_bytes_per_cycle": 6.340714321097736,
+    "B_over_A_ratio": 0.5977937626568468,
+    "result": "FAIL"
+  },
+  {
+    "criterion": "W08 M0 read admission P99 <= 23 cycles",
+    "value": 17.0,
+    "A_value": 21.0,
+    "result": "PASS"
+  },
+  {
+    "criterion": "W08 M0 write admission P99 <= 29 cycles",
+    "value": 69.0,
+    "A_value": 27.0,
+    "result": "FAIL"
+  },
+  {
+    "criterion": "W12 median Jain grant-rate index >= 0.98",
+    "value": 0.999999973333334,
+    "A_median": 0.999999973333334,
+    "result": "PASS"
+  }
+]
