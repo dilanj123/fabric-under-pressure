@@ -1,0 +1,42 @@
+{
+  "device": "LFE5U-45F",
+  "package": "CABGA381",
+  "speed_grade": 6,
+  "route_attempts_per_architecture": {
+    "A": 55,
+    "B": 55
+  },
+  "all_seed_timing_clean_target_mhz": {
+    "A": 60,
+    "B": 55
+  },
+  "direct_fabric_synthesis": {
+    "A": {
+      "CCU2C": 288,
+      "LUT4": 5046,
+      "PFUMX": 807,
+      "TRELLIS_FF": 1219
+    },
+    "B": {
+      "CCU2C": 421,
+      "LUT4": 5730,
+      "PFUMX": 835,
+      "TRELLIS_FF": 1426
+    }
+  },
+  "wrapper_synthesis": {
+    "A": {
+      "CCU2C": 291,
+      "LUT4": 5226,
+      "PFUMX": 816,
+      "TRELLIS_FF": 1649
+    },
+    "B": {
+      "CCU2C": 408,
+      "LUT4": 5826,
+      "PFUMX": 818,
+      "TRELLIS_FF": 1856
+    }
+  },
+  "route_csv": "ppa_route_comparison.csv"
+}

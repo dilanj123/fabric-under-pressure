@@ -304,3 +304,12 @@ This closes the hand-written directed integration pass only. The independent Pyt
 | AB-003 | SYNTH/PNR | Direct and common-wrapper ECP5 synthesis plus 55 fixed/refined route attempts per architecture use identical final wrapper, tool flow, device and seeds | `results/raw/arch_a_ppa_matched_v1/`, `arch_b_ppa_matched_v1/`; summaries `ppa_summary.json`, `route_summary.csv` | PASS for comparative method; all-seed timing-clean targets A 60 MHz, B 55 MHz; not timing signoff |
 | AB-004 | VISUAL | Four figures regenerate from processed benchmark and PPA results | `results/processed/ab_comparison/figures/` and `bench/plot_ab_comparison.py` | PASS; generated from CSV/JSON |
 | AB-005 | REPRO/DECISION | D045 is evaluated without tuning and limitations are documented | `results/processed/ab_comparison/summary.md`, D047, `README.md` | REJECT B under frozen criteria; no B algorithm change |
+
+## Gate-5 clean-clone public-readiness reproduction
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| G5-001 | REPRO/SIM | Fresh public clone at `3f70eb616fddcd2fcb48a96b340f61f4baba2c85` recreated the Python environment and passed A/B directed tests, B scheduler/formal checks, 30 Python tests and six-scenario A/B qualifications | `results/processed/gate5_reproduction/summary.md`; fresh raw outputs retained in the clone at `/tmp/fabric-under-pressure-g5-reproduction/results/raw/gate5/` | PASS on same qualified host; bounded formal only |
+| G5-002 | BENCH/REPRO | Fresh A and B canonical runs each pass 70/70 workload/seed pairs with 500 warm-up and 5,000 measured completions per active manager; paired intent hashes match 70/70 and processed per-seed/median tables match published values | `results/processed/gate5_reproduction/ab_comparison/` and summary | PASS; synthetic endpoint/frozen workloads |
+| G5-003 | PPA/REPRO | Fresh A/B ECP5 sweeps each contain 55 attempts and reproduce direct/wrapper resources and all-seed timing-clean targets A 60 MHz, B 55 MHz | fresh comparison JSON/CSV and `results/processed/gate5_reproduction/summary.md` | PASS for the frozen wrapper/flow; not timing signoff |
+| G5-004 | DECISION/VISUAL | Fresh D045 values and all four figures reproduce; D047 remains REJECT B. The historical A simulation manifest's wrapper hash differs, so A was rerun from the committed common-wrapper source; numeric tables match exactly | `results/processed/gate5_reproduction/ab_comparison/`, `figures/`, summary | PASS; metadata nuance disclosed; no post-result tuning |

@@ -606,10 +606,9 @@ If any item above is unchecked, defer C.
 - [x] exact reproduction commands and tool versions documented in evidence.
 - [x] limitations and source provenance documented.
 - [x] evidence index maps major public claims.
-- [ ] fresh clean-clone reproduction completed.
-- [ ] fresh clean-clone reproduction completed.
-- [ ] known-good public commit/tag recorded.
-- [ ] no raw claim exceeds evidence.
+- [x] fresh clean-clone reproduction completed (70 A + 70 B simulations and 55 routes/architecture; same qualified host).
+- [x] known-good public commit/tag recorded after Gate-5 closure.
+- [x] no raw claim exceeds evidence.
 
 ---
 

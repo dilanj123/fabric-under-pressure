@@ -116,7 +116,7 @@ ARCH_PPA_ARCH=B ARCH_A_PPA_OUT=results/raw/arch_b_ppa_matched_v1 ./scripts/run_a
 
 PPA commands execute the frozen 55-route sweep per architecture. Tool versions, source manifests, plan hashes, JUnit files and raw event logs are preserved under `results/raw/` on the measurement host. The compact processed comparison is in [`results/processed/ab_comparison/summary.md`](results/processed/ab_comparison/summary.md).
 
-The full matrices and reports were reproduced from the qualified project checkout. A separate fresh-clone reproduction has not been completed, so the public-readiness checklist remains open on that item.
+The complete A/B matrices, D045 evaluation, 55-route-per-architecture ECP5 sweeps and four figures were reproduced from a fresh clone at the reviewed comparison commit. The run used the qualified Apple-Silicon host and its shared, digest-pinned OSS CAD Suite; it is a clean-source reproduction, not independent-hardware validation. The reproduction record and compact outputs are in [`results/processed/gate5_reproduction/summary.md`](results/processed/gate5_reproduction/summary.md).
 
 ## Decision and limits
 
