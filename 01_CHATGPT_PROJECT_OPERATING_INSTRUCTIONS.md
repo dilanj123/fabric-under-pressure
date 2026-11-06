@@ -530,4 +530,4 @@ This keeps reasoning auditable and prevents accidental overclaiming.
 
 The next action after importing this planning pack is **Phase 0**, not RTL feature implementation.
 
-Run `02_PHASE0_BOOTSTRAP_TASK.md` and close its conditions. Then create/freeze the detailed repository docs required by Gate 1 before starting Architecture A.
+Historical Gate-0 setup instruction (completed): the original task is retained at [`docs/history/02_PHASE0_BOOTSTRAP_TASK.md`](docs/history/02_PHASE0_BOOTSTRAP_TASK.md). For current implementation and verification status, follow [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and the current task rather than repeating bootstrap.

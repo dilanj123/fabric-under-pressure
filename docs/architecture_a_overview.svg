@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="t d">
-<title id="t">Fabric Under Pressure Architecture A overview</title>
-<desc id="d">Three AXI manager ports connect through request legality, decoding, round robin arbitration, outstanding state and response paths to four logical targets.</desc>
+<title id="t">Historical Gate-1 planning diagram for Fabric Under Pressure Architecture A</title>
+<desc id="d">Historical 2026-09-20 proposal, before whole-Fabric integration. Amber and dashed blocks describe planned boundaries at that milestone, not current implementation status.</desc>
 <defs>
  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker>
  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#15803d"/></marker>
@@ -10,8 +10,8 @@
  </style>
 </defs>
 <rect width="1500" height="900" fill="#fff"/>
-<text x="60" y="52" class="h">Fabric Under Pressure — Architecture A overview</text>
-<text x="60" y="80" class="sm">Deterministic 3-manager / 4-target AXI4-subset interconnect • green = verified standalone • amber = planned integration</text>
+<text x="60" y="52" class="h">Historical Gate-1 plan — Architecture A decomposition</text>
+<text x="60" y="80" class="sm">2026-09-20 planning snapshot • amber blocks and dashed paths were planned integration at this milestone</text>
 <text x="60" y="125" class="s">MANAGER PORTS</text>
 <rect x="60" y="150" width="220" height="105" rx="12" class="mgr"/><text x="84" y="182" class="bt">M0 AXI manager</text><text x="84" y="208" class="tx">64-bit data • 32-bit address</text><text x="84" y="231" class="tx">4-bit manager ID</text>
 <rect x="60" y="285" width="220" height="105" rx="12" class="mgr"/><text x="84" y="317" class="bt">M1 AXI manager</text><text x="84" y="343" class="tx">independent AW/W and AR/R</text><text x="84" y="366" class="tx">backpressure on every channel</text>

@@ -1,6 +1,6 @@
 # Verification Plan
 
-**Status:** Gate-1 contract frozen; Gate-2 and Architecture-A Gate-3 PASS; Architecture-B functional implementation and targeted scheduler verification PASS. Canonical B benchmarking and the A/B comparison remain open. A evidence remains at `results/processed/gate3/summary.md`; B functional evidence is summarized at `results/processed/architecture_b_functional/summary.md`.
+**Status:** Gate-1 contract remains frozen. Gate-2, Architecture-A Gate-3, Architecture-B functional verification, the matched A/B comparison and Gate-5 clean-clone reproduction are complete. D047 rejects B under frozen D045 criteria. Current evidence is indexed in [`EVIDENCE_INDEX.md`](EVIDENCE_INDEX.md); limitations remain documented in [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).
 
 ### Gate-3 randomized and directed qualification
 
@@ -44,7 +44,9 @@ Every discovered functional bug gains a regression test before the fix is consid
 ## Phase-0 note
 `cocotbext-axi` may be used as verification-only stimulus after the compatibility smoke passes; it is never the sole oracle.
 
-## Gate-1 traceability matrix
+## Gate-1 traceability matrix (planning allocation)
+
+> This matrix records how requirements were allocated before implementation. Statements such as “planned,” “future work” and “remains absent” describe that original planning stage, not current status. Completed integration and current limitations are recorded in the Gate-3/B sections above, `docs/PROJECT_STATE.md` and `docs/KNOWN_LIMITATIONS.md`.
 
 | Requirement | Directed checks | Random/formal checks | Planned implementation block |
 |---|---|---|---|

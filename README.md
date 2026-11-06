@@ -101,6 +101,22 @@ The recorded implementation toolchain is Yosys 0.69+75, nextpnr-ecp5 0.11.1-30-g
 
 ## Reproduction
 
+### Source map
+
+| Area | Contents |
+|---|---|
+| [`rtl/`](rtl/) | Architecture A/B Fabric and shared channel, tracking, decode and response modules |
+| [`tb/directed/`](tb/directed/) | Whole-DUT and focused SystemVerilog checks |
+| [`tb/cocotb/`](tb/cocotb/) | Oracle-connected random qualification and benchmark driver |
+| [`tb/model/`](tb/model/) | Independent endpoint and transaction reference models |
+| [`formal/`](formal/) | Bounded properties, assumptions and cover harnesses |
+| [`bench/`](bench/) | Frozen workloads and measurement/analysis scripts |
+| [`scripts/`](scripts/) | Reproduction, regression, synthesis and route entry points |
+| [`docs/`](docs/) | Requirements, decisions, methods, limitations and evidence index |
+| [`results/processed/`](results/processed/) | Reviewed summaries and data-derived figures |
+
+One-time setup prompts are retained under [`docs/history/`](docs/history/) for provenance; they are not current project instructions.
+
 On the qualified macOS Apple-Silicon host with the pinned OSS CAD Suite and Python environment:
 
 ```bash
@@ -122,4 +138,4 @@ The complete A/B matrices, D045 evaluation, 55-route-per-architecture ECP5 sweep
 
 D047 records **REJECT B under the frozen D045 criteria**: two required criteria fail materially. The policy's M2 benefit is real, but the DMA throughput and M0 write-tail costs violate the predeclared limits. The algorithm and hypothesis were not tuned after seeing results.
 
-The project is original RTL and project-authored verification; external tools are listed in the environment/evidence documentation. No third-party Fabric logic is imported. The model does not establish unrestricted AXI4 compliance, production-memory latency, exhaustive whole-Fabric formal proof, board-level timing signoff, or a universal performance result. Architecture B remains a measured experimental variant; Architecture C, CDC, and any future B redesign are outside this comparison.
+Fabric RTL and verification were developed with ChatGPT/Codex assistance; the repository retains the original setup prompts and task history under [`docs/history/`](docs/history/). No third-party Fabric logic is imported. The model does not establish unrestricted AXI4 compliance, production-memory latency, exhaustive whole-Fabric formal proof, board-level timing signoff, or a universal performance result. Architecture B remains a measured experimental variant; Architecture C, CDC, and any future B redesign are outside this comparison.

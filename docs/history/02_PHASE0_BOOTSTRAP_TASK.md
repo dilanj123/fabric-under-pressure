@@ -1,4 +1,6 @@
-# FABRIC Phase 0 Bootstrap Task
+# FABRIC Phase 0 Bootstrap Task (Historical)
+
+> Completed one-time setup instructions from September 2026. Retained as project history; do not rerun as the current project task. Current status: [`../PROJECT_STATE.md`](../PROJECT_STATE.md).
 
 **Task type:** environment/reference/reproducibility bootstrap  
 **RTL feature implementation:** prohibited  

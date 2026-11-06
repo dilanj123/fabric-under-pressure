@@ -1,6 +1,6 @@
 # Evidence Index
 
-## Architecture-B functional qualification
+## Architecture-B functional qualification (status at functional checkpoint; later comparison indexed below)
 
 | ID | Class | Claim | Evidence | Status |
 |---|---|---|---|---|
@@ -11,7 +11,7 @@
 | B-E005 | SIM | Five frozen functional seeds pass at 512 operations | `results/raw/gate3_random_b_512/`, `results/processed/architecture_b_functional/seed_results.csv` | PASS; all five XML results checked |
 | B-E006 | SIM | Five frozen functional seeds pass at 2,048 operations | `results/raw/gate3_random_b_2048/`, `results/processed/architecture_b_functional/seed_results.csv` | PASS; all five XML results checked |
 | B-E007 | LINT/SYNTH | B top lints and direct ECP5 synthesis completes | `results/raw/fabric_b_directed/lint.log`, `results/raw/architecture_b_scheduler/yosys_synth.log.gz` | PASS; feasibility only, no routed timing or A/B PPA claim |
-| B-E008 | REPRO | B implementation boundary and verification allocation are documented | `results/processed/architecture_b_functional/summary.md`, D046 | PASS; D045 remains unchanged; canonical B benchmark remains open |
+| B-E008 | REPRO | B implementation boundary and verification allocation are documented | `results/processed/architecture_b_functional/summary.md`, D046 | Historical status at B-functional qualification; canonical comparison subsequently completed under AB-001–AB-005 and D047 |
 
 Architecture-B's random maximum outstanding depth is two reads and two writes. Four-outstanding, same-ID, reordering and live-reset behaviors are supported by B whole-DUT directed/oracle evidence and must not be represented as randomized observations.
 
@@ -197,7 +197,7 @@ The initial B-router functional entries above are retained as historical evidenc
 | R-E004 | FORMAL | focused R lifecycle covers first admission, locked slot, locked-target gap, manager completion and concurrent manager admissions | `results/raw/r_response_router/formal_cover/logfile.txt` | PASS; Yices via SBY bounded cover depth 32 |
 | R-E005 | SYNTH | focused registered R response router completes ECP5-targeted Yosys synthesis | `results/raw/r_response_router/yosys_r_router_synth.log`, `results/processed/r_response_router/summary.md` | PASS; 1,786 LUT4, 284 TRELLIS_FF, 353 PFUMX, 102 L6MUX21; primitive/path evidence only, no Fabric PPA claim |
 
-The R evidence is scoped to the common response router and focused AR/R lifecycle composition. Recorded-target versus returned-target matching is not implemented because the current shared read-state bank does not expose the required table. S3 response generation and full four-target production integration remain future work.
+The R evidence in this historical section is scoped to the common response router and focused AR/R lifecycle composition. At that milestone, recorded-target versus returned-target matching and full four-target production integration were still open. Later Gate-3 whole-DUT evidence is indexed below; this paragraph is retained as an as-of note, not current status.
 
 ## S3 error-target evidence
 

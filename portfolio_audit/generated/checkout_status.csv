@@ -1,0 +1,28 @@
+porcelain_status,path_or_rename
+M ,00_MASTER_PROJECT_PLAN.md
+M ,01_CHATGPT_PROJECT_OPERATING_INSTRUCTIONS.md
+M ,README.md
+M ,docs/EVIDENCE_INDEX.md
+M ,docs/MICROARCHITECTURE.md
+M ,docs/REQUIREMENTS.md
+M ,docs/TRADEOFFS.md
+M ,docs/VERIFICATION_PLAN.md
+M ,docs/architecture_a_overview.md
+M ,docs/architecture_a_overview.svg
+R ,02_PHASE0_BOOTSTRAP_TASK.md -> docs/history/02_PHASE0_BOOTSTRAP_TASK.md
+R ,03_START_NEW_CHATGPT_PROJECT.md -> docs/history/03_START_NEW_CHATGPT_PROJECT.md
+R ,MASTER_CHATGPT_HANDOFF_PROMPT.md -> docs/history/MASTER_CHATGPT_HANDOFF_PROMPT.md
+A ,portfolio_audit/__init__.py
+AM,portfolio_audit/audit_findings.md
+AM,portfolio_audit/build_register.py
+A ,portfolio_audit/claim_evidence_matrix.csv
+A ,portfolio_audit/frozen_baseline.json
+A ,portfolio_audit/generated/baseline_worktree_differences.csv
+AM,portfolio_audit/generated/checkout_status.csv
+A ,portfolio_audit/generated/duplicate_groups.csv
+A ,portfolio_audit/generated/raw_artifact_audit.csv
+A ,portfolio_audit/generated/sensitive_pattern_scan.csv
+AM,portfolio_audit/generated/tracked_file_audit.csv
+A ,portfolio_audit/independent_review_pr1.md
+A ,portfolio_audit/plan_review.md
+A ,portfolio_audit/test_build_register.py
