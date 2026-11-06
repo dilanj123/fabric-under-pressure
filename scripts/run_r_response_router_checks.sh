@@ -11,7 +11,7 @@ for path in sys.argv[1:]:
 PY
 mkdir -p "$OUT" "$BUILD/router" "$BUILD/burst" "$BUILD/lifecycle"
 
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 {
   echo "commit=$(git -C "$ROOT" rev-parse HEAD)"
   verilator --version

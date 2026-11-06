@@ -117,7 +117,13 @@ The recorded implementation toolchain is Yosys 0.69+75, nextpnr-ecp5 0.11.1-30-g
 
 One-time setup prompts are retained under [`docs/history/`](docs/history/) for provenance; they are not current project instructions.
 
-On the qualified macOS Apple-Silicon host with the pinned OSS CAD Suite and Python environment:
+The shell runners source [`scripts/oss_cad_env.sh`](scripts/oss_cad_env.sh). They require OSS CAD Suite release `20260920`, defaulting to `~/eda/fabric-under-pressure/oss-cad-suite`, and fail instead of silently selecting another installed Verilator/Yosys/SBY/nextpnr. To use the same release from another location, set the root explicitly:
+
+```bash
+export OSS_CAD_SUITE_ROOT=/path/to/oss-cad-suite
+```
+
+Run from the repository root on the qualified macOS Apple-Silicon host with the pinned Python environment:
 
 ```bash
 ARCH_BENCH_OUT_ROOT=results/raw/arch_a_matched_v2 ./scripts/run_arch_a_benchmark.sh

@@ -33,7 +33,7 @@ else
 fi
 OUT="${ARCH_A_PPA_OUT:-$OUT_DEFAULT}"
 mkdir -p "$OUT/direct" "$OUT/wrapped/routes"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 
 read_cmd="read_verilog -sv"
 wrapper_read="read_verilog -sv"

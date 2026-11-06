@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT_DIR}/scripts/oss_cad_env.sh"
 OUT="$ROOT_DIR/results/raw/fabric_b_directed"
 mkdir -p "$OUT"
 RTL=(

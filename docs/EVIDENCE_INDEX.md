@@ -313,3 +313,10 @@ This closes the hand-written directed integration pass only. The independent Pyt
 | G5-002 | BENCH/REPRO | Fresh A and B canonical runs each pass 70/70 workload/seed pairs with 500 warm-up and 5,000 measured completions per active manager; paired intent hashes match 70/70 and processed per-seed/median tables match published values | `results/processed/gate5_reproduction/ab_comparison/` and summary | PASS; synthetic endpoint/frozen workloads |
 | G5-003 | PPA/REPRO | Fresh A/B ECP5 sweeps each contain 55 attempts and reproduce direct/wrapper resources and all-seed timing-clean targets A 60 MHz, B 55 MHz | fresh comparison JSON/CSV and `results/processed/gate5_reproduction/summary.md` | PASS for the frozen wrapper/flow; not timing signoff |
 | G5-004 | DECISION/VISUAL | Fresh D045 values and all four figures reproduce; D047 remains REJECT B. The historical A simulation manifest's wrapper hash differs, so A was rerun from the committed common-wrapper source; numeric tables match exactly | `results/processed/gate5_reproduction/ab_comparison/`, `figures/`, summary | PASS; metadata nuance disclosed; no post-result tuning |
+
+## Repository audit and runner portability
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| AUD-001 | AUDIT | Gate-5 baseline file, raw-artifact, duplicate and claim/evidence inventories were produced; 1,110 tracked files and 827 raw files reviewed | `portfolio_audit/audit_findings.md`, `generated/` | PASS; duplicate raw evidence retained because no durable external archive was available |
+| TOOL-001 | REPRO | Shell regressions select and version-check OSS CAD Suite 20260920 through a configurable installation root | `scripts/oss_cad_env.sh`, `portfolio_audit/pr2_tooling.md`, `portfolio_audit/tooling_script_hashes.csv` | PASS; A/B directed, Gate-2, integration, formal and six-workload-per-architecture qualification commands completed |

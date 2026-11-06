@@ -1,0 +1,152 @@
+{
+  "architecture": "B",
+  "dut_top": "axi_fabric_b",
+  "source_manifest_sha256": "fb33d7011100f051b629313e802df7c0b8212e5427c341ca92de4822a32d3a0d",
+  "run_config_sha256": "012526fa92cd51a539ede8296bd6ed3da44940b810fa93a76ac5270d80276c44",
+  "workload": "W13",
+  "seed": "0xFABC0001",
+  "workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+  "generator_version": "arch-bench-xorshift32-v1-round-robin-manager-draws",
+  "intent_sha256": "9516661f36a57bf098630496652b8f010280fd9333c63468e596edc00299cf4a",
+  "intent_count": 150000,
+  "benchmark_driver_sha256": "6d243fe801557d0d97ee273a9dd5f52d42acfd24c7ecc794d34e4e1d080d0e7f",
+  "generator_sha256": "d017c80afe6fcaff0b5032e2e5a4da02a12b6ef6990f357ec26e7c32cb653453",
+  "simulator_python": "3.11.6",
+  "active_managers": [
+    0,
+    1,
+    2
+  ],
+  "warmup_per_manager": 25,
+  "retained_completions_per_manager": 75,
+  "completion_count_by_manager": [
+    100,
+    218,
+    395
+  ],
+  "premeasurement_completions_by_manager": [
+    25,
+    50,
+    97
+  ],
+  "measured_count_by_manager": [
+    75,
+    75,
+    75
+  ],
+  "measurement_start_cycle": 477,
+  "measurement_end_cycle": 1968,
+  "measurement_cycles": 1492,
+  "drain_end_cycle": 2038,
+  "max_pending_wait_cycles": {
+    "0": {
+      "read": 3,
+      "write": 12
+    },
+    "1": {
+      "read": 1,
+      "write": 18
+    },
+    "2": {
+      "read": 2,
+      "write": 4
+    }
+  },
+  "address_grants": {
+    "aw": [
+      46,
+      105,
+      192
+    ],
+    "ar": [
+      54,
+      113,
+      203
+    ]
+  },
+  "lost_service_opportunities": {
+    "aw": 20,
+    "ar": 21
+  },
+  "max_live_reads_by_manager": [
+    1,
+    4,
+    4
+  ],
+  "max_live_writes_by_manager": [
+    1,
+    2,
+    2
+  ],
+  "target_stall_cycles_by_target": {
+    "aw": [
+      0,
+      0,
+      0
+    ],
+    "ar": [
+      0,
+      0,
+      0
+    ],
+    "w": [
+      0,
+      0,
+      0
+    ]
+  },
+  "target_stall_episodes_by_target": {
+    "aw": [
+      0,
+      0,
+      0
+    ],
+    "ar": [
+      0,
+      0,
+      0
+    ],
+    "w": [
+      0,
+      0,
+      0
+    ]
+  },
+  "manager_stall_cycles_by_manager": {
+    "b": [
+      0,
+      0,
+      0
+    ],
+    "r": [
+      0,
+      0,
+      0
+    ]
+  },
+  "manager_stall_episodes_by_manager": {
+    "b": [
+      0,
+      0,
+      0
+    ],
+    "r": [
+      0,
+      0,
+      0
+    ]
+  },
+  "parallel_target_address_cycles": 58,
+  "all_manager_active_cycles": 732,
+  "endpoint_max_write_depth": [
+    2,
+    2,
+    0
+  ],
+  "endpoint_max_read_depth": [
+    3,
+    4,
+    0
+  ],
+  "qualification_only": true
+}

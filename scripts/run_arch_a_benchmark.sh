@@ -3,17 +3,17 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 export PYTHONPATH="$ROOT/bench:$ROOT/tb/model:$ROOT/tb/cocotb${PYTHONPATH:+:$PYTHONPATH}"
 export ROOT
 export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
-export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
-export DYLD_LIBRARY_PATH="/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find "${OSS_CAD_SUITE_LIB}" -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
+export DYLD_LIBRARY_PATH="${OSS_CAD_SUITE_LIB}${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
 
 OUT="${ARCH_BENCH_OUT_ROOT:-$ROOT/results/raw/arch_a_qualification}"
 mkdir -p "$OUT"
 OUT="$(cd "$OUT" && pwd)"
-ln -sfn "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib" "$OUT/lib"
+ln -sfn "${OSS_CAD_SUITE_LIB}" "$OUT/lib"
 export ARCH_BENCH_OUT_ROOT="$OUT"
 ARCH="${ARCH_BENCH_ARCH:-A}"
 if [[ "$ARCH" == "A" ]]; then

@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 GIT_COMMIT="$(git rev-parse HEAD)"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 OUT="$ROOT/results/raw/gate2_oracle"
 mkdir -p "$OUT"
 export PYTHONPATH="$ROOT/tb/model${PYTHONPATH:+:$PYTHONPATH}"
@@ -14,7 +14,7 @@ export COCOTB_RANDOM_SEED="${COCOTB_RANDOM_SEED:-0xA0C20001}"
 # Verilator's macOS launcher loads Python dynamically.  Keep the qualified
 # OSS CAD Suite Python library visible to the generated executable.
 if [ -z "${LIBPYTHON_LOC:-}" ]; then
-  suite_root="/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite"
+  suite_root="$OSS_CAD_SUITE_ROOT"
   libpython="$(find "$suite_root/lib" -maxdepth 1 -name 'libpython*.dylib' -print -quit 2>/dev/null)"
   [ -n "$libpython" ] && export LIBPYTHON_LOC="$libpython"
   export DYLD_LIBRARY_PATH="$suite_root/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
@@ -22,7 +22,7 @@ fi
 # The bundled libpython uses @executable_path/../lib for its gettext
 # dependency.  The cocotb executable lives below OUT/work, so expose the
 # suite library directory at the corresponding runtime-relative location.
-ln -sfn "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib" "$OUT/lib"
+ln -sfn "${OSS_CAD_SUITE_LIB}" "$OUT/lib"
 {
   echo "git_commit=$GIT_COMMIT"
   echo "functional_seed=$COCOTB_RANDOM_SEED"
