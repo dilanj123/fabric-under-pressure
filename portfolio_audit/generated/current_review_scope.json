@@ -1,0 +1,22 @@
+{
+  "review_revision": "05440c322bbd49beba59f07f3f5d51a0af6faef6",
+  "tracked_paths": 1179,
+  "raw_paths": 877,
+  "raw_bytes": 159823565,
+  "engineering_source_rows": 186,
+  "category_counts": {
+    "CI": 1,
+    "BENCHMARK": 9,
+    "FORMAL": 47,
+    "AUDIT TOOL": 3,
+    "DEPENDENCIES": 1,
+    "RTL": 25,
+    "SCRIPT": 45,
+    "SMOKE": 6,
+    "TEST/MODEL": 49
+  },
+  "baseline_duplicate_groups_repository_wide": 64,
+  "baseline_duplicate_groups_raw_only": 53,
+  "frozen_workload_sha256": "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4",
+  "scope_note": "Counts are computed from Git objects at review_revision; baseline duplicate counts come from the preserved Gate-5 audit register."
+}
