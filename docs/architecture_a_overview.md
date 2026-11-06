@@ -2,6 +2,6 @@
 
 ![Fabric Under Pressure Architecture-A overview](architecture_a_overview.svg)
 
-This block diagram follows the system-level layout of the referenced hardware architecture figure: manager interfaces on the left, the interconnect boundary in the center, and logical targets/endpoints on the right. Green blocks are individually verified standalone primitives. Amber blocks are specified integration work. Dashed paths indicate planned integration boundaries.
+**Historical Gate-1 planning diagram (2026-09-20).** It shows the proposed decomposition before the whole-Fabric implementation. Amber blocks and dashed paths are planning boundaries, not current missing integration. For the implemented Architecture-A/B topology, channel paths and evidence, see the [README](../README.md) and [`MICROARCHITECTURE.md`](MICROARCHITECTURE.md).
 
-The diagram is an original project visual and does not copy technical architecture from the reference figure. It reflects the frozen Fabric Under Pressure topology and current evidence state.
+The diagram is an original project visual and does not copy technical architecture from the reference figure. It is retained to document the design-planning stage and is not a source-derived RTL schematic.

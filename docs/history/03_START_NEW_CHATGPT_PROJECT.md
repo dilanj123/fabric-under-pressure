@@ -1,4 +1,6 @@
-# Start a New ChatGPT Project — Fabric Under Pressure
+# Start a New ChatGPT Project — Fabric Under Pressure (Historical)
+
+> One-time workspace setup material from the project bootstrap. It describes the initial project state and is retained for provenance, not as current implementation guidance. Current status: [`../PROJECT_STATE.md`](../PROJECT_STATE.md).
 
 Use this file when creating a fresh ChatGPT Project/workspace for implementation. The goal is to make the repository documents, not old chat history, the source of truth.
 

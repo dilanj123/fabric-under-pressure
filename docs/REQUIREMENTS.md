@@ -1,6 +1,6 @@
 # Requirements
 
-**Status:** Gate-1 specification frozen. No implementation evidence yet.
+**Status:** Gate-1 requirements remain frozen. Implementation and verification evidence is indexed in [`EVIDENCE_INDEX.md`](EVIDENCE_INDEX.md) and current milestone status is in [`PROJECT_STATE.md`](PROJECT_STATE.md). The following text records the contract, not the current implementation status.
 
 ## R-001 Scope and protocol claim
 The project implements a **documented AXI4 subset** and remains an interconnect/microarchitecture project, not a CPU, DMA-engine, coherent-protocol or mesh-NoC project.
@@ -76,4 +76,4 @@ Open-source first: LFE5U-45F, CABGA381, speed grade 6, common wrapper/constraint
 Single-clock MVP first. CDC is a later controlled extension using per-channel architecture; never place one FIFO around the whole AXI bus.
 
 ## Traceability rule
-The Gate-1 verification matrix in `docs/VERIFICATION_PLAN.md` assigns every requirement to directed, random or formal checks and to the planned implementation block before RTL begins.
+The Gate-1 verification matrix in `docs/VERIFICATION_PLAN.md` assigns requirements to directed, random or formal checks and to the planned implementation block. That allocation was frozen before RTL began; completed evidence is indexed in `docs/EVIDENCE_INDEX.md`.

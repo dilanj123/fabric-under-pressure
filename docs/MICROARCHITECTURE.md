@@ -1,6 +1,6 @@
 # Microarchitecture
 
-**Status:** Gate-1 specification frozen. Implementation is intentionally not started.
+**Status:** Gate-1 microarchitecture contract remains frozen. The implementation has since been completed for Architectures A and B; current implementation/evidence status is in [`PROJECT_STATE.md`](PROJECT_STATE.md). This file continues to define the design contract.
 
 ## 1. Topology
 3 manager ports fan into target-specific request arbitration for S0/S1/S2 plus internal S3 error handling. Read and write request scheduling are independent.

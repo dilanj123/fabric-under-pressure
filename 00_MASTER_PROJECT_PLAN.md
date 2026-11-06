@@ -2,8 +2,8 @@
 
 **Document:** `00_MASTER_PROJECT_PLAN.md`  
 **Planning snapshot:** 2026-09-20  
-**Status:** Authoritative planning contract; RTL implementation has not started.  
-**Readiness:** READY WITH PHASE-0 CONDITIONS  
+**Status:** Frozen planning contract, written 2026-09-20 before RTL implementation. Its implementation-status statements describe that planning snapshot; the current project state is in [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md).
+**Readiness:** Initial Phase-0 readiness assessment (historical snapshot)
 **Protocol claim:** **documented AXI4 subset**, not unrestricted/full AXI4 compliance.
 
 ---
@@ -1089,19 +1089,20 @@ Failure of items 1–6 to produce a workable open-source path blocks Gate 0 and 
 
 ## 17. Repository structure
 
-Target structure after bootstrap:
+Initial repository structure planned during Phase 0 (historical snapshot; several one-time setup documents now live in `docs/history/`):
 
 ```text
 .
 ├── 00_MASTER_PROJECT_PLAN.md
 ├── 01_CHATGPT_PROJECT_OPERATING_INSTRUCTIONS.md
-├── 02_PHASE0_BOOTSTRAP_TASK.md
-├── 03_START_NEW_CHATGPT_PROJECT.md
 ├── 04_MASTER_CHECKLIST.md
-├── MASTER_CHATGPT_HANDOFF_PROMPT.md
 ├── AGENTS.md
 ├── README.md
 ├── docs/
+│   ├── history/
+│   │   ├── 02_PHASE0_BOOTSTRAP_TASK.md
+│   │   ├── 03_START_NEW_CHATGPT_PROJECT.md
+│   │   └── MASTER_CHATGPT_HANDOFF_PROMPT.md
 │   ├── REQUIREMENTS.md
 │   ├── MICROARCHITECTURE.md
 │   ├── VERIFICATION_PLAN.md

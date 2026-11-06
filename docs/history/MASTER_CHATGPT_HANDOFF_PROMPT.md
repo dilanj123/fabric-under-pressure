@@ -1,4 +1,6 @@
-# Fabric Under Pressure — Master ChatGPT Handoff Prompt
+# Fabric Under Pressure — Master ChatGPT Handoff Prompt (Historical)
+
+> Initial handoff prompt retained as evidence of project setup. It predates completed RTL, verification and measurement. Current status: [`../PROJECT_STATE.md`](../PROJECT_STATE.md).
 
 Use this prompt when starting a fresh ChatGPT Project for **Fabric Under Pressure — Deterministic QoS-Aware AXI4 SoC Interconnect**.
 
