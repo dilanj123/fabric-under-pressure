@@ -1,0 +1,30 @@
+> Separate Codex CLI read-only review context. These are source-review observations, not test execution or human approval.
+
+**Recommendation: revise the audit summary and inventory before accepting them as evidence of an independent semantic review.** The inventory and delta arithmetic check out, and the documentation patch is directionally supported by indexed Gate-3 evidence. But the `REVIEWED` statuses overstate what this register demonstrates, and parts of the documentation correction overstate Gate-3 coverage.
+
+- **Review depth is overstated — `semantic_source_review.csv`, all 186 rows; generator `build_semantic_review.py`, `main()`.** Every row is `REVIEWED`; 174 rows use the generic “Relevant focused test/formal scope…” evidence text. For most remaining rows, `concrete_observation` simply repeats the prewritten contract description. The generator hard-codes these notes and emits `REVIEWED` uniformly; it does not record reviewer-specific inspection evidence or support partial/not-reviewed statuses. The summary’s “read in dependency order” and cross-module tracing claims therefore cannot be substantiated from this register alone. Distinguish actual file-specific review observations from inventory descriptions, and qualify the blanket status unless there is separate review evidence.
+
+- **Finding priorities are not well calibrated — `semantic_review_findings.csv`.** SR-P2-03 through SR-P2-08 describe assurance weaknesses or stale comments, with no demonstrated bad result; P2 reads too high for several of them. SR-P2-02 is labeled “KNOWN LIMITATION” but still assigned P2, despite being outside the recorded interface contract. Consider separating confirmed defects from open guard-strength observations and documented limitations, and align priority with that distinction. Also, SR-P2-03’s specific polling/model sequence deserves a reproducible handshake trace before treating it as a concrete finding.
+
+- **Gate-3 documentation correction overreaches — `docs/VERIFICATION_PLAN.md` diff, focused B/R and S3 sections.** The patch says “current four-target integration” / “full-Fabric integration” is covered by Gate-3. The authoritative Gate-3 table describes whole-DUT Architecture-A evidence (G3-F001–F009); it does not establish four-target production integration for Architecture B. The same file’s current project-state text says full four-target production integration remains absent. Narrow the new wording to the specific Gate-3 Architecture-A integration claims. The B/R section’s statement that S3 DECERR is exercised is supported by focused S3 lifecycle tests; don’t imply that those tests establish full-Fabric integration.
+
+- **Inventory and blob metadata — verified with one scope caveat.** The CSV has 186 unique source rows and 186 `REVIEWED` statuses; every listed blob hash matches the summary’s pinned review revision. The delta register has 105 paths: 72 added, 30 modified, 3 removed. These counts support the summary’s delta arithmetic. However, the `1,179 tracked paths` and `877 raw paths` / byte totals are asserted in the summary, not evidenced by either reviewed CSV or reproducible output included in the reviewed scope.
+
+- **No protected engineering/evidence changes found in the current uncommitted patch.** `git status` shows only the named audit artifacts plus `docs/VERIFICATION_PLAN.md`; the diff from `HEAD` names no RTL, formal, benchmark or results files. The listed delta CSV is a comparison against Gate-5, so its historical changes should not be mistaken for edits in this patch.
+
+The documentation cleanup is reasonable once its integration claims are scoped precisely. I would not accept the summary’s “186 files reviewed” as independently auditable evidence until the register distinguishes substantive inspection from generated boilerplate.
+## Resolution recorded by the implementation pass
+
+- Replaced generic evidence-column text with exact reviewer-scope report paths; each row now points to the category report that names the source file. Formal and test result limitations are explicitly stated.
+- Narrowed whole-top claims in `docs/VERIFICATION_PLAN.md`: Architecture-A Gate-3 integration is identified separately from the Architecture-B functional regression. Focused component tests remain labeled as focused.
+- Added `portfolio_audit/generated/current_review_scope.json` to give the tracked/raw counts, byte total, category counts, baseline duplicate split and workload hash a reproducible machine-readable record at the pinned review revision.
+- Reclassified the disclosed response-source limitation and comment/smoke-only observations from P2 to P3. The handshake-to-oracle correlation, comparator matrix guard and PPA parser behavior remain P2 assurance/tooling concerns, without a reproduced failure.
+- Corrected the TB source count: Git contains 51 `tb/` paths, including two empty `.keep` files; 49 are `.sv`/`.py` engineering sources. The earlier reviewer’s prose said 47 total paths, but basename comparison confirms all 49 source files are named in its per-file review section.
+
+## Second review findings and correction
+
+A second fresh read-only patch review found ten paths not written verbatim in their assigned scope reports and a stale formal-smoke ID/priority in the summary. The report now includes exact path-level addenda for the nine directed test sources and `portfolio_audit/test_build_register.py`; the summary uses `SR-P3-02`/P3 consistently with the findings CSV and source register. A path check confirms all 186 `REVIEWED` rows occur verbatim in their referenced scope report.
+
+## Final narrow review: APPROVE
+
+A third fresh read-only Codex CLI context approved the revised audit artifacts. It confirmed summary/finding/source-register IDs and severities agree, all 186 reviewed paths occur in their referenced scope records, no stale P2-06 label remains, scope totals match the JSON, formal claims are correctly bounded, and the Verification Plan attributes Gate-3 whole-top integration to A while separating B's functional regression. This is model-context review, not human sign-off or independent test execution.

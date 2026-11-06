@@ -1,0 +1,92 @@
+> Separate Codex CLI read-only review context. These are source-review observations, not test execution or human approval.
+
+## Scope and evidence
+
+I read the repository authority documents in the specified order, then the tracked files under `tb/directed`, `tb/cocotb`, `tb/model`, and `tb/random`. The set contains 47 files, including two empty `.keep` files. This is a source review: I did not run tests, and a testbench’s assertions establish what it checks, not that the implementation is correct beyond those checks.
+
+**Handshake-sampling distinction:** many directed tests use `tick()` that waits for `posedge ACLK` and then `#1`; their signal checks are often post-edge state checks, not independent captures of the values sampled at that edge. The whole-fabric test’s fairness monitor explicitly captures public `VALID && READY` at the accepting edge before nonblocking state updates ([axi_fabric_a_tb.sv](tb/directed/axi_fabric_a_tb.sv:55)). The benchmark explicitly snapshots signals and computes handshakes from `VALID && READY` ([test_axi_fabric_a_benchmark.py](tb/cocotb/test_axi_fabric_a_benchmark.py:350)). The oracle’s simpler helpers often poll `READY` or `VALID`, then advance a cycle and update the model; they do not consistently capture both handshake signals and payload on the accepting edge ([test_axi_fabric_a_oracle.py](tb/cocotb/test_axi_fabric_a_oracle.py:87), [test_axi_fabric_a_oracle.py](tb/cocotb/test_axi_fabric_a_oracle.py:110), [test_axi_fabric_a_oracle.py](tb/cocotb/test_axi_fabric_a_oracle.py:199)).
+
+## Directed SystemVerilog
+
+- `address_decoder_tb.sv`: checks mapped-region boundaries and catch-all S3 addresses; it is combinational decode coverage, not transaction behavior ([lines 25–51](tb/directed/address_decoder_tb.sv:25)).
+- `axi_ar_r_read_lifecycle_tb.sv`: checks AR admission allocates busy/count state, target AR consumption does not complete it, R-source locking, final-beat backpressure, and same-ID reuse only after completion ([lines 28–45](tb/directed/axi_ar_r_read_lifecycle_tb.sv:28)).
+- `axi_ar_read_state_composition_tb.sv`: composes AR target path with read-state bank; checks admission allocation, payload slot, target consumption, and delayed same-ID reuse ([lines 12–18](tb/directed/axi_ar_read_state_composition_tb.sv:12)).
+- `axi_ar_s3_tb.sv`: checks parameterized S3 AR transport and widened manager ID; it does not include the S3 endpoint or verify DECERR response behavior ([line 8](tb/directed/axi_ar_s3_tb.sv:8)).
+- `axi_ar_target_path_tb.sv`: checks manager selection, carried AR fields, eligibility blockers, registered target payload stability under stall, and no same-cycle drain/refill ([lines 17–35](tb/directed/axi_ar_target_path_tb.sv:17)).
+- `axi_aw_target_path_tb.sv`: checks AW admission, widened ID and carried fields, reset of a pending slot, stalled payload stability, successor scheduling, and blockers. A separate S3 path checks unmapped AW transport, not endpoint response ([lines 98–191](tb/directed/axi_aw_target_path_tb.sv:98), [lines 195–224](tb/directed/axi_aw_target_path_tb.sv:195)).
+- `axi_aw_target_scheduler_tb.sv`: checks eligibility blocker inputs, RR selection/hold while target stalls, owner blocking and resumed pointer order; separate instances show an occupied S0 owner does not block S1/S3 ([lines 67–115](tb/directed/axi_aw_target_scheduler_tb.sv:67), [lines 143–147](tb/directed/axi_aw_target_scheduler_tb.sv:143)).
+- `axi_aw_w_state_composition_tb.sv`: composes AW path, write-state bank and W path. Checks W-before-AW blocking, registered ownership, target W stall, owner release on final target W, and outstanding release on B completion ([lines 139–180](tb/directed/axi_aw_w_state_composition_tb.sv:139)).
+- `axi_aw_write_state_composition_tb.sv`: checks AW path and write-state bank integration, including admission and outstanding/owner state. Its independent state oracle is the assertions over those component outputs; it does not model the whole fabric.
+- `axi_b_response_router_tb.sv`: exercises B response ID-prefix routing, busy-ID checking, response slot stall/hold and completion behavior, including multiple target sources and managers. It checks router outputs/violations, not an independent transaction model.
+- `axi_b_write_state_composition_tb.sv`: composes B routing with write state; checks that response acceptance retires the associated write state, including stalled response handling.
+- `axi_fabric_a_tb.sv`: whole-top directed scenarios cover route smoke across S0–S3, W-before-AW, four-entry capacity/fifth blocking, unsupported request rejection, address/response stalls, contention/parallel targets, widened IDs, distinct-ID reorder, W stalls, locked R source gaps, and reset. The simple external responder returns zero RDATA and uses one response slot per target; the source explicitly describes scoped integration checks, not complete correctness ([lines 156–204](tb/directed/axi_fabric_a_tb.sv:156), [lines 595–777](tb/directed/axi_fabric_a_tb.sv:595)). Its integrated fairness admission recorder uses edge-time `VALID && READY` sampling ([lines 55–107](tb/directed/axi_fabric_a_tb.sv:55)).
+- `axi_qos_aging_arbiter_3_tb.sv`: directed scheduler cases exercise priority/aging/starvation selection logic. The TB’s checks are against expected grants and counters, not a separate reference scheduler.
+- `axi_r_burst_lengths_tb.sv`: checks R beat-count/RLAST progression for selected burst lengths; no full fabric routing or independent data oracle.
+- `axi_r_response_router_tb.sv`: checks R slot/lock behavior, stalls, nonfinal drain/refill, locked-source gaps, final completion at manager handshake, invalid/nonbusy IDs, target arbitration, manager concurrency, out-of-order IDs, and S3 DECERR propagation ([lines 54–129](tb/directed/axi_r_response_router_tb.sv:54)). Checks mostly inspect combinational or post-edge router outputs.
+- `axi_read_state_bank_tb.sv`: tests read busy bitmap/count allocation, per-ID and capacity restrictions, completion and reset. The model is implicit in expected state assertions.
+- `axi_read_write_id_independence_tb.sv`: admits the same numeric ID in read and write banks and checks both busy bits/counts coexist ([lines 9–10](tb/directed/axi_read_write_id_independence_tb.sv:9)).
+- `axi_rr_arbiter_4_tb.sv`: checks four-way RR grants across request masks, stalls and pointer progression; expected behavior is a hand-coded scheduling expectation.
+- `axi_s3_error_target_tb.sv`: checks the internal error endpoint’s read/write error behavior and supported lifecycle conditions; it uses explicit expected response values, not the Python oracle.
+- `axi_s3_read_lifecycle_tb.sv`: checks S3 read transaction capture, beat count, response and final lifecycle.
+- `axi_s3_write_lifecycle_tb.sv`: checks delayed S3 AW context, W acceptance and B response lifecycle; the focused assertion sequence is at [lines 55–62](tb/directed/axi_s3_write_lifecycle_tb.sv:55).
+- `axi_w_target_path_tb.sv`: checks owner-gated W readiness, target payload slot, stalled final beat, nonfinal drain/refill, final no-refill, wrong-target and conflicting-owner blocking ([lines 49–132](tb/directed/axi_w_target_path_tb.sv:49)).
+- `axi_w_target_route_tb.sv`: routes owner W traffic to the selected target and checks only that target accepts and then clears the final slot ([lines 38–56](tb/directed/axi_w_target_route_tb.sv:38)).
+- `axi_write_owner_3_tb.sv`: checks three managers’ owner counters progress and complete independently ([lines 25–48](tb/directed/axi_write_owner_3_tb.sv:25)).
+- `axi_write_owner_tb.sv`: checks owner allocation, W-before-AW diagnostics, same-cycle pre-state behavior, beat count/WLAST diagnostics, metadata stability, reallocation timing and reset ([lines 48–122](tb/directed/axi_write_owner_tb.sv:48)).
+- `axi_write_state_bank_tb.sv`: checks atomic owner/outstanding allocation, WLAST owner release versus B outstanding release, four-write capacity, fifth blocking, following-cycle capacity, invalid admission and independent manager admissions ([lines 90–178](tb/directed/axi_write_state_bank_tb.sv:90)).
+- `id_mapper_tb.sv`: exhaustively checks valid manager/ID mappings and reserved return codes, with expected values generated by test functions ([lines 27–98](tb/directed/id_mapper_tb.sv:27)).
+- `outstanding_tracker_tb.sv`: checks allocation/completion, capacity four, duplicates/unknown completion, same-cycle completion/reallocation, reset and read/write independence ([lines 125–224](tb/directed/outstanding_tracker_tb.sv:125)).
+- `request_legality_tb.sv`: checks LEN, size, burst, alignment, lock, 4 KiB boundaries and address-space edge cases ([lines 55–94](tb/directed/request_legality_tb.sv:55)).
+- `rr_arbiter_tb.sv`: has a small explicit RR grant function and checks all 3 pointer states × 8 request masks, rotation, skipped requesters, stable held grant, dynamic arrival and reset ([lines 16–43](tb/directed/rr_arbiter_tb.sv:16), [lines 127–209](tb/directed/rr_arbiter_tb.sv:127)).
+- `tb/directed/.keep`: empty placeholder.
+
+**Evidence limitation:** several small composition/state TBs were inspected as source but I am not attributing detailed coverage beyond the assertions visible in their source, and I did not verify their recorded simulation logs in this review.
+
+## Cocotb
+
+- `test_axi_bfm_smoke.py`: third-party `AxiMaster`/`AxiRam` qualification for aligned 64-bit single/multibeat writes and reads with deterministic endpoint pauses. It checks returned payload/response and RAM contents, but is not fabric-specific or an independent project oracle ([lines 23–59](tb/cocotb/test_axi_bfm_smoke.py:23)).
+- `test_smoke_counter.py`: randomized byte inputs to a simple counter smoke DUT; asserts ready, accepted count and last data, not AXI behavior ([lines 7–32](tb/cocotb/test_smoke_counter.py:7)).
+- `test_axi_fabric_a_concurrent_endpoint.py`: focused DUT test holds manager RREADY low and checks endpoint R payload retention, then checks received beat data against a separate `EndpointMemory`; it imports helper/model code from other test modules ([lines 20–105](tb/cocotb/test_axi_fabric_a_concurrent_endpoint.py:20)). R handshakes are detected before advancing the edge, but payload is read before that edge.
+- `test_axi_fabric_a_oracle.py`: drives mapped AW/W/B and AR/R, checks target routing/payload, WSTRB memory updates, manager responses and read data. The Python reference model has its own decode, legality, lifecycle and byte memory ([axi_reference_model.py](tb/model/axi_reference_model.py:48), [axi_reference_model.py](tb/model/axi_reference_model.py:64)). The endpoint memory is independently implemented ([axi_endpoint_model.py](tb/model/axi_endpoint_model.py:9)). Oracle scope is real, but several driver helpers treat a polled READY/VALID as sufficient evidence then update on a later `cycles()` call; that makes exact edge/payload correlation weaker than an edge-sampled monitor. For S3 random helpers, target-side W is advanced in the model immediately after the manager-side W path and is explicitly not treated as observed route evidence ([test_axi_fabric_a_random.py](tb/cocotb/test_axi_fabric_a_random.py:61)).
+- `test_axi_fabric_a_random.py`: consumes saved plans, has deterministic capacity/contention/reorder/reset prologue and plan-driven traffic, tracks coverage and drains the model. Mapped transactions delegate to oracle helpers; S3 paths use special helpers. Random plan operations are executed serially by this test, so its plan-driven portion does not itself demonstrate concurrent random traffic ([lines 150–200](tb/cocotb/test_axi_fabric_a_random.py:150)).
+- `test_axi_fabric_a_random_v2.py`: implements handshake-aware mapped endpoints and concurrent manager workers; source structure includes per-target read/write endpoint handlers, mapped helpers and activity monitor ([function index](tb/cocotb/test_axi_fabric_a_random_v2.py:16)). Endpoint R driver changes beat only on sampled RVALID/RREADY through `REndpointDriver.sample()` ([concurrent_endpoint.py](tb/random/concurrent_endpoint.py:51)). The test’s reported behavior remains bounded by its selected plan/driver and the Python reference model; do not infer arbitrary concurrency/fairness coverage from the existence of workers alone.
+- `test_axi_fabric_a_benchmark.py`: generates benchmark intents, drives three managers and synthetic endpoints, records stalls/contention/completions and output events. It snapshots public DUT signals and defines fire as `valid && ready` ([lines 350–379](tb/cocotb/test_axi_fabric_a_benchmark.py:350)); it also checks held payload stability across stalled snapshots ([lines 411–449](tb/cocotb/test_axi_fabric_a_benchmark.py:411)). Its synthetic traffic model is a benchmark harness, not a correctness oracle for arbitrary AXI behavior.
+
+## Model and random support files
+
+- `axi_reference_model.py`: project-owned lifecycle oracle with address decode/legal request checks, per-transaction keys/epochs, independent byte memory, manager W versus target W comparison, B/R completion checks, R source lock and drain assertion ([lines 80–111](tb/model/axi_reference_model.py:80), [lines 161–225](tb/model/axi_reference_model.py:161), [lines 227–274](tb/model/axi_reference_model.py:227)). **Caveat:** model state advances only when its callers invoke methods; the model cannot independently establish that a method call coincided with an RTL handshake.
+- `axi_endpoint_model.py`: separate byte-memory and external endpoint model; updates bytes by WSTRB and returns B only after recorded final W ([lines 9–49](tb/model/axi_endpoint_model.py:9)). It records W beats but does not itself verify AW length against beat count or validate WLAST position.
+- `test_axi_reference_model.py`: negative tests intentionally inject loss, duplicate/misroute, bad IDs/data/strobes/responses/last/order, premature B, bad R progression, source interleave, stale epochs, lock and memory mismatch. These test the model’s detectors, not DUT behavior ([lines 6–118](tb/model/test_axi_reference_model.py:6)).
+- `tb/model/.keep`: empty placeholder.
+- `axi_random_plan.py`: deterministic seeded generation, fixed anchors plus random operations, legal-field/target/page validation and serialization ([file](tb/random/axi_random_plan.py:1)). It validates generated plans; it does not prove the simulator executed every intent correctly.
+- `concurrent_bus.py`: packed-lane shadow bus; worker-side dictionaries are packed into integer handles by a caller. It is not a handshake monitor ([lines 1–48](tb/random/concurrent_bus.py:1)).
+- `concurrent_endpoint.py`: R/B endpoint drivers retain active payload and advance only on sampled valid-ready; R reads are queued as snapshots ([lines 23–90](tb/random/concurrent_endpoint.py:23)).
+- `test_axi_random_plan.py`: checks same-seed identity, cross-seed diversity, legal generated fields, plan round-trip, frozen seed/count validation, and rejection of region mismatch/4 KiB crossing ([lines 12–58](tb/random/test_axi_random_plan.py:12)).
+- `test_concurrent_bus.py`: checks packed manager lanes and target-ready packing. One attempted `target_rready` update is conditional because that lane is absent from the default bus structure ([lines 5–18](tb/random/test_concurrent_bus.py:5)).
+- `test_concurrent_endpoint.py`: checks R/B payload hold under backpressure and sequential queued read bursts ([lines 8–43](tb/random/test_concurrent_endpoint.py:8)).
+- `test_v3_scheduler.py`: checks the Python scheduler’s four-live read/write limits, response-based capacity reuse only after `step_cycle()`, write owner release on target WLAST and reset state ([lines 9–48](tb/random/test_v3_scheduler.py:9)).
+- `v3_scheduler.py`: pure Python manager-side scheduling state for live IDs, presented requests, W owner and recycle/capacity timing ([lines 14–114](tb/random/v3_scheduler.py:14)).
+- `tb/random/__init__.py`: one-line package marker.
+
+## Supported findings
+
+- The repository has both hand-coded directed checks and a separate Python reference model. Their roles differ: most directed expected values are explicit assertions; the Python oracle supplies independent address/lifecycle/data expectations.
+- The benchmark has stronger centralized edge-snapshot handshake accounting than the simple oracle helpers.
+- The random endpoint primitive’s R state advances only on explicit sampled handshakes. This supports endpoint-driver retention behavior, not fabric correctness by itself.
+- I found a source-level sampling weakness worth preserving as a review observation: oracle helpers commonly poll READY/VALID and then advance/update model state without capturing the corresponding handshake and payload together at the accepting edge. This is a limitation in handshake-to-oracle correlation; this source review alone does **not** establish a functional DUT bug.
+- I did not find sufficient source evidence here to claim untested behavior, whole-fabric proof, fairness under arbitrary backpressure, or test pass status.
+## Exact path coverage addendum
+
+The initial per-file discussion used short names in several bullets. The nine directed files below were inspected as part of the directed-test pass; this explicit path list removes ambiguity in linking their register rows:
+
+- `tb/directed/axi_aw_write_state_composition_tb.sv` — AW target path and shared write-state bank admission/owner composition.
+- `tb/directed/axi_b_response_router_tb.sv` — widened B ID validation, per-manager slot stability and source arbitration.
+- `tb/directed/axi_b_write_state_composition_tb.sv` — B retirement versus write-state completion and WLAST/outstanding separation.
+- `tb/directed/axi_qos_aging_arbiter_3_tb.sv` — QoS selection, age threshold, escape set and held-grant cases.
+- `tb/directed/axi_r_burst_lengths_tb.sv` — selected burst lengths and RLAST beat progression.
+- `tb/directed/axi_read_state_bank_tb.sv` — read busy/count allocation, capacity and retirement/reset.
+- `tb/directed/axi_rr_arbiter_4_tb.sv` — four-way response arbitration and accepted-service pointer progression.
+- `tb/directed/axi_s3_error_target_tb.sv` — standalone S3 read/write error responses and backpressure.
+- `tb/directed/axi_s3_read_lifecycle_tb.sv` — AR admission through S3 R completion composition.
+
+The text reviewer initially reported 47 total `tb/` files; that count was incorrect. The current tree contains 51 `tb/` paths, two empty placeholders and 49 source files. The file-by-file report names all 49 source files.
