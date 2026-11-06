@@ -4,6 +4,8 @@ Use this as the execution/gate checklist. A checked item means the required evid
 
 **Evidence rule:** when an item depends on simulation/formal/synthesis/P&R/benchmark execution, link the evidence in `docs/EVIDENCE_INDEX.md` before checking it.
 
+> **Current status (2026-11-06):** The frozen public-readiness scope is complete at `kg-g5-public-ready`; Architecture B was rejected under D045 as recorded in D047. Use [PROJECT_STATE.md](docs/PROJECT_STATE.md) and [EVIDENCE_INDEX.md](docs/EVIDENCE_INDEX.md) for current status and evidence. This checklist also preserves historical gate planning and optional future work. Unchecked items below remain unchecked; they are not implied complete by the Gate-5 result. CDC, Architecture C and other extensions remain outside the frozen scope.
+
 ---
 
 # A. Planning package
