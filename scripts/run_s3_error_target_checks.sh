@@ -2,7 +2,7 @@
 set -euo pipefail
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${REPO_DIR}/scripts/oss_cad_env.sh"
 mkdir -p results/raw/s3_error_target results/processed/s3_error_target
 python3 - <<'PY'
 from pathlib import Path

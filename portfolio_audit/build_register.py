@@ -37,6 +37,16 @@ ROOT_ARCHIVE = {
     "03_START_NEW_CHATGPT_PROJECT.md": "docs/history/03_START_NEW_CHATGPT_PROJECT.md",
     "MASTER_CHATGPT_HANDOFF_PROMPT.md": "docs/history/MASTER_CHATGPT_HANDOFF_PROMPT.md",
 }
+CAD_RUNNERS = (
+    "run_ar_target_path_checks.sh", "run_arch_a_benchmark.sh", "run_arch_a_ppa.sh",
+    "run_b_response_router_checks.sh", "run_b_response_router_repair_checks.sh",
+    "run_fabric_a_gate2_directed.sh", "run_fabric_a_integration_checks.sh",
+    "run_fabric_b_directed.sh", "run_gate2_closure.sh", "run_gate2_oracle_b.sh",
+    "run_gate3_random.sh", "run_gate3_random_v2.sh", "run_qos_aging_directed.sh",
+    "run_qos_aging_formal.sh", "run_r_response_router_checks.sh",
+    "run_s3_error_target_checks.sh", "run_s3_error_target_repair_checks.sh",
+    "run_w_target_path_checks.sh", "run_write_state_bank_checks.sh",
+)
 IMPROVE = {
     "00_MASTER_PROJECT_PLAN.md": "Clarify dated planning snapshot; preserve frozen contract.",
     "docs/REQUIREMENTS.md": "Replace stale no-implementation status with current evidence pointer.",
@@ -46,6 +56,10 @@ IMPROVE = {
     "docs/TRADEOFFS.md": "Record frozen measured B disposition D047.",
     "docs/architecture_a_overview.md": "Label implementation blocks as historical planning diagram.",
     "docs/architecture_a_overview.svg": "SVG labels integration as planned; preserve as historical visual.",
+    **{
+        f"scripts/{name}": "Use the configurable, version-checked OSS CAD Suite root."
+        for name in CAD_RUNNERS
+    },
 }
 SECRET_PATTERNS = [
     re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
@@ -194,11 +208,8 @@ def main() -> None:
         path = raw_path.decode("utf-8", errors="surrogateescape")
         entries.append((path, mode, blob))
 
-    # The inventory is scoped to a clean checkout of the named baseline.
-    head = git("rev-parse", "HEAD").decode().strip()
-    if revision != head:
-        raise SystemExit(f"checkout HEAD {head} differs from requested audit revision {revision}")
-
+    # The named Git revision is the audit baseline; the checkout may be a
+    # later reviewed revision whose changes are recorded in the difference CSV.
     texts: dict[str, bytes] = {}
     records = []
     hashes: dict[str, list[tuple[str, int]]] = defaultdict(list)
@@ -253,14 +264,14 @@ def main() -> None:
         kind, reproducibility, historical, decision, issue = classify(path)
         status = "kept; no destructive action"
         final_path = path
-        action = ""
+        action = "retained; no file-content change in scope"
         if path in ROOT_ARCHIVE:
             final_path = ROOT_ARCHIVE[path]
             action = "moved intact to historical documentation path"
-            status = "executed in this branch; Git rename preserves history"
+            status = "moved in PR1; Git rename preserves history"
         elif decision == "IMPROVE":
             action = issue
-            status = "improved in this branch"
+            status = "implemented in reviewed PR changes"
         if path.startswith("results/raw/"):
             status = "retained; no safe external archive available"
         records.append({

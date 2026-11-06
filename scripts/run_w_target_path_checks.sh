@@ -6,10 +6,7 @@ OUT="$ROOT/results/raw/w_target_path"
 BUILD="$OUT/sim_work"
 mkdir -p "$OUT" "$BUILD"
 
-if [[ -f /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment ]]; then
-  # shellcheck disable=SC1091
-  source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
-fi
+source "${ROOT}/scripts/oss_cad_env.sh"
 
 verilator --lint-only --timing -Wall --top-module axi_w_target_path \
   "$ROOT/rtl/axi_w_target_path.sv" 2>&1 | tee "$OUT/verilator_w_path_lint.log"

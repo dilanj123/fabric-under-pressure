@@ -3,12 +3,12 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 export PYTHONPATH="$ROOT/tb/model:$ROOT/tb/cocotb:$ROOT${PYTHONPATH:+:$PYTHONPATH}"
 export ROOT
 export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
-export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
-export DYLD_LIBRARY_PATH="/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find "${OSS_CAD_SUITE_LIB}" -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
+export DYLD_LIBRARY_PATH="${OSS_CAD_SUITE_LIB}${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
 
 OUT="$ROOT/results/raw/gate3_random"
 PLAN_DIR="$OUT/plans"
@@ -59,7 +59,7 @@ for plan in "${plans[@]}"; do
   seed=$(python3 -c 'import json,sys; print("%08X" % json.load(open(sys.argv[1]))["seed"])' "$plan")
   seed_out="$OUT/seed_$seed"
   mkdir -p "$seed_out"
-  ln -sfn "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib" "$seed_out/lib"
+  ln -sfn "${OSS_CAD_SUITE_LIB}" "$seed_out/lib"
   export GATE3_PLAN="$plan"
   export GATE3_OUT="$seed_out"
   export COCOTB_RANDOM_SEED="0x$seed"

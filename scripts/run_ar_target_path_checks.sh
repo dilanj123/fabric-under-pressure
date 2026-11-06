@@ -8,7 +8,7 @@ import shutil,sys
 for p in sys.argv[1:]: shutil.rmtree(p, ignore_errors=True)
 PY
 mkdir -p "$OUT" "$BUILD/path" "$BUILD/s3" "$BUILD/bank" "$BUILD/comp" "$BUILD/ind"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 {
   verilator --version
   yosys --version

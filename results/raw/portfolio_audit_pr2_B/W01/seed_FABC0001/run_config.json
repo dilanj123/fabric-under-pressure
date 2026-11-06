@@ -1,0 +1,11 @@
+{
+  "architecture": "B",
+  "dut_top": "axi_fabric_b",
+  "source_manifest_sha256": "fb33d7011100f051b629313e802df7c0b8212e5427c341ca92de4822a32d3a0d",
+  "workload": "W01",
+  "seed": "0xFABC0001",
+  "warmup": 25,
+  "samples": 75,
+  "intent_limit_per_manager": 50000,
+  "qualification_only": true
+}

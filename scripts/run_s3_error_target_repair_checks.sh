@@ -2,7 +2,7 @@
 set -euo pipefail
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${REPO_DIR}/scripts/oss_cad_env.sh"
 OUT=results/raw/s3_error_target_repair
 mkdir -p "$OUT"
 verilator --lint-only --timing -Wall --top-module axi_s3_error_target rtl/axi_s3_error_target.sv > "$OUT/verilator_lint.log" 2>&1

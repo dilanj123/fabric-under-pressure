@@ -2,15 +2,15 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
-source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
+source "${ROOT}/scripts/oss_cad_env.sh"
 OUT="$ROOT/results/raw/gate2_oracle_b"
 mkdir -p "$OUT"
 export PYTHONPATH="$ROOT/tb/model:$ROOT/tb/cocotb:$ROOT/tb/random:$ROOT${PYTHONPATH:+:$PYTHONPATH}"
 export ROOT OUT
 export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
-export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
-export DYLD_LIBRARY_PATH="/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
-ln -sfn "/Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/lib" "$OUT/lib"
+export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find "${OSS_CAD_SUITE_LIB}" -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
+export DYLD_LIBRARY_PATH="${OSS_CAD_SUITE_LIB}${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+ln -sfn "${OSS_CAD_SUITE_LIB}" "$OUT/lib"
 {
   echo "architecture=B"
   echo "dut_top=axi_fabric_b"

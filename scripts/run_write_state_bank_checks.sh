@@ -6,10 +6,7 @@ OUT="$ROOT/results/raw/write_state_bank"
 BUILD="$OUT/sim_work"
 mkdir -p "$OUT"
 
-if [[ -f /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment ]]; then
-  # shellcheck disable=SC1091
-  source /Users/Dilan/eda/fabric-under-pressure/oss-cad-suite/environment
-fi
+source "${ROOT}/scripts/oss_cad_env.sh"
 
 verilator --lint-only --timing -Wall --top-module axi_write_state_bank \
   "$ROOT/rtl/axi_outstanding_tracker.sv" \
