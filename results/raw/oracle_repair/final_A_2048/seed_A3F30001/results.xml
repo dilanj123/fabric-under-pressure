@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="2750611457" />
+    <testcase name="fabric_a_random_v2" classname="test_axi_fabric_a_random_v2" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_random_v2.py" lineno="590" time="2.4517128467559814" sim_time_ns="357410.0" ratio_time="145779.7149747419" />
+  </testsuite>
+</testsuites>

@@ -113,6 +113,43 @@ class OracleNegativeTests(unittest.TestCase):
             for addr in (0, 7, 0x118, 0xFF8, 0x8000):
                 self.assertEqual(reference.read64(addr), endpoint.read64(addr))
 
+    def test_r_duplicate_accepted_beat(self):
+        self.m.admit_ar(0, 11, 0, 0)
+        self.m.observe_r(0, 11, 0x55, 0, 1)
+        with self.assertRaisesRegex(OracleViolation, "duplicate/lost R"):
+            self.m.observe_r(0, 11, 0x55, 0, 1)
+
+    def test_r_missing_accepted_beat_leaves_transaction_live(self):
+        self.m.admit_ar(0, 11, 0, 3)
+        for beat in range(3):
+            self.m.observe_r(0, 11, beat, 0, 0)
+        with self.assertRaisesRegex(OracleViolation, "transactions not drained"):
+            self.m.assert_drained()
+
+    def test_r_incorrect_data(self):
+        self.m.admit_ar(0, 11, 0, 0)
+        expected = self.m.memories[0].read64(0)
+        with self.assertRaisesRegex(OracleViolation, "bad RDATA"):
+            self.m.observe_r(0, 11, expected ^ 1, 0, 1, addr=0)
+
+    def test_r_early_last(self):
+        self.m.admit_ar(0, 11, 0, 3)
+        with self.assertRaisesRegex(OracleViolation, "bad RLAST"):
+            self.m.observe_r(0, 11, self.m.memories[0].read64(0), 0, 1, addr=0)
+
+    def test_r_missing_final_last(self):
+        self.m.admit_ar(0, 11, 0, 3)
+        for beat in range(3):
+            self.m.observe_r(0, 11, self.m.memories[0].read64(beat * 8), 0, 0,
+                             addr=beat * 8)
+        with self.assertRaisesRegex(OracleViolation, "bad RLAST"):
+            self.m.observe_r(0, 11, self.m.memories[0].read64(24), 0, 0, addr=24)
+
+    def test_r_incorrect_id(self):
+        self.m.admit_ar(0, 11, 0, 0)
+        with self.assertRaisesRegex(OracleViolation, "duplicate/lost R"):
+            self.m.observe_r(0, 10, 0, 0, 1)
+
 
 if __name__ == "__main__":
     unittest.main()

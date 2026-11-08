@@ -32,3 +32,7 @@ Direct and wrapped resource totals match the committed PPA comparison for both a
 A temporary edge snapshot under the qualified Verilator 5.053/Cocotb 2.1.0 simulator captured the Gate-2 M0/S1/ID 11 LEN=3 case. The testcase XML reports 2 PASS, 0 FAIL, 0 SKIP, but the sampled public signals recorded six target and six manager R handshakes; the oracle trace recorded four R updates. Beats 1 and 2 were each accepted twice with identical payload on successive active edges. This demonstrates that the existing helper/oracle progression does not account for every sampled handshake in this scenario. It does not demonstrate a DUT defect.
 
 Compact evidence: `results/raw/portfolio_audit_p2/oracle_edge_correlation_summary.json` and `oracle_edge_correlation_window.jsonl`. The full temporary simulator trace/build and instrumented test copy remain local under `results/raw/portfolio_audit_p2/oracle_diag/`; the checked-in oracle source is unchanged. The focused repair and required Gate-2/A/B functional requalification are a separate follow-up, documented in `oracle_edge_correlation_followup.md`.
+
+### Follow-up result (2026-11-08)
+
+The separate follow-up is now complete. `results/processed/oracle_edge_repair/summary.md` records the handshake-safe correction, exact 4/4/4 focused counts in both response conditions, six reason-checked fault injections, corrected fifth-AR sampling, and Gate-2/A/B functional requalification. The original six-versus-four finding remains visible as historical evidence. No RTL, formal, workload, benchmark or processed A/B result changed.

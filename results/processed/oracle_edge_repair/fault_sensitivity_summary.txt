@@ -1,0 +1,7 @@
+Qualified Verilator 5.053 / Cocotb 2.1.0; one selected testcase per fault; each XML has one intended failure and zero simulator errors.
+duplicate: expected failure; duplicate accepted R beat
+missing: expected failure; missing accepted R beat
+bad_rdata: expected failure; bad RDATA
+early_rlast: expected failure; early RLAST
+missing_rlast: expected failure; missing final RLAST
+wrong_rid: expected failure; wrong RID blocked

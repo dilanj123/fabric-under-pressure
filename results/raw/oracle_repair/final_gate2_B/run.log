@@ -1,0 +1,4 @@
+architecture=B
+dut_top=axi_fabric_b
+oracle=test_axi_fabric_a_oracle
+verilator=Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)

@@ -4,7 +4,7 @@ from pathlib import Path
 
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge
+from cocotb.triggers import FallingEdge, ReadOnly, RisingEdge, Timer
 from cocotb.utils import get_sim_time
 
 from axi_reference_model import AxiReferenceModel, RESP_DECERR
@@ -13,6 +13,11 @@ from axi_endpoint_model import EndpointMemory
 _ACTIVE_MODEL = None
 _LAST_MODEL_TIME = None
 _SHADOW_VALUES = {}
+
+
+def _raw_output_dir():
+    return Path(os.environ.get(
+        "OUT", Path(os.environ["ROOT"]) / "results/raw/gate2_oracle"))
 
 
 def _gate3_trace(event):
@@ -50,7 +55,7 @@ async def cycles(dut, count=1):
     global _LAST_MODEL_TIME
     for _ in range(count):
         await RisingEdge(dut.ACLK)
-        now = get_sim_time(units="ns")
+        now = get_sim_time(unit="ns")
         if _ACTIVE_MODEL is not None and now != _LAST_MODEL_TIME:
             _ACTIVE_MODEL.advance()
             _LAST_MODEL_TIME = now
@@ -179,67 +184,18 @@ async def mapped_read(dut, model, memory, manager, ident, target, length, addr,
     model.observe_target_address("ar", manager, ident, get_lane(dut.target_arid, 6, target), target, addr,
                                  length, 3, 1, 0, cache, prot, qos, region)
     await cycles(dut)
-    for beat in range(length + 1):
-        await cycles(dut, response_delay)
-        data = endpoint_read(memory[target], addr + beat * 8) if target in (0, 1) else 0
-        if os.environ.get("ORACLE_FAULT_MODE") == "bad_rdata" and target == 0 and beat == 0:
-            data ^= 1
-        last = int(beat == length)
-        set_lane(dut.target_rid, 6, target, (manager << 4) | ident)
-        set_lane(dut.target_rdata, 64, target, data)
-        set_lane(dut.target_rresp, 2, target, 0)
-        set_lane(dut.target_rlast, 1, target, last)
-        set_lane(dut.target_rvalid, 1, target, 1)
-        set_lane(dut.manager_rready, 1, manager, int(manager_r_stall == 0))
-        _gate3_trace({"boundary": "endpoint_presentation", "cycle": model.cycle,
-                      "manager": manager, "id": ident, "target": target,
-                      "beat": beat, "addr": addr + beat * 8, "rid": (manager << 4) | ident,
-                      "data": data, "resp": 0, "last": last,
-                      "rvalid": 1, "rready": get_lane(dut.target_rready, 1, target)})
-        while not get_lane(dut.target_rready, 1, target):
-            await cycles(dut)
-        await cycles(dut)
-        _gate3_trace({"boundary": "target_handshake", "cycle": model.cycle,
-                      "manager": manager, "id": ident, "target": target,
-                      "beat": beat, "addr": addr + beat * 8,
-                      "rid": get_lane(dut.target_rid, 6, target),
-                      "data": get_lane(dut.target_rdata, 64, target),
-                      "resp": get_lane(dut.target_rresp, 2, target),
-                      "last": get_lane(dut.target_rlast, 1, target),
-                      "rvalid": get_lane(dut.target_rvalid, 1, target),
-                      "rready": get_lane(dut.target_rready, 1, target)})
-        set_lane(dut.target_rvalid, 1, target, 0)
-        while not get_lane(dut.manager_rvalid, 1, manager):
-            await cycles(dut)
-        if manager_r_stall:
-            for _ in range(manager_r_stall):
-                assert get_lane(dut.manager_rvalid, 1, manager)
-                await cycles(dut)
-            set_lane(dut.manager_rready, 1, manager, 1)
-            await cycles(dut)
-        obs_id = get_lane(dut.manager_rid, 4, manager)
-        obs_data = get_lane(dut.manager_rdata, 64, manager)
-        obs_resp = get_lane(dut.manager_rresp, 2, manager)
-        obs_last = get_lane(dut.manager_rlast, 1, manager)
-        _gate3_trace({"boundary": "manager_handshake", "cycle": model.cycle,
-                      "manager": manager, "id": ident, "target": target,
-                      "beat": beat, "addr": addr + beat * 8,
-                      "rid": obs_id, "data": obs_data, "resp": obs_resp,
-                      "last": obs_last, "rvalid": get_lane(dut.manager_rvalid, 1, manager),
-                      "rready": get_lane(dut.manager_rready, 1, manager)})
-        if (obs_id, obs_data, obs_resp, obs_last) != (ident, data, 0, last):
-            ref_data = None
-            if target in (0, 1):
-                ref_data = model.memories[target].read64(addr + beat * 8)
-            raise AssertionError(
-                f"manager R payload mismatch M{manager} ID{ident} S{target} "
-                f"beat={beat} expected=({ident:#x},{data:#x},0,{last}) "
-                f"observed=({obs_id:#x},{obs_data:#x},{obs_resp},{obs_last}) "
-                f"ref={ref_data!r}")
-        model.observe_r(manager, ident, obs_data, obs_resp, obs_last,
-                        addr + beat * 8 if target in (0, 1) else None)
-        await cycles(dut)
-    set_lane(dut.manager_rready, 1, manager, 0)
+    await cycles(dut, response_delay)
+    data = [endpoint_read(memory[target], addr + beat * 8)
+            if target in (0, 1) else 0 for beat in range(length + 1)]
+    if (os.environ.get("ORACLE_FAULT_MODE") == "bad_rdata" and
+            (manager, ident, target) == (0, 13, 0)):
+        data[0] ^= 1
+    return await _drive_r_burst(
+        dut, model, manager, ident, target, data,
+        0 if target != 3 else RESP_DECERR, addr,
+        manager_ready=manager_r_stall == 0,
+        manager_stall_cycles=manager_r_stall,
+        source_check=True)
 
 
 async def concurrent_same_id(dut, model, memory):
@@ -341,7 +297,7 @@ async def fabric_a_s3_oracle(dut):
     model = AxiReferenceModel()
     _ACTIVE_MODEL = model
     trace_name = "fault_event_trace.jsonl" if os.environ.get("ORACLE_FAULT_MODE") else "event_trace.jsonl"
-    trace_path = Path(os.environ["ROOT"]) / "results/raw/gate2_oracle" / trace_name
+    trace_path = _raw_output_dir() / trace_name
     trace_path.parent.mkdir(parents=True, exist_ok=True)
     trace = trace_path.open("w", encoding="utf-8")
 
@@ -361,7 +317,7 @@ async def fabric_a_s3_oracle(dut):
     dut.target_wready.value = 0b111
     dut.target_arready.value = 0b111
     dut.ARESETn.value = 0
-    cocotb.start_soon(Clock(dut.ACLK, 10, units="ns").start())
+    cocotb.start_soon(Clock(dut.ACLK, 10, unit="ns").start())
     await cycles(dut, 3)
     dut.ARESETn.value = 1
     model.reset()
@@ -465,6 +421,9 @@ async def fabric_a_s3_oracle(dut):
 
 
 async def _oracle_reset(dut, model):
+    # Reset and packed-input changes are made between active edges. This is
+    # also safe when the caller has just returned from ReadOnly.
+    await FallingEdge(dut.ACLK)
     for name in ("manager_awvalid", "manager_wvalid", "manager_arvalid",
                  "manager_bready", "manager_rready", "target_bvalid",
                  "target_rvalid"):
@@ -650,47 +609,274 @@ async def _return_b(dut, model, manager, ident, target, ready=True):
 
 
 async def _return_r(dut, model, manager, ident, target, length=0,
-                    ready=True, source_check=True):
-    set_lane(dut.manager_rready, 1, manager, int(ready))
-    for beat in range(length + 1):
-        last = int(beat == length)
-        data = 0 if target == 3 else 0x9000000000000000 | (target << 40) | (ident << 8) | beat
-        set_lane(dut.target_rid, 6, target, (manager << 4) | ident)
+                    ready=True, source_check=True, pending_ar=None):
+    data = [0 if target == 3 else
+            0x9000000000000000 | (target << 40) | (ident << 8) | beat
+            for beat in range(length + 1)]
+    return await _drive_r_burst(dut, model, manager, ident, target, data,
+                                0 if target != 3 else RESP_DECERR, None,
+                                manager_ready=ready,
+                                manager_stall_cycles=0 if ready else 3,
+                                source_check=source_check, pending_ar=pending_ar)
+
+
+def _r_snapshot(dut, manager, target):
+    target_values = tuple(get_lane(getattr(dut, f"target_r{name}"), width, target)
+                          for name, width in (("valid", 1), ("ready", 1), ("id", 6),
+                                              ("data", 64), ("resp", 2), ("last", 1)))
+    manager_values = tuple(get_lane(getattr(dut, f"manager_r{name}"), width, manager)
+                           for name, width in (("valid", 1), ("ready", 1), ("id", 4),
+                                               ("data", 64), ("resp", 2), ("last", 1)))
+    manager_ar = (get_lane(dut.manager_arvalid, 1, manager),
+                  get_lane(dut.manager_arready, 1, manager),
+                  get_lane(dut.manager_arid, 4, manager),
+                  get_lane(dut.manager_araddr, 32, manager),
+                  get_lane(dut.manager_arlen, 8, manager))
+    target_ar = (get_lane(dut.target_arvalid, 1, target),
+                 get_lane(dut.target_arready, 1, target),
+                 get_lane(dut.target_arid, 6, target),
+                 get_lane(dut.target_araddr, 32, target),
+                 get_lane(dut.target_arlen, 8, target))
+    return {"target": target_values, "manager": manager_values,
+            "manager_ar": manager_ar, "target_ar": target_ar}
+
+
+async def _r_sample_cycle(dut, model, manager, target, target_payload=None,
+                          target_valid=0, manager_ready=1):
+    """Drive on falling edges and return pre-edge and settled observations.
+
+    The pre-edge sample is taken after a Timer has allowed the falling-edge
+    writes and combinational READY paths to settle, but before ACLK rises.
+    Handshake decisions use this sample, which is the value presented to the
+    active edge. ReadOnly is used only afterward to capture settled outputs.
+    """
+    global _LAST_MODEL_TIME
+    await FallingEdge(dut.ACLK)
+    if target_payload is not None:
+        rid, data, resp, last = target_payload
+        set_lane(dut.target_rid, 6, target, rid)
         set_lane(dut.target_rdata, 64, target, data)
-        set_lane(dut.target_rresp, 2, target, 0 if target != 3 else RESP_DECERR)
+        set_lane(dut.target_rresp, 2, target, resp)
         set_lane(dut.target_rlast, 1, target, last)
-        set_lane(dut.target_rvalid, 1, target, 1)
-        wait_count = 0
-        while not get_lane(dut.target_rready, 1, target):
-            await cycles(dut)
-            wait_count += 1
-            if wait_count == 100:
+    set_lane(dut.target_rvalid, 1, target, target_valid)
+    set_lane(dut.manager_rready, 1, manager, manager_ready)
+    await Timer(1, unit="ns")
+    pre_edge = _r_snapshot(dut, manager, target)
+    await RisingEdge(dut.ACLK)
+    active_edge = _r_snapshot(dut, manager, target)
+    await ReadOnly()
+    settled = _r_snapshot(dut, manager, target)
+    now = get_sim_time(unit="ns")
+    if _ACTIVE_MODEL is model and now != _LAST_MODEL_TIME:
+        model.advance()
+        _LAST_MODEL_TIME = now
+    trace = {"time_ns": int(now), "pre_edge": pre_edge,
+             "active_edge_trigger": active_edge, "read_only_settled": settled}
+    _gate3_trace({"boundary": "r_edge_sample", **trace})
+    return trace
+
+
+async def _drive_r_burst(dut, model, manager, ident, target, data_beats, resp,
+                         addr, manager_ready=True, manager_stall_cycles=0,
+                         source_check=True, fault_mode=None, post_cycles=2,
+                         pending_ar=None):
+    """Drive an R burst until sampled target and manager handshakes complete."""
+    fault = fault_mode or os.environ.get("ORACLE_R_FAULT_MODE")
+    expected_count = len(data_beats)
+    if expected_count == 0 or expected_count > 16:
+        raise AssertionError(f"invalid expected R beat count {expected_count}")
+    internal_id = (manager << 4) | ident
+    target_handshakes = []
+    manager_handshakes = []
+    prior_manager_data = None
+    oracle_updates_before = sum(1 for event in model.events
+                                if event.get("kind") == "r_beat" and
+                                event.get("manager") == manager and event.get("id") == ident and
+                                event.get("epoch") == model.epoch)
+    manager_stall_seen = 0
+    pending_ar_admitted = False
+    pending_ar_target_seen = False
+    pending_ar_event = None
+    if pending_ar is not None:
+        # The registered AR slot accepts the manager request one cycle before
+        # its target-facing handshake. Observe both edges after RLAST.
+        post_cycles = max(post_cycles, 4)
+
+    for beat in range(expected_count):
+        source_beat = beat
+        if fault == "duplicate" and beat == 2:
+            source_beat = 1
+        elif fault == "missing" and beat == 1:
+            source_beat = 2
+        payload_data = data_beats[source_beat]
+        if fault == "bad_rdata" and beat == 0:
+            payload_data ^= 1
+        payload_id = internal_id - 1 if fault == "wrong_rid" and beat == 0 else internal_id
+        payload_last = int(beat == expected_count - 1)
+        if fault == "early_rlast" and beat == 1:
+            payload_last = 1
+        if fault == "missing_rlast" and beat == expected_count - 1:
+            payload_last = 0
+        expected_payload = (ident, data_beats[beat], resp, int(beat == expected_count - 1))
+        target_seen = False
+        manager_seen = False
+        waited = 0
+        manager_stalled = 0
+        while not manager_seen:
+            first_drive = waited == 0
+            drive_payload = (payload_id, payload_data, resp, payload_last) if first_drive else None
+            trace = await _r_sample_cycle(
+                dut, model, manager, target, drive_payload,
+                target_valid=int(not target_seen),
+                manager_ready=int(manager_ready or
+                                  manager_stall_seen >= manager_stall_cycles))
+            sample = trace["pre_edge"]
+            tv, tr, trid, td, tresp, tlast = sample["target"]
+            mv, mr, mid, md, mresp, mlast = sample["manager"]
+            arv, arr, arid, araddr, arlen = sample["manager_ar"]
+            tarv, tarr, tarid, taraddr, tarlen = sample["target_ar"]
+            if sample != trace["active_edge_trigger"]:
                 raise AssertionError(
-                    f"target RREADY timeout M{manager} ID{ident} S{target} "
-                    f"rready={int(dut.target_rready.value):04b} "
-                    f"rvalid={int(dut.target_rvalid.value):04b} "
-                    f"manager_rvalid={int(dut.manager_rvalid.value):03b}")
-        await cycles(dut)
-        set_lane(dut.target_rvalid, 1, target, 0)
-        while not get_lane(dut.manager_rvalid, 1, manager):
-            await cycles(dut)
-        if not ready:
-            for _ in range(3):
-                assert get_lane(dut.manager_rvalid, 1, manager)
-                await cycles(dut)
-            set_lane(dut.manager_rready, 1, manager, 1)
-            await cycles(dut)
-            ready = True
-        obs_id = get_lane(dut.manager_rid, 4, manager)
-        obs_data = get_lane(dut.manager_rdata, 64, manager)
-        obs_resp = get_lane(dut.manager_rresp, 2, manager)
-        obs_last = get_lane(dut.manager_rlast, 1, manager)
-        assert obs_id == ident
-        if source_check:
-            model.observe_r_source(manager, target, ident, obs_last)
-        model.observe_r(manager, ident, obs_data, obs_resp, obs_last)
-        await cycles(dut)
+                    f"R pre-edge/active-edge snapshot mismatch at {trace['time_ns']}ns: "
+                    f"pre={sample} edge={trace['active_edge_trigger']}")
+            if tv and not tr:
+                if (trid, td, tresp, tlast) != (payload_id, payload_data, resp, payload_last):
+                    raise AssertionError("target R payload changed while stalled")
+            if mv and not mr:
+                manager_stall_seen += 1
+                held = (mid, md, mresp, mlast)
+                if getattr(_drive_r_burst, "held_manager_payload", None) not in (None, held):
+                    raise AssertionError("manager R payload changed while stalled")
+                _drive_r_burst.held_manager_payload = held
+            else:
+                _drive_r_burst.held_manager_payload = None
+
+            if tv and tr:
+                target_seen = True
+                target_handshakes.append({"time_ns": trace["time_ns"], "beat": beat,
+                                          "rid": trid, "data": td, "resp": tresp,
+                                          "last": tlast})
+                if (trid, td, tresp, tlast) != (payload_id, payload_data, resp, payload_last):
+                    raise AssertionError(f"target R handshake payload differs from driven beat {beat}")
+            if pending_ar is not None and arv and arr:
+                if mv and mr and mlast:
+                    raise AssertionError("D028 violation: AR admission shared the RLAST completion edge")
+                if pending_ar_admitted:
+                    raise AssertionError("duplicate pending AR handshake")
+                expected_ar_payload = (pending_ar["id"], pending_ar["addr"], pending_ar["len"])
+                if (arid, araddr, arlen) != expected_ar_payload:
+                    raise AssertionError(f"pending AR payload mismatch: {(arid, araddr, arlen)} "
+                                         f"!= {expected_ar_payload}")
+                model.admit_ar(manager, pending_ar["id"], pending_ar["addr"], pending_ar["len"],
+                               cache=pending_ar["cache"], prot=pending_ar["prot"],
+                               qos=pending_ar["qos"], region=pending_ar["region"])
+                pending_ar_admitted = True
+                pending_ar_event = {"time_ns": trace["time_ns"], "id": arid, "addr": araddr}
+            if pending_ar is not None and pending_ar_admitted and not pending_ar_target_seen and tarv and tarr:
+                expected_internal = (manager << 4) | pending_ar["id"]
+                if tarid == expected_internal:
+                    if (taraddr, tarlen) != (pending_ar["addr"], pending_ar["len"]):
+                        raise AssertionError("pending target AR payload mismatch")
+                    model.observe_target_address(
+                        "ar", manager, pending_ar["id"], tarid, target, taraddr, tarlen, 3, 1, 0,
+                        pending_ar["cache"], pending_ar["prot"], pending_ar["qos"], pending_ar["region"])
+                    pending_ar_target_seen = True
+            if mv and mr:
+                manager_handshakes.append({"time_ns": trace["time_ns"], "beat": beat,
+                                           "rid": mid, "data": md, "resp": mresp,
+                                           "last": mlast})
+                if mid != ident:
+                    raise AssertionError(f"wrong RID at manager R handshake: expected={ident} got={mid}")
+                if md != expected_payload[1]:
+                    if prior_manager_data == md:
+                        raise AssertionError(f"duplicate accepted R beat: M{manager} ID{ident} beat={beat}")
+                    if beat + 1 < expected_count and md == data_beats[beat + 1]:
+                        raise AssertionError(f"missing accepted R beat: M{manager} ID{ident} expected beat={beat}")
+                    raise AssertionError(f"bad RDATA manager={manager} id={ident} beat={beat}")
+                if mresp != expected_payload[2]:
+                    raise AssertionError(f"bad RRESP beat={beat}: expected={resp} observed={mresp}")
+                if mlast != expected_payload[3]:
+                    if mlast:
+                        raise AssertionError(f"early RLAST at beat={beat}")
+                    raise AssertionError(f"missing final RLAST at beat={beat}")
+                if not target_seen:
+                    raise AssertionError(f"manager R beat {beat} accepted before target R handshake")
+                if source_check:
+                    model.observe_r_source(manager, target, ident, mlast)
+                model.observe_r(manager, ident, md, mresp, mlast,
+                                addr + beat * 8 if addr is not None and target in (0, 1) else None)
+                prior_manager_data = md
+                manager_seen = True
+            waited += 1
+            if fault == "wrong_rid" and waited >= 8 and not target_seen:
+                raise AssertionError("wrong RID blocked: target RVALID had no accepting target RREADY")
+            if waited >= 100 and not manager_seen:
+                raise AssertionError(
+                    f"R transfer timeout M{manager} ID{ident} beat={beat} "
+                    f"target_seen={target_seen} manager_valid={mv} manager_ready={mr}")
+
+    oracle_updates_after = sum(1 for event in model.events
+                               if event.get("kind") == "r_beat" and
+                               event.get("manager") == manager and event.get("id") == ident and
+                               event.get("epoch") == model.epoch)
+    require_counts = {"expected_beats": expected_count,
+                      "target_handshakes": len(target_handshakes),
+                      "manager_handshakes": len(manager_handshakes),
+                      "oracle_updates": oracle_updates_after - oracle_updates_before}
+    if require_counts["target_handshakes"] != expected_count or \
+            require_counts["manager_handshakes"] != expected_count:
+        raise AssertionError(f"R handshake count mismatch: {require_counts}")
+
+    # Keep RREADY asserted and target RVALID low for a short observation
+    # window. Any extra accepted transfer is reported by the same monitor.
+    for _ in range(post_cycles):
+        trace = await _r_sample_cycle(dut, model, manager, target, None, 0, 1)
+        tv, tr, trid, td, tresp, tlast = trace["pre_edge"]["target"]
+        mv, mr, mid, md, mresp, mlast = trace["pre_edge"]["manager"]
+        arv, arr, arid, araddr, arlen = trace["pre_edge"]["manager_ar"]
+        tarv, tarr, tarid, taraddr, tarlen = trace["pre_edge"]["target_ar"]
+        if tv and tr:
+            raise AssertionError("extra target R handshake after expected RLAST")
+        if mv and mr:
+            model.observe_r(manager, mid, md, mresp, mlast)
+            raise AssertionError("extra manager R handshake after expected RLAST")
+        if pending_ar is not None and arv and arr:
+            if pending_ar_admitted:
+                raise AssertionError("duplicate pending AR handshake")
+            expected_ar_payload = (pending_ar["id"], pending_ar["addr"], pending_ar["len"])
+            if (arid, araddr, arlen) != expected_ar_payload:
+                raise AssertionError(f"pending AR payload mismatch: {(arid, araddr, arlen)} "
+                                     f"!= {expected_ar_payload}")
+            pending_ar_event = {"time_ns": trace["time_ns"], "id": arid, "addr": araddr}
+            model.admit_ar(manager, pending_ar["id"], pending_ar["addr"], pending_ar["len"],
+                           cache=pending_ar["cache"], prot=pending_ar["prot"],
+                           qos=pending_ar["qos"], region=pending_ar["region"])
+            pending_ar_admitted = True
+        if pending_ar is not None and pending_ar_admitted and not pending_ar_target_seen and tarv and tarr:
+            expected_internal = (manager << 4) | pending_ar["id"]
+            if tarid == expected_internal:
+                if (taraddr, tarlen) != (pending_ar["addr"], pending_ar["len"]):
+                    raise AssertionError("pending target AR payload mismatch")
+                model.observe_target_address(
+                    "ar", manager, pending_ar["id"], tarid, target, taraddr, tarlen, 3, 1, 0,
+                    pending_ar["cache"], pending_ar["prot"], pending_ar["qos"], pending_ar["region"])
+                pending_ar_target_seen = True
+    await FallingEdge(dut.ACLK)
+    set_lane(dut.target_rvalid, 1, target, 0)
     set_lane(dut.manager_rready, 1, manager, 0)
+    if pending_ar is not None and pending_ar_admitted:
+        set_lane(dut.manager_arvalid, 1, manager, 0)
+    await Timer(1, unit="ns")
+    _gate3_trace({"boundary": "r_burst_complete", "manager": manager, "id": ident,
+                  "target": target, **require_counts,
+                  "target_payloads": target_handshakes,
+                  "manager_payloads": manager_handshakes,
+                  "pending_ar_admission": pending_ar_event,
+                  "pending_ar_target_seen": pending_ar_target_seen})
+    if pending_ar is not None and (not pending_ar_admitted or not pending_ar_target_seen):
+        raise AssertionError(f"pending AR did not fully progress: admitted={pending_ar_admitted} "
+                             f"target_seen={pending_ar_target_seen}")
+    return require_counts
 
 
 @cocotb.test()
@@ -698,9 +884,9 @@ async def fabric_a_oracle_closure_matrix(dut):
     global _ACTIVE_MODEL
     model = AxiReferenceModel()
     _ACTIVE_MODEL = model
-    trace_path = Path(os.environ["ROOT"]) / "results/raw/gate2_oracle" / "closure_event_trace.jsonl"
+    trace_path = _raw_output_dir() / "closure_event_trace.jsonl"
     trace_path.parent.mkdir(parents=True, exist_ok=True)
-    cocotb.start_soon(Clock(dut.ACLK, 10, units="ns").start())
+    cocotb.start_soon(Clock(dut.ACLK, 10, unit="ns").start())
     await _oracle_reset(dut, model)
     endpoint_memory = {0: EndpointMemory(target=0), 1: EndpointMemory(target=1)}
 
@@ -750,17 +936,23 @@ async def fabric_a_oracle_closure_matrix(dut):
         set_lane(dut.manager_arburst, 2, 0, 1); set_lane(dut.manager_arlock, 1, 0, 0)
         set_lane(dut.manager_arcache, 4, 0, 6); set_lane(dut.manager_arprot, 3, 0, 2)
         set_lane(dut.manager_arqos, 4, 0, 7); set_lane(dut.manager_arregion, 4, 0, 4)
+        await FallingEdge(dut.ACLK)
         set_lane(dut.manager_arvalid, 1, 0, 1)
-    for _ in range(3): assert not get_lane(dut.manager_arready, 1, 0); await cycles(dut)
-    await _return_r(dut, model, 0, 1, 0, 0)
-    assert not get_lane(dut.manager_arready, 1, 0)
-    await cycles(dut)
-    assert get_lane(dut.manager_arready, 1, 0)
-    model.admit_ar(0, 5, addr5, 0, cache=6, prot=2, qos=7, region=4)
-    await cycles(dut); set_lane(dut.manager_arvalid, 1, 0, 0)
-    while not get_lane(dut.target_arvalid, 1, 0): await cycles(dut)
-    model.observe_target_address("ar", 0, 5, get_lane(dut.target_arid, 6, 0), 0, addr5, 0, 3, 1, 0, 6, 2, 7, 4)
-    await cycles(dut)
+    for _ in range(3):
+        await FallingEdge(dut.ACLK)
+        await Timer(1, unit="ns")
+        assert get_lane(dut.manager_arvalid, 1, 0)
+        assert not get_lane(dut.manager_arready, 1, 0), "fifth AR was admitted at full capacity"
+        await RisingEdge(dut.ACLK)
+    pending_ar = {"id": 5, "addr": addr5, "len": 0,
+                  "cache": 6, "prot": 2, "qos": 7, "region": 4}
+    r_counts = await _return_r(dut, model, 0, 1, 0, 0, pending_ar=pending_ar)
+    assert r_counts == {"expected_beats": 1, "target_handshakes": 1,
+                        "manager_handshakes": 1, "oracle_updates": 1}
+    assert not get_lane(dut.manager_arvalid, 1, 0), "accepted fifth AR was not withdrawn"
+    _gate3_trace({"boundary": "d028_ar_recovery", "cycle": model.cycle,
+                  "manager": 0, "id": 5, "address": addr5,
+                  "r_completion_count": 1, "next_cycle_ar_admission": True})
     for ident in (2, 3, 4, 5): await _return_r(dut, model, 0, ident, 0, 0)
     dut._log.info("oracle four-read capacity and D028 recovery PASS")
 
@@ -796,4 +988,61 @@ async def fabric_a_oracle_closure_matrix(dut):
         for event in model.events:
             trace.write(json.dumps(event) + "\n")
     dut._log.info("oracle live-work reset epoch and fresh same-ID reuse PASS")
+    _ACTIVE_MODEL = None
+
+
+@cocotb.test()
+async def fabric_a_oracle_r_edge_safe(dut):
+    """Check one four-beat mapped response from active-edge bus samples."""
+    global _ACTIVE_MODEL, _LAST_MODEL_TIME
+    _LAST_MODEL_TIME = None
+    model = AxiReferenceModel()
+    _ACTIVE_MODEL = model
+    cocotb.start_soon(Clock(dut.ACLK, 10, unit="ns").start())
+    await _oracle_reset(dut, model)
+    manager, ident, target, length = 0, 11, 1, 3
+    addr = address_for(target, 0x980 + ident * 8)
+    fault = os.environ.get("ORACLE_R_FAULT_MODE")
+    await _admit_read_no_response(dut, model, manager, ident, target, length)
+    expected = [model.memories[target].read64(addr + 8 * beat)
+                for beat in range(length + 1)]
+    if fault:
+        expected_message = {
+            "duplicate": "duplicate accepted R beat",
+            "missing": "missing accepted R beat",
+            "bad_rdata": "bad RDATA",
+            "early_rlast": "early RLAST",
+            "missing_rlast": "missing final RLAST",
+            "wrong_rid": "wrong RID",
+        }.get(fault)
+        if expected_message is None:
+            raise AssertionError(f"unsupported ORACLE_R_FAULT_MODE={fault}")
+        try:
+            await _drive_r_burst(dut, model, manager, ident, target, expected, 0, addr,
+                                 source_check=True, fault_mode=fault)
+        except AssertionError as exc:
+            if expected_message not in str(exc):
+                raise AssertionError(
+                    f"fault {fault} failed for an unexpected reason: {exc}") from exc
+            raise AssertionError(f"ORACLE_EXPECTED_FAULT:{fault}:{exc}") from exc
+        raise AssertionError(f"R fault injection went undetected: {fault}")
+
+    unstalled = await _drive_r_burst(dut, model, manager, ident, target, expected,
+                                     0, addr, manager_ready=True)
+    assert unstalled == {"expected_beats": 4, "target_handshakes": 4,
+                         "manager_handshakes": 4, "oracle_updates": 4}
+    model.assert_drained()
+
+    await _oracle_reset(dut, model)
+    await _admit_read_no_response(dut, model, manager, ident, target, length)
+    expected = [model.memories[target].read64(addr + 8 * beat)
+                for beat in range(length + 1)]
+    backpressured = await _drive_r_burst(dut, model, manager, ident, target, expected,
+                                         0, addr, manager_ready=False,
+                                         manager_stall_cycles=3)
+    assert backpressured == {"expected_beats": 4, "target_handshakes": 4,
+                             "manager_handshakes": 4, "oracle_updates": 4}
+    model.assert_drained()
+    dut._log.info("oracle R active-edge regression PASS unstalled=%s backpressured=%s",
+                  unstalled, backpressured)
     _ACTIVE_MODEL = None

@@ -1,0 +1,81 @@
+{
+  "seed": 2750611460,
+  "random_operations": 2048,
+  "accepted_reads": [
+    330,
+    322,
+    340
+  ],
+  "accepted_writes": [
+    346,
+    373,
+    337
+  ],
+  "targets": [
+    870,
+    600,
+    386,
+    192
+  ],
+  "lengths": [
+    120,
+    138,
+    108,
+    143,
+    121,
+    117,
+    133,
+    148,
+    126,
+    119,
+    130,
+    130,
+    135,
+    126,
+    126,
+    128
+  ],
+  "qos": [
+    125,
+    132,
+    126,
+    158,
+    125,
+    132,
+    121,
+    113,
+    142,
+    126,
+    133,
+    116,
+    119,
+    141,
+    122,
+    117
+  ],
+  "aw_w_styles": {
+    "aw_before_w": 345,
+    "ar_then_r": 992,
+    "w_before_aw": 357,
+    "near_cycle": 354
+  },
+  "target_aw_stalls": 956,
+  "target_ar_stalls": 900,
+  "target_w_stalls": 155,
+  "manager_b_stalls": 794,
+  "manager_r_stalls": 741,
+  "response_delays": 1715,
+  "random_max_live_reads": 2,
+  "random_max_live_writes": 2,
+  "random_all_manager_active_cycles": 4839,
+  "random_same_target_contention": 0,
+  "random_same_id_cross_manager": 0,
+  "random_out_of_order_completions": 0,
+  "random_reset_with_live_work": 0,
+  "target_aw_stall_cycles": 1024,
+  "target_ar_stall_cycles": 988,
+  "target_w_stall_cycles": 310,
+  "target_aw_stall_episodes": 956,
+  "target_ar_stall_episodes": 900,
+  "target_w_stall_episodes": 155
+}
