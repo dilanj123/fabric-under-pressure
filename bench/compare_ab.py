@@ -7,6 +7,7 @@ import statistics
 import sys
 from pathlib import Path
 import xml.etree.ElementTree as ET
+import re
 
 
 METRICS = (
@@ -17,6 +18,37 @@ METRICS = (
     "end_to_end_max", "payload_bytes_per_cycle", "max_wall_pending_cycles",
     "max_lost_service_opportunities",
 )
+
+WORKLOADS = tuple(f"W{i:02d}" for i in range(14))
+SEEDS = tuple(f"0xFABC000{i}" for i in range(1, 6))
+FROZEN_WORKLOAD_SHA256 = "31c599caa7344c938b588a0f22404cfcfe5fe53b3ef5fae40a568130cfadfca4"
+ACTIVE_MANAGERS = {
+    "W00": [], "W01": [0], "W02": [1], "W03": [2],
+    "W04": [0, 1, 2], "W05": [0, 1], "W06": [1, 2],
+    **{f"W{i:02d}": [0, 1, 2] for i in range(7, 14)},
+}
+SHARED_MANIFEST_COMPONENTS = ("benchmark_engine", "generator", "workload", "runner", "endpoint")
+MANIFEST_COMPONENTS = SHARED_MANIFEST_COMPONENTS + ("wrapper",)
+HASHED_COMPONENTS = ("benchmark_engine", "generator", "workload", "runner", "wrapper")
+SUMMARY_IDENTITY_FIELDS = (
+    "architecture", "dut_top", "source_manifest_sha256", "run_config_sha256",
+    "benchmark_driver_sha256", "generator_sha256", "workload", "seed",
+    "workload_sha256", "generator_version", "intent_count", "intent_sha256",
+    "active_managers", "completion_count_by_manager",
+    "premeasurement_completions_by_manager", "measured_count_by_manager",
+    "measurement_cycles",
+)
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise ValueError(message)
+
+
+def sha256_text(value: object, context: str) -> str:
+    require(isinstance(value, str) and re.fullmatch(r"[0-9a-f]{64}", value) is not None,
+            f"{context}: expected a lowercase SHA-256")
+    return value
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -29,31 +61,161 @@ def number(value: str):
 
 
 def validate_root(root: Path, arch: str, top: str) -> tuple[dict, list[dict]]:
-    manifest = json.loads((root / "source_manifest.json").read_text())
-    if manifest["architecture"] != arch or manifest["dut_top"] != top:
-        raise SystemExit(f"wrong selected DUT in {root}/source_manifest.json")
-    paths = sorted(root.glob("W*/seed_*/run_meta.json"))
-    if len(paths) != 70:
-        raise SystemExit(f"expected 70 run metadata files under {root}, found {len(paths)}")
+    manifest_path = root / "source_manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    require(manifest.get("architecture") == arch and manifest.get("dut_top") == top,
+            f"{root}: wrong selected DUT in source_manifest.json")
+    require(manifest.get("qualification_only") is False and
+            manifest.get("workloads") == list(WORKLOADS) and manifest.get("seeds") == list(SEEDS),
+            f"{root}: manifest does not declare the frozen W00-W13/five-seed matrix")
+    require(manifest.get("warmup") == 500 and manifest.get("samples") == 5000,
+            f"{root}: manifest sample policy is not 500 warm-up/5000 samples")
+    for component in HASHED_COMPONENTS:
+        record = manifest.get(component)
+        require(isinstance(record, dict) and isinstance(record.get("path"), str),
+                f"{root}: missing {component} manifest path")
+        sha256_text(record.get("sha256"), f"{root}: {component}")
+    require(manifest["workload"]["sha256"] == FROZEN_WORKLOAD_SHA256,
+            f"{root}: workload hash differs from the frozen W00-W13 definition")
+    require(manifest["endpoint"] == {
+        "queue_depth_per_target": 8, "read_start_latency_cycles": 2,
+        "b_response_latency_cycles": 2, "r_rate_beats_per_cycle": 1,
+        "response_order": "per-target FIFO by direction"},
+        f"{root}: endpoint configuration differs from the frozen model")
+    rtl_sources = manifest.get("rtl_sources")
+    require(isinstance(rtl_sources, list) and rtl_sources,
+            f"{root}: missing RTL source manifest")
+    rtl_paths = [item.get("path") for item in rtl_sources if isinstance(item, dict)]
+    require(len(rtl_paths) == len(rtl_sources) and len(rtl_paths) == len(set(rtl_paths)),
+            f"{root}: malformed or duplicate RTL source entries")
+    for item in rtl_sources:
+        sha256_text(item.get("sha256"), f"{root}: RTL {item.get('path')}")
+    selected_path = f"rtl/{top}.sv"
+    other_top = "rtl/axi_fabric_b.sv" if arch == "A" else "rtl/axi_fabric_a.sv"
+    require(selected_path in rtl_paths and other_top not in rtl_paths,
+            f"{root}: RTL manifest does not select only {top}")
+
+    expected_pairs = {(workload, seed) for workload in WORKLOADS for seed in SEEDS}
+    run_dirs = {(p.parent.parent.name, "0x" + p.parent.name.removeprefix("seed_").upper()): p.parent
+                for p in root.glob("W*/seed_*/run_meta.json")}
+    require(set(run_dirs) == expected_pairs,
+            f"{root}: run directory matrix mismatch; missing={sorted(expected_pairs-set(run_dirs))}, "
+            f"extra={sorted(set(run_dirs)-expected_pairs)}")
+    paths = [run_dirs[pair] / "run_meta.json" for pair in sorted(expected_pairs)]
+    source_hash = hashlib_file(manifest_path)
     matrix=[]
+    summary_records = json.loads((root / "run_summary.json").read_text())
+    require(isinstance(summary_records, list), f"{root}: run_summary.json must be a list")
+    summary_by_pair = {}
+    for record in summary_records:
+        require(isinstance(record, dict), f"{root}: malformed run summary record")
+        pair = (record.get("workload"), record.get("seed"))
+        require(pair not in summary_by_pair, f"{root}: duplicate summary pair {pair}")
+        summary_by_pair[pair] = record
+    require(set(summary_by_pair) == expected_pairs,
+            f"{root}: summary matrix mismatch; missing={sorted(expected_pairs-set(summary_by_pair))}, "
+            f"extra={sorted(set(summary_by_pair)-expected_pairs)}")
+    latency_rows = read_csv(root / "latency_throughput.csv")
+    latency_by_key = {}
+    for row in latency_rows:
+        try:
+            key = (row["workload"], row["seed"], int(row["manager"]), row["direction"])
+        except (KeyError, ValueError) as exc:
+            raise ValueError(f"{root}: malformed latency row identity: {row}") from exc
+        require(key not in latency_by_key, f"{root}: duplicate latency row {key}")
+        latency_by_key[key] = row
+    required_metrics = set(METRICS) | {"samples", "measurement_cycles", "payload_bytes"}
     for path in paths:
         meta=json.loads(path.read_text())
         cfg=json.loads((path.parent/"run_config.json").read_text())
+        pair = (path.parent.parent.name, "0x" + path.parent.name.removeprefix("seed_").upper())
+        summary = summary_by_pair[pair]
+        require(path.parent.parent.name == meta.get("workload") == cfg.get("workload") == summary.get("workload"),
+                f"{path.parent}: workload path/metadata/config/summary mismatch")
+        require(pair[1] == meta.get("seed") == cfg.get("seed") == summary.get("seed"),
+                f"{path.parent}: seed path/metadata/config/summary mismatch")
         xml=ET.parse(path.parent/"results.xml").getroot()
         cases=list(xml.iter("testcase"))
-        if (meta["architecture"]!=arch or meta["dut_top"]!=top or
-            cfg["architecture"]!=arch or cfg["dut_top"]!=top or
-            meta["qualification_only"] or cfg["qualification_only"]):
-            raise SystemExit(f"architecture/test configuration mismatch: {path.parent}")
-        if meta["retained_completions_per_manager"]!=5000 or meta["warmup_per_manager"]!=500:
-            raise SystemExit(f"sample contract mismatch: {path.parent}")
-        expected=[5000 if m in meta["active_managers"] else 0 for m in range(3)]
-        if meta["measured_count_by_manager"]!=expected:
-            raise SystemExit(f"measured quota mismatch: {path.parent}")
-        if len(cases)!=1 or list(xml.iter("failure")) or list(xml.iter("error")) or list(xml.iter("skipped")):
-            raise SystemExit(f"JUnit is not one passing testcase: {path.parent}/results.xml")
-        if meta["source_manifest_sha256"]!=cfg["source_manifest_sha256"]:
-            raise SystemExit(f"source manifest mismatch: {path.parent}")
+        suites = list(xml.iter("testsuite"))
+        require(meta.get("architecture")==arch and meta.get("dut_top")==top and
+                cfg.get("architecture")==arch and cfg.get("dut_top")==top and
+                meta.get("qualification_only") is False and cfg.get("qualification_only") is False,
+                f"{path.parent}: architecture/test configuration mismatch")
+        require(meta.get("source_manifest_sha256")==cfg.get("source_manifest_sha256")==source_hash==
+                summary.get("source_manifest_sha256"),
+                f"{path.parent}: source manifest hash mismatch")
+        cfg_hash = hashlib_file(path.parent / "run_config.json")
+        require(meta.get("run_config_sha256")==cfg_hash==summary.get("run_config_sha256"),
+                f"{path.parent}: run configuration hash mismatch")
+        for field, value in (("benchmark_driver_sha256", manifest["benchmark_engine"]["sha256"]),
+                             ("generator_sha256", manifest["generator"]["sha256"]),
+                             ("workload_sha256", manifest["workload"]["sha256"])):
+            require(meta.get(field)==summary.get(field)==value,
+                    f"{path.parent}: {field} does not match its source manifest")
+        require(meta.get("warmup_per_manager")==cfg.get("warmup")==manifest["warmup"] and
+                meta.get("retained_completions_per_manager")==cfg.get("samples")==manifest["samples"],
+                f"{path.parent}: sample contract mismatch")
+        active_managers = meta.get("active_managers")
+        require(isinstance(active_managers, list) and
+                all(type(manager) is int and manager in (0, 1, 2) for manager in active_managers) and
+                len(active_managers) == len(set(active_managers)) and
+                active_managers == summary.get("active_managers"),
+                f"{path.parent}: invalid active manager list")
+        expected_active = ACTIVE_MANAGERS[pair[0]]
+        require(active_managers == expected_active,
+                f"{path.parent}: active managers {active_managers} do not match {pair[0]} policy "
+                f"{expected_active}")
+        expected_counts=[manifest["samples"] if m in active_managers else 0 for m in range(3)]
+        require(meta.get("measured_count_by_manager")==expected_counts==summary.get("measured_count_by_manager"),
+                f"{path.parent}: measured quota mismatch")
+        require(len(cases)==1 and len(suites)==1 and suites[0].get("tests", "1") == "1" and
+                suites[0].get("failures", "0") == "0" and suites[0].get("errors", "0") == "0" and
+                suites[0].get("skipped", "0") == "0" and
+                not list(xml.iter("failure")) and not list(xml.iter("error")) and
+                not list(xml.iter("skipped")),
+                f"{path.parent}/results.xml: expected one passing testcase")
+        for field in SUMMARY_IDENTITY_FIELDS:
+            require(field in meta and field in summary,
+                    f"{path.parent}: missing required summary field {field}")
+            require(meta[field] == summary[field],
+                    f"{path.parent}: metadata and summary disagree on {field}")
+        for field in ("intent_sha256", "transaction_trace_sha256"):
+            sha256_text(summary.get(field), f"{path.parent}: {field}")
+        expected_latency_keys = {(pair[0], pair[1], manager, direction)
+                                 for manager in meta["active_managers"]
+                                 for direction in ("read", "write")}
+        actual_latency_keys = {key for key in latency_by_key if key[:2] == pair}
+        require(actual_latency_keys == expected_latency_keys,
+                f"{path.parent}: latency row set mismatch; expected={sorted(expected_latency_keys)}, "
+                f"found={sorted(actual_latency_keys)}")
+        for key in expected_latency_keys:
+            row = latency_by_key[key]
+            require(row.get("architecture")==arch and row.get("measurement_cycles")==str(meta["measurement_cycles"]),
+                    f"{path.parent}: latency row architecture/window mismatch for {key}")
+            require(required_metrics.issubset(row),
+                    f"{path.parent}: missing latency fields for {key}: {sorted(required_metrics-set(row))}")
+            try:
+                samples = int(row["samples"])
+                require(samples >= 0, f"{path.parent}: negative sample count for {key}")
+                for metric in METRICS:
+                    value = number(row[metric])
+                    require(samples == 0 or value is not None,
+                            f"{path.parent}: missing {metric} with nonzero samples for {key}")
+                int(row["payload_bytes"])
+            except (ValueError, TypeError) as exc:
+                raise ValueError(f"{path.parent}: malformed required latency values for {key}: {exc}") from exc
+        for manager in meta["active_managers"]:
+            direction_samples = {
+                direction: int(latency_by_key[(pair[0], pair[1], manager, direction)]["samples"])
+                for direction in ("read", "write")
+            }
+            require(all(samples > 0 for samples in direction_samples.values()),
+                    f"{path.parent}: M{manager} missing measured samples for a required direction: "
+                    f"{direction_samples}")
+            measured_samples = sum(direction_samples.values())
+            require(measured_samples == manifest["samples"],
+                    f"{path.parent}: M{manager} read/write rows total {measured_samples}, "
+                    f"expected {manifest['samples']} retained completions")
         matrix.append({"architecture":arch,"workload":meta["workload"],"seed":meta["seed"],
                        "dut_top":top,"xml":"PASS","intent_sha256":meta["intent_sha256"],
                        "active_managers":";".join(map(str,meta["active_managers"])),
@@ -63,16 +225,60 @@ def validate_root(root: Path, arch: str, top: str) -> tuple[dict, list[dict]]:
     return manifest,matrix
 
 
+def hashlib_file(path: Path) -> str:
+    import hashlib
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def validate_shared_manifests(amanifest: dict, bmanifest: dict) -> None:
+    for component in SHARED_MANIFEST_COMPONENTS:
+        if amanifest[component] != bmanifest[component]:
+            raise ValueError(f"A/B shared benchmark component differs: {component}")
+    if amanifest["wrapper"]["path"] != bmanifest["wrapper"]["path"]:
+        raise ValueError("A/B wrapper source path differs")
+    if amanifest["wrapper"]["sha256"] != bmanifest["wrapper"]["sha256"]:
+        # Recorded historical exception: only a comment-only edit separated
+        # the cocotb runs; the wrapper is not compiled by that simulation.
+        allowed = (
+            amanifest["wrapper"]["sha256"] == "41391b0b5c84c0637732bb257c407a8ec60a433e5de1ba74f49312ddf628b234" and
+            bmanifest["wrapper"]["sha256"] == "8c4a44d4db1947399b8722a5cb6b1cefc643ce17470955ff46b4fc6900fd9cd5")
+        if not allowed:
+            raise ValueError("A/B wrapper hash differs without the documented historical exception")
+
+
+def validate_intent_pair_records(arows: list[dict], brows: list[dict]) -> dict:
+    expected_pairs = {(w, s) for w in WORKLOADS for s in SEEDS}
+    def index(rows, arch):
+        indexed = {}
+        for row in rows:
+            pair = (row.get("workload"), row.get("seed"))
+            if pair in indexed:
+                raise ValueError(f"duplicate {arch} run detail pair {pair}")
+            indexed[pair] = row
+        if set(indexed) != expected_pairs:
+            raise ValueError(f"{arch} run detail set is not the exact frozen 70-pair matrix")
+        return indexed
+    aa, bb = index(arows, "A"), index(brows, "B")
+    for pair in sorted(expected_pairs):
+        for field in ("intent_sha256", "generator_sha256", "workload_sha256", "generator_version"):
+            if aa[pair].get(field) != bb[pair].get(field):
+                raise ValueError(f"mismatched A/B {field} for {pair}")
+        sha256_text(aa[pair].get("intent_sha256"), f"A intent plan {pair}")
+        sha256_text(aa[pair].get("generator_sha256"), f"A generator {pair}")
+        sha256_text(aa[pair].get("workload_sha256"), f"A workload {pair}")
+    return aa
+
+
 def main() -> None:
     aroot, broot, out = map(Path, sys.argv[1:4])
     amanifest, amatrix = validate_root(aroot,"A","axi_fabric_a")
     bmanifest, bmatrix = validate_root(broot,"B","axi_fabric_b")
-    for component in ("benchmark_engine","generator","workload","runner","endpoint"):
-        if amanifest[component] != bmanifest[component]:
-            raise SystemExit(f"A/B shared benchmark component differs: {component}")
+    validate_shared_manifests(amanifest, bmanifest)
     arows, brows = read_csv(aroot / "latency_throughput.csv"), read_csv(broot / "latency_throughput.csv")
     key = lambda r: (r["workload"], r["seed"], int(r["manager"]), r["direction"])
     aa, bb = {key(r): r for r in arows}, {key(r): r for r in brows}
+    if len(aa) != len(arows) or len(bb) != len(brows):
+        raise SystemExit("duplicate A/B latency metric rows")
     if aa.keys() != bb.keys():
         raise SystemExit(f"A/B manager-direction run sets differ: A={len(aa)} B={len(bb)}")
 
@@ -167,16 +373,14 @@ def main() -> None:
 
     adetails = json.loads((aroot / "run_summary.json").read_text())
     bdetails = json.loads((broot / "run_summary.json").read_text())
-    detail_map = {(d["workload"], d["seed"]): d for d in adetails}
+    try:
+        detail_map = validate_intent_pair_records(adetails, bdetails)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
     detail_b = {(d["workload"], d["seed"]): d for d in bdetails}
-    if detail_map.keys() != detail_b.keys() or len(detail_map) != 70:
-        raise SystemExit("run detail sets are not the complete 70 matched workload/seed pairs")
     details_out = []
     for k in sorted(detail_map):
         a, b = detail_map[k], detail_b[k]
-        for field in ("intent_sha256", "generator_sha256", "workload_sha256", "generator_version"):
-            if a[field] != b[field]:
-                raise SystemExit(f"mismatched A/B {field} for {k}")
         details_out.append({"workload": k[0], "seed": k[1],
                             "A_source_manifest_sha256": a["source_manifest_sha256"],
                             "B_source_manifest_sha256": b["source_manifest_sha256"],
