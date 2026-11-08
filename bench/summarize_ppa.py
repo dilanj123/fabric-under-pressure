@@ -1,4 +1,4 @@
-"""Compact synthesis and routed timing summary for the frozen PPA run."""
+"""Summarize the frozen synthesis and routed timing reports."""
 import csv
 import json
 from pathlib import Path
@@ -6,35 +6,93 @@ import re
 import sys
 
 
-def direct_synth_counts(path: Path) -> dict:
-    text = path.read_text(errors="replace")
-    config = path.parents[1] / "run_config.txt"
-    top = "axi_fabric_a"
-    if config.exists():
-        for line in config.read_text().splitlines():
-            if line.startswith("dut_top="):
-                top = line.split("=", 1)[1].strip()
-                break
-    blocks = re.findall(rf"=== {re.escape(top)} ===\n(.*?)(?=\n===|\nWarnings:)", text, re.S)
-    if not blocks:
-        return {}
-    return {name: int(count) for count, name in
-            re.findall(r"^\s*(\d+)\s+(LUT4|TRELLIS_FF|CCU2C|PFUMX|DP16KD|TRELLIS_RAMW)\s*$",
-                       blocks[-1], re.M)}
+REQUIRED_RESOURCES = {"LUT4", "TRELLIS_FF"}
+OPTIONAL_RESOURCES = {"CCU2C", "PFUMX", "DP16KD", "TRELLIS_RAMW"}
+RESOURCE_NAMES = REQUIRED_RESOURCES | OPTIONAL_RESOURCES
 
 
-def wrapped_synth_counts(path: Path) -> dict:
+class PPAReportError(ValueError):
+    """A Yosys report cannot be safely summarized."""
+
+
+def _resource_counts(block: str, context: str) -> dict:
+    counts = {}
+    for line in block.splitlines():
+        stripped = line.strip()
+        # A mention of a known cell type that is not a count row is malformed,
+        # rather than evidence of zero use.
+        if any(re.search(rf"\b{re.escape(name)}\b", stripped) for name in RESOURCE_NAMES):
+            match = re.fullmatch(r"(\d+)\s+(LUT4|TRELLIS_FF|CCU2C|PFUMX|DP16KD|TRELLIS_RAMW)", stripped)
+            if not match:
+                raise PPAReportError(f"{context}: malformed resource count line: {stripped!r}")
+            count, name = int(match.group(1)), match.group(2)
+            if name in counts:
+                raise PPAReportError(f"{context}: duplicate resource count for {name}")
+            counts[name] = count
+    missing = REQUIRED_RESOURCES - counts.keys()
+    if missing:
+        raise PPAReportError(f"{context}: missing required resource counts {sorted(missing)}")
+    for name in OPTIONAL_RESOURCES:
+        counts.setdefault(name, 0)
+    return {name: counts[name] for name in sorted(RESOURCE_NAMES)}
+
+
+def direct_synth_counts(path: Path, expected_top: str) -> dict:
     text = path.read_text(errors="replace")
-    blocks = re.findall(r"=== design hierarchy ===\n(.*?)(?=\nWarnings:)", text, re.S)
+    if re.search(r"(?:ERROR:|synthesis failed)", text, re.IGNORECASE):
+        raise PPAReportError(f"{path}: synthesis log reports failure")
+    blocks = re.findall(rf"^=== {re.escape(expected_top)} ===\n(.*?)(?=^=== |^Warnings:)",
+                        text, re.S | re.M)
     if not blocks:
-        return {}
-    return {name: int(count) for count, name in
-            re.findall(r"^\s*(\d+)\s+(LUT4|TRELLIS_FF|CCU2C|PFUMX|DP16KD|TRELLIS_RAMW)\s*$",
-                       blocks[-1], re.M)}
+        wrong = re.findall(r"^=== (axi_fabric_[ab]) ===", text, re.M)
+        if wrong:
+            raise PPAReportError(f"{path}: expected DUT top {expected_top}, found {wrong[-1]}")
+        raise PPAReportError(f"{path}: missing Yosys report section for DUT top {expected_top}")
+    candidates = [block for block in blocks if "Local Count, excluding submodules." in block and
+                  re.search(r"^\s*\d+\s+cells\s*$", block, re.M)]
+    if not candidates:
+        raise PPAReportError(f"{path}: unsupported Yosys local-stat report format for {expected_top}")
+    return _resource_counts(candidates[-1], f"{path} ({expected_top})")
+
+
+def wrapped_synth_counts(path: Path, expected_top: str) -> dict:
+    text = path.read_text(errors="replace")
+    if re.search(r"(?:ERROR:|synthesis failed)", text, re.IGNORECASE):
+        raise PPAReportError(f"{path}: synthesis log reports failure")
+    blocks = re.findall(r"^=== design hierarchy ===\n(.*?)(?=^=== |^Warnings:)",
+                        text, re.S | re.M)
+    if not blocks:
+        raise PPAReportError(f"{path}: missing Yosys design hierarchy report section")
+    block = blocks[-1]
+    if "Count including submodules." not in block or "arch_fabric_wrapper" not in block:
+        raise PPAReportError(f"{path}: unsupported or wrong wrapped hierarchy report")
+    if not re.search(rf"^\s*\d+\s+{re.escape(expected_top)}\s*$", block, re.M):
+        raise PPAReportError(f"{path}: wrapped hierarchy does not contain expected DUT {expected_top}")
+    if not re.search(r"^\s*\d+\s+cells\s*$", block, re.M):
+        raise PPAReportError(f"{path}: wrapped hierarchy has no total cell count")
+    return _resource_counts(block, f"{path} (arch_fabric_wrapper containing {expected_top})")
+
+
+def _read_run_config(root: Path) -> tuple[str, str]:
+    config = root / "run_config.txt"
+    if not config.is_file():
+        raise PPAReportError(f"{root}: missing run_config.txt; refusing to infer DUT top")
+    values = {}
+    for line in config.read_text().splitlines():
+        if "=" in line:
+            key, value = line.split("=", 1)
+            values[key.strip()] = value.strip()
+    arch = values.get("architecture")
+    top = values.get("dut_top")
+    expected = {"A": "axi_fabric_a", "B": "axi_fabric_b"}
+    if arch not in expected or top != expected[arch]:
+        raise PPAReportError(f"{config}: wrong or malformed DUT selection ({arch!r}, {top!r})")
+    return arch, top
 
 
 def main():
     root = Path(sys.argv[1])
+    _, top = _read_run_config(root)
     matrix = list(csv.DictReader((root / "route_matrix.csv").open()))
     rows = []
     for row in matrix:
@@ -85,8 +143,8 @@ def main():
         "route_attempts": len(rows), "all_seed_frequency_results": all_seed,
         "highest_all_seed_timing_clean_mhz": max(
             (x["frequency_mhz"] for x in all_seed if x["all_seeds_timing_clean"]), default=None),
-        "direct_fabric_synthesis": direct_synth_counts(root / "direct/yosys.log"),
-        "wrapper_synthesis": wrapped_synth_counts(root / "wrapped/yosys.log"),
+        "direct_fabric_synthesis": direct_synth_counts(root / "direct/yosys.log", top),
+        "wrapper_synthesis": wrapped_synth_counts(root / "wrapped/yosys.log", top),
         "route_summary_csv": str(summary),
     }
     (root / "ppa_summary.json").write_text(json.dumps(payload, indent=2) + "\n")

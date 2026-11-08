@@ -1,0 +1,134 @@
+{
+  "simulator": "Verilator 5.053, Cocotb 2.1.0 qualified OSS CAD Suite",
+  "testcase_result": "2 PASS, 0 FAIL, 0 SKIP",
+  "source": "temporary instrumented copy of tb/cocotb/test_axi_fabric_a_oracle.py; repository source restored unchanged",
+  "full_edge_trace_sha256": "1238038208b47dbeff9e66eb942d08c32bb70ac4c7aa1b3f09e47b86eeaca87a",
+  "window_file": "results/raw/portfolio_audit_p2/oracle_edge_correlation_window.jsonl",
+  "expected_response_beats": 4,
+  "sampled_target_R_handshakes_for_M0_ID11": 6,
+  "sampled_manager_R_handshakes_for_M0_ID11": 6,
+  "oracle_R_beat_updates_for_M0_ID11": 4,
+  "target_R_handshakes": [
+    {
+      "time_ns": 11420,
+      "target": "S1",
+      "id": 11,
+      "rdata": "0x9000010000000b00",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11490,
+      "target": "S1",
+      "id": 11,
+      "rdata": "0x9000010000000b01",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11500,
+      "target": "S1",
+      "id": 11,
+      "rdata": "0x9000010000000b01",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11520,
+      "target": "S1",
+      "id": 11,
+      "rdata": "0x9000010000000b02",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11530,
+      "target": "S1",
+      "id": 11,
+      "rdata": "0x9000010000000b02",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11550,
+      "target": "S1",
+      "id": 11,
+      "rdata": "0x9000010000000b03",
+      "rlast": 1
+    }
+  ],
+  "manager_R_handshakes": [
+    {
+      "time_ns": 11470,
+      "manager": "M0",
+      "id": 11,
+      "rdata": "0x9000010000000b00",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11500,
+      "manager": "M0",
+      "id": 11,
+      "rdata": "0x9000010000000b01",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11510,
+      "manager": "M0",
+      "id": 11,
+      "rdata": "0x9000010000000b01",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11530,
+      "manager": "M0",
+      "id": 11,
+      "rdata": "0x9000010000000b02",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11540,
+      "manager": "M0",
+      "id": 11,
+      "rdata": "0x9000010000000b02",
+      "rlast": 0
+    },
+    {
+      "time_ns": 11560,
+      "manager": "M0",
+      "id": 11,
+      "rdata": "0x9000010000000b03",
+      "rlast": 1
+    }
+  ],
+  "oracle_updates": [
+    {
+      "cycle": 52,
+      "manager": 0,
+      "id": 11,
+      "beat": 0,
+      "rdata": "0x9000010000000b00",
+      "rlast": 0
+    },
+    {
+      "cycle": 55,
+      "manager": 0,
+      "id": 11,
+      "beat": 1,
+      "rdata": "0x9000010000000b01",
+      "rlast": 0
+    },
+    {
+      "cycle": 58,
+      "manager": 0,
+      "id": 11,
+      "beat": 2,
+      "rdata": "0x9000010000000b02",
+      "rlast": 0
+    },
+    {
+      "cycle": 61,
+      "manager": 0,
+      "id": 11,
+      "beat": 3,
+      "rdata": "0x9000010000000b03",
+      "rlast": 1
+    }
+  ],
+  "interpretation": "Target and manager R handshakes contain duplicate presentations of beats 1 and 2 on adjacent active edges; oracle updates once per planned beat and does not account for the duplicate sampled handshakes. This is a reproduced edge-correlation/stimulus issue in the test helper path, not proof of a production RTL defect."
+}
