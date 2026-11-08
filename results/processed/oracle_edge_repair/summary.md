@@ -4,6 +4,23 @@
 
 The Gate-2 cocotb R response helper could replay an accepted beat. In the historical M0/S1, ID 11, LEN=3 diagnostic, the intended response had four beats, but the recorded public interfaces accepted six beats each. Beats 1 and 2 were each accepted twice; the helper advanced its reference-model loop four times because it advanced by intended beat rather than by sampled transfer. This was a testbench stimulus/oracle-correlation defect. No production RTL defect was reproduced.
 
+The independent historical trace recorded the following active-edge transfers:
+
+| Sim time | Target R accepted | Manager R accepted | Oracle beat update |
+|---:|---|---|---|
+| 11,420 ns | beat 0, `0x9000010000000b00` | — | — |
+| 11,470 ns | — | beat 0 | beat 0 (cycle 52) |
+| 11,490 ns | beat 1, `0x9000010000000b01` | — | — |
+| 11,500 ns | duplicate beat 1 | beat 1 | beat 1 (cycle 55) |
+| 11,510 ns | — | duplicate beat 1 | — |
+| 11,520 ns | beat 2, `0x9000010000000b02` | — | — |
+| 11,530 ns | duplicate beat 2 | beat 2 | beat 2 (cycle 58) |
+| 11,540 ns | — | duplicate beat 2 | — |
+| 11,550 ns | beat 3, `0x9000010000000b03`, RLAST | — | — |
+| 11,560 ns | — | beat 3, RLAST | beat 3 (cycle 61) |
+
+The historical recorder saw the sampled bus handshakes; the loss was in how the driver/oracle advanced relative to them, not a demonstrated edge-monitor capture error. The adjacent fifth-AR assertion had a separate post-edge READY sampling error, which the repair corrects.
+
 The replacement R driver presents data before the active edge and holds the complete R payload until sampled target `RVALID && RREADY`. Each edge snapshot independently counts target and manager transfers. The oracle receives each manager beat only after that sampled handshake, while target-source observation is recorded independently. The focused LEN=3 case uses distinct data per beat and checks exact order, RID, RRESP, RLAST, four target accepts, four manager accepts, four oracle updates, model retirement, and two post-completion cycles without an extra transfer.
 
 | Case | Target R accepts | Manager R accepts | Oracle R updates | Result |
