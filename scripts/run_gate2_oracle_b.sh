@@ -3,10 +3,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 source "${ROOT}/scripts/oss_cad_env.sh"
-OUT="$ROOT/results/raw/gate2_oracle_b"
+OUT="${GATE2_ORACLE_B_OUT:-$ROOT/results/raw/gate2_oracle_b}"
 mkdir -p "$OUT"
 export PYTHONPATH="$ROOT/tb/model:$ROOT/tb/cocotb:$ROOT/tb/random:$ROOT${PYTHONPATH:+:$PYTHONPATH}"
 export ROOT OUT
+export GATE3_BOUNDARY_TRACE="${GATE3_BOUNDARY_TRACE:-$OUT/r_edge_trace.jsonl}"
 export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
 export LIBPYTHON_LOC="${LIBPYTHON_LOC:-$(find "${OSS_CAD_SUITE_LIB}" -maxdepth 1 -name 'libpython*.dylib' -print -quit)}"
 export DYLD_LIBRARY_PATH="${OSS_CAD_SUITE_LIB}${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
@@ -38,11 +39,12 @@ python3 - "$OUT/results.xml" <<'PY'
 import sys,xml.etree.ElementTree as ET
 r=ET.parse(sys.argv[1]).getroot(); s=r.find('testsuite') or r
 cases=s.findall('.//testcase')
-assert len(cases)==2
+assert len(cases)==3
 assert s.attrib.get('failures','0')=='0' and s.attrib.get('errors','0')=='0' and s.attrib.get('skipped','0')=='0'
 assert all(c.find('failure') is None and c.find('error') is None for c in cases)
 PY
 for marker in \
+  'oracle R active-edge regression PASS' \
   'oracle four-write capacity and D028 recovery PASS' \
   'oracle four-read capacity and D028 recovery PASS' \
   'oracle same-visible-ID read concurrency PASS' \

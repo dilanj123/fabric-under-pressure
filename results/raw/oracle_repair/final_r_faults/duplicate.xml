@@ -1,0 +1,14 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1794179630" />
+    <testcase name="fabric_a_s3_oracle" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="294" time="0" sim_time_ns="0" ratio_time="0">
+      <skipped />
+    </testcase>
+    <testcase name="fabric_a_oracle_closure_matrix" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="882" time="0" sim_time_ns="0" ratio_time="0">
+      <skipped />
+    </testcase>
+    <testcase name="fabric_a_oracle_r_edge_safe" classname="test_axi_fabric_a_oracle" file="/Users/Dilan/Projects/fabric-under-pressure/tb/cocotb/test_axi_fabric_a_oracle.py" lineno="994" time="0.013552188873291016" sim_time_ns="160.0" ratio_time="11806.210900390557">
+      <failure error_type="AssertionError" error_msg="ORACLE_EXPECTED_FAULT:duplicate:duplicate accepted R beat: M0 ID11 beat=2" />
+    </testcase>
+  </testsuite>
+</testsuites>

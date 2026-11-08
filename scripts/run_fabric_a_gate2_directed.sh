@@ -5,7 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 source "${ROOT_DIR}/scripts/oss_cad_env.sh"
 
-OUT="$ROOT_DIR/results/raw/fabric_a_gate2_directed"
+OUT="${FABRIC_A_GATE2_OUT:-$ROOT_DIR/results/raw/fabric_a_gate2_directed}"
 mkdir -p "$OUT"
 RTL=(
   rtl/fabric_addr_map_pkg.sv rtl/axi_address_decoder.sv rtl/axi_request_legal.sv

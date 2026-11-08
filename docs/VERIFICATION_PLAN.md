@@ -19,6 +19,12 @@ B uses a separate `axi_fabric_b` top and B-specific AW/AR target paths/scheduler
 ## Independent checking
 A project-owned Python transaction/reference model records manager, target, ID, address, length, size, data/strobes, acceptance cycle, expected route and expected response. It models the architectural contract, not RTL internals.
 
+### Gate-2 R handshake correlation repair
+
+The Gate-2 LEN=3 oracle regression now drives each target R beat before the active edge and holds it until a sampled target `RVALID && RREADY`. A cycle snapshot independently checks target and manager payloads and counts; `observe_r` is called only for an accepted manager beat. The test compares the pre-edge snapshot with the immediate `RisingEdge` sample, then uses `ReadOnly` only for post-edge diagnostics because registered READY/VALID values may already have changed there. Under the qualified Verilator 5.053/Cocotb 2.1 setup, unstalled and manager-backpressured M0/S1/ID11 cases both produce exactly four target handshakes, four manager handshakes and four oracle updates. Duplicate, missing, bad-data, early/missing RLAST and wrong-RID injections are each rejected. Details and raw traces are indexed in `results/processed/oracle_edge_repair/summary.md`.
+
+The same review corrected the fifth-pending-AR capacity check to sample `ARVALID && ARREADY` at the edge rather than infer admission from post-edge READY. This is a testbench sampling correction; no RTL or formal assumption changed. Legacy AW/W/B helpers were inspected and remain outside the focused central R monitor.
+
 ## Required detection
 Loss, duplication, misrouting, bad ID, bad data, bad RESP, bad LAST, ordering violations and stale responses after reset.
 

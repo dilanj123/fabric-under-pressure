@@ -320,3 +320,14 @@ This closes the hand-written directed integration pass only. The independent Pyt
 |---|---|---|---|---|
 | AUD-001 | AUDIT | Gate-5 baseline file, raw-artifact, duplicate and claim/evidence inventories were produced; 1,110 tracked files and 827 raw files reviewed | `portfolio_audit/audit_findings.md`, `generated/` | PASS; duplicate raw evidence retained because no durable external archive was available |
 | TOOL-001 | REPRO | Shell regressions select and version-check OSS CAD Suite 20260920 through a configurable installation root | `scripts/oss_cad_env.sh`, `portfolio_audit/pr2_tooling.md`, `portfolio_audit/tooling_script_hashes.csv` | PASS; A/B directed, Gate-2, integration, formal and six-workload-per-architecture qualification commands completed |
+
+## Gate-2 R handshake correlation repair
+
+The earlier G2-O001–G2-O004 entries record the original closure run and remain historical evidence; they did not count every accepted R beat in the subsequently isolated LEN=3 correlation case. The following focused requalification supersedes that limited claim for the repaired helper without erasing the original record.
+
+| ID | Class | Claim | Evidence | Status |
+|---|---|---|---|---|
+| G2-R001 | SIM/TRACE | M0/S1/ID11 LEN=3 now produces exactly four target R accepts, four manager R accepts and four oracle updates in both unstalled and manager-backpressured cases; two post-completion cycles show no extra transfer | `results/raw/oracle_repair/focused_R_current_A/r_edge_trace.jsonl`, `results/raw/oracle_repair/focused_R_current_A/results.xml`, `results/raw/oracle_repair/final_gate2_A/results.xml` | PASS; exact payload order, RID, RESP and single final RLAST checked; complete closure XML has no skips |
+| G2-R002 | SIM/EXPECTED-FAIL/UNIT | Driver-boundary injections detect duplicate, missing, bad-RDATA, early-RLAST, missing-final-RLAST and blocked wrong-RID conditions; separate model unit tests directly reject malformed R events. Existing DUT-facing bad-RDATA sensitivity remains active | `results/processed/oracle_edge_repair/fault_sensitivity_summary.txt`, individual fault XMLs under `results/raw/oracle_repair/final_r_faults/`, `results/raw/oracle_repair/final_gate2_A/fault_sensitivity_result.log`, `final_gate2_A/pytest_oracle_model.log` | PASS sensitivity; boundary-driver checks and model checks are distinct |
+| G2-R003 | SIM | Gate-2 A oracle closure, B oracle matrix, A/B directed tests and five-seed 512/2048 random functional suites were rerun with the repaired shared helper | `results/processed/oracle_edge_repair/summary.md`, `results/raw/oracle_repair/` | PASS; no RTL/formal/benchmark source or processed result changed |
+| G2-R004 | REVIEW | Independent patch review checked Cocotb phase sampling, handshake counting, AR recovery, fault-test interpretation and scope | `portfolio_audit/oracle_repair_independent_review.md` | PASS with documented limits; reviewer did not rerun simulations |

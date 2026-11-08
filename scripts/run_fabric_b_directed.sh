@@ -3,7 +3,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 source "${ROOT_DIR}/scripts/oss_cad_env.sh"
-OUT="$ROOT_DIR/results/raw/fabric_b_directed"
+OUT="${FABRIC_B_DIRECTED_OUT:-$ROOT_DIR/results/raw/fabric_b_directed}"
 mkdir -p "$OUT"
 RTL=(
   rtl/fabric_addr_map_pkg.sv rtl/axi_address_decoder.sv rtl/axi_request_legal.sv

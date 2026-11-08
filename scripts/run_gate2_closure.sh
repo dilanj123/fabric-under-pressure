@@ -5,10 +5,11 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 GIT_COMMIT="$(git rev-parse HEAD)"
 source "${ROOT}/scripts/oss_cad_env.sh"
-OUT="$ROOT/results/raw/gate2_oracle"
+OUT="${GATE2_ORACLE_OUT:-$ROOT/results/raw/gate2_oracle}"
 mkdir -p "$OUT"
 export PYTHONPATH="$ROOT/tb/model${PYTHONPATH:+:$PYTHONPATH}"
-export ROOT
+export ROOT OUT
+export GATE3_BOUNDARY_TRACE="${GATE3_BOUNDARY_TRACE:-$OUT/r_edge_trace.jsonl}"
 export CXXFLAGS="${CXXFLAGS:-} -std=c++17"
 export COCOTB_RANDOM_SEED="${COCOTB_RANDOM_SEED:-0xA0C20001}"
 # Verilator's macOS launcher loads Python dynamically.  Keep the qualified
@@ -31,15 +32,15 @@ ln -sfn "${OSS_CAD_SUITE_LIB}" "$OUT/lib"
 } >"$OUT/gate2_closure.log"
 
 python3 -m unittest -v tb/model/test_axi_reference_model.py >"$OUT/pytest_oracle_model.log" 2>&1
-scripts/run_fabric_a_gate2_directed.sh >"$OUT/directed_regression.log" 2>&1
+FABRIC_A_GATE2_OUT="$OUT/directed" scripts/run_fabric_a_gate2_directed.sh >"$OUT/directed_regression.log" 2>&1
 
-python3 - <<'PY' >"results/raw/gate2_oracle/cocotb_build.log" 2>&1
+python3 - <<'PY' >"$OUT/cocotb_build.log" 2>&1
 import os
 from pathlib import Path
 from cocotb_tools.runner import get_runner
 
 root = Path(os.environ["ROOT"])
-out = root / "results/raw/gate2_oracle"
+out = Path(os.environ["OUT"])
 rtl = [root / p for p in [
     "rtl/fabric_addr_map_pkg.sv", "rtl/axi_address_decoder.sv", "rtl/axi_request_legal.sv",
     "rtl/axi_outstanding_tracker.sv", "rtl/axi_write_owner.sv", "rtl/axi_write_state_bank.sv",
@@ -73,6 +74,7 @@ for marker in \
   "oracle deterministic AW/AR/W/B/R backpressure PASS" \
   "oracle four-write capacity and D028 recovery PASS" \
   "oracle four-read capacity and D028 recovery PASS" \
+  "oracle R active-edge regression PASS" \
   "oracle same-visible-ID read concurrency PASS" \
   "oracle distinct-ID out-of-order B/R PASS" \
   "oracle live-work reset epoch and fresh same-ID reuse PASS"; do
@@ -110,7 +112,7 @@ import os
 from pathlib import Path
 from cocotb_tools.runner import get_runner
 root = Path(os.environ["ROOT"])
-out = root / "results/raw/gate2_oracle"
+out = Path(os.environ["OUT"])
 runner = get_runner("verilator")
 rtl = [root / p for p in [
     "rtl/fabric_addr_map_pkg.sv", "rtl/axi_address_decoder.sv", "rtl/axi_request_legal.sv",
@@ -127,13 +129,21 @@ runner.test(hdl_toplevel="axi_fabric_a", test_module="test_axi_fabric_a_oracle",
 PY
 fault_rc=$?
 set -e
-if [ "$fault_rc" -eq 0 ]; then
-  grep -q '<failure ' "$OUT/fault_results.xml" || {
-    echo "fault sensitivity unexpectedly passed" >&2
-    exit 1
-  }
-fi
-grep -q "bad RDATA" "$OUT/fault_sensitivity.log"
+python3 - "$OUT/fault_results.xml" "$OUT/fault_sensitivity.log" <<'PY'
+import sys
+import xml.etree.ElementTree as ET
+root = ET.parse(sys.argv[1]).getroot()
+cases = list(root.iter("testcase"))
+failed = [(c.attrib.get("name"), (c.find("failure").attrib.get("error_msg", "") + " " +
+                                  (c.findtext("failure", "") or ""))) for c in cases
+          if c.find("failure") is not None or c.find("error") is not None]
+assert len(cases) == 3, f"expected three tests in bad-RDATA run, found {len(cases)}"
+assert len(failed) == 1 and failed[0][0] == "fabric_a_oracle_closure_matrix", failed
+assert "bad RDATA" in failed[0][1], failed
+assert not any(c.find("error") is not None for c in cases), "unexpected simulator/test error"
+log = open(sys.argv[2], encoding="utf-8").read()
+assert "bad RDATA" in log, "expected data mismatch absent from simulator log"
+PY
 echo "PASS expected-fail DUT corruption sensitivity" >"$OUT/fault_sensitivity_result.log"
 
 echo "PASS Gate-2 Architecture-A functional closure"
