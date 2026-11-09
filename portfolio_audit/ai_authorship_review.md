@@ -86,6 +86,11 @@ assessments. These findings were corrected, and the affected links, source
 paths, provenance tests and frozen-file checks were rerun. The reviewer found no
 change to D045/D047, source, benchmark data or measurement claims.
 
+A second read-only Codex review checked the final evidence-matrix refinement at
+`22d8da0`: all newly specified evidence paths exist, scope wording is unchanged,
+and no frozen technical data changed. Both reviews were model reviews, not
+human approvals.
+
 ## Owner confirmation still needed
 
 The private checklist `portfolio_audit/owner_attestation_checklist.local.md`
