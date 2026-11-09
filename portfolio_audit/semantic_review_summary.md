@@ -58,10 +58,24 @@ No full regression was rerun for this source review. The only implementation cha
 
 After the source-review baseline, SR-P2-04 and SR-P2-05 were hardened on branch `assurance/p2-tooling-guards`. The A/B comparator now fails closed on the frozen 70-run matrix, pair identities, shared source identities, selected DUT, sample fields and duplicate/missing rows. Thirteen focused synthetic tests exercise acceptance and rejection cases, including exact workload identity and malformed active-manager/sample rows. The PPA parser now requires a recognized expected DUT report and required resource counts, distinguishes optional zero resources, malformed/missing data and synthesis failures; eight parser tests cover these cases. Reprocessing the frozen A/B datasets in a separate validation directory preserved all comparison values, D045 outcomes, resource totals and the 60/55 MHz all-seed route thresholds. These are assurance checks; no benchmark metric or implementation result changed.
 
-The active-edge oracle diagnostic escalated SR-P2-03 rather than resolving it: for the M0/S1/ID 11 LEN=3 response, the sampled public buses showed six target and six manager R handshakes while the oracle advanced four beats. Beats 1 and 2 were each accepted on two adjacent edges. This is evidence of a testbench response-driver/event-correlation issue in that scenario, not a production RTL defect. The checked-in oracle test was not changed. A separate corrective plan and compact trace are recorded at `oracle_edge_correlation_followup.md` and `results/raw/portfolio_audit_p2/oracle_edge_correlation_{summary.json,window.jsonl}`. Gate-2 R-path confidence for this helper scenario remains open pending that separate correction and its regressions.
+At the time of the source review, the active-edge oracle diagnostic escalated SR-P2-03 rather than resolving it: for the M0/S1/ID 11 LEN=3 response, the sampled public buses showed six target and six manager R handshakes while the oracle advanced four beats. Beats 1 and 2 were each accepted on two adjacent edges. This was evidence of a testbench response-driver/event-correlation issue in that scenario, not a demonstrated production RTL defect. The checked-in oracle test had not yet been changed at that review checkpoint. The separate corrective plan and compact trace were recorded at `oracle_edge_correlation_followup.md` and `results/raw/portfolio_audit_p2/oracle_edge_correlation_{summary.json,window.jsonl}`. The current disposition is recorded in the dated follow-up below.
 
-Current P2 disposition: **two resolved by tested fail-closed guards; one escalated to separate oracle repair**. The source review's historical findings remain visible above; this follow-up does not retroactively alter its review baseline.
+At the end of that source-review follow-up, the P2 disposition was **two resolved by tested fail-closed guards; one escalated to separate oracle repair**. This is a historical checkpoint; the later merged repair disposition is recorded below and does not retroactively alter the review baseline.
 
 ## Independent review
 
 Fresh Codex CLI read-only contexts produced the category review records under `portfolio_audit/semantic_review/`; a separate patch reviewer challenged the generated register and documentation. The patch review correctly rejected the initial generic evidence-column and overbroad integration wording. The register now points to each category report, severity was reduced for disclosed/cosmetic notes, the raw/tracked counts are captured in `generated/current_review_scope.json`, and the Gate-3 wording distinguishes Architecture-A integration from B whole-top functional evidence. The patch reviewer also initially flagged possible post-window metric leakage; direct tracing of the benchmark driver and summarizer rejected that concern. A third fresh read-only review approved the corrected artifacts and verified exact scope-path coverage, finding-ID/severity consistency, frozen-source boundaries and A/B attribution. These are independent model contexts, not human or independent hardware review. No reviewer reran the full simulation, formal or benchmark suite.
+
+## Follow-up: merged Gate-2 oracle repair (2026-11-09)
+
+PR #6 merged at `35911fc` and corrected the R response driver so the reference
+model advances only on observed manager-side accepted R transfers. The focused
+M0/S1/ID11 LEN=3 case now records exactly four target handshakes, four manager
+handshakes and four oracle updates in both unstalled and manager-backpressured
+runs; the historical six-versus-four trace remains preserved. Requalification
+is documented in `results/processed/oracle_edge_repair/summary.md`. The earlier
+SR-P2-03 concern is resolved for the repaired R helper and the listed Gate-2/A/B
+functional regressions; legacy AW/W/B coroutine helpers were inspected but not
+converted to the same monitor architecture. Their general edge-correlation
+assurance remains narrower than the repaired R path. This update supplements,
+not rewrites, the review scope and conclusions recorded above.
