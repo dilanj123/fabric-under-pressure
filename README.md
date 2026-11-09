@@ -34,7 +34,7 @@ sequenceDiagram
   F->>T: owner-directed registered W slot
   Note over F,T: accepted target WLAST releases W owner
   T->>F: B response with widened ID
-  F->>M: restore manager ID; accepted B completes write
+  F->>M: Restore manager ID and retire write on accepted B handshake.
 ```
 
 ```mermaid
