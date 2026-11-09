@@ -1,0 +1,18 @@
+{
+  "id": "PCTX-001",
+  "classification": "AI_ASSISTED_CONFIRMED",
+  "scope": "Project-wide workflow context only; it is not an authorship label for any file.",
+  "evidence": [
+    "01_CHATGPT_PROJECT_OPERATING_INSTRUCTIONS.md",
+    "docs/history/",
+    "Merged PR descriptions #1\u2013#6"
+  ],
+  "limitations": "Records establish substantial ChatGPT/Codex participation in project planning and execution, but not which person or model authored each file or line.",
+  "inventory_revision": "35911fc63a1621f931aeaaa41ad632e28bf0ea72",
+  "inventory_path_count": 1265,
+  "file_origin_classification_counts": {
+    "AI_ASSISTED_CONFIRMED": 1,
+    "TOOL_GENERATED": 512,
+    "UNKNOWN": 752
+  }
+}

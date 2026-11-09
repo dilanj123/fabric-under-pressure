@@ -21,11 +21,13 @@ for the owner to confirm.
 
 The path-level register at
 [`portfolio_audit/generated/ai_provenance_register.csv`](../portfolio_audit/generated/ai_provenance_register.csv)
-is a conservative classification of files in the recorded baseline commit.
-For engineering source sets it records confirmed project-level AI assistance;
-it does not assert per-line provenance. The source and semantic review records
-show what was inspected, not who authored the inspected material. The baseline
-and classification method are described in
+records file-specific origin evidence. Authored files remain `UNKNOWN` unless
+direct evidence supports another category; directory membership and review do
+not establish authorship. The separate
+[`project_ai_workflow_context.json`](../portfolio_audit/generated/project_ai_workflow_context.json)
+records confirmed project-wide assistance without attributing it to every
+file. Source and semantic review records show what was inspected, not who
+authored the inspected material. The baseline and classification method are in
 [`portfolio_audit/ai_authorship_review.md`](../portfolio_audit/ai_authorship_review.md).
 
 The project’s original operating instructions and completed task prompts remain
